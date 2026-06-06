@@ -27,3 +27,76 @@ out/
 # === OS cruft ===
 .DS_Store
 Thumbs.db
+
+# ============================================================================
+# RUNTIME-ONLY RULE: commit ONLY what the deployed app + live pipeline need to RUN.
+# Everything else (third-party/scraped data, dev/one-off scripts, dry-run/audit +
+# methodology docs, scratch) stays local. Runtime files are re-included with `!`.
+# ============================================================================
+
+# ---- data/: keep data/exports/ (served JSON) + the 3 runtime-READ source files only ----
+data/external/**
+!data/external/api-football/
+!data/external/api-football/cache/
+!data/external/api-football/cache/fixtures_league1_season2026.json
+!data/external/api-football/cache/teams_wc2026_league.json
+!data/external/fifa/
+!data/external/fifa/annex-c-r32-third-place-mapping.json
+data/audits/
+data/artifacts/
+data/curation/
+data/worldcup/
+data/statsbomb-open-data/
+data/logs/
+
+# ---- scripts/: ALLOWLIST the live runtime chain (import+spawn closure) + its config ----
+scripts/**
+!scripts/
+!scripts/worldcup/
+!scripts/worldcup/export/
+!scripts/worldcup/live/
+!scripts/worldcup/ai-layer/
+!scripts/worldcup/weather/
+!scripts/worldcup/news/
+!scripts/worldcup/advancement-scenario-core.ts
+!scripts/worldcup/build-advancement-scenario-v1-live.ts
+!scripts/worldcup/elo-update-engine.ts
+!scripts/worldcup/elo-update-group-stage-wiring.ts
+!scripts/worldcup/elo-update-knockout-resim-candidate.ts
+!scripts/worldcup/fetch-team-flags.mjs
+!scripts/worldcup/ingest-wc2026-results.ts
+!scripts/worldcup/knockout-path-core.ts
+!scripts/worldcup/live-group-stage-bracket-resimulation-consumer.ts
+!scripts/worldcup/load-knockout-schedule.ts
+!scripts/worldcup/log-frozen-vs-learned-knockout.ts
+!scripts/worldcup/standings-core.ts
+!scripts/worldcup/tiebreaker-ladders-2026.ts
+!scripts/worldcup/worldcup-regulations-engine.ts
+!scripts/worldcup/export/build-app-data.ts
+!scripts/worldcup/export/build-squads-json.mjs
+!scripts/worldcup/export/result-join.ts
+!scripts/worldcup/live/in-tournament-loop-runner.ts
+!scripts/worldcup/live/live-update-orchestrator.ts
+!scripts/worldcup/live/run-supervised-loop-cron.mjs
+!scripts/worldcup/live/write-live-scores.ts
+!scripts/worldcup/live/fetch-match-lineups.mjs
+!scripts/worldcup/live/export-lineups.mjs
+!scripts/worldcup/live/api-team-code-map.json
+!scripts/worldcup/ai-layer/generate-narration-pipeline.ts
+!scripts/worldcup/ai-layer/validate-and-repair.ts
+!scripts/worldcup/ai-layer/system-prompt.md
+!scripts/worldcup/weather/fetch-venue-weather.mjs
+!scripts/worldcup/weather/build-weather-overlay.mjs
+!scripts/worldcup/news/gdelt-client.ts
+
+# ---- docs/: keep operational runbooks/checklist only (README is at repo root) ----
+docs/**
+!docs/
+!docs/in-tournament-loop-runbook.md
+!docs/in-tournament-loop-cron-runbook.md
+!docs/kickoff-checklist.md
+
+# ---- scratch / superseded ----
+prototypes/
+supabase/.temp/
+agent.md

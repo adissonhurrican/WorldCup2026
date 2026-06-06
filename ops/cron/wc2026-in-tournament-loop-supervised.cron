@@ -1,0 +1,13 @@
+# Project: ahcfrgxczbgdvrqmbisw
+# Purpose: supervised WC2026 in-tournament loop, every 10 minutes.
+# Activation: wrapper no-ops until 2026-06-11T19:00:00Z, the tournament opener kickoff window.
+# Safety: supervised mode only; the cron entry deliberately does not pass --go.
+#
+# Install on WSL/Linux cron with:
+#   1) set WC2026_DIR below to the repo's absolute path
+#      (e.g. /home/you/world-cup-prediction, or on WSL /mnt/c/.../world-cup-prediction)
+#   2) crontab ops/cron/wc2026-in-tournament-loop-supervised.cron
+
+SHELL=/bin/bash
+WC2026_DIR=/path/to/world-cup-prediction
+*/10 * * * * cd "$WC2026_DIR" && /usr/bin/env node scripts/worldcup/live/run-supervised-loop-cron.mjs >> "$WC2026_DIR/data/logs/in-tournament-loop-supervised.log" 2>&1
