@@ -1,0 +1,29 @@
+# === SECRETS — DO NOT COMMIT ===
+supebase.txt
+.mcp.json
+.env
+.env.local
+.env.*.local
+# .env.example is sanitized to placeholders (no real keys); real local keys live in .env.local.
+# Kept ignored as defense-in-depth so a future real key can never be committed by accident.
+.env.example
+*.pem
+*.key
+
+# === Local agent / editor state (session transcripts can contain secrets) ===
+.claude/
+
+# === Dependencies / build artifacts ===
+node_modules/
+dist/
+build/
+.next/
+out/
+
+# === Temp / scratch (local SQL, caches, audits-in-progress) ===
+.tmp/
+*.log
+
+# === OS cruft ===
+.DS_Store
+Thumbs.db
