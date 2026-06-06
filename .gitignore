@@ -96,6 +96,11 @@ docs/**
 !docs/in-tournament-loop-cron-runbook.md
 !docs/kickoff-checklist.md
 
+# ---- v1 static app: superseded by ui-v2 and NOT deployed (only ui-v2 ships) ----
+# Nothing in the runtime chain reads/imports from ui/; exporters only WRITE v1 copies
+# there (UI_OUTS), which still works locally against an un-committed dir.
+ui/
+
 # ---- scratch / superseded ----
 prototypes/
 supabase/.temp/
