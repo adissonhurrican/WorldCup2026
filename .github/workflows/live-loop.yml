@@ -62,6 +62,14 @@ jobs:
         # it graceful-waits (0/72) and exits 0. If the DB stack is broken this goes RED before the loop runs.
         run: npx tsx scripts/worldcup/elo-update-group-stage-wiring.ts
 
+      - name: API-Football read smoke test (read-only; manual dispatch only)
+        # Proves the API-Football read path in the runner — the API_FOOTBALL_KEY secret authenticates and WC2026
+        # fixture data returns — WITHOUT writing anything: --probe-fixture-id fetches one fixture by id, execute is
+        # blocked, dry-run (no DB write, no cache write). Manual-dispatch only (the scheduled loop's real ingest
+        # exercises the API post-kickoff, so this isn't needed every 10 min). 1489369 = the opener (MEX vs RSA).
+        if: ${{ success() && github.event_name == 'workflow_dispatch' }}
+        run: npx tsx scripts/worldcup/ingest-wc2026-results.ts --probe-fixture-id=1489369
+
       - name: Run in-tournament loop (UNATTENDED)
         # Normal path (schedule + non-synthetic dispatch). Self-guards: no-op (exit 0) before 2026-06-11T19:00Z and
         # when no verified result is material. On a material result it runs the full chain (ingest → re-condition →
