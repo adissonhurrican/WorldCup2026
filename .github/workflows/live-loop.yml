@@ -18,6 +18,11 @@ name: WC2026 Live In-Tournament Loop
     # (no-op before the 2026-06-11T19:00Z kickoff and whenever no verified result is material).
     - cron: "*/10 * * * *"
   workflow_dispatch:
+    inputs:
+      synthetic:
+        description: "Full-chain SYNTHETIC dry test (injects a fake result; runs the whole chain; no DB writes, no commit)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -58,13 +63,25 @@ jobs:
         run: npx tsx scripts/worldcup/elo-update-group-stage-wiring.ts
 
       - name: Run in-tournament loop (UNATTENDED)
-        # Self-guards: no-op (exit 0) before 2026-06-11T19:00Z and when no verified result is material. On a
-        # material result it runs the full chain (ingest → re-condition → sanity gate → PROMOTE → export →
-        # narration → re-export). --mode unattended auto-publishes (no human --go). A CORE failure exits non-zero
-        # → this step fails → the commit step is skipped → workflow RED (fail-hard).
+        # Normal path (schedule + non-synthetic dispatch). Self-guards: no-op (exit 0) before 2026-06-11T19:00Z and
+        # when no verified result is material. On a material result it runs the full chain (ingest → re-condition →
+        # sanity gate → PROMOTE → export → narration → re-export). --mode unattended auto-publishes (no human --go).
+        # A CORE failure exits non-zero → this step fails → the commit step is skipped → workflow RED (fail-hard).
+        if: ${{ success() && inputs.synthetic != true }}
         run: node scripts/worldcup/live/run-supervised-loop-cron.mjs --mode unattended
 
+      - name: Synthetic full-chain test (manual dry run only)
+        # Triggered by `workflow_dispatch` with synthetic=true. Injects a synthetic CAN 2-1 BIH result and runs the
+        # WHOLE material-result chain (data → materiality gate → candidate model → knockout re-sim → sanity gate →
+        # promote pointer → export → narration dry-run → re-export) end-to-end with NO DB writes. This is how the
+        # publish path is validated before kickoff; the commit step is skipped for synthetic (nothing is published).
+        if: ${{ success() && inputs.synthetic == true }}
+        run: npx tsx scripts/worldcup/live/in-tournament-loop-runner.ts --synthetic-result --mode unattended
+
       - name: Commit + push refreshed app-data (fail-hard; no empty over good; no-change-safe)
+        # Only on the real path that succeeded — never for the synthetic dry test (which publishes nothing).
+        # Explicit success() keeps fail-hard: a prior-step failure skips the commit (workflow stays RED).
+        if: ${{ success() && inputs.synthetic != true }}
         run: |
           # FAIL-HARD: refuse to commit unless app-data.json is valid + non-empty (never overwrite good data with
           # empty/partial). A missing/empty/teamless file exits non-zero here → workflow RED, last-good data kept.
