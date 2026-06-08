@@ -110,3 +110,14 @@ export function IconMoon({ className }) {
     </svg>
   );
 }
+
+// Standard iOS-style share glyph — a tray with an upward arrow (square.and.arrow.up).
+export function IconShare({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...base} aria-hidden="true">
+      <path d="M12 3.5v11" />
+      <path d="m8 7 4-4 4 4" />
+      <path d="M8 10H6.5A2.5 2.5 0 0 0 4 12.5v6A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5v-6A2.5 2.5 0 0 0 17.5 10H16" />
+    </svg>
+  );
+}

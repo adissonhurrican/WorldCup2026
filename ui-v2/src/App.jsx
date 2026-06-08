@@ -3,6 +3,7 @@ import TabBar from "./components/TabBar";
 import SideNav from "./components/SideNav";
 import MobileMenu from "./components/MobileMenu";
 import ThemeToggle from "./components/ThemeToggle";
+import ShareButton from "./components/ShareButton";
 import TeamSheet from "./components/TeamSheet";
 import MatchSheet from "./components/MatchSheet";
 import MyTeamView from "./views/MyTeamView";
@@ -82,7 +83,13 @@ export default function App() {
     return () => { alive = false; clearInterval(id); };
   }, []);
 
-  const themeToggle = <ThemeToggle dark={dark} onToggle={() => setDark((d) => !d)} />;
+  // Persistent header actions (top-right on every screen, mobile + desktop): share + theme toggle.
+  const headerActions = (
+    <div className="flex items-center gap-0.5">
+      <ShareButton />
+      <ThemeToggle dark={dark} onToggle={() => setDark((d) => !d)} />
+    </div>
+  );
 
   // Primary nav (3 tabs) always returns to the main app; info pages are highlighted only when active.
   const navView = secondary ? null : view;
@@ -125,20 +132,20 @@ export default function App() {
                 events={events}
                 onOpenMatch={setMatchFx}
                 onOpenSwitcher={() => setSheetOpen(true)}
-                rightAction={themeToggle}
+                rightAction={headerActions}
               />
             </div>
             <div className={`h-full ${view === "matches" && !secondary ? "" : "hidden"}`}>
-              <MatchesView data={data} live={live} lineups={lineups} events={events} onOpenMatch={setMatchFx} rightAction={themeToggle} />
+              <MatchesView data={data} live={live} lineups={lineups} events={events} onOpenMatch={setMatchFx} rightAction={headerActions} />
             </div>
             <div className={`h-full ${view === "prediction" && !secondary ? "" : "hidden"}`}>
-              <PredictionView data={data} rightAction={themeToggle} />
+              <PredictionView data={data} rightAction={headerActions} />
             </div>
             <div className={`h-full ${view === "groups" && !secondary ? "" : "hidden"}`}>
-              <GroupsView data={data} onSelectTeam={selectTeam} rightAction={themeToggle} />
+              <GroupsView data={data} onSelectTeam={selectTeam} rightAction={headerActions} />
             </div>
             <div className={`h-full ${secondary ? "" : "hidden"}`}>
-              {secondary && <ContentView key={secondary} pageKey={secondary} onBack={() => setSecondary(null)} rightAction={themeToggle} />}
+              {secondary && <ContentView key={secondary} pageKey={secondary} onBack={() => setSecondary(null)} rightAction={headerActions} />}
             </div>
           </div>
 

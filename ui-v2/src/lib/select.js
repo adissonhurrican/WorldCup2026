@@ -289,6 +289,15 @@ export function fixturesByDay(data, cityFilter = null) {
   const days = new Map();
   for (const fx of data.fixtures || []) {
     if (cityFilter && fx.city !== cityFilter) continue;
+    // Knockout fixtures (slot-based, no teams) group by ROUND, in one section each, keyed 'zzN' so they
+    // sort AFTER every group-stage day. Label carries the round + its date window (e.g. "Round of 32 · Jun 28 – Jul 3").
+    if (isKnockoutFixture(fx)) {
+      const key = `zz${fx.round_order || 9}`;
+      const label = fx.round_window_label ? `${fx.round} · ${fx.round_window_label}` : (fx.round || "Knockouts");
+      if (!days.has(key)) days.set(key, { key, label, items: [] });
+      days.get(key).items.push(fx);
+      continue;
+    }
     const iso = fx.kickoff_utc || fx.kickoff;
     const d = iso ? new Date(iso) : null;
     const valid = d && !Number.isNaN(d.getTime());
@@ -302,7 +311,8 @@ export function fixturesByDay(data, cityFilter = null) {
   return [...days.values()]
     .map((day) => ({
       ...day,
-      items: day.items.slice().sort((a, b) => kickoffMs(a) - kickoffMs(b)),
+      // group days sort by kickoff; knockout rounds sort by match number (R32/R16 have no exact kickoff)
+      items: day.items.slice().sort((a, b) => (a.knockout && b.knockout ? a.match_number - b.match_number : kickoffMs(a) - kickoffMs(b))),
     }))
     .sort((a, b) => a.key.localeCompare(b.key));
 }

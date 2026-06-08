@@ -32,7 +32,7 @@ export default function MatchSheet({ data, fx, live, lineups, events, onClose })
           <button onClick={onClose} className="text-[15px] font-medium text-accent active:opacity-50">Done</button>
         </div>
         <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-[max(20px,env(safe-area-inset-bottom))]">
-          {fx && <MatchDetail key={`${fx.home}-${fx.away}-${fx.kickoff_utc || fx.kickoff || ""}`} data={data} fx={fx} live={live} lineups={lineups} events={events} />}
+          {fx && <MatchDetail key={fx.knockout ? `ko-${fx.match_number}` : `${fx.home}-${fx.away}-${fx.kickoff_utc || fx.kickoff || ""}`} data={data} fx={fx} live={live} lineups={lineups} events={events} />}
         </div>
       </div>
     </div>
@@ -40,8 +40,11 @@ export default function MatchSheet({ data, fx, live, lineups, events, onClose })
 }
 
 function MatchDetail({ data, fx, live, lineups, events }) {
-  const home = teamByCode(data, fx.home) || { code: fx.home };
-  const away = teamByCode(data, fx.away) || { code: fx.away };
+  const isKnockout = !fx.group; // knockout fixtures carry group:null (isKnockoutFixture)
+  const home = teamByCode(data, fx.home) || (fx.home ? { code: fx.home } : null);
+  const away = teamByCode(data, fx.away) || (fx.away ? { code: fx.away } : null);
+  const hasTeams = !!(home && away); // knockout slots have no teams until the post-group resolver fills them
+  const hasPrediction = !!fx.probabilities; // and no prediction until then
   const state = matchState(fx, live);
   const lv = liveOf(fx, live);
   const finished = state === "finished";
@@ -51,36 +54,40 @@ function MatchDetail({ data, fx, live, lineups, events }) {
   const venueProfile = venueProfileFor(data, fx);
   const timeline = eventsOf(fx, events);
   const p = fx.probabilities || {};
-  const fav = favorite(fx);
+  const fav = hasPrediction ? favorite(fx) : null;
   const [tab, setTab] = useState("Info");
   const [showVenueInfo, setShowVenueInfo] = useState(false);
 
   return (
     <div className="space-y-4">
-      {/* match header (always visible above the tabs): teams + score/time + live note */}
-      <div className="flex items-center justify-center gap-3 pt-1">
-        <div className="flex w-24 flex-col items-center gap-1.5">
-          <Flag team={home} size={48} />
-          <span className="text-center text-[13px] font-semibold leading-tight">{home.name || fx.home}</span>
-        </div>
-        <div className="text-center">
-          <div className={`text-[28px] font-bold tabular-nums ${isLive ? "text-live" : ""}`}>
-            {isLive ? `${lv.home_score ?? 0}–${lv.away_score ?? 0}` : finished ? `${sc.h}–${sc.a}` : "vs"}
+      {/* match header (always visible above the tabs): teams (or bracket slots) + score/time + live note */}
+      {hasTeams ? (
+        <div className="flex items-center justify-center gap-3 pt-1">
+          <div className="flex w-24 flex-col items-center gap-1.5">
+            <Flag team={home} size={48} />
+            <span className="text-center text-[13px] font-semibold leading-tight">{home.name || fx.home}</span>
           </div>
-          {isLive ? (
-            <div className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide text-live">
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
-              Live{lv.minute != null ? ` ${lv.minute}'` : ""}
+          <div className="text-center">
+            <div className={`text-[28px] font-bold tabular-nums ${isLive ? "text-live" : ""}`}>
+              {isLive ? `${lv.home_score ?? 0}–${lv.away_score ?? 0}` : finished ? `${sc.h}–${sc.a}` : "vs"}
             </div>
-          ) : finished ? (
-            <div className="text-[11px] font-semibold uppercase tracking-wide text-ink-3">Full-time</div>
-          ) : null}
+            {isLive ? (
+              <div className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide text-live">
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
+                Live{lv.minute != null ? ` ${lv.minute}'` : ""}
+              </div>
+            ) : finished ? (
+              <div className="text-[11px] font-semibold uppercase tracking-wide text-ink-3">Full-time</div>
+            ) : null}
+          </div>
+          <div className="flex w-24 flex-col items-center gap-1.5">
+            <Flag team={away} size={48} />
+            <span className="text-center text-[13px] font-semibold leading-tight">{away.name || fx.away}</span>
+          </div>
         </div>
-        <div className="flex w-24 flex-col items-center gap-1.5">
-          <Flag team={away} size={48} />
-          <span className="text-center text-[13px] font-semibold leading-tight">{away.name || fx.away}</span>
-        </div>
-      </div>
+      ) : (
+        <KnockoutHeader data={data} fx={fx} />
+      )}
 
       {isLive && (
         <p className="rounded-[12px] bg-live/10 px-3 py-2 text-center text-[12px] font-medium text-live">
@@ -94,34 +101,28 @@ function MatchDetail({ data, fx, live, lineups, events }) {
       <div key={tab} className="animate-panel space-y-4">
         {tab === "Info" ? (
           <>
-            {/* kickoff — dual clock */}
-            <div className="card p-4">
-              <Label>Kickoff</Label>
-              {dc.venue && !dc.sameZone ? (
-                <div className="mt-1 space-y-0.5">
-                  <Line k={`${fx.city || "Venue"} time`} v={dc.venue} />
-                  <Line k="Your time" v={`${dc.viewer} (${VIEWER_TZ.split("/").pop().replace(/_/g, " ")})`} />
-                </div>
-              ) : (
-                <div className="mt-1"><Line k="Your time" v={dc.viewer || "TBC"} /></div>
-              )}
-            </div>
+            {/* kickoff — real date/time where the schedule has it, else the real round date-window */}
+            <KickoffCard fx={fx} dc={dc} />
 
             <EventTimeline match={timeline} state={state} />
 
             {/* venue */}
             <VenueSection fx={fx} profile={venueProfile} open={showVenueInfo} onToggle={() => setShowVenueInfo((v) => !v)} />
 
-            {/* prediction (display only) */}
-            <div className="card p-4">
-              <Label>{finished ? "We predicted" : "Our prediction"}</Label>
-              <PredictionBar data={data} fx={fx} heightClass="h-1.5" className="mt-2" />
-              <div className="mt-2 flex justify-between text-[13px]">
-                <Prob label={fx.home} v={p.home_win} on={fav.k === "home"} />
-                <Prob label="Draw" v={p.draw} on={fav.k === "draw"} />
-                <Prob label={fx.away} v={p.away_win} on={fav.k === "away"} />
+            {/* prediction (display only) — real once teams are confirmed, else a clean placeholder */}
+            {hasPrediction ? (
+              <div className="card p-4">
+                <Label>{finished ? "We predicted" : "Our prediction"}</Label>
+                <PredictionBar data={data} fx={fx} heightClass="h-1.5" className="mt-2" />
+                <div className="mt-2 flex justify-between text-[13px]">
+                  <Prob label={fx.home} v={p.home_win} on={fav.k === "home"} />
+                  <Prob label="Draw" v={p.draw} on={fav.k === "draw"} />
+                  <Prob label={fx.away} v={p.away_win} on={fav.k === "away"} />
+                </div>
               </div>
-            </div>
+            ) : (
+              <PredictionPlaceholder isKnockout={isKnockout} />
+            )}
 
             {/* weather */}
             <WeatherSection data={data} fx={fx} />
@@ -131,11 +132,114 @@ function MatchDetail({ data, fx, live, lineups, events }) {
             </p>
           </>
         ) : (
-          <LineupsSection fx={fx} home={home} away={away} lineups={lineups} live={live} />
+          <LineupsSection fx={fx} home={home} away={away} lineups={lineups} live={live} isKnockout={isKnockout} hasTeams={hasTeams} />
         )}
       </div>
     </div>
   );
+}
+
+// Knockout header — bracket-slot placeholders ("Winner Group E" v "Best 3rd from A/B/C/D/F"), forward-compatible
+// to real flags+names once a side's `team` is filled. Mirrors the team-header layout so the sheet looks complete.
+function KnockoutHeader({ data, fx }) {
+  return (
+    <div className="flex items-center justify-center gap-3 pt-1">
+      <SlotHead data={data} side={fx.side_a} />
+      <div className="text-center">
+        <div className="text-[24px] font-bold text-ink-2">vs</div>
+        <div className="mt-0.5 text-[11px] font-semibold uppercase tracking-wide text-ink-3">
+          {fx.round}{fx.match_number ? ` · M${fx.match_number}` : ""}
+        </div>
+      </div>
+      <SlotHead data={data} side={fx.side_b} />
+    </div>
+  );
+}
+
+function SlotHead({ data, side }) {
+  const s = side || {};
+  const team = s.team ? (teamByCode(data, s.team.code) || s.team) : null;
+  if (team) {
+    return (
+      <div className="flex w-28 flex-col items-center gap-1.5">
+        <Flag team={team} size={48} />
+        <span className="text-center text-[13px] font-semibold leading-tight">{team.name || team.code}</span>
+      </div>
+    );
+  }
+  return (
+    <div className="flex w-28 flex-col items-center gap-1.5">
+      <span className="grid h-12 w-12 place-items-center rounded-full bg-fill/10 text-[20px] font-bold text-ink-3" aria-hidden="true">?</span>
+      <span className="text-center text-[12px] font-semibold leading-tight text-ink-2">{s.label || "TBD"}</span>
+    </div>
+  );
+}
+
+// Kickoff card — knockout dates are schedule-fixed and KNOWN (only the teams depend on results). Show the exact
+// date/time where the schedule has it (SF/3rd/Final have time; QF has the date), otherwise the real round window.
+// Never imply the date is "set after the group stage" — the date is fixed; only the matchup is pending.
+function KickoffCard({ fx, dc }) {
+  if (fx.kickoff_utc) {
+    return (
+      <div className="card p-4">
+        <Label>Kickoff</Label>
+        {dc.venue && !dc.sameZone ? (
+          <div className="mt-1 space-y-0.5">
+            <Line k={`${fx.city || "Venue"} time`} v={dc.venue} />
+            <Line k="Your time" v={`${dc.viewer} (${VIEWER_TZ.split("/").pop().replace(/_/g, " ")})`} />
+          </div>
+        ) : (
+          <div className="mt-1"><Line k="Your time" v={dc.viewer || "TBC"} /></div>
+        )}
+      </div>
+    );
+  }
+  const dateOnly = fmtKoDateFull(fx.kickoff);
+  return (
+    <div className="card p-4">
+      <Label>Date</Label>
+      {dateOnly ? (
+        <div className="mt-1 space-y-0.5">
+          <Line k="Date" v={dateOnly} />
+          <Line k="Kickoff time" v="Confirmed nearer the match" />
+        </div>
+      ) : fx.round_window_label ? (
+        <div className="mt-1">
+          <Line k="Date window" v={fx.round_window_label} />
+          <p className="mt-1.5 text-[11px] leading-relaxed text-ink-3">
+            The exact date is fixed by the published schedule; the teams are confirmed after the group stage.
+          </p>
+        </div>
+      ) : (
+        <div className="mt-1"><Line k="Date" v="TBC" /></div>
+      )}
+    </div>
+  );
+}
+
+// Clean prediction placeholder for an unresolved knockout slot — explicit state, never an empty/grey bar.
+function PredictionPlaceholder({ isKnockout }) {
+  return (
+    <div className="card p-4">
+      <Label>Our prediction</Label>
+      <p className="mt-1 text-[13px] text-ink-2">
+        {isKnockout
+          ? "Prediction available once the teams are confirmed after the group stage."
+          : "Prediction available once the teams are confirmed."}
+      </p>
+    </div>
+  );
+}
+
+const _KO_MON = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const _KO_WD = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+function fmtKoDateFull(s) {
+  if (!s) return null;
+  const [y, m, d] = String(s).split("-").map(Number);
+  if (!y || !m || !d) return null;
+  const dt = new Date(Date.UTC(y, m - 1, d));
+  if (Number.isNaN(dt.getTime())) return null;
+  return `${_KO_WD[dt.getUTCDay()]}, ${_KO_MON[m - 1]} ${d}`;
 }
 
 function EventTimeline({ match, state }) {
@@ -318,7 +422,18 @@ function VenueText({ label, children }) {
 
 // Confirmed starting XIs (+ bench), read from the static lineups.json overlay. Orientation is already
 // normalized server-side (home_lineup -> fx.home). Display only — never a model input.
-function LineupsSection({ fx, home, away, lineups, live }) {
+function LineupsSection({ fx, home, away, lineups, live, isKnockout, hasTeams }) {
+  // Knockout slot with no teams yet: explicit, graceful placeholder (no empty XI columns / blank flags).
+  if (isKnockout && !hasTeams) {
+    return (
+      <div className="card p-4">
+        <Label>Lineups</Label>
+        <p className="mt-1 text-[13px] text-ink-2">
+          Teams are confirmed after the group stage; lineups follow ~60 min before kickoff.
+        </p>
+      </div>
+    );
+  }
   const ls = lineupState(fx, lineups, live);
   if (!ls.has) {
     // On the dedicated Lineups tab we always render a card (never blank): the persistent

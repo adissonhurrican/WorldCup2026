@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Screen from "../components/Screen";
 import MatchCard from "../components/MatchCard";
+import KnockoutCard from "../components/KnockoutCard";
 import { IconChevronDown, IconCheck } from "../components/icons";
 import { fixturesByDay, cityOptions, matchState } from "../lib/select";
 
@@ -32,9 +33,13 @@ export default function MatchesView({ data, live, lineups, events, onOpenMatch, 
         <section key={d.key}>
           <p className="px-1 pb-2 pt-5 text-[13px] font-semibold uppercase tracking-wide text-ink-2">{d.label}</p>
           <div className="space-y-3 md:grid md:grid-cols-2 md:gap-3 md:space-y-0 xl:grid-cols-3">
-            {d.items.map((fx, i) => (
-              <MatchCard key={`${fx.home}-${fx.away}-${i}`} data={data} fx={fx} live={live} lineups={lineups} events={events} onOpen={onOpenMatch} />
-            ))}
+            {d.items.map((fx, i) =>
+              fx.knockout ? (
+                <KnockoutCard key={`ko-${fx.match_number}`} data={data} fx={fx} onOpen={onOpenMatch} />
+              ) : (
+                <MatchCard key={`${fx.home}-${fx.away}-${i}`} data={data} fx={fx} live={live} lineups={lineups} events={events} onOpen={onOpenMatch} />
+              ),
+            )}
           </div>
         </section>
       ))}

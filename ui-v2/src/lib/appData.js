@@ -133,5 +133,14 @@ export async function loadAll() {
   data.__weather = weather || {};
   data.__squads = squads || {};
   data.__teamColors = (teamColors && teamColors.teams) || {};
+
+  // Merge the 32 knockout fixtures (slot-based, no teams yet) into the unified fixtures list so the Matches
+  // tab shows + filters them like the group games. group:null marks them knockout (isKnockoutFixture), and
+  // knockout:true lets the view pick the slot-label card. teamFixtures excludes them (no home/away) until the
+  // post-group resolver fills real teams. The original data.knockout_fixtures stays available too.
+  if (Array.isArray(data.knockout_fixtures) && data.knockout_fixtures.length) {
+    const ko = data.knockout_fixtures.map((k) => ({ ...k, group: null, knockout: true }));
+    data.fixtures = [...(data.fixtures || []), ...ko];
+  }
   return data;
 }

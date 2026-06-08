@@ -17,17 +17,26 @@ export const SITE_NAME = "Football Match Master";
 export const COMPANY = "MOST AI Labs";
 export const COMPANY_URL = "https://mostailabs.com";
 export const CONTACT_EMAIL = "info@mostailabs.com";
-export const SECURITY_LABEL = "XXL Services";
+export const SECURITY_LABEL = "XXL IT Services";
 export const SECURITY_URL = "https://xxlservices.com";
 
 // Canonical base URL — the product domain (used for the canonical link + og:url only).
 // Keep robots.txt / sitemap.xml (in /public) in sync with this host when it changes.
 export const SITE_URL = "https://footballmatchmaster.com";
 
+// Absolute Open Graph / Twitter share image (1200×630 PNG in /public → served at the domain root).
+// Social scrapers REQUIRE an absolute URL, so it is built from SITE_URL — which also keeps it
+// consistent with og:url and updates automatically if the domain ever changes.
+export const OG_IMAGE = `${SITE_URL}/og-image.png`;
+
 // Accurate framing — a STATISTICAL MODEL makes the predictions; AI only explains them.
 // Never phrase this as "AI predicts the matches".
 export const SITE_DESCRIPTION =
   "Match predictions powered by a statistical model, explained by AI — 2026 World Cup scores, lineups & analysis.";
+
+// Short brand tagline (the nav subtitle + the in-app share-sheet text). Kept here so the
+// share copy stays in sync with the product voice.
+export const TAGLINE = "World Cup 2026 predictions, updated live";
 
 // Derived metadata. When the product name is parked we use a clean, name-free title
 // and fall back to the company name for og:site_name.

@@ -4,7 +4,7 @@
   "description": "Public app-data contract. Probabilities are DECIMALS 0..1. NO internal IDs/table names/model-version tags/status jargon anywhere. Built from the live promoted runs only.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["meta", "teams", "groups", "fixtures", "team_paths", "scenarios", "narration", "tactical_context", "real_standings", "knockout_paths"],
+  "required": ["meta", "teams", "groups", "fixtures", "knockout_fixtures", "team_paths", "scenarios", "narration", "tactical_context", "real_standings", "knockout_paths"],
   "x_constraints": {
     "probabilities_are_decimals_0_to_1": true,
     "no_internal_ids": "no UUIDs, table names, model-version tags (vN.N / -vYYYYMMDD), or status jargon (candidate/current_best/lifecycle/superseded/review_status)",
@@ -313,6 +313,53 @@
               }
             }
           }
+        }
+      }
+    },
+    "knockout_fixtures": {
+      "type": "array",
+      "description": "All 32 knockout matches (Round of 32 -> Final) as SLOT-LABEL cards (no teams until the post-group bracket resolver fills them). Slot definitions read VERBATIM from public.knockout_schedule: group_winner/group_runner_up carry the group letter; best_third carries the REAL Annex C eligible-group pool for THAT slot (not generic); later rounds carry the source match number. Each side has team:null as the forward-compat hook the resolver fills. Date is exact where confirmed (QF onward) else null with the round window. Shares the city filter with the group fixtures; no prediction (slots, not teams).",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["match_number", "round", "round_key", "round_order", "round_window", "round_window_label", "side_a", "side_b", "kickoff", "kickoff_utc", "date_confirmed", "venue", "city", "country", "venue_timezone"],
+        "properties": {
+          "match_number": { "type": "integer" },
+          "round": { "type": "string" },
+          "round_key": { "type": "string" },
+          "round_order": { "type": "integer" },
+          "round_window": { "type": ["string", "null"] },
+          "round_window_label": { "type": ["string", "null"] },
+          "side_a": {
+            "type": "object", "additionalProperties": false,
+            "required": ["label", "type", "group", "pool", "source_match", "team"],
+            "properties": {
+              "label": { "type": ["string", "null"] },
+              "type": { "type": ["string", "null"] },
+              "group": { "type": ["string", "null"] },
+              "pool": { "type": ["array", "null"], "items": { "type": "string" } },
+              "source_match": { "type": ["integer", "null"] },
+              "team": { "type": ["object", "null"] }
+            }
+          },
+          "side_b": {
+            "type": "object", "additionalProperties": false,
+            "required": ["label", "type", "group", "pool", "source_match", "team"],
+            "properties": {
+              "label": { "type": ["string", "null"] },
+              "type": { "type": ["string", "null"] },
+              "group": { "type": ["string", "null"] },
+              "pool": { "type": ["array", "null"], "items": { "type": "string" } },
+              "source_match": { "type": ["integer", "null"] },
+              "team": { "type": ["object", "null"] }
+            }
+          },
+          "kickoff": { "type": ["string", "null"] },
+          "kickoff_utc": { "type": ["string", "null"] },
+          "date_confirmed": { "type": "boolean" },
+          "venue": { "type": ["string", "null"] },
+          "city": { "type": ["string", "null"] },
+          "country": { "type": ["string", "null"] },
+          "venue_timezone": { "type": ["string", "null"] }
         }
       }
     }

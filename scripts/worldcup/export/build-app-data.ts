@@ -377,7 +377,52 @@ async function main() {
   const knockout_paths = gs.map((r: any) => ({ code: r.team_code, group: r.group_code, ...resolveTeamPath(r.group_code, r32rows, pf) }))
     .sort((a, b) => a.group.localeCompare(b.group) || a.code.localeCompare(b.code));
 
-  const appData = { meta, teams, groups, fixtures, team_paths, scenarios, narration, tactical_context, real_standings, knockout_paths };
+  // knockout_fixtures: ALL 32 knockout matches (R32 -> Final) as SLOT-LABEL cards (no teams until the post-group
+  // bracket resolver fills them). Slot definitions are read VERBATIM from knockout_schedule — group_winner/runner_up
+  // carry the group letter, best_third carries the REAL Annex C eligible-group pool for THAT slot, later rounds carry
+  // the source match number. Each side has team:null as the forward-compat hook (resolver fills the real team later).
+  // The UI renders these alongside the group fixtures and they share the city filter. No prediction (slots, not teams).
+  const KO_ROUND: Record<string, { label: string; order: number }> = {
+    round_of_32: { label: "Round of 32", order: 1 }, round_of_16: { label: "Round of 16", order: 2 },
+    quarter_final: { label: "Quarter-finals", order: 3 }, semi_final: { label: "Semi-finals", order: 4 },
+    third_place: { label: "Third-place play-off", order: 5 }, final: { label: "Final", order: 6 },
+  };
+  const MON3 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const fmtWindow = (w: string | null): string | null => {
+    if (!w) return null;
+    const m = w.match(/(\d{4})-(\d{2})-(\d{2})(?:\s+to\s+(\d{4})-(\d{2})-(\d{2}))?/);
+    if (!m) return w;
+    const a = `${MON3[+m[2] - 1]} ${+m[3]}`;
+    if (!m[4]) return a;
+    const b = m[5] === m[2] ? `${+m[6]}` : `${MON3[+m[5] - 1]} ${+m[6]}`;
+    return `${a} – ${b}`;
+  };
+  const koSide = (label: string | null, slot: any) => {
+    const s = asObj(slot) ?? {};
+    return {
+      label: label ?? s.label ?? null,
+      type: s.type ?? null,                                    // group_winner | group_runner_up | best_third | match_winner | match_loser
+      group: s.group ?? null,                                  // winner / runner-up group letter
+      pool: Array.isArray(s.pool) ? s.pool.map(String) : null, // best_third eligible groups (Annex C), real per slot
+      source_match: s.match != null ? num(s.match) : null,     // progression source match (R16 onward)
+      team: null,                                              // forward-compat: real team filled by the bracket resolver
+    };
+  };
+  const koRaw = q(url, `select match_number, round, slot_a_label, slot_b_label, slot_a, slot_b, venue, city, country, venue_timezone, round_window,
+      match_date::text mdate, to_char(kickoff_utc at time zone 'UTC','YYYY-MM-DD"T"HH24:MI:SS"Z"') kutc, date_confirmed
+    from knockout_schedule order by match_number`);
+  const knockout_fixtures = koRaw.map((r: any) => {
+    const ro = KO_ROUND[r.round] ?? { label: humanScope(r.round), order: 9 };
+    return {
+      match_number: num(r.match_number), round: ro.label, round_key: r.round, round_order: ro.order,
+      round_window: r.round_window ?? null, round_window_label: fmtWindow(r.round_window ?? null),
+      side_a: koSide(r.slot_a_label, r.slot_a), side_b: koSide(r.slot_b_label, r.slot_b),
+      kickoff: r.mdate ?? null, kickoff_utc: r.kutc ?? null, date_confirmed: r.date_confirmed === true || r.date_confirmed === "t",
+      venue: r.venue ?? null, city: r.city ?? null, country: r.country ?? null, venue_timezone: r.venue_timezone ?? null,
+    };
+  });
+
+  const appData = { meta, teams, groups, fixtures, knockout_fixtures, team_paths, scenarios, narration, tactical_context, real_standings, knockout_paths };
 
   // ============ VALIDATE BEFORE WRITING ============
   const errs: string[] = [];
@@ -395,13 +440,14 @@ async function main() {
   if (!sumOk(sums.advance, 32)) errs.push(`sum advance ${sums.advance} != 32`);
   if (teams.length !== 48) errs.push(`teams ${teams.length} != 48`);
   if (fixtures.length !== 72) errs.push(`fixtures ${fixtures.length} != 72`);
+  if (knockout_fixtures.length !== 32) errs.push(`knockout_fixtures ${knockout_fixtures.length} != 32`);
 
   // ID-leak scan on the serialized output
   const jsonStr = JSON.stringify(appData, null, 2);
   const leaks = idLeakScan(jsonStr);
   if (leaks.length) errs.push(`ID-LEAK: ${leaks.join(" | ")}`);
 
-  const report = { project_id: PROJECT, source_of_truth: pointerLive ? LIVE_POINTER : "lifecycle=live_current markers", source_labels: SRC, as_of: meta.generated_at, sums, sum_check_pass: errs.filter((e) => e.startsWith("sum")).length === 0, id_leak_scan: leaks.length === 0 ? "CLEAN" : leaks, counts: { teams: teams.length, teams_with_flags: teams.filter((t) => t.flag).length, groups: groups.length, fixtures: fixtures.length, team_paths: team_paths.length, scenarios: scenarios.length, tactical: tactical_context.length, narration: narration.length }, contract_errors: errs };
+  const report = { project_id: PROJECT, source_of_truth: pointerLive ? LIVE_POINTER : "lifecycle=live_current markers", source_labels: SRC, as_of: meta.generated_at, sums, sum_check_pass: errs.filter((e) => e.startsWith("sum")).length === 0, id_leak_scan: leaks.length === 0 ? "CLEAN" : leaks, counts: { teams: teams.length, teams_with_flags: teams.filter((t) => t.flag).length, groups: groups.length, fixtures: fixtures.length, knockout_fixtures: knockout_fixtures.length, team_paths: team_paths.length, scenarios: scenarios.length, tactical: tactical_context.length, narration: narration.length }, contract_errors: errs };
   if (errs.length) { console.error(JSON.stringify({ ...report, RESULT: "VALIDATION FAILED — NOT WRITTEN" }, null, 2)); process.exit(1); }
 
   mkdirSync(path.join(rootDir, "data/exports"), { recursive: true });
