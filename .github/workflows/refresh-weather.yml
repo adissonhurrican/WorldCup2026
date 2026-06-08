@@ -1,0 +1,45 @@
+name: Refresh WC2026 Weather Overlay
+
+"on":
+  schedule:
+    # UTC. Cheap/keyless Open-Meteo refresh; fetcher self-guards to fixtures
+    # inside the 168h forecast window and no-ops outside it.
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wc2026-weather-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh-weather:
+    name: Fetch weather and sync static overlay
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Refresh weather overlay
+        run: node scripts/worldcup/weather/refresh-weather.mjs
+
+      - name: Commit weather overlay if changed
+        run: |
+          # Only the committed/served copies. ui/weather.json and ui-v2/dist/weather.json
+          # are gitignored build artifacts — adding them would make `git add` fail under `set -e`.
+          git add data/exports/weather.json ui-v2/public/weather.json
+          if git diff --cached --quiet; then
+            echo "No weather overlay changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh WC2026 weather overlay"
+          git push

@@ -1,0 +1,6 @@
+{
+  "as_of": "2026-06-06T19:55:41.358Z",
+  "source": "api_football_fixture_events DB export (goals/cards/substitutions) — display-only; never a prediction input",
+  "note": "Keyed in our exported fixture order. Player ids are resolved through api_football_player_identity_map when possible; feed names are shown as fallback. If the provider lags player names, the UI keeps the team+minute event and fills names on a later poll.",
+  "matches": []
+}

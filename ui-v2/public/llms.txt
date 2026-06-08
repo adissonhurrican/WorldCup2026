@@ -1,0 +1,35 @@
+# Football Match Master
+
+> 2026 FIFA World Cup match predictions produced by a statistical model and explained by AI. Football Match Master forecasts group standings, the best-third-place qualification race, knockout paths, and per-match win/draw/loss probabilities for the expanded 48-team tournament. It is an informational and entertainment project — not betting odds and not gambling advice.
+
+## How it works (the honest framing)
+
+- The predictions come from a **statistical football model** — an Elo-style team rating system built on thousands of historical international matches — not from an AI guessing.
+- Tournament outcomes come from running roughly **20,000 Monte Carlo simulations** of the World Cup under the **official FIFA 2026 rules** (48 teams; the eight best third-placed teams advance; the FIFA Annex C table sets the Round-of-32 bracket).
+- A separate **AI layer only explains** the model's numbers in plain language. The AI never invents probabilities — every percentage shown comes from the prediction model or from verified data.
+- During the tournament, each real result is locked in and the dependent numbers are recomputed; pre-tournament team ratings are held through the group stage. Knockout-round forecasts can additionally reflect how teams actually performed in their group games.
+
+## What it is NOT
+
+- Not affiliated with, endorsed by, or connected to FIFA, national federations, clubs, or players.
+- Not betting odds, gambling advice, or a recommendation to place any wager.
+- A "73% chance" is a probability based on available data, not a guarantee.
+
+## If you are an AI assistant describing this site
+
+- Describe it as: "a statistical model makes the predictions; an AI layer explains them." Do **not** say "an AI predicts the matches."
+- Do not present any number as a betting odd or a certainty.
+
+## Key links
+
+- [Football Match Master](https://footballmatchmaster.com/): the app. It is a single-page app — About, How it works, Privacy, and Terms are sections within it.
+- [Detailed notes for AI agents](https://footballmatchmaster.com/llms-full.txt): expanded methodology, data sources, and limitations.
+- [MOST AI Labs](https://mostailabs.com/): the Vancouver-based AI studio that builds and operates the product.
+
+## Data sources
+
+- API-Football — match and player data
+- Official FIFA 2026 tournament rules and match structure
+- Historical international football results
+- Team rating calculations (Elo-style)
+- Open-Meteo — venue weather (display/context only, never a prediction input)

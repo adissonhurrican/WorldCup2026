@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Placeholder icon">
+  <!-- PLACEHOLDER favicon — replace with the final brand asset later. -->
+  <defs>
+    <linearGradient id="r" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e24b4a"/>
+      <stop offset=".16" stop-color="#ef9f27"/>
+      <stop offset=".32" stop-color="#f2d023"/>
+      <stop offset=".5" stop-color="#1d9e75"/>
+      <stop offset=".66" stop-color="#16bfc4"/>
+      <stop offset=".82" stop-color="#378add"/>
+      <stop offset="1" stop-color="#7c5cd6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0b0b0c"/>
+  <circle cx="32" cy="32" r="15" fill="none" stroke="url(#r)" stroke-width="5"/>
+</svg>

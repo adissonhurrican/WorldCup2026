@@ -1,0 +1,13 @@
+{
+  "project_id": "ahcfrgxczbgdvrqmbisw",
+  "updated_at": "2026-06-07T10:12:47.171Z",
+  "updated_by": "scripts/worldcup/live/in-tournament-loop-runner.ts",
+  "reason": "synthetic supervised --go validation; DB rows unchanged",
+  "runs": {
+    "prediction_run": "066be1b1-de89-44de-8b7c-c95f4353ad7e",
+    "group_sim": "c45b3e6a-f2c3-43f4-bade-65dc1fd0e195",
+    "knockout_sim": "c222f2c6-536c-463e-b032-1d1fc1b6d0aa",
+    "scenario_phase": "pre_tournament"
+  },
+  "rollback_note": "Previous cache files are preserved in git/filesystem history; DB rows are preserved and selected by explicit run IDs."
+}

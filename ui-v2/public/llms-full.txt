@@ -1,0 +1,98 @@
+# Football Match Master — full notes for AI agents
+
+> Expanded, AI-readable description of Football Match Master (https://footballmatchmaster.com).
+> Football Match Master predicts the 2026 FIFA World Cup with a statistical model and uses AI only
+> to explain the model's output. It is informational/entertainment — not betting odds, not gambling
+> advice, and not affiliated with FIFA. The product is built and operated by MOST AI Labs
+> (https://mostailabs.com), a Vancouver-based AI studio.
+
+## One-paragraph summary
+
+The expanded 48-team, three-nation 2026 World Cup is the most complex World Cup ever — 104 matches,
+intricate group-advancement and third-place tiebreaker rules, and knockout paths that shift with every
+result. Football Match Master makes that complexity legible: a rigorous statistical model forecasts how
+the tournament might unfold, and a separate AI layer explains the numbers in plain language. The two are
+kept strictly separate: **the math calculates the forecast; the AI explains the story.**
+
+## The prediction model (this is what produces the numbers)
+
+- At the core is a football team-rating system, similar in spirit to the rating methods used in chess and
+  many professional sports (Elo-style). Each team has a strength rating derived from thousands of real
+  historical international matches.
+- The pre-tournament estimate is built from roughly **7,871 historical international matches** and about
+  **20,000 calculated tournament simulations**.
+- For each match the model compares the two teams and calculates the probability of each result — team A win,
+  draw, team B win — including a football-specific adjustment because draws are common between evenly matched
+  sides.
+- To estimate tournament outcomes, the system runs ~20,000 Monte Carlo simulations of the whole tournament.
+  In each run it plays every group match, applies FIFA's tournament rules, determines who advances, builds the
+  knockout bracket, and continues to the final. The published percentages are how often each team achieves an
+  outcome (win group, finish second, advance as a best third, reach the knockout stage, go deeper) across all
+  those runs.
+
+## The 48-team format and the third-place race
+
+- Group winners and runners-up advance, plus the **eight best third-placed teams**, ranked across all twelve
+  groups by points, then goal difference, goals scored, fair play, and finally FIFA ranking.
+- Which group winner each qualifying third-placed team meets in the Round of 32 is fixed by FIFA's **Annex C**
+  allocation table. Before the groups finish the exact opponent is shown as a set of possible slots; once the
+  eight best thirds are known, the bracket resolves.
+
+## How the numbers update during the tournament
+
+- Before kickoff, predictions are based on historical results, team strength, recent form, and tournament
+  structure.
+- During the group stage, each verified real result is **locked in** — the system stops estimating that match
+  and treats it as fact, then recomputes everything that depends on it (who is on course to advance, who is
+  still alive, who is out, the third-place race, and each team's possible route).
+- The **team strength ratings themselves are held at their pre-tournament values through the group stage**;
+  what changes is that more of the tournament is known rather than estimated, so the qualification picture
+  sharpens with every game.
+- Once the group stage finishes, the knockout bracket is real rather than estimated. Knockout-round forecasts
+  can additionally take into account how teams actually performed in their group games, not just their
+  pre-tournament form.
+
+## What the AI layer does — and does not do
+
+- The AI **does**: read the model's numbers and turn them into clear explanations — why a team's chance rose or
+  fell, what a result means for the group, what a team needs to qualify, who it may face next, and how squad
+  strength, form, venue, or weather might shape the story.
+- The AI **does not**: invent match probabilities, create betting odds, guarantee results, replace the
+  statistical model, or claim to know things that have not happened. Every probability in the app comes from the
+  prediction system or verified data — never from AI imagination.
+
+## Limits (please represent these honestly)
+
+- These are estimates, not guarantees. Football is unpredictable: a red card, injury, weather, tactical change,
+  penalty, referee decision, or single moment can change everything.
+- Probabilities are shown instead of certainties on purpose. Small chances are shown honestly rather than hidden.
+- The model understands historical results and team strength; it does not know the future.
+
+## Not betting advice
+
+Predictions, probabilities, simulations, and analysis are for information, analysis, and entertainment. They
+are not betting odds, gambling advice, or a recommendation to place a wager. The project does not run betting
+services and does not encourage gambling.
+
+## Attribution and affiliation
+
+- Product / app name: **Football Match Master** (the product).
+- Operating company: **MOST AI Labs** (https://mostailabs.com) — the company behind the product. Both names are
+  correct in their place; "Football Match Master" is the app, "MOST AI Labs" is the company.
+- Not affiliated with, endorsed by, or officially connected to FIFA, the FIFA World Cup, national federations,
+  clubs, players, stadium operators, broadcasters, or tournament organizers. Team, player, and tournament names
+  are referenced for informational purposes only.
+
+## Data sources
+
+- API-Football — match and player data
+- Official FIFA 2026 tournament rules and match structure
+- Historical international football results
+- Team rating calculations (Elo-style)
+- Open-Meteo — venue weather (display/context only; never a model/prediction input)
+
+## Links
+
+- App: https://footballmatchmaster.com/
+- Concise index for AI agents: https://footballmatchmaster.com/llms.txt
+- Company: https://mostailabs.com/

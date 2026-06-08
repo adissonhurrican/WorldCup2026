@@ -1,0 +1,320 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WorldCup2026 app-data",
+  "description": "Public app-data contract. Probabilities are DECIMALS 0..1. NO internal IDs/table names/model-version tags/status jargon anywhere. Built from the live promoted runs only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "teams", "groups", "fixtures", "team_paths", "scenarios", "narration", "tactical_context", "real_standings", "knockout_paths"],
+  "x_constraints": {
+    "probabilities_are_decimals_0_to_1": true,
+    "no_internal_ids": "no UUIDs, table names, model-version tags (vN.N / -vYYYYMMDD), or status jargon (candidate/current_best/lifecycle/superseded/review_status)",
+    "live_runs_only": "never candidate runs; read the live pointer as truth",
+    "sums": { "win_group": 12, "runner_up": 12, "top_2": 24, "best_third": 8, "advance": 32 }
+  },
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tournament", "generated_at", "model_label", "simulation_count", "disclaimer", "model_note"],
+      "properties": {
+        "tournament": { "type": "string" },
+        "generated_at": { "type": "string", "description": "deterministic data-as-of (latest live-run provenance time) so re-export is idempotent" },
+        "model_label": { "type": "string", "description": "plain language; no version tags" },
+        "simulation_count": { "type": "integer" },
+        "disclaimer": { "type": "string" },
+        "model_note": { "type": "string" }
+      }
+    },
+    "teams": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["code", "name", "group", "flag"],
+        "properties": {
+          "code": { "type": "string" },
+          "name": { "type": "string" },
+          "group": { "type": "string" },
+          "flag": { "type": ["string", "null"], "description": "Self-hosted relative UI asset path, e.g. flags/CAN.png. Never an external API-Football URL." }
+        }
+      }
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["group", "standings"],
+        "properties": {
+          "group": { "type": "string" },
+          "standings": {
+            "type": "array",
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["code", "win_group", "advance", "finish_distribution", "projected_finish"],
+              "properties": {
+                "code": { "type": "string" },
+                "win_group": { "type": "number", "minimum": 0, "maximum": 1 },
+                "top_2": { "type": "number", "minimum": 0, "maximum": 1 },
+                "advance": { "type": "number", "minimum": 0, "maximum": 1 },
+                "finish_distribution": {
+                  "type": "object", "additionalProperties": false,
+                  "required": ["1st", "2nd", "3rd", "4th"],
+                  "properties": { "1st": { "type": "number" }, "2nd": { "type": "number" }, "3rd": { "type": "number" }, "4th": { "type": "number" } }
+                },
+                "projected_finish": { "type": "string", "enum": ["1st", "2nd", "3rd", "4th"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "fixtures": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["home", "away", "group", "matchday", "kickoff", "kickoff_utc", "probabilities", "result", "live_score_ref"],
+        "properties": {
+          "home": { "type": "string" }, "away": { "type": "string" }, "group": { "type": "string" },
+          "matchday": { "type": "integer", "minimum": 1, "maximum": 3 },
+          "kickoff": { "type": ["string", "null"], "description": "kickoff date (UTC). Prefer kickoff_utc for clocks." },
+          "kickoff_utc": { "type": ["string", "null"], "description": "absolute kickoff moment, UTC ISO (e.g. 2026-06-11T19:00:00Z). Clocks are formatted at DISPLAY from this + venue_timezone / the viewer's timezone — never store local strings." },
+          "venue": { "type": ["string", "null"], "description": "stadium name; null = Venue TBC" },
+          "city": { "type": ["string", "null"] },
+          "state": { "type": ["string", "null"], "description": "state / province" },
+          "country": { "type": ["string", "null"] },
+          "venue_timezone": { "type": ["string", "null"], "description": "IANA tz (e.g. America/Mexico_City) for the venue-local clock; null -> show the viewer's clock only" },
+          "probabilities": {
+            "type": "object", "additionalProperties": false,
+            "required": ["home_win", "draw", "away_win"],
+            "properties": { "home_win": { "type": "number", "minimum": 0, "maximum": 1 }, "draw": { "type": "number", "minimum": 0, "maximum": 1 }, "away_win": { "type": "number", "minimum": 0, "maximum": 1 } }
+          },
+          "result": { "type": ["object", "null"] },
+          "live_score_ref": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "team_paths": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["code", "advance", "knockout", "group_games"],
+        "properties": {
+          "code": { "type": "string" },
+          "advance": { "type": "number", "minimum": 0, "maximum": 1 },
+          "knockout": {
+            "type": "object", "additionalProperties": false,
+            "required": ["reach_round_of_16", "reach_quarterfinal", "reach_semifinal", "reach_final", "champion"],
+            "properties": {
+              "reach_round_of_16": { "type": "number", "minimum": 0, "maximum": 1 },
+              "reach_quarterfinal": { "type": "number", "minimum": 0, "maximum": 1 },
+              "reach_semifinal": { "type": "number", "minimum": 0, "maximum": 1 },
+              "reach_final": { "type": "number", "minimum": 0, "maximum": 1 },
+              "champion": { "type": "number", "minimum": 0, "maximum": 1 }
+            }
+          },
+          "group_games": {
+            "type": "array",
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["opponent", "matchday", "win", "draw", "loss"],
+              "properties": { "opponent": { "type": "string" }, "matchday": { "type": "integer" }, "win": { "type": "number" }, "draw": { "type": "number" }, "loss": { "type": "number" } }
+            }
+          }
+        }
+      }
+    },
+    "scenarios": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["code", "advance_chance", "in_their_hands", "routes", "third_place_race"],
+        "properties": {
+          "code": { "type": "string" },
+          "advance_chance": { "type": "number", "minimum": 0, "maximum": 1 },
+          "in_their_hands": { "type": "boolean" },
+          "routes": {
+            "type": "array",
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["route", "chance", "own_form", "depends_on_other_groups", "decided_by"],
+              "properties": {
+                "route": { "type": "string" }, "chance": { "type": "number", "minimum": 0, "maximum": 1 },
+                "own_form": { "type": "string" }, "depends_on_other_groups": { "type": "array", "items": { "type": "string" } },
+                "decided_by": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          },
+          "third_place_race": {
+            "type": "object", "additionalProperties": false,
+            "required": ["in_race", "advances_if_third", "watch_groups"],
+            "properties": {
+              "in_race": { "type": "boolean" },
+              "advances_if_third": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+              "race_position": { "type": ["integer", "null"] },
+              "watch_groups": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "narration": {
+      "type": "array",
+      "description": "validated AI 'what changed' narration; empty array when the AI pipeline is not built",
+      "items": {
+        "type": "object", "additionalProperties": true,
+        "required": ["content_type", "headline", "body"],
+        "properties": { "content_type": { "type": "string" }, "headline": { "type": "string" }, "body": { "type": "string" } }
+      }
+    },
+    "tactical_context": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["code", "coach", "formation_primary", "reported_range", "style", "confidence", "source_label"],
+        "properties": {
+          "code": { "type": "string" },
+          "coach": { "type": ["string", "null"] },
+          "formation_primary": { "type": ["string", "null"] },
+          "reported_range": { "type": "array", "items": { "type": "string" } },
+          "style": { "type": "object" },
+          "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+          "source_label": { "type": "string" }
+        }
+      }
+    },
+    "real_standings": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "The REAL group table computed from VERIFIED results using the full FIFA-2026 Article-13 ladder (points -> head-to-head -> goal difference -> goals -> fair play -> FIFA ranking) plus the cross-group best-third resolver (rankThirdPlace, no head-to-head). Distinct from the predicted/projected `groups` block. Three-band advance_state. Graceful: status 'not_started' (all 'scheduled') before any result lands.",
+      "required": ["label", "source_label", "status", "results_counted", "groups_complete", "groups", "best_third_race"],
+      "properties": {
+        "label": { "type": "string" },
+        "source_label": { "type": "string" },
+        "status": { "type": "string", "enum": ["not_started", "in_progress", "complete"] },
+        "results_counted": { "type": "integer", "minimum": 0 },
+        "groups_complete": { "type": "integer", "minimum": 0, "maximum": 12 },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["group", "complete", "games_played", "standings"],
+            "properties": {
+              "group": { "type": "string" },
+              "complete": { "type": "boolean" },
+              "games_played": { "type": "number", "minimum": 0, "maximum": 6 },
+              "standings": {
+                "type": "array",
+                "items": {
+                  "type": "object", "additionalProperties": false,
+                  "required": ["position", "code", "name", "played", "won", "drawn", "lost", "goals_for", "goals_against", "goal_difference", "points", "advance_state", "band", "decided"],
+                  "properties": {
+                    "position": { "type": ["integer", "null"], "minimum": 1, "maximum": 4, "description": "1-4 once the group has started; null while 'not_started'" },
+                    "code": { "type": "string" },
+                    "name": { "type": ["string", "null"] },
+                    "played": { "type": "integer", "minimum": 0, "maximum": 3 },
+                    "won": { "type": "integer", "minimum": 0, "maximum": 3 },
+                    "drawn": { "type": "integer", "minimum": 0, "maximum": 3 },
+                    "lost": { "type": "integer", "minimum": 0, "maximum": 3 },
+                    "goals_for": { "type": "integer", "minimum": 0 },
+                    "goals_against": { "type": "integer", "minimum": 0 },
+                    "goal_difference": { "type": "integer" },
+                    "points": { "type": "integer", "minimum": 0, "maximum": 9 },
+                    "advance_state": { "type": "string", "enum": ["qualified", "best_third_in", "best_third_out", "eliminated", "scheduled"], "description": "qualified = 1st/2nd (green); best_third_in/out = 3rd with the cross-group cut (amber); eliminated = 4th (gray); scheduled = no games yet" },
+                    "band": { "type": ["string", "null"], "enum": ["green", "amber", "gray", null], "description": "three-band display: green=qualified, amber=3rd, gray=eliminated, null=scheduled" },
+                    "decided": { "type": "boolean", "description": "true only when mathematically final from results so far (group complete; for 3rd place, all 12 groups complete)" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "best_third_race": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["decided", "qualify_count", "note", "ranked"],
+          "properties": {
+            "decided": { "type": "boolean" },
+            "qualify_count": { "type": "integer" },
+            "note": { "type": "string" },
+            "ranked": {
+              "type": "array",
+              "description": "the 12 third-placed teams ranked by the best-third ladder; empty until the first result lands",
+              "items": {
+                "type": "object", "additionalProperties": false,
+                "required": ["code", "group", "points", "goal_difference", "goals_for", "rank", "in_best_8", "group_complete"],
+                "properties": {
+                  "code": { "type": "string" },
+                  "group": { "type": "string" },
+                  "points": { "type": "integer" },
+                  "goal_difference": { "type": "integer" },
+                  "goals_for": { "type": "integer" },
+                  "rank": { "type": "integer", "minimum": 1, "maximum": 12 },
+                  "in_best_8": { "type": "boolean" },
+                  "group_complete": { "type": "boolean" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "knockout_paths": {
+      "type": "array",
+      "description": "Deterministic Round-of-32 route per team by finishing position (group winner / runner-up / best third), a thin lookup over public.knockout_schedule (R32 slots cross-checked vs roundOf32Slots). Slot + venue are certain; the date is exact where confirmed else the round window (never a guessed day). Opponent is the SLOT (certain) plus a PROJECTED name from the group simulation (narrows over time); real_opponent is the null hook the post-group bracket resolver fills.",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["code", "group", "as_group_winner", "as_runner_up", "as_best_third"],
+        "properties": {
+          "code": { "type": "string" },
+          "group": { "type": "string" },
+          "as_group_winner": {
+            "type": ["object", "null"], "additionalProperties": false,
+            "required": ["match_number", "round", "venue", "city", "venue_timezone", "date_confirmed", "match_date", "kickoff_utc", "round_window", "opponent_slot", "opponent_kind", "projected_opponent", "real_opponent"],
+            "properties": {
+              "match_number": { "type": "integer" }, "round": { "type": "string" },
+              "venue": { "type": ["string", "null"] }, "city": { "type": ["string", "null"] }, "venue_timezone": { "type": ["string", "null"] },
+              "date_confirmed": { "type": "boolean" }, "match_date": { "type": ["string", "null"] }, "kickoff_utc": { "type": ["string", "null"] }, "round_window": { "type": ["string", "null"] },
+              "opponent_slot": { "type": "string" }, "opponent_kind": { "type": "string" },
+              "projected_opponent": { "type": ["object", "null"] }, "real_opponent": { "type": ["object", "null"] }
+            }
+          },
+          "as_runner_up": {
+            "type": ["object", "null"], "additionalProperties": false,
+            "required": ["match_number", "round", "venue", "city", "venue_timezone", "date_confirmed", "match_date", "kickoff_utc", "round_window", "opponent_slot", "opponent_kind", "projected_opponent", "real_opponent"],
+            "properties": {
+              "match_number": { "type": "integer" }, "round": { "type": "string" },
+              "venue": { "type": ["string", "null"] }, "city": { "type": ["string", "null"] }, "venue_timezone": { "type": ["string", "null"] },
+              "date_confirmed": { "type": "boolean" }, "match_date": { "type": ["string", "null"] }, "kickoff_utc": { "type": ["string", "null"] }, "round_window": { "type": ["string", "null"] },
+              "opponent_slot": { "type": "string" }, "opponent_kind": { "type": "string" },
+              "projected_opponent": { "type": ["object", "null"] }, "real_opponent": { "type": ["object", "null"] }
+            }
+          },
+          "as_best_third": {
+            "type": "object", "additionalProperties": false,
+            "description": "Conditional on advancing as a best third; the exact slot (1 of eligible_slot_count) is set by the Annex C combination of which thirds qualify.",
+            "required": ["conditional", "advances_as_best_third_required", "eligible_slot_count", "note", "eligible_slots"],
+            "properties": {
+              "conditional": { "type": "boolean" },
+              "advances_as_best_third_required": { "type": "boolean" },
+              "eligible_slot_count": { "type": "integer", "minimum": 0 },
+              "note": { "type": "string" },
+              "eligible_slots": {
+                "type": "array",
+                "items": {
+                  "type": "object", "additionalProperties": false,
+                  "required": ["match_number", "round", "venue", "city", "venue_timezone", "date_confirmed", "match_date", "kickoff_utc", "round_window", "opponent_slot", "opponent_kind", "projected_opponent", "real_opponent"],
+                  "properties": {
+                    "match_number": { "type": "integer" }, "round": { "type": "string" },
+                    "venue": { "type": ["string", "null"] }, "city": { "type": ["string", "null"] }, "venue_timezone": { "type": ["string", "null"] },
+                    "date_confirmed": { "type": "boolean" }, "match_date": { "type": ["string", "null"] }, "kickoff_utc": { "type": ["string", "null"] }, "round_window": { "type": ["string", "null"] },
+                    "opponent_slot": { "type": "string" }, "opponent_kind": { "type": "string" },
+                    "projected_opponent": { "type": ["object", "null"] }, "real_opponent": { "type": ["object", "null"] }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

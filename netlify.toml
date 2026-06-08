@@ -1,0 +1,61 @@
+# netlify.toml — build + edge-cache config for the WC2026 ui-v2 app.
+# Deploy chain: GitHub repo -> Netlify build -> Cloudflare. Kept in-repo so the
+# settings travel with the code (not dashboard-only). Project: ahcfrgxczbgdvrqmbisw
+#
+# Values confirmed from the actual ui-v2 setup (not guessed):
+#   base    = ui-v2         ui-v2/package.json holds the build script
+#   command = npm run build  package.json scripts.build -> "vite build"
+#   publish = dist           Vite default outDir (no custom outDir in vite.config.js).
+#                            Netlify resolves publish RELATIVE TO base -> ui-v2/dist.
+#   node    = 20             no engines field / .nvmrc in the project; pinned to a
+#                            stable LTS to avoid Netlify-default drift (Vite 5/React 18).
+
+[build]
+  base = "ui-v2"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# ---------------------------------------------------------------------------
+# Cache headers — addresses the Cloudflare/edge over-cache concern.
+# ---------------------------------------------------------------------------
+
+# Content-hashed build output (Vite emits /assets/<name>-<hash>.js|css). The hash
+# changes whenever the content changes, so these are safe to cache forever.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# The JSON the app fetches at runtime: the app-data.json contract AND every live/
+# display overlay (live-scores.json, lineups.json, events.json, weather.json,
+# squads.json, venues.json, venue-facts.json, wc2026_team_colors.json,
+# nicknames.json). These are NOT content-hashed and must reach users immediately —
+# a fresh deploy or a server-side overlay update must never be stuck behind an edge
+# cache — so always revalidate.
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# The HTML entry references the hashed assets, so it must always revalidate or a
+# user could load a stale shell pointing at asset filenames that no longer exist.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ---------------------------------------------------------------------------
+# No SPA fallback redirect — by design.
+# ui-v2 has NO client-side router (no react-router / history.pushState / popstate);
+# it is a single-URL state app, and vite.config.js sets base "./" (relative asset
+# paths). A blanket /* -> /index.html 200 would serve the shell on nested 404 paths
+# with broken relative asset links, so it is intentionally omitted.
+# If client-side routes are added later: set the Vite `base` to "/" first, then add:
+#   [[redirects]]
+#     from = "/*"
+#     to = "/index.html"
+#     status = 200
+# ---------------------------------------------------------------------------

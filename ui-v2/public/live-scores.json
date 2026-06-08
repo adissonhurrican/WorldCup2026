@@ -1,0 +1,5 @@
+{
+  "_comment": "LIVE in-play scores ONLY — written by the server-side side job (scripts/worldcup/live/write-live-scores.ts) from API-Football live feed, NOT by the client. Display-only; never a prediction input. The UI polls this ~every 30s. Empty when nothing is in play. During the tournament run: npx tsx scripts/worldcup/live/write-live-scores.ts --watch --interval 30 --out ui-v2/public/live-scores.json",
+  "as_of": null,
+  "matches": []
+}

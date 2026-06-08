@@ -1,0 +1,503 @@
+{
+  "_comment": "Display-only WC2026 country identity colors for prediction bars. UI-only; never a prediction/model input.",
+  "project_id": "ahcfrgxczbgdvrqmbisw",
+  "generated_on": "2026-06-06",
+  "prediction_input_allowed": false,
+  "source": "Provided team-colors dataset reconciled to ui-v2/public/app-data.json; manual identity-color fills for COD, CZE, SWE, TUR; non-roster CRC and NGA omitted.",
+  "reconciliation": {
+    "exported_team_count": 48,
+    "provided_team_count": 46,
+    "filled_missing_codes": [
+      "COD",
+      "CZE",
+      "SWE",
+      "TUR"
+    ],
+    "omitted_non_roster_codes": [
+      "CRC",
+      "NGA"
+    ]
+  },
+  "teams": {
+    "ALG": {
+      "code": "ALG",
+      "name": "Algeria",
+      "primary": "#006233",
+      "secondary": "#FFFFFF",
+      "primary_name": "green",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "ARG": {
+      "code": "ARG",
+      "name": "Argentina",
+      "primary": "#75AADB",
+      "secondary": "#FFFFFF",
+      "primary_name": "sky blue",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "AUS": {
+      "code": "AUS",
+      "name": "Australia",
+      "primary": "#FFB81C",
+      "secondary": "#00843D",
+      "primary_name": "gold",
+      "secondary_name": "green",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "AUT": {
+      "code": "AUT",
+      "name": "Austria",
+      "primary": "#ED2939",
+      "secondary": "#FFFFFF",
+      "primary_name": "red",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "BEL": {
+      "code": "BEL",
+      "name": "Belgium",
+      "primary": "#C8102E",
+      "secondary": "#000000",
+      "primary_name": "red",
+      "secondary_name": "black",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "BIH": {
+      "code": "BIH",
+      "name": "Bosnia and Herzegovina",
+      "primary": "#002395",
+      "secondary": "#FFD100",
+      "primary_name": "blue",
+      "secondary_name": "gold",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "BRA": {
+      "code": "BRA",
+      "name": "Brazil",
+      "primary": "#FFDF00",
+      "secondary": "#009C3B",
+      "primary_name": "yellow",
+      "secondary_name": "green",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "CAN": {
+      "code": "CAN",
+      "name": "Canada",
+      "primary": "#D52B1E",
+      "secondary": "#FFFFFF",
+      "primary_name": "red",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "CIV": {
+      "code": "CIV",
+      "name": "Ivory Coast",
+      "primary": "#FF8200",
+      "secondary": "#009E60",
+      "primary_name": "orange",
+      "secondary_name": "green",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "COD": {
+      "code": "COD",
+      "name": "Congo DR",
+      "primary": "#007FFF",
+      "secondary": "#CE1021",
+      "primary_name": "sky blue",
+      "secondary_name": "red",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "COL": {
+      "code": "COL",
+      "name": "Colombia",
+      "primary": "#FCD116",
+      "secondary": "#003893",
+      "primary_name": "yellow",
+      "secondary_name": "blue",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "CPV": {
+      "code": "CPV",
+      "name": "Cape Verde Islands",
+      "primary": "#003893",
+      "secondary": "#CF2027",
+      "primary_name": "blue",
+      "secondary_name": "red",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "CRO": {
+      "code": "CRO",
+      "name": "Croatia",
+      "primary": "#CE1126",
+      "secondary": "#1E3A8A",
+      "primary_name": "red",
+      "secondary_name": "blue",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "CUW": {
+      "code": "CUW",
+      "name": "Curacao",
+      "primary": "#002B7F",
+      "secondary": "#F9D616",
+      "primary_name": "blue",
+      "secondary_name": "yellow",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "CZE": {
+      "code": "CZE",
+      "name": "Czech Republic",
+      "primary": "#D7141A",
+      "secondary": "#11457E",
+      "primary_name": "red",
+      "secondary_name": "blue",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "ECU": {
+      "code": "ECU",
+      "name": "Ecuador",
+      "primary": "#FFD100",
+      "secondary": "#0072CE",
+      "primary_name": "yellow",
+      "secondary_name": "blue",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "EGY": {
+      "code": "EGY",
+      "name": "Egypt",
+      "primary": "#CE1126",
+      "secondary": "#000000",
+      "primary_name": "red",
+      "secondary_name": "black",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "ENG": {
+      "code": "ENG",
+      "name": "England",
+      "primary": "#FFFFFF",
+      "secondary": "#CE1124",
+      "primary_name": "white",
+      "secondary_name": "red",
+      "primary_is_light": true,
+      "secondary_is_light": false
+    },
+    "ESP": {
+      "code": "ESP",
+      "name": "Spain",
+      "primary": "#C60B1E",
+      "secondary": "#FFC400",
+      "primary_name": "red",
+      "secondary_name": "gold",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "FRA": {
+      "code": "FRA",
+      "name": "France",
+      "primary": "#1E2A78",
+      "secondary": "#FFFFFF",
+      "primary_name": "blue",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "GER": {
+      "code": "GER",
+      "name": "Germany",
+      "primary": "#000000",
+      "secondary": "#DD0000",
+      "primary_name": "black",
+      "secondary_name": "red",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "GHA": {
+      "code": "GHA",
+      "name": "Ghana",
+      "primary": "#FCD116",
+      "secondary": "#006B3F",
+      "primary_name": "gold",
+      "secondary_name": "green",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "HAI": {
+      "code": "HAI",
+      "name": "Haiti",
+      "primary": "#00209F",
+      "secondary": "#D21034",
+      "primary_name": "blue",
+      "secondary_name": "red",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "IRN": {
+      "code": "IRN",
+      "name": "Iran",
+      "primary": "#FFFFFF",
+      "secondary": "#239F40",
+      "primary_name": "white",
+      "secondary_name": "green",
+      "primary_is_light": true,
+      "secondary_is_light": false
+    },
+    "IRQ": {
+      "code": "IRQ",
+      "name": "Iraq",
+      "primary": "#007A3D",
+      "secondary": "#FFFFFF",
+      "primary_name": "green",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "JOR": {
+      "code": "JOR",
+      "name": "Jordan",
+      "primary": "#007A3D",
+      "secondary": "#CE1126",
+      "primary_name": "green",
+      "secondary_name": "red",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "JPN": {
+      "code": "JPN",
+      "name": "Japan",
+      "primary": "#1D2088",
+      "secondary": "#E60012",
+      "primary_name": "navy",
+      "secondary_name": "red",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "KOR": {
+      "code": "KOR",
+      "name": "South Korea",
+      "primary": "#C8102E",
+      "secondary": "#003478",
+      "primary_name": "red",
+      "secondary_name": "navy",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "KSA": {
+      "code": "KSA",
+      "name": "Saudi Arabia",
+      "primary": "#006C35",
+      "secondary": "#FFFFFF",
+      "primary_name": "green",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "MAR": {
+      "code": "MAR",
+      "name": "Morocco",
+      "primary": "#C1272D",
+      "secondary": "#006233",
+      "primary_name": "red",
+      "secondary_name": "green",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "MEX": {
+      "code": "MEX",
+      "name": "Mexico",
+      "primary": "#006847",
+      "secondary": "#CE1126",
+      "primary_name": "green",
+      "secondary_name": "red",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "NED": {
+      "code": "NED",
+      "name": "Netherlands",
+      "primary": "#EC6608",
+      "secondary": "#21468B",
+      "primary_name": "orange",
+      "secondary_name": "blue",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "NOR": {
+      "code": "NOR",
+      "name": "Norway",
+      "primary": "#BA0C2F",
+      "secondary": "#00205B",
+      "primary_name": "red",
+      "secondary_name": "navy",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "NZL": {
+      "code": "NZL",
+      "name": "New Zealand",
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "primary_name": "black",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "PAN": {
+      "code": "PAN",
+      "name": "Panama",
+      "primary": "#DA121A",
+      "secondary": "#072357",
+      "primary_name": "red",
+      "secondary_name": "navy",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "PAR": {
+      "code": "PAR",
+      "name": "Paraguay",
+      "primary": "#D52B1E",
+      "secondary": "#0038A8",
+      "primary_name": "red",
+      "secondary_name": "blue",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "POR": {
+      "code": "POR",
+      "name": "Portugal",
+      "primary": "#C8102E",
+      "secondary": "#006600",
+      "primary_name": "red",
+      "secondary_name": "green",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "QAT": {
+      "code": "QAT",
+      "name": "Qatar",
+      "primary": "#8A1538",
+      "secondary": "#FFFFFF",
+      "primary_name": "maroon",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "RSA": {
+      "code": "RSA",
+      "name": "South Africa",
+      "primary": "#007A4D",
+      "secondary": "#FFB81C",
+      "primary_name": "green",
+      "secondary_name": "gold",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "SCO": {
+      "code": "SCO",
+      "name": "Scotland",
+      "primary": "#0065BF",
+      "secondary": "#FFFFFF",
+      "primary_name": "navy",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "SEN": {
+      "code": "SEN",
+      "name": "Senegal",
+      "primary": "#00853F",
+      "secondary": "#FDEF42",
+      "primary_name": "green",
+      "secondary_name": "yellow",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "SUI": {
+      "code": "SUI",
+      "name": "Switzerland",
+      "primary": "#D52B1E",
+      "secondary": "#FFFFFF",
+      "primary_name": "red",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "SWE": {
+      "code": "SWE",
+      "name": "Sweden",
+      "primary": "#006AA7",
+      "secondary": "#FECC00",
+      "primary_name": "blue",
+      "secondary_name": "yellow",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "TUN": {
+      "code": "TUN",
+      "name": "Tunisia",
+      "primary": "#E70013",
+      "secondary": "#FFFFFF",
+      "primary_name": "red",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "TUR": {
+      "code": "TUR",
+      "name": "Turkiye",
+      "primary": "#E30A17",
+      "secondary": "#FFFFFF",
+      "primary_name": "red",
+      "secondary_name": "white",
+      "primary_is_light": false,
+      "secondary_is_light": true
+    },
+    "URU": {
+      "code": "URU",
+      "name": "Uruguay",
+      "primary": "#5CBFEB",
+      "secondary": "#001489",
+      "primary_name": "sky blue",
+      "secondary_name": "navy",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "USA": {
+      "code": "USA",
+      "name": "USA",
+      "primary": "#1B2A55",
+      "secondary": "#BF0A30",
+      "primary_name": "navy",
+      "secondary_name": "red",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    },
+    "UZB": {
+      "code": "UZB",
+      "name": "Uzbekistan",
+      "primary": "#1EB53A",
+      "secondary": "#0099B5",
+      "primary_name": "green",
+      "secondary_name": "blue",
+      "primary_is_light": false,
+      "secondary_is_light": false
+    }
+  }
+}

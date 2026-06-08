@@ -1,0 +1,572 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Apple-clean neutral surfaces (iOS systemGrouped). LIGHT. */
+    --c-bg: 242 242 247; /* #F2F2F7 grouped background */
+    --c-surface: 255 255 255; /* card */
+    --c-surface-2: 248 248 250; /* nested fill */
+    --c-text: 28 28 30; /* label */
+    --c-text-2: 110 110 117; /* secondary label */
+    --c-text-3: 174 174 178; /* tertiary label */
+    --c-separator: 198 198 200; /* hairline */
+    --c-fill: 120 120 128; /* system fill base (used w/ low opacity) */
+    /* fixed-meaning colors */
+    --c-qualified: 29 158 117; /* #1D9E75 green — 1st/2nd */
+    --c-bubble: 239 159 39; /* #EF9F27 amber — 3rd bubble */
+    --c-accent: 55 138 221; /* #378ADD app tint (selection / hero / live) */
+    --c-nav: 11 158 133; /* Vancouver seafoam/teal family, brightened to read on white #0B9E85 — active nav (light) */
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .dark {
+    /* DARK — true black background, elevated dark card surfaces. */
+    --c-bg: 0 0 0;
+    --c-surface: 28 28 30; /* #1C1C1E */
+    --c-surface-2: 44 44 46; /* #2C2C2E */
+    --c-text: 255 255 255;
+    --c-text-2: 152 152 159;
+    --c-text-3: 110 110 117;
+    --c-separator: 84 84 88;
+    --c-fill: 120 120 128;
+    --c-qualified: 48 200 143; /* brightened for dark */
+    --c-bubble: 245 176 66;
+    --c-accent: 79 158 234;
+    --c-nav: 167 255 235; /* Vancouver "Seafoam Teal" #A7FFEB — active nav (dark) */
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-bg text-ink antialiased;
+    font-family: theme("fontFamily.sans");
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+
+  button {
+    touch-action: manipulation;
+    user-select: none;
+  }
+}
+
+@layer components {
+  /* Apple card: soft radius, subtle fill + soft shadow, NO hard border. Floats gently. */
+  .card {
+    @apply rounded-card bg-surface;
+    box-shadow: var(--shadow-card);
+  }
+
+  .next-match-card {
+    --next-match-gold-bright: rgba(255, 229, 154, 0.96);
+    --next-match-gold: rgba(214, 157, 46, 0.92);
+    --next-match-gold-deep: rgba(126, 82, 10, 0.78);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 244, 202, 0.42),
+      inset 0 -1px 2px rgba(105, 69, 8, 0.16),
+      0 8px 20px rgba(175, 119, 22, 0.15),
+      0 3px 8px rgba(0, 0, 0, 0.10),
+      0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .next-match-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: inherit;
+    padding: 1.5px;
+    background:
+      linear-gradient(
+        120deg,
+        var(--next-match-gold-bright) 0%,
+        var(--next-match-gold) 28%,
+        var(--next-match-gold-deep) 54%,
+        rgba(248, 190, 68, 0.92) 78%,
+        rgba(111, 73, 8, 0.72) 100%
+      );
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.34),
+      inset 0 -1px 2px rgba(71, 46, 5, 0.22);
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .dark .next-match-card {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 232, 164, 0.28),
+      inset 0 -1px 3px rgba(0, 0, 0, 0.42),
+      0 9px 22px rgba(205, 145, 35, 0.18),
+      0 4px 12px rgba(0, 0, 0, 0.58),
+      0 0 0 1px rgba(208, 148, 36, 0.16);
+  }
+
+  .dark .next-match-card::after {
+    opacity: 0.92;
+  }
+
+  /* iOS opaque-hairline (insets handled per-list). */
+  .hairline {
+    @apply bg-separator/60;
+  }
+
+  /* The "We Are 26" rainbow — used ONLY as a single thin accent line (never a wash). */
+  .rainbow-line {
+    background: linear-gradient(
+      90deg,
+      #e24b4a,
+      #ef9f27,
+      #f2d023,
+      #1d9e75,
+      #16bfc4,
+      #378add,
+      #7c5cd6,
+      #e63d8c
+    );
+  }
+
+  /* Medium glass treatment for all self-hosted team flags. The real flag image stays untouched. */
+  .glass-flag {
+    --flag-host-ring: rgba(255, 255, 255, 0.18);
+    position: relative;
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 9999px;
+    background: rgb(var(--c-surface-2));
+    box-shadow:
+      0 3px 8px rgba(0, 0, 0, 0.22),
+      0 1px 1px rgba(0, 0, 0, 0.10),
+      0 0 0 1px var(--flag-host-ring),
+      inset 0 1px 1px rgba(255, 255, 255, 0.42),
+      inset 0 -2px 5px rgba(0, 0, 0, 0.20),
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.34);
+  }
+
+  .glass-flag__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+    transform: scale(1.015);
+  }
+
+  .glass-flag::before,
+  .glass-flag::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .glass-flag::before {
+    inset: 0;
+    z-index: 1;
+    box-shadow:
+      inset 0 1.5px 2px rgba(255, 255, 255, 0.28),
+      inset 0 -3px 8px rgba(0, 0, 0, 0.18);
+  }
+
+  .glass-flag::after {
+    left: 12%;
+    top: 8%;
+    z-index: 2;
+    width: 58%;
+    height: 40%;
+    background:
+      radial-gradient(ellipse at 34% 24%, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.22) 44%, rgba(255, 255, 255, 0) 74%);
+    opacity: 0.48;
+    transform: rotate(-18deg);
+    mix-blend-mode: screen;
+  }
+
+  .dark .glass-flag {
+    --flag-host-ring: rgba(255, 255, 255, 0.10);
+    box-shadow:
+      0 3px 9px rgba(0, 0, 0, 0.55),
+      0 1px 1px rgba(0, 0, 0, 0.32),
+      0 0 0 1px var(--flag-host-ring),
+      inset 0 1px 1px rgba(255, 255, 255, 0.24),
+      inset 0 -2px 6px rgba(0, 0, 0, 0.34),
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.16);
+  }
+
+  .dark .glass-flag::before {
+    box-shadow:
+      inset 0 1.5px 2px rgba(255, 255, 255, 0.16),
+      inset 0 -3px 8px rgba(0, 0, 0, 0.28);
+  }
+
+  .dark .glass-flag::after {
+    opacity: 0.34;
+  }
+
+  .glass-flag--host-can { --flag-host-ring: rgba(226, 75, 74, 0.42); }
+  .glass-flag--host-mex { --flag-host-ring: rgba(29, 158, 117, 0.42); }
+  .glass-flag--host-usa { --flag-host-ring: rgba(55, 138, 221, 0.42); }
+
+  .dark .glass-flag--host-can { --flag-host-ring: rgba(226, 75, 74, 0.34); }
+  .dark .glass-flag--host-mex { --flag-host-ring: rgba(48, 200, 143, 0.34); }
+  .dark .glass-flag--host-usa { --flag-host-ring: rgba(79, 158, 234, 0.34); }
+
+  .prediction-glass-bar {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 9999px;
+    background: rgb(var(--c-fill) / 0.10);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.24),
+      inset 0 -1px 2px rgba(0, 0, 0, 0.16);
+  }
+
+  .prediction-glass-segment {
+    position: relative;
+    min-width: 0;
+    background:
+      linear-gradient(180deg, var(--seg-top), var(--seg-color) 50%, var(--seg-bottom));
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.36),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.20),
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.22);
+  }
+
+  .prediction-glass-segment::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(110deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.10) 34%, rgba(255, 255, 255, 0) 62%);
+    opacity: 0.38;
+    mix-blend-mode: screen;
+  }
+
+  .prediction-glass-segment--light {
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.52),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.14),
+      inset 0 0 0 1px rgba(28, 28, 30, 0.24);
+  }
+
+  .dark .prediction-glass-bar {
+    background: rgb(var(--c-fill) / 0.14);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.14),
+      inset 0 -1px 2px rgba(0, 0, 0, 0.34);
+  }
+
+  .dark .prediction-glass-segment {
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.24),
+      inset 0 -2px 5px rgba(0, 0, 0, 0.30),
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.14);
+  }
+
+  .dark .prediction-glass-segment::after {
+    opacity: 0.30;
+  }
+
+  .dark .prediction-glass-segment--light {
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.42),
+      inset 0 -2px 5px rgba(0, 0, 0, 0.22),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.36),
+      inset 0 0 0 1.5px rgba(255, 255, 255, 0.20);
+  }
+
+  /* ───────────────────────────────────────────────────────────────────────
+     Nav bars as a frosted-GLASS OBJECT (NOT a backdrop-blur effect).
+     The glass look is built from LAYERED FILLS baked into the element so it
+     reads as frosted glass over ANY background — including a solid area with
+     nothing scrolling behind it. Same sheen/rim/depth language as .glass-flag:
+       (1) translucent frosted base fill
+       (2) top→bottom dimensional gradient (lighter top, darker bottom)
+       (3) a bright rim highlight along the top edge
+       (4) a soft inner glow + a directional depth shadow that lifts the bar
+           off the content (var --nav-depth set per position)
+     backdrop-filter (added in markup) is an ENHANCEMENT only where the page
+     scrolls under the bar; the glass appearance does NOT depend on it.
+     ─────────────────────────────────────────────────────────────────────── */
+  .glass-nav {
+    position: relative;
+    isolation: isolate;
+    background:
+      /* (2) domed sheen — brightest at the very top edge, fades quickly */
+      linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 46%),
+      /* (1) frosted base — semi-opaque so it frosts over solid backgrounds */
+      linear-gradient(180deg, rgba(255, 255, 255, 0.66) 0%, rgba(255, 255, 255, 0.56) 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.70),     /* (3) rim/edge highlight, top */
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.30), /* faint glass hairline */
+      inset 0 0 12px rgba(255, 255, 255, 0.28),    /* (4) soft inner glow */
+      var(--nav-depth, 0 0 0 rgba(0, 0, 0, 0));    /* (4) directional depth */
+  }
+
+  /* depth direction: bottom bar lifts off content ABOVE it; top bar off content BELOW it */
+  .glass-nav--bottom { --nav-depth: 0 -2px 12px rgba(0, 0, 0, 0.08); }
+  .glass-nav--top    { --nav-depth: 0 2px 12px rgba(0, 0, 0, 0.10); }
+
+  .dark .glass-nav {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0) 46%),
+      linear-gradient(180deg, rgba(56, 56, 62, 0.64) 0%, rgba(40, 40, 45, 0.56) 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.16),
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.08),
+      inset 0 0 14px rgba(255, 255, 255, 0.05),
+      var(--nav-depth, 0 0 0 rgba(0, 0, 0, 0));
+  }
+  .dark .glass-nav--bottom { --nav-depth: 0 -2px 14px rgba(0, 0, 0, 0.50); }
+  .dark .glass-nav--top    { --nav-depth: 0 2px 14px rgba(0, 0, 0, 0.50); }
+
+  /* Active nav item — a translucent TEAL glass pill (tinted fill + rim + sheen),
+     not a flat solid. Tint auto-themes off --c-nav (#0B9E85 light / #A7FFEB dark),
+     the same legible teal the active label/icon text uses (text-nav). */
+  .glass-pill {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: inherit;
+    background:
+      linear-gradient(180deg, rgb(var(--c-nav) / 0.26) 0%, rgb(var(--c-nav) / 0.15) 100%);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.50),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.10),
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.30),
+      0 1px 2px rgb(var(--c-nav) / 0.20);
+  }
+
+  /* diagonal sheen streak — same 110deg screen-blend highlight as the glass flags/segments */
+  .glass-pill::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background:
+      linear-gradient(110deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.10) 34%, rgba(255, 255, 255, 0) 62%);
+    opacity: 0.40;
+    mix-blend-mode: screen;
+  }
+
+  .dark .glass-pill {
+    background:
+      linear-gradient(180deg, rgb(var(--c-nav) / 0.22) 0%, rgb(var(--c-nav) / 0.12) 100%);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.22),
+      inset 0 -2px 5px rgba(0, 0, 0, 0.30),
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.14),
+      0 1px 2px rgba(0, 0, 0, 0.30);
+  }
+
+  .dark .glass-pill::after { opacity: 0.28; }
+
+  /* Segmented controls (Overview/Standing/Path/Squad, Info/Lineups, Predicted/Live) as glass
+     objects too — same rim/sheen/depth language, but NEUTRAL (no tint). The track is a recessed
+     frosted-glass trough; the sliding thumb is a raised colorless glass pill. */
+  .glass-track {
+    position: relative;
+    isolation: isolate;
+    background:
+      linear-gradient(180deg, rgb(var(--c-fill) / 0.12) 0%, rgb(var(--c-fill) / 0.06) 100%);
+    box-shadow:
+      inset 0 1px 2px rgba(0, 0, 0, 0.10),      /* recessed top inner shadow */
+      inset 0 -1px 0 rgba(255, 255, 255, 0.45); /* lower-lip highlight */
+  }
+  .dark .glass-track {
+    background:
+      linear-gradient(180deg, rgb(var(--c-fill) / 0.20) 0%, rgb(var(--c-fill) / 0.10) 100%);
+    box-shadow:
+      inset 0 1px 2px rgba(0, 0, 0, 0.45),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-thumb {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.86) 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.90),     /* rim highlight, top */
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.60),  /* glass hairline */
+      0 1px 2px rgba(0, 0, 0, 0.12),                /* contact shadow */
+      0 2px 6px rgba(0, 0, 0, 0.07);                /* soft lift */
+  }
+  .glass-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background:
+      linear-gradient(110deg, rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.12) 34%, rgba(255, 255, 255, 0) 62%);
+    opacity: 0.50;
+    mix-blend-mode: screen;
+  }
+  .dark .glass-thumb {
+    background:
+      linear-gradient(180deg, rgb(72 72 78 / 0.98) 0%, rgb(52 52 58 / 0.92) 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.18),
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.10),
+      0 1px 2px rgba(0, 0, 0, 0.50),
+      0 2px 6px rgba(0, 0, 0, 0.35);
+  }
+  .dark .glass-thumb::after { opacity: 0.16; }
+}
+
+@layer utilities {
+  .animate-panel {
+    animation: panelIn 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   ELEVEN — World Cup Predictor Design System: glass nav chrome.
+   ALWAYS-DARK premium menu (night-glass + champion gold) for the desktop left
+   rail (.eleven-nav) and the mobile bottom bar (.eleven-tabbar). The material
+   tokens are SCOPED to these containers so the menu stays dark in BOTH app
+   themes (it does not follow the light/dark toggle). Gold = interaction only
+   (hover / active). Tile material itself lives in GlassNavIcon's injected CSS.
+   ════════════════════════════════════════════════════════════════════════════ */
+.eleven-nav,
+.eleven-tabbar,
+.eleven-drawer {
+  --nav-tile: 40px;
+  --glass-blur: 14px;
+  --glass-radius-sm: 11px;
+  --icon-rest: #c9cdd4;
+  --gold-100: #fbf3d9;
+  --gold-200: #f4e4b0;
+  --gold-300: #e9d08a;
+  --gold-500: #c7a24b;
+  --gold-600: #a8842f;
+  --glass-surface: linear-gradient(160deg, rgba(255, 255, 255, 0.085) 0%, rgba(255, 255, 255, 0.035) 46%, rgba(255, 255, 255, 0.018) 100%);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-border-top: rgba(255, 255, 255, 0.30);
+  --glass-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset, 0 1px 2px rgba(0, 0, 0, 0.45), 0 6px 16px rgba(0, 0, 0, 0.30);
+  --glass-gold-surface: linear-gradient(160deg, rgba(233, 208, 138, 0.30) 0%, rgba(199, 162, 75, 0.16) 48%, rgba(168, 132, 47, 0.10) 100%);
+  --glass-gold-border: rgba(217, 185, 104, 0.55);
+  --glass-gold-border-top: rgba(251, 243, 217, 0.75);
+  --glass-gold-shadow: 0 1px 0 0 rgba(251, 243, 217, 0.45) inset, 0 0 0 1px rgba(199, 162, 75, 0.18), 0 2px 4px rgba(0, 0, 0, 0.40), 0 10px 22px rgba(125, 98, 34, 0.28), 0 0 20px rgba(199, 162, 75, 0.18);
+  --glass-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 38%);
+  --glass-lift: translateY(-2px);
+  --ease-glass: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-glass: 220ms;
+  --app-bg: #0c0e11;
+}
+
+/* ── Desktop left rail ──────────────────────────────────────────────────── */
+.eleven-nav {
+  background:
+    radial-gradient(120% 70% at 18% 0%, rgba(199, 162, 75, 0.06), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
+    #15181d;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.eleven-nav .eleven-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #7b838f; }
+.eleven-nav .eleven-brandtitle { color: #e4e7eb; }
+.eleven-nav .eleven-brandsub { color: #7b838f; }
+.eleven-nav .eleven-divline { background: rgba(255, 255, 255, 0.08); }
+.eleven-nav .eleven-footnote { color: #565e6b; }
+
+/* nav row (icon tile + label). Hover golds the tile via GlassNavIcon's selector. */
+.eleven-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  padding: 7px 8px;
+  border: 0;
+  background: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #a4abb5;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color var(--dur-glass) var(--ease-glass), background var(--dur-glass) var(--ease-glass);
+}
+.eleven-nav-item > span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.eleven-nav-item:hover { color: #e4e7eb; }
+.eleven-nav-item.is-active {
+  color: var(--gold-100);
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(199, 162, 75, 0.10), rgba(199, 162, 75, 0) 78%);
+}
+/* gold sliver marking the active page */
+.eleven-nav-item.is-active::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 22px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(180deg, var(--gold-300), var(--gold-600));
+  box-shadow: 0 0 10px rgba(199, 162, 75, 0.5);
+}
+.eleven-nav-item:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--app-bg), 0 0 0 4px var(--glass-gold-border); }
+
+/* secondary text links (About / Privacy / Terms) on the dark panel */
+.eleven-textlink { color: #7b838f; }
+.eleven-textlink:hover { color: #a4abb5; }
+.eleven-textlink.is-active { color: var(--gold-200); font-weight: 500; }
+
+/* ── Mobile bottom bar ──────────────────────────────────────────────────── */
+.eleven-tabbar {
+  --nav-tile: 34px;
+  background:
+    radial-gradient(120% 130% at 50% 0%, rgba(199, 162, 75, 0.05), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+    #15181d;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.35);
+}
+.eleven-tab { color: #a4abb5; cursor: pointer; transition: color var(--dur-glass) var(--ease-glass); }
+.eleven-tab:active { opacity: 0.6; }
+.eleven-tab.is-active { color: var(--gold-200); }
+
+/* ── Mobile hamburger drawer (MobileMenu) — same dark chrome + gold text as the desktop rail ── */
+.eleven-drawer {
+  background:
+    radial-gradient(120% 55% at 82% 100%, rgba(199, 162, 75, 0.08), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
+    #15181d;
+}
+.eleven-drawer-title { color: var(--gold-100); }
+.eleven-drawer-sub { color: var(--gold-200); opacity: 0.8; }
+.eleven-drawer-close { color: var(--gold-200); }
+.eleven-drawer-close:active { opacity: 0.5; }
+.eleven-drawer-link {
+  color: var(--gold-200);
+  transition: color var(--dur-glass) var(--ease-glass), background var(--dur-glass) var(--ease-glass);
+}
+.eleven-drawer-link:active { background: rgba(199, 162, 75, 0.08); }
+.eleven-drawer-link.is-active {
+  color: var(--gold-100);
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(199, 162, 75, 0.13), rgba(199, 162, 75, 0) 82%);
+}
+.eleven-drawer-foot { color: #8a7d57; border-color: rgba(255, 255, 255, 0.08); }
+.eleven-drawer-foot a { color: #a99a6a; transition: color var(--dur-glass) var(--ease-glass); }
+.eleven-drawer-foot a:hover { color: var(--gold-200); }

@@ -1,0 +1,6 @@
+# robots.txt — allow full crawl. Update the Sitemap host to the production
+# domain when it is finalized (keep in sync with SITE_URL in src/config.js).
+User-agent: *
+Allow: /
+
+Sitemap: https://footballmatchmaster.com/sitemap.xml

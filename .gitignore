@@ -87,6 +87,7 @@ scripts/**
 !scripts/worldcup/ai-layer/system-prompt.md
 !scripts/worldcup/weather/fetch-venue-weather.mjs
 !scripts/worldcup/weather/build-weather-overlay.mjs
+!scripts/worldcup/weather/refresh-weather.mjs
 !scripts/worldcup/news/gdelt-client.ts
 
 # ---- docs/: keep operational runbooks/checklist only (README is at repo root) ----
@@ -105,3 +106,11 @@ ui/
 prototypes/
 supabase/.temp/
 agent.md
+
+# ---- pre-public exclusions: dev-artifact exports + orphan lib ----
+# Verified unreferenced by any committed runtime (export / live loop / narration / UI); written or
+# imported ONLY by gitignored dev scripts. Excluded from the public repo; local files stay on disk.
+data/exports/live-app-cache.json
+data/exports/advancement-scenario-v1-pretournament-app.json
+data/exports/group-b-monte-carlo-v1-app.json
+lib/worldcup/player-data-providers/

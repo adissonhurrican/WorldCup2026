@@ -1,0 +1,10 @@
+{
+  "_comment": "API-Football team id -> our FIFA 3-letter code. Used ONLY by write-live-scores.ts to translate live in-play fixtures into the UI's code-keyed live-scores.json. Generated read-only from the DB (national_team_usage_records.api_team_id <-> teams.fifa_code) for project ahcfrgxczbgdvrqmbisw on 2026-06-04. Regenerate if a team's API mapping changes.",
+  "1": "BEL", "2": "FRA", "3": "CRO", "5": "SWE", "6": "BRA", "7": "URU", "8": "COL", "9": "ESP",
+  "10": "ENG", "11": "PAN", "12": "JPN", "13": "SEN", "15": "SUI", "16": "MEX", "17": "KOR", "20": "AUS",
+  "22": "IRN", "23": "KSA", "25": "GER", "26": "ARG", "27": "POR", "28": "TUN", "31": "MAR", "32": "EGY",
+  "770": "CZE", "775": "AUT", "777": "TUR", "1090": "NOR", "1108": "SCO", "1113": "BIH", "1118": "NED",
+  "1501": "CIV", "1504": "GHA", "1508": "COD", "1531": "RSA", "1532": "ALG", "1533": "CPV", "1548": "JOR",
+  "1567": "IRQ", "1568": "UZB", "1569": "QAT", "2380": "PAR", "2382": "ECU", "2384": "USA", "2386": "HAI",
+  "4673": "NZL", "5529": "CAN", "5530": "CUW"
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- SEO — values injected from src/config.js (single source) via vite transformIndexHtml.
+         Framing is deliberate: a STATISTICAL MODEL makes the predictions; AI only explains them. -->
+    <title>__SITE_TITLE__</title>
+    <meta name="description" content="__SITE_DESCRIPTION__" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="__SITE_URL__" />
+
+    <!-- Favicon — placeholder mark; replace public/favicon.svg with the final brand asset later. -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Open Graph (text only this pass — no image yet) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="__SITE_TITLE__" />
+    <meta property="og:description" content="__SITE_DESCRIPTION__" />
+    <meta property="og:url" content="__SITE_URL__" />
+    <meta property="og:site_name" content="__OG_SITE_NAME__" />
+
+    <!-- Twitter (summary card — no image yet, so not summary_large_image) -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="__SITE_TITLE__" />
+    <meta name="twitter:description" content="__SITE_DESCRIPTION__" />
+    <script>
+      // Apply theme before first paint to avoid a flash.
+      try {
+        var s = localStorage.getItem("wc-theme");
+        var dark = s ? s === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+        if (dark) document.documentElement.classList.add("dark");
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
