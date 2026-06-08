@@ -42,6 +42,8 @@ data/external/**
 !data/external/api-football/cache/teams_wc2026_league.json
 !data/external/fifa/
 !data/external/fifa/annex-c-r32-third-place-mapping.json
+!data/external/venues/
+!data/external/venues/stadium_facts_static_v1.json
 data/audits/
 data/artifacts/
 data/curation/
