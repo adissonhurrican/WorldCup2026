@@ -21,6 +21,14 @@ const has = (f: string) => process.argv.includes(f);
 const num = (v: any) => (v == null ? 0 : typeof v === "object" && "Int" in v ? Number(v.Int) * Math.pow(10, Number(v.Exp ?? 0)) : Number(v));
 
 async function dbUrl() {
+  // CI-first: use the env DB URL (SUPABASE_DB_URL) so this works on GitHub Actions where supebase.txt is absent.
+  // Fall back to the local supebase.txt file when env is unset (local runs unchanged).
+  const envDbUrl = process.env.SUPABASE_DB_URL;
+  if (envDbUrl) {
+    const ref = envDbUrl.match(/postgres\.([a-z0-9]+):/)?.[1] ?? envDbUrl.match(/\/\/([^.]+)\.supabase\.co/)?.[1] ?? "";
+    if (ref !== PROJECT) throw new Error(`Unexpected project ref from SUPABASE_DB_URL: ${ref}`);
+    return envDbUrl;
+  }
   const text = await readFile(credentialsPath, "utf8");
   const ref = text.match(/https:\/\/([^.]+)\.supabase\.co/)?.[1];
   const pw = text.match(/supebase password\s*:\s*(\S+)/i)?.[1];
@@ -32,7 +40,9 @@ function q<X = any>(url: string, sql: string): X[] {
   if (/\b(insert|update|delete|drop|alter|truncate|create)\b/i.test(sql.replace(/'[^']*'/g, ""))) throw new Error("read-only helper");
   mkdirSync(tempDir, { recursive: true }); tmp++;
   const fp = path.join(tempDir, `fvl-${tmp}.sql`); writeFileSync(fp, sql, "utf8");
-  const r = spawnSync("cmd.exe", ["/c", "npx.cmd", "supabase", "db", "query", "--db-url", url, "--output", "json", "--file", fp], { encoding: "utf8", maxBuffer: 2e8 });
+  const r = process.platform === "win32"
+    ? spawnSync("cmd.exe", ["/c", "npx.cmd", "supabase", "db", "query", "--db-url", url, "--output", "json", "--file", fp], { encoding: "utf8", maxBuffer: 2e8 })
+    : spawnSync("npx", ["supabase", "db", "query", "--db-url", url, "--output", "json", "--file", fp], { encoding: "utf8", maxBuffer: 2e8 });
   if ((r.status ?? 1) !== 0) throw new Error((r.stderr || r.stdout || "").slice(0, 400));
   const o = r.stdout.trim(); if (!o) return []; const p = JSON.parse(o); return (Array.isArray(p) ? p : p.rows ?? p) as X[];
 }

@@ -198,6 +198,15 @@ function getApiKey() {
 }
 
 async function readSupabaseConfig(): Promise<SupabaseConfig> {
+  // CI-first: use env creds (SUPABASE_DB_URL for the project ref + SUPABASE_SERVICE_ROLE_KEY) so this works on
+  // GitHub Actions where supebase.txt is absent. Fall back to the local supebase.txt file when env is unset.
+  const envDbUrl = process.env.SUPABASE_DB_URL;
+  const envServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (envDbUrl && envServiceRoleKey) {
+    const projectRef = envDbUrl.match(/postgres\.([a-z0-9]+):/)?.[1] ?? envDbUrl.match(/\/\/([^.]+)\.supabase\.co/)?.[1] ?? "";
+    if (projectRef !== worldCupProjectRef) throw new Error(`Unexpected Supabase project ref from SUPABASE_DB_URL: ${projectRef || "unknown"}`);
+    return { restUrl: `https://${projectRef}.supabase.co/rest/v1`, serviceRoleKey: envServiceRoleKey, projectRef };
+  }
   const text = await readFile(credentialsPath, "utf8");
   const restUrl = text.match(/https:\/\/[^\s]+\/rest\/v1\/?/)?.[0]?.replace(/\/$/, "");
   const projectRef = restUrl?.match(/https:\/\/([^.]+)\.supabase\.co/)?.[1] ?? "";

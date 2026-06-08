@@ -28,6 +28,15 @@ let tmp = 0;
 const args = { execute: process.argv.includes("--execute") };
 
 async function readDbConfig(): Promise<DbConfig> {
+  // CI-first: use env creds (SUPABASE_DB_URL + SUPABASE_SERVICE_ROLE_KEY) so this works on GitHub Actions where
+  // supebase.txt is absent. Fall back to the local supebase.txt file when env is unset (local runs unchanged).
+  const envDbUrl = process.env.SUPABASE_DB_URL;
+  const envServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (envDbUrl && envServiceRoleKey) {
+    const projectRef = envDbUrl.match(/postgres\.([a-z0-9]+):/)?.[1] ?? envDbUrl.match(/\/\/([^.]+)\.supabase\.co/)?.[1] ?? "";
+    if (projectRef !== worldCupProjectRef) throw new Error(`Unexpected project ref from SUPABASE_DB_URL: ${projectRef || "unknown"}`);
+    return { projectRef, restUrl: `https://${projectRef}.supabase.co/rest/v1`, serviceRoleKey: envServiceRoleKey, dbUrl: envDbUrl };
+  }
   const text = await readFile(credentialsPath, "utf8");
   const projectRef = text.match(/https:\/\/([^.]+)\.supabase\.co/)?.[1];
   const password = text.match(/supebase password\s*:\s*(\S+)/i)?.[1];
@@ -41,7 +50,9 @@ function q<X = any>(c: DbConfig, sql: string): X[] {
   if (/\b(insert|update|delete|drop|alter|truncate|create)\b/i.test(sql.replace(/'[^']*'/g, ""))) throw new Error("read helper refuses mutating SQL");
   mkdirSync(tempDir, { recursive: true }); tmp += 1;
   const fp = path.join(tempDir, `k60-resim-${tmp}.sql`); writeFileSync(fp, sql, "utf8");
-  const r = spawnSync("cmd.exe", ["/c", "npx.cmd", "supabase", "db", "query", "--db-url", c.dbUrl, "--output", "json", "--file", fp], { encoding: "utf8", maxBuffer: 2e8 });
+  const r = process.platform === "win32"
+    ? spawnSync("cmd.exe", ["/c", "npx.cmd", "supabase", "db", "query", "--db-url", c.dbUrl, "--output", "json", "--file", fp], { encoding: "utf8", maxBuffer: 2e8 })
+    : spawnSync("npx", ["supabase", "db", "query", "--db-url", c.dbUrl, "--output", "json", "--file", fp], { encoding: "utf8", maxBuffer: 2e8 });
   if ((r.status ?? 1) !== 0) throw new Error((r.stderr || r.stdout || "query failed").slice(0, 400));
   const p = JSON.parse(r.stdout.trim()); return (Array.isArray(p) ? p : p.rows ?? []) as X[];
 }

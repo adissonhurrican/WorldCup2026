@@ -43,6 +43,14 @@ const VENUE_GEO: Record<string, { city: string; country: string; tz: string }> =
 };
 
 async function readDbConfig() {
+  // CI-first: use the env DB URL (SUPABASE_DB_URL) so this works on GitHub Actions where supebase.txt is absent.
+  // Fall back to the local supebase.txt file when env is unset (local runs unchanged).
+  const envDbUrl = process.env.SUPABASE_DB_URL;
+  if (envDbUrl) {
+    const projectRef = envDbUrl.match(/postgres\.([a-z0-9]+):/)?.[1] ?? envDbUrl.match(/\/\/([^.]+)\.supabase\.co/)?.[1] ?? "";
+    if (projectRef !== worldCupDevProjectRef) throw new Error(`Unexpected project ref from SUPABASE_DB_URL: ${projectRef || "unknown"}`);
+    return { projectRef, dbUrl: envDbUrl };
+  }
   const text = await readFile(credentialsPath, "utf8");
   const projectRef = text.match(/https:\/\/([^.]+)\.supabase\.co/)?.[1];
   const password = text.match(/supebase password\s*:\s*(\S+)/i)?.[1];

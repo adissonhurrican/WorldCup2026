@@ -134,6 +134,15 @@ function parseArgs() {
 }
 
 async function readDbConfig(): Promise<DbConfig> {
+  // CI-first: use env creds (SUPABASE_DB_URL + SUPABASE_SERVICE_ROLE_KEY) so this works on GitHub Actions where
+  // supebase.txt is absent. Fall back to the local supebase.txt file when env is unset (local runs unchanged).
+  const envDbUrl = process.env.SUPABASE_DB_URL;
+  const envServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (envDbUrl && envServiceRoleKey) {
+    const projectRef = envDbUrl.match(/postgres\.([a-z0-9]+):/)?.[1] ?? envDbUrl.match(/\/\/([^.]+)\.supabase\.co/)?.[1] ?? "";
+    if (projectRef !== worldCupProjectRef) throw new Error(`Unexpected project ref from SUPABASE_DB_URL: ${projectRef || "unknown"}`);
+    return { projectRef, restUrl: `https://${projectRef}.supabase.co/rest/v1`, serviceRoleKey: envServiceRoleKey, dbUrl: envDbUrl };
+  }
   const text = await readFile(credentialsPath, "utf8");
   const projectRef = text.match(/https:\/\/([^.]+)\.supabase\.co/)?.[1];
   const password = text.match(/supebase password\s*:\s*(\S+)/i)?.[1];
@@ -161,11 +170,17 @@ function queryJson<T = any>(config: DbConfig, sql: string): T[] {
   queryCounter += 1;
   const sqlPath = path.join(tempDir, `live-resim-${Date.now()}-${queryCounter}.sql`);
   writeFileSync(sqlPath, sql, "utf8");
-  const result = spawnSync(
-    "cmd.exe",
-    ["/c", "npx.cmd", "supabase", "db", "query", "--db-url", config.dbUrl, "--output", "json", "--file", sqlPath],
-    { encoding: "utf8", maxBuffer: 1024 * 1024 * 120 },
-  );
+  const result = process.platform === "win32"
+    ? spawnSync(
+        "cmd.exe",
+        ["/c", "npx.cmd", "supabase", "db", "query", "--db-url", config.dbUrl, "--output", "json", "--file", sqlPath],
+        { encoding: "utf8", maxBuffer: 1024 * 1024 * 120 },
+      )
+    : spawnSync(
+        "npx",
+        ["supabase", "db", "query", "--db-url", config.dbUrl, "--output", "json", "--file", sqlPath],
+        { encoding: "utf8", maxBuffer: 1024 * 1024 * 120 },
+      );
   if ((result.status ?? 1) !== 0) {
     throw new Error((result.stderr || result.stdout || "Supabase query failed").slice(0, 1200));
   }

@@ -51,6 +51,14 @@ export async function loadApiKey(): Promise<string> {
   throw new Error("GOOGLE_AI_API_KEY not found (env or .env*)");
 }
 async function dbUrl() {
+  // CI-first: use the env DB URL (SUPABASE_DB_URL) so this works on GitHub Actions where supebase.txt is absent.
+  // Fall back to the local supebase.txt file when env is unset (local runs unchanged).
+  const envDbUrl = process.env.SUPABASE_DB_URL;
+  if (envDbUrl) {
+    const envRef = envDbUrl.match(/postgres\.([a-z0-9]+):/)?.[1] ?? envDbUrl.match(/\/\/([^.]+)\.supabase\.co/)?.[1] ?? "";
+    if (envRef !== PROJECT) throw new Error(`Unexpected project ref from SUPABASE_DB_URL: ${envRef || "unknown"}`);
+    return envDbUrl;
+  }
   const text = await readFile(credentialsPath, "utf8");
   const ref = text.match(/https:\/\/([^.]+)\.supabase\.co/)?.[1];
   const pw = text.match(/supebase password\s*:\s*(\S+)/i)?.[1];
@@ -62,14 +70,18 @@ function q<X = any>(url: string, sql: string): X[] {
   if (/\b(insert|update|delete|drop|alter|truncate|create)\b/i.test(sql.replace(/'[^']*'/g, ""))) throw new Error("read helper refuses mutating SQL");
   mkdirSync(tempDir, { recursive: true }); tmp++;
   const fp = path.join(tempDir, `narr-r-${tmp}.sql`); writeFileSync(fp, sql, "utf8");
-  const r = spawnSync("cmd.exe", ["/c", "npx.cmd", "supabase", "db", "query", "--db-url", url, "--output", "json", "--file", fp], { encoding: "utf8", maxBuffer: 2e8 });
+  const r = process.platform === "win32"
+    ? spawnSync("cmd.exe", ["/c", "npx.cmd", "supabase", "db", "query", "--db-url", url, "--output", "json", "--file", fp], { encoding: "utf8", maxBuffer: 2e8 })
+    : spawnSync("npx", ["supabase", "db", "query", "--db-url", url, "--output", "json", "--file", fp], { encoding: "utf8", maxBuffer: 2e8 });
   if ((r.status ?? 1) !== 0) throw new Error((r.stderr || r.stdout || "").slice(0, 400));
   const o = r.stdout.trim(); return o ? (() => { const p = JSON.parse(o); return Array.isArray(p) ? p : p.rows ?? p; })() : [];
 }
 function execSql(url: string, sql: string): string {
   mkdirSync(tempDir, { recursive: true }); tmp++;
   const fp = path.join(tempDir, `narr-w-${tmp}.sql`); writeFileSync(fp, sql, "utf8");
-  const r = spawnSync("cmd.exe", ["/c", "npx.cmd", "supabase", "db", "query", "--db-url", url, "--file", fp], { encoding: "utf8", maxBuffer: 2e8 });
+  const r = process.platform === "win32"
+    ? spawnSync("cmd.exe", ["/c", "npx.cmd", "supabase", "db", "query", "--db-url", url, "--file", fp], { encoding: "utf8", maxBuffer: 2e8 })
+    : spawnSync("npx", ["supabase", "db", "query", "--db-url", url, "--file", fp], { encoding: "utf8", maxBuffer: 2e8 });
   if ((r.status ?? 1) !== 0) throw new Error(`execSql failed: ${(r.stderr || r.stdout || "").slice(0, 400)}`);
   return `${r.stdout ?? ""}${r.stderr ?? ""}`.trim();
 }
@@ -349,7 +361,22 @@ function ensureTable(url: string) {
     created_at timestamptz not null default now(),
     constraint ai_narr_scope_chk check (scope in ('team','fixture'))
   )`);
-  execSql(url, `create unique index if not exists ai_narrations_unique_target on public.ai_narrations (tournament_code, content_type, coalesce(team_code,''), coalesce(fixture_label,''), coalesce(group_code,''))`);
+  // Self-healing unique index. CREATE UNIQUE INDEX IF NOT EXISTS matches by NAME only — it CANNOT repair an index
+  // left in a drifted (legacy 4-expression) shape, which makes storeNarration's 5-expression ON CONFLICT fail with
+  // 42P10 forever on that DB. Read the REAL definition (pg_indexes.indexdef) and rebuild ONLY if it's missing or the
+  // wrong shape; no-op on the healthy path. A 4-expr -> 5-expr rebuild is safe (5-expr is more permissive, so rows
+  // unique under the old index stay unique). Uses q()/execSql() -> the platform-safe spawn (npx on Linux CI).
+  const idxDef = (q(url, `select indexdef from pg_indexes where schemaname='public' and tablename='ai_narrations' and indexname='ai_narrations_unique_target'`)[0]?.indexdef ?? "").toLowerCase();
+  const idxShapeOk = idxDef.includes("coalesce(team_code") && idxDef.includes("coalesce(fixture_label") && idxDef.includes("coalesce(group_code");
+  if (idxShapeOk) {
+    console.log("[ensureTable] ai_narrations_unique_target present with correct 5-expression shape (no-op).");
+  } else {
+    console.log(idxDef
+      ? "[ensureTable] ai_narrations_unique_target is the WRONG (drifted) shape -> dropping and rebuilding as 5-expression."
+      : "[ensureTable] ai_narrations_unique_target missing -> creating 5-expression index.");
+    execSql(url, `drop index if exists public.ai_narrations_unique_target`);
+    execSql(url, `create unique index ai_narrations_unique_target on public.ai_narrations (tournament_code, content_type, coalesce(team_code,''), coalesce(fixture_label,''), coalesce(group_code,''))`);
+  }
   execSql(url, `alter table public.ai_narrations enable row level security`);
   execSql(url, `comment on table public.ai_narrations is 'Validated AI narration consumed by the app-data export. Stored only after validate-and-repair passes (validated=true). No odds/predictions; AI explains, never invents.'`);
 }

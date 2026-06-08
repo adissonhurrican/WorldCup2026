@@ -44,6 +44,15 @@ function availabilityStatus(ev) {
 }
 
 function readSupabaseConfig() {
+  // CI-first: use env creds (SUPABASE_DB_URL for the project ref + SUPABASE_SERVICE_ROLE_KEY) so this works on
+  // GitHub Actions where supebase.txt is absent. Fall back to the local supebase.txt file when env is unset.
+  const envDbUrl = process.env.SUPABASE_DB_URL;
+  const envServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (envDbUrl && envServiceRoleKey) {
+    const envRef = envDbUrl.match(/postgres\.([a-z0-9]+):/)?.[1] ?? envDbUrl.match(/\/\/([^.]+)\.supabase\.co/)?.[1] ?? "";
+    if (envRef !== PROJECT_ID) throw new Error(`Unexpected project ref from SUPABASE_DB_URL: ${envRef || "unknown"}`);
+    return { restUrl: `https://${envRef}.supabase.co/rest/v1`, serviceRoleKey: envServiceRoleKey };
+  }
   const t = readFileSync(path.join(ROOT, "supebase.txt"), "utf8");
   const ref = t.match(/https:\/\/([^.]+)\.supabase\.co/)?.[1];
   const restUrl = t.match(/https:\/\/[^\s]+\/rest\/v1\/?/)?.[0]?.replace(/\/$/, "");
