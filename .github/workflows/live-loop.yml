@@ -1,0 +1,82 @@
+name: WC2026 Live In-Tournament Loop
+
+# Runs the in-tournament loop UNATTENDED on a schedule, then commits the refreshed app-data so Netlify
+# (GitHub integration → auto-deploy on push to main) republishes it. Mirrors refresh-weather.yml, scaled up.
+#
+# CI lessons applied:
+#  - Allowlist: the entry (run-supervised-loop-cron.mjs / in-tournament-loop-runner.ts) and everything it spawns
+#    are committed (verified by the dependency-closure trace); no gitignored-but-needed file.
+#  - Cross-platform: the loop's DB scripts spawn `npx supabase ...` on Linux (no hardcoded cmd.exe).
+#  - Creds env-first: the scripts read SUPABASE_DB_URL / SUPABASE_SERVICE_ROLE_KEY / API_FOOTBALL_KEY /
+#    GOOGLE_AI_API_KEY from env (exposed below); supebase.txt is the local fallback only.
+#  - Fail-hard publish: only commit app-data.json when the loop SUCCEEDS and the file is valid + non-empty;
+#    never overwrite good data with empty/partial; no-change → green no-op; real failure → RED.
+
+"on":
+  schedule:
+    # Every 10 min, 24/7 (UTC). GitHub's 5-min floor + 10-30 min delay under load are fine — the loop self-guards
+    # (no-op before the 2026-06-11T19:00Z kickoff and whenever no verified result is material).
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Serialize: never two cycles committing/pushing at once (a slow run can overlap the 10-min schedule).
+  group: wc2026-live-loop
+  cancel-in-progress: false
+
+jobs:
+  live-loop:
+    name: Run the in-tournament loop (unattended) and publish app-data
+    runs-on: ubuntu-latest
+    timeout-minutes: 8   # a hung cycle must not block the next scheduled run (10-min cadence)
+    env:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install CLIs (tsx + supabase) the loop's scripts invoke via npx
+        # The DB scripts call `npx supabase db query` and the runner spawns `npx tsx ...`; install both globally
+        # so npx resolves them from PATH (deterministic; avoids slow/flaky first-use downloads in CI).
+        run: npm install -g tsx supabase
+
+      - name: DB connectivity smoke test (read-only)
+        # Proves secrets authenticate + supabase CLI is available + the cross-platform spawn + env-first creds all
+        # work together in the runner — every cycle, including the whole pre-kickoff window. Dry-run = no writes;
+        # it graceful-waits (0/72) and exits 0. If the DB stack is broken this goes RED before the loop runs.
+        run: npx tsx scripts/worldcup/elo-update-group-stage-wiring.ts
+
+      - name: Run in-tournament loop (UNATTENDED)
+        # Self-guards: no-op (exit 0) before 2026-06-11T19:00Z and when no verified result is material. On a
+        # material result it runs the full chain (ingest → re-condition → sanity gate → PROMOTE → export →
+        # narration → re-export). --mode unattended auto-publishes (no human --go). A CORE failure exits non-zero
+        # → this step fails → the commit step is skipped → workflow RED (fail-hard).
+        run: node scripts/worldcup/live/run-supervised-loop-cron.mjs --mode unattended
+
+      - name: Commit + push refreshed app-data (fail-hard; no empty over good; no-change-safe)
+        run: |
+          # FAIL-HARD: refuse to commit unless app-data.json is valid + non-empty (never overwrite good data with
+          # empty/partial). A missing/empty/teamless file exits non-zero here → workflow RED, last-good data kept.
+          node -e "const d=require('./data/exports/app-data.json'); if(!d||!Array.isArray(d.teams)||d.teams.length===0){console.error('app-data.json invalid/empty — refusing to commit'); process.exit(1);}"
+          # Only the committed/served copies. ui/ and ui-v2/dist/ are gitignored build artifacts (adding them would
+          # make `git add` fail under set -e — the weather Bug 2 lesson).
+          git add data/exports/app-data.json ui-v2/public/app-data.json
+          if git diff --cached --quiet; then
+            echo "No app-data change this cycle (clean no-op) — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Live loop: refresh app-data from verified results"
+          git push
