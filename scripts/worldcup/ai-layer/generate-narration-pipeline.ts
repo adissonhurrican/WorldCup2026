@@ -189,6 +189,12 @@ export async function chooseGeminiModel(apiKey: string): Promise<string> {
     return names.find((id: string) => /^gemini-3\.5-flash$/i.test(id)) || names.find((id: string) => /gemini.*3\.5.*flash/i.test(id)) || "gemini-3.5-flash";
   } catch { return "gemini-3.5-flash"; }
 }
+// Per-run Gemini token accounting (VISIBILITY ONLY — never changes the request/prompt/output). Accumulates
+// promptTokenCount / cachedContentTokenCount / candidatesTokenCount across the run so the implicit-cache hit
+// rate is visible in the loop logs. cachedContentTokenCount reflects implicit cache hits (on by default for
+// Gemini 2.5+/3.x): a high cached/prompt ratio on calls 2..N of a burst = the repeated 7.75k-token system
+// prompt is being discounted automatically at the cached rate.
+export const geminiTokenStats = { calls: 0, promptTokens: 0, cachedTokens: 0, outputTokens: 0 };
 export async function callGemini(apiKey: string, model: string, systemPrompt: string, userMsg: string): Promise<string> {
   const res = await timedFetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`, {
     method: "POST", headers: { "content-type": "application/json" },
@@ -196,6 +202,11 @@ export async function callGemini(apiKey: string, model: string, systemPrompt: st
   }, 60000);
   const j: any = await res.json().catch(async () => ({ raw: await res.text().catch(() => "") }));
   if (!res.ok) throw new Error(`Gemini ${res.status}: ${JSON.stringify(j).slice(0, 400)}`);
+  // VISIBILITY ONLY (reads the response usage block; does NOT touch the call, prompt, or output).
+  const um: any = j.usageMetadata ?? {};
+  const promptTok = Number(um.promptTokenCount ?? 0), cachedTok = Number(um.cachedContentTokenCount ?? 0), outTok = Number(um.candidatesTokenCount ?? 0);
+  geminiTokenStats.calls++; geminiTokenStats.promptTokens += promptTok; geminiTokenStats.cachedTokens += cachedTok; geminiTokenStats.outputTokens += outTok;
+  console.error(`  narration cache: ${cachedTok}/${promptTok} prompt tokens cached (${promptTok ? Math.round((cachedTok / promptTok) * 100) : 0}%) | output ${outTok}`);
   return (j.candidates?.[0]?.content?.parts ?? []).map((p: any) => p.text ?? "").join("\n").trim();
 }
 
@@ -496,7 +507,9 @@ async function main() {
     await sleep(700); // throttle across all calls to stay under rate limits
   }
 
-  console.log(JSON.stringify({ project_id: PROJECT, executed: execute, model, summary: results.map((r) => ({ team: r.team, status: r.status, words: r.body_words, repaired: r.repaired })), guardrails: { ai_explains_never_invents: true, validate_and_repair_gated: true, only_validated_stored: true, no_internal_ids_in_prose: true, no_odds_or_predictions: true } }, null, 2));
+  const cacheHitPct = geminiTokenStats.promptTokens ? Math.round((geminiTokenStats.cachedTokens / geminiTokenStats.promptTokens) * 100) : 0;
+  console.error(`\nGEMINI TOKEN USAGE (this run): ${geminiTokenStats.calls} call(s) | input ${geminiTokenStats.promptTokens} tok (cached ${geminiTokenStats.cachedTokens} = ${cacheHitPct}% implicit-cache hit) | output ${geminiTokenStats.outputTokens} tok`);
+  console.log(JSON.stringify({ project_id: PROJECT, executed: execute, model, gemini_token_usage: { ...geminiTokenStats, implicit_cache_hit_pct: cacheHitPct }, summary: results.map((r) => ({ team: r.team, status: r.status, words: r.body_words, repaired: r.repaired })), guardrails: { ai_explains_never_invents: true, validate_and_repair_gated: true, only_validated_stored: true, no_internal_ids_in_prose: true, no_odds_or_predictions: true } }, null, 2));
   const can = results.find((r) => r.team === "CAN");
   if (can) console.log("\n=== CANADA scenario narration (traceable to the live runs) ===\n" + JSON.stringify(can, null, 2));
 }
