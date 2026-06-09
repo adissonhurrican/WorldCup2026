@@ -281,11 +281,20 @@ export function lineupState(fx, lineups, live = null) {
   const state = matchState(fx, live);
   return { lineup: lu, has, hasHome, hasAway, showPlaceholder: !has && state !== "finished" };
 }
+// Match Day date format: "Mon Jun 29" (viewer-local weekday + month + day) from the kickoff field. One shared
+// helper so the Match Day day-headers and the My Team fixture cards render the date identically. null if undated.
+const WD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+export function fixtureDayLabel(fx) {
+  const iso = fx && (fx.kickoff_utc || fx.kickoff);
+  const d = iso ? new Date(iso) : null;
+  if (!d || Number.isNaN(d.getTime())) return null;
+  return `${WD[d.getDay()]} ${MON[d.getMonth()]} ${d.getDate()}`;
+}
+
 // `cityFilter` (optional) narrows to fixtures at that host city, reusing the venue feature's
 // per-fixture `city` field (the same mapping the venue card uses) — null/"" = all cities (unchanged).
 export function fixturesByDay(data, cityFilter = null) {
-  const WD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const days = new Map();
   for (const fx of data.fixtures || []) {
     if (cityFilter && fx.city !== cityFilter) continue;
@@ -304,7 +313,7 @@ export function fixturesByDay(data, cityFilter = null) {
     const key = valid
       ? `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
       : "zzzz";
-    const label = valid ? `${WD[d.getDay()]} ${MON[d.getMonth()]} ${d.getDate()}` : "Date TBC";
+    const label = fixtureDayLabel(fx) || "Date TBC";
     if (!days.has(key)) days.set(key, { key, label, items: [] });
     days.get(key).items.push(fx);
   }

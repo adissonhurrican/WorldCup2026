@@ -5,7 +5,7 @@ import { IconChevronDown } from "../components/icons";
 import {
   teamByCode, nicknameLine, heroFor, reachStats, narrationFor, scenarioFor,
   tacticalFor, knockoutFor, groupTable, bestThirdInfo, bandOf, BAND_TEXT, pct, ordinal,
-  teamFixtures, nextMatchIndex, isKnockoutFixture, matchState, squadGroups,
+  teamFixtures, nextMatchIndex, isKnockoutFixture, matchState, squadGroups, fixtureDayLabel,
 } from "../lib/select";
 
 const TABS = ["Overview", "Standing", "Path", "Squad"];
@@ -206,6 +206,7 @@ function FixturesSection({ data, code, live, lineups, events, onOpen, onTab }) {
         {fixtures.map((fx, i) => {
           const isNext = i === nextIdx;
           const isLive = matchState(fx, live) === "live";
+          const dayLabel = fixtureDayLabel(fx);
           return (
             <div key={`${fx.home}-${fx.away}-${i}`}>
               {isNext && (
@@ -214,6 +215,8 @@ function FixturesSection({ data, code, live, lineups, events, onOpen, onTab }) {
                   {isLive ? "Live now" : "Next match"}
                 </div>
               )}
+              {/* Match date — same "Mon Jun 29" format as the Match Day day-headers (My Team has no day grouping). */}
+              {dayLabel && <div className="mb-1 px-1 text-[12px] font-semibold text-ink-2">{dayLabel}</div>}
               <MatchCard
                 data={data}
                 fx={fx}
