@@ -19,6 +19,17 @@
   NODE_VERSION = "20"
 
 # ---------------------------------------------------------------------------
+# Serverless functions — the live-score fast path the static stack can't provide.
+# directory is RELATIVE TO base -> ui-v2/netlify/functions (where livescore.mjs lives).
+# livescore.mjs fetches API-Football's in-play feed server-side (key stays server-side) and
+# returns it edge-cached (s-maxage=30) so API calls track the ~30s cache window, not user count.
+# Served at /.netlify/functions/livescore regardless of base/publish. esbuild = default JS bundler.
+# ---------------------------------------------------------------------------
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# ---------------------------------------------------------------------------
 # Cache headers — addresses the Cloudflare/edge over-cache concern.
 # ---------------------------------------------------------------------------
 

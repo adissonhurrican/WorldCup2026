@@ -68,14 +68,23 @@ export function loadTeamColors(url = `${BASE}wc2026_team_colors.json`) {
   return loadJsonOr(url, { teams: {} });
 }
 
-// Live in-play scores — display only, written server-side by write-live-scores.ts (the client never
-// calls API-Football). Returns { as_of, map } where map is keyed by "HOME_AWAY". Empty when nothing live.
-export async function loadLiveScores(url = `${BASE}live-scores.json`) {
+// Live in-play scores — display only, fetched server-side by the livescore Netlify Function (the
+// client never calls API-Football or holds the key). The function returns the SAME { as_of, matches }
+// shape the old static live-scores.json used, edge-cached ~30s so API calls track the cache window, not
+// user count. Returns { as_of, map } keyed by "HOME_AWAY". Empty when nothing is live. Orientation-
+// agnostic: each match is also indexed under the reverse key with swapped scores, so a card that lists
+// a fixture home/away-reversed vs the live provider still matches with the scores assigned correctly.
+export async function loadLiveScores(url = `/.netlify/functions/livescore`) {
   const raw = await loadJsonOr(url, null);
   const map = {};
   const matches = raw && Array.isArray(raw.matches) ? raw.matches : [];
   for (const m of matches) {
-    if (m && m.home && m.away) map[`${m.home}_${m.away}`] = m;
+    if (!m || !m.home || !m.away) continue;
+    map[`${m.home}_${m.away}`] = m;
+    const reverseKey = `${m.away}_${m.home}`;
+    if (!map[reverseKey]) {
+      map[reverseKey] = { ...m, home: m.away, away: m.home, home_score: m.away_score, away_score: m.home_score };
+    }
   }
   return { as_of: (raw && raw.as_of) || null, map };
 }
