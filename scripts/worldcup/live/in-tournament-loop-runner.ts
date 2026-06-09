@@ -44,6 +44,8 @@ const UI_EXPORT_CACHE = "ui/app-data.json";                       // path the UI
 const LIVE_POINTER_FILE = "data/exports/live-runs-pointer.json";  // export reads this first, then DB lifecycle markers
 const EXPORT_PENDING = "data/exports/.live-export-pending.json";  // self-heal marker (re-export next cycle)
 const NARRATION_PENDING = "data/exports/.narration-pending.json"; // backfill marker (a later cycle/retry fills it)
+const SQUADS_SCRIPT = "scripts/worldcup/export/build-squads-json.mjs"; // node (.mjs) — DB -> squads.json (player stats + injuries)
+const SQUADS_PENDING = "data/exports/.squads-pending.json";       // self-heal marker (re-build squads next cycle)
 
 type StepStatus = "ok" | "failed" | "skipped" | "not_built" | "pending";
 
@@ -178,6 +180,40 @@ function selfHealProductionExport(export_built: boolean) {
   }
 }
 
+// ---- SQUAD REBUILD (best-effort, non-blocking; published cycles only). Mirrors runProductionExport EXACTLY:
+// rebuilds the squad-card overlay squads.json (per-player WC Min/G/A/Cards aggregated from
+// api_football_fixture_player_stats + injuries from player_status_events) from the DB. Runs `node` (it is a
+// .mjs, NOT tsx). FULLY ISOLATED: reads the DB, writes only squads.json — never app-data.json / the live
+// pointer / narration, so it CANNOT corrupt the advancement publish. The CLI process.exit(1)s on throw; the
+// spawnSync + r.status check CONTAINS that exit code inside this wrapper — it NEVER becomes the loop's exit
+// code. A failure is ABSORBED -> .squads-pending (re-built by selfHealSquads next cycle). NEVER throws.
+function runSquadsRebuild(built: boolean): { status: StepStatus; detail: string } {
+  if (!built) {
+    writeJson(SQUADS_PENDING, { pending: true, reason: "squads_script_not_built", note: "re-attempt next cycle; advancement publish unaffected" });
+    return { status: "not_built", detail: `${SQUADS_SCRIPT} not found -> .squads-pending (self-heals next cycle); advancement NOT affected — NOT faked OK` };
+  }
+  try {
+    const r = process.platform === "win32"
+      ? spawnSync("cmd.exe", ["/c", "node", SQUADS_SCRIPT], { cwd: rootDir, encoding: "utf8", maxBuffer: 3e8 })
+      : spawnSync("node", [SQUADS_SCRIPT], { cwd: rootDir, encoding: "utf8", maxBuffer: 3e8 });
+    if ((r.status ?? 1) !== 0) throw new Error((r.stderr || r.stdout || "").slice(0, 800));
+    clearFile(SQUADS_PENDING);
+    return { status: "ok", detail: "squads.json rebuilt from DB (WC player_stats + injuries); marker cleared" };
+  } catch (e: any) {
+    writeJson(SQUADS_PENDING, { pending: true, reason: `squads_failed: ${e?.message}`, note: "re-attempt next cycle; advancement publish unaffected" });
+    return { status: "failed", detail: `${e?.message} — ABSORBED; .squads-pending; advancement NOT affected; model NOT un-published` };
+  }
+}
+
+// SELF-HEAL squads (mirrors selfHealProductionExport): if a prior cycle left .squads-pending, re-build now.
+// Non-blocking; never throws (runSquadsRebuild absorbs + re-marks on failure).
+function selfHealSquads(squads_built: boolean) {
+  if (!existsSync(abs(SQUADS_PENDING))) return { attempted: false, ok: null as boolean | null, detail: "no pending squads rebuild" };
+  if (!squads_built) return { attempted: true, ok: false, detail: "pending squads, but build-squads-json not built - stays pending" };
+  const r = runSquadsRebuild(true);
+  return { attempted: true, ok: r.status === "ok", detail: r.status === "ok" ? "stale squads.json re-built from DB; marker cleared (SELF-HEAL)" : r.detail };
+}
+
 // ---- NARRATION (AI-last, Phase 6; best-effort, non-blocking). Spawns the per-team scenario_narration
 // generator (mirrors runProductionExport spawning the export). The generator reads the SAME live run + the
 // freshly-exported real_standings (live best-third), runs validate-and-repair, and stores only validated rows.
@@ -225,15 +261,20 @@ async function syntheticCycle(args: ReturnType<typeof parseArgs>) {
   // ---------- PRE-FLIGHT: which downstream pieces exist? (honest not_built, never fake OK) ----------
   const narration_built = !demoNotBuilt && existsSync(abs(NARRATION_GENERATOR));
   const export_built = !demoNotBuilt && existsSync(abs(EXPORT_SCRIPT));
+  const squads_built = !demoNotBuilt && existsSync(abs(SQUADS_SCRIPT)); // NON-REQUIRED (never blocks)
   console.log("PRE-FLIGHT — downstream piece existence");
   log("PREFLIGHT", "narration (generator)", true, narration_built ? "built" : "NOT built -> will report not_built");
   log("PREFLIGHT", "export (app-json)", true, export_built ? "built" : "NOT built -> will report not_built");
+  log("PREFLIGHT", "squads (build-squads-json, non-required)", true, squads_built ? "built" : "NOT built -> will report not_built (never blocks)");
 
   // ---------- SELF-HEAL: re-attempt anything a prior cycle left pending (export + narration) ----------
   const heal = selfHealProductionExport(export_built);
   if (heal.attempted) log("SELF-HEAL", "stale export from prior cycle", !!heal.ok, heal.detail);
   // synthetic isolation: do NOT spawn the generator on self-heal here (it would write live under --execute); live cycle owns it.
   const narrHeal = { attempted: false, ok: null as boolean | null, detail: "narration self-heal runs in the live cycle only (synthetic stays isolated)" };
+  // squads self-heal is safe in synthetic (build-squads is DB-READ + file-write; no DB write) — isolated from app-data.
+  const squadsHeal = selfHealSquads(squads_built);
+  if (squadsHeal.attempted) log("SELF-HEAL", "stale squads.json from prior cycle", !!squadsHeal.ok, squadsHeal.detail);
 
   // ---------- PHASE 1: DATA + MATERIALITY GATE ----------
   console.log("\nPHASE 1 — DATA + materiality gate (live-update-orchestrator.ts --synthetic-result)");
@@ -279,6 +320,7 @@ async function syntheticCycle(args: ReturnType<typeof parseArgs>) {
   let narration = { status: "skipped" as StepStatus, pending: false, detail: "held — nothing published to narrate" };
   let exp = { status: "skipped" as StepStatus, detail: "held — nothing published to export" };
   let reexp = { status: "skipped" as StepStatus, detail: "no re-export (narration not regenerated)" };
+  let squads = { status: "skipped" as StepStatus, detail: "held - squad rebuild runs on published cycles only" };
   if (published) {
     console.log("\nEXPORT (1/2) — app-data cache incl. fresh real_standings (live best-third) BEFORE narration");
     exp = runProductionExport(export_built, forceExportFail);
@@ -293,6 +335,12 @@ async function syntheticCycle(args: ReturnType<typeof parseArgs>) {
       reexp = runProductionExport(export_built, false);
       log("EXPORT", `reexport_status=${reexp.status}`, reexp.status === "ok", reexp.detail);
     }
+
+    // SQUAD CARD overlay (isolated; never blocks advancement). DB-READ + writes squads.json only (no DB write,
+    // so synthetic-safe). Exercises the SAME step the live cycle runs; the commit step is skipped in synthetic.
+    console.log("\nSQUADS — rebuild squads.json from DB (player stats + injuries) [isolated; never blocks advancement]");
+    squads = runSquadsRebuild(squads_built);
+    log("SQUADS", `squads_status=${squads.status}`, squads.status !== "failed" && squads.status !== "not_built", squads.detail);
   }
 
   // ---------- SUMMARY (honest statuses; cycle exits 0) ----------
@@ -301,15 +349,16 @@ async function syntheticCycle(args: ReturnType<typeof parseArgs>) {
     ordering_enforced: "DATA -> GATE -> MODEL(candidate) -> SANITY GATE -> PROMOTE -> EXPORT -> AI NARRATION (dry-run) -> RE-EXPORT",
     materiality_gate: "material", sanity_gate: "PASS",
     publish_decision: published ? "would_publish" : "HELD_for_human_go",
-    preflight: { narration_built, export_built },
-    self_heal: heal, narration_self_heal: narrHeal,
+    preflight: { narration_built, export_built, squads_built },
+    self_heal: heal, narration_self_heal: narrHeal, squads_self_heal: squadsHeal,
     narration_status: narration.status, narration_pending: narration.pending, narration_mode: "DRY-RUN (--teams CAN,BIH, no --execute -> no DB write; isolation preserved)",
     export_status: exp.status, reexport_status: reexp.status, export_cache: EXPORT_CACHE, ui_export_cache: UI_EXPORT_CACHE, export_pending_marker_present: existsSync(abs(EXPORT_PENDING)),
+    squads_status: squads.status, squads_pending_marker_present: existsSync(abs(SQUADS_PENDING)), squads_role: "isolated DB-read -> squads.json (no DB write; never blocks advancement)",
     source_of_truth: `${LIVE_POINTER_FILE} + DB rows selected by explicit run IDs`, export_role: "cache (self-heals next cycle); production export bridges to UI data file",
-    downstream_failures_absorbed: narration.status !== "ok" || exp.status !== "ok" ? true : false,
+    downstream_failures_absorbed: narration.status !== "ok" || exp.status !== "ok" || squads.status === "failed",
     model_un_published_on_downstream_failure: false,
     process_exit_code: 0,
-    reuses_existing_pieces: ["ingest-wc2026-results.ts", "live-update-orchestrator.ts", "build-advancement-scenario-v1-live.ts", "live-group-stage-bracket-resimulation-consumer.ts", "elo-update-engine.ts", "ai-layer/generate-narration-pipeline.ts", "ai-layer/validate-and-repair.ts", "scripts/worldcup/export/build-app-data.ts"],
+    reuses_existing_pieces: ["ingest-wc2026-results.ts", "live-update-orchestrator.ts", "build-advancement-scenario-v1-live.ts", "live-group-stage-bracket-resimulation-consumer.ts", "elo-update-engine.ts", "ai-layer/generate-narration-pipeline.ts", "ai-layer/validate-and-repair.ts", "scripts/worldcup/export/build-app-data.ts", "scripts/worldcup/export/build-squads-json.mjs"],
     db_writes: 0, odds_or_predictions_endpoints: false,
   };
   writeJson("data/audits/in-tournament-loop-synthetic-cycle.json", { summary, trace, sanity_gate: gate });
@@ -339,13 +388,19 @@ async function liveCycle(args: ReturnType<typeof parseArgs>) {
   const missingScripts = requiredScripts.filter((script) => !existsSync(abs(script)));
   const narration_built = !demoNotBuilt && existsSync(abs(NARRATION_GENERATOR));
   const export_built = !demoNotBuilt && existsSync(abs(EXPORT_SCRIPT));
+  // NON-REQUIRED: a missing build-squads-json -> not_built (never blocks/REDs); the squad card is secondary.
+  const squads_built = !demoNotBuilt && existsSync(abs(SQUADS_SCRIPT));
   for (const script of requiredScripts) log("PREFLIGHT", script, !missingScripts.includes(script), missingScripts.includes(script) ? "missing" : "built");
+  log("PREFLIGHT", "squads (build-squads-json, non-required)", true, squads_built ? "built" : "NOT built -> will report not_built (never blocks)");
 
   const heal = selfHealProductionExport(export_built);
   if (heal.attempted) log("SELF-HEAL", "stale export from prior cycle", !!heal.ok, heal.detail);
   // SELF-HEAL narration left pending by a prior cycle (re-generate + re-export); non-blocking.
   const narrHeal = selfHealNarration(narration_built, export_built);
   if (narrHeal.attempted) log("SELF-HEAL", "stale narration from prior cycle", !!narrHeal.ok, narrHeal.detail);
+  // SELF-HEAL squads.json left pending by a prior cycle (re-build from DB); non-blocking, isolated from app-data.
+  const squadsHeal = selfHealSquads(squads_built);
+  if (squadsHeal.attempted) log("SELF-HEAL", "stale squads.json from prior cycle", !!squadsHeal.ok, squadsHeal.detail);
 
   if (missingScripts.some((script) => script !== NARRATION_GENERATOR && script !== EXPORT_SCRIPT)) {
     writeJson("data/audits/in-tournament-loop-live-cycle.json", {
@@ -458,6 +513,7 @@ async function liveCycle(args: ReturnType<typeof parseArgs>) {
   let narration = { status: "skipped" as StepStatus, pending: false, detail: "held - nothing published to narrate" };
   let exp = { status: "skipped" as StepStatus, detail: "held - nothing published to export" };
   let reexp = { status: "skipped" as StepStatus, detail: "no re-export (narration not regenerated)" };
+  let squads = { status: "skipped" as StepStatus, detail: "held - squad rebuild runs on published cycles only" };
   if (published) {
     // ORDERING (double-export): EXPORT writes real_standings (the live best-third the generator reads) BEFORE
     // narration; then NARRATION (AI-last, Phase 6) regenerates all 48; then RE-EXPORT embeds the fresh prose.
@@ -474,6 +530,13 @@ async function liveCycle(args: ReturnType<typeof parseArgs>) {
       reexp = runProductionExport(export_built, false);
       log("EXPORT", `reexport_status=${reexp.status}`, reexp.status === "ok", reexp.detail);
     }
+
+    // SQUAD CARD overlay (best-effort, non-blocking, ISOLATED) — AFTER the advancement publish above. Rebuilds
+    // squads.json from the DB so per-player WC Min/G/A/Cards + injuries surface during the tournament. A failure
+    // here can NEVER abort/delay/un-publish the advancement above — it is ABSORBED -> .squads-pending (self-heals).
+    console.log("\nSQUADS - rebuild squads.json from DB (player stats + injuries) [isolated; never blocks advancement]");
+    squads = runSquadsRebuild(squads_built);
+    log("SQUADS", `squads_status=${squads.status}`, squads.status !== "failed" && squads.status !== "not_built", squads.detail);
   }
 
   const summary = {
@@ -493,7 +556,10 @@ async function liveCycle(args: ReturnType<typeof parseArgs>) {
     export_cache: EXPORT_CACHE,
     ui_export_cache: UI_EXPORT_CACHE,
     export_pending_marker_present: existsSync(abs(EXPORT_PENDING)),
-    downstream_failures_absorbed: narration.status !== "ok" || exp.status !== "ok",
+    squads_self_heal: squadsHeal,
+    squads_status: squads.status,
+    squads_pending_marker_present: existsSync(abs(SQUADS_PENDING)),
+    downstream_failures_absorbed: narration.status !== "ok" || exp.status !== "ok" || squads.status === "failed",
     model_un_published_on_downstream_failure: false,
     process_exit_code: 0,
     no_odds_or_predictions_endpoints: true,

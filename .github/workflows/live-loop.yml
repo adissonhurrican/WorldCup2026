@@ -86,22 +86,30 @@ jobs:
         if: ${{ success() && inputs.synthetic == true }}
         run: npx tsx scripts/worldcup/live/in-tournament-loop-runner.ts --synthetic-result --mode unattended
 
-      - name: Commit + push refreshed app-data (fail-hard; no empty over good; no-change-safe)
+      - name: Commit + push refreshed app-data + squads (fail-hard on app-data; squads non-fatal; no-change-safe)
         # Only on the real path that succeeded — never for the synthetic dry test (which publishes nothing).
         # Explicit success() keeps fail-hard: a prior-step failure skips the commit (workflow stays RED).
         if: ${{ success() && inputs.synthetic != true }}
         run: |
-          # FAIL-HARD: refuse to commit unless app-data.json is valid + non-empty (never overwrite good data with
-          # empty/partial). A missing/empty/teamless file exits non-zero here → workflow RED, last-good data kept.
+          # FAIL-HARD (PRIMARY GATE): refuse to commit unless app-data.json is valid + non-empty (never overwrite
+          # good data with empty/partial). A missing/empty/teamless file exits non-zero here → workflow RED, last-good kept.
           node -e "const d=require('./data/exports/app-data.json'); if(!d||!Array.isArray(d.teams)||d.teams.length===0){console.error('app-data.json invalid/empty — refusing to commit'); process.exit(1);}"
           # Only the committed/served copies. ui/ and ui-v2/dist/ are gitignored build artifacts (adding them would
           # make `git add` fail under set -e — the weather Bug 2 lesson).
           git add data/exports/app-data.json ui-v2/public/app-data.json
+          # SQUADS.JSON — SECONDARY, NON-FATAL. The validity check sits in an `if` condition → it is EXEMPT from
+          # `set -e`; a bad/missing squads.json just SKIPS its `git add` (keeps last-good) and can NEVER trip a
+          # non-zero exit or block the app-data (advancement) publish above. Only the 2 tracked copies.
+          if node -e "const s=require('./ui-v2/public/squads.json'); process.exit(s&&s.teams&&Object.keys(s.teams).length>0?0:1)" 2>/dev/null; then
+            git add data/exports/squads.json ui-v2/public/squads.json
+          else
+            echo "squads.json invalid/missing — skipping (app-data publish proceeds)"
+          fi
           if git diff --cached --quiet; then
-            echo "No app-data change this cycle (clean no-op) — nothing to commit."
+            echo "No app-data/squads change this cycle (clean no-op) — nothing to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Live loop: refresh app-data from verified results"
+          git commit -m "Live loop: refresh app-data + squads from verified results"
           git push

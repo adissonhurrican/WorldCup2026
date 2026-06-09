@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-06T22:01:44.469Z",
+  "generated_at": "2026-06-09T22:03:43.042Z",
   "source": "WC2026 confirmed squads from the DB (players + API-Football squad fields + player_status_events). Display-only; never a model/prediction input.",
   "note": "Per-player status (goals/assists/cards/minutes) fills from api_football_fixture_player_stats as WC matches are played; 0 until then. availability (out/doubtful/suspended) comes from player_status_events (latest tournament-scope, non-rejected) and carries review_status — pending seeds are shown but flagged. Missing club/age/number are null (the UI omits them).",
   "coverage": {
     "teams": 48,
-    "players": 1239,
+    "players": 1247,
     "with_number": 1217,
     "with_club": 938,
     "with_age": 1214,
@@ -1540,6 +1540,36 @@
         "number": 21,
         "club": "Stromsgodset",
         "age": 21,
+        "status": {
+          "goals": 0,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "minutes": 0
+        }
+      },
+      {
+        "name": "A. Y. Hashim",
+        "position": "Attacker",
+        "position_group": "FWD",
+        "number": null,
+        "club": null,
+        "age": null,
+        "status": {
+          "goals": 0,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "minutes": 0
+        }
+      },
+      {
+        "name": "Meme",
+        "position": "Attacker",
+        "position_group": "FWD",
+        "number": null,
+        "club": null,
+        "age": null,
         "status": {
           "goals": 0,
           "assists": 0,
@@ -3389,6 +3419,21 @@
         }
       },
       {
+        "name": "A. Romero",
+        "position": "Midfielder",
+        "position_group": "MID",
+        "number": null,
+        "club": null,
+        "age": null,
+        "status": {
+          "goals": 0,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "minutes": 0
+        }
+      },
+      {
         "name": "A. Sanabria",
         "position": "Attacker",
         "position_group": "FWD",
@@ -4415,6 +4460,21 @@
         }
       },
       {
+        "name": "A. Al Hussain",
+        "position": "Defender",
+        "position_group": "DEF",
+        "number": null,
+        "club": null,
+        "age": null,
+        "status": {
+          "goals": 0,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "minutes": 0
+        }
+      },
+      {
         "name": "Ayoub Aloui",
         "position": "Defender",
         "position_group": "DEF",
@@ -4491,6 +4551,21 @@
       },
       {
         "name": "Ahmed Fathy",
+        "position": "Midfielder",
+        "position_group": "MID",
+        "number": null,
+        "club": null,
+        "age": null,
+        "status": {
+          "goals": 0,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "minutes": 0
+        }
+      },
+      {
+        "name": "G. Laye",
         "position": "Midfielder",
         "position_group": "MID",
         "number": null,
@@ -13009,6 +13084,36 @@
         }
       },
       {
+        "name": "H. Abu Al Dahab",
+        "position": "Defender",
+        "position_group": "DEF",
+        "number": null,
+        "club": null,
+        "age": null,
+        "status": {
+          "goals": 0,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "minutes": 0
+        }
+      },
+      {
+        "name": "M. Abu Hasheesh",
+        "position": "Defender",
+        "position_group": "DEF",
+        "number": null,
+        "club": null,
+        "age": null,
+        "status": {
+          "goals": 0,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "minutes": 0
+        }
+      },
+      {
         "name": "Amer Jamous",
         "position": "Midfielder",
         "position_group": "MID",
@@ -14418,6 +14523,21 @@
         "number": 22,
         "club": null,
         "age": 29,
+        "status": {
+          "goals": 0,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "minutes": 0
+        }
+      },
+      {
+        "name": "C. Abdelmouhib",
+        "position": "Goalkeeper",
+        "position_group": "GK",
+        "number": null,
+        "club": null,
+        "age": null,
         "status": {
           "goals": 0,
           "assists": 0,
