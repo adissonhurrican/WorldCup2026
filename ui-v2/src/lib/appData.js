@@ -89,27 +89,41 @@ export async function loadLiveScores(url = `/.netlify/functions/livescore`) {
   return { as_of: (raw && raw.as_of) || null, map };
 }
 
-// Confirmed XIs — display only, written server-side by fetch-match-lineups.mjs -> export-lineups.mjs
-// (the client never calls API-Football and never holds the key). Returns { as_of, map } where map is
-// keyed by "HOME_AWAY". A fixture is absent until its lineup is stored, so the UI shows the placeholder.
-export async function loadLineups(url = `${BASE}lineups.json`) {
+// Confirmed XIs — display only, fetched server-side by the lineups Netlify Function (the client never
+// calls API-Football or holds the key), edge-cached ~5 min (lineups are quasi-static once posted). Returns
+// { as_of, map } keyed by "HOME_AWAY". A fixture is absent until its lineup is posted, so the UI shows the
+// placeholder. Orientation-agnostic like loadLiveScores: the function emits the provider's home/away, so we
+// also index the reverse key with home_lineup/away_lineup swapped — a card listing a fixture reversed vs the
+// provider still gets each side's XI placed correctly.
+export async function loadLineups(url = `/.netlify/functions/lineups`) {
   const raw = await loadJsonOr(url, null);
   const map = {};
   const matches = raw && Array.isArray(raw.matches) ? raw.matches : [];
   for (const m of matches) {
-    if (m && m.home && m.away) map[`${m.home}_${m.away}`] = m;
+    if (!m || !m.home || !m.away) continue;
+    map[`${m.home}_${m.away}`] = m;
+    const reverseKey = `${m.away}_${m.home}`;
+    if (!map[reverseKey]) {
+      map[reverseKey] = { ...m, home: m.away, away: m.home, home_lineup: m.away_lineup, away_lineup: m.home_lineup };
+    }
   }
   return { as_of: (raw && raw.as_of) || null, map };
 }
 
-// Goal/card timeline events — display only, written server-side from api_football_fixture_events.
-// Returns { as_of, map } keyed by "HOME_AWAY". The UI never calls API-Football or the DB.
-export async function loadEvents(url = `${BASE}events.json`) {
+// Goal/card timeline events — display only, fetched server-side by the events Netlify Function (the client
+// never calls API-Football or holds the key), edge-cached ~30s (near-live). Returns { as_of, map } keyed by
+// "HOME_AWAY". Orientation-agnostic like loadLiveScores: the function emits the provider's home/away, so we
+// also index the reverse key (each event is team-tagged, so the events array needs no swap). Live-only: a
+// fixture drops from the feed when it finishes (the card then shows our verified result).
+export async function loadEvents(url = `/.netlify/functions/events`) {
   const raw = await loadJsonOr(url, null);
   const map = {};
   const matches = raw && Array.isArray(raw.matches) ? raw.matches : [];
   for (const m of matches) {
-    if (m && m.home && m.away) map[`${m.home}_${m.away}`] = m;
+    if (!m || !m.home || !m.away) continue;
+    map[`${m.home}_${m.away}`] = m;
+    const reverseKey = `${m.away}_${m.home}`;
+    if (!map[reverseKey]) map[reverseKey] = { ...m, home: m.away, away: m.home };
   }
   return { as_of: (raw && raw.as_of) || null, map };
 }
