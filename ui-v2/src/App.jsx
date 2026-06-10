@@ -19,6 +19,20 @@ const LIVE_POLL_MS = 30000;
 
 const DEFAULT_TEAM_CODE = "BIH";
 
+// "Remember my team": persist the selected team (by stable FIFA code) so it survives a refresh and
+// returns next visit. All access is wrapped in try/catch — if localStorage is blocked/unavailable (some
+// privacy modes), it silently falls back to the default and never throws. Touches only team-selection.
+const TEAM_STORAGE_KEY = "wc-my-team";
+function readSavedTeam() {
+  try { return localStorage.getItem(TEAM_STORAGE_KEY) || null; } catch (e) { return null; }
+}
+function saveTeam(code) {
+  try { localStorage.setItem(TEAM_STORAGE_KEY, code); } catch (e) { /* blocked/unavailable — ignore */ }
+}
+function clearSavedTeam() {
+  try { localStorage.removeItem(TEAM_STORAGE_KEY); } catch (e) { /* ignore */ }
+}
+
 function initDark() {
   try {
     const s = localStorage.getItem("wc-theme");
@@ -41,7 +55,7 @@ export default function App() {
   const [view, setView] = useState("team");
   const [secondary, setSecondary] = useState(null); // null = main app; else an info page key (about/how/privacy/terms)
   const [menuOpen, setMenuOpen] = useState(false); // mobile secondary-nav drawer
-  const [teamCode, setTeamCode] = useState(DEFAULT_TEAM_CODE);
+  const [teamCode, setTeamCode] = useState(() => readSavedTeam() || DEFAULT_TEAM_CODE);
   const [myTeamTab, setMyTeamTab] = useState("Overview");
   const [sheetOpen, setSheetOpen] = useState(false);
   const [matchFx, setMatchFx] = useState(null);
@@ -60,8 +74,14 @@ export default function App() {
       .then((d) => {
         if (!alive) return;
         setData(d);
-        // make sure the default team exists in the real contract
-        if (!teamByCode(d, DEFAULT_TEAM_CODE) && d.teams && d.teams[0]) setTeamCode(d.teams[0].code);
+        // Make sure the SELECTED team (restored from localStorage, or the default) exists in the real
+        // contract. A stale/invalid saved code (e.g. a team that no longer exists) is cleared and falls
+        // back to the default — or the first team if the default itself is missing. Never blank/crash.
+        if (!teamByCode(d, teamCode)) {
+          clearSavedTeam();
+          const fallback = teamByCode(d, DEFAULT_TEAM_CODE) ? DEFAULT_TEAM_CODE : (d.teams && d.teams[0] ? d.teams[0].code : teamCode);
+          if (fallback !== teamCode) setTeamCode(fallback);
+        }
       })
       .catch((e) => alive && setLoadErr(e));
     return () => { alive = false; };
@@ -98,6 +118,7 @@ export default function App() {
 
   const selectTeam = (code) => {
     setTeamCode(code);
+    saveTeam(code);
     setView("team");
     setSecondary(null);
   };
@@ -159,6 +180,7 @@ export default function App() {
             current={teamCode}
             onPick={(t) => {
               setTeamCode(t.code);
+              saveTeam(t.code);
               setSheetOpen(false);
             }}
             onClose={() => setSheetOpen(false)}
