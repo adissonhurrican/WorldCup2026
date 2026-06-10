@@ -112,4 +112,15 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Live loop: refresh app-data + squads from verified results"
-          git push
+          # PUSH-RACE SAFE: rebase-before-push + retry (origin moves under us — weather bot every 6h + other
+          # loop pushes). Flag+exit-1 (NOT the naive `... || {echo;}`, which exits 0 green without pushing).
+          # Disjoint files (loop=app-data+squads vs weather) → clean replay; --autostash insures a clean tree;
+          # rebase --abort clears a half-rebase before retry; FAILS LOUD on exhaustion (never half-publishes).
+          pushed=0
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase --autostash origin main && git push; then pushed=1; break; fi
+            echo "push race on attempt $attempt — re-rebasing onto origin"
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 3))
+          done
+          if [ "$pushed" != "1" ]; then echo "::error::push failed after retries"; exit 1; fi
