@@ -21,9 +21,9 @@ const PRETOURNAMENT_SOURCE = "international-football_eloratings_net";
 const KICKOFF_BOUNDARY = "2026-06-11"; // pre-tournament Elo = latest rating_date strictly before this
 const EXPECTED_GROUP_FIXTURES = 72;
 const groups: Record<string, string[]> = {
-  A: ["MEX", "RSA", "KOR", "CZE"], B: ["CAN", "BIH", "SUI", "QAT"], C: ["AUS", "PAR", "TUR", "USA"],
-  D: ["BRA", "HAI", "MAR", "SCO"], E: ["CIV", "CUW", "ECU", "GER"], F: ["JPN", "NED", "SWE", "TUN"],
-  G: ["CPV", "ESP", "KSA", "URU"], H: ["BEL", "EGY", "IRN", "NZL"], I: ["FRA", "IRQ", "NOR", "SEN"],
+  A: ["MEX", "RSA", "KOR", "CZE"], B: ["CAN", "BIH", "SUI", "QAT"], C: ["BRA", "HAI", "MAR", "SCO"],
+  D: ["AUS", "PAR", "TUR", "USA"], E: ["CIV", "CUW", "ECU", "GER"], F: ["JPN", "NED", "SWE", "TUN"],
+  G: ["BEL", "EGY", "IRN", "NZL"], H: ["CPV", "ESP", "KSA", "URU"], I: ["FRA", "IRQ", "NOR", "SEN"],
   J: ["ALG", "ARG", "AUT", "JOR"], K: ["COD", "COL", "POR", "UZB"], L: ["CRO", "ENG", "GHA", "PAN"],
 };
 const allTeams = Object.values(groups).flat();

@@ -57,52 +57,52 @@
       "flag": "flags/SUI.png"
     },
     {
-      "code": "AUS",
-      "name": "Australia",
-      "group": "C",
-      "flag": "flags/AUS.png"
-    },
-    {
-      "code": "PAR",
-      "name": "Paraguay",
-      "group": "C",
-      "flag": "flags/PAR.png"
-    },
-    {
-      "code": "TUR",
-      "name": "Türkiye",
-      "group": "C",
-      "flag": "flags/TUR.png"
-    },
-    {
-      "code": "USA",
-      "name": "USA",
-      "group": "C",
-      "flag": "flags/USA.png"
-    },
-    {
       "code": "BRA",
       "name": "Brazil",
-      "group": "D",
+      "group": "C",
       "flag": "flags/BRA.png"
     },
     {
       "code": "HAI",
       "name": "Haiti",
-      "group": "D",
+      "group": "C",
       "flag": "flags/HAI.png"
     },
     {
       "code": "MAR",
       "name": "Morocco",
-      "group": "D",
+      "group": "C",
       "flag": "flags/MAR.png"
     },
     {
       "code": "SCO",
       "name": "Scotland",
-      "group": "D",
+      "group": "C",
       "flag": "flags/SCO.png"
+    },
+    {
+      "code": "AUS",
+      "name": "Australia",
+      "group": "D",
+      "flag": "flags/AUS.png"
+    },
+    {
+      "code": "PAR",
+      "name": "Paraguay",
+      "group": "D",
+      "flag": "flags/PAR.png"
+    },
+    {
+      "code": "TUR",
+      "name": "Türkiye",
+      "group": "D",
+      "flag": "flags/TUR.png"
+    },
+    {
+      "code": "USA",
+      "name": "USA",
+      "group": "D",
+      "flag": "flags/USA.png"
     },
     {
       "code": "CIV",
@@ -153,52 +153,52 @@
       "flag": "flags/TUN.png"
     },
     {
-      "code": "CPV",
-      "name": "Cape Verde Islands",
-      "group": "G",
-      "flag": "flags/CPV.png"
-    },
-    {
-      "code": "ESP",
-      "name": "Spain",
-      "group": "G",
-      "flag": "flags/ESP.png"
-    },
-    {
-      "code": "KSA",
-      "name": "Saudi Arabia",
-      "group": "G",
-      "flag": "flags/KSA.png"
-    },
-    {
-      "code": "URU",
-      "name": "Uruguay",
-      "group": "G",
-      "flag": "flags/URU.png"
-    },
-    {
       "code": "BEL",
       "name": "Belgium",
-      "group": "H",
+      "group": "G",
       "flag": "flags/BEL.png"
     },
     {
       "code": "EGY",
       "name": "Egypt",
-      "group": "H",
+      "group": "G",
       "flag": "flags/EGY.png"
     },
     {
       "code": "IRN",
       "name": "Iran",
-      "group": "H",
+      "group": "G",
       "flag": "flags/IRN.png"
     },
     {
       "code": "NZL",
       "name": "New Zealand",
-      "group": "H",
+      "group": "G",
       "flag": "flags/NZL.png"
+    },
+    {
+      "code": "CPV",
+      "name": "Cape Verde Islands",
+      "group": "H",
+      "flag": "flags/CPV.png"
+    },
+    {
+      "code": "ESP",
+      "name": "Spain",
+      "group": "H",
+      "flag": "flags/ESP.png"
+    },
+    {
+      "code": "KSA",
+      "name": "Saudi Arabia",
+      "group": "H",
+      "flag": "flags/KSA.png"
+    },
+    {
+      "code": "URU",
+      "name": "Uruguay",
+      "group": "H",
+      "flag": "flags/URU.png"
     },
     {
       "code": "FRA",
@@ -416,63 +416,6 @@
       "group": "C",
       "standings": [
         {
-          "code": "TUR",
-          "win_group": 0.2913,
-          "top_2": 0.5488,
-          "advance": 0.712,
-          "finish_distribution": {
-            "1st": 0.2913,
-            "2nd": 0.2575,
-            "3rd": 0.2372,
-            "4th": 0.214
-          },
-          "projected_finish": "1st"
-        },
-        {
-          "code": "PAR",
-          "win_group": 0.2565,
-          "top_2": 0.5105,
-          "advance": 0.6794,
-          "finish_distribution": {
-            "1st": 0.2565,
-            "2nd": 0.254,
-            "3rd": 0.2451,
-            "4th": 0.2444
-          },
-          "projected_finish": "1st"
-        },
-        {
-          "code": "AUS",
-          "win_group": 0.235,
-          "top_2": 0.4788,
-          "advance": 0.6535,
-          "finish_distribution": {
-            "1st": 0.235,
-            "2nd": 0.2438,
-            "3rd": 0.2589,
-            "4th": 0.2623
-          },
-          "projected_finish": "4th"
-        },
-        {
-          "code": "USA",
-          "win_group": 0.2172,
-          "top_2": 0.4619,
-          "advance": 0.6292,
-          "finish_distribution": {
-            "1st": 0.2172,
-            "2nd": 0.2447,
-            "3rd": 0.2587,
-            "4th": 0.2793
-          },
-          "projected_finish": "4th"
-        }
-      ]
-    },
-    {
-      "group": "D",
-      "standings": [
-        {
           "code": "BRA",
           "win_group": 0.3491,
           "top_2": 0.6147,
@@ -521,6 +464,63 @@
             "2nd": 0.2079,
             "3rd": 0.2587,
             "4th": 0.3633
+          },
+          "projected_finish": "4th"
+        }
+      ]
+    },
+    {
+      "group": "D",
+      "standings": [
+        {
+          "code": "TUR",
+          "win_group": 0.2913,
+          "top_2": 0.5488,
+          "advance": 0.712,
+          "finish_distribution": {
+            "1st": 0.2913,
+            "2nd": 0.2575,
+            "3rd": 0.2372,
+            "4th": 0.214
+          },
+          "projected_finish": "1st"
+        },
+        {
+          "code": "PAR",
+          "win_group": 0.2565,
+          "top_2": 0.5105,
+          "advance": 0.6794,
+          "finish_distribution": {
+            "1st": 0.2565,
+            "2nd": 0.254,
+            "3rd": 0.2451,
+            "4th": 0.2444
+          },
+          "projected_finish": "1st"
+        },
+        {
+          "code": "AUS",
+          "win_group": 0.235,
+          "top_2": 0.4788,
+          "advance": 0.6535,
+          "finish_distribution": {
+            "1st": 0.235,
+            "2nd": 0.2438,
+            "3rd": 0.2589,
+            "4th": 0.2623
+          },
+          "projected_finish": "4th"
+        },
+        {
+          "code": "USA",
+          "win_group": 0.2172,
+          "top_2": 0.4619,
+          "advance": 0.6292,
+          "finish_distribution": {
+            "1st": 0.2172,
+            "2nd": 0.2447,
+            "3rd": 0.2587,
+            "4th": 0.2793
           },
           "projected_finish": "4th"
         }
@@ -644,63 +644,6 @@
       "group": "G",
       "standings": [
         {
-          "code": "ESP",
-          "win_group": 0.4453,
-          "top_2": 0.713,
-          "advance": 0.844,
-          "finish_distribution": {
-            "1st": 0.4453,
-            "2nd": 0.2677,
-            "3rd": 0.1716,
-            "4th": 0.1154
-          },
-          "projected_finish": "1st"
-        },
-        {
-          "code": "URU",
-          "win_group": 0.2647,
-          "top_2": 0.5641,
-          "advance": 0.734,
-          "finish_distribution": {
-            "1st": 0.2647,
-            "2nd": 0.2994,
-            "3rd": 0.245,
-            "4th": 0.191
-          },
-          "projected_finish": "2nd"
-        },
-        {
-          "code": "CPV",
-          "win_group": 0.145,
-          "top_2": 0.3605,
-          "advance": 0.5266,
-          "finish_distribution": {
-            "1st": 0.145,
-            "2nd": 0.2155,
-            "3rd": 0.2883,
-            "4th": 0.3511
-          },
-          "projected_finish": "4th"
-        },
-        {
-          "code": "KSA",
-          "win_group": 0.145,
-          "top_2": 0.3624,
-          "advance": 0.5324,
-          "finish_distribution": {
-            "1st": 0.145,
-            "2nd": 0.2173,
-            "3rd": 0.2951,
-            "4th": 0.3426
-          },
-          "projected_finish": "4th"
-        }
-      ]
-    },
-    {
-      "group": "H",
-      "standings": [
-        {
           "code": "BEL",
           "win_group": 0.3165,
           "top_2": 0.5772,
@@ -749,6 +692,63 @@
             "2nd": 0.2253,
             "3rd": 0.2672,
             "4th": 0.3127
+          },
+          "projected_finish": "4th"
+        }
+      ]
+    },
+    {
+      "group": "H",
+      "standings": [
+        {
+          "code": "ESP",
+          "win_group": 0.4453,
+          "top_2": 0.713,
+          "advance": 0.844,
+          "finish_distribution": {
+            "1st": 0.4453,
+            "2nd": 0.2677,
+            "3rd": 0.1716,
+            "4th": 0.1154
+          },
+          "projected_finish": "1st"
+        },
+        {
+          "code": "URU",
+          "win_group": 0.2647,
+          "top_2": 0.5641,
+          "advance": 0.734,
+          "finish_distribution": {
+            "1st": 0.2647,
+            "2nd": 0.2994,
+            "3rd": 0.245,
+            "4th": 0.191
+          },
+          "projected_finish": "2nd"
+        },
+        {
+          "code": "CPV",
+          "win_group": 0.145,
+          "top_2": 0.3605,
+          "advance": 0.5266,
+          "finish_distribution": {
+            "1st": 0.145,
+            "2nd": 0.2155,
+            "3rd": 0.2883,
+            "4th": 0.3511
+          },
+          "projected_finish": "4th"
+        },
+        {
+          "code": "KSA",
+          "win_group": 0.145,
+          "top_2": 0.3624,
+          "advance": 0.5324,
+          "finish_distribution": {
+            "1st": 0.145,
+            "2nd": 0.2173,
+            "3rd": 0.2951,
+            "4th": 0.3426
           },
           "projected_finish": "4th"
         }
@@ -1225,129 +1225,9 @@
       "live_score_ref": null
     },
     {
-      "home": "AUS",
-      "away": "TUR",
-      "group": "C",
-      "matchday": 1,
-      "kickoff": "2026-06-14T00:00:00Z",
-      "kickoff_utc": "2026-06-14T04:00:00Z",
-      "venue": "BC Place",
-      "city": "Vancouver",
-      "state": "British Columbia",
-      "country": "Canada",
-      "venue_timezone": "America/Vancouver",
-      "probabilities": {
-        "home_win": 0.3402,
-        "draw": 0.261,
-        "away_win": 0.3987
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
-      "home": "PAR",
-      "away": "AUS",
-      "group": "C",
-      "matchday": 1,
-      "kickoff": "2026-06-26T00:00:00Z",
-      "kickoff_utc": "2026-06-26T02:00:00Z",
-      "venue": "Levi's Stadium",
-      "city": "San Francisco Bay Area",
-      "state": "California",
-      "country": "United States",
-      "venue_timezone": "America/Los_Angeles",
-      "probabilities": {
-        "home_win": 0.3792,
-        "draw": 0.2661,
-        "away_win": 0.3547
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
-      "home": "TUR",
-      "away": "PAR",
-      "group": "C",
-      "matchday": 2,
-      "kickoff": "2026-06-20T00:00:00Z",
-      "kickoff_utc": "2026-06-20T03:00:00Z",
-      "venue": "Levi's Stadium",
-      "city": "San Francisco Bay Area",
-      "state": "California",
-      "country": "United States",
-      "venue_timezone": "America/Los_Angeles",
-      "probabilities": {
-        "home_win": 0.3844,
-        "draw": 0.2651,
-        "away_win": 0.3506
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
-      "home": "TUR",
-      "away": "USA",
-      "group": "C",
-      "matchday": 2,
-      "kickoff": "2026-06-26T00:00:00Z",
-      "kickoff_utc": "2026-06-26T02:00:00Z",
-      "venue": "SoFi Stadium",
-      "city": "Los Angeles",
-      "state": "California",
-      "country": "United States",
-      "venue_timezone": "America/Los_Angeles",
-      "probabilities": {
-        "home_win": 0.4191,
-        "draw": 0.2517,
-        "away_win": 0.3292
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
-      "home": "USA",
-      "away": "AUS",
-      "group": "C",
-      "matchday": 3,
-      "kickoff": "2026-06-19T00:00:00Z",
-      "kickoff_utc": "2026-06-19T19:00:00Z",
-      "venue": "Lumen Field",
-      "city": "Seattle",
-      "state": "Washington",
-      "country": "United States",
-      "venue_timezone": "America/Los_Angeles",
-      "probabilities": {
-        "home_win": 0.3521,
-        "draw": 0.2655,
-        "away_win": 0.3824
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
-      "home": "USA",
-      "away": "PAR",
-      "group": "C",
-      "matchday": 3,
-      "kickoff": "2026-06-13T00:00:00Z",
-      "kickoff_utc": "2026-06-13T01:00:00Z",
-      "venue": "SoFi Stadium",
-      "city": "Los Angeles",
-      "state": "California",
-      "country": "United States",
-      "venue_timezone": "America/Los_Angeles",
-      "probabilities": {
-        "home_win": 0.3416,
-        "draw": 0.2617,
-        "away_win": 0.3966
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
       "home": "BRA",
       "away": "HAI",
-      "group": "D",
+      "group": "C",
       "matchday": 1,
       "kickoff": "2026-06-20T00:00:00Z",
       "kickoff_utc": "2026-06-20T00:30:00Z",
@@ -1367,7 +1247,7 @@
     {
       "home": "BRA",
       "away": "MAR",
-      "group": "D",
+      "group": "C",
       "matchday": 1,
       "kickoff": "2026-06-13T00:00:00Z",
       "kickoff_utc": "2026-06-13T22:00:00Z",
@@ -1387,7 +1267,7 @@
     {
       "home": "HAI",
       "away": "SCO",
-      "group": "D",
+      "group": "C",
       "matchday": 2,
       "kickoff": "2026-06-14T00:00:00Z",
       "kickoff_utc": "2026-06-14T01:00:00Z",
@@ -1407,7 +1287,7 @@
     {
       "home": "MAR",
       "away": "HAI",
-      "group": "D",
+      "group": "C",
       "matchday": 2,
       "kickoff": "2026-06-24T00:00:00Z",
       "kickoff_utc": "2026-06-24T22:00:00Z",
@@ -1427,7 +1307,7 @@
     {
       "home": "SCO",
       "away": "BRA",
-      "group": "D",
+      "group": "C",
       "matchday": 3,
       "kickoff": "2026-06-24T00:00:00Z",
       "kickoff_utc": "2026-06-24T22:00:00Z",
@@ -1447,7 +1327,7 @@
     {
       "home": "SCO",
       "away": "MAR",
-      "group": "D",
+      "group": "C",
       "matchday": 3,
       "kickoff": "2026-06-19T00:00:00Z",
       "kickoff_utc": "2026-06-19T22:00:00Z",
@@ -1460,6 +1340,126 @@
         "home_win": 0.3538,
         "draw": 0.2659,
         "away_win": 0.3803
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "AUS",
+      "away": "TUR",
+      "group": "D",
+      "matchday": 1,
+      "kickoff": "2026-06-14T00:00:00Z",
+      "kickoff_utc": "2026-06-14T04:00:00Z",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "state": "British Columbia",
+      "country": "Canada",
+      "venue_timezone": "America/Vancouver",
+      "probabilities": {
+        "home_win": 0.3402,
+        "draw": 0.261,
+        "away_win": 0.3987
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "PAR",
+      "away": "AUS",
+      "group": "D",
+      "matchday": 1,
+      "kickoff": "2026-06-26T00:00:00Z",
+      "kickoff_utc": "2026-06-26T02:00:00Z",
+      "venue": "Levi's Stadium",
+      "city": "San Francisco Bay Area",
+      "state": "California",
+      "country": "United States",
+      "venue_timezone": "America/Los_Angeles",
+      "probabilities": {
+        "home_win": 0.3792,
+        "draw": 0.2661,
+        "away_win": 0.3547
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "TUR",
+      "away": "PAR",
+      "group": "D",
+      "matchday": 2,
+      "kickoff": "2026-06-20T00:00:00Z",
+      "kickoff_utc": "2026-06-20T03:00:00Z",
+      "venue": "Levi's Stadium",
+      "city": "San Francisco Bay Area",
+      "state": "California",
+      "country": "United States",
+      "venue_timezone": "America/Los_Angeles",
+      "probabilities": {
+        "home_win": 0.3844,
+        "draw": 0.2651,
+        "away_win": 0.3506
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "TUR",
+      "away": "USA",
+      "group": "D",
+      "matchday": 2,
+      "kickoff": "2026-06-26T00:00:00Z",
+      "kickoff_utc": "2026-06-26T02:00:00Z",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "United States",
+      "venue_timezone": "America/Los_Angeles",
+      "probabilities": {
+        "home_win": 0.4191,
+        "draw": 0.2517,
+        "away_win": 0.3292
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "USA",
+      "away": "AUS",
+      "group": "D",
+      "matchday": 3,
+      "kickoff": "2026-06-19T00:00:00Z",
+      "kickoff_utc": "2026-06-19T19:00:00Z",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "venue_timezone": "America/Los_Angeles",
+      "probabilities": {
+        "home_win": 0.3521,
+        "draw": 0.2655,
+        "away_win": 0.3824
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "USA",
+      "away": "PAR",
+      "group": "D",
+      "matchday": 3,
+      "kickoff": "2026-06-13T00:00:00Z",
+      "kickoff_utc": "2026-06-13T01:00:00Z",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "United States",
+      "venue_timezone": "America/Los_Angeles",
+      "probabilities": {
+        "home_win": 0.3416,
+        "draw": 0.2617,
+        "away_win": 0.3966
       },
       "result": null,
       "live_score_ref": null
@@ -1705,129 +1705,9 @@
       "live_score_ref": null
     },
     {
-      "home": "CPV",
-      "away": "KSA",
-      "group": "G",
-      "matchday": 1,
-      "kickoff": "2026-06-27T00:00:00Z",
-      "kickoff_utc": "2026-06-27T00:00:00Z",
-      "venue": "NRG Stadium",
-      "city": "Houston",
-      "state": "Texas",
-      "country": "United States",
-      "venue_timezone": "America/Chicago",
-      "probabilities": {
-        "home_win": 0.3617,
-        "draw": 0.2673,
-        "away_win": 0.371
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
-      "home": "ESP",
-      "away": "CPV",
-      "group": "G",
-      "matchday": 1,
-      "kickoff": "2026-06-15T00:00:00Z",
-      "kickoff_utc": "2026-06-15T16:00:00Z",
-      "venue": "Mercedes-Benz Stadium",
-      "city": "Atlanta",
-      "state": "Georgia",
-      "country": "United States",
-      "venue_timezone": "America/New_York",
-      "probabilities": {
-        "home_win": 0.621,
-        "draw": 0.1059,
-        "away_win": 0.2731
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
-      "home": "ESP",
-      "away": "KSA",
-      "group": "G",
-      "matchday": 2,
-      "kickoff": "2026-06-21T00:00:00Z",
-      "kickoff_utc": "2026-06-21T16:00:00Z",
-      "venue": "Mercedes-Benz Stadium",
-      "city": "Atlanta",
-      "state": "Georgia",
-      "country": "United States",
-      "venue_timezone": "America/New_York",
-      "probabilities": {
-        "home_win": 0.6151,
-        "draw": 0.1074,
-        "away_win": 0.2775
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
-      "home": "KSA",
-      "away": "URU",
-      "group": "G",
-      "matchday": 2,
-      "kickoff": "2026-06-15T00:00:00Z",
-      "kickoff_utc": "2026-06-15T22:00:00Z",
-      "venue": "Hard Rock Stadium",
-      "city": "Miami",
-      "state": "Florida",
-      "country": "United States",
-      "venue_timezone": "America/New_York",
-      "probabilities": {
-        "home_win": 0.3154,
-        "draw": 0.1987,
-        "away_win": 0.4859
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
-      "home": "URU",
-      "away": "CPV",
-      "group": "G",
-      "matchday": 3,
-      "kickoff": "2026-06-21T00:00:00Z",
-      "kickoff_utc": "2026-06-21T22:00:00Z",
-      "venue": "Hard Rock Stadium",
-      "city": "Miami",
-      "state": "Florida",
-      "country": "United States",
-      "venue_timezone": "America/New_York",
-      "probabilities": {
-        "home_win": 0.4968,
-        "draw": 0.1887,
-        "away_win": 0.3145
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
-      "home": "URU",
-      "away": "ESP",
-      "group": "G",
-      "matchday": 3,
-      "kickoff": "2026-06-27T00:00:00Z",
-      "kickoff_utc": "2026-06-27T00:00:00Z",
-      "venue": "Estadio Akron",
-      "city": "Guadalajara",
-      "state": "Jalisco",
-      "country": "Mexico",
-      "venue_timezone": "America/Mexico_City",
-      "probabilities": {
-        "home_win": 0.3186,
-        "draw": 0.223,
-        "away_win": 0.4584
-      },
-      "result": null,
-      "live_score_ref": null
-    },
-    {
       "home": "BEL",
       "away": "EGY",
-      "group": "H",
+      "group": "G",
       "matchday": 1,
       "kickoff": "2026-06-15T00:00:00Z",
       "kickoff_utc": "2026-06-15T19:00:00Z",
@@ -1847,7 +1727,7 @@
     {
       "home": "BEL",
       "away": "IRN",
-      "group": "H",
+      "group": "G",
       "matchday": 1,
       "kickoff": "2026-06-21T00:00:00Z",
       "kickoff_utc": "2026-06-21T19:00:00Z",
@@ -1867,7 +1747,7 @@
     {
       "home": "EGY",
       "away": "IRN",
-      "group": "H",
+      "group": "G",
       "matchday": 2,
       "kickoff": "2026-06-27T00:00:00Z",
       "kickoff_utc": "2026-06-27T03:00:00Z",
@@ -1887,7 +1767,7 @@
     {
       "home": "IRN",
       "away": "NZL",
-      "group": "H",
+      "group": "G",
       "matchday": 2,
       "kickoff": "2026-06-16T00:00:00Z",
       "kickoff_utc": "2026-06-16T01:00:00Z",
@@ -1907,7 +1787,7 @@
     {
       "home": "NZL",
       "away": "BEL",
-      "group": "H",
+      "group": "G",
       "matchday": 3,
       "kickoff": "2026-06-27T00:00:00Z",
       "kickoff_utc": "2026-06-27T03:00:00Z",
@@ -1927,7 +1807,7 @@
     {
       "home": "NZL",
       "away": "EGY",
-      "group": "H",
+      "group": "G",
       "matchday": 3,
       "kickoff": "2026-06-22T00:00:00Z",
       "kickoff_utc": "2026-06-22T01:00:00Z",
@@ -1940,6 +1820,126 @@
         "home_win": 0.3432,
         "draw": 0.2625,
         "away_win": 0.3943
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "CPV",
+      "away": "KSA",
+      "group": "H",
+      "matchday": 1,
+      "kickoff": "2026-06-27T00:00:00Z",
+      "kickoff_utc": "2026-06-27T00:00:00Z",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "state": "Texas",
+      "country": "United States",
+      "venue_timezone": "America/Chicago",
+      "probabilities": {
+        "home_win": 0.3617,
+        "draw": 0.2673,
+        "away_win": 0.371
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "ESP",
+      "away": "CPV",
+      "group": "H",
+      "matchday": 1,
+      "kickoff": "2026-06-15T00:00:00Z",
+      "kickoff_utc": "2026-06-15T16:00:00Z",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "state": "Georgia",
+      "country": "United States",
+      "venue_timezone": "America/New_York",
+      "probabilities": {
+        "home_win": 0.621,
+        "draw": 0.1059,
+        "away_win": 0.2731
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "ESP",
+      "away": "KSA",
+      "group": "H",
+      "matchday": 2,
+      "kickoff": "2026-06-21T00:00:00Z",
+      "kickoff_utc": "2026-06-21T16:00:00Z",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "state": "Georgia",
+      "country": "United States",
+      "venue_timezone": "America/New_York",
+      "probabilities": {
+        "home_win": 0.6151,
+        "draw": 0.1074,
+        "away_win": 0.2775
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "KSA",
+      "away": "URU",
+      "group": "H",
+      "matchday": 2,
+      "kickoff": "2026-06-15T00:00:00Z",
+      "kickoff_utc": "2026-06-15T22:00:00Z",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "state": "Florida",
+      "country": "United States",
+      "venue_timezone": "America/New_York",
+      "probabilities": {
+        "home_win": 0.3154,
+        "draw": 0.1987,
+        "away_win": 0.4859
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "URU",
+      "away": "CPV",
+      "group": "H",
+      "matchday": 3,
+      "kickoff": "2026-06-21T00:00:00Z",
+      "kickoff_utc": "2026-06-21T22:00:00Z",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "state": "Florida",
+      "country": "United States",
+      "venue_timezone": "America/New_York",
+      "probabilities": {
+        "home_win": 0.4968,
+        "draw": 0.1887,
+        "away_win": 0.3145
+      },
+      "result": null,
+      "live_score_ref": null
+    },
+    {
+      "home": "URU",
+      "away": "ESP",
+      "group": "H",
+      "matchday": 3,
+      "kickoff": "2026-06-27T00:00:00Z",
+      "kickoff_utc": "2026-06-27T00:00:00Z",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "state": "Jalisco",
+      "country": "Mexico",
+      "venue_timezone": "America/Mexico_City",
+      "probabilities": {
+        "home_win": 0.3186,
+        "draw": 0.223,
+        "away_win": 0.4584
       },
       "result": null,
       "live_score_ref": null
@@ -5140,9 +5140,9 @@
           "chance": 0.1713,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "L",
-            "D",
+            "C",
             "F",
             "I"
           ],
@@ -5154,9 +5154,9 @@
         "advances_if_third": 0.6296,
         "race_position": 11,
         "watch_groups": [
-          "G",
+          "H",
           "L",
-          "D",
+          "C",
           "F",
           "I"
         ]
@@ -5200,8 +5200,8 @@
           "chance": 0.1399,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "H",
             "G",
+            "H",
             "L",
             "E",
             "K"
@@ -5214,8 +5214,8 @@
         "advances_if_third": 0.7398,
         "race_position": 11,
         "watch_groups": [
-          "H",
           "G",
+          "H",
           "L",
           "E",
           "K"
@@ -5260,7 +5260,7 @@
           "chance": 0.1747,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "E",
             "L",
             "I",
@@ -5274,7 +5274,7 @@
         "advances_if_third": 0.6748,
         "race_position": 2,
         "watch_groups": [
-          "G",
+          "H",
           "E",
           "L",
           "I",
@@ -5320,7 +5320,7 @@
           "chance": 0.1716,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "D",
+            "C",
             "E",
             "B",
             "I",
@@ -5334,7 +5334,7 @@
         "advances_if_third": 0.649,
         "race_position": 11,
         "watch_groups": [
-          "D",
+          "C",
           "E",
           "B",
           "I",
@@ -5382,7 +5382,7 @@
           "depends_on_other_groups": [
             "B",
             "I",
-            "G",
+            "H",
             "A",
             "E"
           ],
@@ -5396,7 +5396,7 @@
         "watch_groups": [
           "B",
           "I",
-          "G",
+          "H",
           "A",
           "E"
         ]
@@ -5440,9 +5440,9 @@
           "chance": 0.1834,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "J",
-            "C",
+            "D",
             "E",
             "I"
           ],
@@ -5454,9 +5454,9 @@
         "advances_if_third": 0.6413,
         "race_position": 5,
         "watch_groups": [
-          "G",
+          "H",
           "J",
-          "C",
+          "D",
           "E",
           "I"
         ]
@@ -5501,7 +5501,7 @@
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
             "A",
-            "G",
+            "H",
             "E",
             "J",
             "L"
@@ -5515,7 +5515,7 @@
         "race_position": 4,
         "watch_groups": [
           "A",
-          "G",
+          "H",
           "E",
           "J",
           "L"
@@ -5620,7 +5620,7 @@
           "chance": 0.1835,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "K",
             "F",
             "A",
@@ -5634,7 +5634,7 @@
         "advances_if_third": 0.6487,
         "race_position": 8,
         "watch_groups": [
-          "G",
+          "H",
           "K",
           "F",
           "A",
@@ -5680,9 +5680,9 @@
           "chance": 0.1636,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
             "H",
-            "D",
+            "G",
+            "C",
             "E",
             "B"
           ],
@@ -5694,9 +5694,9 @@
         "advances_if_third": 0.6237,
         "race_position": 3,
         "watch_groups": [
-          "G",
           "H",
-          "D",
+          "G",
+          "C",
           "E",
           "B"
         ]
@@ -5740,11 +5740,11 @@
           "chance": 0.164,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "E",
             "F",
             "L",
-            "D"
+            "C"
           ],
           "decided_by": []
         }
@@ -5754,11 +5754,11 @@
         "advances_if_third": 0.7128,
         "race_position": 3,
         "watch_groups": [
-          "G",
+          "H",
           "E",
           "F",
           "L",
-          "D"
+          "C"
         ]
       }
     },
@@ -5800,7 +5800,7 @@
           "chance": 0.1661,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "C",
+            "D",
             "A",
             "E",
             "J",
@@ -5814,7 +5814,7 @@
         "advances_if_third": 0.576,
         "race_position": 12,
         "watch_groups": [
-          "C",
+          "D",
           "A",
           "E",
           "J",
@@ -5860,10 +5860,10 @@
           "chance": 0.1717,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "J",
             "B",
-            "H",
+            "G",
             "A"
           ],
           "decided_by": []
@@ -5874,10 +5874,10 @@
         "advances_if_third": 0.7252,
         "race_position": 6,
         "watch_groups": [
-          "G",
+          "H",
           "J",
           "B",
-          "H",
+          "G",
           "A"
         ]
       }
@@ -5921,8 +5921,8 @@
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
             "J",
-            "D",
-            "G",
+            "C",
+            "H",
             "B",
             "K"
           ],
@@ -5935,8 +5935,8 @@
         "race_position": 8,
         "watch_groups": [
           "J",
-          "D",
-          "G",
+          "C",
+          "H",
           "B",
           "K"
         ]
@@ -5982,9 +5982,9 @@
           "depends_on_other_groups": [
             "E",
             "L",
-            "G",
+            "H",
             "I",
-            "H"
+            "G"
           ],
           "decided_by": []
         }
@@ -5996,9 +5996,9 @@
         "watch_groups": [
           "E",
           "L",
-          "G",
+          "H",
           "I",
-          "H"
+          "G"
         ]
       }
     },
@@ -6040,8 +6040,8 @@
           "chance": 0.1628,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
             "H",
+            "G",
             "J",
             "L",
             "B"
@@ -6054,8 +6054,8 @@
         "advances_if_third": 0.7442,
         "race_position": 8,
         "watch_groups": [
-          "G",
           "H",
+          "G",
           "J",
           "L",
           "B"
@@ -6100,9 +6100,9 @@
           "chance": 0.1745,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "L",
-            "D",
+            "C",
             "E",
             "I"
           ],
@@ -6114,9 +6114,9 @@
         "advances_if_third": 0.6676,
         "race_position": 10,
         "watch_groups": [
-          "G",
+          "H",
           "L",
-          "D",
+          "C",
           "E",
           "I"
         ]
@@ -6160,9 +6160,9 @@
           "chance": 0.158,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "J",
-            "D",
+            "C",
             "F",
             "I"
           ],
@@ -6174,9 +6174,9 @@
         "advances_if_third": 0.7454,
         "race_position": 6,
         "watch_groups": [
-          "G",
+          "H",
           "J",
-          "D",
+          "C",
           "F",
           "I"
         ]
@@ -6221,8 +6221,8 @@
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
             "J",
-            "C",
             "D",
+            "C",
             "L",
             "F"
           ],
@@ -6235,8 +6235,8 @@
         "race_position": 12,
         "watch_groups": [
           "J",
-          "C",
           "D",
+          "C",
           "L",
           "F"
         ]
@@ -6280,11 +6280,11 @@
           "chance": 0.1593,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "J",
             "K",
             "B",
-            "H"
+            "G"
           ],
           "decided_by": []
         }
@@ -6294,11 +6294,11 @@
         "advances_if_third": 0.7507,
         "race_position": 1,
         "watch_groups": [
-          "G",
+          "H",
           "J",
           "K",
           "B",
-          "H"
+          "G"
         ]
       }
     },
@@ -6340,7 +6340,7 @@
           "chance": 0.1664,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "K",
             "F",
             "I",
@@ -6354,7 +6354,7 @@
         "advances_if_third": 0.7281,
         "race_position": 8,
         "watch_groups": [
-          "G",
+          "H",
           "K",
           "F",
           "I",
@@ -6400,10 +6400,10 @@
           "chance": 0.1548,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
-            "K",
             "H",
-            "C",
+            "K",
+            "G",
+            "D",
             "E"
           ],
           "decided_by": []
@@ -6414,10 +6414,10 @@
         "advances_if_third": 0.5809,
         "race_position": 6,
         "watch_groups": [
-          "G",
-          "K",
           "H",
-          "C",
+          "K",
+          "G",
+          "D",
           "E"
         ]
       }
@@ -6460,7 +6460,7 @@
           "chance": 0.1542,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "K",
             "L",
             "F",
@@ -6474,7 +6474,7 @@
         "advances_if_third": 0.5963,
         "race_position": 4,
         "watch_groups": [
-          "G",
+          "H",
           "K",
           "L",
           "F",
@@ -6521,10 +6521,10 @@
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
             "L",
-            "G",
+            "H",
             "K",
             "E",
-            "C"
+            "D"
           ],
           "decided_by": []
         }
@@ -6535,10 +6535,10 @@
         "race_position": 10,
         "watch_groups": [
           "L",
-          "G",
+          "H",
           "K",
           "E",
-          "C"
+          "D"
         ]
       }
     },
@@ -6582,9 +6582,9 @@
           "depends_on_other_groups": [
             "B",
             "A",
-            "H",
+            "G",
             "E",
-            "G"
+            "H"
           ],
           "decided_by": []
         }
@@ -6596,9 +6596,9 @@
         "watch_groups": [
           "B",
           "A",
-          "H",
+          "G",
           "E",
-          "G"
+          "H"
         ]
       }
     },
@@ -6641,8 +6641,8 @@
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
             "E",
-            "C",
             "D",
+            "C",
             "B",
             "K"
           ],
@@ -6655,8 +6655,8 @@
         "race_position": 11,
         "watch_groups": [
           "E",
-          "C",
           "D",
+          "C",
           "B",
           "K"
         ]
@@ -6702,9 +6702,9 @@
           "depends_on_other_groups": [
             "E",
             "J",
-            "G",
+            "H",
             "A",
-            "D"
+            "C"
           ],
           "decided_by": []
         }
@@ -6716,9 +6716,9 @@
         "watch_groups": [
           "E",
           "J",
-          "G",
+          "H",
           "A",
-          "D"
+          "C"
         ]
       }
     },
@@ -6760,7 +6760,7 @@
           "chance": 0.1699,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "C",
+            "D",
             "B",
             "F",
             "J",
@@ -6774,7 +6774,7 @@
         "advances_if_third": 0.6775,
         "race_position": 7,
         "watch_groups": [
-          "C",
+          "D",
           "B",
           "F",
           "J",
@@ -6824,7 +6824,7 @@
             "F",
             "J",
             "E",
-            "D"
+            "C"
           ],
           "decided_by": []
         }
@@ -6838,7 +6838,7 @@
           "F",
           "J",
           "E",
-          "D"
+          "C"
         ]
       }
     },
@@ -6880,8 +6880,8 @@
           "chance": 0.1764,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "H",
             "G",
+            "H",
             "J",
             "L",
             "E"
@@ -6894,8 +6894,8 @@
         "advances_if_third": 0.6917,
         "race_position": 4,
         "watch_groups": [
-          "H",
           "G",
+          "H",
           "J",
           "L",
           "E"
@@ -6940,10 +6940,10 @@
           "chance": 0.1619,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "H",
-            "K",
-            "D",
             "G",
+            "K",
+            "C",
+            "H",
             "F"
           ],
           "decided_by": []
@@ -6954,10 +6954,10 @@
         "advances_if_third": 0.701,
         "race_position": 7,
         "watch_groups": [
-          "H",
-          "K",
-          "D",
           "G",
+          "K",
+          "C",
+          "H",
           "F"
         ]
       }
@@ -7002,9 +7002,9 @@
           "depends_on_other_groups": [
             "E",
             "K",
-            "G",
+            "H",
             "A",
-            "D"
+            "C"
           ],
           "decided_by": []
         }
@@ -7016,9 +7016,9 @@
         "watch_groups": [
           "E",
           "K",
-          "G",
+          "H",
           "A",
-          "D"
+          "C"
         ]
       }
     },
@@ -7060,7 +7060,7 @@
           "chance": 0.1819,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "L",
             "E",
             "K",
@@ -7074,7 +7074,7 @@
         "advances_if_third": 0.6959,
         "race_position": 1,
         "watch_groups": [
-          "G",
+          "H",
           "L",
           "E",
           "K",
@@ -7181,8 +7181,8 @@
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
             "K",
-            "G",
-            "D",
+            "H",
+            "C",
             "J",
             "A"
           ],
@@ -7195,8 +7195,8 @@
         "race_position": 6,
         "watch_groups": [
           "K",
-          "G",
-          "D",
+          "H",
+          "C",
           "J",
           "A"
         ]
@@ -7244,7 +7244,7 @@
             "E",
             "A",
             "J",
-            "G"
+            "H"
           ],
           "decided_by": []
         }
@@ -7258,7 +7258,7 @@
           "E",
           "A",
           "J",
-          "G"
+          "H"
         ]
       }
     },
@@ -7301,7 +7301,7 @@
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
             "L",
-            "D",
+            "C",
             "F",
             "B",
             "J"
@@ -7315,7 +7315,7 @@
         "race_position": 3,
         "watch_groups": [
           "L",
-          "D",
+          "C",
           "F",
           "B",
           "J"
@@ -7360,7 +7360,7 @@
           "chance": 0.161,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "I",
             "L",
             "J",
@@ -7374,7 +7374,7 @@
         "advances_if_third": 0.6012,
         "race_position": 5,
         "watch_groups": [
-          "G",
+          "H",
           "I",
           "L",
           "J",
@@ -7420,11 +7420,11 @@
           "chance": 0.1626,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "K",
             "E",
             "L",
-            "D"
+            "C"
           ],
           "decided_by": []
         }
@@ -7434,11 +7434,11 @@
         "advances_if_third": 0.6212,
         "race_position": 7,
         "watch_groups": [
-          "G",
+          "H",
           "K",
           "E",
           "L",
-          "D"
+          "C"
         ]
       }
     },
@@ -7480,7 +7480,7 @@
           "chance": 0.1793,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "L",
             "J",
             "I",
@@ -7494,7 +7494,7 @@
         "advances_if_third": 0.6673,
         "race_position": 4,
         "watch_groups": [
-          "G",
+          "H",
           "L",
           "J",
           "I",
@@ -7540,7 +7540,7 @@
           "chance": 0.1827,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "K",
             "E",
             "B",
@@ -7554,7 +7554,7 @@
         "advances_if_third": 0.6913,
         "race_position": 1,
         "watch_groups": [
-          "G",
+          "H",
           "K",
           "E",
           "B",
@@ -7604,7 +7604,7 @@
             "A",
             "E",
             "I",
-            "D"
+            "C"
           ],
           "decided_by": []
         }
@@ -7618,7 +7618,7 @@
           "A",
           "E",
           "I",
-          "D"
+          "C"
         ]
       }
     },
@@ -7661,10 +7661,10 @@
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
             "L",
-            "G",
+            "H",
             "B",
             "A",
-            "D"
+            "C"
           ],
           "decided_by": []
         }
@@ -7675,10 +7675,10 @@
         "race_position": 9,
         "watch_groups": [
           "L",
-          "G",
+          "H",
           "B",
           "A",
-          "D"
+          "C"
         ]
       }
     },
@@ -7721,9 +7721,9 @@
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
             "J",
-            "G",
+            "H",
             "B",
-            "D",
+            "C",
             "I"
           ],
           "decided_by": []
@@ -7735,9 +7735,9 @@
         "race_position": 9,
         "watch_groups": [
           "J",
-          "G",
+          "H",
           "B",
-          "D",
+          "C",
           "I"
         ]
       }
@@ -7780,11 +7780,11 @@
           "chance": 0.1632,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "G",
+            "H",
             "B",
             "L",
             "J",
-            "H"
+            "G"
           ],
           "decided_by": []
         }
@@ -7794,11 +7794,11 @@
         "advances_if_third": 0.6879,
         "race_position": 2,
         "watch_groups": [
-          "G",
+          "H",
           "B",
           "L",
           "J",
-          "H"
+          "G"
         ]
       }
     },
@@ -7901,9 +7901,9 @@
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
             "E",
-            "G",
-            "L",
             "H",
+            "L",
+            "G",
             "K"
           ],
           "decided_by": []
@@ -7915,9 +7915,9 @@
         "race_position": 2,
         "watch_groups": [
           "E",
-          "G",
-          "L",
           "H",
+          "L",
+          "G",
           "K"
         ]
       }
@@ -7960,8 +7960,8 @@
           "chance": 0.1822,
           "own_form": "Best third: typically 4 pts (1 win); has happened on as few as 3 pts",
           "depends_on_other_groups": [
-            "D",
-            "G",
+            "C",
+            "H",
             "E",
             "A",
             "B"
@@ -7974,8 +7974,8 @@
         "advances_if_third": 0.6483,
         "race_position": 3,
         "watch_groups": [
-          "D",
-          "G",
+          "C",
+          "H",
           "E",
           "A",
           "B"
@@ -7992,20 +7992,20 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "USA in Decent Position as Tight Group C Battle Looms",
-      "body": "The United States are in a decent position to reach the knockouts, with our tournament simulation giving them a 63% chance to advance to the Round of 32. Group C is shaping up to be incredibly tight, and while the USA sit at the bottom of the projection, they are right in touch with Australia, who are just ahead with a 65% chance. With Paraguay also close at 68%, this is a group where every single point will be fiercely contested. Because the games have not started yet, the USA's fate is entirely in their own hands. Their cleanest route is finishing in the top two, which is currently about a coin flip. If they fall short of that automatic spot, they still have a slim back-door route to advance as one of the best third-placed teams. To secure their place, they will likely need at least four points from their three matches, though a stronger showing would keep them from having to rely on results in other groups.",
+      "headline": "USA Face a Tight Scramble in Group D",
+      "body": "The USA are in a decent position to reach the knockouts, with our tournament simulation giving them a 63% chance to advance to the Round of 32. However, they will have to scrap for every point. Group D is incredibly tight, and the USA sit at the bottom of a close four-team cluster, though Australia are right on their heels with a 65% advancement chance. Finishing in the top two is about a coin flip for the Americans, a route that keeps their fate entirely in their own hands. If they fall short of those automatic spots, they still have a slim back-door route to qualify as one of the best third-placed teams, though that path would leave them dependent on results in other groups. Because the tournament has not yet kicked off, no official matches have been played and the group standings are completely open. To secure their place, the USA will likely need at least one win and a draw to put themselves in a comfortable position.",
       "team_code": "USA"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Uruguay well placed for knockout push in Group G",
-      "body": "Uruguay are in a strong position to reach the knockouts, heading into the tournament with a 73% chance to advance. They find themselves in a promising spot in Group G, chasing Spain who lead the group with an 84% chance, while holding a comfortable cushion over Saudi Arabia. Because the group games have not yet started, the table remains blank, but the path ahead is clear. Uruguay's primary route is to secure a top-two finish and control their own destiny, which our tournament simulation rates as more likely than not. If they stumble, they still have a slim back-door route to qualify as one of the best third-placed teams, though that path would leave them at the mercy of results in other groups. To guarantee safe passage to the Round of 32 without relying on outside help, they will likely need to target at least two wins from their three group fixtures.",
+      "headline": "Uruguay Well Placed to Reach the Knockouts",
+      "body": "Uruguay are in a strong position to reach the knockouts, with our tournament simulation giving them a 73% chance to advance to the Round of 32. They find themselves in a promising spot in Group H, chasing Spain who lead the group with an 84% chance, while holding a comfortable cushion over Saudi Arabia at 53%. Because the group games have not yet kicked off, the table is completely clean, and Uruguay's fate is entirely in their own hands. Their primary route is finishing in the top two, which is more likely than not. If they can secure two wins, they should comfortably lock down an automatic qualifying spot. Even if they slip up and finish third, they maintain a slim back-door route to advance as one of the best third-placed teams. While that fallback path would leave them waiting on results from other groups, Uruguay's overall quality makes them strong favorites to progress without needing any outside help.",
       "team_code": "URU"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Türkiye Well Placed in Tight Group C Race",
-      "body": "Türkiye are in a strong position to reach the knockouts, but they cannot afford to relax. Our tournament simulation gives them a 71% chance to advance to the Round of 32. While they currently lead Group C, it is a razor-thin margin with Paraguay right on their heels at 68% and Australia close behind. The group games have not yet started, meaning the race is completely wide open. Türkiye's cleanest path is finishing in the top two, which is more likely than not to happen if they take care of their own business. If they fall short of those automatic spots, they still have a slim back-door route to advance as one of the best third-placed teams, though that path would leave their fate in the hands of results in other groups. To secure their place without relying on outside help, they will likely need to target at least four points from their group matches.",
+      "headline": "Türkiye Well Placed in a Tight Group D Race",
+      "body": "Türkiye are in a strong position to reach the knockouts, but they will have to fight for every inch. Our tournament simulation gives them a 71% chance to advance to the Round of 32. They technically lead Group D before a ball is kicked, but it is a razor-thin margin with Paraguay right on their heels at 68% and Australia close behind. With the group games not yet started, the race is completely open. Türkiye's cleanest path is finishing in the top two, which is more likely than not. Doing so keeps their fate entirely in their own hands, typically requiring at least one win and a draw to secure a safe passage. If they slip up, they have a slim back-door route to advance as one of the best third-placed teams, though that path would leave them at the mercy of results in other groups. For now, they hold the upper hand, but they cannot afford to coast.",
       "team_code": "TUR"
     },
     {
@@ -8058,8 +8058,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Paraguay Well Placed in a Tight Group C Race",
-      "body": "Paraguay are in a strong position to reach the knockouts, but they will have to fight for every inch. Our tournament simulation gives them a 68% chance to advance to the Round of 32. They find themselves in the thick of a tight cluster in Group C, with Türkiye just ahead at 71% and Australia right on their heels at 65%. Because the group games have not yet started, the race is wide open. Paraguay's cleanest path is finishing in the top two, which is currently about a coin flip. If they can secure a win and a draw to reach four points, they are more likely than not to lock down that direct route. If they slip to third, they still have a slim back-door chance to advance, though that route would leave their fate in the hands of other groups. For now, their destiny is entirely their own to write.",
+      "headline": "Paraguay well placed in a congested Group D race",
+      "body": "Paraguay are in a strong position to reach the knockouts, with our tournament simulation giving them a 68% chance to advance to the Round of 32. However, they are in the thick of a tight cluster in Group D, with Türkiye just ahead at 71% and Australia right on their heels at 65%. Because the group games have not started yet, the race is completely open, and every point will be fiercely contested. Paraguay's cleanest route is finishing in the top two, which is roughly a coin flip. If they can secure a win and a draw, they are more likely than not to lock down one of those automatic spots. Should they slip to third, they still have a slim back-door route to qualify, though that path would leave them waiting on results in other groups. For now, their fate is very much in their own hands.",
       "team_code": "PAR"
     },
     {
@@ -8070,8 +8070,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "New Zealand in a Decent Position as Group H Race Begins",
-      "body": "New Zealand are in a decent position to reach the knockouts, with our tournament simulation giving them a 59% chance to advance to the Round of 32. They find themselves chasing from the back of a highly competitive Group H, where Egypt are the closest team to catch at 65%. Because the group games have not started yet, the standings are completely open and all four placements remain reachable. The cleanest route for New Zealand is finishing in the top two, which is currently about a coin flip. If they can secure a win and a draw to reach four points, they are more likely than not to lock up a direct qualifying spot. If they fall short of the top two, they still have a slim back-door route to advance as one of the best third-placed teams. However, that path is not entirely in their hands and would force them to rely on favorable results in other groups.",
+      "headline": "New Zealand's Path to the Knockouts",
+      "body": "New Zealand are in a decent position to reach the knockouts, sitting with a 59% chance to advance. They find themselves chasing from the back of a highly competitive Group G, with Egypt right ahead of them at 65%. Because the group games have not yet started, the table is completely clean, but the prediction system shows a clear path forward. Finishing in the top two is their most direct route, though it is currently about a coin flip. If they miss out on those top spots, they have a slim back-door route to qualify as one of the best third-placed teams. To secure their place in the Round of 32, they will likely need to target at least four points from their group matches to keep their fate in their own hands, rather than relying on results in other groups.",
       "team_code": "NZL"
     },
     {
@@ -8094,14 +8094,14 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Morocco Well Placed in a Tight Group D Race",
-      "body": "Morocco head into the tournament in a strong position to reach the knockouts, but they will need to fight for every point in a highly competitive Group D. Our group-stage model gives them a 70% chance to advance to the Round of 32. They currently hold the second spot in the group projection, but Scotland are right on their heels with a 67% chance of their own, while Brazil lead the pack at 78%. With the group games yet to kick off, Morocco's cleanest path is finishing in the top two, which is more likely than not. Doing so keeps their fate entirely in their own hands, typically requiring at least four points. If they slip to third, they still have a slim back-door route to the knockouts, though that path would leave them relying on results in other groups to secure a spot as one of the best third-placed teams.",
+      "headline": "Morocco Well Placed in Tight Group C Race",
+      "body": "Morocco are in a strong position to reach the knockouts, with our tournament simulation giving them a 70% chance to advance to the Round of 32. However, they face a tight battle in Group C. While Brazil lead the pack at 78%, Scotland are right on Morocco's heels with a 67% chance of their own, meaning there is very little room for error. Since the group games have not yet started, Morocco's destiny is entirely in their own hands. Their cleanest path is finishing in the top two, which is more likely than not to happen. Securing that automatic spot typically requires at least four points, which usually means finding a way to win at least one match. If they slip up and finish third, they still have a slim back-door route to qualify as one of the best third-placed teams. However, that fallback option would leave them sweating on results in other groups, making a top-two finish the clear priority.",
       "team_code": "MAR"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Saudi Arabia's Knockout Hopes Hang in a Delicate Balance",
-      "body": "Saudi Arabia find themselves in a decent position to reach the knockouts, but they are far from comfortable. Our group-stage model gives them a 53% chance to advance to the Round of 32. They are locked in a tight battle in Group G, with Cape Verde Islands right on their heels at 53%, while Spain and Uruguay hold a more comfortable lead. To secure their place, Saudi Arabia's cleanest route is finishing in the top two, though that remains a real challenge, roughly a coin flip when combining their chances of winning the group or finishing as runner-up. If they fall short of the top two, they have a slim back-door route to advance as one of the best third-placed teams, though that path would leave their fate in the hands of other groups. Because the tournament has not yet kicked off, no matches have been played and the standings are completely open. To make the knockouts a reality, they will likely need to target at least four points to keep their destiny in their own hands.",
+      "headline": "Saudi Arabia's Path to the Knockouts: A Decent Position in a Tight Race",
+      "body": "Saudi Arabia are in a decent position to reach the knockouts, with our tournament simulation giving them a 53% chance to advance to the Round of 32. In Group H, they are currently holding their place but face intense pressure from behind, with Cape Verde Islands right on their heels at 53%. While Spain and Uruguay are further ahead, Saudi Arabia's battle for survival is neck-and-neck. Because the group games have not yet started, the table is completely open. To secure their spot, their cleanest route is finishing in the top two, though that remains a real challenge at roughly a one-in-three chance. If they cannot secure a top-two finish, they have a slim back-door route to advance as one of the best third-placed teams. That fallback path, however, would take the control out of their hands, leaving them dependent on how results fall in other groups. For now, their destiny is theirs to write on the pitch.",
       "team_code": "KSA"
     },
     {
@@ -8130,14 +8130,14 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Iran Well Placed in a Highly Competitive Group H",
-      "body": "Iran are in a strong position to reach the knockouts, with a 69% chance to advance to the Round of 32. They find themselves in the thick of a tight cluster in Group H, with Belgium just ahead of them at 74% and Egypt right on their heels at 65%. Because the group is so congested, every point will be fiercely contested. Iran's cleanest route is finishing in the top two, which is more likely than not to happen. If they can secure a couple of strong results, they can control their own destiny. Should they slip to third, they still have a slim back-door route to qualify, though that path would leave them relying on results in other groups. Since the tournament has not yet kicked off, no matches have been played and the group standings remain completely open. To secure their place, Iran will likely need to target at least four points to stay in the driver's seat for a top-two finish.",
+      "headline": "Iran Well Placed in a Highly Competitive Group G",
+      "body": "Iran are in a strong position to reach the knockouts, with our tournament simulation giving them a 69% chance to advance to the Round of 32. However, they find themselves in the thick of a tight cluster in Group G, with Belgium just ahead of them at 74% and Egypt right on their heels at 65%. With the group games yet to kick off, this is shaping up to be a highly competitive race where every point will be fiercely contested. Iran's cleanest route is finishing in the top two, which is more likely than not to happen. If they can secure a win and a draw, they should be well on their way to securing an automatic spot. If they slip up and finish third, they still have a slim back-door route to advance, though that path would leave their fate in the hands of results in other groups. For now, their destiny is very much in their own hands.",
       "team_code": "IRN"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Haiti's Path to the Knockouts: In the Mix but Facing a Climb",
-      "body": "Haiti find themselves in a decent position to reach the knockouts, though they face a real climb in Group D. Our tournament simulation gives them a 53% chance to advance to the Round of 32. They are currently sitting at the foot of a highly competitive group, with real ground to make up on Scotland, who sit just ahead of them with a 67% chance of going through. Because the group games have not yet started, the table is completely open. Haiti's cleanest route is finishing in the top two, which is currently about a coin flip. If they cannot secure that direct spot, they have a slim back-door route to advance as one of the best third-placed teams. To make that happen, they will likely need at least one win to keep their hopes alive, though that path would leave their fate in the hands of results in other groups. For now, everything is still to play for.",
+      "headline": "Haiti's Path to the Knockouts",
+      "body": "Haiti are in a decent position to reach the knockouts, with more than a coin flip's chance of keeping their tournament alive. Our group-stage model gives them a 53% chance to advance to the Round of 32. However, they find themselves at the foot of a highly competitive Group C, with real ground to make up on Scotland, who sit just ahead of them with a 67% chance of going through. The group games have not started yet, so the table remains completely open. Haiti's cleanest route is finishing in the top two, which is a real chance but roughly a coin flip. If they cannot secure that automatic spot, they have a slim back-door route of advancing as one of the best third-placed teams. To make it through, they will likely need to target at least four points from their group matches, as a lower tally would leave their fate resting on results in other groups.",
       "team_code": "HAI"
     },
     {
@@ -8154,8 +8154,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Egypt Well Placed in Tight Group H Race",
-      "body": "Egypt are in a decent position as they prepare for the tournament, sitting with a 65% chance to reach the knockouts. They find themselves in a highly competitive Group H, chasing Iran who are just ahead of them with a 69% chance of advancing. With the group games yet to kick off, this is a live, tight race where every point will be fiercely contested. Egypt's cleanest route to the Round of 32 is finishing in the top two, which is currently about a coin flip. If they fall short of those automatic spots, they still have a slim back-door route to advance as one of the best third-placed teams, though that path would leave their fate in the hands of results in other groups. To secure their place without relying on outside help, Egypt will likely need to target at least four points from their group fixtures to put themselves in a strong position to progress.",
+      "headline": "Egypt Well Placed in Tight Group G Race",
+      "body": "Egypt are in a promising position to reach the knockouts, with our tournament simulation giving them a 65% chance to advance to the Round of 32. They find themselves in a tight Group G cluster, chasing Iran who are just ahead with a 69% chance, making it a highly competitive race. Finishing in the top two is about a coin flip for Egypt, which would guarantee safe passage. If they miss out on those top spots, they still have a slim back-door route to qualify as one of the best third-placed teams. To secure their place, Egypt will likely need at least four points from their matches, though a strong showing could see them win the group outright. Because the tournament has not yet started, no matches have been played and the group standings remain completely open.",
       "team_code": "EGY"
     },
     {
@@ -8184,8 +8184,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Cape Verde Islands Eye Knockout Spot in Tight Group G Race",
-      "body": "Cape Verde Islands are in a decent position to reach the knockouts, with our tournament simulation giving them a 53% chance to advance. While they sit at the bottom of Group G on paper, they are right in the mix and neck-and-neck with Saudi Arabia, who sit just ahead of them with a 53% chance of their own. Group games have not started yet, meaning everything is still to play for. To secure their spot in the Round of 32, their cleanest route is finishing in the top two, which is roughly a one-in-three shot. That path is entirely in their own hands and typically requires at least four points. If they miss out on the top two, they still have a slim back-door route to advance as one of the best third-placed teams. However, leaning on that third-place safety net is risky, as it takes the control out of their hands and leaves them relying on favorable results in other groups.",
+      "headline": "Cape Verde Islands Eye a Real Shot at the Knockouts",
+      "body": "The Cape Verde Islands are in a decent position heading into the tournament, with more than a coin-flip's chance to reach the knockouts. Our tournament simulation gives them a 53% chance to advance to the Round of 32. They find themselves in a highly competitive Group H, sitting right on the heels of Saudi Arabia, who are neck-and-neck with them at 53%. While Spain and Uruguay lead the pack, Cape Verde are firmly in touch and ready to scrap for their place. Because the group games have not yet started, the table is clean and the race is wide open. To secure their spot, their cleanest route is finishing in the top two, though that will require a strong showing as finishing runner-up or winning the group remains a real challenge. If they miss out on the top two, they have a slim back-door route to advance as one of the best third-placed teams. That safety net, however, would leave their fate in the hands of results in other groups.",
       "team_code": "CPV"
     },
     {
@@ -8214,8 +8214,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Belgium Well Placed in Tight Group H Race",
-      "body": "Belgium are in a strong position to reach the knockouts, but they cannot afford to relax. Our tournament simulation gives them a 74% chance to advance to the Round of 32. They currently lead Group H, but it is a tight race at the top with Iran right on their heels at 69%. Because the group games have not yet started, the table is completely clean, and all paths remain open. Belgium's cleanest route is finishing in the top two, which is more likely than not. If they fall into third place, they still have a slim back-door route to qualify, though that path would leave their fate in the hands of results in other groups. To secure their spot without relying on help, they will target the wins needed to lock down a top-two finish.",
+      "headline": "Belgium Well Placed in a Tight Group G Race",
+      "body": "Belgium are in a strong position to reach the knockouts, but they will have to earn every inch of it. Our tournament simulation gives them a 74% chance to advance to the Round of 32, putting them slightly ahead in Group G. However, this is a tight race at the top, with Iran right on their heels at 69% and Egypt not far behind. Because the group games have not yet started, the table is completely blank, and all paths remain open. Belgium's cleanest route is to take matters into their own hands by finishing in the top two, which is more likely than not. If they stumble, they still have a slim back-door route to advance as one of the best third-placed teams, though that path would leave them at the mercy of results in other groups. To guarantee safe passage without relying on outside help, they will likely need to target at least four points from their three group matches.",
       "team_code": "BEL"
     },
     {
@@ -8226,8 +8226,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Australia well placed in a highly competitive Group C",
-      "body": "Australia are in a decent position as they prepare for the tournament, with a 65% chance to reach the knockouts. They find themselves in the thick of a tight cluster in Group C, with Paraguay just ahead of them at 68% and the USA right on their heels at 63%. Because the group games have not started yet, the table is completely clean, and all four placements remain reachable. To secure their spot in the Round of 32, Australia's cleanest route is finishing in the top two, which is currently about a coin flip. If they fall short of those automatic spots, they still have a slim back-door route to advance as one of the best third-placed teams. Typically, a single win and a draw across their three matches will put them right on the margin of safety, though finishing third would leave their fate resting on results in other groups.",
+      "headline": "Australia Well Placed in a Congested Group D Race",
+      "body": "Australia are in a decent position to reach the knockouts, sitting with a 65% chance to advance to the Round of 32. However, they find themselves in the thick of a tight cluster in Group D. Paraguay are just ahead of them with a 68% chance, while the USA are right on their heels at 63%. With the group games not yet started, this is shaping up to be a highly competitive race where every point will be fiercely contested. To secure their passage, Australia's cleanest route is finishing in the top two, which is currently about a coin flip. If they fall short of those automatic spots, they still have a slim back-door route to advance as one of the best third-placed teams. Typically, a single win and a draw to reach four points is enough to put them in a strong position, but slipping into third place means their fate would depend on how results fall in other groups.",
       "team_code": "AUS"
     },
     {
@@ -8257,13 +8257,13 @@
     {
       "content_type": "scenario_narration",
       "headline": "Brazil Well Placed to Reach the Knockouts",
-      "body": "Brazil are in a strong position as they prepare for the tournament, with a 78% chance to reach the knockouts. They hold a slender lead at the top of Group D, with Morocco right on their heels at 70%. Because the group games have not started yet, the table is completely clean, but our tournament simulation shows a highly competitive race ahead. Brazil's cleanest route is finishing in the top two, which is more likely than not. They can achieve this by securing their own results, typically needing around six points to guarantee a top-two finish. If they slip up and finish third, they still have a slim back-door route to advance, though that path would leave their fate in the hands of results in other groups. For now, their destiny is entirely in their own hands.",
+      "body": "Brazil are in a strong position to reach the knockouts, with our tournament simulation giving them a 78% chance to advance to the Round of 32. They hold a slender lead at the top of Group C, with Morocco right on their heels at 70%. Because the group games have not yet started, the table is completely clean, but the path ahead is clear. Brazil's primary route is to take control of their own destiny by finishing in the top two, which is more likely than not. If they fall short of those automatic spots, they still have a slim back-door route to qualify as one of the best third-placed teams. To secure a top-two finish, they will likely need to target at least four to six points from their three group fixtures. While a third-place finish remains a safety net, that path is out of their hands and would leave them waiting on results in other groups.",
       "team_code": "BRA"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Spain expected to lead the way in Group G",
-      "body": "Spain are in a very strong position heading into the tournament, with our prediction system giving them an 84% chance to reach the knockouts. They hold a slender lead at the top of Group G, with Uruguay right on their heels at 73%, while Saudi Arabia and Cape Verde Islands remain in a tight scrap behind them. Because the group games have not yet started, the table is completely blank, but the path forward is clear. Spain's primary route is firmly in their own hands, as they are strong favourites to secure a top-two finish. While they have a solid chance to win the group outright, finishing as the runner-up is also highly plausible. If things go wrong and they slip to third, they still hold a slim back-door chance of advancing, though that route would leave them at the mercy of results in other groups. For now, Spain are expected to go through comfortably, with their destiny resting on their own performances.",
+      "headline": "Spain in Strong Position to Lead Group H into the Knockouts",
+      "body": "Spain are in a very strong position heading into the tournament, carrying an 84% chance to reach the knockouts. Our group-stage model shows they are narrowly leading the pack in Group H, with Uruguay right on their heels at 73%. Because the group games have not yet started, the table remains blank, but Spain are well placed to control their own destiny. Their cleanest and most likely route is finishing in the top two, which is a strong chance for them. While they are slight underdogs to win the group outright, finishing as the runner-up remains a highly supportive secondary path. If things go sideways and they slip to third, they still hold a slim back-door route to advance to the Round of 32, though that path would leave them at the mercy of results in other groups. For now, Spain's fate is firmly in their own hands, requiring them to simply take care of business in their three group fixtures to secure safe passage.",
       "team_code": "ESP"
     },
     {
@@ -9320,77 +9320,6 @@
         "standings": [
           {
             "position": null,
-            "code": "USA",
-            "name": "USA",
-            "played": 0,
-            "won": 0,
-            "drawn": 0,
-            "lost": 0,
-            "goals_for": 0,
-            "goals_against": 0,
-            "goal_difference": 0,
-            "points": 0,
-            "advance_state": "scheduled",
-            "band": null,
-            "decided": false
-          },
-          {
-            "position": null,
-            "code": "TUR",
-            "name": "Türkiye",
-            "played": 0,
-            "won": 0,
-            "drawn": 0,
-            "lost": 0,
-            "goals_for": 0,
-            "goals_against": 0,
-            "goal_difference": 0,
-            "points": 0,
-            "advance_state": "scheduled",
-            "band": null,
-            "decided": false
-          },
-          {
-            "position": null,
-            "code": "AUS",
-            "name": "Australia",
-            "played": 0,
-            "won": 0,
-            "drawn": 0,
-            "lost": 0,
-            "goals_for": 0,
-            "goals_against": 0,
-            "goal_difference": 0,
-            "points": 0,
-            "advance_state": "scheduled",
-            "band": null,
-            "decided": false
-          },
-          {
-            "position": null,
-            "code": "PAR",
-            "name": "Paraguay",
-            "played": 0,
-            "won": 0,
-            "drawn": 0,
-            "lost": 0,
-            "goals_for": 0,
-            "goals_against": 0,
-            "goal_difference": 0,
-            "points": 0,
-            "advance_state": "scheduled",
-            "band": null,
-            "decided": false
-          }
-        ]
-      },
-      {
-        "group": "D",
-        "complete": false,
-        "games_played": 0,
-        "standings": [
-          {
-            "position": null,
             "code": "BRA",
             "name": "Brazil",
             "played": 0,
@@ -9441,6 +9370,77 @@
             "position": null,
             "code": "HAI",
             "name": "Haiti",
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "goals_for": 0,
+            "goals_against": 0,
+            "goal_difference": 0,
+            "points": 0,
+            "advance_state": "scheduled",
+            "band": null,
+            "decided": false
+          }
+        ]
+      },
+      {
+        "group": "D",
+        "complete": false,
+        "games_played": 0,
+        "standings": [
+          {
+            "position": null,
+            "code": "USA",
+            "name": "USA",
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "goals_for": 0,
+            "goals_against": 0,
+            "goal_difference": 0,
+            "points": 0,
+            "advance_state": "scheduled",
+            "band": null,
+            "decided": false
+          },
+          {
+            "position": null,
+            "code": "TUR",
+            "name": "Türkiye",
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "goals_for": 0,
+            "goals_against": 0,
+            "goal_difference": 0,
+            "points": 0,
+            "advance_state": "scheduled",
+            "band": null,
+            "decided": false
+          },
+          {
+            "position": null,
+            "code": "AUS",
+            "name": "Australia",
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "goals_for": 0,
+            "goals_against": 0,
+            "goal_difference": 0,
+            "points": 0,
+            "advance_state": "scheduled",
+            "band": null,
+            "decided": false
+          },
+          {
+            "position": null,
+            "code": "PAR",
+            "name": "Paraguay",
             "played": 0,
             "won": 0,
             "drawn": 0,
@@ -9604,77 +9604,6 @@
         "standings": [
           {
             "position": null,
-            "code": "ESP",
-            "name": "Spain",
-            "played": 0,
-            "won": 0,
-            "drawn": 0,
-            "lost": 0,
-            "goals_for": 0,
-            "goals_against": 0,
-            "goal_difference": 0,
-            "points": 0,
-            "advance_state": "scheduled",
-            "band": null,
-            "decided": false
-          },
-          {
-            "position": null,
-            "code": "URU",
-            "name": "Uruguay",
-            "played": 0,
-            "won": 0,
-            "drawn": 0,
-            "lost": 0,
-            "goals_for": 0,
-            "goals_against": 0,
-            "goal_difference": 0,
-            "points": 0,
-            "advance_state": "scheduled",
-            "band": null,
-            "decided": false
-          },
-          {
-            "position": null,
-            "code": "KSA",
-            "name": "Saudi Arabia",
-            "played": 0,
-            "won": 0,
-            "drawn": 0,
-            "lost": 0,
-            "goals_for": 0,
-            "goals_against": 0,
-            "goal_difference": 0,
-            "points": 0,
-            "advance_state": "scheduled",
-            "band": null,
-            "decided": false
-          },
-          {
-            "position": null,
-            "code": "CPV",
-            "name": "Cape Verde Islands",
-            "played": 0,
-            "won": 0,
-            "drawn": 0,
-            "lost": 0,
-            "goals_for": 0,
-            "goals_against": 0,
-            "goal_difference": 0,
-            "points": 0,
-            "advance_state": "scheduled",
-            "band": null,
-            "decided": false
-          }
-        ]
-      },
-      {
-        "group": "H",
-        "complete": false,
-        "games_played": 0,
-        "standings": [
-          {
-            "position": null,
             "code": "BEL",
             "name": "Belgium",
             "played": 0,
@@ -9725,6 +9654,77 @@
             "position": null,
             "code": "NZL",
             "name": "New Zealand",
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "goals_for": 0,
+            "goals_against": 0,
+            "goal_difference": 0,
+            "points": 0,
+            "advance_state": "scheduled",
+            "band": null,
+            "decided": false
+          }
+        ]
+      },
+      {
+        "group": "H",
+        "complete": false,
+        "games_played": 0,
+        "standings": [
+          {
+            "position": null,
+            "code": "ESP",
+            "name": "Spain",
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "goals_for": 0,
+            "goals_against": 0,
+            "goal_difference": 0,
+            "points": 0,
+            "advance_state": "scheduled",
+            "band": null,
+            "decided": false
+          },
+          {
+            "position": null,
+            "code": "URU",
+            "name": "Uruguay",
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "goals_for": 0,
+            "goals_against": 0,
+            "goal_difference": 0,
+            "points": 0,
+            "advance_state": "scheduled",
+            "band": null,
+            "decided": false
+          },
+          {
+            "position": null,
+            "code": "KSA",
+            "name": "Saudi Arabia",
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "goals_for": 0,
+            "goals_against": 0,
+            "goal_difference": 0,
+            "points": 0,
+            "advance_state": "scheduled",
+            "band": null,
+            "decided": false
+          },
+          {
+            "position": null,
+            "code": "CPV",
+            "name": "Cape Verde Islands",
             "played": 0,
             "won": 0,
             "drawn": 0,
@@ -10108,8 +10108,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -10192,8 +10192,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -10276,8 +10276,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -10360,8 +10360,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -10444,8 +10444,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           }
@@ -10528,8 +10528,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           }
@@ -10612,8 +10612,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           }
@@ -10696,416 +10696,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
-            },
-            "real_opponent": null
-          }
-        ]
-      }
-    },
-    {
-      "code": "AUS",
-      "group": "C",
-      "as_group_winner": {
-        "match_number": 76,
-        "round": "round_of_32",
-        "venue": "Houston Stadium",
-        "city": "Houston",
-        "venue_timezone": "America/Chicago",
-        "date_confirmed": true,
-        "match_date": "2026-06-29",
-        "kickoff_utc": "2026-06-29T17:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group F",
-        "opponent_kind": "group_runner_up",
-        "projected_opponent": {
-          "code": "JPN",
-          "name": "Japan"
-        },
-        "real_opponent": null
-      },
-      "as_runner_up": {
-        "match_number": 75,
-        "round": "round_of_32",
-        "venue": "Estadio Monterrey",
-        "city": "Monterrey",
-        "venue_timezone": "America/Monterrey",
-        "date_confirmed": true,
-        "match_date": "2026-06-29",
-        "kickoff_utc": "2026-06-30T01:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Winner Group F",
-        "opponent_kind": "group_winner",
-        "projected_opponent": {
-          "code": "NED",
-          "name": "Netherlands"
-        },
-        "real_opponent": null
-      },
-      "as_best_third": {
-        "conditional": true,
-        "advances_as_best_third_required": true,
-        "eligible_slot_count": 3,
-        "note": "Only if C's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
-        "eligible_slots": [
-          {
-            "match_number": 74,
-            "round": "round_of_32",
-            "venue": "Boston Stadium",
-            "city": "Boston",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-29",
-            "kickoff_utc": "2026-06-29T20:30:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group E",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "ECU",
-              "name": "Ecuador"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 77,
-            "round": "round_of_32",
-            "venue": "New York New Jersey Stadium",
-            "city": "New York/New Jersey",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-06-30T21:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group I",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "FRA",
-              "name": "France"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 79,
-            "round": "round_of_32",
-            "venue": "Mexico City Stadium",
-            "city": "Mexico City",
-            "venue_timezone": "America/Mexico_City",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-07-01T01:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group A",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "MEX",
-              "name": "Mexico"
-            },
-            "real_opponent": null
-          }
-        ]
-      }
-    },
-    {
-      "code": "PAR",
-      "group": "C",
-      "as_group_winner": {
-        "match_number": 76,
-        "round": "round_of_32",
-        "venue": "Houston Stadium",
-        "city": "Houston",
-        "venue_timezone": "America/Chicago",
-        "date_confirmed": true,
-        "match_date": "2026-06-29",
-        "kickoff_utc": "2026-06-29T17:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group F",
-        "opponent_kind": "group_runner_up",
-        "projected_opponent": {
-          "code": "JPN",
-          "name": "Japan"
-        },
-        "real_opponent": null
-      },
-      "as_runner_up": {
-        "match_number": 75,
-        "round": "round_of_32",
-        "venue": "Estadio Monterrey",
-        "city": "Monterrey",
-        "venue_timezone": "America/Monterrey",
-        "date_confirmed": true,
-        "match_date": "2026-06-29",
-        "kickoff_utc": "2026-06-30T01:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Winner Group F",
-        "opponent_kind": "group_winner",
-        "projected_opponent": {
-          "code": "NED",
-          "name": "Netherlands"
-        },
-        "real_opponent": null
-      },
-      "as_best_third": {
-        "conditional": true,
-        "advances_as_best_third_required": true,
-        "eligible_slot_count": 3,
-        "note": "Only if C's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
-        "eligible_slots": [
-          {
-            "match_number": 74,
-            "round": "round_of_32",
-            "venue": "Boston Stadium",
-            "city": "Boston",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-29",
-            "kickoff_utc": "2026-06-29T20:30:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group E",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "ECU",
-              "name": "Ecuador"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 77,
-            "round": "round_of_32",
-            "venue": "New York New Jersey Stadium",
-            "city": "New York/New Jersey",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-06-30T21:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group I",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "FRA",
-              "name": "France"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 79,
-            "round": "round_of_32",
-            "venue": "Mexico City Stadium",
-            "city": "Mexico City",
-            "venue_timezone": "America/Mexico_City",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-07-01T01:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group A",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "MEX",
-              "name": "Mexico"
-            },
-            "real_opponent": null
-          }
-        ]
-      }
-    },
-    {
-      "code": "TUR",
-      "group": "C",
-      "as_group_winner": {
-        "match_number": 76,
-        "round": "round_of_32",
-        "venue": "Houston Stadium",
-        "city": "Houston",
-        "venue_timezone": "America/Chicago",
-        "date_confirmed": true,
-        "match_date": "2026-06-29",
-        "kickoff_utc": "2026-06-29T17:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group F",
-        "opponent_kind": "group_runner_up",
-        "projected_opponent": {
-          "code": "JPN",
-          "name": "Japan"
-        },
-        "real_opponent": null
-      },
-      "as_runner_up": {
-        "match_number": 75,
-        "round": "round_of_32",
-        "venue": "Estadio Monterrey",
-        "city": "Monterrey",
-        "venue_timezone": "America/Monterrey",
-        "date_confirmed": true,
-        "match_date": "2026-06-29",
-        "kickoff_utc": "2026-06-30T01:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Winner Group F",
-        "opponent_kind": "group_winner",
-        "projected_opponent": {
-          "code": "NED",
-          "name": "Netherlands"
-        },
-        "real_opponent": null
-      },
-      "as_best_third": {
-        "conditional": true,
-        "advances_as_best_third_required": true,
-        "eligible_slot_count": 3,
-        "note": "Only if C's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
-        "eligible_slots": [
-          {
-            "match_number": 74,
-            "round": "round_of_32",
-            "venue": "Boston Stadium",
-            "city": "Boston",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-29",
-            "kickoff_utc": "2026-06-29T20:30:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group E",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "ECU",
-              "name": "Ecuador"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 77,
-            "round": "round_of_32",
-            "venue": "New York New Jersey Stadium",
-            "city": "New York/New Jersey",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-06-30T21:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group I",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "FRA",
-              "name": "France"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 79,
-            "round": "round_of_32",
-            "venue": "Mexico City Stadium",
-            "city": "Mexico City",
-            "venue_timezone": "America/Mexico_City",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-07-01T01:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group A",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "MEX",
-              "name": "Mexico"
-            },
-            "real_opponent": null
-          }
-        ]
-      }
-    },
-    {
-      "code": "USA",
-      "group": "C",
-      "as_group_winner": {
-        "match_number": 76,
-        "round": "round_of_32",
-        "venue": "Houston Stadium",
-        "city": "Houston",
-        "venue_timezone": "America/Chicago",
-        "date_confirmed": true,
-        "match_date": "2026-06-29",
-        "kickoff_utc": "2026-06-29T17:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group F",
-        "opponent_kind": "group_runner_up",
-        "projected_opponent": {
-          "code": "JPN",
-          "name": "Japan"
-        },
-        "real_opponent": null
-      },
-      "as_runner_up": {
-        "match_number": 75,
-        "round": "round_of_32",
-        "venue": "Estadio Monterrey",
-        "city": "Monterrey",
-        "venue_timezone": "America/Monterrey",
-        "date_confirmed": true,
-        "match_date": "2026-06-29",
-        "kickoff_utc": "2026-06-30T01:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Winner Group F",
-        "opponent_kind": "group_winner",
-        "projected_opponent": {
-          "code": "NED",
-          "name": "Netherlands"
-        },
-        "real_opponent": null
-      },
-      "as_best_third": {
-        "conditional": true,
-        "advances_as_best_third_required": true,
-        "eligible_slot_count": 3,
-        "note": "Only if C's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
-        "eligible_slots": [
-          {
-            "match_number": 74,
-            "round": "round_of_32",
-            "venue": "Boston Stadium",
-            "city": "Boston",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-29",
-            "kickoff_utc": "2026-06-29T20:30:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group E",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "ECU",
-              "name": "Ecuador"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 77,
-            "round": "round_of_32",
-            "venue": "New York New Jersey Stadium",
-            "city": "New York/New Jersey",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-06-30T21:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group I",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "FRA",
-              "name": "France"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 79,
-            "round": "round_of_32",
-            "venue": "Mexico City Stadium",
-            "city": "Mexico City",
-            "venue_timezone": "America/Mexico_City",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-07-01T01:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group A",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "MEX",
-              "name": "Mexico"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           }
@@ -11114,40 +10706,40 @@
     },
     {
       "code": "BRA",
-      "group": "D",
+      "group": "C",
       "as_group_winner": {
-        "match_number": 81,
+        "match_number": 76,
         "round": "round_of_32",
-        "venue": "San Francisco Bay Area Stadium",
-        "city": "San Francisco Bay Area",
-        "venue_timezone": "America/Los_Angeles",
+        "venue": "Houston Stadium",
+        "city": "Houston",
+        "venue_timezone": "America/Chicago",
         "date_confirmed": true,
-        "match_date": "2026-07-01",
-        "kickoff_utc": "2026-07-02T00:00:00Z",
+        "match_date": "2026-06-29",
+        "kickoff_utc": "2026-06-29T17:00:00Z",
         "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Best 3rd from B/E/F/I/J",
-        "opponent_kind": "best_third",
+        "opponent_slot": "Runner-up Group F",
+        "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "CIV",
-          "name": "Ivory Coast"
+          "code": "JPN",
+          "name": "Japan"
         },
         "real_opponent": null
       },
       "as_runner_up": {
-        "match_number": 88,
+        "match_number": 75,
         "round": "round_of_32",
-        "venue": "Dallas Stadium",
-        "city": "Dallas",
-        "venue_timezone": "America/Chicago",
+        "venue": "Estadio Monterrey",
+        "city": "Monterrey",
+        "venue_timezone": "America/Monterrey",
         "date_confirmed": true,
-        "match_date": "2026-07-03",
-        "kickoff_utc": "2026-07-03T18:00:00Z",
+        "match_date": "2026-06-29",
+        "kickoff_utc": "2026-06-30T01:00:00Z",
         "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group G",
-        "opponent_kind": "group_runner_up",
+        "opponent_slot": "Winner Group F",
+        "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "URU",
-          "name": "Uruguay"
+          "code": "NED",
+          "name": "Netherlands"
         },
         "real_opponent": null
       },
@@ -11155,7 +10747,7 @@
         "conditional": true,
         "advances_as_best_third_required": true,
         "eligible_slot_count": 3,
-        "note": "Only if D's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
+        "note": "Only if C's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
         "eligible_slots": [
           {
             "match_number": 74,
@@ -11194,20 +10786,20 @@
             "real_opponent": null
           },
           {
-            "match_number": 87,
+            "match_number": 79,
             "round": "round_of_32",
-            "venue": "Kansas City Stadium",
-            "city": "Kansas City",
-            "venue_timezone": "America/Chicago",
+            "venue": "Mexico City Stadium",
+            "city": "Mexico City",
+            "venue_timezone": "America/Mexico_City",
             "date_confirmed": true,
-            "match_date": "2026-07-03",
-            "kickoff_utc": "2026-07-04T01:30:00Z",
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-07-01T01:00:00Z",
             "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group K",
+            "opponent_slot": "Winner Group A",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "POR",
-              "name": "Portugal"
+              "code": "MEX",
+              "name": "Mexico"
             },
             "real_opponent": null
           }
@@ -11216,40 +10808,40 @@
     },
     {
       "code": "HAI",
-      "group": "D",
+      "group": "C",
       "as_group_winner": {
-        "match_number": 81,
+        "match_number": 76,
         "round": "round_of_32",
-        "venue": "San Francisco Bay Area Stadium",
-        "city": "San Francisco Bay Area",
-        "venue_timezone": "America/Los_Angeles",
+        "venue": "Houston Stadium",
+        "city": "Houston",
+        "venue_timezone": "America/Chicago",
         "date_confirmed": true,
-        "match_date": "2026-07-01",
-        "kickoff_utc": "2026-07-02T00:00:00Z",
+        "match_date": "2026-06-29",
+        "kickoff_utc": "2026-06-29T17:00:00Z",
         "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Best 3rd from B/E/F/I/J",
-        "opponent_kind": "best_third",
+        "opponent_slot": "Runner-up Group F",
+        "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "CIV",
-          "name": "Ivory Coast"
+          "code": "JPN",
+          "name": "Japan"
         },
         "real_opponent": null
       },
       "as_runner_up": {
-        "match_number": 88,
+        "match_number": 75,
         "round": "round_of_32",
-        "venue": "Dallas Stadium",
-        "city": "Dallas",
-        "venue_timezone": "America/Chicago",
+        "venue": "Estadio Monterrey",
+        "city": "Monterrey",
+        "venue_timezone": "America/Monterrey",
         "date_confirmed": true,
-        "match_date": "2026-07-03",
-        "kickoff_utc": "2026-07-03T18:00:00Z",
+        "match_date": "2026-06-29",
+        "kickoff_utc": "2026-06-30T01:00:00Z",
         "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group G",
-        "opponent_kind": "group_runner_up",
+        "opponent_slot": "Winner Group F",
+        "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "URU",
-          "name": "Uruguay"
+          "code": "NED",
+          "name": "Netherlands"
         },
         "real_opponent": null
       },
@@ -11257,7 +10849,7 @@
         "conditional": true,
         "advances_as_best_third_required": true,
         "eligible_slot_count": 3,
-        "note": "Only if D's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
+        "note": "Only if C's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
         "eligible_slots": [
           {
             "match_number": 74,
@@ -11296,20 +10888,20 @@
             "real_opponent": null
           },
           {
-            "match_number": 87,
+            "match_number": 79,
             "round": "round_of_32",
-            "venue": "Kansas City Stadium",
-            "city": "Kansas City",
-            "venue_timezone": "America/Chicago",
+            "venue": "Mexico City Stadium",
+            "city": "Mexico City",
+            "venue_timezone": "America/Mexico_City",
             "date_confirmed": true,
-            "match_date": "2026-07-03",
-            "kickoff_utc": "2026-07-04T01:30:00Z",
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-07-01T01:00:00Z",
             "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group K",
+            "opponent_slot": "Winner Group A",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "POR",
-              "name": "Portugal"
+              "code": "MEX",
+              "name": "Mexico"
             },
             "real_opponent": null
           }
@@ -11318,6 +10910,210 @@
     },
     {
       "code": "MAR",
+      "group": "C",
+      "as_group_winner": {
+        "match_number": 76,
+        "round": "round_of_32",
+        "venue": "Houston Stadium",
+        "city": "Houston",
+        "venue_timezone": "America/Chicago",
+        "date_confirmed": true,
+        "match_date": "2026-06-29",
+        "kickoff_utc": "2026-06-29T17:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Runner-up Group F",
+        "opponent_kind": "group_runner_up",
+        "projected_opponent": {
+          "code": "JPN",
+          "name": "Japan"
+        },
+        "real_opponent": null
+      },
+      "as_runner_up": {
+        "match_number": 75,
+        "round": "round_of_32",
+        "venue": "Estadio Monterrey",
+        "city": "Monterrey",
+        "venue_timezone": "America/Monterrey",
+        "date_confirmed": true,
+        "match_date": "2026-06-29",
+        "kickoff_utc": "2026-06-30T01:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Winner Group F",
+        "opponent_kind": "group_winner",
+        "projected_opponent": {
+          "code": "NED",
+          "name": "Netherlands"
+        },
+        "real_opponent": null
+      },
+      "as_best_third": {
+        "conditional": true,
+        "advances_as_best_third_required": true,
+        "eligible_slot_count": 3,
+        "note": "Only if C's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slots": [
+          {
+            "match_number": 74,
+            "round": "round_of_32",
+            "venue": "Boston Stadium",
+            "city": "Boston",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-29",
+            "kickoff_utc": "2026-06-29T20:30:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group E",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "ECU",
+              "name": "Ecuador"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 77,
+            "round": "round_of_32",
+            "venue": "New York New Jersey Stadium",
+            "city": "New York/New Jersey",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-06-30T21:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group I",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "FRA",
+              "name": "France"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 79,
+            "round": "round_of_32",
+            "venue": "Mexico City Stadium",
+            "city": "Mexico City",
+            "venue_timezone": "America/Mexico_City",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-07-01T01:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group A",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "MEX",
+              "name": "Mexico"
+            },
+            "real_opponent": null
+          }
+        ]
+      }
+    },
+    {
+      "code": "SCO",
+      "group": "C",
+      "as_group_winner": {
+        "match_number": 76,
+        "round": "round_of_32",
+        "venue": "Houston Stadium",
+        "city": "Houston",
+        "venue_timezone": "America/Chicago",
+        "date_confirmed": true,
+        "match_date": "2026-06-29",
+        "kickoff_utc": "2026-06-29T17:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Runner-up Group F",
+        "opponent_kind": "group_runner_up",
+        "projected_opponent": {
+          "code": "JPN",
+          "name": "Japan"
+        },
+        "real_opponent": null
+      },
+      "as_runner_up": {
+        "match_number": 75,
+        "round": "round_of_32",
+        "venue": "Estadio Monterrey",
+        "city": "Monterrey",
+        "venue_timezone": "America/Monterrey",
+        "date_confirmed": true,
+        "match_date": "2026-06-29",
+        "kickoff_utc": "2026-06-30T01:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Winner Group F",
+        "opponent_kind": "group_winner",
+        "projected_opponent": {
+          "code": "NED",
+          "name": "Netherlands"
+        },
+        "real_opponent": null
+      },
+      "as_best_third": {
+        "conditional": true,
+        "advances_as_best_third_required": true,
+        "eligible_slot_count": 3,
+        "note": "Only if C's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slots": [
+          {
+            "match_number": 74,
+            "round": "round_of_32",
+            "venue": "Boston Stadium",
+            "city": "Boston",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-29",
+            "kickoff_utc": "2026-06-29T20:30:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group E",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "ECU",
+              "name": "Ecuador"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 77,
+            "round": "round_of_32",
+            "venue": "New York New Jersey Stadium",
+            "city": "New York/New Jersey",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-06-30T21:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group I",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "FRA",
+              "name": "France"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 79,
+            "round": "round_of_32",
+            "venue": "Mexico City Stadium",
+            "city": "Mexico City",
+            "venue_timezone": "America/Mexico_City",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-07-01T01:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group A",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "MEX",
+              "name": "Mexico"
+            },
+            "real_opponent": null
+          }
+        ]
+      }
+    },
+    {
+      "code": "AUS",
       "group": "D",
       "as_group_winner": {
         "match_number": 81,
@@ -11350,8 +11146,8 @@
         "opponent_slot": "Runner-up Group G",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "URU",
-          "name": "Uruguay"
+          "code": "IRN",
+          "name": "Iran"
         },
         "real_opponent": null
       },
@@ -11419,7 +11215,7 @@
       }
     },
     {
-      "code": "SCO",
+      "code": "PAR",
       "group": "D",
       "as_group_winner": {
         "match_number": 81,
@@ -11452,8 +11248,212 @@
         "opponent_slot": "Runner-up Group G",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "URU",
-          "name": "Uruguay"
+          "code": "IRN",
+          "name": "Iran"
+        },
+        "real_opponent": null
+      },
+      "as_best_third": {
+        "conditional": true,
+        "advances_as_best_third_required": true,
+        "eligible_slot_count": 3,
+        "note": "Only if D's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slots": [
+          {
+            "match_number": 74,
+            "round": "round_of_32",
+            "venue": "Boston Stadium",
+            "city": "Boston",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-29",
+            "kickoff_utc": "2026-06-29T20:30:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group E",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "ECU",
+              "name": "Ecuador"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 77,
+            "round": "round_of_32",
+            "venue": "New York New Jersey Stadium",
+            "city": "New York/New Jersey",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-06-30T21:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group I",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "FRA",
+              "name": "France"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 87,
+            "round": "round_of_32",
+            "venue": "Kansas City Stadium",
+            "city": "Kansas City",
+            "venue_timezone": "America/Chicago",
+            "date_confirmed": true,
+            "match_date": "2026-07-03",
+            "kickoff_utc": "2026-07-04T01:30:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group K",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "POR",
+              "name": "Portugal"
+            },
+            "real_opponent": null
+          }
+        ]
+      }
+    },
+    {
+      "code": "TUR",
+      "group": "D",
+      "as_group_winner": {
+        "match_number": 81,
+        "round": "round_of_32",
+        "venue": "San Francisco Bay Area Stadium",
+        "city": "San Francisco Bay Area",
+        "venue_timezone": "America/Los_Angeles",
+        "date_confirmed": true,
+        "match_date": "2026-07-01",
+        "kickoff_utc": "2026-07-02T00:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Best 3rd from B/E/F/I/J",
+        "opponent_kind": "best_third",
+        "projected_opponent": {
+          "code": "CIV",
+          "name": "Ivory Coast"
+        },
+        "real_opponent": null
+      },
+      "as_runner_up": {
+        "match_number": 88,
+        "round": "round_of_32",
+        "venue": "Dallas Stadium",
+        "city": "Dallas",
+        "venue_timezone": "America/Chicago",
+        "date_confirmed": true,
+        "match_date": "2026-07-03",
+        "kickoff_utc": "2026-07-03T18:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Runner-up Group G",
+        "opponent_kind": "group_runner_up",
+        "projected_opponent": {
+          "code": "IRN",
+          "name": "Iran"
+        },
+        "real_opponent": null
+      },
+      "as_best_third": {
+        "conditional": true,
+        "advances_as_best_third_required": true,
+        "eligible_slot_count": 3,
+        "note": "Only if D's third-placed team is among the eight best thirds; the exact slot (1 of 3) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slots": [
+          {
+            "match_number": 74,
+            "round": "round_of_32",
+            "venue": "Boston Stadium",
+            "city": "Boston",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-29",
+            "kickoff_utc": "2026-06-29T20:30:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group E",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "ECU",
+              "name": "Ecuador"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 77,
+            "round": "round_of_32",
+            "venue": "New York New Jersey Stadium",
+            "city": "New York/New Jersey",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-06-30T21:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group I",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "FRA",
+              "name": "France"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 87,
+            "round": "round_of_32",
+            "venue": "Kansas City Stadium",
+            "city": "Kansas City",
+            "venue_timezone": "America/Chicago",
+            "date_confirmed": true,
+            "match_date": "2026-07-03",
+            "kickoff_utc": "2026-07-04T01:30:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group K",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "POR",
+              "name": "Portugal"
+            },
+            "real_opponent": null
+          }
+        ]
+      }
+    },
+    {
+      "code": "USA",
+      "group": "D",
+      "as_group_winner": {
+        "match_number": 81,
+        "round": "round_of_32",
+        "venue": "San Francisco Bay Area Stadium",
+        "city": "San Francisco Bay Area",
+        "venue_timezone": "America/Los_Angeles",
+        "date_confirmed": true,
+        "match_date": "2026-07-01",
+        "kickoff_utc": "2026-07-02T00:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Best 3rd from B/E/F/I/J",
+        "opponent_kind": "best_third",
+        "projected_opponent": {
+          "code": "CIV",
+          "name": "Ivory Coast"
+        },
+        "real_opponent": null
+      },
+      "as_runner_up": {
+        "match_number": 88,
+        "round": "round_of_32",
+        "venue": "Dallas Stadium",
+        "city": "Dallas",
+        "venue_timezone": "America/Chicago",
+        "date_confirmed": true,
+        "match_date": "2026-07-03",
+        "kickoff_utc": "2026-07-03T18:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Runner-up Group G",
+        "opponent_kind": "group_runner_up",
+        "projected_opponent": {
+          "code": "IRN",
+          "name": "Iran"
         },
         "real_opponent": null
       },
@@ -11614,8 +11614,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -11632,8 +11632,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -11770,8 +11770,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -11788,8 +11788,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -11926,8 +11926,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -11944,8 +11944,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -12082,8 +12082,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -12100,8 +12100,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -12160,8 +12160,8 @@
         "opponent_slot": "Runner-up Group C",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "PAR",
-          "name": "Paraguay"
+          "code": "MAR",
+          "name": "Morocco"
         },
         "real_opponent": null
       },
@@ -12178,8 +12178,8 @@
         "opponent_slot": "Winner Group C",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "TUR",
-          "name": "Türkiye"
+          "code": "BRA",
+          "name": "Brazil"
         },
         "real_opponent": null
       },
@@ -12256,8 +12256,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -12298,8 +12298,8 @@
         "opponent_slot": "Runner-up Group C",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "PAR",
-          "name": "Paraguay"
+          "code": "MAR",
+          "name": "Morocco"
         },
         "real_opponent": null
       },
@@ -12316,8 +12316,8 @@
         "opponent_slot": "Winner Group C",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "TUR",
-          "name": "Türkiye"
+          "code": "BRA",
+          "name": "Brazil"
         },
         "real_opponent": null
       },
@@ -12394,8 +12394,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -12436,8 +12436,8 @@
         "opponent_slot": "Runner-up Group C",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "PAR",
-          "name": "Paraguay"
+          "code": "MAR",
+          "name": "Morocco"
         },
         "real_opponent": null
       },
@@ -12454,8 +12454,8 @@
         "opponent_slot": "Winner Group C",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "TUR",
-          "name": "Türkiye"
+          "code": "BRA",
+          "name": "Brazil"
         },
         "real_opponent": null
       },
@@ -12532,8 +12532,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -12574,8 +12574,8 @@
         "opponent_slot": "Runner-up Group C",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "PAR",
-          "name": "Paraguay"
+          "code": "MAR",
+          "name": "Morocco"
         },
         "real_opponent": null
       },
@@ -12592,8 +12592,8 @@
         "opponent_slot": "Winner Group C",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "TUR",
-          "name": "Türkiye"
+          "code": "BRA",
+          "name": "Brazil"
         },
         "real_opponent": null
       },
@@ -12670,344 +12670,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 85,
-            "round": "round_of_32",
-            "venue": "BC Place Vancouver",
-            "city": "Vancouver",
-            "venue_timezone": "America/Vancouver",
-            "date_confirmed": true,
-            "match_date": "2026-07-02",
-            "kickoff_utc": "2026-07-03T03:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group B",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "SUI",
-              "name": "Switzerland"
-            },
-            "real_opponent": null
-          }
-        ]
-      }
-    },
-    {
-      "code": "CPV",
-      "group": "G",
-      "as_group_winner": {
-        "match_number": 82,
-        "round": "round_of_32",
-        "venue": "Seattle Stadium",
-        "city": "Seattle",
-        "venue_timezone": "America/Los_Angeles",
-        "date_confirmed": true,
-        "match_date": "2026-07-01",
-        "kickoff_utc": "2026-07-01T20:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Best 3rd from A/E/H/I/J",
-        "opponent_kind": "best_third",
-        "projected_opponent": {
-          "code": "CIV",
-          "name": "Ivory Coast"
-        },
-        "real_opponent": null
-      },
-      "as_runner_up": {
-        "match_number": 88,
-        "round": "round_of_32",
-        "venue": "Dallas Stadium",
-        "city": "Dallas",
-        "venue_timezone": "America/Chicago",
-        "date_confirmed": true,
-        "match_date": "2026-07-03",
-        "kickoff_utc": "2026-07-03T18:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group D",
-        "opponent_kind": "group_runner_up",
-        "projected_opponent": {
-          "code": "MAR",
-          "name": "Morocco"
-        },
-        "real_opponent": null
-      },
-      "as_best_third": {
-        "conditional": true,
-        "advances_as_best_third_required": true,
-        "eligible_slot_count": 2,
-        "note": "Only if G's third-placed team is among the eight best thirds; the exact slot (1 of 2) is set by the Annex C combination of which thirds qualify.",
-        "eligible_slots": [
-          {
-            "match_number": 77,
-            "round": "round_of_32",
-            "venue": "New York New Jersey Stadium",
-            "city": "New York/New Jersey",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-06-30T21:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group I",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "FRA",
-              "name": "France"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 85,
-            "round": "round_of_32",
-            "venue": "BC Place Vancouver",
-            "city": "Vancouver",
-            "venue_timezone": "America/Vancouver",
-            "date_confirmed": true,
-            "match_date": "2026-07-02",
-            "kickoff_utc": "2026-07-03T03:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group B",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "SUI",
-              "name": "Switzerland"
-            },
-            "real_opponent": null
-          }
-        ]
-      }
-    },
-    {
-      "code": "ESP",
-      "group": "G",
-      "as_group_winner": {
-        "match_number": 82,
-        "round": "round_of_32",
-        "venue": "Seattle Stadium",
-        "city": "Seattle",
-        "venue_timezone": "America/Los_Angeles",
-        "date_confirmed": true,
-        "match_date": "2026-07-01",
-        "kickoff_utc": "2026-07-01T20:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Best 3rd from A/E/H/I/J",
-        "opponent_kind": "best_third",
-        "projected_opponent": {
-          "code": "CIV",
-          "name": "Ivory Coast"
-        },
-        "real_opponent": null
-      },
-      "as_runner_up": {
-        "match_number": 88,
-        "round": "round_of_32",
-        "venue": "Dallas Stadium",
-        "city": "Dallas",
-        "venue_timezone": "America/Chicago",
-        "date_confirmed": true,
-        "match_date": "2026-07-03",
-        "kickoff_utc": "2026-07-03T18:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group D",
-        "opponent_kind": "group_runner_up",
-        "projected_opponent": {
-          "code": "MAR",
-          "name": "Morocco"
-        },
-        "real_opponent": null
-      },
-      "as_best_third": {
-        "conditional": true,
-        "advances_as_best_third_required": true,
-        "eligible_slot_count": 2,
-        "note": "Only if G's third-placed team is among the eight best thirds; the exact slot (1 of 2) is set by the Annex C combination of which thirds qualify.",
-        "eligible_slots": [
-          {
-            "match_number": 77,
-            "round": "round_of_32",
-            "venue": "New York New Jersey Stadium",
-            "city": "New York/New Jersey",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-06-30T21:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group I",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "FRA",
-              "name": "France"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 85,
-            "round": "round_of_32",
-            "venue": "BC Place Vancouver",
-            "city": "Vancouver",
-            "venue_timezone": "America/Vancouver",
-            "date_confirmed": true,
-            "match_date": "2026-07-02",
-            "kickoff_utc": "2026-07-03T03:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group B",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "SUI",
-              "name": "Switzerland"
-            },
-            "real_opponent": null
-          }
-        ]
-      }
-    },
-    {
-      "code": "KSA",
-      "group": "G",
-      "as_group_winner": {
-        "match_number": 82,
-        "round": "round_of_32",
-        "venue": "Seattle Stadium",
-        "city": "Seattle",
-        "venue_timezone": "America/Los_Angeles",
-        "date_confirmed": true,
-        "match_date": "2026-07-01",
-        "kickoff_utc": "2026-07-01T20:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Best 3rd from A/E/H/I/J",
-        "opponent_kind": "best_third",
-        "projected_opponent": {
-          "code": "CIV",
-          "name": "Ivory Coast"
-        },
-        "real_opponent": null
-      },
-      "as_runner_up": {
-        "match_number": 88,
-        "round": "round_of_32",
-        "venue": "Dallas Stadium",
-        "city": "Dallas",
-        "venue_timezone": "America/Chicago",
-        "date_confirmed": true,
-        "match_date": "2026-07-03",
-        "kickoff_utc": "2026-07-03T18:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group D",
-        "opponent_kind": "group_runner_up",
-        "projected_opponent": {
-          "code": "MAR",
-          "name": "Morocco"
-        },
-        "real_opponent": null
-      },
-      "as_best_third": {
-        "conditional": true,
-        "advances_as_best_third_required": true,
-        "eligible_slot_count": 2,
-        "note": "Only if G's third-placed team is among the eight best thirds; the exact slot (1 of 2) is set by the Annex C combination of which thirds qualify.",
-        "eligible_slots": [
-          {
-            "match_number": 77,
-            "round": "round_of_32",
-            "venue": "New York New Jersey Stadium",
-            "city": "New York/New Jersey",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-06-30T21:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group I",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "FRA",
-              "name": "France"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 85,
-            "round": "round_of_32",
-            "venue": "BC Place Vancouver",
-            "city": "Vancouver",
-            "venue_timezone": "America/Vancouver",
-            "date_confirmed": true,
-            "match_date": "2026-07-02",
-            "kickoff_utc": "2026-07-03T03:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group B",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "SUI",
-              "name": "Switzerland"
-            },
-            "real_opponent": null
-          }
-        ]
-      }
-    },
-    {
-      "code": "URU",
-      "group": "G",
-      "as_group_winner": {
-        "match_number": 82,
-        "round": "round_of_32",
-        "venue": "Seattle Stadium",
-        "city": "Seattle",
-        "venue_timezone": "America/Los_Angeles",
-        "date_confirmed": true,
-        "match_date": "2026-07-01",
-        "kickoff_utc": "2026-07-01T20:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Best 3rd from A/E/H/I/J",
-        "opponent_kind": "best_third",
-        "projected_opponent": {
-          "code": "CIV",
-          "name": "Ivory Coast"
-        },
-        "real_opponent": null
-      },
-      "as_runner_up": {
-        "match_number": 88,
-        "round": "round_of_32",
-        "venue": "Dallas Stadium",
-        "city": "Dallas",
-        "venue_timezone": "America/Chicago",
-        "date_confirmed": true,
-        "match_date": "2026-07-03",
-        "kickoff_utc": "2026-07-03T18:00:00Z",
-        "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group D",
-        "opponent_kind": "group_runner_up",
-        "projected_opponent": {
-          "code": "MAR",
-          "name": "Morocco"
-        },
-        "real_opponent": null
-      },
-      "as_best_third": {
-        "conditional": true,
-        "advances_as_best_third_required": true,
-        "eligible_slot_count": 2,
-        "note": "Only if G's third-placed team is among the eight best thirds; the exact slot (1 of 2) is set by the Annex C combination of which thirds qualify.",
-        "eligible_slots": [
-          {
-            "match_number": 77,
-            "round": "round_of_32",
-            "venue": "New York New Jersey Stadium",
-            "city": "New York/New Jersey",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-06-30T21:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group I",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "FRA",
-              "name": "France"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -13034,48 +12698,48 @@
     },
     {
       "code": "BEL",
-      "group": "H",
+      "group": "G",
       "as_group_winner": {
-        "match_number": 84,
+        "match_number": 82,
         "round": "round_of_32",
-        "venue": "Los Angeles Stadium",
-        "city": "Los Angeles",
+        "venue": "Seattle Stadium",
+        "city": "Seattle",
         "venue_timezone": "America/Los_Angeles",
         "date_confirmed": true,
-        "match_date": "2026-07-02",
-        "kickoff_utc": "2026-07-02T19:00:00Z",
+        "match_date": "2026-07-01",
+        "kickoff_utc": "2026-07-01T20:00:00Z",
         "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group J",
-        "opponent_kind": "group_runner_up",
+        "opponent_slot": "Best 3rd from A/E/H/I/J",
+        "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "AUT",
-          "name": "Austria"
+          "code": "CIV",
+          "name": "Ivory Coast"
         },
         "real_opponent": null
       },
       "as_runner_up": {
-        "match_number": 86,
+        "match_number": 88,
         "round": "round_of_32",
-        "venue": "Miami Stadium",
-        "city": "Miami",
-        "venue_timezone": "America/New_York",
+        "venue": "Dallas Stadium",
+        "city": "Dallas",
+        "venue_timezone": "America/Chicago",
         "date_confirmed": true,
         "match_date": "2026-07-03",
-        "kickoff_utc": "2026-07-03T22:00:00Z",
+        "kickoff_utc": "2026-07-03T18:00:00Z",
         "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Winner Group J",
-        "opponent_kind": "group_winner",
+        "opponent_slot": "Runner-up Group D",
+        "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "ARG",
-          "name": "Argentina"
+          "code": "PAR",
+          "name": "Paraguay"
         },
         "real_opponent": null
       },
       "as_best_third": {
         "conditional": true,
         "advances_as_best_third_required": true,
-        "eligible_slot_count": 4,
-        "note": "Only if H's third-placed team is among the eight best thirds; the exact slot (1 of 4) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slot_count": 2,
+        "note": "Only if G's third-placed team is among the eight best thirds; the exact slot (1 of 2) is set by the Annex C combination of which thirds qualify.",
         "eligible_slots": [
           {
             "match_number": 77,
@@ -13096,56 +12760,20 @@
             "real_opponent": null
           },
           {
-            "match_number": 79,
+            "match_number": 85,
             "round": "round_of_32",
-            "venue": "Mexico City Stadium",
-            "city": "Mexico City",
-            "venue_timezone": "America/Mexico_City",
+            "venue": "BC Place Vancouver",
+            "city": "Vancouver",
+            "venue_timezone": "America/Vancouver",
             "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-07-01T01:00:00Z",
+            "match_date": "2026-07-02",
+            "kickoff_utc": "2026-07-03T03:00:00Z",
             "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group A",
+            "opponent_slot": "Winner Group B",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "MEX",
-              "name": "Mexico"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 80,
-            "round": "round_of_32",
-            "venue": "Atlanta Stadium",
-            "city": "Atlanta",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-07-01",
-            "kickoff_utc": "2026-07-01T16:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group L",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "ENG",
-              "name": "England"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 82,
-            "round": "round_of_32",
-            "venue": "Seattle Stadium",
-            "city": "Seattle",
-            "venue_timezone": "America/Los_Angeles",
-            "date_confirmed": true,
-            "match_date": "2026-07-01",
-            "kickoff_utc": "2026-07-01T20:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group G",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "SUI",
+              "name": "Switzerland"
             },
             "real_opponent": null
           }
@@ -13154,48 +12782,48 @@
     },
     {
       "code": "EGY",
-      "group": "H",
+      "group": "G",
       "as_group_winner": {
-        "match_number": 84,
+        "match_number": 82,
         "round": "round_of_32",
-        "venue": "Los Angeles Stadium",
-        "city": "Los Angeles",
+        "venue": "Seattle Stadium",
+        "city": "Seattle",
         "venue_timezone": "America/Los_Angeles",
         "date_confirmed": true,
-        "match_date": "2026-07-02",
-        "kickoff_utc": "2026-07-02T19:00:00Z",
+        "match_date": "2026-07-01",
+        "kickoff_utc": "2026-07-01T20:00:00Z",
         "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group J",
-        "opponent_kind": "group_runner_up",
+        "opponent_slot": "Best 3rd from A/E/H/I/J",
+        "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "AUT",
-          "name": "Austria"
+          "code": "CIV",
+          "name": "Ivory Coast"
         },
         "real_opponent": null
       },
       "as_runner_up": {
-        "match_number": 86,
+        "match_number": 88,
         "round": "round_of_32",
-        "venue": "Miami Stadium",
-        "city": "Miami",
-        "venue_timezone": "America/New_York",
+        "venue": "Dallas Stadium",
+        "city": "Dallas",
+        "venue_timezone": "America/Chicago",
         "date_confirmed": true,
         "match_date": "2026-07-03",
-        "kickoff_utc": "2026-07-03T22:00:00Z",
+        "kickoff_utc": "2026-07-03T18:00:00Z",
         "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Winner Group J",
-        "opponent_kind": "group_winner",
+        "opponent_slot": "Runner-up Group D",
+        "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "ARG",
-          "name": "Argentina"
+          "code": "PAR",
+          "name": "Paraguay"
         },
         "real_opponent": null
       },
       "as_best_third": {
         "conditional": true,
         "advances_as_best_third_required": true,
-        "eligible_slot_count": 4,
-        "note": "Only if H's third-placed team is among the eight best thirds; the exact slot (1 of 4) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slot_count": 2,
+        "note": "Only if G's third-placed team is among the eight best thirds; the exact slot (1 of 2) is set by the Annex C combination of which thirds qualify.",
         "eligible_slots": [
           {
             "match_number": 77,
@@ -13216,56 +12844,20 @@
             "real_opponent": null
           },
           {
-            "match_number": 79,
+            "match_number": 85,
             "round": "round_of_32",
-            "venue": "Mexico City Stadium",
-            "city": "Mexico City",
-            "venue_timezone": "America/Mexico_City",
+            "venue": "BC Place Vancouver",
+            "city": "Vancouver",
+            "venue_timezone": "America/Vancouver",
             "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-07-01T01:00:00Z",
+            "match_date": "2026-07-02",
+            "kickoff_utc": "2026-07-03T03:00:00Z",
             "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group A",
+            "opponent_slot": "Winner Group B",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "MEX",
-              "name": "Mexico"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 80,
-            "round": "round_of_32",
-            "venue": "Atlanta Stadium",
-            "city": "Atlanta",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-07-01",
-            "kickoff_utc": "2026-07-01T16:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group L",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "ENG",
-              "name": "England"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 82,
-            "round": "round_of_32",
-            "venue": "Seattle Stadium",
-            "city": "Seattle",
-            "venue_timezone": "America/Los_Angeles",
-            "date_confirmed": true,
-            "match_date": "2026-07-01",
-            "kickoff_utc": "2026-07-01T20:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group G",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "SUI",
+              "name": "Switzerland"
             },
             "real_opponent": null
           }
@@ -13274,48 +12866,48 @@
     },
     {
       "code": "IRN",
-      "group": "H",
+      "group": "G",
       "as_group_winner": {
-        "match_number": 84,
+        "match_number": 82,
         "round": "round_of_32",
-        "venue": "Los Angeles Stadium",
-        "city": "Los Angeles",
+        "venue": "Seattle Stadium",
+        "city": "Seattle",
         "venue_timezone": "America/Los_Angeles",
         "date_confirmed": true,
-        "match_date": "2026-07-02",
-        "kickoff_utc": "2026-07-02T19:00:00Z",
+        "match_date": "2026-07-01",
+        "kickoff_utc": "2026-07-01T20:00:00Z",
         "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Runner-up Group J",
-        "opponent_kind": "group_runner_up",
+        "opponent_slot": "Best 3rd from A/E/H/I/J",
+        "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "AUT",
-          "name": "Austria"
+          "code": "CIV",
+          "name": "Ivory Coast"
         },
         "real_opponent": null
       },
       "as_runner_up": {
-        "match_number": 86,
+        "match_number": 88,
         "round": "round_of_32",
-        "venue": "Miami Stadium",
-        "city": "Miami",
-        "venue_timezone": "America/New_York",
+        "venue": "Dallas Stadium",
+        "city": "Dallas",
+        "venue_timezone": "America/Chicago",
         "date_confirmed": true,
         "match_date": "2026-07-03",
-        "kickoff_utc": "2026-07-03T22:00:00Z",
+        "kickoff_utc": "2026-07-03T18:00:00Z",
         "round_window": "2026-06-28 to 2026-07-03",
-        "opponent_slot": "Winner Group J",
-        "opponent_kind": "group_winner",
+        "opponent_slot": "Runner-up Group D",
+        "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "ARG",
-          "name": "Argentina"
+          "code": "PAR",
+          "name": "Paraguay"
         },
         "real_opponent": null
       },
       "as_best_third": {
         "conditional": true,
         "advances_as_best_third_required": true,
-        "eligible_slot_count": 4,
-        "note": "Only if H's third-placed team is among the eight best thirds; the exact slot (1 of 4) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slot_count": 2,
+        "note": "Only if G's third-placed team is among the eight best thirds; the exact slot (1 of 2) is set by the Annex C combination of which thirds qualify.",
         "eligible_slots": [
           {
             "match_number": 77,
@@ -13336,56 +12928,20 @@
             "real_opponent": null
           },
           {
-            "match_number": 79,
+            "match_number": 85,
             "round": "round_of_32",
-            "venue": "Mexico City Stadium",
-            "city": "Mexico City",
-            "venue_timezone": "America/Mexico_City",
+            "venue": "BC Place Vancouver",
+            "city": "Vancouver",
+            "venue_timezone": "America/Vancouver",
             "date_confirmed": true,
-            "match_date": "2026-06-30",
-            "kickoff_utc": "2026-07-01T01:00:00Z",
+            "match_date": "2026-07-02",
+            "kickoff_utc": "2026-07-03T03:00:00Z",
             "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group A",
+            "opponent_slot": "Winner Group B",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "MEX",
-              "name": "Mexico"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 80,
-            "round": "round_of_32",
-            "venue": "Atlanta Stadium",
-            "city": "Atlanta",
-            "venue_timezone": "America/New_York",
-            "date_confirmed": true,
-            "match_date": "2026-07-01",
-            "kickoff_utc": "2026-07-01T16:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group L",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "ENG",
-              "name": "England"
-            },
-            "real_opponent": null
-          },
-          {
-            "match_number": 82,
-            "round": "round_of_32",
-            "venue": "Seattle Stadium",
-            "city": "Seattle",
-            "venue_timezone": "America/Los_Angeles",
-            "date_confirmed": true,
-            "match_date": "2026-07-01",
-            "kickoff_utc": "2026-07-01T20:00:00Z",
-            "round_window": "2026-06-28 to 2026-07-03",
-            "opponent_slot": "Winner Group G",
-            "opponent_kind": "group_winner",
-            "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "SUI",
+              "name": "Switzerland"
             },
             "real_opponent": null
           }
@@ -13394,6 +12950,90 @@
     },
     {
       "code": "NZL",
+      "group": "G",
+      "as_group_winner": {
+        "match_number": 82,
+        "round": "round_of_32",
+        "venue": "Seattle Stadium",
+        "city": "Seattle",
+        "venue_timezone": "America/Los_Angeles",
+        "date_confirmed": true,
+        "match_date": "2026-07-01",
+        "kickoff_utc": "2026-07-01T20:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Best 3rd from A/E/H/I/J",
+        "opponent_kind": "best_third",
+        "projected_opponent": {
+          "code": "CIV",
+          "name": "Ivory Coast"
+        },
+        "real_opponent": null
+      },
+      "as_runner_up": {
+        "match_number": 88,
+        "round": "round_of_32",
+        "venue": "Dallas Stadium",
+        "city": "Dallas",
+        "venue_timezone": "America/Chicago",
+        "date_confirmed": true,
+        "match_date": "2026-07-03",
+        "kickoff_utc": "2026-07-03T18:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Runner-up Group D",
+        "opponent_kind": "group_runner_up",
+        "projected_opponent": {
+          "code": "PAR",
+          "name": "Paraguay"
+        },
+        "real_opponent": null
+      },
+      "as_best_third": {
+        "conditional": true,
+        "advances_as_best_third_required": true,
+        "eligible_slot_count": 2,
+        "note": "Only if G's third-placed team is among the eight best thirds; the exact slot (1 of 2) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slots": [
+          {
+            "match_number": 77,
+            "round": "round_of_32",
+            "venue": "New York New Jersey Stadium",
+            "city": "New York/New Jersey",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-06-30T21:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group I",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "FRA",
+              "name": "France"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 85,
+            "round": "round_of_32",
+            "venue": "BC Place Vancouver",
+            "city": "Vancouver",
+            "venue_timezone": "America/Vancouver",
+            "date_confirmed": true,
+            "match_date": "2026-07-02",
+            "kickoff_utc": "2026-07-03T03:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group B",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "SUI",
+              "name": "Switzerland"
+            },
+            "real_opponent": null
+          }
+        ]
+      }
+    },
+    {
+      "code": "CPV",
       "group": "H",
       "as_group_winner": {
         "match_number": 84,
@@ -13504,8 +13144,368 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
+            },
+            "real_opponent": null
+          }
+        ]
+      }
+    },
+    {
+      "code": "ESP",
+      "group": "H",
+      "as_group_winner": {
+        "match_number": 84,
+        "round": "round_of_32",
+        "venue": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "venue_timezone": "America/Los_Angeles",
+        "date_confirmed": true,
+        "match_date": "2026-07-02",
+        "kickoff_utc": "2026-07-02T19:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Runner-up Group J",
+        "opponent_kind": "group_runner_up",
+        "projected_opponent": {
+          "code": "AUT",
+          "name": "Austria"
+        },
+        "real_opponent": null
+      },
+      "as_runner_up": {
+        "match_number": 86,
+        "round": "round_of_32",
+        "venue": "Miami Stadium",
+        "city": "Miami",
+        "venue_timezone": "America/New_York",
+        "date_confirmed": true,
+        "match_date": "2026-07-03",
+        "kickoff_utc": "2026-07-03T22:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Winner Group J",
+        "opponent_kind": "group_winner",
+        "projected_opponent": {
+          "code": "ARG",
+          "name": "Argentina"
+        },
+        "real_opponent": null
+      },
+      "as_best_third": {
+        "conditional": true,
+        "advances_as_best_third_required": true,
+        "eligible_slot_count": 4,
+        "note": "Only if H's third-placed team is among the eight best thirds; the exact slot (1 of 4) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slots": [
+          {
+            "match_number": 77,
+            "round": "round_of_32",
+            "venue": "New York New Jersey Stadium",
+            "city": "New York/New Jersey",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-06-30T21:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group I",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "FRA",
+              "name": "France"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 79,
+            "round": "round_of_32",
+            "venue": "Mexico City Stadium",
+            "city": "Mexico City",
+            "venue_timezone": "America/Mexico_City",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-07-01T01:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group A",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "MEX",
+              "name": "Mexico"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 80,
+            "round": "round_of_32",
+            "venue": "Atlanta Stadium",
+            "city": "Atlanta",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-07-01",
+            "kickoff_utc": "2026-07-01T16:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group L",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "ENG",
+              "name": "England"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 82,
+            "round": "round_of_32",
+            "venue": "Seattle Stadium",
+            "city": "Seattle",
+            "venue_timezone": "America/Los_Angeles",
+            "date_confirmed": true,
+            "match_date": "2026-07-01",
+            "kickoff_utc": "2026-07-01T20:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group G",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "BEL",
+              "name": "Belgium"
+            },
+            "real_opponent": null
+          }
+        ]
+      }
+    },
+    {
+      "code": "KSA",
+      "group": "H",
+      "as_group_winner": {
+        "match_number": 84,
+        "round": "round_of_32",
+        "venue": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "venue_timezone": "America/Los_Angeles",
+        "date_confirmed": true,
+        "match_date": "2026-07-02",
+        "kickoff_utc": "2026-07-02T19:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Runner-up Group J",
+        "opponent_kind": "group_runner_up",
+        "projected_opponent": {
+          "code": "AUT",
+          "name": "Austria"
+        },
+        "real_opponent": null
+      },
+      "as_runner_up": {
+        "match_number": 86,
+        "round": "round_of_32",
+        "venue": "Miami Stadium",
+        "city": "Miami",
+        "venue_timezone": "America/New_York",
+        "date_confirmed": true,
+        "match_date": "2026-07-03",
+        "kickoff_utc": "2026-07-03T22:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Winner Group J",
+        "opponent_kind": "group_winner",
+        "projected_opponent": {
+          "code": "ARG",
+          "name": "Argentina"
+        },
+        "real_opponent": null
+      },
+      "as_best_third": {
+        "conditional": true,
+        "advances_as_best_third_required": true,
+        "eligible_slot_count": 4,
+        "note": "Only if H's third-placed team is among the eight best thirds; the exact slot (1 of 4) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slots": [
+          {
+            "match_number": 77,
+            "round": "round_of_32",
+            "venue": "New York New Jersey Stadium",
+            "city": "New York/New Jersey",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-06-30T21:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group I",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "FRA",
+              "name": "France"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 79,
+            "round": "round_of_32",
+            "venue": "Mexico City Stadium",
+            "city": "Mexico City",
+            "venue_timezone": "America/Mexico_City",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-07-01T01:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group A",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "MEX",
+              "name": "Mexico"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 80,
+            "round": "round_of_32",
+            "venue": "Atlanta Stadium",
+            "city": "Atlanta",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-07-01",
+            "kickoff_utc": "2026-07-01T16:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group L",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "ENG",
+              "name": "England"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 82,
+            "round": "round_of_32",
+            "venue": "Seattle Stadium",
+            "city": "Seattle",
+            "venue_timezone": "America/Los_Angeles",
+            "date_confirmed": true,
+            "match_date": "2026-07-01",
+            "kickoff_utc": "2026-07-01T20:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group G",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "BEL",
+              "name": "Belgium"
+            },
+            "real_opponent": null
+          }
+        ]
+      }
+    },
+    {
+      "code": "URU",
+      "group": "H",
+      "as_group_winner": {
+        "match_number": 84,
+        "round": "round_of_32",
+        "venue": "Los Angeles Stadium",
+        "city": "Los Angeles",
+        "venue_timezone": "America/Los_Angeles",
+        "date_confirmed": true,
+        "match_date": "2026-07-02",
+        "kickoff_utc": "2026-07-02T19:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Runner-up Group J",
+        "opponent_kind": "group_runner_up",
+        "projected_opponent": {
+          "code": "AUT",
+          "name": "Austria"
+        },
+        "real_opponent": null
+      },
+      "as_runner_up": {
+        "match_number": 86,
+        "round": "round_of_32",
+        "venue": "Miami Stadium",
+        "city": "Miami",
+        "venue_timezone": "America/New_York",
+        "date_confirmed": true,
+        "match_date": "2026-07-03",
+        "kickoff_utc": "2026-07-03T22:00:00Z",
+        "round_window": "2026-06-28 to 2026-07-03",
+        "opponent_slot": "Winner Group J",
+        "opponent_kind": "group_winner",
+        "projected_opponent": {
+          "code": "ARG",
+          "name": "Argentina"
+        },
+        "real_opponent": null
+      },
+      "as_best_third": {
+        "conditional": true,
+        "advances_as_best_third_required": true,
+        "eligible_slot_count": 4,
+        "note": "Only if H's third-placed team is among the eight best thirds; the exact slot (1 of 4) is set by the Annex C combination of which thirds qualify.",
+        "eligible_slots": [
+          {
+            "match_number": 77,
+            "round": "round_of_32",
+            "venue": "New York New Jersey Stadium",
+            "city": "New York/New Jersey",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-06-30T21:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group I",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "FRA",
+              "name": "France"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 79,
+            "round": "round_of_32",
+            "venue": "Mexico City Stadium",
+            "city": "Mexico City",
+            "venue_timezone": "America/Mexico_City",
+            "date_confirmed": true,
+            "match_date": "2026-06-30",
+            "kickoff_utc": "2026-07-01T01:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group A",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "MEX",
+              "name": "Mexico"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 80,
+            "round": "round_of_32",
+            "venue": "Atlanta Stadium",
+            "city": "Atlanta",
+            "venue_timezone": "America/New_York",
+            "date_confirmed": true,
+            "match_date": "2026-07-01",
+            "kickoff_utc": "2026-07-01T16:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group L",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "ENG",
+              "name": "England"
+            },
+            "real_opponent": null
+          },
+          {
+            "match_number": 82,
+            "round": "round_of_32",
+            "venue": "Seattle Stadium",
+            "city": "Seattle",
+            "venue_timezone": "America/Los_Angeles",
+            "date_confirmed": true,
+            "match_date": "2026-07-01",
+            "kickoff_utc": "2026-07-01T20:00:00Z",
+            "round_window": "2026-06-28 to 2026-07-03",
+            "opponent_slot": "Winner Group G",
+            "opponent_kind": "group_winner",
+            "projected_opponent": {
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -13606,8 +13606,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -13624,8 +13624,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -13762,8 +13762,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -13780,8 +13780,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -13918,8 +13918,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -13936,8 +13936,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -14074,8 +14074,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -14092,8 +14092,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -14152,8 +14152,8 @@
         "opponent_slot": "Runner-up Group H",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "IRN",
-          "name": "Iran"
+          "code": "URU",
+          "name": "Uruguay"
         },
         "real_opponent": null
       },
@@ -14170,8 +14170,8 @@
         "opponent_slot": "Winner Group H",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "BEL",
-          "name": "Belgium"
+          "code": "ESP",
+          "name": "Spain"
         },
         "real_opponent": null
       },
@@ -14212,8 +14212,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -14230,8 +14230,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -14290,8 +14290,8 @@
         "opponent_slot": "Runner-up Group H",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "IRN",
-          "name": "Iran"
+          "code": "URU",
+          "name": "Uruguay"
         },
         "real_opponent": null
       },
@@ -14308,8 +14308,8 @@
         "opponent_slot": "Winner Group H",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "BEL",
-          "name": "Belgium"
+          "code": "ESP",
+          "name": "Spain"
         },
         "real_opponent": null
       },
@@ -14350,8 +14350,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -14368,8 +14368,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -14428,8 +14428,8 @@
         "opponent_slot": "Runner-up Group H",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "IRN",
-          "name": "Iran"
+          "code": "URU",
+          "name": "Uruguay"
         },
         "real_opponent": null
       },
@@ -14446,8 +14446,8 @@
         "opponent_slot": "Winner Group H",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "BEL",
-          "name": "Belgium"
+          "code": "ESP",
+          "name": "Spain"
         },
         "real_opponent": null
       },
@@ -14488,8 +14488,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -14506,8 +14506,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -14566,8 +14566,8 @@
         "opponent_slot": "Runner-up Group H",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "IRN",
-          "name": "Iran"
+          "code": "URU",
+          "name": "Uruguay"
         },
         "real_opponent": null
       },
@@ -14584,8 +14584,8 @@
         "opponent_slot": "Winner Group H",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "BEL",
-          "name": "Belgium"
+          "code": "ESP",
+          "name": "Spain"
         },
         "real_opponent": null
       },
@@ -14626,8 +14626,8 @@
             "opponent_slot": "Winner Group D",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "BRA",
-              "name": "Brazil"
+              "code": "TUR",
+              "name": "Türkiye"
             },
             "real_opponent": null
           },
@@ -14644,8 +14644,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "ESP",
-              "name": "Spain"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },

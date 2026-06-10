@@ -9,8 +9,8 @@
 import { rankGroup, rankThirdPlace, type Standing, type GroupMatch, type Aux } from "./tiebreaker-ladders-2026";
 
 export const GROUPS: Record<string, string[]> = {
-  A: ["MEX", "RSA", "KOR", "CZE"], B: ["CAN", "BIH", "SUI", "QAT"], C: ["AUS", "PAR", "TUR", "USA"], D: ["BRA", "HAI", "MAR", "SCO"],
-  E: ["CIV", "CUW", "ECU", "GER"], F: ["JPN", "NED", "SWE", "TUN"], G: ["CPV", "ESP", "KSA", "URU"], H: ["BEL", "EGY", "IRN", "NZL"],
+  A: ["MEX", "RSA", "KOR", "CZE"], B: ["CAN", "BIH", "SUI", "QAT"], C: ["BRA", "HAI", "MAR", "SCO"], D: ["AUS", "PAR", "TUR", "USA"],
+  E: ["CIV", "CUW", "ECU", "GER"], F: ["JPN", "NED", "SWE", "TUN"], G: ["BEL", "EGY", "IRN", "NZL"], H: ["CPV", "ESP", "KSA", "URU"],
   I: ["FRA", "IRQ", "NOR", "SEN"], J: ["ALG", "ARG", "AUT", "JOR"], K: ["COD", "COL", "POR", "UZB"], L: ["CRO", "ENG", "GHA", "PAN"],
 };
 export const GROUP_KEYS = Object.keys(GROUPS);
