@@ -81,7 +81,7 @@ export async function buildSquadsJson({ dryRun = false } = {}) {
   const teams = await sbGet(config, "teams", "?select=id,fifa_code,name");
   const codeByTeamId = new Map(teams.map((t) => [t.id, t.fifa_code]));
   const players = await sbPaged(config, "players",
-    "?select=id,team_id,full_name,position,shirt_number,club,age,api_football_player_id&wc2026_status=eq.confirmed");
+    "?select=id,team_id,full_name,position,shirt_number,club,age,api_football_player_id,date_of_birth,nationality,height_cm,weight_kg,birth_place,birth_country&wc2026_status=eq.confirmed");
 
   // wired-but-empty per-player status: aggregate api_football_fixture_player_stats for WC fixtures only
   const fm = await sbGet(config, "fixture_metadata", "?select=external_fixture_id&tournament_code=eq.WC_2026&external_fixture_id=not.is.null");
@@ -135,6 +135,17 @@ export async function buildSquadsJson({ dryRun = false } = {}) {
       age: p.age ?? null,
       status,
       ...(availability ? { availability } : {}),
+      // --- player-card bio (Phase 1, ADDITIVE). Appended AFTER the existing keys so the current squad
+      // card's fields stay byte-identical; the current UI ignores these. photo is a DERIVED URL; the rest
+      // come from backfill-player-bios.mjs (null where not yet backfilled — Canada first). ---
+      api_player_id: aid,
+      photo: aid != null ? `https://media.api-sports.io/football/players/${aid}.png` : null,
+      dob: p.date_of_birth ?? null,
+      nationality: p.nationality ?? null,
+      height_cm: p.height_cm ?? null,
+      weight_kg: p.weight_kg ?? null,
+      birth_place: p.birth_place ?? null,
+      birth_country: p.birth_country ?? null,
     });
   }
   // sort each squad: GK,DEF,MID,FWD then number (nulls last) then name
@@ -154,11 +165,14 @@ export async function buildSquadsJson({ dryRun = false } = {}) {
     with_club: players.filter((p) => p.club != null).length,
     with_age: players.filter((p) => p.age != null).length,
     with_availability_flag: withAvailability,
+    with_nationality: players.filter((p) => p.nationality != null).length,
+    with_dob: players.filter((p) => p.date_of_birth != null).length,
+    with_photo: players.filter((p) => p.api_football_player_id != null).length,
   };
   const payload = {
     generated_at: new Date().toISOString(),
     source: "WC2026 confirmed squads from the DB (players + API-Football squad fields + player_status_events). Display-only; never a model/prediction input.",
-    note: "Per-player status (goals/assists/cards/minutes) fills from api_football_fixture_player_stats as WC matches are played; 0 until then. availability (out/doubtful/suspended) comes from player_status_events (latest tournament-scope, non-rejected) and carries review_status — pending seeds are shown but flagged. Missing club/age/number are null (the UI omits them).",
+    note: "Per-player status (goals/assists/cards/minutes) fills from api_football_fixture_player_stats as WC matches are played; 0 until then. availability (out/doubtful/suspended) comes from player_status_events (latest tournament-scope, non-rejected) and carries review_status — pending seeds are shown but flagged. Missing club/age/number are null (the UI omits them). Player-card bio (api_player_id, photo[derived URL], dob, nationality, height_cm, weight_kg, birth_place, birth_country) is ADDITIVE and only populated where backfilled (Canada first); the current squad card ignores these keys.",
     coverage,
     teams: byCode,
   };

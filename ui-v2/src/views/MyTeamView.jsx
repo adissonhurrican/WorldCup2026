@@ -1,3 +1,6 @@
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+import goldTexture from "../assets/player-card-gold.jpg";
 import Screen from "../components/Screen";
 import MatchCard from "../components/MatchCard";
 import { Card, Flag, InfoTip, SegmentedTabs } from "../components/ui";
@@ -492,6 +495,7 @@ function SquadPanel({ data, code }) {
 const SQUAD_COLS = "grid grid-cols-[1.5rem_minmax(0,1fr)_1.6rem_2.1rem_1rem_1rem_2.8rem] items-center gap-x-2";
 
 function RosterCard({ data, code }) {
+  const [selected, setSelected] = useState(null);
   const groups = squadGroups(data, code);
   if (!groups.length) {
     return (
@@ -523,25 +527,31 @@ function RosterCard({ data, code }) {
             {g.label} · {g.players.length}
           </div>
           {g.players.map((p, i) => (
-            <PlayerRow key={`${p.name}-${i}`} p={p} last={i === g.players.length - 1} />
+            <PlayerRow key={`${p.name}-${i}`} p={p} last={i === g.players.length - 1} onOpen={() => setSelected(p)} />
           ))}
         </div>
       ))}
       <p className="px-4 pb-4 pt-3 text-[11px] text-ink-3">
-        Squad from the official team data — display only. Min/G/A/Cards show “–” until a player appears, then fill in as matches are played; availability flags (e.g. doubtful) show by the name when known.
+        Squad from the official team data — display only. Min/G/A/Cards show “–” until a player appears, then fill in as matches are played; availability flags (e.g. doubtful) show by the name when known. Tap a player for their profile.
       </p>
+      {selected && <PlayerDetailCard p={selected} onClose={() => setSelected(null)} />}
     </Card>
   );
 }
 
 // One player row — uses the shared grid template so its cells line up under the header.
 // `appeared` (minutes > 0) gates the stat cells: dashes before a player plays, real numbers after.
-function PlayerRow({ p, last }) {
+function PlayerRow({ p, last, onOpen }) {
   const s = p.status || {};
   const appeared = (s.minutes ?? 0) > 0;
   const D = "–";
   return (
-    <div className={`${SQUAD_COLS} relative px-4 py-2`}>
+    <button
+      type="button"
+      onClick={onOpen}
+      aria-label={`View ${p.name} profile`}
+      className={`${SQUAD_COLS} relative w-full px-4 py-2 text-left transition-colors hover:bg-fill/[0.05] active:bg-fill/[0.09] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent/40`}
+    >
       <span className="text-right text-[13px] font-bold tabular-nums text-ink-3">{p.number ?? D}</span>
       <span className="block min-w-0">
         <span className="block truncate text-[14px] font-medium leading-tight">{p.name}</span>
@@ -556,7 +566,7 @@ function PlayerRow({ p, last }) {
       <span className="text-right text-[12px] tabular-nums text-ink-2">{appeared ? (s.assists ?? 0) : D}</span>
       <CardsCell s={s} appeared={appeared} dash={D} />
       {!last && <span className="hairline absolute bottom-0 left-4 right-0 h-px" />}
-    </div>
+    </button>
   );
 }
 
@@ -592,6 +602,115 @@ function AvailabilityChip({ a }) {
       <span className="h-1 w-1 rounded-full bg-current opacity-70" />
       {label}
     </span>
+  );
+}
+
+// ---------- Player detail card (Phase 2) — tap a PlayerRow -> photo + bio + live WC stats. ----------
+// Renders ENTIRELY from the squads.json player object already in scope: photo (derived URL) + dob / nationality /
+// height_cm / weight_kg / birth_place / birth_country (from the bio backfill) + existing name/position/number/
+// club/age/status/availability. Show-only-when-present: any null bio field is omitted (never blank/—). WC stats
+// show "–" until the player appears (same rule as the squad table). NO career caps (data is unreliable).
+// Reuses the app's GOLD treatment (.next-match-card ring/glow + --glass-gold-surface). Portaled to <body> so it
+// overlays the whole screen regardless of mount depth; Esc / backdrop / Done all close. Additive — the squad table
+// is untouched (the row is just tappable now).
+const PLAYER_MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function formatDob(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || "");
+  return m ? `${parseInt(m[3], 10)} ${PLAYER_MON[parseInt(m[2], 10) - 1]} ${m[1]}` : null;
+}
+
+function PlayerAvatar({ photo, name }) {
+  const [broken, setBroken] = useState(false);
+  const initials = (name || "").split(/\s+/).map((w) => w[0]).filter(Boolean).slice(0, 2).join("").toUpperCase();
+  const ring = { boxShadow: "0 0 0 3px rgba(255,255,255,0.92), 0 6px 16px rgba(74,52,8,0.40)" };
+  if (!photo || broken) {
+    return <div style={ring} className="flex h-24 w-24 items-center justify-center rounded-full bg-fill/15 text-[26px] font-bold text-ink-2">{initials || "?"}</div>;
+  }
+  return <img src={photo} alt={name} onError={() => setBroken(true)} style={ring} className="h-24 w-24 rounded-full bg-fill/10 object-cover" />;
+}
+
+function PlayerStat({ label, value }) {
+  return (
+    <div className="flex flex-col items-center rounded-xl bg-fill/[0.05] py-2">
+      <span className="text-[16px] font-bold tabular-nums text-ink">{value}</span>
+      <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wide text-ink-3">{label}</span>
+    </div>
+  );
+}
+
+function PlayerBioRow({ label, value }) {
+  return (
+    <div className="flex items-baseline justify-between gap-4 border-b border-separator/40 pb-2.5">
+      <span className="shrink-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3">{label}</span>
+      <span className="text-right text-[14px] font-medium text-ink">{value}</span>
+    </div>
+  );
+}
+
+function PlayerDetailCard({ p, onClose }) {
+  const [shown, setShown] = useState(false);
+  useEffect(() => {
+    setShown(true);
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
+  }, [onClose]);
+
+  const s = p.status || {};
+  const appeared = (s.minutes ?? 0) > 0;
+  const D = "–";
+  const dob = formatDob(p.dob);
+  const birthplace = [p.birth_place, p.birth_country].filter(Boolean).join(", ");
+  const born = [p.age != null ? `${p.age}` : null, dob ? `born ${dob}` : null, birthplace || null].filter(Boolean).join(" · ");
+  const physical = [p.height_cm ? `${p.height_cm}cm` : null, p.weight_kg ? `${p.weight_kg}kg` : null].filter(Boolean).join(" · ");
+  const y = s.yellow ?? 0, r = s.red ?? 0;
+  const cards = !appeared ? D : (!y && !r ? "0" : [y ? `🟨${y}` : null, r ? `🟥${r}` : null].filter(Boolean).join(" "));
+
+  return createPortal(
+    <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label={`${p.name} profile`}>
+      <div onClick={onClose} className={`absolute inset-0 bg-black/40 transition-opacity duration-200 lg:bg-black/60 lg:backdrop-blur-sm ${shown ? "opacity-100" : "opacity-0"}`} />
+      <div className={`next-match-card absolute inset-x-0 bottom-0 flex max-h-[88%] flex-col overflow-hidden rounded-t-[20px] bg-surface shadow-2xl transition-opacity duration-200 lg:inset-x-auto lg:bottom-auto lg:left-1/2 lg:top-1/2 lg:max-h-[86vh] lg:w-[420px] lg:max-w-[92vw] lg:-translate-x-1/2 lg:-translate-y-1/2 lg:rounded-[22px] ${shown ? "opacity-100" : "opacity-0"}`}>
+        <div className="flex justify-center pt-2.5 lg:hidden"><span className="h-1.5 w-9 rounded-full bg-fill/30" /></div>
+        <div className="flex items-center justify-end px-4 pb-1 pt-1">
+          <button onClick={onClose} className="text-[15px] font-medium text-accent active:opacity-50">Done</button>
+        </div>
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain pb-[max(20px,env(safe-area-inset-bottom))]">
+          {/* GOLD header — real gold-foil texture (always bright), so header text is FIXED-DARK in both themes. */}
+          <div className="flex flex-col items-center px-5 pb-5 pt-2" style={{ backgroundImage: `url(${goldTexture})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+            <PlayerAvatar photo={p.photo} name={p.name} />
+            <div className="mt-3 flex items-center justify-center gap-2">
+              {p.number != null && <span className="text-[13px] font-bold tabular-nums text-[#6e5214]">#{p.number}</span>}
+              <h2 className="text-center text-[20px] font-bold leading-tight text-[#3a2906] [text-shadow:0_1px_0_rgba(255,248,220,0.55)]">{p.name}</h2>
+            </div>
+            {p.position && <div className="mt-0.5 text-[13px] font-semibold text-[#6e5214]">{p.position}</div>}
+            {p.availability && <div className="mt-2"><AvailabilityChip a={p.availability} /></div>}
+          </div>
+          {/* BIO — show only when present */}
+          {(born || p.nationality || p.club || physical) && (
+            <div className="space-y-2.5 px-5 pt-4">
+              {born && <PlayerBioRow label="Age" value={born} />}
+              {p.nationality && <PlayerBioRow label="Nationality" value={p.nationality} />}
+              {p.club && <PlayerBioRow label="Club" value={p.club} />}
+              {physical && <PlayerBioRow label="Physical" value={physical} />}
+            </div>
+          )}
+          {/* THIS TOURNAMENT — fills as matches are played */}
+          <div className="px-5 pb-5 pt-5">
+            <div className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-ink-3">This tournament</div>
+            <div className="grid grid-cols-4 gap-2">
+              <PlayerStat label="Min" value={appeared ? `${s.minutes}′` : D} />
+              <PlayerStat label="Goals" value={appeared ? (s.goals ?? 0) : D} />
+              <PlayerStat label="Assists" value={appeared ? (s.assists ?? 0) : D} />
+              <PlayerStat label="Cards" value={cards} />
+            </div>
+            <p className="mt-3 text-[11px] text-ink-3">Match stats show “–” until this player appears, then fill in as matches are played.</p>
+          </div>
+        </div>
+      </div>
+    </div>,
+    document.body
   );
 }
 
