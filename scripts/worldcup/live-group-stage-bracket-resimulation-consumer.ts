@@ -314,6 +314,9 @@ function csvEscape(value: unknown) {
 function writeCsv(filePath: string, rows: Record<string, unknown>[]) {
   const headers = rows.length > 0 ? Object.keys(rows[0]) : [];
   const lines = [headers.join(","), ...rows.map((row) => headers.map((header) => csvEscape(row[header])).join(","))];
+  // data/audits/ is gitignored, so a fresh CI checkout lacks the directory — first live run failed
+  // here with ENOENT. Audit outputs must never sink the model chain; create the dir on demand.
+  mkdirSync(path.dirname(filePath), { recursive: true });
   writeFileSync(filePath, `${lines.join("\n")}\n`, "utf8");
 }
 
@@ -1594,6 +1597,10 @@ ${exampleSections}
     const probabilitiesPath = path.join(rootDir, probabilitiesRelPath);
     const summaryPath = path.join(rootDir, summaryRelPath);
     const reportPath = path.join(rootDir, reportRelPath);
+    // gitignored output dirs don't exist on a fresh CI checkout (first-live ENOENT) — ensure them.
+    mkdirSync(path.dirname(probabilitiesPath), { recursive: true });
+    mkdirSync(path.dirname(summaryPath), { recursive: true });
+    mkdirSync(path.dirname(reportPath), { recursive: true });
     const topRows = rows.slice(0, 12);
     writeCsv(
       probabilitiesPath,
