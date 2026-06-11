@@ -422,7 +422,28 @@ function fixtureStatus(row: any) {
   };
 }
 
+// The /fixtures listing carries NO teams.*.code field, so api team id is the only reliable key.
+// This is the same committed id->FIFA-code map the live Netlify functions embed (48 teams); the
+// hardcoded id/code fallbacks below remain as a safety net if the file ever fails to load.
+const PROVIDER_TEAM_CODE_BY_API_ID: Record<string, string> = (() => {
+  try {
+    const mapPath = path.join(path.dirname(fileURLToPath(import.meta.url)), "live", "api-team-code-map.json");
+    const raw = JSON.parse(readFileSync(mapPath, "utf8")) as Record<string, unknown>;
+    const out: Record<string, string> = {};
+    for (const [key, value] of Object.entries(raw)) {
+      if (/^\d+$/.test(key) && typeof value === "string" && value) out[key] = value;
+    }
+    return out;
+  } catch {
+    return {};
+  }
+})();
+
 function normalizeProviderCode(apiCode: string | null, apiTeamId: number | null) {
+  if (apiTeamId !== null) {
+    const mapped = PROVIDER_TEAM_CODE_BY_API_ID[String(apiTeamId)];
+    if (mapped) return mapped;
+  }
   const byApiCode: Record<string, string> = {
     SPA: "ESP",
     JAP: "JPN",
