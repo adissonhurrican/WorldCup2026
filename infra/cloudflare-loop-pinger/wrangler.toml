@@ -1,0 +1,14 @@
+# wc2026-loop-pinger — Cloudflare Worker that fires live-loop.yml via workflow_dispatch every 10 min.
+# PROJECT: ahcfrgxczbgdvrqmbisw. Cron-only Worker: no route, no domain, no KV — nothing but the trigger.
+# Deploy: npx wrangler deploy   (auth: `npx wrangler login` or a Workers-scoped CLOUDFLARE_API_TOKEN)
+# Secret: npx wrangler secret put GITHUB_PAT   (fine-grained, WorldCup2026-only, Actions:RW)
+name = "wc2026-loop-pinger"
+main = "worker.js"
+compatibility_date = "2026-06-01"
+account_id = "c3790db934819b36918426ee2bf32fbc"
+workers_dev = false
+
+# Stand-alone test passed 2026-06-11 22:04Z: manual --test-scheduled invoke -> 204 -> Actions run
+# 27380346279 (event=workflow_dispatch) -> green context-only no-op. Cron enabled afterwards.
+[triggers]
+crons = ["*/10 * * * *"]

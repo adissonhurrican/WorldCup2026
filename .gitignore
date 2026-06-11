@@ -116,3 +116,6 @@ data/exports/live-app-cache.json
 data/exports/advancement-scenario-v1-pretournament-app.json
 data/exports/group-b-monte-carlo-v1-app.json
 lib/worldcup/player-data-providers/
+
+# Cloudflare Worker local dev secrets (wrangler .dev.vars — never commit)
+.dev.vars
