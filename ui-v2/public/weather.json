@@ -1,31 +1,17 @@
 {
   "_note": "Per-fixture weather forecast overlay (display-only; never a model input). Keyed by HOME_AWAY. Generated from the Open-Meteo cache by build-weather-overlay.mjs.",
-  "MEX_RSA": {
-    "temp_c": 22.5,
-    "feels_like_c": 25.5,
-    "condition": "clear sky",
-    "code": 0,
-    "precip_chance_pct": 74,
-    "precip_mm": 0,
-    "wind_kmh": 4,
-    "humidity_pct": 57,
-    "forecast_for": "2026-06-11T19:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:31.541Z",
-    "lead_hours": 2.5,
-    "confidence": "high"
-  },
   "USA_PAR": {
     "temp_c": 20.3,
-    "feels_like_c": 20.3,
+    "feels_like_c": 20.9,
     "condition": "overcast",
     "code": 3,
     "precip_chance_pct": 0,
     "precip_mm": 0,
     "wind_kmh": 15.9,
-    "humidity_pct": 79,
+    "humidity_pct": 86,
     "forecast_for": "2026-06-13T01:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:31.875Z",
-    "lead_hours": 32.5,
+    "retrieved_at": "2026-06-11T20:38:48.581Z",
+    "lead_hours": 28.4,
     "confidence": "high"
   },
   "BRA_MAR": {
@@ -38,8 +24,8 @@
     "wind_kmh": 15.5,
     "humidity_pct": 24,
     "forecast_for": "2026-06-13T22:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:32.095Z",
-    "lead_hours": 53.5,
+    "retrieved_at": "2026-06-11T20:38:48.889Z",
+    "lead_hours": 49.4,
     "confidence": "medium"
   },
   "HAI_SCO": {
@@ -52,8 +38,8 @@
     "wind_kmh": 10.2,
     "humidity_pct": 87,
     "forecast_for": "2026-06-14T01:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:32.205Z",
-    "lead_hours": 56.5,
+    "retrieved_at": "2026-06-11T20:38:49.042Z",
+    "lead_hours": 52.4,
     "confidence": "medium"
   },
   "SUI_QAT": {
@@ -66,9 +52,9 @@
     "wind_kmh": 4.1,
     "humidity_pct": 16,
     "forecast_for": "2026-06-13T19:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:31.985Z",
-    "lead_hours": 50.5,
-    "confidence": "medium"
+    "retrieved_at": "2026-06-11T20:38:48.735Z",
+    "lead_hours": 46.4,
+    "confidence": "high"
   },
   "GER_CUW": {
     "temp_c": 30.2,
@@ -80,8 +66,8 @@
     "wind_kmh": 16.1,
     "humidity_pct": 62,
     "forecast_for": "2026-06-14T17:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:32.427Z",
-    "lead_hours": 72.5,
+    "retrieved_at": "2026-06-11T20:38:49.349Z",
+    "lead_hours": 68.4,
     "confidence": "medium"
   },
   "CIV_ECU": {
@@ -94,8 +80,8 @@
     "wind_kmh": 14,
     "humidity_pct": 38,
     "forecast_for": "2026-06-14T23:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:32.646Z",
-    "lead_hours": 78.5,
+    "retrieved_at": "2026-06-11T20:38:49.657Z",
+    "lead_hours": 74.4,
     "confidence": "medium"
   },
   "NED_JPN": {
@@ -108,8 +94,8 @@
     "wind_kmh": 15,
     "humidity_pct": 48,
     "forecast_for": "2026-06-14T20:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:32.537Z",
-    "lead_hours": 75.5,
+    "retrieved_at": "2026-06-11T20:38:49.504Z",
+    "lead_hours": 71.4,
     "confidence": "medium"
   },
   "BEL_EGY": {
@@ -122,9 +108,9 @@
     "wind_kmh": 6.9,
     "humidity_pct": 27,
     "forecast_for": "2026-06-15T19:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:32.975Z",
-    "lead_hours": 98.5,
-    "confidence": "low"
+    "retrieved_at": "2026-06-11T20:38:50.117Z",
+    "lead_hours": 94.4,
+    "confidence": "medium"
   },
   "IRN_NZL": {
     "temp_c": 21.3,
@@ -136,8 +122,8 @@
     "wind_kmh": 18.4,
     "humidity_pct": 61,
     "forecast_for": "2026-06-16T01:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:33.193Z",
-    "lead_hours": 104.5,
+    "retrieved_at": "2026-06-11T20:38:50.422Z",
+    "lead_hours": 100.4,
     "confidence": "low"
   },
   "KSA_URU": {
@@ -150,8 +136,8 @@
     "wind_kmh": 22.7,
     "humidity_pct": 45,
     "forecast_for": "2026-06-15T22:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:33.084Z",
-    "lead_hours": 101.5,
+    "retrieved_at": "2026-06-11T20:38:50.269Z",
+    "lead_hours": 97.4,
     "confidence": "low"
   },
   "ESP_CPV": {
@@ -164,8 +150,8 @@
     "wind_kmh": 14.9,
     "humidity_pct": 52,
     "forecast_for": "2026-06-15T16:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:32.865Z",
-    "lead_hours": 95.5,
+    "retrieved_at": "2026-06-11T20:38:49.964Z",
+    "lead_hours": 91.4,
     "confidence": "medium"
   },
   "ARG_ALG": {
@@ -178,8 +164,8 @@
     "wind_kmh": 9,
     "humidity_pct": 76,
     "forecast_for": "2026-06-17T01:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:33.521Z",
-    "lead_hours": 128.5,
+    "retrieved_at": "2026-06-11T20:38:50.879Z",
+    "lead_hours": 124.4,
     "confidence": "low"
   },
   "AUT_JOR": {
@@ -192,8 +178,8 @@
     "wind_kmh": 10.7,
     "humidity_pct": 34,
     "forecast_for": "2026-06-17T04:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:33.631Z",
-    "lead_hours": 131.5,
+    "retrieved_at": "2026-06-11T20:38:51.032Z",
+    "lead_hours": 127.4,
     "confidence": "low"
   },
   "FRA_SEN": {
@@ -206,8 +192,8 @@
     "wind_kmh": 5,
     "humidity_pct": 91,
     "forecast_for": "2026-06-16T19:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:33.303Z",
-    "lead_hours": 122.5,
+    "retrieved_at": "2026-06-11T20:38:50.575Z",
+    "lead_hours": 118.4,
     "confidence": "low"
   },
   "ENG_CRO": {
@@ -220,8 +206,8 @@
     "wind_kmh": 12.3,
     "humidity_pct": 33,
     "forecast_for": "2026-06-17T20:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:33.850Z",
-    "lead_hours": 147.5,
+    "retrieved_at": "2026-06-11T20:38:51.337Z",
+    "lead_hours": 143.4,
     "confidence": "low"
   },
   "GHA_PAN": {
@@ -234,8 +220,8 @@
     "wind_kmh": 7.3,
     "humidity_pct": 73,
     "forecast_for": "2026-06-17T23:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:33.959Z",
-    "lead_hours": 150.5,
+    "retrieved_at": "2026-06-11T20:38:51.490Z",
+    "lead_hours": 146.4,
     "confidence": "low"
   },
   "UZB_COL": {
@@ -248,8 +234,8 @@
     "wind_kmh": 7.2,
     "humidity_pct": 86,
     "forecast_for": "2026-06-18T02:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:34.069Z",
-    "lead_hours": 153.5,
+    "retrieved_at": "2026-06-11T20:38:51.642Z",
+    "lead_hours": 149.4,
     "confidence": "low"
   },
   "KOR_CZE": {
@@ -262,22 +248,22 @@
     "wind_kmh": 3.9,
     "humidity_pct": 80,
     "forecast_for": "2026-06-12T02:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:31.653Z",
-    "lead_hours": 9.5,
+    "retrieved_at": "2026-06-11T20:38:48.270Z",
+    "lead_hours": 5.4,
     "confidence": "high"
   },
   "CAN_BIH": {
     "temp_c": 28.2,
-    "feels_like_c": 28.2,
-    "condition": "overcast",
-    "code": 3,
+    "feels_like_c": 28.6,
+    "condition": "clear sky",
+    "code": 0,
     "precip_chance_pct": 1,
     "precip_mm": 0,
     "wind_kmh": 18.4,
-    "humidity_pct": 38,
+    "humidity_pct": 41,
     "forecast_for": "2026-06-12T19:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:31.764Z",
-    "lead_hours": 26.5,
+    "retrieved_at": "2026-06-11T20:38:48.426Z",
+    "lead_hours": 22.4,
     "confidence": "high"
   },
   "AUS_TUR": {
@@ -290,8 +276,8 @@
     "wind_kmh": 6.4,
     "humidity_pct": 49,
     "forecast_for": "2026-06-14T04:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:32.315Z",
-    "lead_hours": 59.5,
+    "retrieved_at": "2026-06-11T20:38:49.195Z",
+    "lead_hours": 55.4,
     "confidence": "medium"
   },
   "SWE_TUN": {
@@ -304,8 +290,8 @@
     "wind_kmh": 14.3,
     "humidity_pct": 58,
     "forecast_for": "2026-06-15T02:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:32.756Z",
-    "lead_hours": 81.5,
+    "retrieved_at": "2026-06-11T20:38:49.811Z",
+    "lead_hours": 77.4,
     "confidence": "medium"
   },
   "POR_COD": {
@@ -318,8 +304,8 @@
     "wind_kmh": 6.6,
     "humidity_pct": 70,
     "forecast_for": "2026-06-17T17:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:33.740Z",
-    "lead_hours": 144.5,
+    "retrieved_at": "2026-06-11T20:38:51.184Z",
+    "lead_hours": 140.4,
     "confidence": "low"
   },
   "CZE_RSA": {
@@ -332,8 +318,22 @@
     "wind_kmh": 17.8,
     "humidity_pct": 60,
     "forecast_for": "2026-06-18T16:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:34.180Z",
-    "lead_hours": 167.5,
+    "retrieved_at": "2026-06-11T20:38:51.795Z",
+    "lead_hours": 163.4,
+    "confidence": "low"
+  },
+  "BIH_SUI": {
+    "temp_c": 25.3,
+    "feels_like_c": 26.8,
+    "condition": "clear sky",
+    "code": 0,
+    "precip_chance_pct": 0,
+    "precip_mm": 0,
+    "wind_kmh": 14.7,
+    "humidity_pct": 52,
+    "forecast_for": "2026-06-18T19:00:00+00:00",
+    "retrieved_at": "2026-06-11T20:38:51.950Z",
+    "lead_hours": 166.4,
     "confidence": "low"
   },
   "IRQ_NOR": {
@@ -346,8 +346,8 @@
     "wind_kmh": 6.2,
     "humidity_pct": 98,
     "forecast_for": "2026-06-16T22:00:00+00:00",
-    "retrieved_at": "2026-06-11T16:31:33.412Z",
-    "lead_hours": 125.5,
+    "retrieved_at": "2026-06-11T20:38:50.727Z",
+    "lead_hours": 121.4,
     "confidence": "low"
   }
 }
