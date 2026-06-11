@@ -22,27 +22,29 @@ const DISPATCH_URL =
 // The loop self-guards outside the tournament, but don't burn dispatches after the final.
 const TOURNAMENT_END_UTC = "2026-07-20T23:59:59Z";
 
+async function dispatchLoop(env) {
+  const r = await fetch(DISPATCH_URL, {
+    method: "POST",
+    headers: {
+      authorization: `Bearer ${env.GITHUB_PAT}`,
+      accept: "application/vnd.github+json",
+      "user-agent": "wc2026-loop-pinger", // GitHub API requires a User-Agent
+      "x-github-api-version": "2022-11-28",
+    },
+    body: JSON.stringify({ ref: "main" }),
+  });
+  const detail = r.status === 204 ? "OK" : (await r.text()).slice(0, 300);
+  console.log(r.status === 204 ? "dispatched live-loop.yml OK (204)" : `dispatch FAILED ${r.status} ${detail}`);
+  return { status: r.status, detail };
+}
+
 export default {
   async scheduled(event, env, ctx) {
     if (new Date(event.scheduledTime ?? Date.now()).toISOString() > TOURNAMENT_END_UTC) {
       console.log("past tournament end — not dispatching");
       return;
     }
-    const r = await fetch(DISPATCH_URL, {
-      method: "POST",
-      headers: {
-        authorization: `Bearer ${env.GITHUB_PAT}`,
-        accept: "application/vnd.github+json",
-        "user-agent": "wc2026-loop-pinger", // GitHub API requires a User-Agent
-        "x-github-api-version": "2022-11-28",
-      },
-      body: JSON.stringify({ ref: "main" }),
-    });
-    if (r.status === 204) {
-      console.log("dispatched live-loop.yml OK (204)");
-    } else {
-      // Visible in `wrangler tail` / dashboard logs; GitHub cron remains the backup either way.
-      console.log("dispatch FAILED", r.status, (await r.text()).slice(0, 300));
-    }
+    await dispatchLoop(env);
   },
+
 };
