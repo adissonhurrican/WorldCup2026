@@ -156,18 +156,24 @@ function validateShape(data: any, schema: any, p: string, errs: string[]) {
 }
 
 // ---------- ID-leak scan: fail loud if any internal token slips through ----------
-function idLeakScan(jsonStr: string): string[] {
+// Two scopes (first-live narration lesson): UUIDs / version tags / run-hash fragments scan the FULL
+// payload (never legitimate anywhere, prose included). The plain-word token list scans only the
+// PROSE-STRIPPED copy when one is provided — AI narration legitimately says things like "strong
+// candidates to win the group", which must never block a publish.
+function idLeakScan(jsonStr: string, structuralStr?: string): string[] {
   const hits: string[] = [];
   const uuid = jsonStr.match(/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/g);
   if (uuid) hits.push(`UUID(s): ${[...new Set(uuid)].slice(0, 3).join(", ")}`);
+  for (const t of ["066be1b1", "c45b3e6a", "c222f2c6"]) if (jsonStr.toLowerCase().includes(t)) hits.push(`token: ${t}`);
   const tokens = [
     "tournament_simulation", "match_predictions", "prediction_run", "tournament_advancement", "team_tactical_profiles",
     "team_coaches", "source_snapshot", "model_candidates", "tournament_event_log", "simulation_run",
     "current_best", "not_global_current_best", "lifecycle", "superseded", "candidate", "needs_review", "review_status", "run_status",
     "dynamic-draw", "monte-carlo", "monte_carlo", "elo-group-matrix", "form-plus-elo", "match-predictor", "coach-tactical-context",
-    "all-groups-group-stage", "full-tournament-knockout", "corrected-tiebreakers", "066be1b1", "c45b3e6a", "c222f2c6",
+    "all-groups-group-stage", "full-tournament-knockout", "corrected-tiebreakers",
   ];
-  for (const t of tokens) if (jsonStr.toLowerCase().includes(t.toLowerCase())) hits.push(`token: ${t}`);
+  const wordScanStr = (structuralStr ?? jsonStr).toLowerCase();
+  for (const t of tokens) if (wordScanStr.includes(t.toLowerCase())) hits.push(`token: ${t}`);
   const ver = jsonStr.match(/\bv\d+\.\d+\b|-v\d{8}\b/g); if (ver) hits.push(`version-tag(s): ${[...new Set(ver)].slice(0, 3).join(", ")}`);
   return hits;
 }
@@ -442,9 +448,16 @@ async function main() {
   if (fixtures.length !== 72) errs.push(`fixtures ${fixtures.length} != 72`);
   if (knockout_fixtures.length !== 32) errs.push(`knockout_fixtures ${knockout_fixtures.length} != 32`);
 
-  // ID-leak scan on the serialized output
+  // ID-leak scan on the serialized output. Plain-word internal tokens are scanned with narration
+  // prose (headline/body) stripped — free-text English may contain words like "candidate"; UUIDs,
+  // version tags and run-hash fragments are still scanned on the full string including prose.
   const jsonStr = JSON.stringify(appData, null, 2);
-  const leaks = idLeakScan(jsonStr);
+  const proseStripped = JSON.stringify(
+    { ...appData, narration: (appData.narration ?? []).map((n: any) => ({ ...n, headline: "", body: "" })) },
+    null,
+    2,
+  );
+  const leaks = idLeakScan(jsonStr, proseStripped);
   if (leaks.length) errs.push(`ID-LEAK: ${leaks.join(" | ")}`);
 
   const report = { project_id: PROJECT, source_of_truth: pointerLive ? LIVE_POINTER : "lifecycle=live_current markers", source_labels: SRC, as_of: meta.generated_at, sums, sum_check_pass: errs.filter((e) => e.startsWith("sum")).length === 0, id_leak_scan: leaks.length === 0 ? "CLEAN" : leaks, counts: { teams: teams.length, teams_with_flags: teams.filter((t) => t.flag).length, groups: groups.length, fixtures: fixtures.length, knockout_fixtures: knockout_fixtures.length, team_paths: team_paths.length, scenarios: scenarios.length, tactical: tactical_context.length, narration: narration.length }, contract_errors: errs };

@@ -1,13 +1,13 @@
 {
   "project_id": "ahcfrgxczbgdvrqmbisw",
-  "updated_at": "2026-06-07T10:12:47.171Z",
+  "updated_at": "2026-06-11T21:26:22.483Z",
   "updated_by": "scripts/worldcup/live/in-tournament-loop-runner.ts",
-  "reason": "synthetic supervised --go validation; DB rows unchanged",
+  "reason": "live material result passed sanity gate (MEX vs RSA 2-0); pointer reconstructed locally to match the CI-promoted runs from workflow run 27378665338 — CI updates this file in its workspace but did not commit it, leaving fresh checkouts resolving stale runs",
   "runs": {
     "prediction_run": "066be1b1-de89-44de-8b7c-c95f4353ad7e",
     "group_sim": "c45b3e6a-f2c3-43f4-bade-65dc1fd0e195",
-    "knockout_sim": "c222f2c6-536c-463e-b032-1d1fc1b6d0aa",
-    "scenario_phase": "pre_tournament"
+    "knockout_sim": "fe96eb15-3ccc-4191-b100-8da6a6122d51",
+    "scenario_phase": "live"
   },
   "rollback_note": "Previous cache files are preserved in git/filesystem history; DB rows are preserved and selected by explicit run IDs."
 }
