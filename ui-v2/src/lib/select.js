@@ -268,6 +268,12 @@ export function eventsOf(fx, events) {
   return (fx && events && events[`${fx.home}_${fx.away}`]) || null;
 }
 
+// Live per-team xG (descriptive match stat — separate from predictions), keyed by HOME_AWAY.
+// Null until the provider posts statistics; orientation already normalized in loadStats.
+export function statsOf(fx, stats) {
+  return (fx && stats && stats[`${fx.home}_${fx.away}`]) || null;
+}
+
 // Card/sheet display state: do we have an XI yet? The "~60 min before kickoff" placeholder is
 // PERSISTENT — shown for any not-yet-finished match with no XI, at ANY distance from kickoff
 // (mirrors the always-visible Weather "nearer kickoff" placeholder), so a fan always sees that

@@ -110,6 +110,26 @@ export async function loadLineups(url = `/.netlify/functions/lineups`) {
   return { as_of: (raw && raw.as_of) || null, map };
 }
 
+// Live per-team match stats (xG) — DESCRIPTIVE display only (a live match stat, separate from predictions),
+// fetched server-side by the stats Netlify Function (the client never calls API-Football or holds the key),
+// edge-cached ~60s (xG moves shot-by-shot, not second-by-second). Returns { as_of, map } keyed by
+// "HOME_AWAY". A fixture is absent until the provider posts statistics, and drops when the match finishes.
+// Orientation-agnostic like loadLiveScores: the reverse key is indexed with home_xg/away_xg swapped.
+export async function loadStats(url = `/.netlify/functions/stats`) {
+  const raw = await loadJsonOr(url, null);
+  const map = {};
+  const matches = raw && Array.isArray(raw.matches) ? raw.matches : [];
+  for (const m of matches) {
+    if (!m || !m.home || !m.away) continue;
+    map[`${m.home}_${m.away}`] = m;
+    const reverseKey = `${m.away}_${m.home}`;
+    if (!map[reverseKey]) {
+      map[reverseKey] = { ...m, home: m.away, away: m.home, home_xg: m.away_xg, away_xg: m.home_xg };
+    }
+  }
+  return { as_of: (raw && raw.as_of) || null, map };
+}
+
 // Goal/card timeline events — display only, fetched server-side by the events Netlify Function (the client
 // never calls API-Football or holds the key), edge-cached ~30s (near-live). Returns { as_of, map } keyed by
 // "HOME_AWAY". Orientation-agnostic like loadLiveScores: the function emits the provider's home/away, so we

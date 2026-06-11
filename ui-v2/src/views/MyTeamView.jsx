@@ -31,7 +31,7 @@ function routeInfoCopy(route = "") {
   return NUMBER_INFO.advance;
 }
 
-export default function MyTeamView({ data, code, tab, onTab, live, lineups, events, onOpenMatch, onOpenSwitcher, rightAction }) {
+export default function MyTeamView({ data, code, tab, onTab, live, lineups, events, stats, onOpenMatch, onOpenSwitcher, rightAction }) {
   const team = teamByCode(data, code) || { code, name: code, group: "?" };
   return (
     <Screen stickyTitle={team.name} rightAction={rightAction} header={<TeamHeader team={team} onOpenSwitcher={onOpenSwitcher} />}>
@@ -41,7 +41,7 @@ export default function MyTeamView({ data, code, tab, onTab, live, lineups, even
           <div className="space-y-4 lg:mx-auto lg:max-w-[960px]">
             <Hero data={data} code={code} />
             <AboveTabs data={data} code={code} />
-            <FixturesSection data={data} code={code} live={live} lineups={lineups} events={events} onOpen={onOpenMatch} onTab={onTab} />
+            <FixturesSection data={data} code={code} live={live} lineups={lineups} events={events} stats={stats} onOpen={onOpenMatch} onTab={onTab} />
             <OverviewPanel data={data} code={code} />
           </div>
         )}
@@ -183,7 +183,7 @@ function OverviewPanel({ data, code }) {
 // the shared MatchCard, so it inherits all states (prediction → live score → final result)
 // and the same tap-through detail. Reads app-data.json + the live overlay only; never
 // fabricates knockout fixtures — they appear here automatically once they exist in the export.
-function FixturesSection({ data, code, live, lineups, events, onOpen, onTab }) {
+function FixturesSection({ data, code, live, lineups, events, stats, onOpen, onTab }) {
   const fixtures = teamFixtures(data, code);
   if (!fixtures.length) return null;
 
@@ -226,6 +226,7 @@ function FixturesSection({ data, code, live, lineups, events, onOpen, onTab }) {
                 live={live}
                 lineups={lineups}
                 events={events}
+                stats={stats}
                 onOpen={onOpen}
                 highlight={isNext}
                 predictionBarClassName="lg:mx-auto lg:w-3/4"

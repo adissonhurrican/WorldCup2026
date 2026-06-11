@@ -5,7 +5,7 @@ import KnockoutCard from "../components/KnockoutCard";
 import { IconChevronDown, IconCheck } from "../components/icons";
 import { fixturesByDay, cityOptions, matchState } from "../lib/select";
 
-export default function MatchesView({ data, live, lineups, events, onOpenMatch, rightAction }) {
+export default function MatchesView({ data, live, lineups, events, stats, onOpenMatch, rightAction }) {
   const [city, setCity] = useState(null); // null = All cities (default, unchanged behavior)
   const cities = cityOptions(data);
   const total = (data.fixtures || []).length;
@@ -37,7 +37,7 @@ export default function MatchesView({ data, live, lineups, events, onOpenMatch, 
               fx.knockout ? (
                 <KnockoutCard key={`ko-${fx.match_number}`} data={data} fx={fx} onOpen={onOpenMatch} />
               ) : (
-                <MatchCard key={`${fx.home}-${fx.away}-${i}`} data={data} fx={fx} live={live} lineups={lineups} events={events} onOpen={onOpenMatch} />
+                <MatchCard key={`${fx.home}-${fx.away}-${i}`} data={data} fx={fx} live={live} lineups={lineups} events={events} stats={stats} onOpen={onOpenMatch} />
               ),
             )}
           </div>

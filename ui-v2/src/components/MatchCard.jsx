@@ -1,8 +1,9 @@
+import { useEffect, useRef, useState } from "react";
 import { Flag } from "./ui";
 import PredictionBar from "./PredictionBar";
 import {
   teamByCode, matchState, scoreOf, favorite, pct,
-  dualClock, teamTint, weatherFor, isImminent, weatherEmoji, weatherConfidence, cToF, liveOf, lineupState, eventsOf,
+  dualClock, teamTint, weatherFor, isImminent, weatherEmoji, weatherConfidence, cToF, liveOf, lineupState, eventsOf, statsOf,
 } from "../lib/select";
 
 // Shared match card — the SINGLE source of card rendering, used by both the Matches
@@ -11,11 +12,12 @@ import {
 // clock, verified final score) plus the display-only live overlay (same `live` map +
 // orientation-normalized lookup as the Matches tab). `highlight` (optional) draws a
 // subtle accent ring for a featured row (e.g. the next match) — it changes no content.
-export default function MatchCard({ data, fx, live, lineups, events, onOpen, highlight = false, predictionBarClassName = "" }) {
+export default function MatchCard({ data, fx, live, lineups, events, stats, onOpen, highlight = false, predictionBarClassName = "" }) {
   const state = matchState(fx, live);
   const lv = liveOf(fx, live);
   const ls = lineupState(fx, lineups, live);
   const ev = eventsOf(fx, events);
+  const st = statsOf(fx, stats);
   const finished = state === "finished";
   const isLive = state === "live";
   const sc = scoreOf(fx);
@@ -79,6 +81,21 @@ export default function MatchCard({ data, fx, live, lineups, events, onOpen, hig
 
         <MatchEventSummary fx={fx} match={ev} />
 
+        {/* live xG — DESCRIPTIVE match stat (what's happening on the pitch), shown only while in play and
+            only once the provider posts statistics. Lives in the live-stats area with the score/events,
+            deliberately separate from the prediction bar below (the forecast). */}
+        {isLive && st && (st.home_xg != null || st.away_xg != null) && (
+          // `relative` is load-bearing: the (i) popover anchors to this full-width row (not the tiny
+          // icon), so it spans the card's content width and the card's overflow-hidden never clips it.
+          <div className="relative mt-2 flex items-center justify-center gap-1.5 text-[11px] text-ink-3">
+            <span className="rounded-full bg-fill/10 px-2 py-0.5 font-semibold uppercase tracking-wide text-[9px]">Live xG</span>
+            <span className="tabular-nums font-medium text-ink-2">
+              {st.home_xg != null ? st.home_xg.toFixed(1) : "—"} – {st.away_xg != null ? st.away_xg.toFixed(1) : "—"}
+            </span>
+            <XgInfo />
+          </div>
+        )}
+
         {/* dual clock / status */}
         <div className={`mt-2 text-center text-[12px] ${isLive ? "font-semibold text-live" : "text-ink-2"}`}>
           {isLive
@@ -125,6 +142,50 @@ export default function MatchCard({ data, fx, live, lineups, events, onOpen, hig
         ) : null}
       </div>
     </button>
+  );
+}
+
+// (i) explainer for the live xG row. Mirrors the shared InfoTip look/behavior (tap-first toggle,
+// stopPropagation so a tap never opens the match sheet) but renders a span[role=button] because the
+// whole card is already a <button> (nested buttons are invalid HTML). Dismisses on tap-away via a
+// document listener. The popover opens ABOVE the row so the card's overflow-hidden never clips it.
+function XgInfo() {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+    if (!open) return undefined;
+    const close = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    document.addEventListener("pointerdown", close, true);
+    return () => document.removeEventListener("pointerdown", close, true);
+  }, [open]);
+  const toggle = (e) => { e.stopPropagation(); e.preventDefault(); setOpen((v) => !v); };
+  return (
+    // NOT `relative`: the popover positions against the xG row (the nearest positioned ancestor),
+    // spanning the card's content width — a fixed-width box anchored to the icon clips at the card edge.
+    <span ref={ref} className="inline-flex shrink-0 align-middle">
+      <span
+        role="button"
+        tabIndex={0}
+        aria-label="What is xG?"
+        aria-expanded={open}
+        onClick={toggle}
+        onPointerDown={(e) => e.stopPropagation()}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") toggle(e); }}
+        className="inline-grid h-5 w-5 cursor-pointer place-items-center rounded-full bg-fill/10 text-[11px] font-bold leading-none text-ink-2 ring-1 ring-separator/70 transition hover:bg-fill/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 active:scale-95"
+      >
+        i
+      </span>
+      {open && (
+        <span
+          role="tooltip"
+          className="pointer-events-none absolute inset-x-0 bottom-[calc(100%+0.4rem)] z-50 rounded-[12px] bg-bg/95 px-3 py-2 text-left text-[12px] font-medium normal-case leading-snug tracking-normal text-ink-2 shadow-[0_12px_30px_rgba(0,0,0,0.20)] ring-1 ring-separator/70 backdrop-blur-xl"
+        >
+          Expected Goals (xG) measures the quality of scoring chances. Each shot is rated by how likely it was
+          to score (distance, angle, and more). Higher xG means better chances created — a team can “win the
+          xG” even if the score doesn’t show it yet.
+        </span>
+      )}
+    </span>
   );
 }
 

@@ -12,7 +12,7 @@ import PredictionView from "./views/PredictionView";
 import GroupsView from "./views/GroupsView";
 import ContentView from "./views/ContentView";
 import { IconMenu } from "./components/icons";
-import { loadAll, loadLiveScores, loadLineups, loadEvents } from "./lib/appData";
+import { loadAll, loadLiveScores, loadLineups, loadEvents, loadStats } from "./lib/appData";
 import { teamByCode } from "./lib/select";
 
 const LIVE_POLL_MS = 30000;
@@ -51,6 +51,7 @@ export default function App() {
   const [live, setLive] = useState({}); // display-only in-play scores, polled separately
   const [lineups, setLineups] = useState({}); // display-only confirmed XIs, polled separately
   const [events, setEvents] = useState({}); // display-only goals/cards timeline, polled separately
+  const [stats, setStats] = useState({}); // display-only live xG (descriptive match stat), polled separately
 
   const [view, setView] = useState("team");
   const [secondary, setSecondary] = useState(null); // null = main app; else an info page key (about/how/privacy/terms)
@@ -97,6 +98,7 @@ export default function App() {
       loadLiveScores().then((r) => { if (alive) setLive(r.map || {}); }).catch(() => {});
       loadLineups().then((r) => { if (alive) setLineups(r.map || {}); }).catch(() => {});
       loadEvents().then((r) => { if (alive) setEvents(r.map || {}); }).catch(() => {});
+      loadStats().then((r) => { if (alive) setStats(r.map || {}); }).catch(() => {});
     };
     tick();
     const id = setInterval(tick, LIVE_POLL_MS);
@@ -151,13 +153,14 @@ export default function App() {
                 live={live}
                 lineups={lineups}
                 events={events}
+                stats={stats}
                 onOpenMatch={setMatchFx}
                 onOpenSwitcher={() => setSheetOpen(true)}
                 rightAction={headerActions}
               />
             </div>
             <div className={`h-full ${view === "matches" && !secondary ? "" : "hidden"}`}>
-              <MatchesView data={data} live={live} lineups={lineups} events={events} onOpenMatch={setMatchFx} rightAction={headerActions} />
+              <MatchesView data={data} live={live} lineups={lineups} events={events} stats={stats} onOpenMatch={setMatchFx} rightAction={headerActions} />
             </div>
             <div className={`h-full ${view === "prediction" && !secondary ? "" : "hidden"}`}>
               <PredictionView data={data} rightAction={headerActions} />
