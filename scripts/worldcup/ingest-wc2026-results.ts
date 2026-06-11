@@ -1061,11 +1061,21 @@ function deriveStandings(teams: TeamRow[], fixtureMetadata: FixtureMetadataRow[]
 
 async function upsertRows(config: SupabaseConfig, table: string, rows: unknown[], onConflict: string) {
   if (rows.length === 0) return [];
+  // PostgREST bulk inserts reject heterogeneous key sets (PGRST102 "All object keys must match") —
+  // e.g. lineup coach rows vs player rows. Pad every row to the union of keys with explicit nulls;
+  // every row here is fully script-built (no key is ever omitted to rely on a column default).
+  const keyUnion = new Set<string>();
+  for (const row of rows as Record<string, unknown>[]) for (const key of Object.keys(row)) keyUnion.add(key);
+  const uniformRows = (rows as Record<string, unknown>[]).map((row) => {
+    const padded: Record<string, unknown> = {};
+    for (const key of keyUnion) padded[key] = key in row ? row[key] : null;
+    return padded;
+  });
   return supabaseRequest(config, table, {
     method: "POST",
     search: `?on_conflict=${encodeURIComponent(onConflict)}`,
     headers: { prefer: "resolution=merge-duplicates,return=representation" },
-    body: JSON.stringify(rows),
+    body: JSON.stringify(uniformRows),
   });
 }
 
