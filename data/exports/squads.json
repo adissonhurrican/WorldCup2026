@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T05:46:47.616Z",
+  "generated_at": "2026-06-12T15:13:34.904Z",
   "source": "WC2026 confirmed squads from the DB (players + API-Football squad fields + player_status_events). Display-only; never a model/prediction input.",
   "note": "Per-player status (goals/assists/cards/minutes) fills from api_football_fixture_player_stats as WC matches are played; 0 until then. availability (out/doubtful/suspended) comes from player_status_events (latest tournament-scope, non-rejected) and carries review_status — pending seeds are shown but flagged. Missing club/age/number are null (the UI omits them). Player-card bio (api_player_id, photo[derived URL], dob, nationality, height_cm, weight_kg, birth_place, birth_country) is ADDITIVE and only populated where backfilled (Canada first); the current squad card ignores these keys.",
   "coverage": {
@@ -8,7 +8,7 @@
     "with_number": 1212,
     "with_club": 935,
     "with_age": 1207,
-    "with_availability_flag": 2,
+    "with_availability_flag": 0,
     "with_nationality": 1214,
     "with_dob": 1213,
     "with_photo": 1248
@@ -26013,12 +26013,6 @@
           "red": 0,
           "minutes": 0
         },
-        "availability": {
-          "status": "doubtful",
-          "severity": "high",
-          "expected_return": null,
-          "review_status": "pending"
-        },
         "api_player_id": 407017,
         "photo": "https://media.api-sports.io/football/players/407017.png",
         "dob": "2000-03-30",
@@ -26041,12 +26035,6 @@
           "yellow": 0,
           "red": 0,
           "minutes": 0
-        },
-        "availability": {
-          "status": "doubtful",
-          "severity": "high",
-          "expected_return": null,
-          "review_status": "pending"
         },
         "api_player_id": 509,
         "photo": "https://media.api-sports.io/football/players/509.png",
