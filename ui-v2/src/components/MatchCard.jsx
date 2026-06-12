@@ -49,7 +49,7 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
             {isLive && (
               <span className="inline-flex items-center gap-1 rounded-full bg-live/10 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-live">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
-                Live{lv && lv.minute != null ? ` ${lv.minute}'` : ""}
+                Live{lv && lv.minute != null ? ` ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}
               </span>
             )}
             {showChip ? (
@@ -99,7 +99,7 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
         {/* dual clock / status */}
         <div className={`mt-2 text-center text-[12px] ${isLive ? "font-semibold text-live" : "text-ink-2"}`}>
           {isLive
-            ? `In play${lv && lv.minute != null ? ` · ${lv.minute}'` : ""}`
+            ? `In play${lv && lv.minute != null ? ` · ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}`
             : finished
               ? "Full-time"
               : dc.venue && !dc.sameZone

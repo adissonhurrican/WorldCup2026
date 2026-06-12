@@ -67,6 +67,8 @@ function liveFixturesToMatches(apiFixtures) {
       away,
       status: "live",
       minute: typeof f?.fixture?.status?.elapsed === "number" ? f.fixture.status.elapsed : null,
+      // added/stoppage time (e.g. elapsed=90, extra=6 -> the card shows "90+6'"); null when not in stoppage
+      extra: typeof f?.fixture?.status?.extra === "number" && f.fixture.status.extra > 0 ? f.fixture.status.extra : null,
       home_score: f?.goals?.home ?? 0,
       away_score: f?.goals?.away ?? 0,
     });
