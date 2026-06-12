@@ -79,7 +79,12 @@ export function buildRealStandings(teams: TeamInfo[], results: ResultInput[], au
     const gamesPlayed = ordered.reduce((s, r) => s + r.played, 0) / 2;
     const complete = ordered.length >= 4 && ordered.every((r) => r.played >= TEAM_GROUP_GAMES);
     if (complete) groupsComplete++;
-    if (ordered[2]) thirdRows.push(ordered[2]); // current 3rd place (full-ladder)
+    // PER-GROUP gate (first-material-run lesson): a group enters the cross-group third-place race only
+    // once it has actually PLAYED. With zero games the ladder's all-equal fallback (FIFA ranking) would
+    // invent a "current 3rd" (e.g. QAT over BIH in B) and the first result anywhere un-gated all 12
+    // groups at once — presenting ranking artifacts at 0 pts as standings. Unplayed groups are simply
+    // absent from the race ("provisional from results so far"), NOT substituted with the predicted 3rd.
+    if (ordered[2] && gamesPlayed > 0) thirdRows.push(ordered[2]); // current 3rd place (full-ladder)
     const started = gamesPlayed > 0;
     const standings: StandingTeam[] = ordered.map((r, i) => {
       let advance_state: AdvanceState = "scheduled"; let band: Band = null; let decided = false;
