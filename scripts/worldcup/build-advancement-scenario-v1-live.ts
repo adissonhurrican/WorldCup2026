@@ -19,7 +19,7 @@ const tempDir = path.join(rootDir, ".tmp", "worldcup-sql");
 const worldCupDevProjectRef = "ahcfrgxczbgdvrqmbisw";
 const SOURCE_PRED_RUN = "066be1b1-de89-44de-8b7c-c95f4353ad7e"; // PROMOTED live group predictions (dynamic-draw); was 85555853
 const SOURCE_SIM_RUN = "c45b3e6a-f2c3-43f4-bade-65dc1fd0e195"; // PROMOTED live group sim (dynamic-draw); was cfdc88ca
-const FIFA_SNAPSHOT = "2026-04-01"; const SEED = 20260602; const N = 20000;
+const FIFA_SNAPSHOT = "2026-06-11" /* pre-WC FIFA edition published 2026-06-11; prior pins: 2026-04-01 (kept additively in fifa_world_rankings) */; const SEED = 20260602; const N = 20000;
 const SCHEMA_VERSION = "advancement-scenario-v1"; const LADDER_VERSION = "fifa-2026-article-13-v1";
 const args = process.argv;
 const MODE = args.includes("--synthetic-test") ? "synthetic" : args.includes("--regression") ? "regression" : "live";

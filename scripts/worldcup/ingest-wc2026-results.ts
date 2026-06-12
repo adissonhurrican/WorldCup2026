@@ -1297,7 +1297,7 @@ async function main() {
   // conditional engine's aux so the stored standings rank agrees with the engine. Graceful: missing -> {} (stable order).
   const standingsFifaRank: Record<string, number> = {};
   try {
-    const frRows = await supabaseRequest<{ team_code: string; fifa_rank: number }[]>(config, "fifa_world_rankings", { search: "?select=team_code,fifa_rank&ranking_snapshot_date=eq.2026-04-01" });
+    const frRows = await supabaseRequest<{ team_code: string; fifa_rank: number }[]>(config, "fifa_world_rankings", { search: "?select=team_code,fifa_rank&ranking_snapshot_date=eq.2026-06-11" });
     for (const r of frRows) standingsFifaRank[r.team_code] = Number(r.fifa_rank);
   } catch (e) { warnings.push(`fifa_world_rankings load failed; standings ranked without the FIFA tiebreaker: ${(e as Error)?.message ?? e}`); }
   const standingsAux: Aux = { fairPlay: {}, fifaRank: standingsFifaRank };
