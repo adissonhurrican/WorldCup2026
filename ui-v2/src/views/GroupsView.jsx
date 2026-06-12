@@ -57,21 +57,31 @@ function ThirdPlaceStrip({ data }) {
           {r.phase === "pre" || r.ranked.length === 0 ? (
             <p className="text-[13px] text-ink-2">{r.note || "The third-place race begins once group games are played; the eight best thirds advance."}</p>
           ) : (
-            <ul className="space-y-1.5">
-              {r.ranked.map((t, i) => {
-                const tm = teamByCode(data, t.code || t.team_code) || { code: t.code };
-                const isIn = i < r.qualify;
-                return (
-                  <li key={i} className="flex items-center gap-2.5 text-[13px]">
-                    <span className={`w-4 text-center font-bold tabular-nums ${isIn ? "text-qualified" : "text-ink-3"}`}>{i + 1}</span>
-                    <Flag team={tm} size={20} />
-                    <span className="min-w-0 flex-1 truncate">{tm.name || t.code}</span>
-                    {t.points != null && <span className="tabular-nums text-ink-2">{t.points} pts</span>}
-                    <span className={`text-[11px] font-bold ${isIn ? "text-qualified" : "text-ink-3"}`}>{isIn ? "IN" : "OUT"}</span>
-                  </li>
-                );
-              })}
-            </ul>
+            <>
+              {/* provisional context while the race is filling in — N computed from the real per-team
+                  played data (round complete = all 4 of a group's teams have played >= 1). */}
+              {r.roundCompleteGroups < 12 && !r.decided && (
+                <p className="mb-2 text-[12px] text-ink-3">
+                  The third-place race fills in as groups play their matches. Only {r.roundCompleteGroups} of 12 groups
+                  {r.roundCompleteGroups === 1 ? " has" : " have"} completed a round so far, so these standings are provisional.
+                </p>
+              )}
+              <ul className="space-y-1.5">
+                {r.ranked.map((t, i) => {
+                  const tm = teamByCode(data, t.code || t.team_code) || { code: t.code };
+                  const isIn = i < r.qualify;
+                  return (
+                    <li key={i} className="flex items-center gap-2.5 text-[13px]">
+                      <span className={`w-4 text-center font-bold tabular-nums ${isIn ? "text-qualified" : "text-ink-3"}`}>{i + 1}</span>
+                      <Flag team={tm} size={20} />
+                      <span className="min-w-0 flex-1 truncate">{tm.name || t.code}</span>
+                      {t.points != null && <span className="tabular-nums text-ink-2">{t.points} pts</span>}
+                      <span className={`text-[11px] font-bold ${isIn ? "text-qualified" : "text-ink-3"}`}>{isIn ? "IN" : "OUT"}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </>
           )}
         </div>
       )}

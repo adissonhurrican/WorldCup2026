@@ -601,6 +601,9 @@ export function squadGroups(data, code) {
 }
 
 // ---- cross-group best-third race summary (surface best_third_race; never recompute) ----
+// roundCompleteGroups: how many of the 12 groups have COMPLETED a round (every team played >= 1) —
+// computed from the same real_standings per-team `played` field the race gate uses. Drives the
+// "fills in as groups play" provisional note while the ranked list is still partial.
 export function bestThirdRace(data) {
   const race = (data.real_standings || {}).best_third_race || {};
   const ph = phase(data);
@@ -608,6 +611,10 @@ export function bestThirdRace(data) {
   const ranked = race.ranked || [];
   const locked = ranked.filter((r) => r.decided || r.locked || r.status === "qualified").length;
   const contested = Math.max(0, ranked.length - locked);
+  const realGroups = (data.real_standings || {}).groups || [];
+  const roundCompleteGroups = realGroups.filter(
+    (g) => (g.standings || []).length === 4 && g.standings.every((s) => (s.played ?? 0) >= 1),
+  ).length;
   return {
     phase: ph,
     decided: !!race.decided,
@@ -617,5 +624,6 @@ export function bestThirdRace(data) {
     ranked,
     locked,
     contested,
+    roundCompleteGroups,
   };
 }
