@@ -9224,7 +9224,7 @@
             "goals_against": 0,
             "goal_difference": 0,
             "points": 0,
-            "advance_state": "best_third_in",
+            "advance_state": "best_third_out",
             "band": "amber",
             "decided": false
           },
@@ -10032,18 +10032,7 @@
       "decided": false,
       "qualify_count": 8,
       "note": "Best-third race not yet decided — it is final only once all 12 groups finish; the order below is provisional from results so far.",
-      "ranked": [
-        {
-          "code": "CZE",
-          "group": "A",
-          "points": 0,
-          "goal_difference": 0,
-          "goals_for": 0,
-          "rank": 1,
-          "in_best_8": true,
-          "group_complete": false
-        }
-      ]
+      "ranked": []
     }
   },
   "knockout_paths": [
