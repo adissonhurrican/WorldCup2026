@@ -103,6 +103,27 @@ function loadRealStandings(): any | null {
   return null;
 }
 
+// Completed results per group, from the SAME export the real table comes from. Feeds the partial-group
+// narration state ("Mexico beat South Africa in the opener") for teams still awaiting their own game.
+// Graceful: absent/odd file -> {} -> no group_so_far context, never fabricated.
+function loadGroupResultsSoFar(): Record<string, { label: string; home: string; away: string; score: string }[]> {
+  try {
+    for (const rel of ["data/exports/app-data.json", "ui/app-data.json"]) {
+      const fp = path.join(rootDir, rel);
+      if (!existsSync(fp)) continue;
+      const j = JSON.parse(readFileSync(fp, "utf8"));
+      const out: Record<string, { label: string; home: string; away: string; score: string }[]> = {};
+      for (const f of j.fixtures ?? []) {
+        const r = f?.result;
+        if (!f?.group || !r || r.home_score == null || r.away_score == null) continue;
+        (out[f.group] ??= []).push({ label: `${f.home} ${r.home_score}-${r.away_score} ${f.away}`, home: f.home, away: f.away, score: `${r.home_score}-${r.away_score}` });
+      }
+      return out;
+    }
+  } catch { /* graceful */ }
+  return {};
+}
+
 // SINGLE SOURCE OF TRUTH: resolve the live runs from the SAME pointer file the export reads first
 // (data/exports/live-runs-pointer.json), so the narration describes exactly the run the app ships.
 // Falls back to null -> the DB lifecycle markers (the export's own fallback), keeping both in lockstep.
@@ -120,21 +141,51 @@ function readLivePointer(): { gsim: string; ko: string } | null {
 // Derive the team's REAL group table + its cross-group best-third rank/margin from the resolver output.
 // All values are surfaced verbatim from real_standings (positions, P/W/D/L/GF/GA/GD/Pts) and best_third_race.ranked
 // (the team's rank, in_best_8, and margin to the 8th/9th cut line). No recompute. Pre-tournament -> started:false.
-export function realContextForTeam(real: any | null, code: string, group: string) {
+export function realContextForTeam(real: any | null, code: string, group: string, groupResultsSoFar?: Record<string, any[]>) {
   if (!real || real.status === "not_started" || (real.results_counted ?? 0) === 0) {
     return { started: false, status: real?.status ?? "unknown" };
   }
   const grp = (real.groups ?? []).find((g: any) => g.group === group);
+  const groupGames = grp?.games_played ?? 0;
+  const resultsSoFar = (groupResultsSoFar?.[group] ?? []).map((r: any) => r.label ?? r);
   // PER-TEAM gate (mirrors the display's third-place-race gate in standings-core): a team has a
   // CURRENT standing only once IT has played. Before that, its row sits in a FIFA-seeded fallback
   // order (e.g. QAT above BIH in an unplayed Group B) with position:null — and handing that table
   // to the model as "real standings" invites a fabricated current position (the system prompt says
-  // to state the CURRENT standing whenever a table is supplied). started:false -> the prompt's
-  // "group games have not started" sim framing. NEVER substitute predicted standings as current.
+  // to state the CURRENT standing whenever a table is supplied). started:false -> sim framing.
+  // NEVER substitute predicted standings as current.
+  // PARTIAL-GROUP refinement: when the team is unplayed but SOME group games HAVE finished, supply
+  // awaiting_opener (what happened so far) so the prose can acknowledge the group's real events
+  // WITHOUT claiming a standing for this team — "group hasn't started" would be false now.
   const meRow = (grp?.standings ?? []).find((r: any) => r.code === code);
   if (!meRow || (meRow.played ?? 0) === 0) {
-    return { started: false, status: real.status, team_played: 0 };
+    const base = { started: false, status: real.status, team_played: 0 };
+    if (groupGames > 0) {
+      return {
+        ...base,
+        awaiting_opener: {
+          group_games_played: groupGames,
+          results_so_far: resultsSoFar,
+          note: "This team has NOT played yet, but the group HAS begun — acknowledge the results so far; never claim a current position for this team and never say the group has not started.",
+        },
+      };
+    }
+    return base;
   }
+  // The team HAS played: surface the asymmetry of the group (who still hasn't played / round state)
+  // so the prose can present its position as PROVISIONAL while rivals have games in hand.
+  const playedCounts = (grp?.standings ?? []).map((r: any) => r.played ?? 0);
+  const roundComplete = playedCounts.length > 0 && Math.min(...playedCounts) === Math.max(...playedCounts);
+  const rivalsYetToPlay = (grp?.standings ?? []).filter((r: any) => r.code !== code && (r.played ?? 0) < (meRow.played ?? 0)).map((r: any) => r.code);
+  const groupProgress = {
+    round_complete: roundComplete,
+    group_games_played: groupGames,
+    rivals_yet_to_play: rivalsYetToPlay,
+    results_so_far: resultsSoFar,
+    note: roundComplete
+      ? "Every team in the group has played the same number of games — the table is a settled after-round picture."
+      : "The group round is INCOMPLETE — the named rivals still have games in hand; present this team's position as provisional (the table will move when they play), and frame any rival's chances as 'heading into their game', never as a settled standing.",
+  };
   const groupTable = (grp?.standings ?? []).map((r: any) => ({
     team_code: r.code, rank: r.position, points: r.points, played: r.played, won: r.won, drawn: r.drawn, lost: r.lost,
     goals_for: r.goals_for, goals_against: r.goals_against, goal_difference: r.goal_difference,
@@ -168,7 +219,7 @@ export function realContextForTeam(real: any | null, code: string, group: string
       provisional_note: race.decided === true ? "Best-third places are final." : "Best-third order is provisional until all 12 groups finish.",
     };
   }
-  return { started: true, status: real.status, decided: race.decided === true, position, groupTable, bestThird };
+  return { started: true, status: real.status, decided: race.decided === true, position, groupTable, bestThird, group_progress: groupProgress };
 }
 
 // MOCK resolved best-third standing (for --preview --mock-real before real verified results exist): the team sits 3rd,
@@ -325,9 +376,13 @@ export function buildScenarioInput(teamCode: string, teamName: string, group: st
     : { standings_source_id: null, groups: [] as any[] };
   const realTableStatus = realStarted ? (realCtx.status ?? "in_progress") : "not_started";
   const bestThirdStanding = (realStarted && realCtx.bestThird) ? { source_id: "the-real-best-third-race", ...realCtx.bestThird } : null;
+  const awaitingOpener = !realStarted && realCtx?.awaiting_opener ? realCtx.awaiting_opener : null;
+  const groupProgress = realStarted && realCtx?.group_progress ? realCtx.group_progress : null;
   const realUnknowns = realStarted
     ? (realCtx.bestThird ? [] : ["This team is not currently third in its group, so it is not in the best-third race right now."])
-    : ["No real group standings yet — group games have not started, so the best-third race has not begun."];
+    : (awaitingOpener
+      ? [`This team has not played yet, but its group HAS begun (${awaitingOpener.results_so_far.join("; ") || "results pending"}) — acknowledge those results; do not claim a current position for this team and do not say the group has not started.`]
+      : ["No real group standings yet — group games have not started, so the best-third race has not begun."]);
 
   return {
     request_id: `scenario-${teamCode}`,
@@ -336,7 +391,7 @@ export function buildScenarioInput(teamCode: string, teamName: string, group: st
     output_requirements: { schema_version: "ai_analysis_v1", length_target_words: { min: 100, max: 200 }, tone: "warm, plain-spoken, light earned sporting drama (no hype/clichés), grounded, non-betting", must_return_json_only: true },
     source_runs: [{ source_run_id: "group-stage-simulation", run_type: "group_simulation", scope: "group stage", review_status: "live", current_best: false, notes: "the group-stage tournament simulation" }],
     probabilities,
-    scenario_data: { scenario_source_id: "the-2026-advancement-rules", team_code: teamCode, scenario_type: "what_team_needs", group_context: groupCtx ?? null, deterministic_rules_source_id: "the-2026-advancement-rules", paths, certain_statements, deterministic_mode, deterministic_engine: deterministic_mode === "concrete_chains" ? "Final-matchday crisp margin tiers + cross-group thresholds supplied by the deterministic 2026 qualification scenario engine. Translate these as-is; do not invent." : "Crisp final-matchday chains not available yet (earlier round) — use the probabilistic routes plus the sound point-bound certainties.", real_table_status: realTableStatus, best_third_standing: bestThirdStanding, real_standing_note: bestThirdStanding ? "Where the team stands NOW in the cross-group third-place race, from the real verified table. State this current rank and margin as deterministic fact; it complements (does not replace) the probabilities and the what-they-need routes." : (realStarted ? "Real table has results, but this team is not currently third — its position is in the standings block." : "No real standings yet (pre-tournament)."), tiebreaker_notes: [{ rule: "Group ranking uses the 2026 rules: points, then head-to-head, then goal difference, then goals scored, then fair play, then FIFA ranking", source_id: "the-2026-advancement-rules" }], unknowns: [...realUnknowns] },
+    scenario_data: { scenario_source_id: "the-2026-advancement-rules", team_code: teamCode, scenario_type: "what_team_needs", group_context: groupCtx ?? null, deterministic_rules_source_id: "the-2026-advancement-rules", paths, certain_statements, deterministic_mode, deterministic_engine: deterministic_mode === "concrete_chains" ? "Final-matchday crisp margin tiers + cross-group thresholds supplied by the deterministic 2026 qualification scenario engine. Translate these as-is; do not invent." : "Crisp final-matchday chains not available yet (earlier round) — use the probabilistic routes plus the sound point-bound certainties.", real_table_status: realTableStatus, awaiting_opener: awaitingOpener, group_progress: groupProgress, best_third_standing: bestThirdStanding, real_standing_note: bestThirdStanding ? "Where the team stands NOW in the cross-group third-place race, from the real verified table. State this current rank and margin as deterministic fact; it complements (does not replace) the probabilities and the what-they-need routes." : (realStarted ? "Real table has results, but this team is not currently third — its position is in the standings block." : "No real standings yet (pre-tournament)."), tiebreaker_notes: [{ rule: "Group ranking uses the 2026 rules: points, then head-to-head, then goal difference, then goals scored, then fair play, then FIFA ranking", source_id: "the-2026-advancement-rules" }], unknowns: [...realUnknowns] },
     fixtures: [], standings: standingsBlock,
     team_context: [{ team_code: teamCode, team_name: teamName, team_strength: { source_id: null, score: null, confidence: "unknown", caveat: "context only" }, player_impact: { source_id: null, summary: null, confidence: "unknown", caveat: null }, tactical_profile: { source_id: null, base_snapshot_id: null, review_status: "unknown", confidence: "unknown", usable_fields: { formation_primary: "unknown", pressing_intensity: "unknown", build_up_style: "unknown", defensive_block_depth: "unknown", set_piece_strength: "unknown", transition_style: "unknown", attacking_width: "unknown" }, source_urls: [], caveat: "no signal" } }],
     contextual_inputs: { venue: [], weather: [], news_and_injuries: [] },
@@ -355,7 +410,10 @@ export const USER_MSG = (input: any, max: number) => [
   "GROUP CONTEXT (add ONE or TWO sentences): Using scenario_data.group_context, place this team within its group — are they clear at the top, in a tight cluster, chasing, or scrapping at the bottom — and NAME the closest rival(s) by team name (see nearest_rival_above / nearest_rival_below / close_rivals). Follow group_context.shape and group_context.guidance, and calibrate to the REAL gap: a NARROW gap → convey a tight race and name who's close ('Germany right on their heels'); a CLEAR gap → say they're comfortably ahead / well off the pace and do NOT manufacture a race that isn't there. Keep it light — 'right behind', 'neck and neck', 'well clear' — one comparative figure is fine if it adds punch ('Germany right on their heels at 77%').",
   "Ground EVERY percentage you state in the SUPPLIED input — the 'probabilities' array for this team AND scenario_data.group_context for any rival figure. Do NOT invent, combine, or derive any new percentage, including a rival's. If a rival number isn't in group_context, describe the gap in words instead.",
   "Cover, in plain language: the team's chance to reach the knockouts, whether their main route is finishing top two (their own results) or leaning on the best-third back door, and what they need.",
-  "If the input supplies a real group table (standings) and scenario_data.best_third_standing, state the team's CURRENT standing — its real group position and, when present, its best-third rank and margin to the cut-off (e.g. 'currently the 6th-best third, two points above the cut') — kept plain and accurate, as facts that COMPLEMENT the chances. If no real standings are supplied, say the group games have not started — but keep it warm; never invent a standing.",
+  "If the input supplies a real group table (standings) and scenario_data.best_third_standing, state the team's CURRENT standing — its real group position and, when present, its best-third rank and margin to the cut-off (e.g. 'currently the 6th-best third, two points above the cut') — kept plain and accurate, as facts that COMPLEMENT the chances. If no real standings are supplied AND scenario_data.awaiting_opener is absent, say the group games have not started — but keep it warm; never invent a standing.",
+  "PARTIAL GROUP — TEAM HAS PLAYED (scenario_data.group_progress present with round_complete=false): acknowledge the team's result and provisional position, AND name the rivals_yet_to_play as still to play — make clear the table will move once they do. NEVER present this provisional standing as settled, and frame any rival's chance as 'heading into their opener/next game', never as a settled position.",
+  "AWAITING OPENER (scenario_data.awaiting_opener present — this team has NOT played, but some group games HAVE finished): say the team is awaiting its opening game AND briefly acknowledge what has already happened using results_so_far (e.g. 'Mexico opened with a 2-0 win over South Africa'). Do NOT say the group has not started, and do NOT claim any current position, points, or rank for THIS team — it has none yet.",
+  "ROUND COMPLETE (scenario_data.group_progress.round_complete=true): every team has played the same number of games — describe the table as the genuine after-round picture (positions, points), still noting the group is not finished until all three rounds are played.",
   "Plain language, non-betting. No model names, run IDs, table names, version tags, or internal jargon. Real people only as on-pitch facts.",
   "Required JSON fields: content_type, headline, body, probability_references, source_trace, context_caveats, unknowns, validation_notes.",
   `Keep the body within ${max} words.`,
@@ -450,6 +508,7 @@ async function main() {
   } catch { condByCode = {}; }
   // STEP 3 — REAL best-third resolver output (real_standings from the export). Graceful: absent -> null -> no augmentation.
   const real = loadRealStandings();
+  const groupResultsSoFar = loadGroupResultsSoFar();
   const teamList = (teams.length === 1 && teams[0] === "ALL") ? Object.keys(scen as any).sort() : teams;
   const koRows = q(url, `select team_code, reach_round_of_16_probability::float8 r16, champion_probability::float8 ch from tournament_simulation_team_results where simulation_run_id='${live.ko}'`);
   const koByCode: Record<string, any> = {}; for (const r of koRows) koByCode[r.team_code] = r;
@@ -461,7 +520,7 @@ async function main() {
     const code = (arg("--preview") ?? "CAN").toUpperCase();
     const s = (scen as any)[code] ?? { group_code: "?", probabilities: {}, what_they_need: [], third_place_dependency: {} };
     const cond = has("--mock-crisp") ? MOCK_CRISP(code) : condByCode[code];
-    const realCtx = has("--mock-real") ? MOCK_REAL(code, s.group_code ?? "?") : realContextForTeam(real, code, s.group_code ?? "?");
+    const realCtx = has("--mock-real") ? MOCK_REAL(code, s.group_code ?? "?") : realContextForTeam(real, code, s.group_code ?? "?", groupResultsSoFar);
     const groupCtx = buildGroupContext(scen, nameByCode, code, s.group_code ?? "?");
     const input = buildScenarioInput(code, nameByCode[code] ?? code, s.group_code ?? "?", s, koByCode[code], cond, realCtx, groupCtx);
     const sd: any = (input as any).scenario_data;
@@ -498,7 +557,7 @@ async function main() {
     i++;
     const s = (scen as any)[code]; if (!s) { results.push({ team: code, status: "no_scenario_data" }); continue; }
     const groupCtx = buildGroupContext(scen, nameByCode, code, s.group_code);
-    const input = buildScenarioInput(code, nameByCode[code] ?? code, s.group_code, s, koByCode[code], condByCode[code], realContextForTeam(real, code, s.group_code), groupCtx);
+    const input = buildScenarioInput(code, nameByCode[code] ?? code, s.group_code, s, koByCode[code], condByCode[code], realContextForTeam(real, code, s.group_code, groupResultsSoFar), groupCtx);
     let raw = "", vr: any = null, attempts = 0, genErr = "";
     for (attempts = 1; attempts <= 3; attempts++) {
       try { raw = await callGemini(apiKey, model, systemPrompt, USER_MSG(input, attempts >= 2 ? 175 : 195)); }
@@ -522,6 +581,8 @@ async function main() {
   console.log(JSON.stringify({ project_id: PROJECT, executed: execute, model, gemini_token_usage: { ...geminiTokenStats, implicit_cache_hit_pct: cacheHitPct }, summary: results.map((r) => ({ team: r.team, status: r.status, words: r.body_words, repaired: r.repaired })), guardrails: { ai_explains_never_invents: true, validate_and_repair_gated: true, only_validated_stored: true, no_internal_ids_in_prose: true, no_odds_or_predictions: true } }, null, 2));
   const can = results.find((r) => r.team === "CAN");
   if (can) console.log("\n=== CANADA scenario narration (traceable to the live runs) ===\n" + JSON.stringify(can, null, 2));
+  // Dry-runs exist to VERIFY prose (no DB write) — print it, so partial-group/coherence checks can read the output.
+  if (!execute) for (const r of results) console.log(`\n=== ${r.team} dry-run prose ===\nHEADLINE: ${r.headline}\n${r.body}`);
 }
 // Run main() only when invoked directly (not when imported by the test harness), so importing has no side effects.
 const invokedDirectly = !!process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1]);

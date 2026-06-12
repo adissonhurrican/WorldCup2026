@@ -1,6 +1,7 @@
 import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
+import { computeAffectedNarrationTeams } from "./narration-affected-teams";
 
 // IN-TOURNAMENT AUTOMATIC RE-RUN LOOP (scheduler-driven). INTEGRATION ONLY — reuses the existing pieces
 // (result ingester, orchestrator, dynamic-draw predictor, K=60 Elo engine, group sim, knockout MC, live
@@ -516,13 +517,25 @@ async function liveCycle(args: ReturnType<typeof parseArgs>) {
   let squads = { status: "skipped" as StepStatus, detail: "held - squad rebuild runs on published cycles only" };
   if (published) {
     // ORDERING (double-export): EXPORT writes real_standings (the live best-third the generator reads) BEFORE
-    // narration; then NARRATION (AI-last, Phase 6) regenerates all 48; then RE-EXPORT embeds the fresh prose.
+    // narration; then NARRATION (AI-last, Phase 6) regenerates the AFFECTED teams (Option D); then RE-EXPORT
+    // embeds the prose. SCOPING: snapshot the PREVIOUS committed app-data before the export overwrites it, then
+    // diff to find teams whose narration inputs actually changed (group result / best-third change / rounded-%
+    // crossing). FAIL-OPEN: any doubt -> ALL (the prior behavior). See narration-affected-teams.ts.
+    let prevAppData: any = null;
+    try { prevAppData = JSON.parse(readFileSync(abs("data/exports/app-data.json"), "utf8")); } catch { /* fail-open */ }
     console.log("\nEXPORT (1/2) - production app-data incl. fresh real_standings (live best-third) BEFORE narration");
     exp = runProductionExport(export_built, forceExportFail);
     log("EXPORT", `export_status=${exp.status}`, exp.status === "ok", exp.detail);
 
-    console.log("\nPHASE 3 (Phase 6) - AI scenario_narration regeneration (--execute --teams ALL; best-effort, non-blocking)");
-    narration = runNarration(narration_built, { execute: true, forceFail: forceNarrationFail, teams: "ALL" });
+    let narrTeams = "ALL";
+    try {
+      const nextAppData = JSON.parse(readFileSync(abs("data/exports/app-data.json"), "utf8"));
+      const affected = computeAffectedNarrationTeams(prevAppData, nextAppData);
+      if (affected && affected.length) narrTeams = affected.join(",");
+    } catch { /* fail-open -> ALL */ }
+    const scopeLabel = narrTeams === "ALL" ? "ALL [fail-open]" : `${narrTeams} [affected-set ${narrTeams.split(",").length}/48]`;
+    console.log(`\nPHASE 3 (Phase 6) - AI scenario_narration regeneration (--execute --teams ${scopeLabel}; best-effort, non-blocking)`);
+    narration = runNarration(narration_built, { execute: true, forceFail: forceNarrationFail, teams: narrTeams });
     log("AI", `narration_status=${narration.status}`, narration.status !== "failed" && narration.status !== "not_built", narration.detail);
 
     if (narration.status === "ok" && exp.status === "ok") {

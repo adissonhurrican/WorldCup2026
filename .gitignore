@@ -78,6 +78,7 @@ scripts/**
 !scripts/worldcup/export/build-squads-json.mjs
 !scripts/worldcup/export/result-join.ts
 !scripts/worldcup/live/in-tournament-loop-runner.ts
+!scripts/worldcup/live/narration-affected-teams.ts
 !scripts/worldcup/live/live-update-orchestrator.ts
 !scripts/worldcup/live/run-supervised-loop-cron.mjs
 !scripts/worldcup/live/write-live-scores.ts
