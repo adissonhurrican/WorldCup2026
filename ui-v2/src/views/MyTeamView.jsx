@@ -13,6 +13,8 @@ import {
 
 const TABS = ["Overview", "Standing", "Path", "Squad"];
 const UPDATE_TIMING_NOTE = "Numbers update within about 15 minutes after a match finishes. Refresh to see the latest.";
+// Visible card variant of the same promise (keep the ~15-min figure in sync with UPDATE_TIMING_NOTE).
+const CARD_TIMING_NOTE = "Numbers and AI analysis update within about 15 minutes after each match finishes, as the model recalculates with the verified result.";
 
 const NUMBER_INFO = {
   advance: `The chance this team reaches the knockout stage, based on 20,000 tournament simulations. ${UPDATE_TIMING_NOTE}`,
@@ -151,7 +153,7 @@ function AboveTabs({ data, code }) {
           <h4 className="text-[16px] font-bold leading-snug tracking-tight">{narr.headline}</h4>
           <p className="mt-2 text-[14px] leading-relaxed text-ink-2">{narr.body}</p>
           <p className="mt-3 text-[12px] text-ink-3">
-            AI summary of {data.meta?.model_label || "the simulation model"}’s output — it explains the numbers above, it doesn’t add data.
+            AI summary of {data.meta?.model_label || "the simulation model"}’s output — it explains the numbers above, it doesn’t add data. {CARD_TIMING_NOTE}
           </p>
         </Card>
       )}
