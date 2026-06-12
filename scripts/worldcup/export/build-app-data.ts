@@ -3,6 +3,7 @@ import { copyFileSync, existsSync, mkdirSync, writeFileSync, readFileSync } from
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { buildRealStandings, type TeamInfo, type ResultInput } from "../standings-core";
+import { computeFairPlayPoints, loadTeamCodeByApiId, FAIRPLAY_CARD_SQL } from "../fairplay-points";
 import { ALL_TEAMS, teamGroup } from "../advancement-scenario-core";
 import type { Aux } from "../tiebreaker-ladders-2026";
 import { buildProjectedFinishers, resolveTeamPath, type KnockoutRow, type SimFinishRow } from "../knockout-path-core";
@@ -248,9 +249,13 @@ async function main() {
   // (fm.external_fixture_id == match_results.api_football_fixture_id), code-pair fallback;
   // goals mapped by team code into each fixture's orientation. See result-join.ts.
   const resultLookup = buildResultLookup(verifiedRows.map((r: any) => ({ a: r.a, b: r.b, ga: num(r.ga), gb: num(r.gb), afid: r.afid ?? null })));
-  const frRows = q(url, `select team_code, fifa_rank from fifa_world_rankings where ranking_snapshot_date='2026-04-01'`);
+  const frRows = q(url, `select team_code, fifa_rank from fifa_world_rankings where ranking_snapshot_date='2026-06-11'`);
   const realFifa: Record<string, number> = {}; for (const r of frRows) realFifa[r.team_code] = num(r.fifa_rank);
-  const realAux: Aux = { fairPlay: {}, fifaRank: realFifa };
+  // Fair play (criterion d) from REAL ingested cards — previously {} (inert), which skipped the
+  // conduct tiebreaker on an exact pts+GD+GF tie at the cut. Graceful: a failed load -> {} (old behavior).
+  let realFairPlay: Record<string, number> = {};
+  try { realFairPlay = computeFairPlayPoints(q(url, FAIRPLAY_CARD_SQL), loadTeamCodeByApiId()); } catch { /* inert fallback */ }
+  const realAux: Aux = { fairPlay: realFairPlay, fifaRank: realFifa };
 
   // ---- group map + matchday (from kickoff dates, per group) ----
   const teamGroup: Record<string, string> = {}; for (const r of gs) teamGroup[r.team_code] = r.group_code;

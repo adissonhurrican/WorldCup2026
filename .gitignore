@@ -71,6 +71,7 @@ scripts/**
 !scripts/worldcup/live-group-stage-bracket-resimulation-consumer.ts
 !scripts/worldcup/load-knockout-schedule.ts
 !scripts/worldcup/log-frozen-vs-learned-knockout.ts
+!scripts/worldcup/fairplay-points.ts
 !scripts/worldcup/standings-core.ts
 !scripts/worldcup/tiebreaker-ladders-2026.ts
 !scripts/worldcup/worldcup-regulations-engine.ts

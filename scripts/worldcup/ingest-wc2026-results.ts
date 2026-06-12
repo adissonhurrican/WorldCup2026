@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { rankGroup, type Standing, type GroupMatch, type Aux } from "./tiebreaker-ladders-2026";
+import { computeFairPlayPoints, type CardEventRow } from "./fairplay-points";
 
 type SupabaseConfig = {
   restUrl: string;
@@ -1300,7 +1301,18 @@ async function main() {
     const frRows = await supabaseRequest<{ team_code: string; fifa_rank: number }[]>(config, "fifa_world_rankings", { search: "?select=team_code,fifa_rank&ranking_snapshot_date=eq.2026-06-11" });
     for (const r of frRows) standingsFifaRank[r.team_code] = Number(r.fifa_rank);
   } catch (e) { warnings.push(`fifa_world_rankings load failed; standings ranked without the FIFA tiebreaker: ${(e as Error)?.message ?? e}`); }
-  const standingsAux: Aux = { fairPlay: {}, fifaRank: standingsFifaRank };
+  // Fair play (criterion d) from REAL ingested cards, scoped to VERIFIED finished fixtures (stray
+  // event rows never count). Graceful: a failed load -> {} (the previous inert behavior).
+  let standingsFairPlay: Record<string, number> = {};
+  try {
+    const cardRows = await supabaseRequest<CardEventRow[]>(config, "api_football_fixture_events", { search: "?select=fixture_id,team_id,player_id,player_name,event_detail&event_type=ilike.card&review_status=not.eq.rejected" });
+    const finishedRows = await supabaseRequest<{ api_football_fixture_id: number }[]>(config, "match_results", { search: "?select=api_football_fixture_id&match_status=eq.finished&api_football_fixture_id=not.is.null" });
+    const finished = new Set(finishedRows.map((r) => String(r.api_football_fixture_id)));
+    standingsFairPlay = computeFairPlayPoints(cardRows.filter((r) => finished.has(String(r.fixture_id))), PROVIDER_TEAM_CODE_BY_API_ID);
+  } catch (e) {
+    warnings.push(`fair-play load failed; conduct tiebreaker inert this run: ${(e as Error)?.message ?? e}`);
+  }
+  const standingsAux: Aux = { fairPlay: standingsFairPlay, fifaRank: standingsFifaRank };
   const standingsRows = deriveStandings(teams, fixtureMetadata, preparedResults, standingsAux);
 
   if (args.execute) {
