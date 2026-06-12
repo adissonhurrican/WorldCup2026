@@ -570,3 +570,7 @@
 .eleven-drawer-foot { color: #8a7d57; border-color: rgba(255, 255, 255, 0.08); }
 .eleven-drawer-foot a { color: #a99a6a; transition: color var(--dur-glass) var(--ease-glass); }
 .eleven-drawer-foot a:hover { color: var(--gold-200); }
+
+/* hide the horizontal scrollbar on the DateStrip (touch scrolling unaffected) */
+.scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }

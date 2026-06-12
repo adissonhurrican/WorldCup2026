@@ -298,27 +298,53 @@ export function fixtureDayLabel(fx) {
   return `${WD[d.getDay()]} ${MON[d.getMonth()]} ${d.getDate()}`;
 }
 
+// VIEWER-LOCAL day-bucket key for a fixture — THE single keying used by fixturesByDay, dateOptions
+// and the DateStrip chips, so the calendar can never drift from the list's buckets. null = undated.
+export function dayKeyOf(fx) {
+  const iso = fx && (fx.kickoff_utc || fx.kickoff);
+  const d = iso ? new Date(iso) : null;
+  if (!d || Number.isNaN(d.getTime())) return null;
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+// Match-day options for the Matches-tab DateStrip (the cityOptions pattern, keyed by dayKeyOf):
+// one entry per VIEWER-LOCAL day that has at least one dated fixture (group or knockout) — rest
+// days simply don't exist here. [{ key, label, count }], chronological. Undated knockout slot
+// cards are excluded (they stay in their round sections under "All").
+export function dateOptions(data) {
+  const m = new Map();
+  for (const fx of data.fixtures || []) {
+    const key = dayKeyOf(fx);
+    if (!key) continue;
+    const e = m.get(key) || { key, label: fixtureDayLabel(fx) || key, count: 0 };
+    e.count += 1;
+    m.set(key, e);
+  }
+  return [...m.values()].sort((a, b) => a.key.localeCompare(b.key));
+}
+
 // `cityFilter` (optional) narrows to fixtures at that host city, reusing the venue feature's
 // per-fixture `city` field (the same mapping the venue card uses) — null/"" = all cities (unchanged).
-export function fixturesByDay(data, cityFilter = null) {
+// `dateFilter` (optional) narrows to one viewer-local match day (a dayKeyOf key from dateOptions);
+// it COMPOSES with cityFilter (both are predicates over the same list). With a dateFilter set,
+// DATED knockout fixtures matching that day are included (in their round section) and undated
+// slot-rounds are excluded; with no dateFilter, knockout behavior is unchanged.
+export function fixturesByDay(data, cityFilter = null, dateFilter = null) {
   const days = new Map();
   for (const fx of data.fixtures || []) {
     if (cityFilter && fx.city !== cityFilter) continue;
     // Knockout fixtures (slot-based, no teams) group by ROUND, in one section each, keyed 'zzN' so they
     // sort AFTER every group-stage day. Label carries the round + its date window (e.g. "Round of 32 · Jun 28 – Jul 3").
     if (isKnockoutFixture(fx)) {
+      if (dateFilter && dayKeyOf(fx) !== dateFilter) continue;
       const key = `zz${fx.round_order || 9}`;
       const label = fx.round_window_label ? `${fx.round} · ${fx.round_window_label}` : (fx.round || "Knockouts");
       if (!days.has(key)) days.set(key, { key, label, items: [] });
       days.get(key).items.push(fx);
       continue;
     }
-    const iso = fx.kickoff_utc || fx.kickoff;
-    const d = iso ? new Date(iso) : null;
-    const valid = d && !Number.isNaN(d.getTime());
-    const key = valid
-      ? `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
-      : "zzzz";
+    const key = dayKeyOf(fx) ?? "zzzz";
+    if (dateFilter && key !== dateFilter) continue;
     const label = fixtureDayLabel(fx) || "Date TBC";
     if (!days.has(key)) days.set(key, { key, label, items: [] });
     days.get(key).items.push(fx);
