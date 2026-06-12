@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-12T04:03:03.095Z",
+  "generated_at": "2026-06-12T05:46:47.616Z",
   "source": "WC2026 confirmed squads from the DB (players + API-Football squad fields + player_status_events). Display-only; never a model/prediction input.",
   "note": "Per-player status (goals/assists/cards/minutes) fills from api_football_fixture_player_stats as WC matches are played; 0 until then. availability (out/doubtful/suspended) comes from player_status_events (latest tournament-scope, non-rejected) and carries review_status — pending seeds are shown but flagged. Missing club/age/number are null (the UI omits them). Player-card bio (api_player_id, photo[derived URL], dob, nationality, height_cm, weight_kg, birth_place, birth_country) is ADDITIVE and only populated where backfilled (Canada first); the current squad card ignores these keys.",
   "coverage": {
     "teams": 48,
     "players": 1248,
-    "with_number": 1214,
-    "with_club": 937,
-    "with_age": 1209,
+    "with_number": 1212,
+    "with_club": 935,
+    "with_age": 1207,
     "with_availability_flag": 2,
     "with_nationality": 1214,
     "with_dob": 1213,
@@ -9846,12 +9846,12 @@
         "birth_country": "Bosnia and Herzegovina"
       },
       {
-        "name": "Nidal Čelik",
+        "name": "A. Malić",
         "position": "Defender",
         "position_group": "DEF",
-        "number": 24,
-        "club": "Lens",
-        "age": 19,
+        "number": null,
+        "club": null,
+        "age": null,
         "status": {
           "goals": 0,
           "assists": 0,
@@ -9859,14 +9859,14 @@
           "red": 0,
           "minutes": 0
         },
-        "api_player_id": 395589,
-        "photo": "https://media.api-sports.io/football/players/395589.png",
-        "dob": "2006-07-17",
-        "nationality": "Bosnia and Herzegovina",
-        "height_cm": 189,
-        "weight_kg": null,
-        "birth_place": null,
-        "birth_country": "Bosnia and Herzegovina"
+        "api_player_id": 409670,
+        "photo": "https://media.api-sports.io/football/players/409670.png",
+        "dob": "2005-08-28",
+        "nationality": "Slovenia",
+        "height_cm": 186,
+        "weight_kg": 70,
+        "birth_place": "Jesenice",
+        "birth_country": "Slovenia"
       },
       {
         "name": "Benjamin Tahirović",
@@ -20276,12 +20276,12 @@
         "birth_country": "Germany"
       },
       {
-        "name": "L. Karl",
+        "name": "A. Ouédraogo",
         "position": "Midfielder",
         "position_group": "MID",
-        "number": 25,
-        "club": "Bayern München",
-        "age": 17,
+        "number": null,
+        "club": null,
+        "age": null,
         "status": {
           "goals": 0,
           "assists": 0,
@@ -20289,13 +20289,13 @@
           "red": 0,
           "minutes": 0
         },
-        "api_player_id": 494131,
-        "photo": "https://media.api-sports.io/football/players/494131.png",
-        "dob": "2008-02-22",
+        "api_player_id": 380978,
+        "photo": "https://media.api-sports.io/football/players/380978.png",
+        "dob": "2006-05-09",
         "nationality": "Germany",
-        "height_cm": 168,
-        "weight_kg": 67,
-        "birth_place": "Frammersbach",
+        "height_cm": 191,
+        "weight_kg": 84,
+        "birth_place": "Mülheim an der Ruhr",
         "birth_country": "Germany"
       },
       {
