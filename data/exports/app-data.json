@@ -5167,7 +5167,14 @@
           "H",
           "I",
           "B"
-        ]
+        ],
+        "needs": "Finishing 3rd, ALG advances in ~63% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#28) vs other groups' thirds (most often A/C/H/I/B).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 3,
+          "beats_rival_if": "ALG overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 28)"
+        }
       }
     },
     {
@@ -5227,7 +5234,14 @@
           "D",
           "K",
           "G"
-        ]
+        ],
+        "needs": "Finishing 3rd, ARG advances in ~74% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#3) vs other groups' thirds (most often A/E/D/K/G).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 4,
+          "beats_rival_if": "ARG overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 3)"
+        }
       }
     },
     {
@@ -5287,7 +5301,14 @@
           "L",
           "E",
           "I"
-        ]
+        ],
+        "needs": "Finishing 3rd, AUS advances in ~68% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#27) vs other groups' thirds (most often A/H/L/E/I).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 2,
+          "beats_rival_if": "AUS overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 27)"
+        }
       }
     },
     {
@@ -5347,7 +5368,14 @@
           "A",
           "C",
           "I"
-        ]
+        ],
+        "needs": "Finishing 3rd, AUT advances in ~65% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#24) vs other groups' thirds (most often E/B/A/C/I).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "AUT overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 24)"
+        }
       }
     },
     {
@@ -5407,7 +5435,14 @@
           "C",
           "I",
           "L"
-        ]
+        ],
+        "needs": "Finishing 3rd, BEL advances in ~69% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#9) vs other groups' thirds (most often A/B/C/I/L).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "BEL overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 9)"
+        }
       }
     },
     {
@@ -5467,7 +5502,14 @@
           "J",
           "K",
           "D"
-        ]
+        ],
+        "needs": "Finishing 3rd, BIH advances in ~64% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#65) vs other groups' thirds (most often A/H/J/K/D).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "BIH overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 65)"
+        }
       }
     },
     {
@@ -5527,7 +5569,14 @@
           "F",
           "L",
           "E"
-        ]
+        ],
+        "needs": "Finishing 3rd, BRA advances in ~74% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#6) vs other groups' thirds (most often A/B/F/L/E).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 3,
+          "beats_rival_if": "BRA overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 6)"
+        }
       }
     },
     {
@@ -5587,7 +5636,14 @@
           "K",
           "L",
           "C"
-        ]
+        ],
+        "needs": "Finishing 3rd, CAN advances in ~71% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#30) vs other groups' thirds (most often A/E/K/L/C).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "CAN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 30)"
+        }
       }
     },
     {
@@ -5647,7 +5703,14 @@
           "K",
           "J",
           "L"
-        ]
+        ],
+        "needs": "Finishing 3rd, CIV advances in ~65% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#34) vs other groups' thirds (most often A/H/K/J/L).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "CIV overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 34)"
+        }
       }
     },
     {
@@ -5707,7 +5770,14 @@
           "H",
           "G",
           "J"
-        ]
+        ],
+        "needs": "Finishing 3rd, COD advances in ~62% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#46) vs other groups' thirds (most often A/B/H/G/J).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 4,
+          "beats_rival_if": "COD overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 46)"
+        }
       }
     },
     {
@@ -5767,7 +5837,14 @@
           "L",
           "F",
           "B"
-        ]
+        ],
+        "needs": "Finishing 3rd, COL advances in ~71% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#13) vs other groups' thirds (most often A/H/L/F/B).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 2,
+          "beats_rival_if": "COL overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 13)"
+        }
       }
     },
     {
@@ -5827,7 +5904,14 @@
           "E",
           "J",
           "F"
-        ]
+        ],
+        "needs": "Finishing 3rd, CPV advances in ~57% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#69) vs other groups' thirds (most often A/L/E/J/F).",
+        "thresholds": {
+          "min_points": 4,
+          "min_overall_gd": -2,
+          "min_goals_for": 5,
+          "beats_rival_if": "CPV overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 69)"
+        }
       }
     },
     {
@@ -5887,7 +5971,14 @@
           "J",
           "E",
           "K"
-        ]
+        ],
+        "needs": "Finishing 3rd, CRO advances in ~72% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#11) vs other groups' thirds (most often H/A/J/E/K).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 3,
+          "beats_rival_if": "CRO overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 11)"
+        }
       }
     },
     {
@@ -5947,7 +6038,14 @@
           "J",
           "G",
           "F"
-        ]
+        ],
+        "needs": "Finishing 3rd, CUW advances in ~58% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#82) vs other groups' thirds (most often A/K/J/G/F).",
+        "thresholds": {
+          "min_points": 4,
+          "min_overall_gd": -2,
+          "min_goals_for": 5,
+          "beats_rival_if": "CUW overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 82)"
+        }
       }
     },
     {
@@ -6007,7 +6105,14 @@
           "L",
           "E",
           "K"
-        ]
+        ],
+        "needs": "Finishing 3rd, CZE advances in ~63% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#41) vs other groups' thirds (most often H/G/L/E/K).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": 0,
+          "min_goals_for": 3,
+          "beats_rival_if": "CZE overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 41)"
+        }
       }
     },
     {
@@ -6067,7 +6172,14 @@
           "H",
           "K",
           "L"
-        ]
+        ],
+        "needs": "Finishing 3rd, ECU advances in ~75% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#23) vs other groups' thirds (most often A/G/H/K/L).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 3,
+          "beats_rival_if": "ECU overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 23)"
+        }
       }
     },
     {
@@ -6127,7 +6239,14 @@
           "L",
           "E",
           "C"
-        ]
+        ],
+        "needs": "Finishing 3rd, EGY advances in ~67% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#29) vs other groups' thirds (most often H/A/L/E/C).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 2,
+          "beats_rival_if": "EGY overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 29)"
+        }
       }
     },
     {
@@ -6187,7 +6306,14 @@
           "J",
           "F",
           "D"
-        ]
+        ],
+        "needs": "Finishing 3rd, ENG advances in ~75% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#4) vs other groups' thirds (most often A/H/J/F/D).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 3,
+          "beats_rival_if": "ENG overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 4)"
+        }
       }
     },
     {
@@ -6247,7 +6373,14 @@
           "A",
           "D",
           "J"
-        ]
+        ],
+        "needs": "Finishing 3rd, ESP advances in ~77% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#2) vs other groups' thirds (most often C/L/A/D/J).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 4,
+          "beats_rival_if": "ESP overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 2)"
+        }
       }
     },
     {
@@ -6307,7 +6440,14 @@
           "B",
           "C",
           "D"
-        ]
+        ],
+        "needs": "Finishing 3rd, FRA advances in ~75% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#1) vs other groups' thirds (most often J/H/B/C/D).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 2,
+          "beats_rival_if": "FRA overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 1)"
+        }
       }
     },
     {
@@ -6367,7 +6507,14 @@
           "L",
           "G",
           "K"
-        ]
+        ],
+        "needs": "Finishing 3rd, GER advances in ~74% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#10) vs other groups' thirds (most often A/H/L/G/K).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 3,
+          "beats_rival_if": "GER overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 10)"
+        }
       }
     },
     {
@@ -6427,7 +6574,14 @@
           "F",
           "K",
           "J"
-        ]
+        ],
+        "needs": "Finishing 3rd, GHA advances in ~58% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#74) vs other groups' thirds (most often A/H/F/K/J).",
+        "thresholds": {
+          "min_points": 4,
+          "min_overall_gd": -2,
+          "min_goals_for": 5,
+          "beats_rival_if": "GHA overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 74)"
+        }
       }
     },
     {
@@ -6487,7 +6641,14 @@
           "K",
           "E",
           "F"
-        ]
+        ],
+        "needs": "Finishing 3rd, HAI advances in ~59% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#83) vs other groups' thirds (most often H/A/K/E/F).",
+        "thresholds": {
+          "min_points": 4,
+          "min_overall_gd": -2,
+          "min_goals_for": 5,
+          "beats_rival_if": "HAI overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 83)"
+        }
       }
     },
     {
@@ -6547,7 +6708,14 @@
           "K",
           "L",
           "E"
-        ]
+        ],
+        "needs": "Finishing 3rd, IRN advances in ~68% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#21) vs other groups' thirds (most often A/H/K/L/E).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 2,
+          "beats_rival_if": "IRN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 21)"
+        }
       }
     },
     {
@@ -6607,7 +6775,14 @@
           "B",
           "H",
           "E"
-        ]
+        ],
+        "needs": "Finishing 3rd, IRQ advances in ~60% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#57) vs other groups' thirds (most often A/F/B/H/E).",
+        "thresholds": {
+          "min_points": 4,
+          "min_overall_gd": -2,
+          "min_goals_for": 4,
+          "beats_rival_if": "IRQ overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 57)"
+        }
       }
     },
     {
@@ -6667,7 +6842,14 @@
           "B",
           "F",
           "H"
-        ]
+        ],
+        "needs": "Finishing 3rd, JOR advances in ~63% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#63) vs other groups' thirds (most often A/E/B/F/H).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 4,
+          "beats_rival_if": "JOR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 63)"
+        }
       }
     },
     {
@@ -6727,7 +6909,14 @@
           "H",
           "K",
           "J"
-        ]
+        ],
+        "needs": "Finishing 3rd, JPN advances in ~69% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#18) vs other groups' thirds (most often A/E/H/K/J).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 2,
+          "beats_rival_if": "JPN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 18)"
+        }
       }
     },
     {
@@ -6787,7 +6976,14 @@
           "H",
           "E",
           "B"
-        ]
+        ],
+        "needs": "Finishing 3rd, KOR advances in ~77% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#25) vs other groups' thirds (most often D/J/H/E/B).",
+        "thresholds": {
+          "min_points": 4,
+          "min_overall_gd": -2,
+          "min_goals_for": 2,
+          "beats_rival_if": "KOR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 25)"
+        }
       }
     },
     {
@@ -6847,7 +7043,14 @@
           "I",
           "J",
           "E"
-        ]
+        ],
+        "needs": "Finishing 3rd, KSA advances in ~58% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#61) vs other groups' thirds (most often A/L/I/J/E).",
+        "thresholds": {
+          "min_points": 4,
+          "min_overall_gd": -2,
+          "min_goals_for": 5,
+          "beats_rival_if": "KSA overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 61)"
+        }
       }
     },
     {
@@ -6907,7 +7110,14 @@
           "H",
           "B",
           "E"
-        ]
+        ],
+        "needs": "Finishing 3rd, MAR advances in ~69% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#8) vs other groups' thirds (most often A/J/H/B/E).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 2,
+          "beats_rival_if": "MAR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 8)"
+        }
       }
     },
     {
@@ -6967,7 +7177,14 @@
           "I",
           "D",
           "L"
-        ]
+        ],
+        "needs": "Finishing 3rd, MEX advances in ~83% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#15) vs other groups' thirds (most often E/C/I/D/L).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 2,
+          "beats_rival_if": "MEX overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 15)"
+        }
       }
     },
     {
@@ -7027,7 +7244,14 @@
           "E",
           "I",
           "L"
-        ]
+        ],
+        "needs": "Finishing 3rd, NED advances in ~72% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#7) vs other groups' thirds (most often A/K/E/I/L).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 2,
+          "beats_rival_if": "NED overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 7)"
+        }
       }
     },
     {
@@ -7087,7 +7311,14 @@
           "E",
           "A",
           "B"
-        ]
+        ],
+        "needs": "Finishing 3rd, NOR advances in ~70% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#31) vs other groups' thirds (most often H/K/E/A/B).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 2,
+          "beats_rival_if": "NOR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 31)"
+        }
       }
     },
     {
@@ -7147,7 +7378,14 @@
           "B",
           "I",
           "K"
-        ]
+        ],
+        "needs": "Finishing 3rd, NZL advances in ~63% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#85) vs other groups' thirds (most often A/J/B/I/K).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "NZL overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 85)"
+        }
       }
     },
     {
@@ -7207,7 +7445,14 @@
           "C",
           "H",
           "J"
-        ]
+        ],
+        "needs": "Finishing 3rd, PAN advances in ~65% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#33) vs other groups' thirds (most often A/K/C/H/J).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "PAN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 33)"
+        }
       }
     },
     {
@@ -7267,7 +7512,14 @@
           "C",
           "H",
           "J"
-        ]
+        ],
+        "needs": "Finishing 3rd, PAR advances in ~69% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#40) vs other groups' thirds (most often L/A/C/H/J).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 2,
+          "beats_rival_if": "PAR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 40)"
+        }
       }
     },
     {
@@ -7327,7 +7579,14 @@
           "C",
           "B",
           "I"
-        ]
+        ],
+        "needs": "Finishing 3rd, POR advances in ~72% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#5) vs other groups' thirds (most often L/A/C/B/I).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 2,
+          "beats_rival_if": "POR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 5)"
+        }
       }
     },
     {
@@ -7387,7 +7646,14 @@
           "L",
           "J",
           "I"
-        ]
+        ],
+        "needs": "Finishing 3rd, QAT advances in ~60% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#55) vs other groups' thirds (most often H/A/L/J/I).",
+        "thresholds": {
+          "min_points": 4,
+          "min_overall_gd": -2,
+          "min_goals_for": 5,
+          "beats_rival_if": "QAT overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 55)"
+        }
       }
     },
     {
@@ -7447,7 +7713,14 @@
           "E",
           "B",
           "G"
-        ]
+        ],
+        "needs": "Finishing 3rd, RSA advances in ~59% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#60) vs other groups' thirds (most often K/H/E/B/G).",
+        "thresholds": {
+          "min_points": 4,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "RSA overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 60)"
+        }
       }
     },
     {
@@ -7507,7 +7780,14 @@
           "J",
           "L",
           "I"
-        ]
+        ],
+        "needs": "Finishing 3rd, SCO advances in ~67% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#43) vs other groups' thirds (most often A/H/J/L/I).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "SCO overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 43)"
+        }
       }
     },
     {
@@ -7567,7 +7847,14 @@
           "H",
           "K",
           "J"
-        ]
+        ],
+        "needs": "Finishing 3rd, SEN advances in ~69% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#14) vs other groups' thirds (most often A/E/H/K/J).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 2,
+          "beats_rival_if": "SEN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 14)"
+        }
       }
     },
     {
@@ -7627,7 +7914,14 @@
           "I",
           "E",
           "C"
-        ]
+        ],
+        "needs": "Finishing 3rd, SUI advances in ~75% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#19) vs other groups' thirds (most often J/A/I/E/C).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -2,
+          "min_goals_for": 3,
+          "beats_rival_if": "SUI overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 19)"
+        }
       }
     },
     {
@@ -7687,7 +7981,14 @@
           "H",
           "K",
           "D"
-        ]
+        ],
+        "needs": "Finishing 3rd, SWE advances in ~65% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#38) vs other groups' thirds (most often L/A/H/K/D).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "SWE overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 38)"
+        }
       }
     },
     {
@@ -7747,7 +8048,14 @@
           "H",
           "B",
           "C"
-        ]
+        ],
+        "needs": "Finishing 3rd, TUN advances in ~62% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#44) vs other groups' thirds (most often A/J/H/B/C).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 4,
+          "beats_rival_if": "TUN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 44)"
+        }
       }
     },
     {
@@ -7807,7 +8115,14 @@
           "H",
           "B",
           "K"
-        ]
+        ],
+        "needs": "Finishing 3rd, TUR advances in ~69% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#22) vs other groups' thirds (most often A/C/H/B/K).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 2,
+          "beats_rival_if": "TUR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 22)"
+        }
       }
     },
     {
@@ -7867,7 +8182,14 @@
           "I",
           "C",
           "E"
-        ]
+        ],
+        "needs": "Finishing 3rd, URU advances in ~69% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#17) vs other groups' thirds (most often B/A/I/C/E).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 4,
+          "beats_rival_if": "URU overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 17)"
+        }
       }
     },
     {
@@ -7927,7 +8249,14 @@
           "E",
           "H",
           "J"
-        ]
+        ],
+        "needs": "Finishing 3rd, USA advances in ~64% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#16) vs other groups' thirds (most often A/L/E/H/J).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 2,
+          "beats_rival_if": "USA overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 16)"
+        }
       }
     },
     {
@@ -7987,7 +8316,14 @@
           "G",
           "L",
           "H"
-        ]
+        ],
+        "needs": "Finishing 3rd, UZB advances in ~65% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, FIFA rank (#50) vs other groups' thirds (most often A/B/G/L/H).",
+        "thresholds": {
+          "min_points": 3,
+          "min_overall_gd": -1,
+          "min_goals_for": 3,
+          "beats_rival_if": "UZB overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 50)"
+        }
       }
     }
   ],

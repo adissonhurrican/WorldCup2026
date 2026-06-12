@@ -3,8 +3,85 @@ import Screen from "../components/Screen";
 import { Card, Flag, SegmentedTabs } from "../components/ui";
 // NOTE: group_narration ("✦ AI summary") is PARKED — removed from the UI pending a decision.
 // The groupNarrationFor() selector remains in select.js (unused here) so re-enabling is a one-line revert.
-import { teamByCode, groupCardRows, BAND_TEXT, bestThirdRace, phase, pct } from "../lib/select";
+import { teamByCode, groupCardRows, BAND_TEXT, bestThirdRace, scenarioFor, phase, pct } from "../lib/select";
 import { IconChevronRight } from "../components/icons";
+
+// The ranked third-place list with "what you need" surfacing. Each row expands on tap to show:
+// (a) the team's REAL margin to the qualification cut (computed from the same ranked entries the
+// row displays — pts, then GD, mirroring the narration's cut-off comparison), (b) the scenario
+// engine's ready-made "needs" sentence + thresholds (carried through app-data.scenarios.
+// third_place_race — recomputed every material cycle; null-graceful when absent). A divider marks
+// the top-8 cut once both sides exist, and teams LEVEL with the team across the cut (same pts+GD)
+// get a "level" badge — the flat list never hid a tie again. Display-only; no recompute.
+function cutMargin(ranked, qualify, idx) {
+  const me = ranked[idx];
+  const cmp = idx < qualify ? ranked[qualify] : ranked[qualify - 1]; // IN -> first OUT; OUT -> last IN
+  if (!me || !cmp) return null;
+  const dp = (me.points ?? 0) - (cmp.points ?? 0);
+  const dg = (me.goal_difference ?? 0) - (cmp.goal_difference ?? 0);
+  const vs = cmp.code;
+  if (dp > 0) return `${dp} pt${dp === 1 ? "" : "s"} clear of the cut (vs ${vs})`;
+  if (dp < 0) return `${Math.abs(dp)} pt${Math.abs(dp) === 1 ? "" : "s"} behind the cut (vs ${vs})`;
+  if (dg > 0) return `level on points with ${vs}, ahead on goal difference (+${dg})`;
+  if (dg < 0) return `level on points with ${vs}, behind on goal difference (${dg})`;
+  return `level with ${vs} on points and goal difference — tiebreakers decide`;
+}
+function ThirdPlaceList({ data, race }) {
+  const [openCode, setOpenCode] = useState(null);
+  const ranked = race.ranked;
+  const qualify = race.qualify;
+  return (
+    <ul className="space-y-1.5">
+      {ranked.map((t, i) => {
+        const code = t.code || t.team_code;
+        const tm = teamByCode(data, code) || { code };
+        const isIn = i < qualify;
+        const open = openCode === code;
+        const tpr = (scenarioFor(data, code) || {}).third_place_race || {};
+        const margin = ranked.length > qualify ? cutMargin(ranked, qualify, i) : null;
+        // level-at-the-cut badge: same pts + GD as the team on the other side of the line
+        const cmp = ranked.length > qualify ? (i < qualify ? ranked[qualify] : ranked[qualify - 1]) : null;
+        const level = cmp && (t.points ?? 0) === (cmp.points ?? 0) && (t.goal_difference ?? 0) === (cmp.goal_difference ?? 0);
+        return (
+          <li key={code}>
+            {i === qualify && (
+              <div className="mb-1.5 flex items-center gap-2">
+                <span className="h-px flex-1 bg-separator/60" />
+                <span className="text-[10px] font-bold uppercase tracking-wide text-ink-3">top {qualify} advance</span>
+                <span className="h-px flex-1 bg-separator/60" />
+              </div>
+            )}
+            <button onClick={() => setOpenCode(open ? null : code)} aria-expanded={open} className="flex w-full items-center gap-2.5 text-left text-[13px] active:opacity-70">
+              <span className={`w-4 text-center font-bold tabular-nums ${isIn ? "text-qualified" : "text-ink-3"}`}>{i + 1}</span>
+              <Flag team={tm} size={20} />
+              <span className="min-w-0 flex-1 truncate">{tm.name || code}</span>
+              {level && <span className="rounded-full bg-bubble/10 px-1.5 py-0.5 text-[10px] font-semibold text-bubble">level</span>}
+              {t.points != null && <span className="tabular-nums text-ink-2">{t.points} pts</span>}
+              <span className={`text-[11px] font-bold ${isIn ? "text-qualified" : "text-ink-3"}`}>{isIn ? "IN" : "OUT"}</span>
+              <IconChevronRight className={`h-3.5 w-3.5 shrink-0 text-ink-3 transition-transform ${open ? "rotate-90" : ""}`} />
+            </button>
+            {open && (
+              <div className="ml-[26px] mt-1.5 space-y-1 rounded-[10px] bg-fill/[0.06] px-3 py-2">
+                <p className="text-[12px] text-ink-2">
+                  <span className="font-semibold">GD {t.goal_difference > 0 ? `+${t.goal_difference}` : t.goal_difference} · GF {t.goals_for}</span>
+                  {margin ? <> — {margin}</> : <> — no cut-off comparison yet (the race is still filling in)</>}
+                </p>
+                {tpr.needs && <p className="text-[12px] leading-relaxed text-ink-2">{tpr.needs}</p>}
+                {tpr.thresholds && (tpr.thresholds.min_points != null || tpr.thresholds.min_overall_gd != null) && (
+                  <p className="text-[11px] text-ink-3">
+                    Typical bar as a third: {tpr.thresholds.min_points != null ? `≥ ${tpr.thresholds.min_points} pts` : ""}
+                    {tpr.thresholds.min_overall_gd != null ? `${tpr.thresholds.min_points != null ? ", " : ""}GD ≥ ${tpr.thresholds.min_overall_gd}` : ""}
+                    {tpr.thresholds.min_goals_for != null ? `, GF ≥ ${tpr.thresholds.min_goals_for}` : ""}
+                  </p>
+                )}
+              </div>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
 
 export default function GroupsView({ data, onSelectTeam, rightAction }) {
   const letters = (data.groups || []).map((g) => g.group).sort();
@@ -66,21 +143,7 @@ function ThirdPlaceStrip({ data }) {
                   {r.roundCompleteGroups === 1 ? " has" : " have"} completed a round so far, so these standings are provisional.
                 </p>
               )}
-              <ul className="space-y-1.5">
-                {r.ranked.map((t, i) => {
-                  const tm = teamByCode(data, t.code || t.team_code) || { code: t.code };
-                  const isIn = i < r.qualify;
-                  return (
-                    <li key={i} className="flex items-center gap-2.5 text-[13px]">
-                      <span className={`w-4 text-center font-bold tabular-nums ${isIn ? "text-qualified" : "text-ink-3"}`}>{i + 1}</span>
-                      <Flag team={tm} size={20} />
-                      <span className="min-w-0 flex-1 truncate">{tm.name || t.code}</span>
-                      {t.points != null && <span className="tabular-nums text-ink-2">{t.points} pts</span>}
-                      <span className={`text-[11px] font-bold ${isIn ? "text-qualified" : "text-ink-3"}`}>{isIn ? "IN" : "OUT"}</span>
-                    </li>
-                  );
-                })}
-              </ul>
+              <ThirdPlaceList data={data} race={r} />
             </>
           )}
         </div>

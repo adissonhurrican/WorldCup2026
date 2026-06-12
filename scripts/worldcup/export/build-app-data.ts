@@ -349,8 +349,26 @@ async function main() {
       own_form: String(w.own_results_needed ?? ""), depends_on_other_groups: w.depends_on_groups ?? [],
       decided_by: (w.tiebreaker_path ?? []).map((t: string) => TIEBREAK[t] ?? t),
     }));
+    // Third-place surfacing (additive): the engine already computes per-team "what you need" guidance
+    // every material cycle — carry it through so the Groups-page strip can show it (previously it was
+    // narration-only). thresholds = the monotone-validated crossovers from this team's own 3rd-place
+    // sims; needs = the engine's ready-made plain sentence. Both null-graceful when absent.
+    const btWtn = (s.what_they_need ?? []).find((w: any) => w.condition_label === "Advance as best third");
+    const thr = btWtn?.third_place_thresholds ?? null;
     return { code, advance_chance: d4(num(pr.advance_total)), in_their_hands: inHands, routes,
-      third_place_race: { in_race: tpd.is_in_third_race === true, advances_if_third: tpd.passes_cutoff_in_pct != null ? d4(num(tpd.passes_cutoff_in_pct)) : null, race_position: tpd.group_third_race_rank ?? null, watch_groups: tpd.competing_third_groups ?? [] } };
+      third_place_race: {
+        in_race: tpd.is_in_third_race === true,
+        advances_if_third: tpd.passes_cutoff_in_pct != null ? d4(num(tpd.passes_cutoff_in_pct)) : null,
+        race_position: tpd.group_third_race_rank ?? null,
+        watch_groups: tpd.competing_third_groups ?? [],
+        needs: typeof tpd.needs === "string" && tpd.is_in_third_race === true ? tpd.needs : null,
+        thresholds: thr ? {
+          min_points: thr.min_points ?? null,
+          min_overall_gd: thr.min_overall_gd ?? null,
+          min_goals_for: thr.min_goals_for ?? null,
+          beats_rival_if: typeof thr.beats_rival_if === "string" ? thr.beats_rival_if : null,
+        } : null,
+      } };
   });
 
   // tactical_context
