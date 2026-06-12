@@ -125,6 +125,16 @@ export function realContextForTeam(real: any | null, code: string, group: string
     return { started: false, status: real?.status ?? "unknown" };
   }
   const grp = (real.groups ?? []).find((g: any) => g.group === group);
+  // PER-TEAM gate (mirrors the display's third-place-race gate in standings-core): a team has a
+  // CURRENT standing only once IT has played. Before that, its row sits in a FIFA-seeded fallback
+  // order (e.g. QAT above BIH in an unplayed Group B) with position:null — and handing that table
+  // to the model as "real standings" invites a fabricated current position (the system prompt says
+  // to state the CURRENT standing whenever a table is supplied). started:false -> the prompt's
+  // "group games have not started" sim framing. NEVER substitute predicted standings as current.
+  const meRow = (grp?.standings ?? []).find((r: any) => r.code === code);
+  if (!meRow || (meRow.played ?? 0) === 0) {
+    return { started: false, status: real.status, team_played: 0 };
+  }
   const groupTable = (grp?.standings ?? []).map((r: any) => ({
     team_code: r.code, rank: r.position, points: r.points, played: r.played, won: r.won, drawn: r.drawn, lost: r.lost,
     goals_for: r.goals_for, goals_against: r.goals_against, goal_difference: r.goal_difference,
