@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Flag, SegmentedTabs } from "./ui";
 import PredictionBar from "./PredictionBar";
+import LineupPitchSheet from "./LineupPitchSheet";
 import { IconChevronRight } from "./icons";
 import {
   teamByCode, dualClock, weatherFor, venueFactsFor, venueProfileFor, isImminent, weatherEmoji, weatherConfidence, cToF, tempCF, pct, favorite, scoreOf, matchState, liveOf, lineupState, eventsOf, VIEWER_TZ,
@@ -453,13 +454,32 @@ function LineupsSection({ fx, home, away, lineups, live, isKnockout, hasTeams })
   const lu = ls.lineup || {};
   return (
     <div className="card p-4">
-      <Label>Lineups</Label>
+      <div className="flex items-center justify-between">
+        <Label>Lineups</Label>
+        {/* "View on pitch" — opens the visual lineup popup (both XIs positioned on the pitch). */}
+        <ViewOnPitchButton fx={fx} lineup={lu} homeTeam={home} awayTeam={away} />
+      </div>
       <div className="mt-2 grid grid-cols-2 gap-x-4">
         <TeamLineup team={home} side={lu.home_lineup} />
         <TeamLineup team={away} side={lu.away_lineup} />
       </div>
       <p className="mt-3 text-[11px] text-ink-3">Confirmed XIs from the official team sheet — display only; they don’t change the prediction.</p>
     </div>
+  );
+}
+
+function ViewOnPitchButton({ fx, lineup, homeTeam, awayTeam }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="inline-flex items-center gap-1 rounded-full bg-fill/10 px-2.5 py-1 text-[12px] font-semibold text-accent transition active:scale-95"
+      >
+        View on pitch
+      </button>
+      {open && <LineupPitchSheet fx={fx} lineup={lineup} homeTeam={homeTeam} awayTeam={awayTeam} onClose={() => setOpen(false)} />}
+    </>
   );
 }
 function TeamLineup({ team, side }) {
