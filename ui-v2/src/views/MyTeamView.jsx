@@ -18,7 +18,8 @@ const CARD_TIMING_NOTE = "Numbers and AI analysis update within about 15 minutes
 
 const NUMBER_INFO = {
   advance: `The chance this team reaches the knockout stage, based on 20,000 tournament simulations. ${UPDATE_TIMING_NOTE}`,
-  predictedFinish: "This is the team's projected position in the group table. In live mode this changes to their current table position.",
+  predictedFinish: "Before the group games, this is the team's projected finishing position in the group, from the simulations.",
+  currentFinish: "This is the team's current position in the group table, from real results so far — it updates as matches finish.",
   winGroup: "The chance they finish 1st in the group.",
   runnerUp: "The chance they finish 2nd in the group.",
   bestThird: "The chance they finish 3rd and still qualify as one of the best third-placed teams.",
@@ -110,7 +111,9 @@ function Hero({ data, code }) {
       <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-[13px] text-ink-2">
         <span>{live ? "now" : "predicted finish"}</span>
         <BandChip pos={pos} label={finishLabel} />
-        <InfoTip label="About predicted finish">{NUMBER_INFO.predictedFinish}</InfoTip>
+        <InfoTip label={live ? "About current position" : "About predicted finish"}>
+          {live ? NUMBER_INFO.currentFinish : NUMBER_INFO.predictedFinish}
+        </InfoTip>
       </div>
       {live && h.movement && (
         <div className="mt-2 text-[12px] text-ink-2">
