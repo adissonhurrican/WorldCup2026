@@ -6,7 +6,7 @@ import { buildRealStandings, type TeamInfo, type ResultInput } from "../standing
 import { computeFairPlayPoints, loadTeamCodeByApiId, FAIRPLAY_CARD_SQL } from "../fairplay-points";
 import { ALL_TEAMS, teamGroup } from "../advancement-scenario-core";
 import type { Aux } from "../tiebreaker-ladders-2026";
-import { buildProjectedFinishers, resolveTeamPath, type KnockoutRow, type SimFinishRow } from "../knockout-path-core";
+import { buildProjectedFinishers, buildBestThirdAllocation, resolveTeamPath, type KnockoutRow, type SimFinishRow } from "../knockout-path-core";
 import { buildResultLookup, resultForFixture } from "./result-join";
 
 // BUILD app-data.json — ONE vetted public app-data file from the LIVE PROMOTED runs only.
@@ -413,7 +413,10 @@ async function main() {
     bestThird: condField(r.team_code, "third_place_advance", r.bt), // P(advance as best third) — the pool argmax basis
   }));
   const pf = buildProjectedFinishers(simRows);
-  const knockout_paths = gs.map((r: any) => ({ code: r.team_code, group: r.group_code, ...resolveTeamPath(r.group_code, r32rows, pf) }))
+  // Global greedy de-dup across the 8 best-third slots (computed ONCE, shared by all 48 paths) so a single
+  // strong third can't be projected into multiple mutually-exclusive slots. See buildBestThirdAllocation.
+  const btAlloc = buildBestThirdAllocation(r32rows, pf);
+  const knockout_paths = gs.map((r: any) => ({ code: r.team_code, group: r.group_code, ...resolveTeamPath(r.group_code, r32rows, pf, btAlloc) }))
     .sort((a, b) => a.group.localeCompare(b.group) || a.code.localeCompare(b.code));
 
   // knockout_fixtures: ALL 32 knockout matches (R32 -> Final) as SLOT-LABEL cards (no teams until the post-group
