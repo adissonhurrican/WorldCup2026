@@ -71,6 +71,33 @@ async function restInsert(c: DbConfig, rows: any[]) {
   return rows.length;
 }
 
+// ---- idempotency plan (pure; unit-tested via --unit-test) ----
+// Decides what the writer should do given how many candidate rows ALREADY exist for THIS tag+date:
+//   exactly `expected` (48) -> "guard": snapshot already present -> skip insert, exit 0 (keeps learnedEloReady TRUE)
+//   0                       -> "write": first write -> insert the 48 rows (unchanged behavior)
+//   anything else (1..47)   -> "partial": a prior write was incomplete -> do NOT skip, do NOT double-insert (409);
+//                              surface + fail so a human reviews (the runner falls back to FROZEN meanwhile — safe).
+// Pure: no DB, no I/O. The count query + insert stay in main(); messages live here so they are single-sourced and
+// the guard/write lines are GUARANTEED free of the "GRACEFUL WAIT" phrase the runner greps to compute eloGracefulWait.
+export type CandidatePlan = { action: "write" | "guard" | "partial"; exit0: boolean; lines: string[] };
+export function planCandidateWrite(candAtDate: number, expected: number, tag: string, lastDate: string): CandidatePlan {
+  if (candAtDate === expected) return {
+    action: "guard", exit0: true,
+    lines: [
+      `\nALREADY PRESENT — learned K=60 snapshot ready (${candAtDate} rows, tag ${tag}, date ${lastDate}). Idempotent: skipping insert, 0 writes.`,
+      `learned end-of-group Elo stays consumable by the knockout bracket (tag ${tag}); learnedEloReady remains TRUE.`,
+    ],
+  };
+  if (candAtDate === 0) return {
+    action: "write", exit0: true,
+    lines: [`\nFIRST WRITE — no ${tag} rows exist yet for ${lastDate}; inserting ${expected} (additive).`],
+  };
+  return {
+    action: "partial", exit0: false,
+    lines: [`PARTIAL candidate snapshot: ${candAtDate}/${expected} rows already exist for ${tag}@${lastDate} — refusing to skip (incomplete) or double-insert (would 409). Manual review needed.`],
+  };
+}
+
 async function main() {
   const c = await readDbConfig();
   // ECHO PROJECT ID (before any potential write)
@@ -141,17 +168,74 @@ async function main() {
   console.log(`computed post-group Elo for ${snapshotRows.length} teams (rating_date=${lastDate}). top: ` +
     [...snapshotRows].sort((x, y) => y.elo_rating - x.elo_rating).slice(0, 5).map((r) => `${r.elo_name} ${r.elo_rating}`).join(", "));
 
+  // ---- IDEMPOTENCY GUARD (runs every cycle; the only thing that changed) ----
+  // The loop runs this writer on EVERY material cycle. Once 72/72 holds, `lastDate` is stable, so a naive re-run
+  // recomputes the SAME 48 rows with the SAME unique key. team_elo_history has UNIQUE index
+  // (source_provider, elo_name, rating_date) and restInsert is a plain POST (no upsert), so the 2nd cycle would
+  // 409 -> throw -> exit(1) -> runner learnedEloReady=false -> knockouts silently revert to FROZEN Elo. The guard
+  // checks the EXACT count for this tag+date: 48 -> already present (skip, exit 0); 0 -> first write; else partial.
+  const candAtDate = dec(q<{ n: number }>(c, `select count(*) n from team_elo_history where source_provider='${SOURCE_TAG}' and rating_date = date '${lastDate}'`)[0].n);
+  const plan = planCandidateWrite(candAtDate, snapshotRows.length, SOURCE_TAG, lastDate);
+  if (plan.action === "partial") throw new Error(plan.lines[0]);
+  if (plan.action === "guard") {
+    for (const l of plan.lines) console.log(l);
+    const frozenIntactG = dec(q<{ n: number }>(c, `select count(*) n from team_elo_history where source_provider='${PRETOURNAMENT_SOURCE}'`)[0].n);
+    console.log(`protected counts: ${SOURCE_TAG} rows total=${candBefore} (unchanged) | pre-tournament(${PRETOURNAMENT_SOURCE}) rows=${frozenIntactG} (intact: ${frozenIntactG === 19300}) | DB writes: 0`);
+    return; // exit 0 -> learnedEloReady stays TRUE -> bracket keeps consuming the K=60 tag
+  }
+  for (const l of plan.lines) console.log(l); // action === "write" — no candidate rows exist yet for this tag+date
+
   if (!args.execute) {
-    console.log(`\nDRY-RUN: would insert ${snapshotRows.length} ${SOURCE_TAG} snapshots (additive). 0 writes now.`);
+    console.log(`DRY-RUN: would insert ${snapshotRows.length} ${SOURCE_TAG} snapshots (additive). 0 writes now.`);
     console.log(`protected counts: team_elo_history ${tehBefore} (would -> ${tehBefore + snapshotRows.length}); pre-tournament snapshot untouched.`);
     return;
   }
-  // ---- EXECUTE (gated) ----
+  // ---- EXECUTE (gated; first write only — guard above already handled the already-present case) ----
   console.log(`PROJECT ID: ${c.projectRef} — WRITING ${snapshotRows.length} ${SOURCE_TAG} snapshots (additive; pre-tournament snapshot untouched).`);
   const inserted = await restInsert(c, snapshotRows);
   const tehAfter = dec(q<{ n: number }>(c, `select count(*) n from team_elo_history`)[0].n);
   const candAfter = dec(q<{ n: number }>(c, `select count(*) n from team_elo_history where source_provider='${SOURCE_TAG}'`)[0].n);
   const frozenIntact = dec(q<{ n: number }>(c, `select count(*) n from team_elo_history where source_provider='${PRETOURNAMENT_SOURCE}'`)[0].n);
   console.log(`INSERTED ${inserted}. team_elo_history ${tehBefore}->${tehAfter} (+${tehAfter - tehBefore}); ${SOURCE_TAG} ${candBefore}->${candAfter}; pre-tournament(${PRETOURNAMENT_SOURCE}) rows=${frozenIntact} (unchanged: ${frozenIntact === 19300}).`);
+}
+// ---- guard unit test (no DB; simulates the post-72 cycle 1 -> cycle 2 transition) ----
+// Run:  npx tsx scripts/worldcup/elo-update-group-stage-wiring.ts --guard-test
+// (distinct flag: the imported elo-update-engine has its own --unit-test block that would exit on import.)
+function runGuardUnitTest(): boolean {
+  const TAG = SOURCE_TAG, DATE = "2026-06-27", N = allTeams.length; // expected rows = 48 teams (== snapshotRows.length in main)
+  console.log("=== K=60 writer idempotency guard — unit test (no DB) ===");
+  const cases: Array<{ name: string; cand: number; action: CandidatePlan["action"]; exit0: boolean }> = [
+    { name: "no rows yet -> first write", cand: 0, action: "write", exit0: true },
+    { name: "exactly 48 -> guard (already present)", cand: 48, action: "guard", exit0: true },
+    { name: "partial 1/48 -> partial (throw, no double-insert)", cand: 1, action: "partial", exit0: false },
+    { name: "partial 47/48 -> partial (throw)", cand: 47, action: "partial", exit0: false },
+    { name: "over 48 (defensive) -> partial", cand: 49, action: "partial", exit0: false },
+  ];
+  let pass = true;
+  for (const c of cases) {
+    const p = planCandidateWrite(c.cand, N, TAG, DATE);
+    const ok = p.action === c.action && p.exit0 === c.exit0;
+    if (!ok) pass = false;
+    console.log(`  [${ok ? "OK" : "XX"}] cand=${String(c.cand).padStart(2)}/48 -> action=${p.action.padEnd(7)} exit0=${p.exit0}  (${c.name})`);
+  }
+  // The crux: simulate the runner across two consecutive post-72 cycles and prove learnedEloReady stays TRUE.
+  // Runner logic: elo.ok = (exit code 0); eloGracefulWait = /GRACEFUL WAIT/i.test(stdout); learnedEloReady = elo.ok && !eloGracefulWait.
+  const cycle1 = planCandidateWrite(0, N, TAG, DATE);   // first post-72 cycle: rows do not exist yet -> write
+  const cycle2 = planCandidateWrite(N, N, TAG, DATE);   // next material cycle: 48 rows now exist -> guard
+  const learnedReady = (plan: CandidatePlan) => plan.exit0 && !/GRACEFUL WAIT/i.test(plan.lines.join("\n"));
+  const checks: Array<[string, boolean]> = [
+    ["cycle 1 -> write (inserts the snapshot)", cycle1.action === "write"],
+    ["cycle 2 -> guard (NO duplicate insert / 409)", cycle2.action === "guard"],
+    ["cycle 1 learnedEloReady = TRUE", learnedReady(cycle1) === true],
+    ["cycle 2 learnedEloReady = TRUE (stays learned — bug fixed)", learnedReady(cycle2) === true],
+    ["guard output contains no 'GRACEFUL WAIT' phrase", !/GRACEFUL WAIT/i.test(cycle2.lines.join("\n"))],
+  ];
+  for (const [label, ok] of checks) { if (!ok) pass = false; console.log(`  [${ok ? "OK" : "XX"}] ${label}`); }
+  return pass;
+}
+if (process.argv.includes("--guard-test")) {
+  const ok = runGuardUnitTest();
+  console.log("\nGUARD UNIT TEST:", ok ? "PASS — idempotent: cycle 1 writes, cycle 2+ guard, learnedEloReady stays TRUE (knockouts keep K=60)." : "FAIL");
+  process.exit(ok ? 0 : 1);
 }
 main().catch((e) => { console.error("ERROR:", e?.message ?? e); process.exit(1); });
