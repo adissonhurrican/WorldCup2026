@@ -401,7 +401,17 @@ async function main() {
       match_date::text mdate, to_char(kickoff_utc at time zone 'UTC','YYYY-MM-DD"T"HH24:MI:SS"Z"') kutc, date_confirmed
     from knockout_schedule where round='round_of_32' order by match_number`);
   const r32rows: KnockoutRow[] = r32raw.map((r: any) => ({ match_number: num(r.match_number), round: r.round, slot_a_label: r.slot_a_label, slot_b_label: r.slot_b_label, slot_a: asObj(r.slot_a), slot_b: asObj(r.slot_b), venue: r.venue ?? null, city: r.city ?? null, venue_timezone: r.venue_timezone ?? null, round_window: r.round_window ?? null, match_date: r.mdate ?? null, kickoff_utc: r.kutc ?? null, date_confirmed: r.date_confirmed === true || r.date_confirmed === "t" }));
-  const simRows: SimFinishRow[] = gs.map((r: any) => ({ code: r.team_code, name: r.team_name, group: r.group_code, p1: num(r.f1), p2: num(r.f2), p3: num(r.f3), bestThird: num(r.bt) }));
+  // Projected opponents must track real results, so rank groups by the SAME live-conditioned probabilities
+  // the groups block uses (condField over team_conditional_scenarios), NOT the raw frozen group-sim fields.
+  // Pre-results / unconditioned -> condField returns the frozen value, so projections are unchanged then.
+  // (Display-only: feeds buildProjectedFinishers -> knockout_paths.projected_opponent labels.)
+  const simRows: SimFinishRow[] = gs.map((r: any) => ({
+    code: r.team_code, name: r.team_name, group: r.group_code,
+    p1: condField(r.team_code, "win_group", r.f1),
+    p2: condField(r.team_code, "runner_up", r.f2),
+    p3: condField(r.team_code, "finish_third", r.f3),
+    bestThird: condField(r.team_code, "third_place_advance", r.bt), // P(advance as best third) — the pool argmax basis
+  }));
   const pf = buildProjectedFinishers(simRows);
   const knockout_paths = gs.map((r: any) => ({ code: r.team_code, group: r.group_code, ...resolveTeamPath(r.group_code, r32rows, pf) }))
     .sort((a, b) => a.group.localeCompare(b.group) || a.code.localeCompare(b.code));
