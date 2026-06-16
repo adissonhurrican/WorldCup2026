@@ -1,3 +1,5 @@
+import { loadAnnexCMapping, resolveThirdPlaceAllocation, concatKey } from "./annex-c-allocation-core";
+
 export type GroupCode = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L";
 export type ConditionalMatch = "M74" | "M77" | "M79" | "M80" | "M81" | "M82" | "M85" | "M87";
 export type FinishSlot = `${1 | 2}${GroupCode}`;
@@ -88,30 +90,10 @@ export const roundOf32Slots: RoundOf32Slot[] = [
   { match_number: 88, label: "2D vs 2G", side_a_slot: "2D", side_b_slot: "2G", source_status: "fixed_official_slot" },
 ];
 
-export const verifiedAnnexCAllocationTable: Record<string, ThirdPlaceAllocationRow> = {
-  "A,B,C,E,G,J,K,L": {
-    key: "A,B,C,E,G,J,K,L",
-    source: {
-      provider: "FIFA",
-      document: "Regulations for the FIFA World Cup 26",
-      annex: "Annexe C",
-      option: 396,
-      pdf_page_label: "94",
-      source_url: "https://digitalhub.fifa.com/m/636f5c9c6f29771f/original/FWC2026_regulations_EN.pdf",
-      source_note: "Annexe C option 396 row: 1A=3E, 1B=3J, 1D=3B, 1E=3C, 1G=3A, 1I=3G, 1K=3L, 1L=3K.",
-    },
-    assignments: {
-      M74: "C",
-      M77: "G",
-      M79: "E",
-      M80: "K",
-      M81: "B",
-      M82: "A",
-      M85: "J",
-      M87: "L",
-    },
-  },
-};
+// RETIRED: the hand-entered 1-row Annex C stub (only key "A,B,C,E,G,J,K,L" = combination 396) used to live here.
+// It is replaced by the full, validated 495-row table in annex-c-allocation-core.ts (the single source, read from
+// data/external/fifa/annex-c-r32-third-place-mapping.json). The old row is preserved exactly as combination 396.
+// canApplyAnnexC / resolveAnnexCAllocation below now delegate to that core, so ALL 495 combinations resolve.
 
 function compareCoreCriteria<TTeam extends string>(a: RegulationTeamStanding<TTeam>, b: RegulationTeamStanding<TTeam>) {
   return b.points - a.points || b.gd - a.gd || b.gf - a.gf;
@@ -225,25 +207,38 @@ export function canApplyAnnexC(selectedThirdPlaceGroups: GroupCode[], options: {
   const errors: string[] = [];
   const lookupKey = lookupKeyForGroups(selectedThirdPlaceGroups);
 
+  // Presence is now decided by the validated 495-row table (single source), keyed by sorted concatenation.
+  let allocationRowPresent = false;
+  try {
+    allocationRowPresent = Boolean(loadAnnexCMapping().mappings[concatKey(selectedThirdPlaceGroups)]);
+  } catch (error) {
+    errors.push(`Annex C mapping load failed: ${error instanceof Error ? error.message : String(error)}`);
+  }
+
   if (options.thirdPlaceCutoffUnresolved) errors.push("Third-place qualification cutoff is unresolved; Annexe C cannot be applied.");
   if (selectedThirdPlaceGroups.length !== 8) errors.push(`Expected 8 selected third-place groups, found ${selectedThirdPlaceGroups.length}.`);
   if (new Set(selectedThirdPlaceGroups).size !== selectedThirdPlaceGroups.length) errors.push("Selected third-place groups are not unique.");
-  if (!verifiedAnnexCAllocationTable[lookupKey]) errors.push(`No verified FIFA Annexe C allocation row exists for key ${lookupKey}.`);
+  if (!allocationRowPresent) errors.push(`No verified FIFA Annexe C allocation row exists for key ${lookupKey}.`);
 
   return {
     can_apply: errors.length === 0,
     lookup_key: lookupKey,
-    allocation_row_present: Boolean(verifiedAnnexCAllocationTable[lookupKey]),
+    allocation_row_present: allocationRowPresent,
     errors,
   };
 }
 
 export function resolveAnnexCAllocation(selectedThirdPlaceGroups: GroupCode[], options: { thirdPlaceCutoffUnresolved?: boolean } = {}) {
   const canApply = canApplyAnnexC(selectedThirdPlaceGroups, options);
-  const allocation = verifiedAnnexCAllocationTable[canApply.lookup_key];
   const errors = [...canApply.errors];
 
-  if (!allocation) {
+  // Resolve from the validated 495-row core (single source). Map its match-keyed result (74 -> group) back to
+  // the engine's ConditionalMatch keys (M74 -> group) so this function's return shape is unchanged.
+  const core = canApply.allocation_row_present
+    ? resolveThirdPlaceAllocation(loadAnnexCMapping(), selectedThirdPlaceGroups)
+    : null;
+
+  if (!core || core.combination_number == null) {
     return {
       resolved: false,
       lookup_key: canApply.lookup_key,
@@ -260,6 +255,22 @@ export function resolveAnnexCAllocation(selectedThirdPlaceGroups: GroupCode[], o
       errors,
     };
   }
+
+  const allocation = {
+    assignments: Object.fromEntries(
+      Object.entries(core.assignments_by_match).map(([m, group]) => [`M${m}`, group]),
+    ) as Record<ConditionalMatch, GroupCode>,
+    source: {
+      provider: "FIFA" as const,
+      document: "Regulations for the FIFA World Cup 26",
+      annex: "Annexe C" as const,
+      option: core.combination_number,
+      pdf_page_label: "94",
+      source_url: (loadAnnexCMapping().metadata.official_source?.url as string) ?? "https://digitalhub.fifa.com/m/636f5c9c6f29771f/original/FWC2026_regulations_EN.pdf",
+      source_note: core.source_note ?? "",
+    },
+  };
+  for (const e of core.errors) if (!errors.includes(e)) errors.push(e); // defensive (empty for the validated table)
 
   const selectedSet = new Set(selectedThirdPlaceGroups);
   const assignedEntries = Object.entries(allocation.assignments) as Array<[ConditionalMatch, GroupCode]>;

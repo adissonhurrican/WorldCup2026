@@ -11,6 +11,9 @@
 // Pure + deterministic. Phases 2/3 import expectedScore / gdIndex / eloDelta / applyMatch.
 // Run the unit test:  npx tsx scripts/worldcup/elo-update-engine.ts --unit-test
 
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
 export const WORLD_CUP_K = 60;
 
 export function gdIndex(goalDifference: number): number {
@@ -23,6 +26,17 @@ export function gdIndex(goalDifference: number): number {
 /** Neutral expected score for `team` vs `opp` (no home/host advantage). */
 export function expectedScore(eloTeam: number, eloOpp: number): number {
   return 1 / (1 + Math.pow(10, (eloOpp - eloTeam) / 400));
+}
+
+/**
+ * Single-match KNOCKOUT advance probability for `team` vs `opp`, neutral (no home/host bonus). A knockout has no
+ * draw — a level tie is settled in extra time / penalties, which always yields a winner — so the neutral Elo
+ * expectancy IS P(team advances): 1/(1+10^((eloOpp-eloTeam)/400)). This is the SAME validated approach the live
+ * bracket simulation uses (eloWinProbability in the resim consumer). Equal Elo -> 0.5; stronger -> >0.5; the two
+ * sides sum to exactly 1 (the ET/penalty path is subsumed — it is not split naively, it follows the Elo curve).
+ */
+export function knockoutWinProbability(eloTeam: number, eloOpp: number): number {
+  return expectedScore(eloTeam, eloOpp);
 }
 
 /** Result score from a scoreline, from `team`'s perspective. Shootout = level scoreline = draw (0.5). */
@@ -93,10 +107,19 @@ function runUnitTest(): boolean {
   const symOk = AUTH_2014.every((c) => { const m = applyMatch({ H: c.preHome, A: c.preAway }, "H", "A", c.gh, c.ga); return Math.abs((m.H - c.preHome) + (m.A - c.preAway)) < 1e-9; });
   console.log("zero-sum (winner +x / loser -x) holds:", symOk);
   console.log("gd index: GD1=" + gdIndex(1) + " GD2=" + gdIndex(2) + " GD3=" + gdIndex(3) + " GD4=" + gdIndex(4) + " GD6=" + gdIndex(6));
-  return allZero && symOk;
+  // knockout single-match advance probability (Phase 3): neutral, equal=0.5, sides sum to 1, stronger favored
+  const koEqual = Math.abs(knockoutWinProbability(1800, 1800) - 0.5) < 1e-12;
+  const koSum = Math.abs((knockoutWinProbability(1900, 1750) + knockoutWinProbability(1750, 1900)) - 1) < 1e-12;
+  const koStronger = knockoutWinProbability(1900, 1750) > 0.5 && knockoutWinProbability(1750, 1900) < 0.5;
+  const koMatchesExpected = Math.abs(knockoutWinProbability(1850, 1790) - expectedScore(1850, 1790)) < 1e-12;
+  console.log("knockout win prob: equal=0.5", koEqual, "| sums-to-1", koSum, "| stronger-favored", koStronger, "| +100 Elo edge =", knockoutWinProbability(1900, 1800).toFixed(4));
+  return allZero && symOk && koEqual && koSum && koStronger && koMatchesExpected;
 }
 
-if (process.argv.includes("--unit-test")) {
+// entrypoint guard: only self-run when invoked DIRECTLY (never when imported by the wiring/build-app-data, where a
+// stray --unit-test in the parent's argv would otherwise hijack the import and exit the process).
+const isMainEngine = !!process.argv[1] && (fileURLToPath(import.meta.url) === path.resolve(process.argv[1]) || process.argv[1].endsWith("elo-update-engine.ts"));
+if (isMainEngine && process.argv.includes("--unit-test")) {
   const ok = runUnitTest();
   console.log("\nPHASE 1 RESULT:", ok ? "PASS — engine confirmed; no DB writes; no wiring." : "FAIL");
   process.exit(ok ? 0 : 1);

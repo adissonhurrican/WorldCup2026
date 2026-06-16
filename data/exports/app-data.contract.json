@@ -1157,7 +1157,7 @@
     },
     "knockout_fixtures": {
       "type": "array",
-      "description": "All 32 knockout matches (Round of 32 -> Final) as SLOT-LABEL cards (no teams until the post-group bracket resolver fills them). Slot definitions read VERBATIM from public.knockout_schedule: group_winner/group_runner_up carry the group letter; best_third carries the REAL Annex C eligible-group pool for THAT slot (not generic); later rounds carry the source match number. Each side has team:null as the forward-compat hook the resolver fills. Date is exact where confirmed (QF onward) else null with the round window. Shares the city filter with the group fixtures; no prediction (slots, not teams).",
+      "description": "All 32 knockout matches (Round of 32 -> Final) as SLOT-LABEL cards (no teams until the post-group bracket resolver fills them). Slot definitions read VERBATIM from public.knockout_schedule: group_winner/group_runner_up carry the group letter; best_third carries the REAL Annex C eligible-group pool for THAT slot (not generic); later rounds carry the source match number. Each side has team:null as the forward-compat hook the resolver fills. Date is exact where confirmed (QF onward) else null with the round window. Shares the city filter with the group fixtures; R32 fixtures carry a per-match win prediction (Phase 3, see prediction).",
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -1308,6 +1308,20 @@
                 ]
               }
             }
+          },
+          "prediction": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Phase 3: per-match win probability from the frozen post-group K=60 Elo snapshot read by its explicit tag (else the pre-tournament frozen baseline before it exists); neutral single-match advance probability (team_a/b_win_probability sum to 1), with elo_a/elo_b, elo_source, basis (real once both teams concrete else projected), method. Fires for any round once Phase 4 fills both teams; null for undetermined matchups."
+          },
+          "result": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Phase 4: the played knockout result + ACTUAL advancing winner (penalty-aware, read from the result feed, never the Elo favourite): { a, b (scores in side_a/side_b orientation), winner (code), pens_a, pens_b }. Drives deterministic advancement (winner -> next round's side.team). null until the match is played."
           },
           "kickoff": {
             "type": [

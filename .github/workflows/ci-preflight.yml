@@ -1,0 +1,53 @@
+name: CI Preflight (knockout import-graph + builds)
+
+# Turns the "importers-without-modules" landmine RED instead of silently freezing the live export / breaking the
+# Netlify build: a partial commit that ships a modified importer without its new module fails this check.
+"on":
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "ui-v2/**"
+      - "data/exports/app-data.contract.json"
+      - ".github/workflows/ci-preflight.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "ui-v2/**"
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    name: Import graph + unit suites + UI build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # 1) Static import-resolution: every knockout importer's local modules must exist in this clean checkout.
+      - name: Knockout import-graph preflight
+        run: node scripts/worldcup/ci-preflight-imports.mjs
+
+      # 2) No-DB unit suites: exercise the K=60 math/guard, Annex C 495, real-opponent, and advancement cores. These
+      #    import the new cores, so a missing core also fails here.
+      - name: Knockout unit suites (no DB)
+        run: |
+          npx tsx scripts/worldcup/elo-update-engine.ts --unit-test
+          npx tsx scripts/worldcup/elo-update-group-stage-wiring.ts --guard-test
+          npx tsx scripts/worldcup/annex-c-allocation-core.ts --unit-test
+          npx tsx scripts/worldcup/knockout-path-core.ts --path-test
+          npx tsx scripts/worldcup/advance-bracket-core.ts --advance-test
+
+      # 3) The UI build (same as Netlify): catches App.jsx -> BracketView -> lib/bracket import breakage.
+      - name: UI build (vite)
+        run: |
+          npm --prefix ui-v2 ci || npm --prefix ui-v2 install
+          npm --prefix ui-v2 run build

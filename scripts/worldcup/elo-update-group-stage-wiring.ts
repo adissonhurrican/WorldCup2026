@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { mkdirSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { applyMatch, WORLD_CUP_K } from "./elo-update-engine";
@@ -109,19 +110,23 @@ async function main() {
   // ---- read ONLY verified spine group results ----
   // verified := finished + fixture-ID present + result payload hash present + not rejected
   const verifiedPredicate = `match_status='finished' and api_football_fixture_id is not null and source_payload_hash is not null and coalesce(review_status,'') <> 'rejected'`;
-  // group fixture := links to one of the 72 fixture_metadata group fixtures (authoritative), or round_name marks group stage
-  const groupJoin = `(fixture_metadata_id in (select id from fixture_metadata where tournament_code='WC_2026') or round_name ilike 'group%')`;
+  // group fixture := links to a WC_2026 GROUP fixture_metadata row (group_code present) or round_name marks group
+  // stage. Scoped to group_code IS NOT NULL so a future knockout fixture_metadata row can't inflate the gate.
+  const groupJoin = `(fixture_metadata_id in (select id from fixture_metadata where tournament_code='WC_2026' and group_code is not null) or round_name ilike 'group%')`;
   const counts = q<any>(c, `select
-      (select count(*) from fixture_metadata where tournament_code='WC_2026') group_fixtures_defined,
-      (select count(*) from match_results where tournament_code='WC_2026' and ${verifiedPredicate} and ${groupJoin}) verified_group_results,
+      (select count(*) from fixture_metadata where tournament_code='WC_2026' and group_code is not null) group_fixtures_defined,
+      (select count(distinct api_football_fixture_id) from match_results where tournament_code='WC_2026' and ${verifiedPredicate} and ${groupJoin}) verified_group_results,
       (select count(*) from match_results where tournament_code='WC_2026' and match_status='finished' and ${groupJoin}) finished_group_results,
       (select count(*) from match_results where tournament_code='WC_2026' and match_status='finished' and ${groupJoin} and (api_football_fixture_id is null or source_payload_hash is null)) finished_but_unverified`)[0];
   const defined = dec(counts.group_fixtures_defined), verified = dec(counts.verified_group_results), finished = dec(counts.finished_group_results), unverified = dec(counts.finished_but_unverified);
-  console.log(`group fixtures defined: ${defined} | finished group results: ${finished} | verified: ${verified} | finished-but-unverified (excluded): ${unverified}`);
+  console.log(`group fixtures defined: ${defined} | finished group results: ${finished} | verified (distinct): ${verified} | finished-but-unverified (excluded): ${unverified}`);
+  // FAIL HARD on an impossible over-count: > 72 distinct verified group results = duplicate/non-group contamination.
+  // Never proceed to compute a snapshot from a polluted result set (Codex #1).
+  if (verified > EXPECTED_GROUP_FIXTURES) throw new Error(`verified distinct group results = ${verified} > ${EXPECTED_GROUP_FIXTURES}: refusing K=60 from a contaminated result set (duplicate or non-group rows).`);
 
   // ---- snapshot-tagging scheme (documented; applied only on fire) ----
   console.log(`\nsnapshot-tagging scheme (what an UPDATE would write, additive):`);
-  console.log(`  table=team_elo_history  source_provider='${SOURCE_TAG}'  rating_date=<date of last group match>  one row per team (48)`);
+  console.log(`  table=team_elo_history  source_provider='${SOURCE_TAG}'  rating_date=<deterministic max group kickoff date>  one row per team (48)`);
   console.log(`  elo_rating=post-group K=60 Elo (from frozen ${PRETOURNAMENT_SOURCE} rating_date<${KICKOFF_BOUNDARY}); review_status='pending'`);
   console.log(`  identity_map_id resolved per team; pre-tournament snapshot is NEVER modified (different source+date).`);
 
@@ -144,43 +149,70 @@ async function main() {
       (select e.elo_rating::float8 from team_elo_history e where e.identity_map_id=i.identity_map_id and e.source_provider='${PRETOURNAMENT_SOURCE}' and e.rating_date < date '${KICKOFF_BOUNDARY}' order by e.rating_date desc limit 1) elo_rating
     from idm i order by i.fifa_code`);
   const identityOf: Record<string, string> = {}; let ratings: Record<string, number> = {};
-  for (const r of eloRows) { identityOf[r.fifa_code] = r.identity_map_id; ratings[r.fifa_code] = dec(r.elo_rating); }
+  // NULLABLE decode: a missing frozen row -> NaN (NOT 0), so the `missing` guard below catches it. The old
+  // dec(null)=0 silently corrupted a team to a 0 Elo that Number.isFinite accepted (Codex #2).
+  for (const r of eloRows) { identityOf[r.fifa_code] = r.identity_map_id; ratings[r.fifa_code] = (r.elo_rating == null ? NaN : dec(r.elo_rating)); }
   const missing = allTeams.filter((t) => !Number.isFinite(ratings[t]) || !identityOf[t]);
-  if (missing.length) throw new Error(`missing pre-tournament Elo/identity for: ${missing.join(",")}`);
+  if (missing.length) throw new Error(`missing/null pre-tournament Elo or identity for: ${missing.join(",")} (require 48 non-null frozen ${PRETOURNAMENT_SOURCE} rows < ${KICKOFF_BOUNDARY}).`);
+  const baseRatings: Record<string, number> = { ...ratings }; // frozen base, captured for the deterministic source-hash
 
-  // verified group results in chronological order
-  const results = q<any>(c, `select team_a_code a, team_b_code b, team_a_goals::int ga, team_b_goals::int gb, finished_at::text, kickoff_at::text
+  // DETERMINISTIC rating_date = the max GROUP-stage kickoff date from fixture_metadata (NOT the volatile last
+  // finished_at, which can churn across a UTC midnight and spawn a 2nd dated snapshot — K60-3).
+  const endRow = q<{ d: string }>(c, `select max(kickoff_at)::date::text d from fixture_metadata where tournament_code='WC_2026' and group_code is not null`)[0];
+  const ratingDate = (endRow?.d ?? KICKOFF_BOUNDARY).slice(0, 10);
+
+  // verified group results in chronological order, DEDUPED by fixture id (a duplicate/corrected row applied twice
+  // would corrupt the K=60 deltas).
+  const results = q<any>(c, `select api_football_fixture_id::text afid, team_a_code a, team_b_code b, team_a_goals::int ga, team_b_goals::int gb
     from match_results where tournament_code='WC_2026' and ${verifiedPredicate} and ${groupJoin}
     order by coalesce(finished_at, kickoff_at), fixture_label`);
-  let lastDate = KICKOFF_BOUNDARY;
+  const seenFixture = new Set<string>();
+  const orderedResults: Array<[string, string, number, number]> = [];
   for (const m of results) {
+    if (m.afid && seenFixture.has(m.afid)) continue; if (m.afid) seenFixture.add(m.afid);
     if (!(m.a in ratings) || !(m.b in ratings)) throw new Error(`result references unknown team ${m.a}/${m.b}`);
     ratings = applyMatch(ratings, m.a, m.b, dec(m.ga), dec(m.gb), WORLD_CUP_K);
-    lastDate = (m.finished_at || m.kickoff_at || lastDate).slice(0, 10);
+    orderedResults.push([m.a, m.b, dec(m.ga), dec(m.gb)]);
   }
+  if (orderedResults.length !== EXPECTED_GROUP_FIXTURES) throw new Error(`applied ${orderedResults.length} distinct group results, expected ${EXPECTED_GROUP_FIXTURES}.`);
+  // deterministic source-hash of the EXACT inputs (frozen base + ordered results). On a guard cycle a changed hash
+  // means an upstream score was corrected after 72/72 -> the stored snapshot is STALE -> flag (K60-2).
+  const sourceHash = createHash("sha256").update(JSON.stringify({ base: Object.fromEntries(allTeams.map((t) => [t, baseRatings[t]])), results: orderedResults })).digest("hex").slice(0, 16);
   const snapshotRows = allTeams.map((t) => ({
-    identity_map_id: identityOf[t], elo_name: t, rating_date: lastDate, elo_rating: Math.round(ratings[t]),
+    identity_map_id: identityOf[t], elo_name: t, rating_date: ratingDate, elo_rating: Math.round(ratings[t]),
     elo_rank: null, source_provider: SOURCE_TAG,
     source_url: "derived:in-tournament K=60 update from frozen pre-tournament Elo + verified group results",
-    source_snapshot: { method: "R'=R+60*G*(S-E) neutral, eloratings GD index", base_source: PRETOURNAMENT_SOURCE, base_boundary: KICKOFF_BOUNDARY, group_fixtures: EXPECTED_GROUP_FIXTURES, k: WORLD_CUP_K, candidate: true, not_current_best: true },
+    source_snapshot: { method: "R'=R+60*G*(S-E) neutral, eloratings GD index", base_source: PRETOURNAMENT_SOURCE, base_boundary: KICKOFF_BOUNDARY, group_fixtures: EXPECTED_GROUP_FIXTURES, k: WORLD_CUP_K, source_hash: sourceHash, candidate: true, not_current_best: true },
     confidence_score: 0.7, review_status: "pending",
   }));
-  console.log(`computed post-group Elo for ${snapshotRows.length} teams (rating_date=${lastDate}). top: ` +
+  console.log(`computed post-group Elo for ${snapshotRows.length} teams (rating_date=${ratingDate}, hash=${sourceHash}). top: ` +
     [...snapshotRows].sort((x, y) => y.elo_rating - x.elo_rating).slice(0, 5).map((r) => `${r.elo_name} ${r.elo_rating}`).join(", "));
 
-  // ---- IDEMPOTENCY GUARD (runs every cycle; the only thing that changed) ----
-  // The loop runs this writer on EVERY material cycle. Once 72/72 holds, `lastDate` is stable, so a naive re-run
-  // recomputes the SAME 48 rows with the SAME unique key. team_elo_history has UNIQUE index
+  // ---- IDEMPOTENCY GUARD (runs every cycle; identity + source-hash + date-churn aware) ----
+  // The loop runs this writer on EVERY material cycle. Once 72/72 holds, `ratingDate` is deterministic, so a naive
+  // re-run recomputes the SAME 48 rows with the SAME unique key. team_elo_history has UNIQUE index
   // (source_provider, elo_name, rating_date) and restInsert is a plain POST (no upsert), so the 2nd cycle would
   // 409 -> throw -> exit(1) -> runner learnedEloReady=false -> knockouts silently revert to FROZEN Elo. The guard
   // checks the EXACT count for this tag+date: 48 -> already present (skip, exit 0); 0 -> first write; else partial.
-  const candAtDate = dec(q<{ n: number }>(c, `select count(*) n from team_elo_history where source_provider='${SOURCE_TAG}' and rating_date = date '${lastDate}'`)[0].n);
-  const plan = planCandidateWrite(candAtDate, snapshotRows.length, SOURCE_TAG, lastDate);
+  // Inspect ALL existing rows for this tag. Rows at a DIFFERENT date than the deterministic ratingDate => churn/stale
+  // (K60-3) -> flag. At ratingDate: 0 -> write; 48 -> verify exact-48-FIFA-codes + matching source-hash before the
+  // skip (a hash mismatch = an upstream score corrected after 72/72 -> STALE, do NOT blindly skip — K60-2); else partial.
+  const existing = q<{ elo_name: string; rating_date: string; source_hash: string | null }>(c,
+    `select elo_name, rating_date::text rating_date, source_snapshot->>'source_hash' source_hash from team_elo_history where source_provider='${SOURCE_TAG}'`);
+  const otherDate = existing.filter((r) => String(r.rating_date).slice(0, 10) !== ratingDate);
+  if (otherDate.length) throw new Error(`${otherDate.length} ${SOURCE_TAG} rows exist at a DIFFERENT date than the deterministic ${ratingDate} (${[...new Set(otherDate.map((r) => String(r.rating_date).slice(0, 10)))].join(",")}) — stale/churned snapshot; manual review (clear them).`);
+  const atDate = existing.filter((r) => String(r.rating_date).slice(0, 10) === ratingDate);
+  const plan = planCandidateWrite(atDate.length, snapshotRows.length, SOURCE_TAG, ratingDate);
   if (plan.action === "partial") throw new Error(plan.lines[0]);
   if (plan.action === "guard") {
+    const names = new Set(atDate.map((r) => r.elo_name));
+    const sameNames = names.size === allTeams.length && allTeams.every((t) => names.has(t));
+    if (!sameNames) throw new Error(`${SOURCE_TAG}@${ratingDate} has ${atDate.length} rows but NOT the exact ${allTeams.length} FIFA codes (identity mismatch) — manual review.`);
+    const hashes = new Set(atDate.map((r) => r.source_hash ?? ""));
+    if (hashes.size !== 1 || !hashes.has(sourceHash)) throw new Error(`${SOURCE_TAG}@${ratingDate} source-hash mismatch (stored ${[...hashes].join("/") || "none"} != recomputed ${sourceHash}) — an upstream score changed after 72/72; snapshot is STALE. Manual review: clear the ${allTeams.length} rows so they re-derive.`);
     for (const l of plan.lines) console.log(l);
     const frozenIntactG = dec(q<{ n: number }>(c, `select count(*) n from team_elo_history where source_provider='${PRETOURNAMENT_SOURCE}'`)[0].n);
-    console.log(`protected counts: ${SOURCE_TAG} rows total=${candBefore} (unchanged) | pre-tournament(${PRETOURNAMENT_SOURCE}) rows=${frozenIntactG} (intact: ${frozenIntactG === 19300}) | DB writes: 0`);
+    console.log(`identity + source-hash verified (${SOURCE_TAG}@${ratingDate}, hash ${sourceHash}). protected counts: ${SOURCE_TAG} rows total=${candBefore} (unchanged) | pre-tournament(${PRETOURNAMENT_SOURCE}) rows=${frozenIntactG} (intact: ${frozenIntactG === 19300}) | DB writes: 0`);
     return; // exit 0 -> learnedEloReady stays TRUE -> bracket keeps consuming the K=60 tag
   }
   for (const l of plan.lines) console.log(l); // action === "write" — no candidate rows exist yet for this tag+date

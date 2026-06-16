@@ -3,6 +3,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
+import { loadAnnexCMapping } from "./annex-c-allocation-core";
 
 type DbConfig = { dbUrl: string; restUrl: string; serviceRoleKey: string; projectRef: string };
 type Outcome = "a" | "d" | "b";
@@ -630,11 +631,8 @@ const fixedBracketTree = {
 };
 
 function loadAnnexC() {
-  const parsed = JSON.parse(readFileSync(annexCPath, "utf8"));
-  const mappings = parsed.mappings as Record<string, AnnexCMappingRow>;
-  const slotOrder = parsed.metadata?.slot_order as string[];
-  if (!mappings || Object.keys(mappings).length !== 495) throw new Error(`Annex C mapping count invalid in ${annexCPath}`);
-  return { metadata: parsed.metadata, mappings, slotOrder };
+  // Single source: the validated 495-row loader in annex-c-allocation-core.ts (same JSON file, same 495 check).
+  return loadAnnexCMapping(annexCPath) as { metadata: any; mappings: Record<string, AnnexCMappingRow>; slotOrder: string[] };
 }
 
 function sampleSingleGroupOutcomeWithRng(fixtures: Fixture[], rng: () => number): GroupOutcome {

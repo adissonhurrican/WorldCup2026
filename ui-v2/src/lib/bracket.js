@@ -1,0 +1,180 @@
+// Bracket data shaping — assembles the knockout bracket (R32 -> Final) from the EXISTING export
+// (data.knockout_fixtures + data.groups + data.knockout_paths + data.team_paths). Pure, display-only;
+// no new pipeline. Works on PROJECTIONS today and consumes REAL teams/results seamlessly the moment the
+// backend bracket resolver fills side.team / a result (the forward-compat hooks already in the export).
+//
+// Resolution per slot, in priority order:
+//   1. side.team present  -> REAL team (resolver filled it)
+//   2. R32 group slot     -> projected from the conditioned group standings (winner/runner-up) or the
+//                            de-duped best-third (from knockout_paths' projected_opponent — same source
+//                            the Path card uses)
+//   3. match_winner/loser -> projected winner/loser of the (already-resolved, lower-numbered) source match
+// Winner of a match: real score if decided, else the higher-strength side (champion prob proxy).
+// As real knockout results land, decided matches mark winner FULL-COLOR / loser GREY and carry the real
+// winner forward; undecided matches stay projected/neutral.
+
+const ROUND_META = [
+  { key: "round_of_32", label: "Round of 32", short: "R32", order: 1 },
+  { key: "round_of_16", label: "Round of 16", short: "R16", order: 2 },
+  { key: "quarter_final", label: "Quarter-finals", short: "QF", order: 3 },
+  { key: "semi_final", label: "Semi-finals", short: "SF", order: 4 },
+  { key: "third_place", label: "Third-place play-off", short: "3rd", order: 5 },
+  { key: "final", label: "Final", short: "Final", order: 6 },
+];
+const ROUND_BY_KEY = Object.fromEntries(ROUND_META.map((r) => [r.key, r]));
+// round_order in the export: 1=R32 2=R16 3=QF 4=SF 5=3rd-place 6=Final (fallback if round_key absent)
+const ORDER_TO_KEY = { 1: "round_of_32", 2: "round_of_16", 3: "quarter_final", 4: "semi_final", 5: "third_place", 6: "final" };
+
+function roundKeyOf(fx) {
+  if (fx.round_key && ROUND_BY_KEY[fx.round_key]) return fx.round_key;
+  if (fx.round_order && ORDER_TO_KEY[fx.round_order]) return ORDER_TO_KEY[fx.round_order];
+  const r = String(fx.round || "").toLowerCase();
+  if (r.includes("32")) return "round_of_32";
+  if (r.includes("16")) return "round_of_16";
+  if (r.includes("quarter")) return "quarter_final";
+  if (r.includes("semi")) return "semi_final";
+  if (r.includes("third")) return "third_place";
+  if (r.includes("final")) return "final";
+  return "round_of_32";
+}
+
+// champion probability as a stable head-to-head strength proxy for projecting an undecided match. Cascade with ||
+// (NOT ??) so a genuine champion===0 falls through to the next deeper-round signal instead of collapsing to 0 —
+// otherwise two no-chance teams are indistinguishable (BRACKETUI-3).
+function strengthMap(data) {
+  const m = {};
+  for (const t of data.team_paths || []) {
+    const k = t.knockout || {};
+    m[t.code] = k.champion || k.reach_final || k.reach_semifinal || k.reach_quarterfinal || k.reach_round_of_16 || t.advance || 0;
+  }
+  return m;
+}
+
+// projected R32 group-slot teams from the conditioned standings (sorted by win_group desc already).
+function groupFinishers(data) {
+  const win = {}, ru = {};
+  for (const g of data.groups || []) {
+    const s = g.standings || [];
+    if (s[0]) win[g.group] = s[0].code;
+    if (s[1]) ru[g.group] = s[1].code;
+  }
+  return { win, ru };
+}
+
+// de-duped best-third per R32 match, lifted from knockout_paths' already-allocated projected_opponent
+// (the same global de-dup the Path card ships) -> match_number -> third team code.
+function bestThirdByMatch(data) {
+  const m = {};
+  for (const p of data.knockout_paths || []) {
+    for (const dest of [p.as_group_winner, p.as_runner_up]) {
+      if (dest && dest.opponent_kind === "best_third" && dest.projected_opponent && dest.match_number != null) {
+        m[dest.match_number] = dest.projected_opponent.code;
+      }
+    }
+  }
+  return m;
+}
+
+const sideTeamCode = (side) => (side && side.team && side.team.code) || null;
+const numOrNull = (v) => (v == null || v === "" ? null : Number(v));
+
+// Build the full bracket: { rounds: [{ key,label,short,order, matches:[...] }], hasAnyResult }.
+export function buildBracket(data) {
+  const fixtures = (data.knockout_fixtures || []).slice().sort((a, b) => (a.match_number || 0) - (b.match_number || 0));
+  if (!fixtures.length) return { rounds: [], hasAnyResult: false };
+
+  const strength = strengthMap(data);
+  const { win, ru } = groupFinishers(data);
+  const bt = bestThirdByMatch(data);
+  const stronger = (x, y) => (x == null ? y : y == null ? x : (strength[x] ?? 0) >= (strength[y] ?? 0) ? x : y);
+  const weaker = (x, y) => (stronger(x, y) === x ? y : x);
+
+  // resolved winner/loser per match (real if decided, else projected) — filled in match-number order so
+  // every source match is already known when a later round references it.
+  const winnerByMatch = {}, loserByMatch = {};
+
+  const resolveSlot = (side) => {
+    const real = sideTeamCode(side);
+    if (real) return { code: real, real: true };
+    const t = side?.type;
+    if (t === "group_winner" && side.group) return { code: win[side.group] ?? null, real: false };
+    if (t === "group_runner_up" && side.group) return { code: ru[side.group] ?? null, real: false };
+    if (t === "best_third") return { code: null, real: false }; // filled per-match below (needs match_number)
+    if (t === "match_winner" && side.source_match != null) return { code: winnerByMatch[side.source_match] ?? null, real: false };
+    if (t === "match_loser" && side.source_match != null) return { code: loserByMatch[side.source_match] ?? null, real: false };
+    return { code: null, real: false };
+  };
+
+  const matchesByRound = {};
+  for (const fx of fixtures) {
+    const key = roundKeyOf(fx);
+    const meta = ROUND_BY_KEY[key];
+    const aSlot = fx.side_a || {}, bSlot = fx.side_b || {};
+    const a = resolveSlot(aSlot), b = resolveSlot(bSlot);
+    // best-third slots resolve by match number (the de-duped allocation)
+    if (aSlot.type === "best_third" && !a.code) a.code = bt[fx.match_number] ?? null;
+    if (bSlot.type === "best_third" && !b.code) b.code = bt[fx.match_number] ?? null;
+
+    // real result? (the export's result = { a, b, winner, pens_a, pens_b }; a/b are the scores)
+    const aScore = numOrNull(fx.result?.a);
+    const bScore = numOrNull(fx.result?.b);
+    const played = aScore != null && bScore != null;
+    // a knockout can't truly draw: a level scoreline is settled by penalties. Read an explicit winner
+    // signal (winner code, or penalty scores) so we never silently advance the strength favourite when
+    // the real shootout went the other way.
+    const winSig = fx.result?.winner ?? fx.result?.winner_code ?? null;
+    const pensA = numOrNull(fx.result?.pens_a), pensB = numOrNull(fx.result?.pens_b);
+
+    let decided = false, winnerCode, loserCode;
+    if (played && aScore !== bScore) {
+      decided = true;
+      winnerCode = aScore > bScore ? a.code : b.code;
+      loserCode = aScore > bScore ? b.code : a.code;
+    } else if (played) {
+      // level scoreline: settle ONLY by a winner signal that MATCHES one of the two sides, else by penalties. If
+      // neither yields a valid side, leave UNDECIDED (project the favourite but mark no winner) — NEVER default to
+      // side A on a winner code that matches neither side (BRACKET-1 / INT-3).
+      const sigWinner = winSig === a.code ? a.code : winSig === b.code ? b.code : null;
+      const penWinner = (pensA != null && pensB != null && pensA !== pensB) ? (pensA > pensB ? a.code : b.code) : null;
+      const w = sigWinner ?? penWinner;
+      if (w != null) { decided = true; winnerCode = w; loserCode = w === a.code ? b.code : a.code; }
+      else { winnerCode = stronger(a.code, b.code); loserCode = weaker(a.code, b.code); }
+    } else {
+      // not played: project the favourite forward so the bracket still fills, but DON'T mark a winner/loser.
+      winnerCode = stronger(a.code, b.code);
+      loserCode = weaker(a.code, b.code);
+    }
+    winnerByMatch[fx.match_number] = winnerCode;
+    loserByMatch[fx.match_number] = loserCode;
+
+    const mkSide = (slot, resolved, score) => ({
+      code: resolved.code,
+      label: slot.label ?? null,
+      real: resolved.real,                       // true once the resolver filled a real team
+      score: score,
+      projected: !resolved.real && resolved.code != null && !decided, // projected team on an undecided match (never tag a decided one)
+      isWinner: decided && resolved.code === winnerCode,
+      isLoser: decided && resolved.code === loserCode,
+    });
+
+    (matchesByRound[key] ??= []).push({
+      match_number: fx.match_number,
+      round_key: key,
+      round_window_label: fx.round_window_label ?? null,
+      kickoff_utc: fx.kickoff_utc ?? null,
+      date_confirmed: fx.date_confirmed === true,
+      venue: fx.venue ?? null,
+      city: fx.city ?? null,
+      decided,
+      a: mkSide(aSlot, a, aScore),
+      b: mkSide(bSlot, b, bScore),
+      feeders: [aSlot.source_match ?? null, bSlot.source_match ?? null].filter((x) => x != null),
+    });
+  }
+
+  const rounds = ROUND_META
+    .filter((r) => matchesByRound[r.key]?.length)
+    .map((r) => ({ ...r, matches: matchesByRound[r.key].sort((a, b) => a.match_number - b.match_number) }));
+  const hasAnyResult = rounds.some((r) => r.matches.some((m) => m.decided));
+  return { rounds, hasAnyResult };
+}

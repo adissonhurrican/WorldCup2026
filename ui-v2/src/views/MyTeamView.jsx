@@ -383,7 +383,10 @@ function dateText(slot) {
 }
 
 function SlotBlock({ data, slot, conditional }) {
-  const opp = slot.projected_opponent;
+  // Prefer the REAL opponent once the bracket resolver fills it (group complete / Annex C thirds known);
+  // fall back to the projected opponent until then.
+  const isReal = !!slot.real_opponent;
+  const opp = slot.real_opponent || slot.projected_opponent;
   const oppTeam = opp ? teamByCode(data, opp.code) : null;
   return (
     <div className="rounded-[12px] bg-fill/[0.06] p-3.5">
@@ -394,7 +397,7 @@ function SlotBlock({ data, slot, conditional }) {
       <div className="mt-1.5 text-[15px] font-semibold">vs {slot.opponent_slot}</div>
       {opp && (
         <div className="mt-1.5 flex items-center gap-2 text-[13px] text-ink-2">
-          <span className="text-ink-3">{conditional ? "likely" : "projected"}:</span>
+          <span className="text-ink-3">{isReal ? "opponent" : conditional ? "likely" : "projected"}:</span>
           {oppTeam && <Flag team={oppTeam} size={18} />}
           <span className="font-medium text-ink">{opp.name}</span>
         </div>

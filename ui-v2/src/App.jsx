@@ -10,6 +10,7 @@ import MyTeamView from "./views/MyTeamView";
 import MatchesView from "./views/MatchesView";
 import PredictionView from "./views/PredictionView";
 import GroupsView from "./views/GroupsView";
+import BracketView from "./views/BracketView";
 import ContentView from "./views/ContentView";
 import { IconMenu } from "./components/icons";
 import { loadAll, loadLiveScores, loadLineups, loadEvents, loadStats } from "./lib/appData";
@@ -167,6 +168,9 @@ export default function App() {
             </div>
             <div className={`h-full ${view === "groups" && !secondary ? "" : "hidden"}`}>
               <GroupsView data={data} onSelectTeam={selectTeam} rightAction={headerActions} />
+            </div>
+            <div className={`h-full ${view === "bracket" && !secondary ? "" : "hidden"}`}>
+              <BracketView data={data} rightAction={headerActions} />
             </div>
             <div className={`h-full ${secondary ? "" : "hidden"}`}>
               {secondary && <ContentView key={secondary} pageKey={secondary} onBack={() => setSecondary(null)} rightAction={headerActions} />}

@@ -20,11 +20,21 @@ const predictionGlyph = (
   </>
 );
 
+// Knockout bracket glyph: two arms merging into a node, then a line out to the champion (inner SVG nodes).
+const bracketGlyph = (
+  <>
+    <path d="M6 5v5a2 2 0 0 0 2 2h3" />
+    <path d="M6 19v-5a2 2 0 0 1 2-2h3" />
+    <path d="M11 12h7" />
+  </>
+);
+
 const PRIMARY = [
   { id: "team", label: "My Team", icon: "jersey" },
   { id: "matches", label: "Matches", icon: "calendar" },
   { id: "prediction", label: "Prediction", icon: predictionGlyph },
   { id: "groups", label: "Groups", icon: "grid" },
+  { id: "bracket", label: "Bracket", icon: bracketGlyph },
 ];
 
 // "How it works" is promoted into the iconned group (per the design); the rest stay as text links.

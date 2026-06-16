@@ -1,7 +1,7 @@
 import { GlassNavIcon } from "./GlassNavIcon";
 
 // Mobile bottom tab bar, rebuilt in the ELEVEN glass language: an ALWAYS-DARK night-glass bar whose
-// four tabs are frosted icon tiles, monochrome at rest and champion-gold on the active tab (class-driven,
+// tabs are frosted icon tiles, monochrome at rest and champion-gold on the active tab (class-driven,
 // so touch gets the "you are here" cue). Same glass material/tokens as the desktop left rail. Overlays the
 // content (absolute, bottom), safe-area aware. Prediction keeps the app's own glyph, adapted to the tile.
 
@@ -16,11 +16,20 @@ const predictionGlyph = (
   </>
 );
 
+const bracketGlyph = (
+  <>
+    <path d="M6 5v5a2 2 0 0 0 2 2h3" />
+    <path d="M6 19v-5a2 2 0 0 1 2-2h3" />
+    <path d="M11 12h7" />
+  </>
+);
+
 const TABS = [
   { id: "team", label: "My Team", icon: "jersey" },
   { id: "matches", label: "Matches", icon: "calendar" },
   { id: "prediction", label: "Prediction", icon: predictionGlyph },
   { id: "groups", label: "Groups", icon: "grid" },
+  { id: "bracket", label: "Bracket", icon: bracketGlyph },
 ];
 
 export default function TabBar({ view, onChange }) {

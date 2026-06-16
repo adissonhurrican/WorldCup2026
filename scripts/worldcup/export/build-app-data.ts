@@ -2,11 +2,15 @@ import { readFile } from "node:fs/promises";
 import { copyFileSync, existsSync, mkdirSync, writeFileSync, readFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { buildRealStandings, type TeamInfo, type ResultInput } from "../standings-core";
 import { computeFairPlayPoints, loadTeamCodeByApiId, FAIRPLAY_CARD_SQL } from "../fairplay-points";
 import { ALL_TEAMS, teamGroup } from "../advancement-scenario-core";
 import type { Aux } from "../tiebreaker-ladders-2026";
-import { buildProjectedFinishers, buildBestThirdAllocation, resolveTeamPath, type KnockoutRow, type SimFinishRow } from "../knockout-path-core";
+import { buildProjectedFinishers, buildBestThirdAllocation, resolveTeamPath, buildRealFinishers, type KnockoutRow, type SimFinishRow, type RealFinishers, type Projected } from "../knockout-path-core";
+import { loadAnnexCMapping, resolveThirdPlaceAllocation } from "../annex-c-allocation-core";
+import { knockoutWinProbability } from "../elo-update-engine";
+import { resolveKnockoutWinner, advanceBracket, buildPairResultResolver, pairKey, type ResultResolver, type ResolvedKnockoutRow } from "../advance-bracket-core";
 import { buildResultLookup, resultForFixture } from "./result-join";
 
 // BUILD app-data.json — ONE vetted public app-data file from the LIVE PROMOTED runs only.
@@ -310,7 +314,10 @@ async function main() {
     const proj = FINISH[fd.indexOf(Math.max(...fd))];
     (groupsMap[r.group_code] ??= []).push({ code: r.team_code, win_group: condField(r.team_code, "win_group", r.wg), top_2: condTop2(r.team_code, r.t2), advance: heroAdvance(r.team_code, r.adv), finish_distribution: { "1st": first, "2nd": second, "3rd": third, "4th": fourth }, projected_finish: proj });
   }
-  const groups = Object.keys(groupsMap).sort().map((g) => ({ group: g, standings: groupsMap[g].sort((a, b) => b.win_group - a.win_group) }));
+  // Sort by win_group desc THEN runner-up (finish-2nd) desc — the SAME comparator buildProjectedFinishers (pf) uses
+  // (p1 then p2), so the Bracket tab (reads this order) and the Path card (reads pf) never disagree on winner vs
+  // runner-up on a win_group tie (INT-2).
+  const groups = Object.keys(groupsMap).sort().map((g) => ({ group: g, standings: groupsMap[g].sort((a, b) => (b.win_group - a.win_group) || (b.finish_distribution["2nd"] - a.finish_distribution["2nd"])) }));
 
   const fixtures = fx.map((f) => {
     const cachedVenue = f.extid ? apiFootballVenueFallback[String(f.extid)] : null;
@@ -416,14 +423,132 @@ async function main() {
   // Global greedy de-dup across the 8 best-third slots (computed ONCE, shared by all 48 paths) so a single
   // strong third can't be projected into multiple mutually-exclusive slots. See buildBestThirdAllocation.
   const btAlloc = buildBestThirdAllocation(r32rows, pf);
-  const knockout_paths = gs.map((r: any) => ({ code: r.team_code, group: r.group_code, ...resolveTeamPath(r.group_code, r32rows, pf, btAlloc) }))
+  // PHASE 2 — REAL opponents: consume the resolver's final standings (real_standings, READ-ONLY) + the verified
+  // 495-row Annex C core to name concrete R32 opponents once determined. winner/runner-up resolve as each group
+  // COMPLETES; best thirds only once ALL groups complete (the 8 qualifiers known). Null until then -> projected.
+  // ANNEXC-2: a missing/corrupt Annex C artifact must NOT abort the whole export — wrap the load+resolve and degrade
+  // to projected-only (resolved:false) on failure. PH2-2: when groups ARE complete but the allocation does not
+  // resolve (or throws), surface it LOUDLY (the errors used to be silently dropped) instead of quietly reverting all
+  // eight best-third opponents to projected.
+  const annexWarnings: string[] = [];
+  const realFinishers: RealFinishers = buildRealFinishers(
+    real_standings,
+    (groups) => {
+      try {
+        const a = resolveThirdPlaceAllocation(loadAnnexCMapping(), groups);
+        if (!a.resolved) annexWarnings.push(`Annex C did NOT resolve the 8 advancing thirds [${groups.join(",")}] — R32 best-third opponents fall back to PROJECTED. errors: ${a.errors.join("; ")}`);
+        return { resolved: a.resolved, assignments_by_match: a.assignments_by_match };
+      } catch (e: any) {
+        annexWarnings.push(`Annex C load/resolve FAILED (${e?.message ?? e}) — R32 best-third opponents fall back to PROJECTED (export NOT aborted).`);
+        return { resolved: false, assignments_by_match: {} };
+      }
+    },
+    (code) => teamName[code] ?? code,
+  );
+  const knockout_paths = gs.map((r: any) => ({ code: r.team_code, group: r.group_code, ...resolveTeamPath(r.group_code, r32rows, pf, btAlloc, realFinishers) }))
     .sort((a, b) => a.group.localeCompare(b.group) || a.code.localeCompare(b.code));
+
+  // PHASE 3 — per-match R32 win predictions: head-to-head from the FROZEN post-group K=60 Elo snapshot read by its
+  // EXPLICIT tag (no "latest-row" leakage — same discipline as the bracket consumer), else the pre-tournament frozen
+  // baseline (rating_date < 2026-06-11) before the snapshot exists (~Jun 27). Neutral Elo, single-match advance prob
+  // (knockoutWinProbability). READS Elo + the matchup (Phase 2 real team, else the same projection the paths use);
+  // WRITES a prediction field on R32 fixtures. The resolver, the Annex C core, and Phase 2 are untouched (consumed).
+  const K60_TAG = "in-tournament-k60-candidate";
+  const FROZEN_SOURCE = "international-football_eloratings_net"; // the pre-tournament snapshot provider (explicit; P3-1)
+  const FROZEN_DATE = "2026-03-31";                              // its expected rating_date (asserted; a drift is flagged)
+  const eloRaw = q(url, `
+    with wc as (select fifa_code, lower(name) nm from teams where fifa_code = any(array[${ALL_TEAMS.map((c) => `'${c}'`).join(",")}])),
+    idm as (select w.fifa_code, (select m.id from national_team_identity_map m where m.fifa_code=w.fifa_code or lower(m.canonical_name)=w.nm or lower(m.elo_name)=w.nm or exists (select 1 from jsonb_array_elements_text(case when jsonb_typeof(m.aliases)='array' then m.aliases else '[]'::jsonb end) a where lower(a)=w.nm) order by (m.fifa_code=w.fifa_code) desc nulls last limit 1) identity_map_id from wc w)
+    select i.fifa_code,
+      (select e.elo_rating::float8 from team_elo_history e where e.identity_map_id=i.identity_map_id and e.source_provider='${K60_TAG}' order by e.rating_date desc limit 1) k60,
+      (select e.rating_date::text from team_elo_history e where e.identity_map_id=i.identity_map_id and e.source_provider='${K60_TAG}' order by e.rating_date desc limit 1) k60_date,
+      (select e.elo_rating::float8 from team_elo_history e where e.identity_map_id=i.identity_map_id and e.source_provider='${FROZEN_SOURCE}' and e.rating_date < date '2026-06-11' order by e.rating_date desc limit 1) frozen,
+      (select e.rating_date::text from team_elo_history e where e.identity_map_id=i.identity_map_id and e.source_provider='${FROZEN_SOURCE}' and e.rating_date < date '2026-06-11' order by e.rating_date desc limit 1) frozen_date
+    from idm i order by i.fifa_code`);
+  const eloWarnings: string[] = [];
+  const k60ByTeam: Record<string, number | null> = {}, frozenByTeam: Record<string, number | null> = {};
+  const k60Dates = new Set<string>(); let k60Have = 0;
+  for (const r of eloRaw as any[]) {
+    const k = r.k60 == null ? null : num(r.k60);
+    const f = r.frozen == null ? null : num(r.frozen);
+    k60ByTeam[r.fifa_code] = k; frozenByTeam[r.fifa_code] = f;
+    if (k != null) { k60Have++; if (r.k60_date) k60Dates.add(String(r.k60_date).slice(0, 10)); }
+    if (f != null && r.frozen_date && String(r.frozen_date).slice(0, 10) !== FROZEN_DATE) eloWarnings.push(`frozen Elo for ${r.fifa_code} dated ${String(r.frozen_date).slice(0, 10)} != expected ${FROZEN_DATE}`);
+  }
+  // Use the K=60 snapshot ONLY when ALL 48 teams have a K=60 row AND they share ONE rating_date (Codex #3) — NEVER
+  // mix K=60 and frozen across teams. Otherwise fall back FULLY to frozen, so the single elo_source label is always
+  // accurate for every prediction (P3-2: no misleading "_partial", no cross-source comparison under one label).
+  const k60Complete = k60Have === ALL_TEAMS.length && k60Dates.size === 1;
+  if (k60Have > 0 && !k60Complete) eloWarnings.push(`K=60 snapshot incomplete (${k60Have}/${ALL_TEAMS.length} teams, ${k60Dates.size} distinct dates) — using FROZEN Elo for ALL knockout predictions (no mixing)`);
+  const eloByTeam: Record<string, number | null> = {};
+  for (const c of ALL_TEAMS) eloByTeam[c] = k60Complete ? (k60ByTeam[c] ?? null) : (frozenByTeam[c] ?? null);
+  // leak-safe source label (NO internal tokens — "candidate" would trip the ID-leak scan). Accurate for ALL teams
+  // because the source is uniform (all K=60 or all frozen — never mixed).
+  const eloSource = k60Complete ? "post_group_k60" : "pre_tournament";
+  // a side's team for prediction = REAL (Phase 2) first, else the SAME projection the knockout_paths use
+  const sideTeamCode = (slot: any, matchNumber: number): string | null => {
+    const s = asObj(slot) ?? {};
+    if (s.type === "group_winner" && s.group) return (realFinishers.winner(String(s.group)) ?? pf.winner(String(s.group)))?.code ?? null;
+    if (s.type === "group_runner_up" && s.group) return (realFinishers.runnerUp(String(s.group)) ?? pf.runnerUp(String(s.group)))?.code ?? null;
+    if (s.type === "best_third") return (realFinishers.thirdForMatch(matchNumber) ?? btAlloc.get(matchNumber) ?? pf.bestThirdFromPool(Array.isArray(s.pool) ? s.pool.map(String) : []))?.code ?? null;
+    return null; // match_winner/loser (R16 onward) depend on knockout RESULTS -> no Phase-3 prediction
+  };
+  const knockoutPrediction = (sideA: any, sideB: any, matchNumber: number, slotA: any, slotB: any) => {
+    // team = REAL (Phase 2 R32 / Phase 4 R16+ advancement) first, else the projection (R32 group slots only).
+    // R16+ stay null until Phase 4 fills BOTH teams from results -> then the prediction fires for that round.
+    const aCode = sideA.team?.code ?? sideTeamCode(slotA, matchNumber);
+    const bCode = sideB.team?.code ?? sideTeamCode(slotB, matchNumber);
+    if (!aCode || !bCode) return null;
+    const eloA = eloByTeam[aCode], eloB = eloByTeam[bCode];
+    if (eloA == null || eloB == null) return null;
+    const pA = knockoutWinProbability(eloA, eloB);
+    return {
+      team_a_win_probability: d4(pA),
+      team_b_win_probability: d4(1 - pA),
+      elo_a: Math.round(eloA), elo_b: Math.round(eloB),
+      elo_source: eloSource,                              // post_group_k60 once the snapshot exists; pre_tournament until then
+      basis: sideA.team && sideB.team ? "real" : "projected", // real once both teams are concrete (Phase 2/4), else projected
+      method: "neutral_elo_single_match",                 // P = 1/(1+10^((eloB-eloA)/400)); ET/penalty subsumed
+    };
+  };
+
+  // PHASE 4 — deterministic advancement inputs: read verified KNOCKOUT results (penalty-aware via source_snapshot)
+  // and resolve each to its ACTUAL winner/loser. Knockout rows are NOT in fixture_metadata (fixture_metadata_id IS
+  // NULL) -> select by THAT, not by round_name: a late provider relabel can leave round_name NULL, and dropping
+  // those silently froze the bracket at that node (P4-2). Group fixtures (mapped, or round_name 'group%') excluded.
+  const koResultsRaw = q(url, `select team_a_code a, team_b_code b, team_a_goals::int ga, team_b_goals::int gb,
+      (source_snapshot->'provider_fixture'->'score'->'penalty'->>'home') pen_home,
+      (source_snapshot->'provider_fixture'->'score'->'penalty'->>'away') pen_away,
+      (source_snapshot->'provider_fixture'->'teams'->'home'->>'winner') home_winner,
+      (source_snapshot->'provider_fixture'->'teams'->'away'->>'winner') away_winner,
+      (source_snapshot->'mapping'->>'provider_home_code') prov_home,
+      (source_snapshot->'mapping'->>'provider_away_code') prov_away
+    from match_results
+    where tournament_code='WC_2026' and match_status='finished' and api_football_fixture_id is not null
+      and source_payload_hash is not null and coalesce(review_status,'')<>'rejected'
+      and fixture_metadata_id is null and (round_name is null or round_name not ilike 'group%')`);
+  const koWarnings: string[] = [];
+  const resolvedKoRows: ResolvedKnockoutRow[] = [];
+  for (const row of koResultsRaw as any[]) {
+    const res = resolveKnockoutWinner({
+      a: row.a, b: row.b,
+      ga: dec(row.ga), gb: dec(row.gb),
+      penHome: dec(row.pen_home), penAway: dec(row.pen_away), // dec() -> null on NaN: a non-numeric penalty never becomes NaN (P4-4)
+      homeWinner: row.home_winner === true || row.home_winner === "true", awayWinner: row.away_winner === true || row.away_winner === "true",
+      provHome: row.prov_home ?? null, provAway: row.prov_away ?? null,
+    });
+    if (res) resolvedKoRows.push({ a: row.a, b: row.b, res });
+    else koWarnings.push(`finished knockout ${row.a} vs ${row.b} did NOT resolve to a winner (goals/penalty/winner-flag encoding) — will NOT advance`);
+  }
+  // resolveResult is built AFTER koItems (below) so the R32 expected-pair -> match_number cross-check map can be
+  // derived from the concrete R32 sides (P4-3/INT-4). koWarnings is appended to there + surfaced in the report.
 
   // knockout_fixtures: ALL 32 knockout matches (R32 -> Final) as SLOT-LABEL cards (no teams until the post-group
   // bracket resolver fills them). Slot definitions are read VERBATIM from knockout_schedule — group_winner/runner_up
   // carry the group letter, best_third carries the REAL Annex C eligible-group pool for THAT slot, later rounds carry
   // the source match number. Each side has team:null as the forward-compat hook (resolver fills the real team later).
-  // The UI renders these alongside the group fixtures and they share the city filter. No prediction (slots, not teams).
+  // The UI renders these alongside the group fixtures and they share the city filter. R32 carries a per-match win
+  // prediction (Phase 3, added below); R16+ stay prediction:null until knockout results land.
   const KO_ROUND: Record<string, { label: string; order: number }> = {
     round_of_32: { label: "Round of 32", order: 1 }, round_of_16: { label: "Round of 16", order: 2 },
     quarter_final: { label: "Quarter-finals", order: 3 }, semi_final: { label: "Semi-finals", order: 4 },
@@ -439,26 +564,62 @@ async function main() {
     const b = m[5] === m[2] ? `${+m[6]}` : `${MON3[+m[5] - 1]} ${+m[6]}`;
     return `${a} – ${b}`;
   };
-  const koSide = (label: string | null, slot: any) => {
+  const koSide = (label: string | null, slot: any, matchNumber: number, roundKey: string) => {
     const s = asObj(slot) ?? {};
+    // PHASE 2: name the REAL team for an R32 side once its feeder is determined (group complete / 8 thirds known)
+    // — the seamless real-data hook the bracket UI consumes (side.team). Later rounds need knockout RESULTS
+    // (out of Phase-2 scope) -> stay null. Null -> the bracket UI falls back to the projected team.
+    let team: Projected = null;
+    if (roundKey === "round_of_32") {
+      if (s.type === "group_winner" && s.group) team = realFinishers.winner(String(s.group));
+      else if (s.type === "group_runner_up" && s.group) team = realFinishers.runnerUp(String(s.group));
+      else if (s.type === "best_third") team = realFinishers.thirdForMatch(matchNumber);
+    }
     return {
       label: label ?? s.label ?? null,
       type: s.type ?? null,                                    // group_winner | group_runner_up | best_third | match_winner | match_loser
       group: s.group ?? null,                                  // winner / runner-up group letter
       pool: Array.isArray(s.pool) ? s.pool.map(String) : null, // best_third eligible groups (Annex C), real per slot
       source_match: s.match != null ? num(s.match) : null,     // progression source match (R16 onward)
-      team: null,                                              // forward-compat: real team filled by the bracket resolver
+      team,                                                    // real team once the feeder(s) complete (Phase 2); null until then
     };
   };
   const koRaw = q(url, `select match_number, round, slot_a_label, slot_b_label, slot_a, slot_b, venue, city, country, venue_timezone, round_window,
       match_date::text mdate, to_char(kickoff_utc at time zone 'UTC','YYYY-MM-DD"T"HH24:MI:SS"Z"') kutc, date_confirmed
     from knockout_schedule order by match_number`);
-  const knockout_fixtures = koRaw.map((r: any) => {
+  // build sides first (R32 teams via Phase 2; R16+ team null + source_match), then ADVANCE from results, then assemble.
+  const koItems = koRaw.map((r: any) => {
+    const mn = num(r.match_number);
+    return { r, mn, side_a: koSide(r.slot_a_label, r.slot_a, mn, r.round), side_b: koSide(r.slot_b_label, r.slot_b, mn, r.round) };
+  });
+  // by-pair resolver (P4-3/INT-4): exactly-one-result (duplicate-pair detection) + an R32 match_number cross-check
+  // built from the concrete R32 sides (both teams real via Phase 2). A result tied to a different match than the
+  // consumer asks for is flagged in koWarnings, never silently mis-routed.
+  const expectedMatchByPair = new Map<string, number>();
+  for (const it of koItems) { const a = it.side_a.team?.code, b = it.side_b.team?.code; if (a && b) expectedMatchByPair.set(pairKey(a, b), it.mn); }
+  const { resolver: resolveResult, duplicates: koDupPairs, mismatches: koMismatches } = buildPairResultResolver(resolvedKoRows, expectedMatchByPair);
+  for (const d of koDupPairs) koWarnings.push(`duplicate knockout result for pair ${d} (kept first) — expected exactly one`);
+  for (const m of koMismatches) koWarnings.push(`knockout result/match cross-check: ${m}`);
+  // PHASE 4 — walk M73->M104; each decided result's winner/loser fills the downstream R16+ side.team (mutates sides).
+  const { resultsByMatch } = advanceBracket(
+    koItems.map((it) => ({ match_number: it.mn, side_a: it.side_a, side_b: it.side_b })),
+    resolveResult,
+    (code) => teamName[code] ?? code,
+  );
+  // P4-2 validation: every finished knockout result that resolved to a winner MUST have advanced a bracket node.
+  // A resolved-but-unadvanced pair means a played match could not place its winner (feeder stalled / mis-mapped) —
+  // surface it loudly (warning, not a hard fail: the bracket keeps last-good rather than the whole export freezing).
+  const advancedPairs = new Set([...resultsByMatch.values()].map((r) => pairKey(r.winner, r.loser)));
+  for (const row of resolvedKoRows) if (!advancedPairs.has(pairKey(row.a, row.b))) koWarnings.push(`knockout result ${row.a} vs ${row.b} resolved but advanced no bracket node (feeder not concrete / mis-mapped) — bracket may be stuck`);
+  const koResultField = (mn: number) => { const x = resultsByMatch.get(mn); return x ? { a: x.a_score, b: x.b_score, winner: x.winner, pens_a: x.pens_a, pens_b: x.pens_b } : null; };
+  const knockout_fixtures = koItems.map(({ r, mn, side_a, side_b }) => {
     const ro = KO_ROUND[r.round] ?? { label: humanScope(r.round), order: 9 };
     return {
-      match_number: num(r.match_number), round: ro.label, round_key: r.round, round_order: ro.order,
+      match_number: mn, round: ro.label, round_key: r.round, round_order: ro.order,
       round_window: r.round_window ?? null, round_window_label: fmtWindow(r.round_window ?? null),
-      side_a: koSide(r.slot_a_label, r.slot_a), side_b: koSide(r.slot_b_label, r.slot_b),
+      side_a, side_b,
+      prediction: knockoutPrediction(side_a, side_b, mn, r.slot_a, r.slot_b), // PHASE 3: per-match win prob (any round once both teams concrete; null otherwise)
+      result: koResultField(mn),                                              // PHASE 4: played result + ACTUAL winner (penalty-aware); null until played
       kickoff: r.mdate ?? null, kickoff_utc: r.kutc ?? null, date_confirmed: r.date_confirmed === true || r.date_confirmed === "t",
       venue: r.venue ?? null, city: r.city ?? null, country: r.country ?? null, venue_timezone: r.venue_timezone ?? null,
     };
@@ -484,6 +645,33 @@ async function main() {
   if (fixtures.length !== 72) errs.push(`fixtures ${fixtures.length} != 72`);
   if (knockout_fixtures.length !== 32) errs.push(`knockout_fixtures ${knockout_fixtures.length} != 32`);
 
+  // --- knockout prediction/result integrity (GROUP 5 + ROBUST-1: recurse into the prediction/result sub-objects) ---
+  // Each non-null prediction must have EXACTLY its 7 keys (additive-field guarantee), its two win probs in [0,1] and
+  // summing to 1. Each non-null result must have EXACTLY its keys, both sides concrete, and a winner that IS one of
+  // the two side codes (never advance a team that isn't in the match). And no team may occupy two R32 slots.
+  const PRED_KEYS = ["team_a_win_probability", "team_b_win_probability", "elo_a", "elo_b", "elo_source", "basis", "method"].sort().join(",");
+  const RES_KEYS = ["a", "b", "winner", "pens_a", "pens_b"].sort().join(",");
+  for (const kf of knockout_fixtures as any[]) {
+    const p = kf.prediction;
+    if (p) {
+      if (Object.keys(p).sort().join(",") !== PRED_KEYS) errs.push(`knockout M${kf.match_number} prediction has unexpected keys: ${Object.keys(p).join(",")}`);
+      const ps = num(p.team_a_win_probability) + num(p.team_b_win_probability);
+      if (Math.abs(ps - 1) > 1e-3) errs.push(`knockout M${kf.match_number} prediction probs sum ${ps.toFixed(4)} != 1`);
+      for (const pr of [p.team_a_win_probability, p.team_b_win_probability]) if (num(pr) < 0 || num(pr) > 1) errs.push(`knockout M${kf.match_number} prediction prob ${pr} out of [0,1]`);
+    }
+    const rr = kf.result;
+    if (rr) {
+      if (Object.keys(rr).sort().join(",") !== RES_KEYS) errs.push(`knockout M${kf.match_number} result has unexpected keys: ${Object.keys(rr).join(",")}`);
+      const ca = kf.side_a?.team?.code ?? null, cb = kf.side_b?.team?.code ?? null;
+      if (!ca || !cb) errs.push(`knockout M${kf.match_number} has a result but a side team is not concrete (${ca}/${cb})`);
+      else if (rr.winner !== ca && rr.winner !== cb) errs.push(`knockout M${kf.match_number} result winner ${rr.winner} is neither side (${ca}/${cb})`);
+    }
+  }
+  // no duplicate teams across the R32 real slots (each advancing team fills at most one slot)
+  const r32Teams = (knockout_fixtures as any[]).filter((k) => k.round_key === "round_of_32").flatMap((k) => [k.side_a?.team?.code, k.side_b?.team?.code]).filter(Boolean) as string[];
+  const r32Dupes = [...new Set(r32Teams.filter((c, i) => r32Teams.indexOf(c) !== i))];
+  if (r32Dupes.length) errs.push(`duplicate team(s) in R32 real slots: ${r32Dupes.join(",")}`);
+
   // ID-leak scan on the serialized output. Plain-word internal tokens are scanned with narration
   // prose (headline/body) stripped — free-text English may contain words like "candidate"; UUIDs,
   // version tags and run-hash fragments are still scanned on the full string including prose.
@@ -496,7 +684,7 @@ async function main() {
   const leaks = idLeakScan(jsonStr, proseStripped);
   if (leaks.length) errs.push(`ID-LEAK: ${leaks.join(" | ")}`);
 
-  const report = { project_id: PROJECT, source_of_truth: pointerLive ? LIVE_POINTER : "lifecycle=live_current markers", source_labels: SRC, as_of: meta.generated_at, sums, sum_check_pass: errs.filter((e) => e.startsWith("sum")).length === 0, id_leak_scan: leaks.length === 0 ? "CLEAN" : leaks, counts: { teams: teams.length, teams_with_flags: teams.filter((t) => t.flag).length, groups: groups.length, fixtures: fixtures.length, knockout_fixtures: knockout_fixtures.length, team_paths: team_paths.length, scenarios: scenarios.length, tactical: tactical_context.length, narration: narration.length }, contract_errors: errs };
+  const report = { project_id: PROJECT, source_of_truth: pointerLive ? LIVE_POINTER : "lifecycle=live_current markers", source_labels: SRC, as_of: meta.generated_at, sums, sum_check_pass: errs.filter((e) => e.startsWith("sum")).length === 0, id_leak_scan: leaks.length === 0 ? "CLEAN" : leaks, counts: { teams: teams.length, teams_with_flags: teams.filter((t) => t.flag).length, groups: groups.length, fixtures: fixtures.length, knockout_fixtures: knockout_fixtures.length, team_paths: team_paths.length, scenarios: scenarios.length, tactical: tactical_context.length, narration: narration.length }, knockout_warnings: [...koWarnings, ...eloWarnings, ...annexWarnings], contract_errors: errs };
   if (errs.length) { console.error(JSON.stringify({ ...report, RESULT: "VALIDATION FAILED — NOT WRITTEN" }, null, 2)); process.exit(1); }
 
   mkdirSync(path.join(rootDir, "data/exports"), { recursive: true });
@@ -507,4 +695,7 @@ async function main() {
   }
   console.log(JSON.stringify({ ...report, RESULT: "OK — wrote " + OUT, narration_note: narration.length ? "validated narration present" : "no narration table -> narration: [] (not a failure)", canada_sample: { group: groups.find((g) => g.group === "B"), path: team_paths.find((t) => t.code === "CAN"), scenario: scenarios.find((s) => s.code === "CAN"), tactical: tactical_context.find((t) => t.code === "CAN") } }, null, 2));
 }
-main().catch((e) => { console.error("ERROR:", e?.message ?? e); process.exit(1); });
+// entrypoint guard: run main() only when invoked DIRECTLY (the live loop spawns `tsx build-app-data.ts`). Importing
+// this module (e.g. the CI import-resolution preflight) resolves its graph WITHOUT executing main()/the DB pulls.
+const isMainBuild = !!process.argv[1] && (fileURLToPath(import.meta.url) === path.resolve(process.argv[1]) || process.argv[1].endsWith("build-app-data.ts"));
+if (isMainBuild) main().catch((e) => { console.error("ERROR:", e?.message ?? e); process.exit(1); });

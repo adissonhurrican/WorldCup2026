@@ -60,8 +60,11 @@ scripts/**
 !scripts/worldcup/ai-layer/
 !scripts/worldcup/weather/
 !scripts/worldcup/news/
+!scripts/worldcup/advance-bracket-core.ts
 !scripts/worldcup/advancement-scenario-core.ts
+!scripts/worldcup/annex-c-allocation-core.ts
 !scripts/worldcup/build-advancement-scenario-v1-live.ts
+!scripts/worldcup/ci-preflight-imports.mjs
 !scripts/worldcup/elo-update-engine.ts
 !scripts/worldcup/elo-update-group-stage-wiring.ts
 !scripts/worldcup/elo-update-knockout-resim-candidate.ts

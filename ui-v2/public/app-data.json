@@ -2509,6 +2509,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.4541,
+        "team_b_win_probability": 0.5459,
+        "elo_a": 1752,
+        "elo_b": 1784,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-06-28",
       "kickoff_utc": "2026-06-28T19:00:00Z",
       "date_confirmed": true,
@@ -2546,6 +2556,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.7566,
+        "team_b_win_probability": 0.2434,
+        "elo_a": 1923,
+        "elo_b": 1726,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-06-29",
       "kickoff_utc": "2026-06-29T20:30:00Z",
       "date_confirmed": true,
@@ -2577,6 +2597,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.1787,
+        "team_b_win_probability": 0.8213,
+        "elo_a": 1719,
+        "elo_b": 1984,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-06-29",
       "kickoff_utc": "2026-06-30T01:00:00Z",
       "date_confirmed": true,
@@ -2608,6 +2638,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.2466,
+        "team_b_win_probability": 0.7534,
+        "elo_a": 1767,
+        "elo_b": 1961,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-06-29",
       "kickoff_utc": "2026-06-29T17:00:00Z",
       "date_confirmed": true,
@@ -2645,6 +2685,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.7381,
+        "team_b_win_probability": 0.2619,
+        "elo_a": 2082,
+        "elo_b": 1902,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-06-30",
       "kickoff_utc": "2026-06-30T21:00:00Z",
       "date_confirmed": true,
@@ -2676,6 +2726,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.2045,
+        "team_b_win_probability": 0.7955,
+        "elo_a": 1676,
+        "elo_b": 1912,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-06-30",
       "kickoff_utc": "2026-06-30T17:00:00Z",
       "date_confirmed": true,
@@ -2713,6 +2773,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.3937,
+        "team_b_win_probability": 0.6063,
+        "elo_a": 1858,
+        "elo_b": 1933,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-06-30",
       "kickoff_utc": "2026-07-01T01:00:00Z",
       "date_confirmed": true,
@@ -2750,6 +2820,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.8438,
+        "team_b_win_probability": 0.1562,
+        "elo_a": 2020,
+        "elo_b": 1727,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-07-01",
       "kickoff_utc": "2026-07-01T16:00:00Z",
       "date_confirmed": true,
@@ -2787,6 +2867,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.2586,
+        "team_b_win_probability": 0.7414,
+        "elo_a": 1721,
+        "elo_b": 1904,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-07-01",
       "kickoff_utc": "2026-07-02T00:00:00Z",
       "date_confirmed": true,
@@ -2824,6 +2914,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.3351,
+        "team_b_win_probability": 0.6649,
+        "elo_a": 1760,
+        "elo_b": 1879,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-07-01",
       "kickoff_utc": "2026-07-01T20:00:00Z",
       "date_confirmed": true,
@@ -2855,6 +2955,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.5644,
+        "team_b_win_probability": 0.4356,
+        "elo_a": 1975,
+        "elo_b": 1930,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-07-02",
       "kickoff_utc": "2026-07-02T23:00:00Z",
       "date_confirmed": true,
@@ -2886,6 +2996,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.875,
+        "team_b_win_probability": 0.125,
+        "elo_a": 2165,
+        "elo_b": 1827,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-07-02",
       "kickoff_utc": "2026-07-02T19:00:00Z",
       "date_confirmed": true,
@@ -2923,6 +3043,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.6986,
+        "team_b_win_probability": 0.3014,
+        "elo_a": 1889,
+        "elo_b": 1743,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-07-02",
       "kickoff_utc": "2026-07-03T03:00:00Z",
       "date_confirmed": true,
@@ -2954,6 +3084,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.7811,
+        "team_b_win_probability": 0.2189,
+        "elo_a": 2113,
+        "elo_b": 1892,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-07-03",
       "kickoff_utc": "2026-07-03T22:00:00Z",
       "date_confirmed": true,
@@ -2991,6 +3131,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.8056,
+        "team_b_win_probability": 0.1944,
+        "elo_a": 1984,
+        "elo_b": 1737,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-07-03",
       "kickoff_utc": "2026-07-04T01:30:00Z",
       "date_confirmed": true,
@@ -3022,6 +3172,16 @@
         "source_match": null,
         "team": null
       },
+      "prediction": {
+        "team_a_win_probability": 0.3828,
+        "team_b_win_probability": 0.6172,
+        "elo_a": 1783,
+        "elo_b": 1866,
+        "elo_source": "pre_tournament",
+        "basis": "projected",
+        "method": "neutral_elo_single_match"
+      },
+      "result": null,
       "kickoff": "2026-07-03",
       "kickoff_utc": "2026-07-03T18:00:00Z",
       "date_confirmed": true,
@@ -3053,6 +3213,8 @@
         "source_match": 77,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-04",
       "kickoff_utc": "2026-07-04T21:00:00Z",
       "date_confirmed": true,
@@ -3084,6 +3246,8 @@
         "source_match": 75,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-04",
       "kickoff_utc": "2026-07-04T17:00:00Z",
       "date_confirmed": true,
@@ -3115,6 +3279,8 @@
         "source_match": 78,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-05",
       "kickoff_utc": "2026-07-05T20:00:00Z",
       "date_confirmed": true,
@@ -3146,6 +3312,8 @@
         "source_match": 80,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-05",
       "kickoff_utc": "2026-07-06T00:00:00Z",
       "date_confirmed": true,
@@ -3177,6 +3345,8 @@
         "source_match": 84,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-06",
       "kickoff_utc": "2026-07-06T19:00:00Z",
       "date_confirmed": true,
@@ -3208,6 +3378,8 @@
         "source_match": 82,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-06",
       "kickoff_utc": "2026-07-07T00:00:00Z",
       "date_confirmed": true,
@@ -3239,6 +3411,8 @@
         "source_match": 88,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-07",
       "kickoff_utc": "2026-07-07T16:00:00Z",
       "date_confirmed": true,
@@ -3270,6 +3444,8 @@
         "source_match": 87,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-07",
       "kickoff_utc": "2026-07-07T20:00:00Z",
       "date_confirmed": true,
@@ -3301,6 +3477,8 @@
         "source_match": 90,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-09",
       "kickoff_utc": null,
       "date_confirmed": true,
@@ -3332,6 +3510,8 @@
         "source_match": 94,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-10",
       "kickoff_utc": null,
       "date_confirmed": true,
@@ -3363,6 +3543,8 @@
         "source_match": 92,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-11",
       "kickoff_utc": null,
       "date_confirmed": true,
@@ -3394,6 +3576,8 @@
         "source_match": 96,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-11",
       "kickoff_utc": null,
       "date_confirmed": true,
@@ -3425,6 +3609,8 @@
         "source_match": 98,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-14",
       "kickoff_utc": "2026-07-14T19:00:00Z",
       "date_confirmed": true,
@@ -3456,6 +3642,8 @@
         "source_match": 100,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-15",
       "kickoff_utc": "2026-07-15T19:00:00Z",
       "date_confirmed": true,
@@ -3487,6 +3675,8 @@
         "source_match": 102,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-18",
       "kickoff_utc": "2026-07-18T21:00:00Z",
       "date_confirmed": true,
@@ -3518,6 +3708,8 @@
         "source_match": 102,
         "team": null
       },
+      "prediction": null,
+      "result": null,
       "kickoff": "2026-07-19",
       "kickoff_utc": "2026-07-19T19:00:00Z",
       "date_confirmed": true,
