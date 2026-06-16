@@ -12,6 +12,14 @@
 // Winner of a match: real score if decided, else the higher-strength side (champion prob proxy).
 // As real knockout results land, decided matches mark winner FULL-COLOR / loser GREY and carry the real
 // winner forward; undecided matches stay projected/neutral.
+//
+// DISPLAY MODE — ESPN-style STRUCTURE-ONLY (current): show each slot's POSITION LABEL ("Winner Group A",
+// "Best 3rd from A/B/C/D/F", "Winner M74") and NO projected team / prediction until the slot is mathematically
+// REAL — i.e. a group completes (Phase 2 fills side.team) or a knockout result advances a team (Phase 4). Real
+// results still light the winner / grey the loser. ALL projection code below (groupFinishers, bestThirdByMatch,
+// strengthMap, stronger/weaker) stays BUILT but dormant — flip SHOW_PROJECTIONS to true to restore the projected
+// matchups. This is a reversible display toggle, not a removal; the export still carries projections + predictions.
+const SHOW_PROJECTIONS = false;
 
 const ROUND_META = [
   { key: "round_of_32", label: "Round of 32", short: "R32", order: 1 },
@@ -95,7 +103,8 @@ export function buildBracket(data) {
 
   const resolveSlot = (side) => {
     const real = sideTeamCode(side);
-    if (real) return { code: real, real: true };
+    if (real) return { code: real, real: true };              // REAL team (Phase 2 group-complete / Phase 4 advancement)
+    if (!SHOW_PROJECTIONS) return { code: null, real: false }; // STRUCTURE-ONLY: no projected team -> the slot LABEL renders
     const t = side?.type;
     if (t === "group_winner" && side.group) return { code: win[side.group] ?? null, real: false };
     if (t === "group_runner_up" && side.group) return { code: ru[side.group] ?? null, real: false };
@@ -111,9 +120,9 @@ export function buildBracket(data) {
     const meta = ROUND_BY_KEY[key];
     const aSlot = fx.side_a || {}, bSlot = fx.side_b || {};
     const a = resolveSlot(aSlot), b = resolveSlot(bSlot);
-    // best-third slots resolve by match number (the de-duped allocation)
-    if (aSlot.type === "best_third" && !a.code) a.code = bt[fx.match_number] ?? null;
-    if (bSlot.type === "best_third" && !b.code) b.code = bt[fx.match_number] ?? null;
+    // best-third slots resolve by match number (the de-duped allocation) — projection only; OFF in structure-only.
+    if (SHOW_PROJECTIONS && aSlot.type === "best_third" && !a.code) a.code = bt[fx.match_number] ?? null;
+    if (SHOW_PROJECTIONS && bSlot.type === "best_third" && !b.code) b.code = bt[fx.match_number] ?? null;
 
     // real result? (the export's result = { a, b, winner, pens_a, pens_b }; a/b are the scores)
     const aScore = numOrNull(fx.result?.a);
@@ -125,25 +134,27 @@ export function buildBracket(data) {
     const winSig = fx.result?.winner ?? fx.result?.winner_code ?? null;
     const pensA = numOrNull(fx.result?.pens_a), pensB = numOrNull(fx.result?.pens_b);
 
-    let decided = false, winnerCode, loserCode;
+    let decided = false, winnerCode = null, loserCode = null;
     if (played && aScore !== bScore) {
       decided = true;
       winnerCode = aScore > bScore ? a.code : b.code;
       loserCode = aScore > bScore ? b.code : a.code;
     } else if (played) {
       // level scoreline: settle ONLY by a winner signal that MATCHES one of the two sides, else by penalties. If
-      // neither yields a valid side, leave UNDECIDED (project the favourite but mark no winner) — NEVER default to
-      // side A on a winner code that matches neither side (BRACKET-1 / INT-3).
+      // neither yields a valid side, leave UNDECIDED (NEVER default to side A on a winner code that matches neither
+      // side — BRACKET-1 / INT-3). The projection fallback below is OFF in structure-only mode.
       const sigWinner = winSig === a.code ? a.code : winSig === b.code ? b.code : null;
       const penWinner = (pensA != null && pensB != null && pensA !== pensB) ? (pensA > pensB ? a.code : b.code) : null;
       const w = sigWinner ?? penWinner;
       if (w != null) { decided = true; winnerCode = w; loserCode = w === a.code ? b.code : a.code; }
-      else { winnerCode = stronger(a.code, b.code); loserCode = weaker(a.code, b.code); }
-    } else {
+      else if (SHOW_PROJECTIONS) { winnerCode = stronger(a.code, b.code); loserCode = weaker(a.code, b.code); }
+    } else if (SHOW_PROJECTIONS) {
       // not played: project the favourite forward so the bracket still fills, but DON'T mark a winner/loser.
       winnerCode = stronger(a.code, b.code);
       loserCode = weaker(a.code, b.code);
     }
+    // structure-only + undecided -> winnerCode/loserCode stay null, so downstream rounds render the slot LABEL
+    // ("Winner M74") rather than a projected team; real results (Phase 4) fill side.team and decide normally.
     winnerByMatch[fx.match_number] = winnerCode;
     loserByMatch[fx.match_number] = loserCode;
 
@@ -152,9 +163,9 @@ export function buildBracket(data) {
       label: slot.label ?? null,
       real: resolved.real,                       // true once the resolver filled a real team
       score: score,
-      projected: !resolved.real && resolved.code != null && !decided, // projected team on an undecided match (never tag a decided one)
-      isWinner: decided && resolved.code === winnerCode,
-      isLoser: decided && resolved.code === loserCode,
+      projected: SHOW_PROJECTIONS && !resolved.real && resolved.code != null && !decided, // dormant in structure-only
+      isWinner: decided && resolved.code != null && resolved.code === winnerCode,
+      isLoser: decided && resolved.code != null && resolved.code === loserCode,
     });
 
     (matchesByRound[key] ??= []).push({
