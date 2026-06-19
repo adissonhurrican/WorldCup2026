@@ -19,7 +19,7 @@
 // results still light the winner / grey the loser. ALL projection code below (groupFinishers, bestThirdByMatch,
 // strengthMap, stronger/weaker) stays BUILT but dormant — flip SHOW_PROJECTIONS to true to restore the projected
 // matchups. This is a reversible display toggle, not a removal; the export still carries projections + predictions.
-const SHOW_PROJECTIONS = false;
+const SHOW_PROJECTIONS = true; // REVEALED 2026-06-19 alongside the "How the bracket works" explanation in BracketView
 
 const ROUND_META = [
   { key: "round_of_32", label: "Round of 32", short: "R32", order: 1 },

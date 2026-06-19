@@ -1,13 +1,14 @@
+import { useState } from "react";
 import Screen from "../components/Screen";
 import { Flag } from "../components/ui";
 import { teamByCode } from "../lib/select";
 import { buildBracket } from "../lib/bracket";
 
-// BRACKET tab — ESPN-style STRUCTURE skeleton (R32 -> Final), assembled by buildBracket() from the export.
-// Display-only + structure-only: each slot shows its qualifying POSITION LABEL ("Winner Group A",
-// "3rd: A/B/C/D/F", "Winner M74") and fills with the REAL team as each group completes (Phase 2) /
-// knockout result advances (Phase 4). No projected teams / predictions are shown (see SHOW_PROJECTIONS in
-// lib/bracket.js — all projection code stays built, just not displayed). Mobile: the rounds scroll horizontally.
+// BRACKET tab — ESPN-style knockout tree (R32 -> Final), assembled by buildBracket() from the export.
+// Shows the model's PROJECTED matchups (SHOW_PROJECTIONS=true in lib/bracket.js) together with the "How the
+// bracket works" explanation, so a projection never appears without its context. Each projected slot carries a
+// clear "proj" indicator; real teams fill in (and lose the indicator) as groups complete (Phase 2) and knockout
+// results advance (Phase 4). Mobile: the rounds scroll horizontally.
 
 const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 function dateText(m) {
@@ -18,32 +19,33 @@ function dateText(m) {
   return m.round_window_label || "";
 }
 
-// Compact a structural slot label to fit a narrow bracket column. Real teams render their name instead.
+// Compact a structural slot label to fit a narrow bracket column (used until a slot has a team).
 function slotLabel(side) {
   const l = side.label || "TBD";
   return l
     .replace(/^Best 3rd from /, "3rd: ")
     .replace(/^Winner Group /, "Winner ")
     .replace(/^Runner-up Group /, "2nd ")
-    .replace(/^Winner M/, "Winner M")
-    .replace(/^Runner-up M/, "Loser M"); // SF "Runner-up M101/M102" feeds the 3rd-place match
+    .replace(/^Runner-up M/, "Loser M");
 }
 
-// One slot row: a REAL team (flag + name, winner bold + ✓, loser greyed) OR — until the slot is determined —
-// the muted structural position label. No "proj" tag, no win%.
+// One slot row. Three states: REAL team (resolved — flag + bold name, winner ✓ / loser greyed); PROJECTED team
+// (model's pick on an undecided slot — flag + muted name + a "proj" tag); or, until a team is known, the position label.
 function Slot({ data, side }) {
-  const team = side.real && side.code ? (teamByCode(data, side.code) || { code: side.code }) : null;
+  const team = side.code ? (teamByCode(data, side.code) || { code: side.code }) : null;
   const grey = side.isLoser;
+  const projected = side.projected; // model projection on an undecided slot (not yet a real/resolved team)
   return (
     <div className={`flex items-center gap-1.5 px-2 py-1 ${grey ? "opacity-50" : ""}`}>
       {team
         ? <Flag team={team} size={18} className={grey ? "grayscale" : ""} />
         : <span className="h-[18px] w-[18px] shrink-0 rounded-full bg-fill/10" />}
       <span className={`min-w-0 flex-1 truncate ${team
-        ? `text-[12px] ${side.isWinner ? "font-bold text-ink" : grey ? "font-medium text-ink-3" : "font-semibold text-ink-2"}`
+        ? `text-[12px] ${side.isWinner ? "font-bold text-ink" : grey ? "font-medium text-ink-3" : projected ? "font-medium text-ink-2" : "font-semibold text-ink-2"}`
         : "text-[11px] font-medium text-ink-3"}`}>
         {team ? (team.name || team.code) : slotLabel(side)}
       </span>
+      {projected && <span className="shrink-0 rounded bg-fill/10 px-1 py-px text-[8px] font-semibold uppercase tracking-wide text-ink-3">proj</span>}
       {side.score != null && (
         <span className={`shrink-0 tabular-nums text-[12px] ${side.isWinner ? "font-bold text-ink" : "text-ink-3"}`}>{side.score}</span>
       )}
@@ -54,7 +56,7 @@ function Slot({ data, side }) {
 
 function MatchBox({ data, m }) {
   return (
-    <div className="w-[150px] shrink-0 overflow-hidden rounded-[10px] bg-fill/[0.06] ring-1 ring-separator/30">
+    <div className="w-[156px] shrink-0 overflow-hidden rounded-[10px] bg-fill/[0.06] ring-1 ring-separator/30">
       <div className="flex items-center justify-between px-2 pt-1 text-[9px] uppercase tracking-wide text-ink-3">
         <span className="font-semibold">M{m.match_number}</span>
         <span className="truncate pl-1">{dateText(m)}</span>
@@ -66,8 +68,43 @@ function MatchBox({ data, m }) {
   );
 }
 
+// "How the bracket works" — approved copy (verbatim). First sentence of each paragraph is emphasised for scanning;
+// the wording is unchanged. Collapsible so it is available but not overwhelming; a short framing line stays visible
+// above it so the projections are never shown without their context.
+const HOW_PARAS = [
+  ["It's a projection, not a result.", "No knockout matches have been played yet, so every team you see in a slot is our model's best guess at who will end up there. It is based on the group games played so far plus 20,000 simulations of how the rest of the tournament could unfold."],
+  ["It updates after every match.", "Each result feeds back into the model, so the bracket recalculates continuously. A team that looks safe today can slip tomorrow, and a team on the bubble can climb in. If you check back after a match, expect things to have shifted. That is the model staying current, not flip flopping."],
+  ["We show the single most likely bracket.", "For each slot we place the team most likely to fill it, but most likely is not certain. Your team might be, say, 64 percent to advance across many different paths yet still not appear in this one snapshot. That is why we also show each team's overall chance to advance. That percentage is the fuller picture, and the bracket is one likely version of events."],
+  ["The third place spots are the trickiest, and they compare teams across groups.", "Eight of the twelve third placed teams qualify, so four groups miss out. To decide which eight, the model ranks every group's third placed team against the others and slots the qualifiers in following FIFA's official chart. Because that comparison spans all the groups, a third placed team can move in or out as other groups play, and the exact lineup only locks once every group has finished."],
+  ["It becomes real as groups finish.", "The moment a group is decided, its actual winner and runner up lock into the bracket with no more guessing. By the time the group stage ends, the projections are replaced entirely by the real teams, and from the Round of 32 onward, real results carry teams forward."],
+];
+
+function HowItWorks() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="mt-2 overflow-hidden rounded-[12px] bg-fill/[0.06] ring-1 ring-separator/30">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-2 px-3 py-2.5 text-left active:opacity-60"
+      >
+        <span className="text-[13px] font-semibold text-ink">How the bracket works</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" className={`shrink-0 text-ink-3 transition-transform ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+      </button>
+      {open && (
+        <div className="space-y-2.5 px-3 pb-3.5 pt-0.5 text-[12.5px] leading-relaxed text-ink-2">
+          {HOW_PARAS.map(([lead, rest], i) => (
+            <p key={i}><span className="font-semibold text-ink">{lead}</span> {rest}</p>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function BracketView({ data, rightAction }) {
-  const { rounds, hasAnyResult } = buildBracket(data);
+  const { rounds } = buildBracket(data);
   const header = <h1 className="py-1 text-[34px] font-bold tracking-tight">Bracket</h1>;
 
   if (!rounds.length) {
@@ -84,13 +121,14 @@ export default function BracketView({ data, rightAction }) {
 
   return (
     <Screen stickyTitle="Bracket" rightAction={rightAction} header={header}>
+      {/* Always-visible framing so projections never read as settled results, + the full explanation one tap away. */}
       <p className="px-1 text-[12.5px] leading-snug text-ink-2">
-        The knockout structure. Each slot shows the qualifying position — “Winner Group A”, “2nd B”, “3rd: A/B/C/D/F”,
-        “Winner M74” — and fills with the real team as each group finishes. Swipe across for later rounds.
+        Projected matchups, not results: our model's best guess at the knockout draw. It updates after every match,
+        and real teams replace the projections as groups finish.
       </p>
+      <HowItWorks />
 
-      {/* ESPN-style tree: round columns side-by-side; later rounds centre between their feeders (justify-around).
-          Horizontal scroll on mobile (bleeds to the screen edges). */}
+      {/* ESPN-style tree: round columns side-by-side; later rounds centre between their feeders (justify-around). */}
       <div className="mt-3 -mx-4 overflow-x-auto px-4 pb-2">
         <div className="flex items-stretch gap-2.5" style={{ minWidth: "min-content" }}>
           {treeRounds.map((r) => (
@@ -112,7 +150,7 @@ export default function BracketView({ data, rightAction }) {
       )}
 
       <p className="mt-5 text-center text-[12px] text-ink-3">
-        Structure only — real teams fill in as groups finish{hasAnyResult ? "; winners light up as results come in." : "."}
+        Projected from our simulation. Updates after every match; real teams replace projections as groups finish.
       </p>
     </Screen>
   );
