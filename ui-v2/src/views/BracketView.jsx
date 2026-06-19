@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import Screen from "../components/Screen";
 import { Flag } from "../components/ui";
 import { teamByCode } from "../lib/select";
 import { buildBracket } from "../lib/bracket";
 
-// BRACKET tab — ESPN-style knockout tree (R32 -> Final), assembled by buildBracket() from the export.
-// Shows the model's PROJECTED matchups (SHOW_PROJECTIONS=true in lib/bracket.js) together with the "How the
-// bracket works" explanation, so a projection never appears without its context. Each projected slot carries a
-// clear "proj" indicator; real teams fill in (and lose the indicator) as groups complete (Phase 2) and knockout
-// results advance (Phase 4). Mobile: the rounds scroll horizontally.
+// BRACKET tab — ESPN-style knockout tree (R32 -> Final) with connector lines linking each match to the two that
+// feed it. Shows the model's PROJECTED matchups (SHOW_PROJECTIONS=true in lib/bracket.js) together with the "How
+// the bracket works" explanation, so a projection never appears without its context. Each projected slot carries a
+// "proj" indicator; real teams fill in (and lose the indicator) as groups complete and knockout results advance.
+// Mobile: the rounds scroll horizontally. The connectors are an SVG overlay measured from the rendered card
+// positions, so they stay correct across the justify-around layout, horizontal scroll, and live re-projections.
 
 const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 function dateText(m) {
@@ -34,7 +35,7 @@ function slotLabel(side) {
 function Slot({ data, side }) {
   const team = side.code ? (teamByCode(data, side.code) || { code: side.code }) : null;
   const grey = side.isLoser;
-  const projected = side.projected; // model projection on an undecided slot (not yet a real/resolved team)
+  const projected = side.projected;
   return (
     <div className={`flex items-center gap-1.5 px-2 py-1 ${grey ? "opacity-50" : ""}`}>
       {team
@@ -54,9 +55,9 @@ function Slot({ data, side }) {
   );
 }
 
-function MatchBox({ data, m }) {
+function MatchBox({ data, m, boxRef }) {
   return (
-    <div className="w-[156px] shrink-0 overflow-hidden rounded-[10px] bg-fill/[0.06] ring-1 ring-separator/30">
+    <div ref={boxRef} className="w-[150px] shrink-0 overflow-hidden rounded-[10px] bg-fill/[0.06] ring-1 ring-separator/30">
       <div className="flex items-center justify-between px-2 pt-1 text-[9px] uppercase tracking-wide text-ink-3">
         <span className="font-semibold">M{m.match_number}</span>
         <span className="truncate pl-1">{dateText(m)}</span>
@@ -64,6 +65,70 @@ function MatchBox({ data, m }) {
       <Slot data={data} side={m.a} />
       <span className="mx-2 block h-px bg-separator/40" />
       <Slot data={data} side={m.b} />
+    </div>
+  );
+}
+
+// The horizontally-scrolling tree + the SVG connector overlay. Connectors are measured from the live DOM so they
+// track the justify-around centring exactly; recomputed on resize and whenever the projection data changes.
+function BracketTree({ data, rounds }) {
+  const containerRef = useRef(null);
+  const boxRefs = useRef(new Map());
+  const [conn, setConn] = useState({ d: "", w: 0, h: 0 });
+
+  useLayoutEffect(() => {
+    const c = containerRef.current;
+    if (!c) return;
+    const measure = () => {
+      const cr = c.getBoundingClientRect();
+      const pos = (n) => {
+        const el = boxRefs.current.get(n);
+        if (!el) return null;
+        const r = el.getBoundingClientRect();
+        return { left: r.left - cr.left, right: r.right - cr.left, midY: r.top - cr.top + r.height / 2 };
+      };
+      const segs = [];
+      for (const round of rounds) for (const m of round.matches) {
+        const feeders = m.feeders || [];
+        if (!feeders.length) continue;                 // R32 has no incoming connectors
+        const cons = pos(m.match_number);
+        const fs = feeders.map(pos).filter(Boolean);
+        if (!cons || !fs.length) continue;
+        const midX = (Math.max(...fs.map((f) => f.right)) + cons.left) / 2;
+        const ys = [...fs.map((f) => f.midY), cons.midY];
+        const r1 = (x) => Math.round(x * 10) / 10;
+        segs.push(`M${r1(midX)} ${r1(Math.min(...ys))}V${r1(Math.max(...ys))}`); // vertical bus through the gap
+        for (const f of fs) segs.push(`M${r1(f.right)} ${r1(f.midY)}H${r1(midX)}`); // stub out of each feeder
+        segs.push(`M${r1(cons.left)} ${r1(cons.midY)}H${r1(midX)}`);                // stub into the consumer
+      }
+      setConn({ d: segs.join(""), w: Math.round(cr.width), h: Math.round(cr.height) });
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(c);
+    return () => ro.disconnect();
+  }, [rounds, data]);
+
+  return (
+    <div ref={containerRef} className="relative flex items-stretch gap-7" style={{ minWidth: "min-content" }}>
+      <svg className="pointer-events-none absolute left-0 top-0 z-0 text-ink-3/45" width={conn.w} height={conn.h} aria-hidden="true">
+        <path d={conn.d} fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      </svg>
+      {rounds.map((r) => (
+        <div key={r.key} className="relative z-10 flex shrink-0 flex-col">
+          <div className="mb-2 text-center text-[11px] font-bold uppercase tracking-wide text-ink-2">{r.short}</div>
+          <div className="flex flex-1 flex-col justify-around">
+            {r.matches.map((m) => (
+              <MatchBox
+                key={m.match_number}
+                data={data}
+                m={m}
+                boxRef={(el) => { if (el) boxRefs.current.set(m.match_number, el); else boxRefs.current.delete(m.match_number); }}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -103,6 +168,33 @@ function HowItWorks() {
   );
 }
 
+// Order each round's matches by the BRACKET TOPOLOGY (breadth-first from the Final, each match's two feeders in
+// order), NOT by match number — so every match sits directly between the two that feed it and the connector lines
+// never cross. Fail-soft: any topology mismatch (partial data, missing feeders) returns the input unchanged, so the
+// bracket still renders (just in match order) rather than breaking.
+function orderRoundsForTree(rounds) {
+  if (rounds.length < 2) return rounds;
+  const finalRound = rounds[rounds.length - 1];
+  if (finalRound.matches.length !== 1) return rounds;
+  const byNum = new Map();
+  for (const r of rounds) for (const m of r.matches) byNum.set(m.match_number, m);
+  const orderByKey = { [finalRound.key]: [finalRound.matches[0].match_number] };
+  let level = orderByKey[finalRound.key];
+  for (let i = rounds.length - 2; i >= 0; i--) {
+    const next = [];
+    for (const mn of level) { const m = byNum.get(mn); for (const f of (m?.feeders || [])) next.push(f); }
+    if (next.length !== rounds[i].matches.length) return rounds; // topology doesn't line up -> leave as-is
+    orderByKey[rounds[i].key] = next;
+    level = next;
+  }
+  return rounds.map((r) => {
+    const ord = orderByKey[r.key];
+    if (!ord) return r;
+    const pos = new Map(ord.map((mn, idx) => [mn, idx]));
+    return { ...r, matches: [...r.matches].sort((a, b) => (pos.get(a.match_number) ?? 99) - (pos.get(b.match_number) ?? 99)) };
+  });
+}
+
 export default function BracketView({ data, rightAction }) {
   const { rounds } = buildBracket(data);
   const header = <h1 className="py-1 text-[34px] font-bold tracking-tight">Bracket</h1>;
@@ -116,7 +208,7 @@ export default function BracketView({ data, rightAction }) {
   }
 
   // The tree (R32 -> Final) scrolls horizontally; the third-place play-off shows as a standalone box below.
-  const treeRounds = rounds.filter((r) => r.key !== "third_place");
+  const treeRounds = orderRoundsForTree(rounds.filter((r) => r.key !== "third_place"));
   const third = rounds.find((r) => r.key === "third_place");
 
   return (
@@ -128,18 +220,8 @@ export default function BracketView({ data, rightAction }) {
       </p>
       <HowItWorks />
 
-      {/* ESPN-style tree: round columns side-by-side; later rounds centre between their feeders (justify-around). */}
       <div className="mt-3 -mx-4 overflow-x-auto px-4 pb-2">
-        <div className="flex items-stretch gap-2.5" style={{ minWidth: "min-content" }}>
-          {treeRounds.map((r) => (
-            <div key={r.key} className="flex shrink-0 flex-col">
-              <div className="mb-2 text-center text-[11px] font-bold uppercase tracking-wide text-ink-2">{r.short}</div>
-              <div className="flex flex-1 flex-col justify-around">
-                {r.matches.map((m) => <MatchBox key={m.match_number} data={data} m={m} />)}
-              </div>
-            </div>
-          ))}
-        </div>
+        <BracketTree data={data} rounds={treeRounds} />
       </div>
 
       {third && (
