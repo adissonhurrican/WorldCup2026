@@ -318,7 +318,7 @@
           "code": "KOR",
           "win_group": 0,
           "top_2": 0.6778,
-          "advance": 0.8025,
+          "advance": 0.807,
           "finish_distribution": {
             "1st": 0,
             "2nd": 0.6778,
@@ -331,7 +331,7 @@
           "code": "RSA",
           "win_group": 0,
           "top_2": 0.2326,
-          "advance": 0.3222,
+          "advance": 0.3224,
           "finish_distribution": {
             "1st": 0,
             "2nd": 0.2326,
@@ -344,7 +344,7 @@
           "code": "CZE",
           "win_group": 0,
           "top_2": 0.0896,
-          "advance": 0.3415,
+          "advance": 0.3398,
           "finish_distribution": {
             "1st": 0,
             "2nd": 0.0896,
@@ -388,7 +388,7 @@
           "code": "BIH",
           "win_group": 0,
           "top_2": 0.0002,
-          "advance": 0.4102,
+          "advance": 0.4122,
           "finish_distribution": {
             "1st": 0,
             "2nd": 0.0002,
@@ -401,7 +401,7 @@
           "code": "QAT",
           "win_group": 0,
           "top_2": 0.0001,
-          "advance": 0.3166,
+          "advance": 0.319,
           "finish_distribution": {
             "1st": 0,
             "2nd": 0.0001,
@@ -432,7 +432,7 @@
           "code": "MAR",
           "win_group": 0.2794,
           "top_2": 0.8973,
-          "advance": 0.9994,
+          "advance": 0.9997,
           "finish_distribution": {
             "1st": 0.2794,
             "2nd": 0.6179,
@@ -445,7 +445,7 @@
           "code": "SCO",
           "win_group": 0.1756,
           "top_2": 0.3247,
-          "advance": 0.8203,
+          "advance": 0.8247,
           "finish_distribution": {
             "1st": 0.1756,
             "2nd": 0.1491,
@@ -474,53 +474,53 @@
       "standings": [
         {
           "code": "USA",
-          "win_group": 0.8774,
-          "top_2": 0.9898,
+          "win_group": 1,
+          "top_2": 1,
           "advance": 1,
           "finish_distribution": {
-            "1st": 0.8774,
-            "2nd": 0.1124,
-            "3rd": 0.0101,
+            "1st": 1,
+            "2nd": 0,
+            "3rd": 0,
             "4th": 0
           },
           "projected_finish": "1st"
         },
         {
-          "code": "TUR",
-          "win_group": 0.1221,
-          "top_2": 0.2031,
-          "advance": 0.4295,
-          "finish_distribution": {
-            "1st": 0.1221,
-            "2nd": 0.081,
-            "3rd": 0.3287,
-            "4th": 0.4682
-          },
-          "projected_finish": "4th"
-        },
-        {
           "code": "AUS",
-          "win_group": 0.0004,
-          "top_2": 0.572,
-          "advance": 0.7682,
+          "win_group": 0,
+          "top_2": 0.6186,
+          "advance": 0.8482,
           "finish_distribution": {
-            "1st": 0.0004,
-            "2nd": 0.5716,
-            "3rd": 0.2829,
-            "4th": 0.1451
+            "1st": 0,
+            "2nd": 0.6186,
+            "3rd": 0.3814,
+            "4th": 0
           },
           "projected_finish": "2nd"
         },
         {
           "code": "PAR",
           "win_group": 0,
-          "top_2": 0.235,
-          "advance": 0.4405,
+          "top_2": 0.3814,
+          "advance": 0.7462,
           "finish_distribution": {
             "1st": 0,
-            "2nd": 0.235,
-            "3rd": 0.3782,
-            "4th": 0.3867
+            "2nd": 0.3814,
+            "3rd": 0.6186,
+            "4th": 0
+          },
+          "projected_finish": "3rd"
+        },
+        {
+          "code": "TUR",
+          "win_group": 0,
+          "top_2": 0,
+          "advance": 0,
+          "finish_distribution": {
+            "1st": 0,
+            "2nd": 0,
+            "3rd": 0,
+            "4th": 1
           },
           "projected_finish": "4th"
         }
@@ -533,7 +533,7 @@
           "code": "GER",
           "win_group": 0.4973,
           "top_2": 0.8401,
-          "advance": 0.9709,
+          "advance": 0.9716,
           "finish_distribution": {
             "1st": 0.4973,
             "2nd": 0.3428,
@@ -546,7 +546,7 @@
           "code": "CIV",
           "win_group": 0.3673,
           "top_2": 0.7593,
-          "advance": 0.8938,
+          "advance": 0.8953,
           "finish_distribution": {
             "1st": 0.3673,
             "2nd": 0.392,
@@ -559,7 +559,7 @@
           "code": "ECU",
           "win_group": 0.1016,
           "top_2": 0.2811,
-          "advance": 0.6166,
+          "advance": 0.6194,
           "finish_distribution": {
             "1st": 0.1016,
             "2nd": 0.1795,
@@ -572,7 +572,7 @@
           "code": "CUW",
           "win_group": 0.0338,
           "top_2": 0.1195,
-          "advance": 0.2392,
+          "advance": 0.2366,
           "finish_distribution": {
             "1st": 0.0338,
             "2nd": 0.0857,
@@ -590,7 +590,7 @@
           "code": "SWE",
           "win_group": 0.4607,
           "top_2": 0.6853,
-          "advance": 0.9369,
+          "advance": 0.9385,
           "finish_distribution": {
             "1st": 0.4607,
             "2nd": 0.2246,
@@ -603,7 +603,7 @@
           "code": "NED",
           "win_group": 0.2618,
           "top_2": 0.5819,
-          "advance": 0.7589,
+          "advance": 0.7585,
           "finish_distribution": {
             "1st": 0.2618,
             "2nd": 0.3201,
@@ -629,7 +629,7 @@
           "code": "TUN",
           "win_group": 0.0447,
           "top_2": 0.1908,
-          "advance": 0.2841,
+          "advance": 0.2837,
           "finish_distribution": {
             "1st": 0.0447,
             "2nd": 0.1461,
@@ -647,7 +647,7 @@
           "code": "BEL",
           "win_group": 0.3105,
           "top_2": 0.5588,
-          "advance": 0.718,
+          "advance": 0.7179,
           "finish_distribution": {
             "1st": 0.3105,
             "2nd": 0.2483,
@@ -660,7 +660,7 @@
           "code": "IRN",
           "win_group": 0.2561,
           "top_2": 0.5224,
-          "advance": 0.6599,
+          "advance": 0.6596,
           "finish_distribution": {
             "1st": 0.2561,
             "2nd": 0.2663,
@@ -673,7 +673,7 @@
           "code": "EGY",
           "win_group": 0.2228,
           "top_2": 0.4678,
-          "advance": 0.6566,
+          "advance": 0.6573,
           "finish_distribution": {
             "1st": 0.2228,
             "2nd": 0.245,
@@ -686,7 +686,7 @@
           "code": "NZL",
           "win_group": 0.2105,
           "top_2": 0.4509,
-          "advance": 0.602,
+          "advance": 0.6014,
           "finish_distribution": {
             "1st": 0.2105,
             "2nd": 0.2404,
@@ -704,7 +704,7 @@
           "code": "ESP",
           "win_group": 0.4091,
           "top_2": 0.6793,
-          "advance": 0.8101,
+          "advance": 0.81,
           "finish_distribution": {
             "1st": 0.4091,
             "2nd": 0.2702,
@@ -717,7 +717,7 @@
           "code": "URU",
           "win_group": 0.267,
           "top_2": 0.5631,
-          "advance": 0.6932,
+          "advance": 0.693,
           "finish_distribution": {
             "1st": 0.267,
             "2nd": 0.2961,
@@ -730,7 +730,7 @@
           "code": "KSA",
           "win_group": 0.1651,
           "top_2": 0.3816,
-          "advance": 0.5582,
+          "advance": 0.5575,
           "finish_distribution": {
             "1st": 0.1651,
             "2nd": 0.2165,
@@ -743,7 +743,7 @@
           "code": "CPV",
           "win_group": 0.1588,
           "top_2": 0.376,
-          "advance": 0.5969,
+          "advance": 0.5975,
           "finish_distribution": {
             "1st": 0.1588,
             "2nd": 0.2172,
@@ -761,7 +761,7 @@
           "code": "FRA",
           "win_group": 0.5175,
           "top_2": 0.84,
-          "advance": 0.941,
+          "advance": 0.9419,
           "finish_distribution": {
             "1st": 0.5175,
             "2nd": 0.3225,
@@ -774,7 +774,7 @@
           "code": "NOR",
           "win_group": 0.3931,
           "top_2": 0.7911,
-          "advance": 0.9509,
+          "advance": 0.9528,
           "finish_distribution": {
             "1st": 0.3931,
             "2nd": 0.398,
@@ -787,7 +787,7 @@
           "code": "SEN",
           "win_group": 0.0461,
           "top_2": 0.228,
-          "advance": 0.4916,
+          "advance": 0.495,
           "finish_distribution": {
             "1st": 0.0461,
             "2nd": 0.1819,
@@ -800,7 +800,7 @@
           "code": "IRQ",
           "win_group": 0.0432,
           "top_2": 0.1409,
-          "advance": 0.294,
+          "advance": 0.2952,
           "finish_distribution": {
             "1st": 0.0432,
             "2nd": 0.0977,
@@ -818,7 +818,7 @@
           "code": "ARG",
           "win_group": 0.5761,
           "top_2": 0.8672,
-          "advance": 0.9548,
+          "advance": 0.9556,
           "finish_distribution": {
             "1st": 0.5761,
             "2nd": 0.2911,
@@ -831,7 +831,7 @@
           "code": "AUT",
           "win_group": 0.336,
           "top_2": 0.7739,
-          "advance": 0.9175,
+          "advance": 0.9203,
           "finish_distribution": {
             "1st": 0.336,
             "2nd": 0.4379,
@@ -844,7 +844,7 @@
           "code": "JOR",
           "win_group": 0.0549,
           "top_2": 0.1697,
-          "advance": 0.3536,
+          "advance": 0.3563,
           "finish_distribution": {
             "1st": 0.0549,
             "2nd": 0.1148,
@@ -857,7 +857,7 @@
           "code": "ALG",
           "win_group": 0.033,
           "top_2": 0.1893,
-          "advance": 0.3956,
+          "advance": 0.3995,
           "finish_distribution": {
             "1st": 0.033,
             "2nd": 0.1563,
@@ -875,7 +875,7 @@
           "code": "COL",
           "win_group": 0.5899,
           "top_2": 0.7912,
-          "advance": 0.9395,
+          "advance": 0.9411,
           "finish_distribution": {
             "1st": 0.5899,
             "2nd": 0.2013,
@@ -888,7 +888,7 @@
           "code": "POR",
           "win_group": 0.2153,
           "top_2": 0.5369,
-          "advance": 0.713,
+          "advance": 0.7124,
           "finish_distribution": {
             "1st": 0.2153,
             "2nd": 0.3216,
@@ -901,7 +901,7 @@
           "code": "COD",
           "win_group": 0.1529,
           "top_2": 0.4215,
-          "advance": 0.609,
+          "advance": 0.6094,
           "finish_distribution": {
             "1st": 0.1529,
             "2nd": 0.2686,
@@ -914,7 +914,7 @@
           "code": "UZB",
           "win_group": 0.042,
           "top_2": 0.2506,
-          "advance": 0.4009,
+          "advance": 0.4049,
           "finish_distribution": {
             "1st": 0.042,
             "2nd": 0.2086,
@@ -932,7 +932,7 @@
           "code": "ENG",
           "win_group": 0.6183,
           "top_2": 0.8666,
-          "advance": 0.944,
+          "advance": 0.946,
           "finish_distribution": {
             "1st": 0.6183,
             "2nd": 0.2483,
@@ -945,7 +945,7 @@
           "code": "GHA",
           "win_group": 0.2551,
           "top_2": 0.5606,
-          "advance": 0.7518,
+          "advance": 0.7529,
           "finish_distribution": {
             "1st": 0.2551,
             "2nd": 0.3055,
@@ -958,7 +958,7 @@
           "code": "CRO",
           "win_group": 0.0668,
           "top_2": 0.3812,
-          "advance": 0.5792,
+          "advance": 0.5802,
           "finish_distribution": {
             "1st": 0.0668,
             "2nd": 0.3144,
@@ -971,7 +971,7 @@
           "code": "PAN",
           "win_group": 0.0598,
           "top_2": 0.1916,
-          "advance": 0.381,
+          "advance": 0.3834,
           "finish_distribution": {
             "1st": 0.0598,
             "2nd": 0.1318,
@@ -1453,7 +1453,11 @@
         "draw": 0.2651,
         "away_win": 0.3506
       },
-      "result": null,
+      "result": {
+        "home_score": 0,
+        "away_score": 1,
+        "status": "final"
+      },
       "live_score_ref": null
     },
     {
@@ -2750,10 +2754,10 @@
         "team": null
       },
       "prediction": {
-        "team_a_win_probability": 0.8483,
-        "team_b_win_probability": 0.1517,
+        "team_a_win_probability": 0.8074,
+        "team_b_win_probability": 0.1926,
         "elo_a": 2082,
-        "elo_b": 1783,
+        "elo_b": 1833,
         "elo_source": "pre_tournament",
         "basis": "projected",
         "method": "neutral_elo_single_match"
@@ -3237,9 +3241,9 @@
         "team": null
       },
       "prediction": {
-        "team_a_win_probability": 0.6937,
-        "team_b_win_probability": 0.3063,
-        "elo_a": 1902,
+        "team_a_win_probability": 0.5331,
+        "team_b_win_probability": 0.4669,
+        "elo_a": 1783,
         "elo_b": 1760,
         "elo_source": "pre_tournament",
         "basis": "projected",
@@ -5420,7 +5424,7 @@
   "scenarios": [
     {
       "code": "ALG",
-      "advance_chance": 0.3956,
+      "advance_chance": 0.3995,
       "in_their_hands": false,
       "routes": [
         {
@@ -5453,11 +5457,11 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.2063,
+          "chance": 0.2102,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 0 pts now, ~4 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "I",
             "E",
             "C"
@@ -5467,16 +5471,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.553,
-        "race_position": 11,
+        "advances_if_third": 0.5636,
+        "race_position": 10,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "I",
           "E",
           "C"
         ],
-        "needs": "Finishing 3rd, ALG advances in ~55% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#28) vs other groups' thirds (most often L/D/I/E/C).",
+        "needs": "Finishing 3rd, ALG advances in ~56% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#28) vs other groups' thirds (most often D/L/I/E/C).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -2,
@@ -5487,7 +5491,7 @@
     },
     {
       "code": "ARG",
-      "advance_chance": 0.9548,
+      "advance_chance": 0.9556,
       "in_their_hands": true,
       "routes": [
         {
@@ -5520,30 +5524,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.0877,
+          "chance": 0.0883,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 3 pts now, ~0 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "I",
             "C",
-            "K"
+            "E"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.87,
-        "race_position": 11,
+        "advances_if_third": 0.8769,
+        "race_position": 10,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "I",
           "C",
-          "K"
+          "E"
         ],
-        "needs": "Finishing 3rd, ARG advances in ~87% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#1) vs other groups' thirds (most often L/D/I/C/K).",
+        "needs": "Finishing 3rd, ARG advances in ~88% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#1) vs other groups' thirds (most often D/L/I/C/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -2,
@@ -5554,26 +5558,12 @@
     },
     {
       "code": "AUS",
-      "advance_chance": 0.7682,
+      "advance_chance": 0.8482,
       "in_their_hands": true,
       "routes": [
         {
-          "route": "Win the group",
-          "chance": 0.0004,
-          "own_form": "Win group: typically 6 pts (2W 0D 1L); from 3 pts now, ~3 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
           "route": "Finish runner-up",
-          "chance": 0.5716,
+          "chance": 0.6186,
           "own_form": "Runner-up: typically 6 pts (2W 0D 1L); as low as 4 pts in our simulations; from 3 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [],
           "decided_by": [
@@ -5587,30 +5577,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1963,
+          "chance": 0.2296,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 3 pts now, ~0 more from the last 1",
           "depends_on_other_groups": [
             "L",
             "J",
             "I",
-            "E",
-            "C"
+            "C",
+            "E"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.6937,
-        "race_position": 9,
+        "advances_if_third": 0.6021,
+        "race_position": 11,
         "watch_groups": [
           "L",
           "J",
           "I",
-          "E",
-          "C"
+          "C",
+          "E"
         ],
-        "needs": "Finishing 3rd, AUS advances in ~69% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#27) vs other groups' thirds (most often L/J/I/E/C).",
+        "needs": "Finishing 3rd, AUS advances in ~60% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#27) vs other groups' thirds (most often L/J/I/C/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -2,
@@ -5621,7 +5611,7 @@
     },
     {
       "code": "AUT",
-      "advance_chance": 0.9175,
+      "advance_chance": 0.9203,
       "in_their_hands": true,
       "routes": [
         {
@@ -5654,8 +5644,8 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1437,
-          "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 3 pts now, ~1 more from the last 2",
+          "chance": 0.1464,
+          "own_form": "Best third: typically 3 pts (1W 0D 2L); from 3 pts now, ~0 more from the last 2",
           "depends_on_other_groups": [
             "D",
             "L",
@@ -5668,8 +5658,8 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.7957,
-        "race_position": 11,
+        "advances_if_third": 0.8106,
+        "race_position": 10,
         "watch_groups": [
           "D",
           "L",
@@ -5677,10 +5667,10 @@
           "C",
           "E"
         ],
-        "needs": "Finishing 3rd, AUT advances in ~80% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#24) vs other groups' thirds (most often D/L/I/C/E).",
+        "needs": "Finishing 3rd, AUT advances in ~81% of cases; more likely than not once overall GD >= -3 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#24) vs other groups' thirds (most often D/L/I/C/E).",
         "thresholds": {
           "min_points": 3,
-          "min_overall_gd": -2,
+          "min_overall_gd": -3,
           "min_goals_for": 3,
           "beats_rival_if": "AUT overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 24)"
         }
@@ -5688,7 +5678,7 @@
     },
     {
       "code": "BEL",
-      "advance_chance": 0.718,
+      "advance_chance": 0.7179,
       "in_their_hands": true,
       "routes": [
         {
@@ -5735,8 +5725,8 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.6802,
-        "race_position": 10,
+        "advances_if_third": 0.68,
+        "race_position": 9,
         "watch_groups": [
           "D",
           "L",
@@ -5744,7 +5734,7 @@
           "I",
           "C"
         ],
-        "needs": "Finishing 3rd, BEL advances in ~68% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#9) vs other groups' thirds (most often D/L/J/I/C).",
+        "needs": "Finishing 3rd, BEL advances in ~68% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#9) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -5755,7 +5745,7 @@
     },
     {
       "code": "BIH",
-      "advance_chance": 0.4102,
+      "advance_chance": 0.4122,
       "in_their_hands": false,
       "routes": [
         {
@@ -5774,30 +5764,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.4099,
+          "chance": 0.4119,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 1 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "J",
-            "I",
-            "E"
+            "E",
+            "I"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.6105,
+        "advances_if_third": 0.6135,
         "race_position": 2,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "J",
-          "I",
-          "E"
+          "E",
+          "I"
         ],
-        "needs": "Finishing 3rd, BIH advances in ~61% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#64) vs other groups' thirds (most often L/D/J/I/E).",
+        "needs": "Finishing 3rd, BIH advances in ~61% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#64) vs other groups' thirds (most often D/L/J/E/I).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -2,
@@ -5844,11 +5834,11 @@
           "chance": 0.2218,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 4 pts now, ~0 more from the last 1",
           "depends_on_other_groups": [
+            "D",
+            "J",
             "E",
             "L",
-            "I",
-            "K",
-            "F"
+            "H"
           ],
           "decided_by": []
         }
@@ -5858,13 +5848,13 @@
         "advances_if_third": 0.9995,
         "race_position": 1,
         "watch_groups": [
+          "D",
+          "J",
           "E",
           "L",
-          "I",
-          "K",
-          "F"
+          "H"
         ],
-        "needs": "Finishing 3rd, BRA advances in ~100% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#6) vs other groups' thirds (most often E/L/I/K/F).",
+        "needs": "Finishing 3rd, BRA advances in ~100% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#6) vs other groups' thirds (most often D/J/E/L/H).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -2,
@@ -5923,14 +5913,14 @@
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -2,
-          "min_goals_for": 4,
+          "min_goals_for": 3,
           "beats_rival_if": "CAN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 30)"
         }
       }
     },
     {
       "code": "CIV",
-      "advance_chance": 0.8938,
+      "advance_chance": 0.8953,
       "in_their_hands": true,
       "routes": [
         {
@@ -5963,13 +5953,13 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1346,
+          "chance": 0.1361,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 3 pts now, ~1 more from the last 2",
           "depends_on_other_groups": [
             "D",
             "L",
-            "I",
             "C",
+            "I",
             "J"
           ],
           "decided_by": []
@@ -5977,19 +5967,19 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.798,
+        "advances_if_third": 0.8072,
         "race_position": 3,
         "watch_groups": [
           "D",
           "L",
-          "I",
           "C",
+          "I",
           "J"
         ],
-        "needs": "Finishing 3rd, CIV advances in ~80% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#33) vs other groups' thirds (most often D/L/I/C/J).",
+        "needs": "Finishing 3rd, CIV advances in ~81% of cases; more likely than not once overall GD >= -3 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#33) vs other groups' thirds (most often D/L/C/I/J).",
         "thresholds": {
           "min_points": 3,
-          "min_overall_gd": -2,
+          "min_overall_gd": -3,
           "min_goals_for": 1,
           "beats_rival_if": "CIV overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 33)"
         }
@@ -5997,7 +5987,7 @@
     },
     {
       "code": "COD",
-      "advance_chance": 0.609,
+      "advance_chance": 0.6094,
       "in_their_hands": true,
       "routes": [
         {
@@ -6030,30 +6020,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1877,
+          "chance": 0.188,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
-            "I",
+            "L",
             "J",
-            "E"
+            "I",
+            "C"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.624,
+        "advances_if_third": 0.6252,
         "race_position": 6,
         "watch_groups": [
-          "L",
           "D",
-          "I",
+          "L",
           "J",
-          "E"
+          "I",
+          "C"
         ],
-        "needs": "Finishing 3rd, COD advances in ~62% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#46) vs other groups' thirds (most often L/D/I/J/E).",
+        "needs": "Finishing 3rd, COD advances in ~63% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#46) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -6064,7 +6054,7 @@
     },
     {
       "code": "COL",
-      "advance_chance": 0.9395,
+      "advance_chance": 0.9411,
       "in_their_hands": true,
       "routes": [
         {
@@ -6097,30 +6087,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1484,
+          "chance": 0.1499,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 3 pts now, ~1 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "J",
-            "I",
-            "C"
+            "C",
+            "I"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.8521,
+        "advances_if_third": 0.861,
         "race_position": 6,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "J",
-          "I",
-          "C"
+          "C",
+          "I"
         ],
-        "needs": "Finishing 3rd, COL advances in ~85% of cases; more likely than not once overall GD >= -3 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#13) vs other groups' thirds (most often L/D/J/I/C).",
+        "needs": "Finishing 3rd, COL advances in ~86% of cases; more likely than not once overall GD >= -3 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#13) vs other groups' thirds (most often D/L/J/C/I).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -3,
@@ -6131,7 +6121,7 @@
     },
     {
       "code": "CPV",
-      "advance_chance": 0.5969,
+      "advance_chance": 0.5975,
       "in_their_hands": true,
       "routes": [
         {
@@ -6164,30 +6154,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.221,
+          "chance": 0.2215,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
             "D",
             "L",
             "J",
             "I",
-            "E"
+            "C"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.7228,
-        "race_position": 7,
+        "advances_if_third": 0.7246,
+        "race_position": 8,
         "watch_groups": [
           "D",
           "L",
           "J",
           "I",
-          "E"
+          "C"
         ],
-        "needs": "Finishing 3rd, CPV advances in ~72% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#67) vs other groups' thirds (most often D/L/J/I/E).",
+        "needs": "Finishing 3rd, CPV advances in ~72% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#67) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -1,
@@ -6198,7 +6188,7 @@
     },
     {
       "code": "CRO",
-      "advance_chance": 0.5792,
+      "advance_chance": 0.5802,
       "in_their_hands": true,
       "routes": [
         {
@@ -6231,7 +6221,7 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1981,
+          "chance": 0.1991,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 0 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
             "D",
@@ -6245,8 +6235,8 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.6693,
-        "race_position": 8,
+        "advances_if_third": 0.6727,
+        "race_position": 7,
         "watch_groups": [
           "D",
           "J",
@@ -6254,7 +6244,7 @@
           "C",
           "E"
         ],
-        "needs": "Finishing 3rd, CRO advances in ~67% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#11) vs other groups' thirds (most often D/J/I/C/E).",
+        "needs": "Finishing 3rd, CRO advances in ~67% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#11) vs other groups' thirds (most often D/J/I/C/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -2,
@@ -6265,8 +6255,8 @@
     },
     {
       "code": "CUW",
-      "advance_chance": 0.2392,
-      "in_their_hands": false,
+      "advance_chance": 0.2366,
+      "in_their_hands": true,
       "routes": [
         {
           "route": "Win the group",
@@ -6298,30 +6288,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1197,
+          "chance": 0.1171,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 0 pts now, ~4 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "J",
-            "I",
-            "C"
+            "C",
+            "I"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.4353,
+        "advances_if_third": 0.4255,
         "race_position": 3,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "J",
-          "I",
-          "C"
+          "C",
+          "I"
         ],
-        "needs": "Finishing 3rd, CUW advances in ~44% of cases; more likely than not once overall GD >= -5 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#82) vs other groups' thirds (most often L/D/J/I/C).",
+        "needs": "Finishing 3rd, CUW advances in ~43% of cases; more likely than not once overall GD >= -5 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#82) vs other groups' thirds (most often D/L/J/C/I).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -5,
@@ -6332,7 +6322,7 @@
     },
     {
       "code": "CZE",
-      "advance_chance": 0.3415,
+      "advance_chance": 0.3398,
       "in_their_hands": false,
       "routes": [
         {
@@ -6351,7 +6341,7 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.2519,
+          "chance": 0.2502,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 1 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [
             "D",
@@ -6365,7 +6355,7 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.4385,
+        "advances_if_third": 0.4357,
         "race_position": 12,
         "watch_groups": [
           "D",
@@ -6374,7 +6364,7 @@
           "J",
           "C"
         ],
-        "needs": "Finishing 3rd, CZE advances in ~44% of cases; more likely than not once overall GD >= 0 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#40) vs other groups' thirds (most often D/L/I/J/C).",
+        "needs": "Finishing 3rd, CZE advances in ~44% of cases; more likely than not once overall GD >= 0 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#40) vs other groups' thirds (most often D/L/I/J/C).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": 0,
@@ -6385,7 +6375,7 @@
     },
     {
       "code": "ECU",
-      "advance_chance": 0.6166,
+      "advance_chance": 0.6194,
       "in_their_hands": false,
       "routes": [
         {
@@ -6418,13 +6408,13 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.3355,
+          "chance": 0.3383,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 0 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
-            "I",
+            "L",
             "J",
+            "I",
             "C"
           ],
           "decided_by": []
@@ -6432,16 +6422,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.7972,
+        "advances_if_third": 0.8041,
         "race_position": 3,
         "watch_groups": [
-          "L",
           "D",
-          "I",
+          "L",
           "J",
+          "I",
           "C"
         ],
-        "needs": "Finishing 3rd, ECU advances in ~80% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#23) vs other groups' thirds (most often L/D/I/J/C).",
+        "needs": "Finishing 3rd, ECU advances in ~80% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#23) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -1,
@@ -6452,7 +6442,7 @@
     },
     {
       "code": "EGY",
-      "advance_chance": 0.6566,
+      "advance_chance": 0.6573,
       "in_their_hands": true,
       "routes": [
         {
@@ -6485,13 +6475,13 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1888,
+          "chance": 0.1895,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
             "D",
             "L",
-            "I",
             "J",
+            "I",
             "C"
           ],
           "decided_by": []
@@ -6499,16 +6489,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.7038,
-        "race_position": 10,
+        "advances_if_third": 0.7066,
+        "race_position": 9,
         "watch_groups": [
           "D",
           "L",
-          "I",
           "J",
+          "I",
           "C"
         ],
-        "needs": "Finishing 3rd, EGY advances in ~70% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#29) vs other groups' thirds (most often D/L/I/J/C).",
+        "needs": "Finishing 3rd, EGY advances in ~71% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#29) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -6519,7 +6509,7 @@
     },
     {
       "code": "ENG",
-      "advance_chance": 0.944,
+      "advance_chance": 0.946,
       "in_their_hands": true,
       "routes": [
         {
@@ -6552,30 +6542,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.0775,
+          "chance": 0.0795,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 3 pts now, ~1 more from the last 2",
           "depends_on_other_groups": [
             "D",
             "J",
             "I",
             "C",
-            "K"
+            "E"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.8391,
-        "race_position": 8,
+        "advances_if_third": 0.8608,
+        "race_position": 7,
         "watch_groups": [
           "D",
           "J",
           "I",
           "C",
-          "K"
+          "E"
         ],
-        "needs": "Finishing 3rd, ENG advances in ~84% of cases; more likely than not once overall GD >= -3 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#4) vs other groups' thirds (most often D/J/I/C/K).",
+        "needs": "Finishing 3rd, ENG advances in ~86% of cases; more likely than not once overall GD >= -3 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#4) vs other groups' thirds (most often D/J/I/C/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -3,
@@ -6586,7 +6576,7 @@
     },
     {
       "code": "ESP",
-      "advance_chance": 0.8101,
+      "advance_chance": 0.81,
       "in_their_hands": true,
       "routes": [
         {
@@ -6619,30 +6609,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1308,
+          "chance": 0.1307,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "I",
-            "E",
-            "C"
+            "J",
+            "E"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.7141,
-        "race_position": 7,
+        "advances_if_third": 0.7138,
+        "race_position": 8,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "I",
-          "E",
-          "C"
+          "J",
+          "E"
         ],
-        "needs": "Finishing 3rd, ESP advances in ~71% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#2) vs other groups' thirds (most often L/D/I/E/C).",
+        "needs": "Finishing 3rd, ESP advances in ~71% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#2) vs other groups' thirds (most often D/L/I/J/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -6653,7 +6643,7 @@
     },
     {
       "code": "FRA",
-      "advance_chance": 0.941,
+      "advance_chance": 0.9419,
       "in_their_hands": true,
       "routes": [
         {
@@ -6686,11 +6676,11 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1009,
+          "chance": 0.1019,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 3 pts now, ~1 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "J",
             "C",
             "K"
@@ -6700,16 +6690,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.8673,
+        "advances_if_third": 0.8754,
         "race_position": 5,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "J",
           "C",
           "K"
         ],
-        "needs": "Finishing 3rd, FRA advances in ~87% of cases; more likely than not once overall GD >= -3 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#3) vs other groups' thirds (most often L/D/J/C/K).",
+        "needs": "Finishing 3rd, FRA advances in ~88% of cases; more likely than not once overall GD >= -3 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#3) vs other groups' thirds (most often D/L/J/C/K).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -3,
@@ -6720,7 +6710,7 @@
     },
     {
       "code": "GER",
-      "advance_chance": 0.9709,
+      "advance_chance": 0.9716,
       "in_their_hands": true,
       "routes": [
         {
@@ -6753,7 +6743,7 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1308,
+          "chance": 0.1314,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 3 pts now, ~0 more from the last 2",
           "depends_on_other_groups": [
             "D",
@@ -6767,7 +6757,7 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.9649,
+        "advances_if_third": 0.9697,
         "race_position": 3,
         "watch_groups": [
           "D",
@@ -6776,7 +6766,7 @@
           "I",
           "C"
         ],
-        "needs": "Finishing 3rd, GER advances in ~96% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#10) vs other groups' thirds (most often D/L/J/I/C).",
+        "needs": "Finishing 3rd, GER advances in ~97% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#10) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -1,
@@ -6787,7 +6777,7 @@
     },
     {
       "code": "GHA",
-      "advance_chance": 0.7518,
+      "advance_chance": 0.7529,
       "in_their_hands": true,
       "routes": [
         {
@@ -6820,7 +6810,7 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1911,
+          "chance": 0.1923,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 3 pts now, ~1 more from the last 2",
           "depends_on_other_groups": [
             "D",
@@ -6834,8 +6824,8 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.5977,
-        "race_position": 8,
+        "advances_if_third": 0.6013,
+        "race_position": 7,
         "watch_groups": [
           "D",
           "J",
@@ -6843,7 +6833,7 @@
           "C",
           "E"
         ],
-        "needs": "Finishing 3rd, GHA advances in ~60% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#73) vs other groups' thirds (most often D/J/I/C/E).",
+        "needs": "Finishing 3rd, GHA advances in ~60% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#73) vs other groups' thirds (most often D/J/I/C/E).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -3,
@@ -6868,7 +6858,7 @@
     },
     {
       "code": "IRN",
-      "advance_chance": 0.6599,
+      "advance_chance": 0.6596,
       "in_their_hands": true,
       "routes": [
         {
@@ -6901,30 +6891,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1375,
+          "chance": 0.1373,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "J",
-            "I",
-            "C"
+            "C",
+            "I"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.5551,
-        "race_position": 10,
+        "advances_if_third": 0.5541,
+        "race_position": 9,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "J",
-          "I",
-          "C"
+          "C",
+          "I"
         ],
-        "needs": "Finishing 3rd, IRN advances in ~56% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#20) vs other groups' thirds (most often L/D/J/I/C).",
+        "needs": "Finishing 3rd, IRN advances in ~55% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#20) vs other groups' thirds (most often D/L/J/C/I).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -6935,7 +6925,7 @@
     },
     {
       "code": "IRQ",
-      "advance_chance": 0.294,
+      "advance_chance": 0.2952,
       "in_their_hands": false,
       "routes": [
         {
@@ -6968,30 +6958,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1532,
+          "chance": 0.1542,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 0 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
             "D",
             "L",
             "J",
-            "E",
-            "C"
+            "C",
+            "E"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.5313,
+        "advances_if_third": 0.5351,
         "race_position": 5,
         "watch_groups": [
           "D",
           "L",
           "J",
-          "E",
-          "C"
+          "C",
+          "E"
         ],
-        "needs": "Finishing 3rd, IRQ advances in ~53% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#57) vs other groups' thirds (most often D/L/J/E/C).",
+        "needs": "Finishing 3rd, IRQ advances in ~54% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#57) vs other groups' thirds (most often D/L/J/C/E).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -2,
@@ -7002,7 +6992,7 @@
     },
     {
       "code": "JOR",
-      "advance_chance": 0.3536,
+      "advance_chance": 0.3563,
       "in_their_hands": false,
       "routes": [
         {
@@ -7035,32 +7025,32 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1839,
+          "chance": 0.1865,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 0 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "I",
-            "E",
-            "C"
+            "C",
+            "E"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.5321,
-        "race_position": 11,
+        "advances_if_third": 0.5398,
+        "race_position": 10,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "I",
-          "E",
-          "C"
+          "C",
+          "E"
         ],
-        "needs": "Finishing 3rd, JOR advances in ~53% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#63) vs other groups' thirds (most often L/D/I/E/C).",
+        "needs": "Finishing 3rd, JOR advances in ~54% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#63) vs other groups' thirds (most often D/L/I/C/E).",
         "thresholds": {
-          "min_points": 4,
+          "min_points": 3,
           "min_overall_gd": -1,
           "min_goals_for": 5,
           "beats_rival_if": "JOR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 63)"
@@ -7105,9 +7095,9 @@
           "chance": 0.1941,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
+            "D",
             "L",
             "J",
-            "D",
             "I",
             "E"
           ],
@@ -7119,13 +7109,13 @@
         "advances_if_third": 0.7205,
         "race_position": 4,
         "watch_groups": [
+          "D",
           "L",
           "J",
-          "D",
           "I",
           "E"
         ],
-        "needs": "Finishing 3rd, JPN advances in ~72% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#18) vs other groups' thirds (most often L/J/D/I/E).",
+        "needs": "Finishing 3rd, JPN advances in ~72% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#18) vs other groups' thirds (most often D/L/J/I/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -7136,7 +7126,7 @@
     },
     {
       "code": "KOR",
-      "advance_chance": 0.8025,
+      "advance_chance": 0.807,
       "in_their_hands": true,
       "routes": [
         {
@@ -7155,13 +7145,13 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1247,
+          "chance": 0.1292,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 3 pts now, ~0 more from the last 1",
           "depends_on_other_groups": [
-            "L",
             "D",
-            "I",
+            "L",
             "J",
+            "I",
             "C"
           ],
           "decided_by": []
@@ -7169,19 +7159,19 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.5802,
+        "advances_if_third": 0.6009,
         "race_position": 12,
         "watch_groups": [
-          "L",
           "D",
-          "I",
+          "L",
           "J",
+          "I",
           "C"
         ],
-        "needs": "Finishing 3rd, KOR advances in ~58% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#25) vs other groups' thirds (most often L/D/I/J/C).",
+        "needs": "Finishing 3rd, KOR advances in ~60% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#25) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
-          "min_overall_gd": -1,
+          "min_overall_gd": -2,
           "min_goals_for": 2,
           "beats_rival_if": "KOR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 25)"
         }
@@ -7189,7 +7179,7 @@
     },
     {
       "code": "KSA",
-      "advance_chance": 0.5582,
+      "advance_chance": 0.5575,
       "in_their_hands": true,
       "routes": [
         {
@@ -7222,13 +7212,13 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1766,
+          "chance": 0.1759,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
-            "I",
+            "L",
             "J",
+            "I",
             "C"
           ],
           "decided_by": []
@@ -7236,16 +7226,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.6262,
-        "race_position": 7,
+        "advances_if_third": 0.6237,
+        "race_position": 8,
         "watch_groups": [
-          "L",
           "D",
-          "I",
+          "L",
           "J",
+          "I",
           "C"
         ],
-        "needs": "Finishing 3rd, KSA advances in ~63% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#61) vs other groups' thirds (most often L/D/I/J/C).",
+        "needs": "Finishing 3rd, KSA advances in ~62% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#61) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -7256,7 +7246,7 @@
     },
     {
       "code": "MAR",
-      "advance_chance": 0.9994,
+      "advance_chance": 0.9997,
       "in_their_hands": true,
       "routes": [
         {
@@ -7289,30 +7279,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1022,
+          "chance": 0.1024,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 4 pts now, ~0 more from the last 1",
           "depends_on_other_groups": [
+            "D",
             "L",
             "J",
-            "D",
             "F",
-            "E"
+            "A"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.9942,
+        "advances_if_third": 0.9966,
         "race_position": 1,
         "watch_groups": [
+          "D",
           "L",
           "J",
-          "D",
           "F",
-          "E"
+          "A"
         ],
-        "needs": "Finishing 3rd, MAR advances in ~99% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#7) vs other groups' thirds (most often L/J/D/F/E).",
+        "needs": "Finishing 3rd, MAR advances in ~100% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#7) vs other groups' thirds (most often D/L/J/F/A).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -3,
@@ -7352,7 +7342,7 @@
     },
     {
       "code": "NED",
-      "advance_chance": 0.7589,
+      "advance_chance": 0.7585,
       "in_their_hands": true,
       "routes": [
         {
@@ -7385,13 +7375,13 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.177,
+          "chance": 0.1767,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
             "D",
             "L",
             "J",
-            "E",
+            "C",
             "I"
           ],
           "decided_by": []
@@ -7399,16 +7389,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.7275,
+        "advances_if_third": 0.7261,
         "race_position": 4,
         "watch_groups": [
           "D",
           "L",
           "J",
-          "E",
+          "C",
           "I"
         ],
-        "needs": "Finishing 3rd, NED advances in ~73% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#8) vs other groups' thirds (most often D/L/J/E/I).",
+        "needs": "Finishing 3rd, NED advances in ~73% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#8) vs other groups' thirds (most often D/L/J/C/I).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -7419,7 +7409,7 @@
     },
     {
       "code": "NOR",
-      "advance_chance": 0.9509,
+      "advance_chance": 0.9528,
       "in_their_hands": true,
       "routes": [
         {
@@ -7452,11 +7442,11 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1599,
+          "chance": 0.1618,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 3 pts now, ~0 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "J",
             "C",
             "E"
@@ -7466,16 +7456,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.9024,
+        "advances_if_third": 0.9131,
         "race_position": 5,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "J",
           "C",
           "E"
         ],
-        "needs": "Finishing 3rd, NOR advances in ~90% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#31) vs other groups' thirds (most often L/D/J/C/E).",
+        "needs": "Finishing 3rd, NOR advances in ~91% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#31) vs other groups' thirds (most often D/L/J/C/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -2,
@@ -7486,7 +7476,7 @@
     },
     {
       "code": "NZL",
-      "advance_chance": 0.602,
+      "advance_chance": 0.6014,
       "in_their_hands": true,
       "routes": [
         {
@@ -7519,13 +7509,13 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.151,
+          "chance": 0.1504,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
             "D",
             "L",
-            "J",
             "I",
+            "J",
             "E"
           ],
           "decided_by": []
@@ -7533,16 +7523,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.604,
-        "race_position": 10,
+        "advances_if_third": 0.6016,
+        "race_position": 9,
         "watch_groups": [
           "D",
           "L",
-          "J",
           "I",
+          "J",
           "E"
         ],
-        "needs": "Finishing 3rd, NZL advances in ~60% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#85) vs other groups' thirds (most often D/L/J/I/E).",
+        "needs": "Finishing 3rd, NZL advances in ~60% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#85) vs other groups' thirds (most often D/L/I/J/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -7553,8 +7543,8 @@
     },
     {
       "code": "PAN",
-      "advance_chance": 0.381,
-      "in_their_hands": true,
+      "advance_chance": 0.3834,
+      "in_their_hands": false,
       "routes": [
         {
           "route": "Win the group",
@@ -7586,12 +7576,12 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1893,
+          "chance": 0.1918,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 0 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
             "D",
-            "I",
             "J",
+            "I",
             "E",
             "C"
           ],
@@ -7600,16 +7590,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.6483,
-        "race_position": 8,
+        "advances_if_third": 0.6566,
+        "race_position": 7,
         "watch_groups": [
           "D",
-          "I",
           "J",
+          "I",
           "E",
           "C"
         ],
-        "needs": "Finishing 3rd, PAN advances in ~65% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#34) vs other groups' thirds (most often D/I/J/E/C).",
+        "needs": "Finishing 3rd, PAN advances in ~66% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#34) vs other groups' thirds (most often D/J/I/E/C).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -1,
@@ -7620,13 +7610,13 @@
     },
     {
       "code": "PAR",
-      "advance_chance": 0.4405,
+      "advance_chance": 0.7462,
       "in_their_hands": true,
       "routes": [
         {
           "route": "Finish runner-up",
-          "chance": 0.235,
-          "own_form": "Runner-up: typically 6 pts (2W 0D 1L); as low as 3 pts in our simulations; from 0 pts now, ~6 more from the last 2",
+          "chance": 0.3814,
+          "own_form": "Runner-up: typically 6 pts (2W 0D 1L); from 3 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -7639,41 +7629,41 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.2056,
-          "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 0 pts now, ~4 more from the last 2",
+          "chance": 0.3648,
+          "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 3 pts now, ~1 more from the last 1",
           "depends_on_other_groups": [
             "L",
-            "I",
             "J",
-            "C",
-            "E"
+            "I",
+            "E",
+            "C"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.5434,
-        "race_position": 9,
+        "advances_if_third": 0.5897,
+        "race_position": 11,
         "watch_groups": [
           "L",
-          "I",
           "J",
-          "C",
-          "E"
+          "I",
+          "E",
+          "C"
         ],
-        "needs": "Finishing 3rd, PAR advances in ~54% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#41) vs other groups' thirds (most often L/I/J/C/E).",
+        "needs": "Finishing 3rd, PAR advances in ~59% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#41) vs other groups' thirds (most often L/J/I/E/C).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -2,
-          "min_goals_for": 4,
+          "min_goals_for": 3,
           "beats_rival_if": "PAR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 41)"
         }
       }
     },
     {
       "code": "POR",
-      "advance_chance": 0.713,
+      "advance_chance": 0.7124,
       "in_their_hands": true,
       "routes": [
         {
@@ -7706,7 +7696,7 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1761,
+          "chance": 0.1754,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
             "D",
@@ -7720,7 +7710,7 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.6402,
+        "advances_if_third": 0.638,
         "race_position": 6,
         "watch_groups": [
           "D",
@@ -7729,7 +7719,7 @@
           "I",
           "C"
         ],
-        "needs": "Finishing 3rd, POR advances in ~64% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#5) vs other groups' thirds (most often D/L/J/I/C).",
+        "needs": "Finishing 3rd, POR advances in ~64% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#5) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -7740,7 +7730,7 @@
     },
     {
       "code": "QAT",
-      "advance_chance": 0.3166,
+      "advance_chance": 0.319,
       "in_their_hands": false,
       "routes": [
         {
@@ -7759,12 +7749,12 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.3165,
+          "chance": 0.3189,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 1 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [
+            "D",
             "L",
             "J",
-            "D",
             "I",
             "C"
           ],
@@ -7773,16 +7763,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.9644,
+        "advances_if_third": 0.9715,
         "race_position": 2,
         "watch_groups": [
+          "D",
           "L",
           "J",
-          "D",
           "I",
           "C"
         ],
-        "needs": "Finishing 3rd, QAT advances in ~96% of cases; more likely than not once overall GD >= -5 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#56) vs other groups' thirds (most often L/J/D/I/C).",
+        "needs": "Finishing 3rd, QAT advances in ~97% of cases; more likely than not once overall GD >= -5 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#56) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -5,
@@ -7793,7 +7783,7 @@
     },
     {
       "code": "RSA",
-      "advance_chance": 0.3222,
+      "advance_chance": 0.3224,
       "in_their_hands": true,
       "routes": [
         {
@@ -7812,7 +7802,7 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.0897,
+          "chance": 0.0898,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 1 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [
             "D",
@@ -7826,7 +7816,7 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.4257,
+        "advances_if_third": 0.4262,
         "race_position": 12,
         "watch_groups": [
           "D",
@@ -7835,7 +7825,7 @@
           "J",
           "C"
         ],
-        "needs": "Finishing 3rd, RSA advances in ~43% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#60) vs other groups' thirds (most often D/L/I/J/C).",
+        "needs": "Finishing 3rd, RSA advances in ~43% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#60) vs other groups' thirds (most often D/L/I/J/C).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -1,
@@ -7846,7 +7836,7 @@
     },
     {
       "code": "SCO",
-      "advance_chance": 0.8203,
+      "advance_chance": 0.8247,
       "in_their_hands": false,
       "routes": [
         {
@@ -7879,7 +7869,7 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.4956,
+          "chance": 0.5001,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 3 pts now, ~0 more from the last 1",
           "depends_on_other_groups": [
             "D",
@@ -7893,7 +7883,7 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.7338,
+        "advances_if_third": 0.7405,
         "race_position": 1,
         "watch_groups": [
           "D",
@@ -7902,7 +7892,7 @@
           "I",
           "E"
         ],
-        "needs": "Finishing 3rd, SCO advances in ~73% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#42) vs other groups' thirds (most often D/L/J/I/E).",
+        "needs": "Finishing 3rd, SCO advances in ~74% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#42) vs other groups' thirds (most often D/L/J/I/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -2,
@@ -7913,7 +7903,7 @@
     },
     {
       "code": "SEN",
-      "advance_chance": 0.4916,
+      "advance_chance": 0.495,
       "in_their_hands": false,
       "routes": [
         {
@@ -7946,30 +7936,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.2636,
+          "chance": 0.267,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 0 pts now, ~4 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "J",
-            "E",
-            "C"
+            "C",
+            "E"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.6304,
+        "advances_if_third": 0.6384,
         "race_position": 5,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "J",
-          "E",
-          "C"
+          "C",
+          "E"
         ],
-        "needs": "Finishing 3rd, SEN advances in ~63% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#15) vs other groups' thirds (most often L/D/J/E/C).",
+        "needs": "Finishing 3rd, SEN advances in ~64% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#15) vs other groups' thirds (most often D/L/J/C/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -1,
@@ -8028,14 +8018,14 @@
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -2,
-          "min_goals_for": 4,
+          "min_goals_for": 3,
           "beats_rival_if": "SUI overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 19)"
         }
       }
     },
     {
       "code": "SWE",
-      "advance_chance": 0.9369,
+      "advance_chance": 0.9385,
       "in_their_hands": true,
       "routes": [
         {
@@ -8068,11 +8058,11 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.2516,
+          "chance": 0.2532,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 3 pts now, ~0 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "J",
             "I",
             "C"
@@ -8082,19 +8072,19 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.9317,
+        "advances_if_third": 0.9374,
         "race_position": 4,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "J",
           "I",
           "C"
         ],
-        "needs": "Finishing 3rd, SWE advances in ~93% of cases; more likely than not once overall GD >= -2 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#38) vs other groups' thirds (most often L/D/J/I/C).",
+        "needs": "Finishing 3rd, SWE advances in ~94% of cases; more likely than not once overall GD >= -3 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#38) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
-          "min_overall_gd": -2,
+          "min_overall_gd": -3,
           "min_goals_for": 5,
           "beats_rival_if": "SWE overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 38)"
         }
@@ -8102,7 +8092,7 @@
     },
     {
       "code": "TUN",
-      "advance_chance": 0.2841,
+      "advance_chance": 0.2837,
       "in_their_hands": true,
       "routes": [
         {
@@ -8135,13 +8125,13 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.0934,
+          "chance": 0.093,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 0 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
             "D",
             "L",
-            "J",
             "I",
+            "J",
             "C"
           ],
           "decided_by": []
@@ -8149,16 +8139,16 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.4299,
+        "advances_if_third": 0.428,
         "race_position": 4,
         "watch_groups": [
           "D",
           "L",
-          "J",
           "I",
+          "J",
           "C"
         ],
-        "needs": "Finishing 3rd, TUN advances in ~43% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#45) vs other groups' thirds (most often D/L/J/I/C).",
+        "needs": "Finishing 3rd, TUN advances in ~43% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#45) vs other groups' thirds (most often D/L/I/J/C).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -3,
@@ -8169,74 +8159,21 @@
     },
     {
       "code": "TUR",
-      "advance_chance": 0.4295,
-      "in_their_hands": false,
-      "routes": [
-        {
-          "route": "Win the group",
-          "chance": 0.1221,
-          "own_form": "Win group: typically 6 pts (2W 0D 1L); from 0 pts now, ~6 more from the last 2",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
-          "route": "Finish runner-up",
-          "chance": 0.081,
-          "own_form": "Runner-up: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 0 pts now, ~4 more from the last 2",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
-          "route": "Advance as best third",
-          "chance": 0.2263,
-          "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 0 pts now, ~4 more from the last 2",
-          "depends_on_other_groups": [
-            "L",
-            "I",
-            "J",
-            "E",
-            "C"
-          ],
-          "decided_by": []
-        }
-      ],
+      "advance_chance": 0,
+      "in_their_hands": true,
+      "routes": [],
       "third_place_race": {
-        "in_race": true,
-        "advances_if_third": 0.6886,
-        "race_position": 9,
-        "watch_groups": [
-          "L",
-          "I",
-          "J",
-          "E",
-          "C"
-        ],
-        "needs": "Finishing 3rd, TUR advances in ~69% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#22) vs other groups' thirds (most often L/I/J/E/C).",
-        "thresholds": {
-          "min_points": 3,
-          "min_overall_gd": -1,
-          "min_goals_for": 2,
-          "beats_rival_if": "TUR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 22)"
-        }
+        "in_race": false,
+        "advances_if_third": 0,
+        "race_position": 11,
+        "watch_groups": [],
+        "needs": null,
+        "thresholds": null
       }
     },
     {
       "code": "URU",
-      "advance_chance": 0.6932,
+      "advance_chance": 0.693,
       "in_their_hands": true,
       "routes": [
         {
@@ -8269,30 +8206,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.13,
+          "chance": 0.1299,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 1 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
-            "L",
             "D",
+            "L",
             "J",
-            "E",
-            "I"
+            "I",
+            "E"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.5673,
-        "race_position": 7,
+        "advances_if_third": 0.5666,
+        "race_position": 8,
         "watch_groups": [
-          "L",
           "D",
+          "L",
           "J",
-          "E",
-          "I"
+          "I",
+          "E"
         ],
-        "needs": "Finishing 3rd, URU advances in ~57% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#16) vs other groups' thirds (most often L/D/J/E/I).",
+        "needs": "Finishing 3rd, URU advances in ~57% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#16) vs other groups' thirds (most often D/L/J/I/E).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
@@ -8308,8 +8245,8 @@
       "routes": [
         {
           "route": "Win the group",
-          "chance": 0.8774,
-          "own_form": "Win group: typically 9 pts (3W 0D 0L); as low as 6 pts in our simulations; from 6 pts now, ~3 more from the last 1",
+          "chance": 1,
+          "own_form": "Win group: typically 6 pts (2W 0D 1L); from 6 pts now, ~0 more from the last 1",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -8319,46 +8256,20 @@
             "fair play",
             "FIFA ranking"
           ]
-        },
-        {
-          "route": "Finish runner-up",
-          "chance": 0.1124,
-          "own_form": "Runner-up: typically 6 pts (2W 0D 1L); from 6 pts now, ~0 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
-          "route": "Advance as best third",
-          "chance": 0.0101,
-          "own_form": "Best third: typically 6 pts (2W 0D 1L); from 6 pts now, ~0 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": []
         }
       ],
       "third_place_race": {
-        "in_race": true,
-        "advances_if_third": 1,
-        "race_position": 9,
+        "in_race": false,
+        "advances_if_third": 0,
+        "race_position": 11,
         "watch_groups": [],
-        "needs": "Finishing 3rd, USA advances in ~100% of cases; more likely than not once overall GD >= 1 (with >= 6 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#17) vs other groups' thirds (most often ).",
-        "thresholds": {
-          "min_points": 6,
-          "min_overall_gd": 1,
-          "min_goals_for": 6,
-          "beats_rival_if": "USA overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 17)"
-        }
+        "needs": null,
+        "thresholds": null
       }
     },
     {
       "code": "UZB",
-      "advance_chance": 0.4009,
+      "advance_chance": 0.4049,
       "in_their_hands": true,
       "routes": [
         {
@@ -8391,30 +8302,30 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1504,
+          "chance": 0.1544,
           "own_form": "Best third: typically 3 pts (1W 0D 2L); from 0 pts now, ~3 more from the last 2",
           "depends_on_other_groups": [
             "D",
             "L",
-            "I",
             "J",
-            "E"
+            "I",
+            "C"
           ],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.6012,
+        "advances_if_third": 0.6172,
         "race_position": 6,
         "watch_groups": [
           "D",
           "L",
-          "I",
           "J",
-          "E"
+          "I",
+          "C"
         ],
-        "needs": "Finishing 3rd, UZB advances in ~60% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 4; final slot decided by GD, GF, fair play, FIFA rank (#50) vs other groups' thirds (most often D/L/I/J/E).",
+        "needs": "Finishing 3rd, UZB advances in ~62% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#50) vs other groups' thirds (most often D/L/J/I/C).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -1,
@@ -8433,8 +8344,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "USA in Command of Group D with Knockout Spot All But Assured",
-      "body": "The United States are in a fantastic position, having effectively secured their place in the knockouts. Our tournament simulation gives them a 100% chance to reach the Round of 32. They are comfortably clear at the top of Group D, with nearest rivals Australia well off the pace at 77% to advance. With six points from two wins, the Americans are in complete control. Their primary route is finishing in the top two, which is nearly a certainty. Winning the group outright is highly likely, while the chance of slipping to a runner-up spot or needing a third-place back door is extremely slim. Because Türkiye and Paraguay still have a game in hand, the current table is provisional and will shift once they play. However, the U.S. have done the heavy lifting and can look forward to the next stage with quiet confidence.",
+      "headline": "USA in Complete Control of Group D",
+      "body": "The United States have put themselves in the ultimate position of strength, with their place in the knockouts completely secure. According to our tournament simulation, the Americans have a 100% chance to reach the Round of 32, standing comfortably clear at the top of Group D. Their nearest rival, Australia, sits well off the pace with an 85% chance to advance, leaving the U.S. with clear daylight at the summit. With two rounds of play complete, the table reflects a dominant start. The U.S. lead the group with six points from two wins, having scored six goals and conceded just one. Because they have maximum points, their path is as clean as it gets: they are guaranteed to finish in the top two and are certain to win the group outright. They do not need to worry about the complicated third-place back door. While the final round of matches will officially close out the group stage, the U.S. have already taken care of business and can look forward to the knockout rounds with absolute confidence.",
       "team_code": "USA"
     },
     {
@@ -8445,8 +8356,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Türkiye's Knockout Hopes Hang on a Crucial Recovery",
-      "body": "Türkiye face a tense climb to reach the knockouts, but their tournament is far from over. Our group-stage model gives them a 43% chance to advance to the Round of 32. They currently sit bottom of Group D but remain in close touch with Paraguay, who are just ahead of them with a 45% chance. With the group round still incomplete, the table is highly provisional and will shift as rivals play. Türkiye's cleanest route is finishing in the top two, though that is currently an outside chance. Instead, their most likely path is squeezing through as one of the best third-placed teams, which is roughly a one-in-five shot. They currently sit 12th in the provisional third-place rankings, just one goal behind the cut-off. To keep their hopes alive, they realistically need to target four points from their remaining matches, starting with a positive result in their next game to climb back into the qualifying picture.",
+      "headline": "Türkiye Face a Steep Climb After Tough Start",
+      "body": "Türkiye face an incredibly difficult road ahead in Group D, sitting at the bottom of the table without a point after two matches. The team finds itself adrift at the foot of the group, with Paraguay sitting comfortably ahead of them in third place with a 75% chance to advance. Following a 2-0 defeat to Australia and a tight 1-1 loss to Paraguay, Türkiye are currently ranked fourth in the group with zero points and a minus-three goal difference. According to our tournament simulation, Türkiye currently have a 0% chance to reach the knockouts, with both the direct top-two route and the third-place back door out of reach under the current projections. While mathematically all four placements remain reachable in the final round of matches, the team will need a dramatic shift in results and tiebreakers to keep their journey alive. They must focus on securing a win in their final group fixture to have any hope of altering this difficult picture.",
       "team_code": "TUR"
     },
     {
@@ -8469,8 +8380,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Senegal Facing a Tight Battle to Reach the Knockouts",
-      "body": "Senegal face a real battle to reach the knockouts, with their tournament hopes sitting at about a coin flip. Following a 3-1 opening defeat to France, they find themselves in a challenging mid-table position in Group I. Norway and France have established a clear gap at the top, leaving Senegal to focus on keeping Iraq behind them to secure a path forward. Our group-stage model gives Senegal a 49% chance to advance to the Round of 32. While a direct top-two finish remains possible, it is currently a steep climb. Instead, their most likely route is leaning on the best-third back door, which is roughly a one-in-four chance. They currently sit as the tenth-best third-placed team, just one goal behind Ecuador for the final qualifying spot. To keep control of their destiny, Senegal realistically need to target four points from their final two matches to secure a strong third-place ranking, or push for two wins to leap back into the automatic qualification spots.",
+      "headline": "Senegal Facing a Coin-Flip Battle After Opening Defeat",
+      "body": "Senegal face a tense road ahead to reach the knockouts, with their tournament hopes sitting at a 50% chance. Following a 3-1 opening defeat to France, they find themselves in a tough Group I position. Norway and France are already well clear at the top, leaving Senegal to battle Iraq, who sit right behind them with a 30% chance of advancing. Currently, Senegal are third in the group with zero points and a minus-two goal difference. In the cross-group standings, they sit as the eleventh-best third-place team, one point behind the provisional cut-off to qualify for the Round of 32. To keep their fate in their own hands, Senegal need to target a top-two finish, though our model suggests that route is now an uphill climb. Instead, their most realistic path is fighting to advance as one of the best third-placed teams, which typically requires securing around four points from their remaining matches. With two games left to play, every point and goal will be crucial to keeping their tournament alive.",
       "team_code": "SEN"
     },
     {
@@ -8494,19 +8405,19 @@
     {
       "content_type": "scenario_narration",
       "headline": "Portugal Well Placed in Group K After Opening Draw",
-      "body": "Portugal are in a strong position to reach the knockouts, with a 71% chance to advance to the Round of 32. Following their opening 1-1 draw with Congo DR, they sit third in Group K on one point. They are chasing Colombia, who lead the group with three points, while Congo DR remains right on their heels. Portugal's cleanest path is finishing in the top two, which our tournament simulation rates as more likely than not. If they fall short of the top two, they still have a slim back-door route to qualify as one of the best third-placed teams. They currently sit as the fourth-best third-placed team across the tournament, one point clear of the cut-off. To secure their spot without relying on other groups, Portugal will likely need at least four more points from their remaining matches against Colombia and Uzbekistan.",
+      "body": "Portugal are in a strong position to reach the knockouts, carrying a 71% chance to advance to the Round of 32. They currently sit third in Group K after opening with a 1-1 draw against Congo DR, while Colombia lead the way. Congo DR remain right on their heels with a 61% chance to advance, making this a highly competitive chase behind Colombia. For Portugal, the cleanest route forward is finishing in the top two, which our tournament simulation rates as more likely than not. If they slip to third, they still have a slim back-door route to qualify. In fact, they currently rank as the fifth-best third-placed team across the tournament, sitting one point clear of the cut-off. To secure their spot without relying on other groups, Portugal will likely need to find at least four more points from their remaining two matches to guarantee a top-two finish.",
       "team_code": "POR"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Paraguay Facing a Tight Battle to Keep Knockout Hopes Alive",
-      "body": "Paraguay face a tense road ahead to reach the knockouts, with their tournament survival very much in the balance. Following a tough opening loss to the USA, they sit at the bottom of Group D, but their campaign is far from over. In the wider group race, they are locked in a tight battle with Türkiye, who are right on their heels at 43% to advance, while Australia sit further ahead. Because the group round is still incomplete and teams have games in hand, this provisional table will shift quickly. Our tournament simulation gives Paraguay a 44% chance to advance to the Round of 32. To get there, they have two main paths. Finishing as the group runner-up is their cleanest route, but that is currently a real challenge, sitting at roughly a coin flip. Alternatively, they have a slim back-door route to qualify as one of the best third-placed teams, though that path would leave them relying on results in other groups. To keep control of their destiny, Paraguay likely need to target at least four points from their final two matches.",
+      "headline": "Paraguay Well Placed for Knockout Push",
+      "body": "Paraguay are in a very encouraging position to reach the knockouts, holding a strong 75% chance to advance to the Round of 32. In Group D, they sit in third place behind Australia, who are just ahead with an 85% chance, while Türkiye trail far behind. Paraguay's destiny is split almost evenly between two paths. They have about a two-in-five chance of securing a top-two finish, which would likely require three points from their final match. Alternatively, they have a similar, roughly equal chance of advancing as one of the best third-placed teams. Currently, they are in a great spot as the second-best third-placed team in the tournament, sitting three points clear of the cut-off. While their heavy defeat to the USA hurt their goal difference, their opening win over Türkiye keeps them in control of their own fate heading into the final round of games.",
       "team_code": "PAR"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Panama Face an Uphill Climb After Opening Defeat",
-      "body": "Panama face a challenging road ahead to reach the knockouts, with our tournament simulation giving them a 38% chance to advance to the Round of 32. Following their opening 1-0 loss to Ghana, they find themselves adrift at the bottom of Group L, with a real gap to close on Croatia, who sit just ahead of them with a 58% chance of moving on. With England and Ghana currently leading the group on three points each, Panama are in third place with zero points. Their cleanest route is finishing in the top two, but that is currently an outside chance. Instead, their most realistic path is fighting to advance as one of the best third-placed teams, which is roughly a coin flip if they can secure three points from their remaining matches. They currently sit as the ninth-best third-placed team across the tournament, just one spot outside the qualifying zone. While they are up against it, their fate is not yet sealed, and a strong result in their next match could quickly change the picture.",
+      "body": "Panama are up against it after their opening match, leaving them with a real but steep mountain to climb. Our tournament simulation gives them a 38% chance to reach the knockouts. They find themselves at the foot of Group L, with real ground to make up on Croatia, who sit just ahead of them with a 58% chance of advancing. Following their 1-0 loss to Ghana, Panama are currently third in the group with zero points. Their cleanest route is finishing in the top two, but that is currently a slim back-door possibility. Instead, their most realistic hope is to advance as one of the best third-placed teams, which is roughly a coin flip if they can secure three points from their remaining two matches. They currently sit as the tenth-best third-placed team across the tournament, just one point behind the cut-off line. While all four placements in the group remain mathematically reachable, Panama will need to find a result quickly to keep their Round of 32 hopes alive.",
       "team_code": "PAN"
     },
     {
@@ -8523,8 +8434,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Netherlands Well Placed but Japan Keep the Pressure High",
-      "body": "The Netherlands are in a strong position to reach the knockouts, with our tournament simulation giving them a 76% chance to advance to the Round of 32. However, they are locked in a tight Group F battle, with Japan right on their heels at 74% while Sweden lead the way. Following their opening 2-2 draw with Japan, the Dutch currently sit third in the group, but they also hold the spot as the second-best third-placed team across the tournament, one point clear of the cut-off. Their cleanest path forward is finishing in the top two, which is more likely than not at around a three-in-five chance. To secure that direct route, they will likely need to claim at least three or four points from their remaining two matches. If they slip, they have a slim back-door route to advance as a best third-placed team, though that path leaves their fate resting on results in other groups.",
+      "headline": "Netherlands Well Placed in Group F but Japan Keep the Pressure High",
+      "body": "The Netherlands are in a strong position to reach the knockouts, with our tournament simulation giving them a 76% chance to advance to the Round of 32. However, they are locked in a tight race in Group F, holding onto second place with Japan right on their heels at 74%. Following their opening 2-2 draw with Japan, the Dutch are currently the third-best third-placed team across the tournament, sitting one point above the cut-off line. Finishing in the top two remains their most likely route, which is very much in their own hands. To secure that direct path, they will likely need to find at least three more points from their remaining two matches. If they slip to third, they still have a decent back-door route to qualify, though that path would leave them relying on results in other groups to fall their way.",
       "team_code": "NED"
     },
     {
@@ -8547,8 +8458,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "South Korea Well Placed for Knockout Spot",
-      "body": "South Korea are in a very strong position to reach the knockouts, with their fate firmly in their own hands. Following a 2-1 win over the Czech Republic and a tight 1-0 loss to Mexico, they sit second in Group A with three points. They are comfortably ahead of the chasing pack, with the Czech Republic right behind them but carrying just a 34% chance to advance. Our tournament simulation gives South Korea an 80% chance to reach the Round of 32. Their cleanest route is finishing in the top two, which is highly likely and would be secured by matching or bettering their rivals' results on the final matchday. If they slip to third, they still hold a slim back-door route to qualify as one of the best third-placed teams, though that path would leave them relying on results in other groups. For now, a positive result in their final game will guarantee their passage.",
+      "headline": "South Korea Well Placed for Knockout Spot After Mixed Start",
+      "body": "South Korea are in a very strong position to reach the knockouts, sitting in second place with three points after two matches. In Group A, they are comfortably ahead of the chasing pack, with the Czech Republic right behind them but carrying a much lower 34% chance to advance. Their cleanest route is to finish as the group runner-up, which is highly likely and remains entirely in their own hands. Typically, securing three more points in their final match will guarantee that top-two spot. If they slip up, they still have a slim back-door route to advance as one of the best third-placed teams, though that path would leave their fate to results in other groups. With Mexico already qualified, South Korea are well placed to join them if they can find one more big performance.",
       "team_code": "KOR"
     },
     {
@@ -8559,14 +8470,14 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Jordan Facing an Uphill Battle but Still in Touch",
-      "body": "Jordan face a challenging road ahead after their opening defeat, but their tournament is far from over. According to the prediction system, Jordan have a 35% chance to reach the knockouts. They currently sit at the bottom of Group J but remain within striking distance of Algeria, who are just ahead of them with a 40% chance. With Argentina and Austria setting the pace, Jordan's cleanest route is chasing a top-two finish, though that is currently a slim prospect. Instead, their most realistic path to the Round of 32 is fighting to advance as one of the best third-placed teams. Following their 3-1 loss to Austria, Jordan are currently ranked as the 11th-best third-placed team across the tournament, sitting just one goal behind Ecuador for the final qualifying spot. To keep their hopes alive, Jordan likely need to secure at least three points from their remaining two matches to put themselves back in the conversation for a ticket to the next round.",
+      "headline": "Jordan Face an Uphill Climb but Remain in Touch",
+      "body": "Jordan face a challenging path to reach the knockouts, but their tournament is far from over. Our group-stage model gives them a 36% chance to advance to the Round of 32. They currently sit third in Group J after an opening 3-1 defeat to Austria, leaving them at the bottom of the cross-group third-place standings and one point behind the qualification cut-off. However, they remain within striking distance of Algeria, who are just ahead of them with a 40% chance to advance. Jordan's cleanest route is finishing in the top two, but that is currently a slim prospect. Instead, their most realistic hope is to target a third-place finish and fight for a back-door spot. To make that happen, they will likely need to secure at least three points from their remaining two matches against Algeria and Argentina to put themselves back in the mix.",
       "team_code": "JOR"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Iraq Face an Uphill Climb After Opening Defeat",
-      "body": "Iraq face a difficult road ahead in Group I, with their opening 4-1 loss to Norway leaving them with an uphill battle to reach the knockouts. Our tournament simulation gives them a 29% chance to advance to the Round of 32. They find themselves at the bottom of the group, chasing Senegal, who sit just above them, and facing a clear gap to the frontrunners. With Norway and France both winning their openers, Iraq's cleanest route—finishing in the top two—is now a slim prospect. Instead, their most realistic path forward is to fight for a third-place finish and hope to squeeze through the back door as one of the best third-placed teams. To make that happen, they will likely need to find at least three points from their remaining two matches against France and Senegal, while keeping an eye on how results fall in other groups. While the opening defeat hurts, all four placements remain mathematically reachable, and their tournament is far from over.",
+      "body": "Iraq face a difficult road ahead in their quest to reach the knockouts, with our tournament simulation giving them a 30% chance to advance. Following a tough 4-1 opening loss to Norway, they find themselves at the bottom of Group I. They are currently adrift of the pace, with Senegal sitting just above them and holding a stronger 50% chance to go through, meaning Iraq have real ground to make up on their closest rivals. With Norway and France already holding three points each, Iraq's cleanest route—finishing in the top two—is now a slim prospect. Instead, their most realistic path to the Round of 32 likely runs through the back door as one of the best third-placed teams, though that route remains highly dependent on how other groups play out. To keep their hopes alive, Iraq will need to find a way to secure points in their remaining two matches, starting with their next group fixture.",
       "team_code": "IRQ"
     },
     {
@@ -8601,14 +8512,14 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Ecuador's Knockout Hopes Rest on a Crucial Third-Place Battle",
-      "body": "Ecuador are in a decent position to reach the knockouts, holding a 62% chance to advance to the Round of 32. However, their path is a bit of a climb. They sit third in Group E after opening with a narrow 1-0 loss to Ivory Coast, who are well clear of them in the race. While Germany and Ivory Coast control the top two spots, Ecuador remain comfortably ahead of Curaçao, who sit at the bottom of the group. Finishing in the top two is still possible but uphill, with less than a one-in-three chance of securing that direct route. Instead, Ecuador's most likely path is squeezing through as one of the best third-placed teams. They currently sit as the eighth-best third-place team, right on the cut-off line. To keep their destiny in their own hands, they will likely need to find at least three points from their final two matches to secure a safe spot in the next round.",
+      "headline": "Ecuador's Path to the Knockouts Remains Open",
+      "body": "Ecuador are in a decent position to reach the knockouts, with our tournament simulation giving them a 62% chance to advance to the Round of 32. In Group E, they find themselves in the middle of the pack—comfortably ahead of Curaçao, but chasing Ivory Coast, who sit in a strong position with a 90% chance to go through. Following their opening 1-0 loss to Ivory Coast, Ecuador are currently third in the group. They sit as the ninth-best third-place team overall, just one point behind the qualifying cut-off. While finishing in the top two is still possible, it is an uphill climb that requires strong results in their remaining matches. Instead, their most likely route is leaning on the best-third back door, which is roughly a one-in-three chance. To make that work, they will likely need at least three points from their final two games to secure their spot, though their ultimate fate would depend on how results fall in other groups.",
       "team_code": "ECU"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Czech Republic Facing an Uphill Battle to Reach the Knockouts",
-      "body": "The Czech Republic face a challenging path to reach the knockouts, with our tournament simulation giving them a 34% chance to advance. They are currently locked in a tight scrap at the bottom of Group A, holding off South Africa who are pressing right behind them, while South Korea remain well clear in second place with a 79% chance to go through. Having earned one point from their first two matches, the Czechs are currently sitting third in the group. Their cleanest route is finishing in the top two, but that is now a slim back-door possibility. Instead, their most realistic hope is advancing as one of the best third-placed teams, which is roughly a one-in-four chance. They currently sit as the sixth-best third-placed team, just one point above the cut-off, but this provisional position remains highly vulnerable. To keep their tournament alive, they realistically need to secure a win in their final group match and hope results in other groups fall their way.",
+      "body": "The Czech Republic face a challenging path to reach the knockouts, with our tournament simulation giving them a 34% chance to advance. They are currently locked in a tight scrap at the bottom of Group A, holding off South Africa who are pressing right behind them with a 32% chance. Meanwhile, South Korea sit comfortably ahead in second place. With two rounds complete, the Czechs sit third in the group with one point. Their cleanest route is finishing in the top two, but that is a slim back-door possibility at best. Instead, their most realistic hope is advancing as one of the best third-placed teams, which is currently about a one-in-four chance. They currently sit as the seventh-best third-placed team, just one point above the cut-off line. To secure their place in the Round of 32, they will likely need to claim a victory in their final group match to reach four points, while keeping a close eye on how results fall in other groups.",
       "team_code": "CZE"
     },
     {
@@ -8643,20 +8554,20 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Ivory Coast in Strong Position After Opening Victory",
-      "body": "Ivory Coast have put themselves in a fantastic position to reach the knockouts, starting their campaign with a crucial 1-0 victory over Ecuador. With three points already on the board, they hold an impressive 89% chance to advance to the Round of 32. They currently sit second in Group E, just behind Germany, who lead the group on goal difference after a dominant opening win. While Germany are well placed at 97% to advance, Ivory Coast have established a comfortable cushion over Ecuador, who sit third and face a steeper climb at 62%. The primary route for the Elephants is finishing in the top two, which is highly likely and remains entirely in their own hands. Even if they slip up, they maintain a slim back-door option to advance as one of the best third-placed teams. To guarantee their progress without relying on other groups, they will look to secure a few more points from their remaining two matches, with a single win likely enough to seal their place in the next round.",
+      "headline": "Ivory Coast in Command After Opening Victory",
+      "body": "Ivory Coast are in a very strong position to reach the knockouts, sitting on a 90% chance to advance after opening their tournament with a hard-fought 1-0 win over Ecuador. They currently sit second in Group E, trailing Germany on goal difference after the opening round of matches. While Germany lead the way, Ecuador are still within striking distance behind them, meaning the race remains active but firmly in the West Africans' favor. The cleanest path forward is to secure a top-two finish, which our tournament simulation rates as a strong chance. If they can find another win or even a couple of draws from their remaining two matches, they will likely secure their place in the Round of 32 without having to worry about the third-place wildcard standings. Even if they slip to third, they maintain a slim back-door route to advance, but keeping matters in their own hands remains the priority.",
       "team_code": "CIV"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Bosnia and Herzegovina Face Tense Final Matchday in Best-Third Scramble",
-      "body": "Bosnia and Herzegovina face a tense final matchday with a real chance to reach the knockouts, sitting at a 41% probability to advance. In Group B, they are chasing Switzerland and Canada, who have both comfortably secured their places. Bosnia and Herzegovina are fighting to stay ahead of Qatar, who are right behind them with a 32% chance of their own. With two rounds complete, Bosnia and Herzegovina sit third in the group on one point. Their top-two hopes are virtually gone, meaning their tournament survival rests entirely on the third-place back door. They currently hold the seventh-best third-place spot, just one point above the cut-off. To reach the Round of 32, they realistically need a win in their final match to reach four points. Even then, their fate will not be entirely in their own hands, as they will have to watch the final results in other groups to see if their record holds up among the best eight third-place teams.",
+      "headline": "Bosnia and Herzegovina on the Bubble as Third-Place Drama Beckons",
+      "body": "Bosnia and Herzegovina face a tense battle to reach the knockouts, with their fate hanging on a knife-edge. Our tournament simulation gives them a 41% chance to advance to the Round of 32. In Group B, they find themselves chasing Switzerland and Canada, who have both secured their spots, while Qatar are right behind them with a 32% chance of their own. With the top two spots out of reach, Bosnia and Herzegovina's only realistic path is the third-place back door. They currently sit third in the group with one point and a minus-three goal difference. In the wider tournament picture, they hold the eighth and final qualifying spot in the third-place standings, sitting just one point clear of Ecuador. To keep their tournament alive, they will need to secure a positive result in their final match to stay inside that top-eight bubble, while keeping a close eye on how results fall in other groups.",
       "team_code": "BIH"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Belgium Well Placed in Tight Group G Race",
-      "body": "Belgium are in a strong position to reach the knockouts, but they cannot afford to relax. Our tournament simulation gives them a 72% chance to advance to the Round of 32, putting them slightly ahead in Group G. However, the race is incredibly tight, with Iran right on their heels with a 66% chance of going through. Following a 1-1 draw with Egypt in their opener, Belgium currently sit third in the group table with one point. They are also provisionally ranked as the third-best third-placed team across the tournament, sitting one point above the qualification cut-off. To secure their place, Belgium's cleanest route is finishing in the top two, which is more likely than not. They typically need to find another three to six points from their remaining two matches to guarantee a top-two finish. If they slip to third, they still have a slim back-door route to the knockouts, though that path would leave their fate in the hands of results in other groups.",
+      "body": "Belgium are in a strong position to reach the knockouts, with our tournament simulation giving them a 72% chance to advance to the Round of 32. However, they face a genuinely tight race at the top of Group G, with Iran right on their heels with a 66% chance of going through. Following a 1-1 draw with Egypt in their opening match, Belgium currently sit third in the group table. Because all four teams drew their openers, the group is completely level on points. Belgium's cleanest route is finishing in the top two, which is more likely than not. If they slip to third, they still have a slim back-door route to the knockouts. They are currently the fourth-best third-placed team across the tournament, sitting one point above the cut-off, though that cross-group comparison remains provisional. To secure their spot without relying on other groups, Belgium will likely need to find at least one win from their remaining two matches to push for those crucial top-two spots.",
       "team_code": "BEL"
     },
     {
@@ -8667,14 +8578,14 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Socceroos in Strong Position to Reach the Knockouts",
-      "body": "Australia are in a very promising position to reach the knockouts, with our tournament simulation giving them a 77% chance to advance. They currently sit second in Group D with three points from two matches. However, this is a provisional standing; with Paraguay and Türkiye still to play their game in hand, the table will shift once they take the pitch. The USA are already well clear at the top, leaving Australia to lead the chase with Paraguay right behind them holding a 45% chance to go through. Australia's cleanest route is finishing in the top two, which is more likely than not at a 57% chance. Securing another win in their final match would likely lock down that runner-up spot. If they slip up, they still have a slim back-door route to advance as one of the best third-placed teams, though that path is out of their hands and would depend on results in other groups. For now, the Socceroos control their own destiny.",
+      "headline": "Australia Well Placed for Knockout Spot as Group D Race Tightens",
+      "body": "Australia are in a very strong position to reach the knockouts, holding an 85% chance to advance to the Round of 32. Sitting second in Group D with three points after two matches, they are chasing a dominant USA side who have already secured their spot, while Paraguay are right on their heels with a 75% chance of their own. The Socceroos' cleanest path is to finish as the group runner-up, which is more likely than not. Typically, securing three more points in their final match will guarantee that second-place spot. If they slip up, they still have a slim back-door route to advance as one of the best third-placed teams, though that path would leave their fate in the hands of results in other groups. With all four placements technically still possible, Australia's destiny remains very much in their own hands heading into the final round of group games.",
       "team_code": "AUS"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Argentina Lead the Way, but Austria Keep the Pressure High",
-      "body": "Argentina are in a brilliant position to reach the knockouts, carrying a 95% chance to advance after their opening 3-0 victory over Algeria. However, they cannot afford to relax just yet. They sit at the top of Group J, but Austria are right on their heels at 92% after their own opening win, setting up a tight race for the top spot. The tournament simulation shows that Argentina's primary route is finishing in the top two, which is highly likely. They are strong favorites to win the group, but even a runner-up finish would guarantee their place in the Round of 32. While a slim back-door route exists to advance as a best third-placed team if things go wrong, Argentina's destiny remains firmly in their own hands. With three points already on the board, they are well placed to secure their spot in the next round over the final two group matches.",
+      "headline": "Argentina in Command but Austria Keep the Pressure High",
+      "body": "Argentina are in a brilliant position to reach the knockouts, sitting with a 96% chance to advance to the Round of 32. However, they cannot afford to relax just yet. They lead Group J after the opening round of matches, but Austria are right on their heels with a 92% chance of their own, setting up a tight race at the top. Following their opening 3-0 victory over Algeria, Argentina currently lead the group on goal difference. Their primary route forward is finishing in the top two, which our tournament simulation sees as an overwhelming probability. Winning the group remains the main target, while finishing as runner-up is a strong secondary path. Even if things take an unexpected turn, there is a slim back-door route to advance as one of the best third-placed teams, though that would leave their fate in the hands of other groups. For now, Argentina remain firmly in control of their own destiny as they look to secure their place in the next round.",
       "team_code": "ARG"
     },
     {
@@ -8691,8 +8602,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "England in Command After Opening Win",
-      "body": "England are in a brilliant position to reach the knockouts, starting their campaign with complete control over their destiny. Our tournament simulation gives them a 94% chance to reach the Round of 32. They sit comfortably clear at the top of Group L after an entertaining 4-2 victory over Croatia, with nearest rivals Ghana, who opened with a 1-0 win over Panama, sitting just behind them on goal difference but trailing significantly in overall advancement probability. England's primary route is finishing in the top two, which is highly likely. Winning the group is their most probable outcome, while finishing as runners-up remains a solid backup. Even if they slip to third, they maintain a slim back-door chance of advancing. To guarantee progress without relying on other groups, England simply need to keep picking up points in their final two matches, starting with their next fixture. With three points already secured, they are well on their way.",
+      "headline": "England in Command After Opening Victory",
+      "body": "England are in a brilliant position to reach the knockouts, starting their tournament with the kind of control every manager craves. Our tournament simulation gives them a 95% chance to advance to the Round of 32. They sit comfortably clear at the top of Group L after opening with a 4-2 win over Croatia, leaving nearest rivals Ghana—who also won their opener—with some daylight to make up. The main route is simple: finishing in the top two is highly likely, and they can virtually secure it with another strong result. While a back-door route as a best third-placed team remains a tiny mathematical possibility, England's destiny is firmly in their own hands. With three points on the board and a healthy goal difference, they are expected to go through without needing to look over their shoulders at other groups.",
       "team_code": "ENG"
     },
     {
@@ -8703,8 +8614,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Spain Lead a Tight Race in Group H After Opening Draw",
-      "body": "Spain are in a very strong position to reach the knockouts, holding an 81% chance to advance to the Round of 32. They currently lead a tight Group H race, with Uruguay right on their heels with a 69% chance to go through. Following an opening scoreless draw with Cape Verde Islands, Spain sit third in a completely level group where every team has one point. Their cleanest route is finishing in the top two, which our tournament simulation rates as more likely than not. If they slip to third, they still have a slim back-door route to qualify. They currently sit as the fifth-best third-place team across the tournament, one point clear of the cut-off, though that cross-group comparison remains provisional. To secure their spot without relying on other groups, Spain will look to claim about three more points from their final two matches to lock down a top-two finish.",
+      "headline": "Spain in Strong Position After Opening Stalemate",
+      "body": "Spain are in a very strong position to reach the knockouts, carrying an 81% chance to advance to the Round of 32. They currently lead a tight Group H race, with Uruguay right on their heels with a 69% chance of going through. After an opening scoreless draw with Cape Verde, Spain sit third in a completely level group where every team has one point. They also currently rank as the sixth-best third-place team, sitting one point clear of the cut-off. Spain's cleanest route is finishing in the top two, which our tournament simulation rates as more likely than not. To secure that direct path, they will likely need to find at least three more points from their final two matches. If they slip to third, they still have a slim back-door route to qualify, though that path would leave their fate in the hands of results in other groups.",
       "team_code": "ESP"
     },
     {
@@ -9609,7 +9520,7 @@
     "label": "Real group table computed from verified match results using the FIFA 2026 Article 13 tiebreakers — distinct from the predicted/projected probabilities table.",
     "source_label": "our verified results + the 2026 advancement rules",
     "status": "in_progress",
-    "results_counted": 31,
+    "results_counted": 32,
     "groups_complete": 0,
     "groups": [
       {
@@ -9828,7 +9739,7 @@
       {
         "group": "D",
         "complete": false,
-        "games_played": 3,
+        "games_played": 4,
         "standings": [
           {
             "position": 1,
@@ -9864,30 +9775,30 @@
           },
           {
             "position": 3,
-            "code": "TUR",
-            "name": "Türkiye",
-            "played": 1,
-            "won": 0,
+            "code": "PAR",
+            "name": "Paraguay",
+            "played": 2,
+            "won": 1,
             "drawn": 0,
             "lost": 1,
-            "goals_for": 0,
-            "goals_against": 2,
+            "goals_for": 2,
+            "goals_against": 4,
             "goal_difference": -2,
-            "points": 0,
-            "advance_state": "best_third_out",
+            "points": 3,
+            "advance_state": "best_third_in",
             "band": "amber",
             "decided": false
           },
           {
             "position": 4,
-            "code": "PAR",
-            "name": "Paraguay",
-            "played": 1,
+            "code": "TUR",
+            "name": "Türkiye",
+            "played": 2,
             "won": 0,
             "drawn": 0,
-            "lost": 1,
-            "goals_for": 1,
-            "goals_against": 4,
+            "lost": 2,
+            "goals_for": 0,
+            "goals_against": 3,
             "goal_difference": -3,
             "points": 0,
             "advance_state": "eliminated",
@@ -9945,7 +9856,7 @@
             "goals_against": 1,
             "goal_difference": -1,
             "points": 0,
-            "advance_state": "best_third_in",
+            "advance_state": "best_third_out",
             "band": "amber",
             "decided": false
           },
@@ -10481,12 +10392,22 @@
           "group_complete": false
         },
         {
+          "code": "PAR",
+          "group": "D",
+          "points": 3,
+          "goal_difference": -2,
+          "goals_for": 2,
+          "rank": 2,
+          "in_best_8": true,
+          "group_complete": false
+        },
+        {
           "code": "NED",
           "group": "F",
           "points": 1,
           "goal_difference": 0,
           "goals_for": 2,
-          "rank": 2,
+          "rank": 3,
           "in_best_8": true,
           "group_complete": false
         },
@@ -10496,7 +10417,7 @@
           "points": 1,
           "goal_difference": 0,
           "goals_for": 1,
-          "rank": 3,
+          "rank": 4,
           "in_best_8": true,
           "group_complete": false
         },
@@ -10506,7 +10427,7 @@
           "points": 1,
           "goal_difference": 0,
           "goals_for": 1,
-          "rank": 4,
+          "rank": 5,
           "in_best_8": true,
           "group_complete": false
         },
@@ -10516,7 +10437,7 @@
           "points": 1,
           "goal_difference": 0,
           "goals_for": 0,
-          "rank": 5,
+          "rank": 6,
           "in_best_8": true,
           "group_complete": false
         },
@@ -10526,7 +10447,7 @@
           "points": 1,
           "goal_difference": -1,
           "goals_for": 2,
-          "rank": 6,
+          "rank": 7,
           "in_best_8": true,
           "group_complete": false
         },
@@ -10536,7 +10457,7 @@
           "points": 1,
           "goal_difference": -3,
           "goals_for": 2,
-          "rank": 7,
+          "rank": 8,
           "in_best_8": true,
           "group_complete": false
         },
@@ -10546,8 +10467,8 @@
           "points": 0,
           "goal_difference": -1,
           "goals_for": 0,
-          "rank": 8,
-          "in_best_8": true,
+          "rank": 9,
+          "in_best_8": false,
           "group_complete": false
         },
         {
@@ -10556,7 +10477,7 @@
           "points": 0,
           "goal_difference": -1,
           "goals_for": 0,
-          "rank": 9,
+          "rank": 10,
           "in_best_8": false,
           "group_complete": false
         },
@@ -10566,7 +10487,7 @@
           "points": 0,
           "goal_difference": -2,
           "goals_for": 1,
-          "rank": 10,
+          "rank": 11,
           "in_best_8": false,
           "group_complete": false
         },
@@ -10576,16 +10497,6 @@
           "points": 0,
           "goal_difference": -2,
           "goals_for": 1,
-          "rank": 11,
-          "in_best_8": false,
-          "group_complete": false
-        },
-        {
-          "code": "TUR",
-          "group": "D",
-          "points": 0,
-          "goal_difference": -2,
-          "goals_for": 0,
           "rank": 12,
           "in_best_8": false,
           "group_complete": false
@@ -13292,8 +13203,8 @@
         "opponent_slot": "Runner-up Group D",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "TUR",
-          "name": "Türkiye"
+          "code": "AUS",
+          "name": "Australia"
         },
         "real_opponent": null
       },
@@ -13376,8 +13287,8 @@
         "opponent_slot": "Runner-up Group D",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "TUR",
-          "name": "Türkiye"
+          "code": "AUS",
+          "name": "Australia"
         },
         "real_opponent": null
       },
@@ -13460,8 +13371,8 @@
         "opponent_slot": "Runner-up Group D",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "TUR",
-          "name": "Türkiye"
+          "code": "AUS",
+          "name": "Australia"
         },
         "real_opponent": null
       },
@@ -13544,8 +13455,8 @@
         "opponent_slot": "Runner-up Group D",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "TUR",
-          "name": "Türkiye"
+          "code": "AUS",
+          "name": "Australia"
         },
         "real_opponent": null
       },
@@ -14090,8 +14001,8 @@
         "opponent_slot": "Best 3rd from C/D/F/G/H",
         "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "AUS",
-          "name": "Australia"
+          "code": "PAR",
+          "name": "Paraguay"
         },
         "real_opponent": null
       },
@@ -14246,8 +14157,8 @@
         "opponent_slot": "Best 3rd from C/D/F/G/H",
         "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "AUS",
-          "name": "Australia"
+          "code": "PAR",
+          "name": "Paraguay"
         },
         "real_opponent": null
       },
@@ -14402,8 +14313,8 @@
         "opponent_slot": "Best 3rd from C/D/F/G/H",
         "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "AUS",
-          "name": "Australia"
+          "code": "PAR",
+          "name": "Paraguay"
         },
         "real_opponent": null
       },
@@ -14558,8 +14469,8 @@
         "opponent_slot": "Best 3rd from C/D/F/G/H",
         "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "AUS",
-          "name": "Australia"
+          "code": "PAR",
+          "name": "Paraguay"
         },
         "real_opponent": null
       },
