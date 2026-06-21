@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T18:12:51.680Z",
+  "generated_at": "2026-06-21T21:13:36.262Z",
   "source": "WC2026 confirmed squads from the DB (players + API-Football squad fields + player_status_events). Display-only; never a model/prediction input.",
   "note": "Per-player status (goals/assists/cards/minutes) fills from api_football_fixture_player_stats as WC matches are played; 0 until then. availability (out/doubtful/suspended) comes from player_status_events (latest tournament-scope, non-rejected) and carries review_status — pending seeds are shown but flagged. Missing club/age/number are null (the UI omits them). Player-card bio (api_player_id, photo[derived URL], dob, nationality, height_cm, weight_kg, birth_place, birth_country) is ADDITIVE and only populated where backfilled (Canada first); the current squad card ignores these keys.",
   "coverage": {
@@ -7827,7 +7827,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 92
+          "minutes": 186
         },
         "api_player_id": 730,
         "photo": "https://media.api-sports.io/football/players/730.png",
@@ -7919,7 +7919,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 21
         },
         "api_player_id": 204043,
         "photo": "https://media.api-sports.io/football/players/204043.png",
@@ -7942,7 +7942,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 92
+          "minutes": 186
         },
         "api_player_id": 69,
         "photo": "https://media.api-sports.io/football/players/69.png",
@@ -7965,7 +7965,7 @@
           "assists": 0,
           "yellow": 1,
           "red": 0,
-          "minutes": 36
+          "minutes": 130
         },
         "api_player_id": 162007,
         "photo": "https://media.api-sports.io/football/players/162007.png",
@@ -7988,7 +7988,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 92
+          "minutes": 150
         },
         "api_player_id": 264,
         "photo": "https://media.api-sports.io/football/players/264.png",
@@ -8057,7 +8057,7 @@
           "assists": 0,
           "yellow": 1,
           "red": 0,
-          "minutes": 56
+          "minutes": 92
         },
         "api_player_id": 2920,
         "photo": "https://media.api-sports.io/football/players/2920.png",
@@ -8079,8 +8079,8 @@
           "goals": 0,
           "assists": 0,
           "yellow": 0,
-          "red": 0,
-          "minutes": 92
+          "red": 1,
+          "minutes": 158
         },
         "api_player_id": 312964,
         "photo": "https://media.api-sports.io/football/players/312964.png",
@@ -8126,7 +8126,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 86
+          "minutes": 173
         },
         "api_player_id": 629,
         "photo": "https://media.api-sports.io/football/players/629.png",
@@ -8149,7 +8149,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 92
+          "minutes": 186
         },
         "api_player_id": 2926,
         "photo": "https://media.api-sports.io/football/players/2926.png",
@@ -8218,7 +8218,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 6
+          "minutes": 42
         },
         "api_player_id": 78,
         "photo": "https://media.api-sports.io/football/players/78.png",
@@ -8241,7 +8241,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 36
+          "minutes": 94
         },
         "api_player_id": 2120,
         "photo": "https://media.api-sports.io/football/players/2120.png",
@@ -8285,9 +8285,9 @@
         "status": {
           "goals": 0,
           "assists": 0,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
-          "minutes": 26
+          "minutes": 99
         },
         "api_player_id": 907,
         "photo": "https://media.api-sports.io/football/players/907.png",
@@ -8310,7 +8310,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 92
+          "minutes": 186
         },
         "api_player_id": 1946,
         "photo": "https://media.api-sports.io/football/players/1946.png",
@@ -8356,7 +8356,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 36
         },
         "api_player_id": 25458,
         "photo": "https://media.api-sports.io/football/players/25458.png",
@@ -8379,7 +8379,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 58
         },
         "api_player_id": 1417,
         "photo": "https://media.api-sports.io/football/players/1417.png",
@@ -8402,7 +8402,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 6
+          "minutes": 13
         },
         "api_player_id": 340077,
         "photo": "https://media.api-sports.io/football/players/340077.png",
@@ -17427,7 +17427,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 90
+          "minutes": 184
         },
         "api_player_id": 2682,
         "photo": "https://media.api-sports.io/football/players/2682.png",
@@ -17496,7 +17496,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 45
         },
         "api_player_id": 136880,
         "photo": "https://media.api-sports.io/football/players/136880.png",
@@ -17519,7 +17519,7 @@
           "assists": 0,
           "yellow": 1,
           "red": 0,
-          "minutes": 25
+          "minutes": 91
         },
         "api_player_id": 2685,
         "photo": "https://media.api-sports.io/football/players/2685.png",
@@ -17542,7 +17542,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 90
+          "minutes": 184
         },
         "api_player_id": 29704,
         "photo": "https://media.api-sports.io/football/players/29704.png",
@@ -17565,7 +17565,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 90
+          "minutes": 118
         },
         "api_player_id": 2688,
         "photo": "https://media.api-sports.io/football/players/2688.png",
@@ -17611,7 +17611,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 94
         },
         "api_player_id": 2687,
         "photo": "https://media.api-sports.io/football/players/2687.png",
@@ -17680,7 +17680,7 @@
           "assists": 1,
           "yellow": 0,
           "red": 0,
-          "minutes": 90
+          "minutes": 184
         },
         "api_player_id": 2691,
         "photo": "https://media.api-sports.io/football/players/2691.png",
@@ -17724,9 +17724,9 @@
         "status": {
           "goals": 0,
           "assists": 0,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
-          "minutes": 90
+          "minutes": 175
         },
         "api_player_id": 19614,
         "photo": "https://media.api-sports.io/football/players/19614.png",
@@ -17749,7 +17749,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 65
+          "minutes": 144
         },
         "api_player_id": 2699,
         "photo": "https://media.api-sports.io/football/players/2699.png",
@@ -17795,7 +17795,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 28
         },
         "api_player_id": 2697,
         "photo": "https://media.api-sports.io/football/players/2697.png",
@@ -17864,7 +17864,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 49
         },
         "api_player_id": 2700,
         "photo": "https://media.api-sports.io/football/players/2700.png",
@@ -17887,7 +17887,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 80
+          "minutes": 174
         },
         "api_player_id": 42315,
         "photo": "https://media.api-sports.io/football/players/42315.png",
@@ -17910,7 +17910,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 10
+          "minutes": 19
         },
         "api_player_id": 29937,
         "photo": "https://media.api-sports.io/football/players/29937.png",
@@ -17979,7 +17979,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 53
+          "minutes": 68
         },
         "api_player_id": 89982,
         "photo": "https://media.api-sports.io/football/players/89982.png",
