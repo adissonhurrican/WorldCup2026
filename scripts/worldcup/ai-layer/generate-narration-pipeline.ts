@@ -326,6 +326,7 @@ export function buildScenarioInput(teamCode: string, teamName: string, group: st
   const pr = scen?.probabilities ?? {};
   const advance = num(pr.advance_total), winG = num(pr.win_group), runnerUp = num(pr.runner_up), topTwo = +(winG + runnerUp).toFixed(4), third = num(pr.third_place_advance);
   const tpd = scen?.third_place_dependency ?? {};
+  const lockedRecord = tpd.locked_record_third_place ?? null;
   const probabilities = [
     { entity_type: "team", team_code: teamCode, metric: "advance", value: advance, display_value: pct(advance), rank_or_context: "overall chance to reach the Round of 32" },
     { entity_type: "team", team_code: teamCode, metric: "top_two", value: topTwo, display_value: pct(topTwo), rank_or_context: "finish top two of the group (own results)" },
@@ -333,12 +334,25 @@ export function buildScenarioInput(teamCode: string, teamName: string, group: st
     { entity_type: "team", team_code: teamCode, metric: "runner_up", value: runnerUp, display_value: pct(runnerUp), rank_or_context: "finish runner-up" },
     { entity_type: "team", team_code: teamCode, metric: "third_place_advance", value: third, display_value: pct(third), rank_or_context: "advance as one of the best third-placed teams" },
   ];
-  const paths = (scen?.what_they_need ?? []).map((w: any, i: number) => ({
-    path_id: `route_${i + 1}`, summary: String(w.condition_label ?? ""),
-    must_happen: [String(w.own_results_needed ?? "")],
-    helpful_results: [], risk_notes: (w.depends_on_groups ?? []).length ? [`This route depends on results in other groups: ${(w.depends_on_groups ?? []).join(", ")}`] : [],
-    probability_refs: [{ metric: w.condition_label?.toLowerCase().includes("win") ? "win" : w.condition_label?.toLowerCase().includes("runner") ? "runner_up" : "third_place_advance", value: num(w.scenario_weight) }],
-  }));
+  const paths = (scen?.what_they_need ?? []).map((w: any, i: number) => {
+    const routeLockedRecord = w.locked_record_requirement ?? (w.condition_label === "Advance as best third" ? lockedRecord : null);
+    const cannotPassGroups = routeLockedRecord
+      ? [...(routeLockedRecord.already_settled_cannot_beat_groups ?? []), ...(routeLockedRecord.cannot_beat_groups ?? [])]
+      : [];
+    return {
+      path_id: `route_${i + 1}`, summary: String(w.condition_label ?? ""),
+      must_happen: [String(routeLockedRecord?.statement ?? w.own_results_needed ?? "")],
+      helpful_results: [],
+      risk_notes: routeLockedRecord
+        ? [
+          routeLockedRecord.status === "already_safe" ? "This finished third is mathematically safe on the locked-record comparison." : "",
+          (routeLockedRecord.can_beat_groups ?? []).length ? `Watch groups that can still pass this record: ${(routeLockedRecord.can_beat_groups ?? []).join(", ")}` : "",
+          cannotPassGroups.length ? `Groups that cannot pass this record: ${cannotPassGroups.join(", ")}` : "",
+        ].filter(Boolean)
+        : ((w.depends_on_groups ?? []).length ? [`This route depends on results in other groups: ${(w.depends_on_groups ?? []).join(", ")}`] : []),
+      probability_refs: [{ metric: w.condition_label?.toLowerCase().includes("win") ? "win" : w.condition_label?.toLowerCase().includes("runner") ? "runner_up" : "third_place_advance", value: num(w.scenario_weight) }],
+    };
+  });
   // ---- AUGMENT with the deterministic conditional engine (team_conditional_scenarios) when supplied ----
   // Crisp margin tiers + cross-group bubble thresholds when the engine row is final-matchday ('concrete_chains');
   // sound point-bound certainties in any mode; otherwise the probabilistic routes above carry the narration (no fabrication).
@@ -391,7 +405,29 @@ export function buildScenarioInput(teamCode: string, teamName: string, group: st
     output_requirements: { schema_version: "ai_analysis_v1", length_target_words: { min: 100, max: 200 }, tone: "warm, plain-spoken, light earned sporting drama (no hype/clichés), grounded, non-betting", must_return_json_only: true },
     source_runs: [{ source_run_id: "group-stage-simulation", run_type: "group_simulation", scope: "group stage", review_status: "live", current_best: false, notes: "the group-stage tournament simulation" }],
     probabilities,
-    scenario_data: { scenario_source_id: "the-2026-advancement-rules", team_code: teamCode, scenario_type: "what_team_needs", group_context: groupCtx ?? null, deterministic_rules_source_id: "the-2026-advancement-rules", paths, certain_statements, deterministic_mode, deterministic_engine: deterministic_mode === "concrete_chains" ? "Final-matchday crisp margin tiers + cross-group thresholds supplied by the deterministic 2026 qualification scenario engine. Translate these as-is; do not invent." : "Crisp final-matchday chains not available yet (earlier round) — use the probabilistic routes plus the sound point-bound certainties.", real_table_status: realTableStatus, awaiting_opener: awaitingOpener, group_progress: groupProgress, best_third_standing: bestThirdStanding, real_standing_note: bestThirdStanding ? "Where the team stands NOW in the cross-group third-place race, from the real verified table. State this current rank and margin as deterministic fact; it complements (does not replace) the probabilities and the what-they-need routes." : (realStarted ? "Real table has results, but this team is not currently third — its position is in the standings block." : "No real standings yet (pre-tournament)."), tiebreaker_notes: [{ rule: "Group ranking uses the 2026 rules: points, then head-to-head, then goal difference, then goals scored, then fair play, then FIFA ranking", source_id: "the-2026-advancement-rules" }], unknowns: [...realUnknowns] },
+    scenario_data: {
+      scenario_source_id: "the-2026-advancement-rules",
+      team_code: teamCode,
+      scenario_type: "what_team_needs",
+      group_context: groupCtx ?? null,
+      deterministic_rules_source_id: "the-2026-advancement-rules",
+      paths,
+      certain_statements,
+      deterministic_mode,
+      locked_record_third_place: lockedRecord,
+      deterministic_engine: deterministic_mode === "concrete_chains"
+        ? "Final-matchday crisp margin tiers + cross-group thresholds supplied by the deterministic 2026 qualification scenario engine. Translate these as-is; do not invent."
+        : (lockedRecord ? "Finished-third locked-record mode is available. Translate its exact statement as-is; do not replace it with generic other-groups caveats." : "Crisp final-matchday chains not available yet (earlier round) - use the probabilistic routes plus the sound point-bound certainties."),
+      real_table_status: realTableStatus,
+      awaiting_opener: awaitingOpener,
+      group_progress: groupProgress,
+      best_third_standing: bestThirdStanding,
+      real_standing_note: bestThirdStanding
+        ? "Where the team stands NOW in the cross-group third-place race, from the real verified table. State this current rank and margin as deterministic fact; it complements (does not replace) the probabilities and the what-they-need routes."
+        : (realStarted ? "Real table has results, but this team is not currently third - its position is in the standings block." : "No real standings yet (pre-tournament)."),
+      tiebreaker_notes: [{ rule: "Group ranking uses the 2026 rules: points, then head-to-head, then goal difference, then goals scored, then fair play, then FIFA ranking", source_id: "the-2026-advancement-rules" }],
+      unknowns: [...realUnknowns],
+    },
     fixtures: [], standings: standingsBlock,
     team_context: [{ team_code: teamCode, team_name: teamName, team_strength: { source_id: null, score: null, confidence: "unknown", caveat: "context only" }, player_impact: { source_id: null, summary: null, confidence: "unknown", caveat: null }, tactical_profile: { source_id: null, base_snapshot_id: null, review_status: "unknown", confidence: "unknown", usable_fields: { formation_primary: "unknown", pressing_intensity: "unknown", build_up_style: "unknown", defensive_block_depth: "unknown", set_piece_strength: "unknown", transition_style: "unknown", attacking_width: "unknown" }, source_urls: [], caveat: "no signal" } }],
     contextual_inputs: { venue: [], weather: [], news_and_injuries: [] },
@@ -408,6 +444,7 @@ export function buildScenarioInput(teamCode: string, teamName: string, group: st
       passes_cutoff_in_pct: tpd.passes_cutoff_in_pct ?? null,
       conditional_advance_display: tpd.passes_cutoff_in_pct != null ? pct(num(tpd.passes_cutoff_in_pct)) : null,
       needs: tpd.needs ? String(tpd.needs).replace(/\s*\(most often \)/g, "") : null,  // defensive: drop a stale empty "(most often )" fragment (the engine fix in advancement-scenario-core omits it going forward)
+      locked_record: lockedRecord,
       route_safety_note: "passes_cutoff_in_pct = P(advance GIVEN they finish third) = the SAFETY of the back-door route; distinct from probabilities.third_place_advance which is the JOINT P(finish third AND advance). A HIGH passes_cutoff_in_pct means the route is SAFE/reliable, NOT slim.",
     },
   };
@@ -423,6 +460,7 @@ export const USER_MSG = (input: any, max: number) => [
   "Ground EVERY percentage you state in the SUPPLIED input — the 'probabilities' array for this team AND scenario_data.group_context for any rival figure. Do NOT invent, combine, or derive any new percentage, including a rival's. If a rival number isn't in group_context, describe the gap in words instead.",
   "Cover, in plain language: the team's chance to reach the knockouts, whether their main route is finishing top two (their own results) or leaning on the best-third back door, and what they need.",
   "BEST-THIRD ROUTE — TWO DIFFERENT PROBABILITIES, NEVER CONFLATE THEM. probabilities.third_place_advance is a JOINT chance (the team BOTH finishes third AND that third is good enough); it is naturally small whenever the team usually finishes top two, and it is NOT a measure of how safe the back-door is. The SAFETY of the back-door is _third_race.passes_cutoff_in_pct = P(advance GIVEN they finish third), stated in plain words in _third_race.needs ('Finishing 3rd, X advances in ~N% of cases'). Characterise the route from THAT, not from the joint figure. RULE: when _third_race.passes_cutoff_in_pct is high (>= ~0.85) the back-door is RELIABLE/SAFE — say 'even if they slip to third they'd almost certainly still go through' or call it a dependable safety net, and NEVER call it 'slim', 'a long shot', 'a slim back-door', or 'out of their hands'. Reserve slim / outside / at-the-mercy-of-other-groups wording ONLY for a LOW passes_cutoff route. Keep the likelihood of NEEDING the route (a fallback they may rarely need) SEPARATE from its safety — e.g. 'They'll most likely go through in the top two, but even if they finish third they'd advance in nearly every case.' You may give the conditional figure once via _third_race.conditional_advance_display; never present the joint third_place_advance as if it were the route's safety.",
+  "LOCKED-RECORD THIRD-PLACE MODE: If _third_race.locked_record is supplied, use its statement as the exact requirement. For status already_safe, say mathematically safe/already through; for status conditional, state the exact no-more-than requirement and watch groups. Do NOT replace it with generic 'depends on other groups' wording.",
   "If the input supplies a real group table (standings) and scenario_data.best_third_standing, state the team's CURRENT standing — its real group position and, when present, its best-third rank and margin to the cut-off (e.g. 'currently the 6th-best third, two points above the cut') — kept plain and accurate, as facts that COMPLEMENT the chances. If no real standings are supplied AND scenario_data.awaiting_opener is absent, say the group games have not started — but keep it warm; never invent a standing.",
   "PARTIAL GROUP — TEAM HAS PLAYED (scenario_data.group_progress present with round_complete=false): acknowledge the team's result and provisional position, AND name the rivals_yet_to_play as still to play — make clear the table will move once they do. NEVER present this provisional standing as settled, and frame any rival's chance as 'heading into their opener/next game', never as a settled position.",
   "AWAITING OPENER (scenario_data.awaiting_opener present — this team has NOT played, but some group games HAVE finished): say the team is awaiting its opening game AND briefly acknowledge what has already happened using results_so_far (e.g. 'Mexico opened with a 2-0 win over South Africa'). Do NOT say the group has not started, and do NOT claim any current position, points, or rank for THIS team — it has none yet.",

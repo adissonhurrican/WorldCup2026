@@ -72,6 +72,17 @@ function pgArray(v: any): string[] {
   return [];
 }
 
+function replaceLockedRecordNarration(body: any, statement: string) {
+  const exact = statement.trim();
+  const current = typeof body === "string" ? body.trim() : "";
+  if (!current) return exact;
+  if (current.includes(exact)) return current;
+  const genericBestThird = /(not entirely in their own hands|depends on how|technically depends|depends on results|rely on helpful|remaining matches in other groups|results in other groups|other groups still to play|watch the other groups|at the mercy of other groups)/i;
+  const sentences = current.split(/(?<=[.!?])\s+/).map((s) => s.trim()).filter(Boolean);
+  const filtered = sentences.filter((sentence) => !genericBestThird.test(sentence));
+  return [...filtered, exact].join(" ");
+}
+
 // plain-language source labels (NEVER expose run IDs / version tags)
 const SRC = { groupModel: "our group-stage match model", groupSim: "the group-stage tournament simulation", knockout: "the knockout tournament simulation", advancement: "the 2026 advancement rules", tactical: "coach & tactical profile" };
 const TIEBREAK: Record<string, string> = { points: "points", head_to_head: "head-to-head", overall_gd: "goal difference", overall_gf: "goals scored", fair_play: "fair play", fifa_ranking: "FIFA ranking" };
@@ -355,6 +366,7 @@ async function main() {
   // scenarios (from the live advancement scenario document)
   const scenarios = Object.keys(scen).sort().map((code) => {
     const s = scen[code] ?? {}; const pr = s.probabilities ?? {}; const tpd = s.third_place_dependency ?? {};
+    const lockedRecord = tpd.locked_record_third_place ?? null;
     const inHands = (num(pr.win_group) + num(pr.runner_up)) >= num(pr.third_place_advance);
     const routes = (s.what_they_need ?? []).map((w: any) => ({
       route: w.condition_label, chance: d4(num(w.scenario_weight)),
@@ -380,7 +392,28 @@ async function main() {
           min_goals_for: thr.min_goals_for ?? null,
           beats_rival_if: typeof thr.beats_rival_if === "string" ? thr.beats_rival_if : null,
         } : null,
+        locked_record: lockedRecord ? {
+          status: lockedRecord.status ?? null,
+          statement: typeof lockedRecord.statement === "string" ? lockedRecord.statement : null,
+          locked_record: lockedRecord.locked_record ?? null,
+          min_other_thirds_above: lockedRecord.min_other_thirds_above ?? null,
+          max_other_thirds_above: lockedRecord.max_other_thirds_above ?? null,
+          remaining_beat_allowance: lockedRecord.remaining_beat_allowance ?? null,
+          already_beating_groups: lockedRecord.already_beating_groups ?? [],
+          already_settled_cannot_beat_groups: lockedRecord.already_settled_cannot_beat_groups ?? [],
+          must_beat_groups: lockedRecord.must_beat_groups ?? [],
+          can_beat_groups: lockedRecord.can_beat_groups ?? [],
+          cannot_beat_groups: lockedRecord.cannot_beat_groups ?? [],
+        } : null,
       } };
+  });
+
+  const scenarioByCode = new Map(scenarios.map((s: any) => [s.code, s]));
+  narration = narration.map((row: any) => {
+    if (row?.content_type !== "scenario_narration" || !row?.team_code) return row;
+    const lockedRecord = scenarioByCode.get(row.team_code)?.third_place_race?.locked_record;
+    if (!lockedRecord?.statement) return row;
+    return { ...row, body: replaceLockedRecordNarration(row.body, lockedRecord.statement) };
   });
 
   // tactical_context

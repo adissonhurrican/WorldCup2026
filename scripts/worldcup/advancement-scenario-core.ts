@@ -131,8 +131,226 @@ export function liveStandingsFrom(locked: Locked): Record<string, { pts: number;
   return st;
 }
 
+type ThirdRecord = {
+  team: string;
+  group: string;
+  pts: number;
+  gd: number;
+  gf: number;
+  fair_play: number;
+  fifa_rank: number | null;
+};
+
+const LOCKED_RECORD_SCORE_CAP = 6;
+const LOCKED_RECORD_MAX_GROUP_COMPLETIONS = 150000;
+const scoreOptionsForLockedRecord = () => {
+  const scores: Score[] = [];
+  for (let a = 0; a <= LOCKED_RECORD_SCORE_CAP; a++) {
+    for (let b = 0; b <= LOCKED_RECORD_SCORE_CAP; b++) scores.push({ a, b });
+  }
+  return scores;
+};
+
+function recordText(record: { pts: number; gd: number; gf: number }) {
+  return `${record.pts} pts / GD ${record.gd > 0 ? `+${record.gd}` : record.gd} / GF ${record.gf}`;
+}
+
+function groupList(groups: string[]) {
+  if (groups.length === 0) return "none";
+  return groups.join("/");
+}
+
+function thirdRecordFromStanding(standing: Standing, group: string, aux: Aux): ThirdRecord {
+  return {
+    team: standing.team,
+    group,
+    pts: standing.pts,
+    gd: standing.gd,
+    gf: standing.gf,
+    fair_play: aux.fairPlay[standing.team] ?? 0,
+    fifa_rank: aux.fifaRank[standing.team] ?? null,
+  };
+}
+
+function thirdRecordBeats(candidate: ThirdRecord, lockedRecord: ThirdRecord, aux: Aux) {
+  if (candidate.team === lockedRecord.team) return false;
+  const ranked = rankThirdPlace(
+    [
+      { team: candidate.team, pts: candidate.pts, gd: candidate.gd, gf: candidate.gf, ga: 0 },
+      { team: lockedRecord.team, pts: lockedRecord.pts, gd: lockedRecord.gd, gf: lockedRecord.gf, ga: 0 },
+    ],
+    aux,
+  );
+  return ranked[0]?.team === candidate.team;
+}
+
+function enumeratePossibleThirdRecords(group: string, fixtures: Fixture[], locked: Locked, aux: Aux) {
+  const groupFixtures = fixtures.filter((fixture) => fixture.group === group);
+  const lockedGames: Array<{ a: string; b: string; score: Score }> = [];
+  const remainingGames: Array<{ a: string; b: string }> = [];
+  for (const fixture of groupFixtures) {
+    const score = locked[lockKey(fixture.a, fixture.b)];
+    if (score) lockedGames.push({ a: fixture.a, b: fixture.b, score: { a: score[fixture.a] ?? 0, b: score[fixture.b] ?? 0 } });
+    else remainingGames.push({ a: fixture.a, b: fixture.b });
+  }
+
+  const scoreOptions = scoreOptionsForLockedRecord();
+  const completionCount = Math.pow(scoreOptions.length, remainingGames.length);
+  if (completionCount > LOCKED_RECORD_MAX_GROUP_COMPLETIONS) {
+    return {
+      enumerable: false as const,
+      group,
+      remaining_games: remainingGames.map((game) => `${game.a} vs ${game.b}`),
+      possible_thirds: [] as ThirdRecord[],
+      completion_count: completionCount,
+    };
+  }
+
+  const possibleThirds: ThirdRecord[] = [];
+  const seen = new Set<string>();
+  const finalize = (extraGames: Array<{ a: string; b: string; score: Score }>) => {
+    const standings: Record<string, Standing> = {};
+    for (const team of GROUPS[group]) standings[team] = { team, pts: 0, gf: 0, ga: 0, gd: 0 };
+    const matches: GroupMatch[] = [];
+    for (const game of [...lockedGames, ...extraGames]) {
+      const A = standings[game.a];
+      const B = standings[game.b];
+      A.gf += game.score.a; A.ga += game.score.b;
+      B.gf += game.score.b; B.ga += game.score.a;
+      A.gd = A.gf - A.ga; B.gd = B.gf - B.ga;
+      if (game.score.a > game.score.b) A.pts += 3;
+      else if (game.score.a < game.score.b) B.pts += 3;
+      else { A.pts += 1; B.pts += 1; }
+      matches.push({ a: game.a, b: game.b, ga: game.score.a, gb: game.score.b });
+    }
+    const third = rankGroup(GROUPS[group].map((team) => standings[team]), matches, aux)[2];
+    const record = thirdRecordFromStanding(third, group, aux);
+    const key = `${record.team}|${record.pts}|${record.gd}|${record.gf}|${record.fair_play}|${record.fifa_rank ?? ""}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      possibleThirds.push(record);
+    }
+  };
+  const visit = (index: number, picked: Array<{ a: string; b: string; score: Score }>) => {
+    if (index >= remainingGames.length) {
+      finalize(picked);
+      return;
+    }
+    const game = remainingGames[index];
+    for (const score of scoreOptions) visit(index + 1, [...picked, { a: game.a, b: game.b, score }]);
+  };
+  visit(0, []);
+
+  return {
+    enumerable: true as const,
+    group,
+    remaining_games: remainingGames.map((game) => `${game.a} vs ${game.b}`),
+    possible_thirds: possibleThirds,
+    completion_count: completionCount,
+  };
+}
+
+function buildLockedRecordThirdPlaceMode(
+  team: string,
+  groupsBlock: Record<string, any>,
+  fixtures: Fixture[] | undefined,
+  locked: Locked,
+  aux: Aux,
+  teamName: Record<string, string>,
+) {
+  if (!fixtures) return null;
+  const group = teamGroup[team];
+  if (groupsBlock[group]?.fixtures_finished !== 6) return null;
+
+  const ownEnum = enumeratePossibleThirdRecords(group, fixtures, locked, aux);
+  if (!ownEnum.enumerable || ownEnum.possible_thirds.length !== 1 || ownEnum.possible_thirds[0].team !== team) return null;
+  const lockedRecord = ownEnum.possible_thirds[0];
+  const groupsAlreadyAbove: string[] = [];
+  const groupsAlreadyNotAbove: string[] = [];
+  const groupsMustBeat: string[] = [];
+  const groupsCanBeat: string[] = [];
+  const groupsCannotBeat: string[] = [];
+  const groupDetails: Array<{
+    group: string;
+    status: "already_beats" | "already_cannot_beat" | "must_beat" | "can_beat" | "cannot_beat";
+    remaining_games: string[];
+    possible_third_count: number;
+  }> = [];
+
+  for (const otherGroup of GROUP_KEYS.filter((candidate) => candidate !== group)) {
+    const result = enumeratePossibleThirdRecords(otherGroup, fixtures, locked, aux);
+    if (!result.enumerable) return null;
+    const beatFlags = result.possible_thirds.map((record) => thirdRecordBeats(record, lockedRecord, aux));
+    const complete = result.remaining_games.length === 0;
+    const allBeat = beatFlags.length > 0 && beatFlags.every(Boolean);
+    const someBeat = beatFlags.some(Boolean);
+    if (complete && allBeat) {
+      groupsAlreadyAbove.push(otherGroup);
+      groupDetails.push({ group: otherGroup, status: "already_beats", remaining_games: [], possible_third_count: result.possible_thirds.length });
+    } else if (complete) {
+      groupsAlreadyNotAbove.push(otherGroup);
+      groupDetails.push({ group: otherGroup, status: "already_cannot_beat", remaining_games: [], possible_third_count: result.possible_thirds.length });
+    } else if (allBeat) {
+      groupsMustBeat.push(otherGroup);
+      groupDetails.push({ group: otherGroup, status: "must_beat", remaining_games: result.remaining_games, possible_third_count: result.possible_thirds.length });
+    } else if (someBeat) {
+      groupsCanBeat.push(otherGroup);
+      groupDetails.push({ group: otherGroup, status: "can_beat", remaining_games: result.remaining_games, possible_third_count: result.possible_thirds.length });
+    } else {
+      groupsCannotBeat.push(otherGroup);
+      groupDetails.push({ group: otherGroup, status: "cannot_beat", remaining_games: result.remaining_games, possible_third_count: result.possible_thirds.length });
+    }
+  }
+
+  const minOtherAbove = groupsAlreadyAbove.length + groupsMustBeat.length;
+  const maxOtherAbove = minOtherAbove + groupsCanBeat.length;
+  const maxAllowedOtherAbove = 7;
+  const remainingBeatAllowance = maxAllowedOtherAbove - minOtherAbove;
+  const status = maxOtherAbove <= maxAllowedOtherAbove
+    ? "already_safe"
+    : minOtherAbove > maxAllowedOtherAbove
+      ? "eliminated"
+      : "conditional";
+  const name = teamName[team] ?? team;
+  const lockedText = recordText(lockedRecord);
+  const statement = status === "already_safe"
+    ? `${name} are mathematically safe as a locked third-place team: at most ${maxOtherAbove} other third-place records can beat their ${lockedText}, and eight third-place teams qualify.`
+    : status === "eliminated"
+      ? `${name} are mathematically out of the best-third places: at least ${minOtherAbove} other third-place records beat their locked ${lockedText}, and only eight third-place teams qualify.`
+      : `${name} qualify iff no more than ${remainingBeatAllowance} of the ${groupsCanBeat.length} remaining group thirds that can still pass them beat their locked ${lockedText}. Watch Groups ${groupList(groupsCanBeat)}.`;
+
+  return {
+    mode: "locked_record",
+    status,
+    team_code: team,
+    team_name: name,
+    group,
+    locked_record: { pts: lockedRecord.pts, gd: lockedRecord.gd, gf: lockedRecord.gf, fair_play: lockedRecord.fair_play, fifa_rank: lockedRecord.fifa_rank, text: lockedText },
+    cutoff_rank: 8,
+    max_allowed_other_thirds_above: maxAllowedOtherAbove,
+    min_other_thirds_above: minOtherAbove,
+    max_other_thirds_above: maxOtherAbove,
+    remaining_beat_allowance: remainingBeatAllowance,
+    already_beating_groups: groupsAlreadyAbove,
+    already_settled_cannot_beat_groups: groupsAlreadyNotAbove,
+    must_beat_groups: groupsMustBeat,
+    can_beat_groups: groupsCanBeat,
+    cannot_beat_groups: groupsCannotBeat,
+    watch_groups: status === "conditional" ? groupsCanBeat : [],
+    statement,
+    tiebreaker_path: ["points", "overall_gd", "overall_gf", "fair_play", "fifa_ranking"],
+    enumeration: {
+      scoreline_cap: LOCKED_RECORD_SCORE_CAP,
+      completion_cap_per_group: LOCKED_RECORD_MAX_GROUP_COMPLETIONS,
+      complete: true,
+      group_details: groupDetails,
+    },
+  };
+}
+
 export type BuildOpts = {
   sim: SimResult; aux: Aux; fifaRank: Record<string, number>; teamName: Record<string, string>; locked: Locked;
+  fixtures?: Fixture[];
   phase: "pre_tournament" | "live"; resultCount: number; sourceSimRun: string; sourcePredRun: string; fifaSnapshot: string;
   ladderVersion: string; schemaVersion: string; seed: number;
   storedOverlay?: Record<string, { p1: number; p2: number; p3: number; p4: number; wg: number; t2: number; adv: number; bestThird: number; eliminated: number }>; // Phase 1 verbatim probs
@@ -204,19 +422,29 @@ export function buildDocument(opts: BuildOpts) {
     const passesCutoffPct = pct(sim.advThird[t], sim.finish[t][2]);
     const gdThr = pmCross(sim.q3[t].gd, sim.o3[t].gd), ptsThr = pmCross(sim.q3[t].pts, sim.o3[t].pts), gfThr = pmCross(sim.q3[t].gf, sim.o3[t].gf);
     const inRace = probabilities.finish_third > 0.005;
+    const lockedRecordThirdPlace = buildLockedRecordThirdPlaceMode(t, groupsBlock, opts.fixtures, locked, opts.aux, teamName);
     if (probabilities.third_place_advance > 0) what_they_need.push({
-      condition_label: "Advance as best third", own_results_needed: ownNeed("Best third", sim.jointByPath[t].best_third, curPts, played), scenario_weight: probabilities.third_place_advance, depends_on_groups: topComp,
+      condition_label: "Advance as best third",
+      own_results_needed: lockedRecordThirdPlace ? `Locked record: ${lockedRecordThirdPlace.locked_record.text}` : ownNeed("Best third", sim.jointByPath[t].best_third, curPts, played),
+      scenario_weight: probabilities.third_place_advance,
+      depends_on_groups: lockedRecordThirdPlace ? lockedRecordThirdPlace.watch_groups : topComp,
       third_place_thresholds: { min_points: ptsThr ?? cutLinePts, min_overall_gd: gdThr ?? cutLineGd, min_goals_for: gfThr ?? cutLineGf, beats_rival_if: `${t} overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank ${fifaRank[t] ?? "?"})`, basis: "per-team monotone-validated point-mass crossover over this team's 3rd-place sims; global last-qualifying line: third_place_race.cutoff_line_typical" },
+      ...(lockedRecordThirdPlace ? { locked_record_requirement: lockedRecordThirdPlace } : {}),
     });
     const third_place_dependency = {
-      is_in_third_race: inRace, competing_third_groups: topComp,
-      competing_groups_note: "groups most often supplying the marginal third on the other side of the rank-8 line from this team; narrows as results land",
+      is_in_third_race: inRace, competing_third_groups: lockedRecordThirdPlace ? lockedRecordThirdPlace.watch_groups : topComp,
+      competing_groups_note: lockedRecordThirdPlace
+        ? "locked-record mode: groups whose possible third-place records can still pass this finished third; settled cannot-beat groups are listed separately"
+        : "groups most often supplying the marginal third on the other side of the rank-8 line from this team; narrows as results land",
       all_other_groups: GROUP_KEYS.filter((x) => x !== g), cutoff_rank: 8, group_third_race_rank: groupRaceRank[g] ?? null,
       current_third_metrics: { pts: curPts, gd: live[t].gd, gf: live[t].gf, fair_play: 0, fifa_rank: fifaRank[t] ?? null },
       passes_cutoff_in_pct: passesCutoffPct,
-      needs: inRace
+      needs: lockedRecordThirdPlace
+        ? lockedRecordThirdPlace.statement
+        : inRace
         ? `Finishing 3rd, ${t} advances in ~${(passesCutoffPct * 100).toFixed(0)}% of cases; more likely than not once overall GD >= ${gdThr ?? cutLineGd} (with >= ${ptsThr ?? cutLinePts} pts). Global last-qualifying third ~${cutLinePts} pts / GD ${cutLineGd} / GF ${cutLineGf}; final slot decided by GD, GF, fair play, FIFA rank (#${fifaRank[t] ?? "?"}) vs other groups' thirds${topComp.length ? ` (most often ${topComp.join("/")})` : ""}.`
         : `${t} ${played >= 3 ? "did not finish 3rd" : "effectively never finishes 3rd"}; not a third-place-race contender.`,
+      locked_record_third_place: lockedRecordThirdPlace,
     };
     const groupDone = finishedByGroup[g] >= 6;
     const tiebreaker_state = { currently_separated_by: groupDone ? "group complete" : null, tied_with: [], decisive_level_if_tied: "fifa_ranking" };

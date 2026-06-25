@@ -522,6 +522,82 @@
                     ]
                   }
                 }
+              },
+              "locked_record": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "status": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "statement": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "locked_record": {
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "additionalProperties": true
+                  },
+                  "min_other_thirds_above": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "max_other_thirds_above": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "remaining_beat_allowance": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "already_beating_groups": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "already_settled_cannot_beat_groups": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "must_beat_groups": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "can_beat_groups": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "cannot_beat_groups": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }

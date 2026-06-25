@@ -5578,7 +5578,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 2,
           "beats_rival_if": "ALG overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 28)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -5607,7 +5608,8 @@
         "race_position": 5,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -5660,7 +5662,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 2,
           "beats_rival_if": "AUS overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 27)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -5713,7 +5716,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 3,
           "beats_rival_if": "AUT overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 24)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -5780,7 +5784,8 @@
           "min_overall_gd": 0,
           "min_goals_for": 1,
           "beats_rival_if": "BEL overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 9)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -5791,14 +5796,8 @@
         {
           "route": "Advance as best third",
           "chance": 1,
-          "own_form": "Best third: typically 4 pts (1W 1D 1L)",
-          "depends_on_other_groups": [
-            "A",
-            "J",
-            "D",
-            "I",
-            "C"
-          ],
+          "own_form": "Locked record: 4 pts / GD -1 / GF 5",
+          "depends_on_other_groups": [],
           "decided_by": []
         }
       ],
@@ -5806,19 +5805,47 @@
         "in_race": true,
         "advances_if_third": 1,
         "race_position": 1,
-        "watch_groups": [
-          "A",
-          "J",
-          "D",
-          "I",
-          "C"
-        ],
-        "needs": "Finishing 3rd, BIH advances in ~100% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -3 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#64) vs other groups' thirds (most often A/J/D/I/C).",
+        "watch_groups": [],
+        "needs": "Bosnia and Herzegovina are mathematically safe as a locked third-place team: at most 6 other third-place records can beat their 4 pts / GD -1 / GF 5, and eight third-place teams qualify.",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -1,
           "min_goals_for": 5,
           "beats_rival_if": "BIH overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 64)"
+        },
+        "locked_record": {
+          "status": "already_safe",
+          "statement": "Bosnia and Herzegovina are mathematically safe as a locked third-place team: at most 6 other third-place records can beat their 4 pts / GD -1 / GF 5, and eight third-place teams qualify.",
+          "locked_record": {
+            "fair_play": 0,
+            "fifa_rank": 64,
+            "gd": -1,
+            "gf": 5,
+            "pts": 4,
+            "text": "4 pts / GD -1 / GF 5"
+          },
+          "min_other_thirds_above": 0,
+          "max_other_thirds_above": 6,
+          "remaining_beat_allowance": 7,
+          "already_beating_groups": [],
+          "already_settled_cannot_beat_groups": [
+            "A",
+            "C"
+          ],
+          "must_beat_groups": [],
+          "can_beat_groups": [
+            "E",
+            "F",
+            "G",
+            "H",
+            "K",
+            "L"
+          ],
+          "cannot_beat_groups": [
+            "D",
+            "I",
+            "J"
+          ]
         }
       }
     },
@@ -5848,7 +5875,8 @@
         "race_position": 12,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -5877,7 +5905,8 @@
         "race_position": 1,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -5930,7 +5959,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 2,
           "beats_rival_if": "CIV overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 33)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -5983,7 +6013,8 @@
           "min_overall_gd": 0,
           "min_goals_for": 3,
           "beats_rival_if": "COD overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 46)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6026,7 +6057,8 @@
         "race_position": 11,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -6093,7 +6125,8 @@
           "min_overall_gd": 0,
           "min_goals_for": 2,
           "beats_rival_if": "CPV overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 67)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6160,7 +6193,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 4,
           "beats_rival_if": "CRO overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 11)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6213,7 +6247,8 @@
           "min_overall_gd": -5,
           "min_goals_for": 3,
           "beats_rival_if": "CUW overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 82)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6227,7 +6262,8 @@
         "race_position": 3,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -6280,7 +6316,8 @@
           "min_overall_gd": 0,
           "min_goals_for": 2,
           "beats_rival_if": "ECU overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 23)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6347,7 +6384,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 4,
           "beats_rival_if": "EGY overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 29)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6412,7 +6450,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 4,
           "beats_rival_if": "ENG overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 4)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6471,7 +6510,8 @@
           "min_overall_gd": -1,
           "min_goals_for": 4,
           "beats_rival_if": "ESP overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 2)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6514,7 +6554,8 @@
         "race_position": 10,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -6543,7 +6584,8 @@
         "race_position": 9,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -6610,7 +6652,8 @@
           "min_overall_gd": -6,
           "min_goals_for": 1,
           "beats_rival_if": "GHA overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 73)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6624,7 +6667,8 @@
         "race_position": 12,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -6691,7 +6735,8 @@
           "min_overall_gd": 0,
           "min_goals_for": 3,
           "beats_rival_if": "IRN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 20)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6730,7 +6775,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 6,
           "beats_rival_if": "IRQ overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 57)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6744,7 +6790,8 @@
         "race_position": 5,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -6793,13 +6840,14 @@
         "advances_if_third": 1,
         "race_position": 2,
         "watch_groups": [],
-        "needs": "Finishing 3rd, JPN advances in ~100% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -3 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#18) vs other groups' thirds (most often ).",
+        "needs": "Finishing 3rd, JPN advances in ~100% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -3 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#18) vs other groups' thirds.",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -1,
           "min_goals_for": 6,
           "beats_rival_if": "JPN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 18)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6810,12 +6858,16 @@
         {
           "route": "Advance as best third",
           "chance": 0.9165,
-          "own_form": "Best third: typically 3 pts (1W 0D 2L)",
+          "own_form": "Locked record: 3 pts / GD -1 / GF 2",
           "depends_on_other_groups": [
-            "C",
             "D",
-            "J",
+            "E",
+            "F",
+            "G",
+            "H",
             "I",
+            "J",
+            "K",
             "L"
           ],
           "decided_by": []
@@ -6826,18 +6878,56 @@
         "advances_if_third": 0.9165,
         "race_position": 3,
         "watch_groups": [
-          "C",
           "D",
-          "J",
+          "E",
+          "F",
+          "G",
+          "H",
           "I",
+          "J",
+          "K",
           "L"
         ],
-        "needs": "Finishing 3rd, KOR advances in ~92% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -3 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#25) vs other groups' thirds (most often C/D/J/I/L).",
+        "needs": "South Korea qualify iff no more than 6 of the 9 remaining group thirds that can still pass them beat their locked 3 pts / GD -1 / GF 2. Watch Groups D/E/F/G/H/I/J/K/L.",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -1,
           "min_goals_for": 2,
           "beats_rival_if": "KOR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 25)"
+        },
+        "locked_record": {
+          "status": "conditional",
+          "statement": "South Korea qualify iff no more than 6 of the 9 remaining group thirds that can still pass them beat their locked 3 pts / GD -1 / GF 2. Watch Groups D/E/F/G/H/I/J/K/L.",
+          "locked_record": {
+            "fair_play": 0,
+            "fifa_rank": 25,
+            "gd": -1,
+            "gf": 2,
+            "pts": 3,
+            "text": "3 pts / GD -1 / GF 2"
+          },
+          "min_other_thirds_above": 1,
+          "max_other_thirds_above": 10,
+          "remaining_beat_allowance": 6,
+          "already_beating_groups": [
+            "B"
+          ],
+          "already_settled_cannot_beat_groups": [
+            "C"
+          ],
+          "must_beat_groups": [],
+          "can_beat_groups": [
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L"
+          ],
+          "cannot_beat_groups": []
         }
       }
     },
@@ -6891,7 +6981,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 2,
           "beats_rival_if": "KSA overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 61)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -6920,7 +7011,8 @@
         "race_position": 12,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -6949,7 +7041,8 @@
         "race_position": 3,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -6998,13 +7091,14 @@
         "advances_if_third": 1,
         "race_position": 2,
         "watch_groups": [],
-        "needs": "Finishing 3rd, NED advances in ~100% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -3 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#8) vs other groups' thirds (most often ).",
+        "needs": "Finishing 3rd, NED advances in ~100% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -3 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#8) vs other groups' thirds.",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -1,
           "min_goals_for": 7,
           "beats_rival_if": "NED overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 8)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -7047,7 +7141,8 @@
         "race_position": 10,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -7100,7 +7195,8 @@
           "min_overall_gd": -1,
           "min_goals_for": 4,
           "beats_rival_if": "NZL overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 85)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -7114,7 +7210,8 @@
         "race_position": 4,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -7167,7 +7264,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 2,
           "beats_rival_if": "PAR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 41)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -7222,7 +7320,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 6,
           "beats_rival_if": "POR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 5)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -7236,7 +7335,8 @@
         "race_position": 1,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -7265,7 +7365,8 @@
         "race_position": 3,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -7276,12 +7377,16 @@
         {
           "route": "Advance as best third",
           "chance": 0.2916,
-          "own_form": "Best third: typically 3 pts (1W 0D 2L)",
+          "own_form": "Locked record: 3 pts / GD -3 / GF 1",
           "depends_on_other_groups": [
             "D",
-            "J",
-            "A",
+            "E",
+            "F",
+            "G",
+            "H",
             "I",
+            "J",
+            "K",
             "L"
           ],
           "decided_by": []
@@ -7293,17 +7398,54 @@
         "race_position": 12,
         "watch_groups": [
           "D",
-          "J",
-          "A",
+          "E",
+          "F",
+          "G",
+          "H",
           "I",
+          "J",
+          "K",
           "L"
         ],
-        "needs": "Finishing 3rd, SCO advances in ~29% of cases; more likely than not once overall GD >= -3 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -3 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#42) vs other groups' thirds (most often D/J/A/I/L).",
+        "needs": "Scotland qualify iff no more than 5 of the 9 remaining group thirds that can still pass them beat their locked 3 pts / GD -3 / GF 1. Watch Groups D/E/F/G/H/I/J/K/L.",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -3,
           "min_goals_for": 2,
           "beats_rival_if": "SCO overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 42)"
+        },
+        "locked_record": {
+          "status": "conditional",
+          "statement": "Scotland qualify iff no more than 5 of the 9 remaining group thirds that can still pass them beat their locked 3 pts / GD -3 / GF 1. Watch Groups D/E/F/G/H/I/J/K/L.",
+          "locked_record": {
+            "fair_play": 0,
+            "fifa_rank": 42,
+            "gd": -3,
+            "gf": 1,
+            "pts": 3,
+            "text": "3 pts / GD -3 / GF 1"
+          },
+          "min_other_thirds_above": 2,
+          "max_other_thirds_above": 11,
+          "remaining_beat_allowance": 5,
+          "already_beating_groups": [
+            "A",
+            "B"
+          ],
+          "already_settled_cannot_beat_groups": [],
+          "must_beat_groups": [],
+          "can_beat_groups": [
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L"
+          ],
+          "cannot_beat_groups": []
         }
       }
     },
@@ -7343,7 +7485,8 @@
           "min_overall_gd": -2,
           "min_goals_for": 5,
           "beats_rival_if": "SEN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 15)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -7372,7 +7515,8 @@
         "race_position": 1,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -7439,7 +7583,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 6,
           "beats_rival_if": "SWE overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 38)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -7453,7 +7598,8 @@
         "race_position": 2,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -7467,7 +7613,8 @@
         "race_position": 6,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -7534,7 +7681,8 @@
           "min_overall_gd": 0,
           "min_goals_for": 6,
           "beats_rival_if": "URU overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 16)"
-        }
+        },
+        "locked_record": null
       }
     },
     {
@@ -7563,7 +7711,8 @@
         "race_position": 6,
         "watch_groups": [],
         "needs": null,
-        "thresholds": null
+        "thresholds": null,
+        "locked_record": null
       }
     },
     {
@@ -7602,7 +7751,8 @@
           "min_overall_gd": -3,
           "min_goals_for": 7,
           "beats_rival_if": "UZB overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 50)"
-        }
+        },
+        "locked_record": null
       }
     }
   ],
@@ -7658,7 +7808,7 @@
     {
       "content_type": "scenario_narration",
       "headline": "Scotland's Knockout Hopes Rest on the Best-Third Waiting Game",
-      "body": "Scotland face an uphill battle to reach the knockouts, but their tournament is not over yet. With the group stage matches complete, Scotland sit third in Group C with three points. They are well off the pace of Brazil and Morocco, who both comfortably secured their places with 100% advancement records, but Scotland remain ahead of Haiti. According to our group-stage model, Scotland have a 29% chance to advance to the Round of 32. Because a top-two finish is no longer possible, their only path forward is as one of the best third-placed teams. Currently, they are in a tense position as the seventh-best third-placed team, sitting just one point above the cut-off line. To hold onto this qualifying spot, they must rely on helpful results in other groups—specifically Groups A, D, I, J, and L—to keep enough rival third-place records below their own. It is out of their hands now, but the door remains open.",
+      "body": "Scotland face an uphill battle to reach the knockouts, but their tournament is not over yet. With the group stage matches complete, Scotland sit third in Group C with three points. They are well off the pace of Brazil and Morocco, who both comfortably secured their places with 100% advancement records, but Scotland remain ahead of Haiti. According to our group-stage model, Scotland have a 29% chance to advance to the Round of 32. Because a top-two finish is no longer possible, their only path forward is as one of the best third-placed teams. Currently, they are in a tense position as the seventh-best third-placed team, sitting just one point above the cut-off line. It is out of their hands now, but the door remains open. Scotland qualify iff no more than 5 of the 9 remaining group thirds that can still pass them beat their locked 3 pts / GD -3 / GF 1. Watch Groups D/E/F/G/H/I/J/K/L.",
       "team_code": "SCO"
     },
     {
@@ -7730,7 +7880,7 @@
     {
       "content_type": "scenario_narration",
       "headline": "South Korea in Strong Position for Knockout Spot",
-      "body": "South Korea are in a very strong position to reach the knockouts, with our tournament simulation giving them a 92% chance to advance to the Round of 32. In Group A, they sit in third place behind South Africa, who have already secured their passage alongside group leaders Mexico. South Korea are well clear of the Czech Republic, who have been eliminated. Because they cannot finish in the top two, South Korea's entire tournament hopes rest on the third-place wildcard route. They currently stand as the fourth-best third-placed team across the tournament, sitting one point clear of the cut-off line. While their 92% advancement chance is highly encouraging, this back-door route is not entirely in their own hands and depends on how the final matches unfold in other groups.",
+      "body": "South Korea are in a very strong position to reach the knockouts, with our tournament simulation giving them a 92% chance to advance to the Round of 32. In Group A, they sit in third place behind South Africa, who have already secured their passage alongside group leaders Mexico. South Korea are well clear of the Czech Republic, who have been eliminated. Because they cannot finish in the top two, South Korea's entire tournament hopes rest on the third-place wildcard route. They currently stand as the fourth-best third-placed team across the tournament, sitting one point clear of the cut-off line. South Korea qualify iff no more than 6 of the 9 remaining group thirds that can still pass them beat their locked 3 pts / GD -1 / GF 2. Watch Groups D/E/F/G/H/I/J/K/L.",
       "team_code": "KOR"
     },
     {
@@ -7832,7 +7982,7 @@
     {
       "content_type": "scenario_narration",
       "headline": "Bosnia and Herzegovina on the Cusp of the Knockouts",
-      "body": "Bosnia and Herzegovina are in a fantastic position, with their place in the knockouts virtually assured. Our tournament simulation gives them a 100% chance to reach the Round of 32. They sit in a tight Group B cluster, chasing Switzerland and Canada, who both sit ahead of them on 100% advancement chances, while Qatar are eliminated. Because Switzerland and Canada have secured the top two spots, Bosnia and Herzegovina's only path forward is through the third-place route. Fortunately, they are currently the top-ranked third-placed team across the tournament, sitting a comfortable three points clear of the qualification cut-off. While their final confirmation technically depends on the remaining matches in other groups, their four points and healthy standing mean they are expected to go through. Having completed all three of their group matches, they can look forward to the next round with quiet pride as the final group stage games play out.",
+      "body": "Bosnia and Herzegovina are in a fantastic position, with their place in the knockouts virtually assured. Our tournament simulation gives them a 100% chance to reach the Round of 32. They sit in a tight Group B cluster, chasing Switzerland and Canada, who both sit ahead of them on 100% advancement chances, while Qatar are eliminated. Because Switzerland and Canada have secured the top two spots, Bosnia and Herzegovina's only path forward is through the third-place route. Fortunately, they are currently the top-ranked third-placed team across the tournament, sitting a comfortable three points clear of the qualification cut-off. Having completed all three of their group matches, they can look forward to the next round with quiet pride as the final group stage games play out. Bosnia and Herzegovina are mathematically safe as a locked third-place team: at most 6 other third-place records can beat their 4 pts / GD -1 / GF 5, and eight third-place teams qualify.",
       "team_code": "BIH"
     },
     {

@@ -20,7 +20,7 @@ const worldCupDevProjectRef = "ahcfrgxczbgdvrqmbisw";
 const SOURCE_PRED_RUN = "066be1b1-de89-44de-8b7c-c95f4353ad7e"; // PROMOTED live group predictions (dynamic-draw); was 85555853
 const SOURCE_SIM_RUN = "c45b3e6a-f2c3-43f4-bade-65dc1fd0e195"; // PROMOTED live group sim (dynamic-draw); was cfdc88ca
 const FIFA_SNAPSHOT = "2026-06-11" /* pre-WC FIFA edition published 2026-06-11; prior pins: 2026-04-01 (kept additively in fifa_world_rankings) */; const SEED = 20260602; const N = 20000;
-const SCHEMA_VERSION = "advancement-scenario-v1"; const LADDER_VERSION = "fifa-2026-article-13-v1";
+const SCHEMA_VERSION = "advancement-scenario-v1-locked-record"; const LADDER_VERSION = "fifa-2026-article-13-v1";
 const args = process.argv;
 const MODE = args.includes("--synthetic-test") ? "synthetic" : args.includes("--regression") ? "regression" : "live";
 const execute = args.includes("--execute");
@@ -89,7 +89,7 @@ async function loadInputs(config: DbConfig) {
   const stored: any = {}; for (const r of storedRows as any[]) { const ss = r.source_snapshot || {}; stored[r.team_code] = { p1: num(r.p1), p2: num(r.p2), p3: num(r.p3), p4: num(r.p4), wg: num(r.wg), t2: num(r.t2), adv: num(r.adv), bestThird: num(ss.advance_as_best_third_probability), eliminated: num(ss.eliminated_group_stage_probability) }; }
   return { fixtures, fifaRank, aux, teamName, teamId, stored };
 }
-const baseOpts = (extra: any) => ({ aux: extra.aux, fifaRank: extra.fifaRank, teamName: extra.teamName, sourceSimRun: SOURCE_SIM_RUN, sourcePredRun: SOURCE_PRED_RUN, fifaSnapshot: FIFA_SNAPSHOT, ladderVersion: LADDER_VERSION, schemaVersion: SCHEMA_VERSION, seed: SEED });
+const baseOpts = (extra: any) => ({ aux: extra.aux, fifaRank: extra.fifaRank, teamName: extra.teamName, fixtures: extra.fixtures, sourceSimRun: SOURCE_SIM_RUN, sourcePredRun: SOURCE_PRED_RUN, fifaSnapshot: FIFA_SNAPSHOT, ladderVersion: LADDER_VERSION, schemaVersion: SCHEMA_VERSION, seed: SEED });
 
 function verifyDoc(v: any): string[] {
   const errs: string[] = [];
@@ -189,7 +189,11 @@ async function main() {
     writeFileSync(path.join(rootDir, `data/exports/advancement-scenario-v1-live-r${resultCount}-app.json`), JSON.stringify(document, null, 2), "utf8");
   } else { note = `${resultCount} verified group results — DRY-RUN; pass --execute to store the live row (phase=live, as_of_result_count=${resultCount}).`; }
   const after = runSql(config.dbUrl, `select count(*) c from tournament_advancement_scenarios`)[0];
+  const lockedRecordSamples = Object.fromEntries(["KOR", "BIH"].map((code) => [
+    code,
+    document.teams?.[code]?.third_place_dependency?.locked_record_third_place ?? null,
+  ]));
 
-  console.log(JSON.stringify({ live_update: true, verified_rows: vcount, locked_pairs: resultCount, orphan_rows: orphanRows, duplicate_pair_rows: dupPairRows, phase, as_of_result_count: resultCount, reads_only_verified: true, verification, errors: errs, inserted, new_row_id: newRowId, tas_rows_before: num(before.c), tas_rows_after: num(after.c), note }, null, 2));
+  console.log(JSON.stringify({ live_update: true, verified_rows: vcount, locked_pairs: resultCount, orphan_rows: orphanRows, duplicate_pair_rows: dupPairRows, phase, as_of_result_count: resultCount, reads_only_verified: true, verification, errors: errs, locked_record_samples: lockedRecordSamples, inserted, new_row_id: newRowId, tas_rows_before: num(before.c), tas_rows_after: num(after.c), note }, null, 2));
 }
 main().catch((e) => { console.error("ERROR:", e?.message ?? e); process.exit(1); });

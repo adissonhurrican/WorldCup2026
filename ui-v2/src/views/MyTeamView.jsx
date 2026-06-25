@@ -23,7 +23,7 @@ const NUMBER_INFO = {
   winGroup: "The chance they finish 1st in the group.",
   runnerUp: "The chance they finish 2nd in the group.",
   bestThird: "The chance they finish 3rd and still qualify as one of the best third-placed teams.",
-  ifThird: "If they finish 3rd, this is their chance of still qualifying. It depends on how the other groups finish.",
+  ifThird: "If they finish 3rd, this is their chance of still qualifying. Finished third-place teams use their locked record; active groups still depend on the remaining tables.",
 };
 
 function routeInfoCopy(route = "") {
@@ -245,6 +245,7 @@ function FixturesSection({ data, code, live, lineups, events, stats, onOpen, onT
 }
 
 function RoutesCard({ scen }) {
+  const lockedRecord = scen.third_place_race?.locked_record;
   return (
     <Card className="p-5">
       <div className="flex items-center justify-between">
@@ -268,7 +269,7 @@ function RoutesCard({ scen }) {
               </span>
             </div>
             {r.own_form && <p className="mt-0.5 text-[12px] text-ink-2">{r.own_form}</p>}
-            {r.depends_on_other_groups && r.depends_on_other_groups.length > 0 && (
+            {!(lockedRecord?.statement && r.route === "Advance as best third") && r.depends_on_other_groups && r.depends_on_other_groups.length > 0 && (
               <p className="mt-0.5 text-[12px] text-ink-3">depends on groups {r.depends_on_other_groups.join(", ")}</p>
             )}
           </li>
@@ -280,7 +281,11 @@ function RoutesCard({ scen }) {
             <span>Best-third race: {pct(scen.third_place_race.advances_if_third)} to advance if third</span>
             <InfoTip label="About best-third race">{NUMBER_INFO.ifThird}</InfoTip>
           </span>
-          {scen.third_place_race.watch_groups?.length ? ` · watch groups ${scen.third_place_race.watch_groups.join(", ")}` : ""}
+          {lockedRecord?.statement ? (
+            <span className="mt-1 block leading-relaxed">{lockedRecord.statement}</span>
+          ) : (
+            scen.third_place_race.watch_groups?.length ? ` · watch groups ${scen.third_place_race.watch_groups.join(", ")}` : ""
+          )}
         </p>
       )}
     </Card>
