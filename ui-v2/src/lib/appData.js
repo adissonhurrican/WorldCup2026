@@ -7,7 +7,7 @@
 // Project: ahcfrgxczbgdvrqmbisw
 // ============================================================================
 
-import { APP_DATA_REMOTE_URL } from "../config.js";
+import { APP_DATA_REMOTE_URL, WEATHER_REMOTE_URL, SQUADS_REMOTE_URL } from "../config.js";
 
 const BASE = import.meta.env.BASE_URL;
 const BUNDLED_APP_DATA = `${BASE}app-data.json`;
@@ -71,6 +71,27 @@ async function loadJsonOr(url, fallback) {
   }
 }
 
+// Raw-first variant of loadJsonOr for the build-INDEPENDENT overlays (weather, squads): tries the GitHub raw
+// copy first (cache-busted) so a build-skipping data commit still serves FRESH, falls back to the Netlify-
+// bundled copy on any raw failure/throttle, and returns `fallback` only if BOTH are unreachable. Optional
+// overlay → NEVER throws (mirrors loadJsonOr's graceful contract; same shape as loadAppData but non-fatal).
+async function loadJsonRawThenBundled(remoteUrl, bundledUrl, fallback) {
+  const primary = remoteUrl || bundledUrl;
+  try {
+    const res = await fetch(bust(primary), { cache: "no-store" });
+    if (res.ok) return await res.json();
+    throw new Error(String(res.status));
+  } catch {
+    if (primary !== bundledUrl) {
+      try {
+        const res = await fetch(bust(bundledUrl), { cache: "no-store" });
+        if (res.ok) return await res.json();
+      } catch { /* fall through to fallback */ }
+    }
+    return fallback;
+  }
+}
+
 // Static venue facts (altitude / roof / coordinates) — display/context only.
 export function loadVenueFacts(url = `${BASE}venue-facts.json`) {
   return loadJsonOr(url, { byVenue: {}, byCity: {} });
@@ -80,9 +101,10 @@ export function loadVenues(url = `${BASE}venues.json`) {
   return loadJsonOr(url, {});
 }
 
-// Per-fixture weather forecast overlay — display only, empty until forecasts are fetched.
-export function loadWeather(url = `${BASE}weather.json`) {
-  return loadJsonOr(url, {});
+// Per-fixture weather forecast overlay — display only, empty until forecasts are fetched. Raw-first (cache-
+// busted) so the weather bot's refresh reaches users without a Netlify build; bundled fallback on raw failure.
+export function loadWeather() {
+  return loadJsonRawThenBundled(WEATHER_REMOTE_URL, `${BASE}weather.json`, {});
 }
 
 // Country identity colors for the prediction bar glass fill. Display-only; segment widths still come
@@ -174,8 +196,10 @@ export async function loadEvents(url = `/.netlify/functions/events`) {
 // Squad rosters — display only, built server-side by build-squads-json.mjs. Returns a map keyed by
 // FIFA team code -> array of players { name, position, position_group, number, club, age, status }.
 // Per-player status (goals/cards/minutes) is 0 until WC matches play. Returns {} on any failure.
-export async function loadSquads(url = `${BASE}squads.json`) {
-  const raw = await loadJsonOr(url, null);
+export async function loadSquads() {
+  // Raw-first (cache-busted) so per-match stat updates (goals/cards/minutes) reach users without a Netlify
+  // build; bundled fallback on raw failure/throttle.
+  const raw = await loadJsonRawThenBundled(SQUADS_REMOTE_URL, `${BASE}squads.json`, null);
   return (raw && raw.teams && typeof raw.teams === "object") ? raw.teams : {};
 }
 

@@ -32,6 +32,15 @@ export const SITE_URL = "https://footballmatchmaster.com";
 export const APP_DATA_REMOTE_URL =
   "https://raw.githubusercontent.com/adissonhurrican/WorldCup2026/main/ui-v2/public/app-data.json";
 
+// The weather + squad overlays are decoupled the SAME way (raw-first, bundled fallback). They're auto-committed
+// by the loop/weather bot and the build-ignore skips those commits, so without this they'd freeze at the last
+// build; serving them raw-first keeps them fresh for everyone while still skipping the build. Set to "" to use
+// the bundled copy only.
+export const WEATHER_REMOTE_URL =
+  "https://raw.githubusercontent.com/adissonhurrican/WorldCup2026/main/ui-v2/public/weather.json";
+export const SQUADS_REMOTE_URL =
+  "https://raw.githubusercontent.com/adissonhurrican/WorldCup2026/main/ui-v2/public/squads.json";
+
 // Absolute Open Graph / Twitter share image (1200×630 PNG in /public → served at the domain root).
 // Social scrapers REQUIRE an absolute URL, so it is built from SITE_URL — which also keeps it
 // consistent with og:url and updates automatically if the domain ever changes.
