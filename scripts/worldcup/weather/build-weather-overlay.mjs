@@ -128,7 +128,7 @@ function main() {
   const { map: fixtureKeys, diagnostics } = fixtureIdToAppFixture();
   result.fixture_mapping = diagnostics;
   const overlay = {
-    _note: "Per-fixture weather forecast overlay (display-only; never a model input). Keyed by HOME_AWAY. Generated from the Open-Meteo cache by build-weather-overlay.mjs.",
+    _note: "Per-fixture weather forecast overlay (display-only; never a model input). Keyed by HOME_AWAY for group fixtures and by M{match_number} for knockout fixtures (whose teams are unknown until the bracket resolves). Generated from the Open-Meteo cache by build-weather-overlay.mjs.",
   };
 
   if (existsSync(WEATHER_CACHE_DIR)) {
@@ -138,13 +138,18 @@ function main() {
     files.sort();
     for (const f of files) {
       const rec = readJson(path.join(WEATHER_CACHE_DIR, f));
-      const appFx = rec.fixture_id != null ? fixtureKeys.get(rec.fixture_id) : null;
-      if (!appFx) {
-        result.unmapped.push(rec.fixture_id ?? f);
+      const fid = rec.fixture_id;
+      // DUAL-KEY: knockout cache records carry a synthetic "M{match_number}" id (teams unknown at fetch time)
+      // and key the overlay directly; group records carry a numeric API fixture_id resolved to HOME_AWAY.
+      let overlayKey = null;
+      if (typeof fid === "string" && /^M\d+$/.test(fid)) overlayKey = fid;
+      else if (fid != null) overlayKey = fixtureKeys.get(fid)?.key ?? null;
+      if (!overlayKey) {
+        result.unmapped.push(fid ?? f);
         continue;
       }
       const fc = rec.forecast || {};
-      overlay[appFx.key] = {
+      overlay[overlayKey] = {
         temp_c: fc.temperature_2m_c ?? null,
         feels_like_c: fc.apparent_temperature_c ?? null,
         condition: fc.weather_code_label ?? null,

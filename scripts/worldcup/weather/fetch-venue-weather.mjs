@@ -7,6 +7,7 @@ const PROJECT_REF = 'ahcfrgxczbgdvrqmbisw';
 const ROOT = process.cwd();
 const STADIUM_FACTS_PATH = path.join(ROOT, 'data', 'external', 'venues', 'stadium_facts_static_v1.json');
 const FIXTURE_CACHE_PATH = path.join(ROOT, 'data', 'external', 'api-football', 'cache', 'fixtures_league1_season2026.json');
+const APP_DATA_PATH = path.join(ROOT, 'data', 'exports', 'app-data.json');
 const WEATHER_CACHE_DIR = path.join(ROOT, 'data', 'external', 'weather', 'cache');
 const OPEN_METEO_BASE_URL = 'https://api.open-meteo.com/v1/forecast';
 const WEATHER_CONTEXT_NOTE = 'forecast context only; does not move probabilities';
@@ -113,13 +114,44 @@ function isoCompact(value) {
 function loadStadiumFacts() {
   const artifact = readJson(STADIUM_FACTS_PATH);
   const venueByFixtureName = new Map();
+  const venueByHostMarket = new Map(); // host city -> venue: how knockout fixtures (no API venue name) resolve coords
   for (const venue of artifact.venues ?? []) {
     if (venue.latitude == null || venue.longitude == null) {
       throw new Error(`Missing coordinates for venue ${venue.fixture_venue_name}`);
     }
     venueByFixtureName.set(venue.fixture_venue_name, venue);
+    if (venue.host_market) venueByHostMarket.set(venue.host_market, venue);
   }
-  return { artifact, venueByFixtureName };
+  return { artifact, venueByFixtureName, venueByHostMarket };
+}
+
+// Knockout fixtures (R32 -> Final, M73-M104) come from the APP export, not the API fixture cache (which is
+// group-stage only). They have bracket-slot labels, not teams, so they CANNOT be keyed by HOME_AWAY — we key
+// them by M{match_number} and resolve venue coords via city -> host_market (verified 32/32). The returned
+// records are fixture-shaped so they flow through the SAME imminent-window fetch loop: a round still >168h out
+// is simply filtered out and fetched later, automatically, when it enters the window. No per-round rebuild.
+function loadKnockoutFixtures(venueByHostMarket) {
+  if (!existsSync(APP_DATA_PATH)) return [];
+  const app = readJson(APP_DATA_PATH);
+  const out = [];
+  for (const f of app.knockout_fixtures ?? []) {
+    if (f.match_number == null) continue;
+    const kickoff_utc = f.kickoff_utc ?? f.kickoff;
+    if (!kickoff_utc) continue; // no scheduled time yet (some late rounds) -> not yet fetchable
+    const venue = f.city ? venueByHostMarket.get(f.city) : null;
+    if (!venue) continue; // no coords for this city (shouldn't happen — 32/32 city->host_market join verified)
+    out.push({
+      fixture_id: `M${f.match_number}`, // synthetic id -> cache filename + overlay key (teams unknown at fetch time)
+      kickoff_utc,
+      kickoff: new Date(kickoff_utc),
+      round: f.round ?? f.round_key ?? 'knockout',
+      home_team: null,
+      away_team: null,
+      api_football_venue: { id: null, name: venue.fixture_venue_name, city: f.city },
+      knockout_venue: venue, // coords already resolved via host_market
+    });
+  }
+  return out;
 }
 
 function loadFixtures() {
@@ -382,7 +414,7 @@ async function main() {
     return;
   }
 
-  const { venueByFixtureName } = loadStadiumFacts();
+  const { venueByFixtureName, venueByHostMarket } = loadStadiumFacts();
   const fixtures = loadFixtures();
   const selected = selectFixtures(fixtures, args);
   const missingSelections = args.fixtureIds.filter((id) => !selected.some((fixture) => fixture.fixture_id === id));
@@ -390,11 +422,19 @@ async function main() {
     throw new Error(`Fixture IDs not found in cache: ${missingSelections.join(', ')}`);
   }
 
-  const fixturePlan = selected.map((fixture) => {
-    const venue = venueByFixtureName.get(fixture.api_football_venue.name);
-    if (!venue) throw new Error(`No venue context found for ${fixture.api_football_venue.name}`);
-    return decorateFixture(fixture, venue, args.now, args.windowHours);
-  });
+  // Knockout fixtures join the plan only on the cron/all-imminent path (not single --fixture-id probes). They
+  // flow through the SAME window filter + fetch loop below; out-of-window rounds are skipped until they near.
+  const knockoutFixtures = (args.allImminent && args.fixtureIds.length === 0) ? loadKnockoutFixtures(venueByHostMarket) : [];
+  const allFixtures = [...fixtures, ...knockoutFixtures]; // the fetch loop resolves each plan item back to its fixture here
+
+  const fixturePlan = [
+    ...selected.map((fixture) => {
+      const venue = venueByFixtureName.get(fixture.api_football_venue.name);
+      if (!venue) throw new Error(`No venue context found for ${fixture.api_football_venue.name}`);
+      return decorateFixture(fixture, venue, args.now, args.windowHours);
+    }),
+    ...knockoutFixtures.map((fixture) => decorateFixture(fixture, fixture.knockout_venue, args.now, args.windowHours)),
+  ];
 
   const imminentPlan = fixturePlan.filter((item) => item.within_imminent_window);
   const outsideWindow = fixturePlan.filter((item) => !item.within_imminent_window);
@@ -470,7 +510,7 @@ async function main() {
 
   mkdirSync(WEATHER_CACHE_DIR, { recursive: true });
   for (const item of imminentPlan) {
-    const fixture = fixtures.find((row) => row.fixture_id === item.fixture_id);
+    const fixture = allFixtures.find((row) => row.fixture_id === item.fixture_id);
     const url = buildForecastUrl(item.venue, fixture.kickoff);
     const response = await fetchForecast(url);
     result.api_requests_made += 1;

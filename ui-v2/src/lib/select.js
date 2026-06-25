@@ -539,6 +539,9 @@ export function fixtureKey(fx) {
 }
 export function weatherFor(data, fx) {
   const w = data.__weather || {};
+  // Knockout fixtures are bracket slots (no resolved teams until the bracket fills), so their forecast is keyed
+  // by match number (M{n}); group fixtures stay keyed by HOME_AWAY. Mirrors the overlay's dual-keying.
+  if (fx && fx.match_number != null && (fx.knockout || fx.round_key)) return w[`M${fx.match_number}`] || null;
   return w[fixtureKey(fx)] || null;
 }
 export function hoursUntil(fx, now = Date.now()) {
