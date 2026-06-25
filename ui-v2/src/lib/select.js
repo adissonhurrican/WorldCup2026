@@ -255,6 +255,60 @@ export function matchState(fx, live = null) {
 export function liveOf(fx, live) {
   return (live && live[`${fx.home}_${fx.away}`]) || null;
 }
+function resultWinnerCode(fx) {
+  const r = fx?.result || {};
+  const explicit = r.winner_code ?? r.winner ?? null;
+  if (explicit) return explicit;
+  const h = Number(r.home_score ?? r.home);
+  const a = Number(r.away_score ?? r.away);
+  if (Number.isFinite(h) && Number.isFinite(a) && h !== a) return h > a ? fx.home : fx.away;
+  const ph = Number(r.pens_home ?? r.pens_a);
+  const pa = Number(r.pens_away ?? r.pens_b);
+  if (Number.isFinite(ph) && Number.isFinite(pa) && ph !== pa) return ph > pa ? fx.home : fx.away;
+  return null;
+}
+export function nextRealKnockoutFixture(data, code, live = null, now = Date.now()) {
+  const fixtures = teamRealKnockoutFixtures(data, code);
+  const liveFx = fixtures.find((fx) => matchState(fx, live) === "live");
+  if (liveFx) return liveFx;
+  const upcoming = fixtures.find((fx) => matchState(fx, live) === "scheduled" && kickoffMs(fx) >= now)
+    || fixtures.find((fx) => matchState(fx, live) === "scheduled");
+  if (upcoming) return upcoming;
+  const latestFinished = fixtures.slice().reverse().find((fx) => matchState(fx, live) === "finished");
+  if (!latestFinished) return null;
+  return resultWinnerCode(latestFinished) === code ? latestFinished : null;
+}
+function roundName(fx) {
+  const raw = fx?.round || fx?.round_key || "";
+  if (raw) return String(raw).replace(/_/g, " ");
+  return "the knockout stage";
+}
+export function teamTournamentEndState(data, code) {
+  const koLoss = teamRealKnockoutFixtures(data, code)
+    .slice()
+    .reverse()
+    .find((fx) => matchState(fx) === "finished" && resultWinnerCode(fx) && resultWinnerCode(fx) !== code);
+  if (koLoss) {
+    return {
+      kind: "knockout",
+      title: "Tournament complete",
+      body: `Eliminated in ${roundName(koLoss)}.`,
+    };
+  }
+  const pg = predictedGroup(data, code);
+  const rg = pg?.group ? realGroup(data, pg.group) : null;
+  const row = rg && (rg.standings || []).find((r) => r.code === code);
+  const state = String(row?.advance_state || "").toLowerCase();
+  const eliminated = state === "eliminated" || state === "best_third_out" || row?.band === "gray";
+  if (rg?.complete && row && eliminated) {
+    return {
+      kind: "group",
+      title: "Group stage complete",
+      body: `Finished ${ordinal(row.position)} in Group ${rg.group} and did not advance.`,
+    };
+  }
+  return null;
+}
 
 // ---- confirmed lineups (display only) keyed by HOME_AWAY; null until the XI is stored ----
 // `lineups` is the keyed map from loadLineups. Orientation already normalized server-side
@@ -391,6 +445,52 @@ export function teamFixtures(data, code) {
     .filter((f) => f.home === code || f.away === code)
     .slice()
     .sort((a, b) => kickoffMs(a) - kickoffMs(b));
+}
+
+function sideTeamCode(side) {
+  return side?.team?.code || null;
+}
+function knockoutResultAsHomeAway(result) {
+  if (!result) return null;
+  return {
+    ...result,
+    home_score: result.home_score ?? result.home ?? result.a ?? null,
+    away_score: result.away_score ?? result.away ?? result.b ?? null,
+    winner_code: result.winner_code ?? result.winner ?? null,
+    pens_home: result.pens_home ?? result.pens_a ?? null,
+    pens_away: result.pens_away ?? result.pens_b ?? null,
+  };
+}
+export function realKnockoutFixture(fx) {
+  const home = sideTeamCode(fx?.side_a);
+  const away = sideTeamCode(fx?.side_b);
+  if (!home || !away) return null;
+  const pred = fx.prediction || {};
+  const probabilities = fx.probabilities || (
+    pred.team_a_win_probability != null || pred.team_b_win_probability != null
+      ? {
+          home_win: pred.team_a_win_probability ?? null,
+          draw: 0,
+          away_win: pred.team_b_win_probability ?? null,
+        }
+      : null
+  );
+  return {
+    ...fx,
+    group: null,
+    knockout: true,
+    both_real_knockout: true,
+    home,
+    away,
+    probabilities,
+    result: knockoutResultAsHomeAway(fx.result),
+  };
+}
+export function teamRealKnockoutFixtures(data, code) {
+  return (data.knockout_fixtures || [])
+    .map(realKnockoutFixture)
+    .filter((fx) => fx && (fx.home === code || fx.away === code))
+    .sort((a, b) => kickoffMs(a) - kickoffMs(b) || (a.match_number || 0) - (b.match_number || 0));
 }
 // Index of the "next" match in a chronological list: a live one wins, else the soonest
 // not-yet-played fixture. Returns -1 when nothing is upcoming (eliminated / tournament over).

@@ -9,6 +9,7 @@ import {
   teamByCode, nicknameLine, heroFor, reachStats, narrationFor, scenarioFor,
   tacticalFor, knockoutFor, groupTable, bestThirdInfo, bandOf, BAND_TEXT, pct, ordinal,
   teamFixtures, nextMatchIndex, isKnockoutFixture, matchState, squadGroups, fixtureDayLabel,
+  nextRealKnockoutFixture, teamTournamentEndState,
 } from "../lib/select";
 
 const TABS = ["Overview", "Standing", "Path", "Squad"];
@@ -184,13 +185,20 @@ function OverviewPanel({ data, code }) {
 }
 
 // ---------- OVERVIEW: this team's fixtures (reuses the Matches-tab card verbatim) ----------
-// Lists every real fixture for the team, chronological, next match highlighted. Each row IS
-// the shared MatchCard, so it inherits all states (prediction → live score → final result)
-// and the same tap-through detail. Reads app-data.json + the live overlay only; never
-// fabricates knockout fixtures — they appear here automatically once they exist in the export.
+// Lists group fixtures plus the team's current knockout fixture after both sides are real.
+// Each row is the shared MatchCard, so live/final states and tap-through detail stay consistent.
 function FixturesSection({ data, code, live, lineups, events, stats, onOpen, onTab }) {
-  const fixtures = teamFixtures(data, code);
-  if (!fixtures.length) return null;
+  const knockoutFx = nextRealKnockoutFixture(data, code, live);
+  const endState = teamTournamentEndState(data, code);
+  const fixtures = [...teamFixtures(data, code), ...(knockoutFx && !endState ? [knockoutFx] : [])]
+    .sort((a, b) => {
+      const aIso = a.kickoff_utc || a.kickoff;
+      const bIso = b.kickoff_utc || b.kickoff;
+      const at = aIso ? new Date(aIso).getTime() : Infinity;
+      const bt = bIso ? new Date(bIso).getTime() : Infinity;
+      return (Number.isNaN(at) ? Infinity : at) - (Number.isNaN(bt) ? Infinity : bt);
+    });
+  if (!fixtures.length && !endState) return null;
 
   const nextIdx = nextMatchIndex(fixtures, live);
   const hasKnockoutFx = fixtures.some(isKnockoutFixture);
@@ -239,8 +247,21 @@ function FixturesSection({ data, code, live, lineups, events, stats, onOpen, onT
             </div>
           );
         })}
+        {endState && <EndStateCard state={endState} />}
       </div>
     </section>
+  );
+}
+
+function EndStateCard({ state }) {
+  return (
+    <Card className="border-l-[3px] border-l-ink-3/50 p-4">
+      <div className="flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-ink-3" />
+        <h4 className="text-[15px] font-bold tracking-tight">{state.title}</h4>
+      </div>
+      <p className="mt-1.5 text-[13px] leading-relaxed text-ink-2">{state.body}</p>
+    </Card>
   );
 }
 

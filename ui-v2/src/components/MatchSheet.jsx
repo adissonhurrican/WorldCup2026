@@ -56,6 +56,7 @@ function MatchDetail({ data, fx, live, lineups, events }) {
   const timeline = eventsOf(fx, events);
   const p = fx.probabilities || {};
   const fav = hasPrediction ? favorite(fx) : null;
+  const hasDrawOutcome = !(isKnockout && Number(p.draw || 0) === 0);
   const [tab, setTab] = useState("Info");
   const [showVenueInfo, setShowVenueInfo] = useState(false);
 
@@ -117,7 +118,7 @@ function MatchDetail({ data, fx, live, lineups, events }) {
                 <PredictionBar data={data} fx={fx} heightClass="h-1.5" className="mt-2" />
                 <div className="mt-2 flex justify-between text-[13px]">
                   <Prob label={fx.home} v={p.home_win} on={fav.k === "home"} />
-                  <Prob label="Draw" v={p.draw} on={fav.k === "draw"} />
+                  {hasDrawOutcome && <Prob label="Draw" v={p.draw} on={fav.k === "draw"} />}
                   <Prob label={fx.away} v={p.away_win} on={fav.k === "away"} />
                 </div>
               </div>

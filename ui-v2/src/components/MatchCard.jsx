@@ -23,9 +23,11 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
   const sc = scoreOf(fx);
   const home = teamByCode(data, fx.home) || { code: fx.home };
   const away = teamByCode(data, fx.away) || { code: fx.away };
+  const hasPrediction = !!fx.probabilities;
   const p = fx.probabilities || {};
   const fav = favorite(fx);
   const favName = fav.k === "draw" ? "Draw" : fav.k === "home" ? fx.home : fx.away;
+  const hasDrawOutcome = !(fx.knockout && Number(p.draw || 0) === 0);
   const dc = dualClock(fx);
   const ht = teamTint(fx.home);
   const at = teamTint(fx.away);
@@ -110,21 +112,31 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
                   : "Time TBC"}
         </div>
 
-        {/* prediction color only; widths remain the stored W/D/L probabilities */}
-        <PredictionBar data={data} fx={fx} heightClass="h-1" className={`mt-3 ${predictionBarClassName}`} />
-        <div className="mt-1.5 text-center text-[11px] text-ink-3">
-          {finished ? (
-            <>we predicted <span className="font-semibold text-ink-2">{favName} {pct(fav.v)}</span></>
-          ) : (
-            <>
-              <span className={fav.k === "home" ? "font-semibold text-ink-2" : ""}>{fx.home} {pct(p.home_win)}</span>
-              {" · "}
-              <span className={fav.k === "draw" ? "font-semibold text-ink-2" : ""}>draw {pct(p.draw)}</span>
-              {" · "}
-              <span className={fav.k === "away" ? "font-semibold text-ink-2" : ""}>{fx.away} {pct(p.away_win)}</span>
-            </>
-          )}
-        </div>
+        {hasPrediction ? (
+          <>
+            {/* prediction color only; widths remain the stored W/D/L probabilities */}
+            <PredictionBar data={data} fx={fx} heightClass="h-1" className={`mt-3 ${predictionBarClassName}`} />
+            <div className="mt-1.5 text-center text-[11px] text-ink-3">
+              {finished ? (
+                <>we predicted <span className="font-semibold text-ink-2">{favName} {pct(fav.v)}</span></>
+              ) : (
+                <>
+                  <span className={fav.k === "home" ? "font-semibold text-ink-2" : ""}>{fx.home} {pct(p.home_win)}</span>
+                  {hasDrawOutcome && (
+                    <>
+                      {" · "}
+                      <span className={fav.k === "draw" ? "font-semibold text-ink-2" : ""}>draw {pct(p.draw)}</span>
+                    </>
+                  )}
+                  {" · "}
+                  <span className={fav.k === "away" ? "font-semibold text-ink-2" : ""}>{fx.away} {pct(p.away_win)}</span>
+                </>
+              )}
+            </div>
+          </>
+        ) : (
+          <div className="mt-3 text-center text-[11px] text-ink-3">Prediction once teams are confirmed</div>
+        )}
 
         {/* lineups: confirmed XI (formations) once stored; otherwise the ~60-min placeholder near kickoff */}
         {ls.has ? (
