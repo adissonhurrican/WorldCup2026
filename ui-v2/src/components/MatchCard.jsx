@@ -12,7 +12,7 @@ import {
 // clock, verified final score) plus the display-only live overlay (same `live` map +
 // orientation-normalized lookup as the Matches tab). `highlight` (optional) draws a
 // subtle accent ring for a featured row (e.g. the next match) — it changes no content.
-export default function MatchCard({ data, fx, live, lineups, events, stats, onOpen, highlight = false, predictionBarClassName = "" }) {
+export default function MatchCard({ data, fx, live, lineups, events, stats, onOpen, highlight = false, predictionBarClassName = "", cardRef = null }) {
   const state = matchState(fx, live);
   const lv = liveOf(fx, live);
   const ls = lineupState(fx, lineups, live);
@@ -35,6 +35,7 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
 
   return (
     <button
+      ref={cardRef}
       onClick={() => onOpen(fx)}
       className={`card relative w-full overflow-hidden p-0 text-left transition active:scale-[0.99] ${highlight ? "next-match-card" : ""}`}
     >

@@ -161,7 +161,7 @@ export default function App() {
               />
             </div>
             <div className={`h-full ${view === "matches" && !secondary ? "" : "hidden"}`}>
-              <MatchesView data={data} live={live} lineups={lineups} events={events} stats={stats} onOpenMatch={setMatchFx} rightAction={headerActions} />
+              <MatchesView data={data} live={live} lineups={lineups} events={events} stats={stats} onOpenMatch={setMatchFx} rightAction={headerActions} active={view === "matches" && !secondary} />
             </div>
             <div className={`h-full ${view === "prediction" && !secondary ? "" : "hidden"}`}>
               <PredictionView data={data} rightAction={headerActions} />

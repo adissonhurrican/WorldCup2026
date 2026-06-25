@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Screen from "../components/Screen";
 import MatchCard from "../components/MatchCard";
 import KnockoutCard from "../components/KnockoutCard";
 import { IconChevronDown, IconCheck } from "../components/icons";
 import { fixturesByDay, cityOptions, dateOptions, dayKeyOf, matchState } from "../lib/select";
 
-export default function MatchesView({ data, live, lineups, events, stats, onOpenMatch, rightAction }) {
+export default function MatchesView({ data, live, lineups, events, stats, onOpenMatch, rightAction, active = false }) {
   const [city, setCity] = useState(null); // null = All cities (default, unchanged behavior)
   const [day, setDay] = useState(null); // null = All dates; else a dayKeyOf key from dateOptions
   const cities = cityOptions(data);
@@ -15,6 +15,27 @@ export default function MatchesView({ data, live, lineups, events, stats, onOpen
   const liveCount = (data.fixtures || []).filter((f) => matchState(f, live) === "live").length;
   // day-keys that currently have a match in play -> the chip shows the live pulse dot
   const liveDayKeys = new Set((data.fixtures || []).filter((f) => matchState(f, live) === "live").map((f) => dayKeyOf(f)).filter(Boolean));
+
+  // AUTO-SCROLL to the in-progress game on open: identify the first live fixture, attach a ref to its rendered
+  // card below, and scrollIntoView ONCE when it's present. Guarded — if no match is live (liveId null) or the
+  // live card isn't rendered (filtered out), nothing scrolls; scrolledRef ensures we never re-yank the view.
+  const idOf = (fx) => (fx.knockout ? `ko-${fx.match_number}` : `${fx.home}_${fx.away}`);
+  const liveFx = (data.fixtures || []).find((f) => matchState(f, live) === "live") || null;
+  const liveId = liveFx ? idOf(liveFx) : null;
+  const liveCardRef = useRef(null);
+  const scrolledRef = useRef(false);
+  // Trigger on the tab BECOMING ACTIVE (the views are always mounted + toggled via `hidden`, so a mount-only
+  // effect would fire while hidden and never scroll). On open with a live game, scroll to it once; reset when
+  // the tab closes so a later re-open scrolls again. `requestAnimationFrame` lets the now-visible layout settle
+  // before measuring. No live game (liveId null) or live card not rendered (filtered) -> nothing happens.
+  useEffect(() => {
+    if (!active) { scrolledRef.current = false; return; }
+    if (scrolledRef.current || !liveId || !liveCardRef.current) return;
+    const el = liveCardRef.current;
+    const id = requestAnimationFrame(() => el.scrollIntoView({ block: "center", behavior: "smooth" }));
+    scrolledRef.current = true;
+    return () => cancelAnimationFrame(id);
+  }, [active, liveId]);
 
   return (
     <Screen stickyTitle="Matches" rightAction={rightAction} header={<h1 className="py-1 text-[34px] font-bold tracking-tight">Matches</h1>}>
@@ -46,9 +67,9 @@ export default function MatchesView({ data, live, lineups, events, stats, onOpen
           <div className="space-y-3 md:grid md:grid-cols-2 md:gap-3 md:space-y-0 xl:grid-cols-3">
             {d.items.map((fx, i) =>
               fx.knockout ? (
-                <KnockoutCard key={`ko-${fx.match_number}`} data={data} fx={fx} onOpen={onOpenMatch} />
+                <KnockoutCard key={`ko-${fx.match_number}`} data={data} fx={fx} onOpen={onOpenMatch} cardRef={liveId && idOf(fx) === liveId ? liveCardRef : null} />
               ) : (
-                <MatchCard key={`${fx.home}-${fx.away}-${i}`} data={data} fx={fx} live={live} lineups={lineups} events={events} stats={stats} onOpen={onOpenMatch} />
+                <MatchCard key={`${fx.home}-${fx.away}-${i}`} data={data} fx={fx} live={live} lineups={lineups} events={events} stats={stats} onOpen={onOpenMatch} cardRef={liveId && idOf(fx) === liveId ? liveCardRef : null} />
               ),
             )}
           </div>

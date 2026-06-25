@@ -22,7 +22,7 @@ function fmtDateOnly(s) {
   return `${WD[dt.getUTCDay()]} ${MON[m - 1]} ${d}`;
 }
 
-export default function KnockoutCard({ data, fx, onOpen }) {
+export default function KnockoutCard({ data, fx, onOpen, cardRef = null }) {
   const wx = weatherFor(data, fx);
   const wxConf = weatherConfidence(wx);
   const showChip = wx && isImminent(fx); // knockouts are weeks out -> empty until they enter the 168h window
@@ -33,6 +33,7 @@ export default function KnockoutCard({ data, fx, onOpen }) {
 
   return (
     <button
+      ref={cardRef}
       onClick={() => onOpen && onOpen(fx)}
       className="card relative w-full overflow-hidden p-0 text-left transition active:scale-[0.99]"
     >
