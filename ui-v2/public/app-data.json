@@ -416,39 +416,39 @@
       "group": "C",
       "standings": [
         {
-          "code": "BRA",
-          "win_group": 0.5451,
-          "top_2": 0.7782,
+          "code": "MAR",
+          "win_group": 0.5643,
+          "top_2": 1,
           "advance": 1,
           "finish_distribution": {
-            "1st": 0.5451,
-            "2nd": 0.2331,
-            "3rd": 0.2219,
+            "1st": 0.5643,
+            "2nd": 0.4357,
+            "3rd": 0,
             "4th": 0
           },
           "projected_finish": "1st"
         },
         {
-          "code": "MAR",
-          "win_group": 0.2794,
-          "top_2": 0.8973,
-          "advance": 0.9999,
+          "code": "BRA",
+          "win_group": 0.4357,
+          "top_2": 0.6754,
+          "advance": 1,
           "finish_distribution": {
-            "1st": 0.2794,
-            "2nd": 0.6179,
-            "3rd": 0.1027,
+            "1st": 0.4357,
+            "2nd": 0.2397,
+            "3rd": 0.3246,
             "4th": 0
           },
-          "projected_finish": "2nd"
+          "projected_finish": "1st"
         },
         {
           "code": "SCO",
-          "win_group": 0.1756,
-          "top_2": 0.3247,
+          "win_group": 0,
+          "top_2": 0.3246,
           "advance": 0.8563,
           "finish_distribution": {
-            "1st": 0.1756,
-            "2nd": 0.1491,
+            "1st": 0,
+            "2nd": 0.3246,
             "3rd": 0.6754,
             "4th": 0
           },
@@ -844,7 +844,7 @@
           "code": "ALG",
           "win_group": 0,
           "top_2": 0.3514,
-          "advance": 0.7548,
+          "advance": 0.7547,
           "finish_distribution": {
             "1st": 0,
             "2nd": 0.3514,
@@ -958,7 +958,7 @@
           "code": "GHA",
           "win_group": 0.2417,
           "top_2": 0.4708,
-          "advance": 0.9987,
+          "advance": 0.9986,
           "finish_distribution": {
             "1st": 0.2417,
             "2nd": 0.2291,
@@ -1353,7 +1353,11 @@
         "draw": 0.2159,
         "away_win": 0.3174
       },
-      "result": null,
+      "result": {
+        "home_score": 4,
+        "away_score": 2,
+        "status": "final"
+      },
       "live_score_ref": null
     },
     {
@@ -2741,10 +2745,10 @@
         "team": null
       },
       "prediction": {
-        "team_a_win_probability": 0.6912,
-        "team_b_win_probability": 0.3088,
+        "team_a_win_probability": 0.4669,
+        "team_b_win_probability": 0.5331,
         "elo_a": 1961,
-        "elo_b": 1821,
+        "elo_b": 1984,
         "elo_source": "pre_tournament",
         "basis": "projected",
         "method": "neutral_elo_single_match"
@@ -2782,9 +2786,9 @@
         "team": null
       },
       "prediction": {
-        "team_a_win_probability": 0.6131,
-        "team_b_win_probability": 0.3869,
-        "elo_a": 1984,
+        "team_a_win_probability": 0.3828,
+        "team_b_win_probability": 0.6172,
+        "elo_a": 1821,
         "elo_b": 1904,
         "elo_source": "pre_tournament",
         "basis": "projected",
@@ -5502,7 +5506,7 @@
   "scenarios": [
     {
       "code": "ALG",
-      "advance_chance": 0.7548,
+      "advance_chance": 0.7547,
       "in_their_hands": false,
       "routes": [
         {
@@ -5521,7 +5525,7 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.4033,
+          "chance": 0.4032,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); as low as 3 pts in our simulations; from 3 pts now, ~1 more from the last 1",
           "depends_on_other_groups": [
             "D",
@@ -5535,7 +5539,7 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.6219,
+        "advances_if_third": 0.6218,
         "race_position": 5,
         "watch_groups": [
           "D",
@@ -5801,8 +5805,8 @@
       "routes": [
         {
           "route": "Win the group",
-          "chance": 0.5451,
-          "own_form": "Win group: typically 7 pts (2W 1D 0L); as low as 5 pts in our simulations; from 4 pts now, ~3 more from the last 1",
+          "chance": 0.4357,
+          "own_form": "Win group: typically 7 pts (2W 1D 0L); from 4 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -5815,8 +5819,8 @@
         },
         {
           "route": "Finish runner-up",
-          "chance": 0.2331,
-          "own_form": "Runner-up: typically 5 pts (1W 2D 0L); as low as 4 pts in our simulations; from 4 pts now, ~1 more from the last 1",
+          "chance": 0.2397,
+          "own_form": "Runner-up: typically 5 pts (1W 2D 0L); from 4 pts now, ~1 more from the last 1",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -5829,14 +5833,14 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.2218,
+          "chance": 0.3246,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 4 pts now, ~0 more from the last 1",
           "depends_on_other_groups": [
             "J",
             "I",
             "A",
-            "D",
-            "F"
+            "L",
+            "D"
           ],
           "decided_by": []
         }
@@ -5849,10 +5853,10 @@
           "J",
           "I",
           "A",
-          "D",
-          "F"
+          "L",
+          "D"
         ],
-        "needs": "Finishing 3rd, BRA advances in ~100% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#6) vs other groups' thirds (most often J/I/A/D/F).",
+        "needs": "Finishing 3rd, BRA advances in ~100% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#6) vs other groups' thirds (most often J/I/A/L/D).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -2,
@@ -6603,7 +6607,7 @@
     },
     {
       "code": "GHA",
-      "advance_chance": 0.9987,
+      "advance_chance": 0.9986,
       "in_their_hands": false,
       "routes": [
         {
@@ -6636,7 +6640,7 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.5278,
+          "chance": 0.5277,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 4 pts now, ~0 more from the last 1",
           "depends_on_other_groups": [
             "J",
@@ -6971,13 +6975,13 @@
     },
     {
       "code": "MAR",
-      "advance_chance": 0.9999,
+      "advance_chance": 1,
       "in_their_hands": true,
       "routes": [
         {
           "route": "Win the group",
-          "chance": 0.2794,
-          "own_form": "Win group: typically 7 pts (2W 1D 0L); from 4 pts now, ~3 more from the last 1",
+          "chance": 0.5643,
+          "own_form": "Win group: typically 7 pts (2W 1D 0L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -6990,8 +6994,8 @@
         },
         {
           "route": "Finish runner-up",
-          "chance": 0.6179,
-          "own_form": "Runner-up: typically 4 pts (1W 1D 1L); from 4 pts now, ~0 more from the last 1",
+          "chance": 0.4357,
+          "own_form": "Runner-up: typically 7 pts (2W 1D 0L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -7001,39 +7005,15 @@
             "fair play",
             "FIFA ranking"
           ]
-        },
-        {
-          "route": "Advance as best third",
-          "chance": 0.1026,
-          "own_form": "Best third: typically 4 pts (1W 1D 1L); from 4 pts now, ~0 more from the last 1",
-          "depends_on_other_groups": [
-            "D",
-            "J",
-            "I",
-            "H",
-            "L"
-          ],
-          "decided_by": []
         }
       ],
       "third_place_race": {
-        "in_race": true,
-        "advances_if_third": 0.9985,
+        "in_race": false,
+        "advances_if_third": 0,
         "race_position": 4,
-        "watch_groups": [
-          "D",
-          "J",
-          "I",
-          "H",
-          "L"
-        ],
-        "needs": "Finishing 3rd, MAR advances in ~100% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#7) vs other groups' thirds (most often D/J/I/H/L).",
-        "thresholds": {
-          "min_points": 4,
-          "min_overall_gd": -3,
-          "min_goals_for": 2,
-          "beats_rival_if": "MAR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 7)"
-        }
+        "watch_groups": [],
+        "needs": null,
+        "thresholds": null
       }
     },
     {
@@ -7384,8 +7364,8 @@
           "chance": 0.0896,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 1 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [
-            "J",
             "D",
+            "J",
             "I",
             "K",
             "C"
@@ -7398,13 +7378,13 @@
         "advances_if_third": 0.4252,
         "race_position": 10,
         "watch_groups": [
-          "J",
           "D",
+          "J",
           "I",
           "K",
           "C"
         ],
-        "needs": "Finishing 3rd, RSA advances in ~43% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#60) vs other groups' thirds (most often J/D/I/K/C).",
+        "needs": "Finishing 3rd, RSA advances in ~43% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -2 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#60) vs other groups' thirds (most often D/J/I/K/C).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -1,
@@ -7419,22 +7399,8 @@
       "in_their_hands": false,
       "routes": [
         {
-          "route": "Win the group",
-          "chance": 0.1756,
-          "own_form": "Win group: typically 6 pts (2W 0D 1L); from 3 pts now, ~3 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
           "route": "Finish runner-up",
-          "chance": 0.1491,
+          "chance": 0.3246,
           "own_form": "Runner-up: typically 6 pts (2W 0D 1L); from 3 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [],
           "decided_by": [
@@ -7830,8 +7796,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Scotland in Strong Position to Reach Knockouts",
-      "body": "Scotland are in a very strong position to reach the knockouts, with our tournament simulation giving them an 86% chance to advance to the Round of 32. In Group C, they sit in third place behind Morocco, who are comfortably ahead with a near-certain chance of progressing, while Haiti trail at the bottom. With two games played, Scotland have three points and currently rank as the third-best third-placed team, sitting two points clear of the cut-off. While finishing in the top two to guarantee progress remains an uphill task—roughly a one-in-three chance—their most likely route is through the best-third back door. There is more than a coin-flip chance they advance this way, though it leaves them relying on results in other groups. To secure their spot, Scotland likely need to add to their points tally in the final match, as their current three points keep them in a strong position but not yet mathematically safe.",
+      "headline": "Scotland Well Placed for Knockout Spot as Group C Decider Looms",
+      "body": "Scotland are in a very strong position to reach the knockouts, with our tournament simulation giving them an 86% chance to advance to the Round of 32. In Group C, they sit in a provisional third place behind Morocco, who have already completed their matches, while Brazil still have a game in hand. Scotland's cleanest route is finishing as the group runner-up, though that is currently an outside chance. Instead, their most likely path is advancing as one of the best third-placed teams, which is currently better than a coin flip. They are in an excellent spot to do just that, sitting as the third-best third-placed team overall, two points clear of the cut-off. Because the group round is still incomplete and other teams have games to play, this table will move. However, Scotland's destiny remains highly promising as they look to secure the final points they need.",
       "team_code": "SCO"
     },
     {
@@ -7890,8 +7856,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Morocco on the Verge of the Knockouts",
-      "body": "Morocco are in a brilliant position to reach the knockouts, with their place in the Round of 32 virtually assured. In Group C, they are locked in a tight race right behind Brazil, who sit just ahead of them on goal difference. With Scotland also close behind, the battle for the top spots remains highly competitive. Currently sitting second in the group with four points after two matches, Morocco have their destiny in their own hands. Finishing in the top two is their primary route, which is highly likely. They can secure this by taking care of business in their final match, where even a draw is expected to be enough. If they slip up, there is still a small back-door chance of advancing as one of the best third-placed teams, though that route would leave them relying on results in other groups. For now, Morocco are firmly in control of their tournament path.",
+      "headline": "Morocco Secure Knockout Spot as Group C Race Heats Up",
+      "body": "Morocco are in a fantastic position, having officially secured their place in the knockouts. With seven points from their three matches, they are guaranteed to reach the Round of 32. In Group C, they currently sit at the top of the table, but the race is far from over. Brazil are right behind them and remain a major threat to take the top spot, while Scotland, sitting at 86% to advance, are also still to play. Because Brazil and Scotland have games in hand, Morocco's current first-place standing is provisional, and the table will shift once those rivals play their final matches. Morocco's focus now is purely on whether they go through as group winners—which is slightly more likely than not—or as the runner-up, which remains a very real possibility. They have completely bypassed the stressful third-place wildcard route, meaning their path forward is entirely secure as they await the final group results.",
       "team_code": "MAR"
     },
     {
@@ -7932,8 +7898,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Haiti Face an Uphill Climb in Group C",
-      "body": "Haiti face a deeply challenging road ahead after their opening matches, with their chances of reaching the knockouts currently sitting at 0% in our tournament simulation. They find themselves adrift at the bottom of Group C, with Scotland well clear of them in third place with an 82% chance to advance. With two rounds of group play complete, Haiti sit fourth in the standings with zero points and a minus-four goal difference following tough defeats to Brazil and Scotland. Because they have not yet secured a point, both a top-two finish and a back-door route as a best third-place team are currently out of reach. However, with one group match remaining, all four final placements in the group are still mathematically possible. To keep any slim hope alive, Haiti must secure a win in their final match and have other results fall their way, though their destiny is no longer in their own hands.",
+      "headline": "Haiti Face a Steep Climb in Group C",
+      "body": "Haiti face an incredibly tough road ahead, with our tournament simulation showing a 0% chance of reaching the knockouts. They find themselves adrift at the bottom of Group C, with Scotland well clear of them in third place with an 86% chance to advance. Having lost their opening three matches—including a tight 1-0 defeat to Scotland and a 4-2 loss to Morocco—Haiti sit in fourth place with zero points. Because the group round is still incomplete, the table will move once Brazil and Scotland play their games in hand. However, with both the top-two route and the best-third back door currently out of reach, Haiti's path to the Round of 32 is mathematically blocked. They will look to play for pride in their remaining tournament matches, even as the final standings in Group C remain provisional until the other teams complete their fixtures.",
       "team_code": "HAI"
     },
     {
@@ -8052,8 +8018,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Brazil Lead the Way in a Tight Group C Race",
-      "body": "Brazil are in a fantastic position to reach the knockouts, sitting at the top of Group C with four points after two rounds. However, they cannot afford to relax just yet, as Morocco are right on their heels, matching them on four points and holding a 100% chance of advancing. Our tournament simulation shows Brazil have a 100% chance of moving on to the Round of 32, but the battle for the top spot remains intense. Finishing in the top two of the group is their primary and cleanest route, which is well within their grasp. If they win the group, they will likely need a strong result in their final match to stay ahead of Morocco. Even if they slip up, they have a solid back-up option, with a decent chance of advancing as one of the best third-placed teams, though that route would leave their fate in the hands of results in other groups. For now, Brazil control their own destiny as they look to secure their place in the next round.",
+      "headline": "Brazil on Solid Ground but Morocco Keep the Pressure High",
+      "body": "Brazil are in a fantastic position to reach the knockouts, carrying a 100% chance of advancing to the Round of 32. However, the race at the top of Group C is incredibly tight, with Morocco right on their heels and also sitting at a 100% chance to advance. Brazil currently sit second in the group with four points from two matches, but with the group round still incomplete, the final standings remain fluid. Finishing in the top two is their primary route, which is more likely than not to happen. Winning the group is about a coin flip, while finishing as runner-up is a smaller possibility. If they slip, they have a decent back-door route to advance as one of the best third-placed teams, though that path would depend on results in other groups. To secure their place without relying on anyone else, they will look to add to their tally in their final group match.",
       "team_code": "BRA"
     },
     {
@@ -8964,7 +8930,7 @@
     "label": "Real group table computed from verified match results using the FIFA 2026 Article 13 tiebreakers — distinct from the predicted/projected probabilities table.",
     "source_label": "our verified results + the 2026 advancement rules",
     "status": "in_progress",
-    "results_counted": 50,
+    "results_counted": 51,
     "groups_complete": 1,
     "groups": [
       {
@@ -9112,10 +9078,26 @@
       {
         "group": "C",
         "complete": false,
-        "games_played": 4,
+        "games_played": 5,
         "standings": [
           {
             "position": 1,
+            "code": "MAR",
+            "name": "Morocco",
+            "played": 3,
+            "won": 2,
+            "drawn": 1,
+            "lost": 0,
+            "goals_for": 6,
+            "goals_against": 3,
+            "goal_difference": 3,
+            "points": 7,
+            "advance_state": "qualified",
+            "band": "green",
+            "decided": false
+          },
+          {
+            "position": 2,
             "code": "BRA",
             "name": "Brazil",
             "played": 2,
@@ -9125,22 +9107,6 @@
             "goals_for": 4,
             "goals_against": 1,
             "goal_difference": 3,
-            "points": 4,
-            "advance_state": "qualified",
-            "band": "green",
-            "decided": false
-          },
-          {
-            "position": 2,
-            "code": "MAR",
-            "name": "Morocco",
-            "played": 2,
-            "won": 1,
-            "drawn": 1,
-            "lost": 0,
-            "goals_for": 2,
-            "goals_against": 1,
-            "goal_difference": 1,
             "points": 4,
             "advance_state": "qualified",
             "band": "green",
@@ -9166,13 +9132,13 @@
             "position": 4,
             "code": "HAI",
             "name": "Haiti",
-            "played": 2,
+            "played": 3,
             "won": 0,
             "drawn": 0,
-            "lost": 2,
-            "goals_for": 0,
-            "goals_against": 4,
-            "goal_difference": -4,
+            "lost": 3,
+            "goals_for": 2,
+            "goals_against": 8,
+            "goal_difference": -6,
             "points": 0,
             "advance_state": "eliminated",
             "band": "gray",
@@ -12101,8 +12067,8 @@
         "opponent_slot": "Runner-up Group C",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "MAR",
-          "name": "Morocco"
+          "code": "BRA",
+          "name": "Brazil"
         },
         "real_opponent": null
       },
@@ -12119,8 +12085,8 @@
         "opponent_slot": "Winner Group C",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "BRA",
-          "name": "Brazil"
+          "code": "MAR",
+          "name": "Morocco"
         },
         "real_opponent": null
       },
@@ -12242,8 +12208,8 @@
         "opponent_slot": "Runner-up Group C",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "MAR",
-          "name": "Morocco"
+          "code": "BRA",
+          "name": "Brazil"
         },
         "real_opponent": null
       },
@@ -12260,8 +12226,8 @@
         "opponent_slot": "Winner Group C",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "BRA",
-          "name": "Brazil"
+          "code": "MAR",
+          "name": "Morocco"
         },
         "real_opponent": null
       },
@@ -12383,8 +12349,8 @@
         "opponent_slot": "Runner-up Group C",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "MAR",
-          "name": "Morocco"
+          "code": "BRA",
+          "name": "Brazil"
         },
         "real_opponent": null
       },
@@ -12401,8 +12367,8 @@
         "opponent_slot": "Winner Group C",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "BRA",
-          "name": "Brazil"
+          "code": "MAR",
+          "name": "Morocco"
         },
         "real_opponent": null
       },
@@ -12524,8 +12490,8 @@
         "opponent_slot": "Runner-up Group C",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "MAR",
-          "name": "Morocco"
+          "code": "BRA",
+          "name": "Brazil"
         },
         "real_opponent": null
       },
@@ -12542,8 +12508,8 @@
         "opponent_slot": "Winner Group C",
         "opponent_kind": "group_winner",
         "projected_opponent": {
-          "code": "BRA",
-          "name": "Brazil"
+          "code": "MAR",
+          "name": "Morocco"
         },
         "real_opponent": null
       },
