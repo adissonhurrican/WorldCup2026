@@ -523,6 +523,18 @@ async function liveCycle(args: ReturnType<typeof parseArgs>) {
     // crossing). FAIL-OPEN: any doubt -> ALL (the prior behavior). See narration-affected-teams.ts.
     let prevAppData: any = null;
     try { prevAppData = JSON.parse(readFileSync(abs("data/exports/app-data.json"), "utf8")); } catch { /* fail-open */ }
+
+    // TIER-3 CONDITIONAL SCENARIOS — refresh team_conditional_scenarios (the exact cross-group "what you need" chains)
+    // from the just-ingested verified standings, BEFORE narration reads it. The engine SELF-GATES: it emits
+    // concrete_chains only once EVERY group has <=2 games left (final matchday), else certainties_and_swing — so this
+    // is dormant earlier and lights up automatically at the final matchday. Best-effort & NON-BLOCKING: run() contains
+    // the child's exit(1), so a failure is absorbed (logged, NOT in the sanity gate, never returns / un-publishes) and
+    // narration falls back to the general caveat on a stale/empty table. Writes ONLY team_conditional_scenarios
+    // (resolver boundary untouched) via an idempotent upsert keyed on the PK (tournament_code, team_code), so
+    // re-running it every material cycle is safe.
+    const tier3 = run("tier3-scenarios", "scripts/worldcup/concrete-scenario-tier3.ts", ["--persist", "--execute"]);
+    log("MODEL", "concrete-scenario-tier3.ts --persist --execute", tier3.ok, tier3.ok ? "team_conditional_scenarios refreshed (concrete_chains once every group has <=2 games left; else certainties_and_swing)" : tier3.stdout.slice(0, 1000));
+
     console.log("\nEXPORT (1/2) - production app-data incl. fresh real_standings (live best-third) BEFORE narration");
     exp = runProductionExport(export_built, forceExportFail);
     log("EXPORT", `export_status=${exp.status}`, exp.status === "ok", exp.detail);

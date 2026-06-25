@@ -65,6 +65,7 @@ scripts/**
 !scripts/worldcup/annex-c-allocation-core.ts
 !scripts/worldcup/build-advancement-scenario-v1-live.ts
 !scripts/worldcup/ci-preflight-imports.mjs
+!scripts/worldcup/concrete-scenario-tier3.ts
 !scripts/worldcup/elo-update-engine.ts
 !scripts/worldcup/elo-update-group-stage-wiring.ts
 !scripts/worldcup/elo-update-knockout-resim-candidate.ts
