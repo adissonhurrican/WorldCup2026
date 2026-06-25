@@ -218,7 +218,7 @@ function CityDropdown({ cities, total, value, onChange }) {
           {/* floating menu */}
           <div
             role="listbox"
-            className="animate-panel absolute left-0 top-[calc(100%+6px)] z-50 max-h-[58vh] w-[min(20rem,calc(100vw-2rem))] overflow-y-auto overscroll-contain rounded-[14px] bg-surface p-1 shadow-2xl ring-1 ring-separator/60"
+            className="animate-panel absolute left-0 top-[calc(100%+6px)] z-50 max-h-[58vh] w-[min(20rem,calc(100vw-2rem))] overflow-y-auto overscroll-contain rounded-[14px] bg-surface px-1 pb-[calc(0.25rem_+_env(safe-area-inset-bottom))] pt-1 shadow-2xl ring-1 ring-separator/60 supports-[height:100dvh]:max-h-[calc(58dvh_-_env(safe-area-inset-bottom))] [-webkit-overflow-scrolling:touch]"
           >
             <CityRow label="All cities" count={total} selected={value == null} onClick={() => pick(null)} />
             <span className="mx-3 my-1 block h-px bg-separator/50" />
