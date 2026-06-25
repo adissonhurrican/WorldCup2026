@@ -215,7 +215,7 @@ export function buildDocument(opts: BuildOpts) {
       current_third_metrics: { pts: curPts, gd: live[t].gd, gf: live[t].gf, fair_play: 0, fifa_rank: fifaRank[t] ?? null },
       passes_cutoff_in_pct: passesCutoffPct,
       needs: inRace
-        ? `Finishing 3rd, ${t} advances in ~${(passesCutoffPct * 100).toFixed(0)}% of cases; more likely than not once overall GD >= ${gdThr ?? cutLineGd} (with >= ${ptsThr ?? cutLinePts} pts). Global last-qualifying third ~${cutLinePts} pts / GD ${cutLineGd} / GF ${cutLineGf}; final slot decided by GD, GF, fair play, FIFA rank (#${fifaRank[t] ?? "?"}) vs other groups' thirds (most often ${topComp.join("/")}).`
+        ? `Finishing 3rd, ${t} advances in ~${(passesCutoffPct * 100).toFixed(0)}% of cases; more likely than not once overall GD >= ${gdThr ?? cutLineGd} (with >= ${ptsThr ?? cutLinePts} pts). Global last-qualifying third ~${cutLinePts} pts / GD ${cutLineGd} / GF ${cutLineGf}; final slot decided by GD, GF, fair play, FIFA rank (#${fifaRank[t] ?? "?"}) vs other groups' thirds${topComp.length ? ` (most often ${topComp.join("/")})` : ""}.`
         : `${t} ${played >= 3 ? "did not finish 3rd" : "effectively never finishes 3rd"}; not a third-place-race contender.`,
     };
     const groupDone = finishedByGroup[g] >= 6;
