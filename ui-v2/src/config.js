@@ -24,6 +24,14 @@ export const SECURITY_URL = "https://xxlservices.com";
 // Keep robots.txt / sitemap.xml (in /public) in sync with this host when it changes.
 export const SITE_URL = "https://footballmatchmaster.com";
 
+// app-data.json is served BUILD-INDEPENDENTLY from GitHub raw — the in-tournament loop pushes the file to
+// the repo on every refresh, so the SPA reads fresh data WITHOUT a Netlify rebuild. This is what lets data
+// commits skip the Netlify build (see netlify.toml `ignore`), removing the build-usage freeze. The loader
+// cache-busts every fetch (raw has a ~5-min CDN cache) and falls back to the Netlify-BUNDLED copy if raw
+// fails/throttles (never-worse-than-today). Set to "" to disable and use the bundled copy only.
+export const APP_DATA_REMOTE_URL =
+  "https://raw.githubusercontent.com/adissonhurrican/WorldCup2026/main/ui-v2/public/app-data.json";
+
 // Absolute Open Graph / Twitter share image (1200×630 PNG in /public → served at the domain root).
 // Social scrapers REQUIRE an absolute URL, so it is built from SITE_URL — which also keeps it
 // consistent with og:url and updates automatically if the domain ever changes.

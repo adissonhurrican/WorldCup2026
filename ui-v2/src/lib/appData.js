@@ -7,12 +7,35 @@
 // Project: ahcfrgxczbgdvrqmbisw
 // ============================================================================
 
-const BASE = import.meta.env.BASE_URL;
+import { APP_DATA_REMOTE_URL } from "../config.js";
 
-export async function loadAppData(url = `${BASE}app-data.json`) {
-  const res = await fetch(url, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to load app-data.json (${res.status})`);
-  return res.json();
+const BASE = import.meta.env.BASE_URL;
+const BUNDLED_APP_DATA = `${BASE}app-data.json`;
+// Primary source = GitHub raw (build-independent: the loop pushes app-data.json there every refresh, so the
+// SPA gets fresh data without a Netlify build). Falls back to the Netlify-bundled copy below. Empty -> bundled.
+const REMOTE_APP_DATA = APP_DATA_REMOTE_URL || BUNDLED_APP_DATA;
+
+// Cache-bust EVERY fetch: raw's CDN caches responses ~5 min, so a unique ?t= forces the current commit's file.
+const bust = (u) => `${u}${u.includes("?") ? "&" : "?"}t=${Date.now()}`;
+
+// Load the published contract. Tries GitHub raw first (fresh, build-independent); on ANY failure or throttle
+// (429/5xx/network/CORS) it falls back SEAMLESSLY to the Netlify-bundled copy (last-good at the last code
+// deploy) so the app is never-worse-than-today. Only if BOTH are unreachable does it throw — which surfaces
+// the same <LoadError> screen as before (no new failure mode).
+export async function loadAppData() {
+  try {
+    const res = await fetch(bust(REMOTE_APP_DATA), { cache: "no-store" });
+    if (!res.ok) throw new Error(`remote app-data ${res.status}`);
+    return await res.json();
+  } catch (primaryErr) {
+    if (REMOTE_APP_DATA !== BUNDLED_APP_DATA) {
+      try {
+        const res = await fetch(bust(BUNDLED_APP_DATA), { cache: "no-store" });
+        if (res.ok) return await res.json();
+      } catch { /* fall through to throw the primary error */ }
+    }
+    throw primaryErr;
+  }
 }
 
 // Optional nickname overlay (public/nicknames.json), keyed by 3-letter code:

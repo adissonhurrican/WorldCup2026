@@ -14,6 +14,11 @@
   base = "ui-v2"
   command = "npm run build"
   publish = "dist"
+  # Skip the build when a push changed ONLY auto-generated data files (app-data / squads / weather JSON):
+  # that data is served build-independently from GitHub raw (ui-v2/src/lib/appData.js + config.js), so data
+  # refreshes no longer trigger a Netlify build — the ~95% build-usage cut that removes the account-credit
+  # freeze. Code/content changes STILL build, so UI updates deploy normally. Logic in ui-v2/ignore-build.sh.
+  ignore = "bash ignore-build.sh"
 
 [build.environment]
   NODE_VERSION = "20"

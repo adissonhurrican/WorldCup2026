@@ -1,0 +1,4 @@
+# Shell scripts must keep LF line endings in the repo AND on checkout — they run on Linux
+# (e.g. ui-v2/ignore-build.sh runs in Netlify's build image). Without this, a Windows commit
+# with core.autocrlf disabled could store CRLF and break the shebang / bash parsing.
+*.sh text eol=lf
