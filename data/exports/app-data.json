@@ -1505,7 +1505,11 @@
         "draw": 0.2517,
         "away_win": 0.3292
       },
-      "result": null,
+      "result": {
+        "home_score": 3,
+        "away_score": 2,
+        "status": "final"
+      },
       "live_score_ref": null
     },
     {
@@ -3054,7 +3058,10 @@
         "group": "D",
         "pool": null,
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "USA",
+          "name": "USA"
+        }
       },
       "side_b": {
         "label": "Best 3rd from B/E/F/I/J",
@@ -3368,7 +3375,10 @@
         "group": "D",
         "pool": null,
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "AUS",
+          "name": "Australia"
+        }
       },
       "side_b": {
         "label": "Runner-up Group G",
@@ -5841,7 +5851,8 @@
           ],
           "already_settled_cannot_beat_groups": [
             "A",
-            "C"
+            "C",
+            "D"
           ],
           "must_beat_groups": [],
           "can_beat_groups": [
@@ -5851,7 +5862,6 @@
             "L"
           ],
           "cannot_beat_groups": [
-            "D",
             "I",
             "J"
           ]
@@ -6257,7 +6267,8 @@
           "already_settled_cannot_beat_groups": [
             "A",
             "B",
-            "C"
+            "C",
+            "D"
           ],
           "must_beat_groups": [],
           "can_beat_groups": [
@@ -6267,7 +6278,6 @@
             "L"
           ],
           "cannot_beat_groups": [
-            "D",
             "I",
             "J"
           ]
@@ -6839,15 +6849,14 @@
           "remaining_beat_allowance": 3,
           "already_beating_groups": [
             "B",
+            "D",
             "E",
             "F"
           ],
           "already_settled_cannot_beat_groups": [
             "C"
           ],
-          "must_beat_groups": [
-            "D"
-          ],
+          "must_beat_groups": [],
           "can_beat_groups": [
             "G",
             "H",
@@ -7125,12 +7134,12 @@
         {
           "route": "Advance as best third",
           "chance": 0.9973,
-          "own_form": "Best third: typically 4 pts (1W 1D 1L)",
+          "own_form": "Locked record: 4 pts / GD -2 / GF 2",
           "depends_on_other_groups": [
-            "A",
-            "C",
+            "G",
+            "H",
             "J",
-            "I",
+            "K",
             "L"
           ],
           "decided_by": []
@@ -7141,20 +7150,54 @@
         "advances_if_third": 0.9973,
         "race_position": 4,
         "watch_groups": [
-          "A",
-          "C",
+          "G",
+          "H",
           "J",
-          "I",
+          "K",
           "L"
         ],
-        "needs": "Finishing 3rd, PAR advances in ~100% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#41) vs other groups' thirds (most often A/C/J/I/L).",
+        "needs": "Paraguay qualify iff no more than 4 of the 5 remaining group thirds that can still pass them beat their locked 4 pts / GD -2 / GF 2. Watch Groups G/H/J/K/L.",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -2,
           "min_goals_for": 2,
           "beats_rival_if": "PAR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 41)"
         },
-        "locked_record": null
+        "locked_record": {
+          "status": "conditional",
+          "statement": "Paraguay qualify iff no more than 4 of the 5 remaining group thirds that can still pass them beat their locked 4 pts / GD -2 / GF 2. Watch Groups G/H/J/K/L.",
+          "locked_record": {
+            "fair_play": 0,
+            "fifa_rank": 41,
+            "gd": -2,
+            "gf": 2,
+            "pts": 4,
+            "text": "4 pts / GD -2 / GF 2"
+          },
+          "min_other_thirds_above": 3,
+          "max_other_thirds_above": 8,
+          "remaining_beat_allowance": 4,
+          "already_beating_groups": [
+            "B",
+            "E",
+            "F"
+          ],
+          "already_settled_cannot_beat_groups": [
+            "A",
+            "C"
+          ],
+          "must_beat_groups": [],
+          "can_beat_groups": [
+            "G",
+            "H",
+            "J",
+            "K",
+            "L"
+          ],
+          "cannot_beat_groups": [
+            "I"
+          ]
+        }
       }
     },
     {
@@ -7314,13 +7357,12 @@
           "already_beating_groups": [
             "A",
             "B",
+            "D",
             "E",
             "F"
           ],
           "already_settled_cannot_beat_groups": [],
-          "must_beat_groups": [
-            "D"
-          ],
+          "must_beat_groups": [],
           "can_beat_groups": [
             "G",
             "H",
@@ -7447,6 +7489,7 @@
             "A",
             "B",
             "C",
+            "D",
             "E"
           ],
           "must_beat_groups": [],
@@ -7456,7 +7499,6 @@
             "K"
           ],
           "cannot_beat_groups": [
-            "D",
             "I",
             "J",
             "L"
@@ -7570,7 +7612,7 @@
         {
           "route": "Win the group",
           "chance": 1,
-          "own_form": "Win group: typically 6 pts (2W 0D 1L); from 6 pts now, ~0 more from the last 1",
+          "own_form": "Win group: typically 6 pts (2W 0D 1L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -7643,7 +7685,7 @@
     {
       "content_type": "scenario_narration",
       "headline": "USA Secure Top Spot and Knockout Berth",
-      "body": "The USA have achieved the ultimate peace of mind, officially securing their place in the knockouts and locking up first place in Group D. Our tournament simulation shows they have a 100% chance of reaching the Round of 32, meaning their final group match is entirely free of qualification pressure. They sit in a tight cluster at the top of the standings with six points, while Australia and Paraguay are right behind, both holding a 100% chance to advance as they battle for the remaining spots. Because the USA have already clinched the group, they are completely clear of the scramble below them. They do not need to worry about the third-place back door or cross-group math; their passage is fully guaranteed. Even with one round of group games still to be completed, the Americans can comfortably plan for the knockout stage, having taken maximum points from their opening two matches to make their position absolutely secure.",
+      "body": "The job is done, and the USA can celebrate. Our tournament simulation shows they have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. They have also clinched first place in Group D, meaning they cannot be caught. This comes after a highly competitive group stage where they finished in a tight cluster alongside Australia and Paraguay, who both pushed hard to keep pace. With six points and a strong goal difference of plus four, the USA have taken complete control of their destiny. Because they have won the group outright, they advance directly through the top-two route and do not need to worry about the third-place safety net. The group stage is complete, and the USA can now look forward to the knockout rounds with quiet pride and confidence.",
       "team_code": "USA"
     },
     {
@@ -7654,8 +7696,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Türkiye's Tournament Journey Reaches an Early End",
-      "body": "Türkiye's campaign has reached a difficult and definitive conclusion. Our tournament simulation shows they now have a 0% chance to reach the knockouts, meaning they are mathematically eliminated from advancing to the Round of 32 regardless of how their final group match plays out. In Group D, Türkiye sit adrift at the bottom of the standings with zero points from their opening two matches, leaving them well off the pace of Paraguay, who sit comfortably ahead in third place. Because they cannot catch the teams above them, Türkiye can no longer finish in the top two or qualify through the third-place route. Even a victory in their final match against the USA cannot lift them out of fourth place. While the group round is technically incomplete and other matches will still shift the final point totals for their rivals, Türkiye's position is settled. They will play their final fixture for pride, looking to sign off with a positive performance after a tough run of results.",
+      "headline": "Türkiye's Tournament Journey Comes to an End",
+      "body": "Türkiye's campaign has reached its conclusion, and they will not reach the knockouts. With all three group matches played, they finish at the bottom of Group D with three points. They find themselves adrift at the foot of the standings, with Paraguay comfortably ahead in third place. Even with a hard-fought victory against the USA in their final match, the math is final: our tournament simulation shows Türkiye has a 0% chance of advancing to the Round of 32. Because they finish fourth in the group, they cannot access the third-place comparison pool. It is a dignified exit for a side that fought until the final whistle, but their road in this tournament has officially run out.",
       "team_code": "TUR"
     },
     {
@@ -7708,8 +7750,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Paraguay on the Verge of the Knockouts",
-      "body": "Paraguay are in a fantastic position to reach the knockouts, holding a 100% chance of advancing to the Round of 32. In Group D, they are chasing USA, who sit just ahead with a perfect record, while Türkiye are already out of the running. Because Paraguay have completed their matches, their third-place finish is locked in, but they are currently the fourth-best third-placed team overall—comfortably inside the qualifying zone and two points clear of the cutoff. Even though they must wait for the group stage to fully conclude, their back-door route is incredibly safe. In fact, our tournament simulation shows that finishing third, Paraguay will advance in virtually every single scenario. A draw or win in the remaining matches from other groups will officially seal what is already a near-certainty. The table remains provisional until the final groups finish their games, but Paraguay can rest easy knowing their place in the next round is practically secure.",
+      "headline": "Paraguay on the Verge of the Knockouts as Third-Place Drama Unfolds",
+      "body": "Paraguay are in a fantastic position to reach the knockouts, with our tournament simulation giving them a 100% chance to advance. They have finished Group D in third place with four points, sitting in a tight cluster just behind USA and Australia, who both finished on 100% advancement chances. Because they cannot finish in the top two, Paraguay's fate rests entirely on the third-place safety net. Fortunately, this back-door route is incredibly reliable. Currently sitting as the fourth-best third-placed team—two points clear of the cutoff—they are virtually assured of going through. To make it official, they need no more than four of the five remaining group thirds that can still pass them to beat their locked record of four points and a minus-two goal difference. Fans should keep a close eye on Groups G, H, J, K, and L to watch the final spots settle. Paraguay qualify iff no more than 4 of the 5 remaining group thirds that can still pass them beat their locked 4 pts / GD -2 / GF 2. Watch Groups G/H/J/K/L.",
       "team_code": "PAR"
     },
     {
@@ -7876,8 +7918,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Australia on the Brink of the Knockouts",
-      "body": "Australia are in a fantastic position to reach the knockouts, with our group-stage model showing they are guaranteed to advance. They sit provisionally in second place with four points, though the table will shift as USA and Türkiye still have games in hand. In Group D, Australia are neck-and-neck with USA, who also hold a 100% chance of moving on. The Socceroos are locked into a top-two finish, meaning they will advance directly as runners-up rather than relying on the third-place back door. A win or a draw in their final matches would have clinched this path outright, but their work is already done. They can no longer win the group, but they are safely through to the Round of 32.",
+      "headline": "Australia Secure Knockout Spot",
+      "body": "Australia are officially through to the knockouts. Our tournament simulation shows the Socceroos have a 100% chance of reaching the Round of 32, meaning their place in the next stage is completely secure. They sit in a tight Group D cluster, level on four points with Paraguay but holding the second qualifying spot on goal difference, while the USA lead the group with six points. Because Australia have completed their group matches and are guaranteed to finish as the runner-up, they do not have to worry about the third-place safety net or other groups' results. Their main route is locked in as a top-two finish, and they can look forward to the knockout rounds with absolute certainty.",
       "team_code": "AUS"
     },
     {
@@ -8818,8 +8860,8 @@
     "label": "Real group table computed from verified match results using the FIFA 2026 Article 13 tiebreakers — distinct from the predicted/projected probabilities table.",
     "source_label": "our verified results + the 2026 advancement rules",
     "status": "in_progress",
-    "results_counted": 59,
-    "groups_complete": 5,
+    "results_counted": 60,
+    "groups_complete": 6,
     "groups": [
       {
         "group": "A",
@@ -9036,24 +9078,24 @@
       },
       {
         "group": "D",
-        "complete": false,
-        "games_played": 5,
+        "complete": true,
+        "games_played": 6,
         "standings": [
           {
             "position": 1,
             "code": "USA",
             "name": "USA",
-            "played": 2,
+            "played": 3,
             "won": 2,
             "drawn": 0,
-            "lost": 0,
-            "goals_for": 6,
-            "goals_against": 1,
-            "goal_difference": 5,
+            "lost": 1,
+            "goals_for": 8,
+            "goals_against": 4,
+            "goal_difference": 4,
             "points": 6,
             "advance_state": "qualified",
             "band": "green",
-            "decided": false
+            "decided": true
           },
           {
             "position": 2,
@@ -9069,7 +9111,7 @@
             "points": 4,
             "advance_state": "qualified",
             "band": "green",
-            "decided": false
+            "decided": true
           },
           {
             "position": 3,
@@ -9091,17 +9133,17 @@
             "position": 4,
             "code": "TUR",
             "name": "Türkiye",
-            "played": 2,
-            "won": 0,
+            "played": 3,
+            "won": 1,
             "drawn": 0,
             "lost": 2,
-            "goals_for": 0,
-            "goals_against": 3,
-            "goal_difference": -3,
-            "points": 0,
+            "goals_for": 3,
+            "goals_against": 5,
+            "goal_difference": -2,
+            "points": 3,
             "advance_state": "eliminated",
             "band": "gray",
-            "decided": false
+            "decided": true
           }
         ]
       },
@@ -9717,7 +9759,7 @@
           "goals_for": 2,
           "rank": 4,
           "in_best_8": true,
-          "group_complete": false
+          "group_complete": true
         },
         {
           "code": "CRO",
@@ -10248,7 +10290,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           }
         ]
       }
@@ -10338,7 +10383,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           }
         ]
       }
@@ -10428,7 +10476,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           }
         ]
       }
@@ -10518,7 +10569,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           }
         ]
       }
@@ -11499,7 +11553,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -11661,7 +11718,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -11823,7 +11883,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -11985,7 +12048,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -12174,7 +12240,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 85,
@@ -12327,7 +12396,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 85,
@@ -12480,7 +12552,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 85,
@@ -12633,7 +12708,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 85,
@@ -12696,7 +12774,10 @@
           "code": "AUS",
           "name": "Australia"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "AUS",
+          "name": "Australia"
+        }
       },
       "as_best_third": {
         "conditional": true,
@@ -12783,7 +12864,10 @@
           "code": "AUS",
           "name": "Australia"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "AUS",
+          "name": "Australia"
+        }
       },
       "as_best_third": {
         "conditional": true,
@@ -12870,7 +12954,10 @@
           "code": "AUS",
           "name": "Australia"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "AUS",
+          "name": "Australia"
+        }
       },
       "as_best_third": {
         "conditional": true,
@@ -12957,7 +13044,10 @@
           "code": "AUS",
           "name": "Australia"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "AUS",
+          "name": "Australia"
+        }
       },
       "as_best_third": {
         "conditional": true,
@@ -13602,7 +13692,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -13767,7 +13860,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -13932,7 +14028,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -14097,7 +14196,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -14238,7 +14340,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -14379,7 +14484,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -14520,7 +14628,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,
@@ -14661,7 +14772,10 @@
               "code": "USA",
               "name": "USA"
             },
-            "real_opponent": null
+            "real_opponent": {
+              "code": "USA",
+              "name": "USA"
+            }
           },
           {
             "match_number": 82,

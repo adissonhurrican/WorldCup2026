@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T04:05:16.471Z",
+  "generated_at": "2026-06-26T04:15:03.842Z",
   "source": "WC2026 confirmed squads from the DB (players + API-Football squad fields + player_status_events). Display-only; never a model/prediction input.",
   "note": "Per-player status (goals/assists/cards/minutes) fills from api_football_fixture_player_stats as WC matches are played; 0 until then. availability (out/doubtful/suspended) comes from player_status_events (latest tournament-scope, non-rejected) and carries review_status — pending seeds are shown but flagged. Missing club/age/number are null (the UI omits them). Player-card bio (api_player_id, photo[derived URL], dob, nationality, height_cm, weight_kg, birth_place, birth_country) is ADDITIVE and only populated where backfilled (Canada first); the current squad card ignores these keys.",
   "coverage": {
@@ -11473,7 +11473,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 192
+          "minutes": 282
         },
         "api_player_id": 49866,
         "photo": "https://media.api-sports.io/football/players/49866.png",
@@ -11496,7 +11496,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 81
+          "minutes": 165
         },
         "api_player_id": 22222,
         "photo": "https://media.api-sports.io/football/players/22222.png",
@@ -11542,7 +11542,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 6
         },
         "api_player_id": 18776,
         "photo": "https://media.api-sports.io/football/players/18776.png",
@@ -11565,7 +11565,7 @@
           "assists": 0,
           "yellow": 1,
           "red": 0,
-          "minutes": 27
+          "minutes": 117
         },
         "api_player_id": 50057,
         "photo": "https://media.api-sports.io/football/players/50057.png",
@@ -11588,7 +11588,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 181
+          "minutes": 271
         },
         "api_player_id": 61837,
         "photo": "https://media.api-sports.io/football/players/61837.png",
@@ -11634,7 +11634,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 90
         },
         "api_player_id": 26300,
         "photo": "https://media.api-sports.io/football/players/26300.png",
@@ -11657,7 +11657,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 111
+          "minutes": 112
         },
         "api_player_id": 1719,
         "photo": "https://media.api-sports.io/football/players/1719.png",
@@ -11699,11 +11699,11 @@
         "club": "Galatasaray",
         "age": 31,
         "status": {
-          "goals": 0,
+          "goals": 1,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 2
         },
         "api_player_id": 25448,
         "photo": "https://media.api-sports.io/football/players/25448.png",
@@ -11726,7 +11726,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 14
+          "minutes": 104
         },
         "api_player_id": 24807,
         "photo": "https://media.api-sports.io/football/players/24807.png",
@@ -11746,10 +11746,10 @@
         "age": 25,
         "status": {
           "goals": 0,
-          "assists": 0,
+          "assists": 1,
           "yellow": 0,
           "red": 0,
-          "minutes": 73
+          "minutes": 161
         },
         "api_player_id": 37155,
         "photo": "https://media.api-sports.io/football/players/37155.png",
@@ -11768,11 +11768,11 @@
         "club": "Real Madrid",
         "age": 20,
         "status": {
-          "goals": 0,
+          "goals": 1,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 192
+          "minutes": 282
         },
         "api_player_id": 291964,
         "photo": "https://media.api-sports.io/football/players/291964.png",
@@ -11818,7 +11818,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 37
+          "minutes": 43
         },
         "api_player_id": 339887,
         "photo": "https://media.api-sports.io/football/players/339887.png",
@@ -11910,7 +11910,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 147
+          "minutes": 231
         },
         "api_player_id": 339883,
         "photo": "https://media.api-sports.io/football/players/339883.png",
@@ -11933,7 +11933,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 1
         },
         "api_player_id": 49857,
         "photo": "https://media.api-sports.io/football/players/49857.png",
@@ -11979,7 +11979,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 89
         },
         "api_player_id": 134590,
         "photo": "https://media.api-sports.io/football/players/134590.png",
@@ -11998,11 +11998,11 @@
         "club": null,
         "age": 25,
         "status": {
-          "goals": 0,
-          "assists": 0,
+          "goals": 1,
+          "assists": 1,
           "yellow": 0,
           "red": 0,
-          "minutes": 97
+          "minutes": 186
         },
         "api_player_id": 63274,
         "photo": "https://media.api-sports.io/football/players/63274.png",
@@ -12627,7 +12627,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 90
         },
         "api_player_id": 50999,
         "photo": "https://media.api-sports.io/football/players/50999.png",
@@ -12696,7 +12696,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 152
+          "minutes": 166
         },
         "api_player_id": 38735,
         "photo": "https://media.api-sports.io/football/players/38735.png",
@@ -12761,11 +12761,11 @@
         "club": "Celtic",
         "age": 27,
         "status": {
-          "goals": 0,
+          "goals": 1,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 16
+          "minutes": 106
         },
         "api_player_id": 50737,
         "photo": "https://media.api-sports.io/football/players/50737.png",
@@ -12788,7 +12788,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 90
         },
         "api_player_id": 50879,
         "photo": "https://media.api-sports.io/football/players/50879.png",
@@ -12834,7 +12834,7 @@
           "assists": 1,
           "yellow": 0,
           "red": 0,
-          "minutes": 186
+          "minutes": 199
         },
         "api_player_id": 355994,
         "photo": "https://media.api-sports.io/football/players/355994.png",
@@ -12857,7 +12857,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 90
         },
         "api_player_id": 50735,
         "photo": "https://media.api-sports.io/football/players/50735.png",
@@ -12880,7 +12880,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 16
+          "minutes": 93
         },
         "api_player_id": 50852,
         "photo": "https://media.api-sports.io/football/players/50852.png",
@@ -12926,7 +12926,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 8
+          "minutes": 84
         },
         "api_player_id": 161921,
         "photo": "https://media.api-sports.io/football/players/161921.png",
@@ -12949,7 +12949,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 186
+          "minutes": 272
         },
         "api_player_id": 415,
         "photo": "https://media.api-sports.io/football/players/415.png",
@@ -12972,7 +12972,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 77
         },
         "api_player_id": 50739,
         "photo": "https://media.api-sports.io/football/players/50739.png",
@@ -12991,11 +12991,11 @@
         "club": "Vancouver Whitecaps",
         "age": 24,
         "status": {
-          "goals": 0,
-          "assists": 0,
-          "yellow": 0,
+          "goals": 1,
+          "assists": 1,
+          "yellow": 1,
           "red": 0,
-          "minutes": 67
+          "minutes": 157
         },
         "api_player_id": 201713,
         "photo": "https://media.api-sports.io/football/players/201713.png",
@@ -13041,7 +13041,7 @@
           "assists": 1,
           "yellow": 0,
           "red": 0,
-          "minutes": 178
+          "minutes": 182
         },
         "api_player_id": 162037,
         "photo": "https://media.api-sports.io/football/players/162037.png",
@@ -13064,7 +13064,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 18
+          "minutes": 76
         },
         "api_player_id": 1138,
         "photo": "https://media.api-sports.io/football/players/1138.png",
@@ -13087,7 +13087,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 0
+          "minutes": 13
         },
         "api_player_id": 35885,
         "photo": "https://media.api-sports.io/football/players/35885.png",
@@ -13110,7 +13110,7 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "minutes": 92
+          "minutes": 182
         },
         "api_player_id": 73868,
         "photo": "https://media.api-sports.io/football/players/73868.png",
@@ -13133,7 +13133,7 @@
           "assists": 1,
           "yellow": 0,
           "red": 0,
-          "minutes": 45
+          "minutes": 77
         },
         "api_player_id": 17,
         "photo": "https://media.api-sports.io/football/players/17.png",
