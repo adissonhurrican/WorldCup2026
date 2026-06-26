@@ -213,10 +213,12 @@ export default function BracketView({ data, rightAction }) {
 
   return (
     <Screen stickyTitle="Bracket" rightAction={rightAction} header={header}>
-      {/* Always-visible framing so projections never read as settled results, + the full explanation one tap away. */}
+      {/* Always-visible framing so projections never read as settled results, + the full explanation one tap away.
+          Leads with the product principle: we never lock a matchup while any team still has a path to that spot. */}
       <p className="px-1 text-[12.5px] leading-snug text-ink-2">
-        Projected matchups, not results: our model's best guess at the knockout draw. It updates after every match,
-        and real teams replace the projections as groups finish.
+        <span className="font-semibold text-ink">As long as any team still has a chance to reach the Round of 32, we won't lock a matchup in.</span>{" "}
+        So these are projected pairings, not results — our model's best guess, updating after every match as real teams
+        replace the projections when groups finish.
       </p>
       <HowItWorks />
 
