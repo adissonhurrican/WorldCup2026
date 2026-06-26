@@ -2,3 +2,8 @@
 # (e.g. ui-v2/ignore-build.sh runs in Netlify's build image). Without this, a Windows commit
 # with core.autocrlf disabled could store CRLF and break the shebang / bash parsing.
 *.sh text eol=lf
+
+# GitHub Actions workflows run their `run: |` bash on Linux runners. CRLF there breaks bash
+# `\` line-continuations (syntax error near `&&`) and is fragile generally — pin them to LF.
+*.yml text eol=lf
+*.yaml text eol=lf
