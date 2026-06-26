@@ -15,17 +15,25 @@ import {
 
 const BASE = import.meta.env.BASE_URL;
 const BUNDLED_APP_DATA = `${BASE}app-data.json`;
-// Ordered sources, first reachable wins: jsDelivr CDN (FRESH — the loop purges it on every push) → GitHub raw
-// (≤5-min-stale safety net if jsDelivr is unreachable) → Netlify-BUNDLED copy (last code deploy). Keeps the SPA
-// build-independent AND never-worse-than-today.
-const APP_DATA_SOURCES = [APP_DATA_REMOTE_URL, APP_DATA_FALLBACK_URL, BUNDLED_APP_DATA].filter(Boolean);
+// The two build-independent CDN copies of app-data: jsDelivr + GitHub raw. We fetch BOTH and use the FRESHEST,
+// because either one can serve a STALE-but-200 cached file (jsDelivr's @main can lag its purge; raw's Fastly
+// cache ignores ?cb) — and a stale 200 must NEVER win over a fresher sibling. (That was the bug that stuck the
+// site on a stale jsDelivr copy while raw was already current.) Bundled is the last resort if BOTH are down.
+const APP_DATA_CDNS = [APP_DATA_REMOTE_URL, APP_DATA_FALLBACK_URL].filter(Boolean);
 
-// Cache-bust EVERY fetch (forces the current file from the Netlify/bundled copy; harmless on the CDNs, whose
-// freshness comes from the path + an explicit purge, not the query string).
+// Cache-bust EVERY fetch (forces the current file from the Netlify/bundled copy; the CDNs largely ignore the
+// query string, which is exactly why we compare freshness below rather than trusting one source's 200).
 const bust = (u) => `${u}${u.includes("?") ? "&" : "?"}t=${Date.now()}`;
 
+// app-data freshness signal: results_counted rises monotonically as games finish (groups_complete breaks ties).
+// Higher = newer. Lets us pick the freshest CDN copy so a stale cache can never mask a current one.
+function appDataFreshness(d) {
+  const rs = (d && d.real_standings) || {};
+  return (Number(rs.results_counted) || 0) * 1000 + (Number(rs.groups_complete) || 0);
+}
+
 // Fetch the first source that returns OK JSON; throws the LAST error only if EVERY source fails — which surfaces
-// the same <LoadError> screen as before (no new failure mode).
+// the same <LoadError> screen as before (no new failure mode). Used for the overlays (weather/squads).
 async function fetchFirstOkJson(urls) {
   let lastErr = new Error("no data sources configured");
   for (const url of urls) {
@@ -40,10 +48,22 @@ async function fetchFirstOkJson(urls) {
   throw lastErr;
 }
 
-// Load the published contract. Tries jsDelivr (fresh) → raw → bundled in order; on ANY failure/throttle
-// (429/5xx/network/CORS) of a source it moves to the next, and only throws if all are unreachable.
+// Load the published contract: fetch BOTH CDNs in parallel and return the FRESHEST that responded (by
+// results_counted). Only if EVERY CDN is unreachable does it fall back to the Netlify-bundled copy, and only if
+// that ALSO fails does it throw (same <LoadError> screen as before — no new failure mode).
 export async function loadAppData() {
-  return fetchFirstOkJson(APP_DATA_SOURCES.length ? APP_DATA_SOURCES : [BUNDLED_APP_DATA]);
+  if (APP_DATA_CDNS.length) {
+    const settled = await Promise.allSettled(
+      APP_DATA_CDNS.map((u) =>
+        fetch(bust(u), { cache: "no-store" }).then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status))))),
+      ),
+    );
+    const ok = settled.filter((s) => s.status === "fulfilled").map((s) => s.value);
+    if (ok.length) return ok.reduce((best, d) => (appDataFreshness(d) > appDataFreshness(best) ? d : best));
+  }
+  const res = await fetch(bust(BUNDLED_APP_DATA), { cache: "no-store" });
+  if (res.ok) return await res.json();
+  throw new Error("all app-data sources unreachable");
 }
 
 // Optional nickname overlay (public/nicknames.json), keyed by 3-letter code:
@@ -100,10 +120,10 @@ export function loadVenues(url = `${BASE}venues.json`) {
   return loadJsonOr(url, {});
 }
 
-// Per-fixture weather forecast overlay — display only, empty until forecasts are fetched. Raw-first (cache-
-// busted) so the weather bot's refresh reaches users without a Netlify build; bundled fallback on raw failure.
+// Per-fixture weather forecast overlay — display only, empty until forecasts are fetched. RAW-first (it self-
+// refreshes within its TTL and dodges jsDelivr's purge-lag), then jsDelivr, then the bundled copy.
 export function loadWeather() {
-  return loadOverlayFromSources([WEATHER_REMOTE_URL, WEATHER_FALLBACK_URL, `${BASE}weather.json`], {});
+  return loadOverlayFromSources([WEATHER_FALLBACK_URL, WEATHER_REMOTE_URL, `${BASE}weather.json`], {});
 }
 
 // Country identity colors for the prediction bar glass fill. Display-only; segment widths still come
@@ -196,9 +216,8 @@ export async function loadEvents(url = `/.netlify/functions/events`) {
 // FIFA team code -> array of players { name, position, position_group, number, club, age, status }.
 // Per-player status (goals/cards/minutes) is 0 until WC matches play. Returns {} on any failure.
 export async function loadSquads() {
-  // jsDelivr-first (purged fresh) so per-match stat updates (goals/cards/minutes) reach users without a Netlify
-  // build; raw → bundled fallback on failure/throttle.
-  const raw = await loadOverlayFromSources([SQUADS_REMOTE_URL, SQUADS_FALLBACK_URL, `${BASE}squads.json`], null);
+  // RAW-first (it self-refreshes within its TTL and dodges jsDelivr's purge-lag), then jsDelivr, then bundled.
+  const raw = await loadOverlayFromSources([SQUADS_FALLBACK_URL, SQUADS_REMOTE_URL, `${BASE}squads.json`], null);
   return (raw && raw.teams && typeof raw.teams === "object") ? raw.teams : {};
 }
 
