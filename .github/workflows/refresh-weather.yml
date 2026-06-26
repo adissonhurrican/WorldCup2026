@@ -54,3 +54,8 @@ jobs:
             sleep $((attempt * 3))
           done
           if [ "$pushed" != "1" ]; then echo "::error::push failed after retries"; exit 1; fi
+          # FRESHNESS: the SPA reads weather.json from the jsDelivr CDN (caches @main up to ~12h) — purge so the
+          # refreshed overlay goes live within seconds. FAIL-SOFT: a purge hiccup must never red this job (the
+          # file is on GitHub; jsDelivr self-refreshes and the SPA's raw fallback covers the gap).
+          curl -fsS --max-time 20 --retry 2 "https://purge.jsdelivr.net/gh/adissonhurrican/WorldCup2026@main/ui-v2/public/weather.json" >/dev/null 2>&1 \
+            && echo "jsdelivr purged: weather.json" || echo "jsdelivr purge of weather.json failed (non-fatal)"

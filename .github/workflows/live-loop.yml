@@ -124,3 +124,11 @@ jobs:
             sleep $((attempt * 3))
           done
           if [ "$pushed" != "1" ]; then echo "::error::push failed after retries"; exit 1; fi
+          # FRESHNESS: the SPA reads app-data/squads from the jsDelivr CDN, which otherwise caches the @main file
+          # up to ~12h — so a just-pushed result (finished group, eliminated team) wouldn't show. Purge jsDelivr
+          # to make the new version live within seconds. FAIL-SOFT: a purge hiccup must NEVER red the loop (the
+          # file is safely on GitHub; jsDelivr self-refreshes eventually and the SPA's raw fallback covers the gap).
+          for f in app-data.json squads.json; do
+            curl -fsS --max-time 20 --retry 2 "https://purge.jsdelivr.net/gh/adissonhurrican/WorldCup2026@main/ui-v2/public/$f" >/dev/null 2>&1 \
+              && echo "jsdelivr purged: $f" || echo "jsdelivr purge of $f failed (non-fatal)"
+          done

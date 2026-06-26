@@ -24,21 +24,29 @@ export const SECURITY_URL = "https://xxlservices.com";
 // Keep robots.txt / sitemap.xml (in /public) in sync with this host when it changes.
 export const SITE_URL = "https://footballmatchmaster.com";
 
-// app-data.json is served BUILD-INDEPENDENTLY from GitHub raw — the in-tournament loop pushes the file to
-// the repo on every refresh, so the SPA reads fresh data WITHOUT a Netlify rebuild. This is what lets data
-// commits skip the Netlify build (see netlify.toml `ignore`), removing the build-usage freeze. The loader
-// cache-busts every fetch (raw has a ~5-min CDN cache) and falls back to the Netlify-BUNDLED copy if raw
-// fails/throttles (never-worse-than-today). Set to "" to disable and use the bundled copy only.
+// app-data.json is served BUILD-INDEPENDENTLY from the jsDelivr CDN (which mirrors the GitHub repo @main) — the
+// in-tournament loop pushes the file on every refresh AND purges jsDelivr (purge.jsdelivr.net), so the new
+// version goes live within seconds and the SPA reads fresh data WITHOUT a Netlify rebuild. This is what lets
+// data commits skip the Netlify build (see netlify.toml `ignore`), removing the build-usage freeze.
+//   WHY jsDelivr (not raw.githubusercontent.com): raw's Fastly cache IGNORES cache-busting query strings, so a
+//   result could sit up to ~5 min stale (a finished group, an eliminated team, still showing). jsDelivr honors
+//   a purge, giving deterministic freshness. The loader still falls through jsDelivr → raw (≤5-min safety net)
+//   → Netlify-BUNDLED copy, so it is never-worse-than-today. Set REMOTE to "" to use the bundled copy only.
 export const APP_DATA_REMOTE_URL =
+  "https://cdn.jsdelivr.net/gh/adissonhurrican/WorldCup2026@main/ui-v2/public/app-data.json";
+export const APP_DATA_FALLBACK_URL =
   "https://raw.githubusercontent.com/adissonhurrican/WorldCup2026/main/ui-v2/public/app-data.json";
 
-// The weather + squad overlays are decoupled the SAME way (raw-first, bundled fallback). They're auto-committed
-// by the loop/weather bot and the build-ignore skips those commits, so without this they'd freeze at the last
-// build; serving them raw-first keeps them fresh for everyone while still skipping the build. Set to "" to use
-// the bundled copy only.
+// The weather + squad overlays are decoupled the SAME way (jsDelivr-first → raw → bundled). They're auto-
+// committed by the loop/weather bot (which also purges jsDelivr) and the build-ignore skips those commits, so
+// serving them jsDelivr-first keeps them fresh for everyone while still skipping the build. REMOTE "" -> bundled.
 export const WEATHER_REMOTE_URL =
+  "https://cdn.jsdelivr.net/gh/adissonhurrican/WorldCup2026@main/ui-v2/public/weather.json";
+export const WEATHER_FALLBACK_URL =
   "https://raw.githubusercontent.com/adissonhurrican/WorldCup2026/main/ui-v2/public/weather.json";
 export const SQUADS_REMOTE_URL =
+  "https://cdn.jsdelivr.net/gh/adissonhurrican/WorldCup2026@main/ui-v2/public/squads.json";
+export const SQUADS_FALLBACK_URL =
   "https://raw.githubusercontent.com/adissonhurrican/WorldCup2026/main/ui-v2/public/squads.json";
 
 // Absolute Open Graph / Twitter share image (1200×630 PNG in /public → served at the domain root).
