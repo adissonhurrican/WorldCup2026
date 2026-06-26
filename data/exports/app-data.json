@@ -759,12 +759,12 @@
       "standings": [
         {
           "code": "FRA",
-          "win_group": 0.6703,
+          "win_group": 1,
           "top_2": 1,
           "advance": 1,
           "finish_distribution": {
-            "1st": 0.6703,
-            "2nd": 0.3297,
+            "1st": 1,
+            "2nd": 0,
             "3rd": 0,
             "4th": 0
           },
@@ -772,12 +772,12 @@
         },
         {
           "code": "NOR",
-          "win_group": 0.3297,
+          "win_group": 0,
           "top_2": 1,
           "advance": 1,
           "finish_distribution": {
-            "1st": 0.3297,
-            "2nd": 0.6703,
+            "1st": 0,
+            "2nd": 1,
             "3rd": 0,
             "4th": 0
           },
@@ -2209,7 +2209,11 @@
         "draw": 0.2538,
         "away_win": 0.4152
       },
-      "result": null,
+      "result": {
+        "home_score": 1,
+        "away_score": 4,
+        "status": "final"
+      },
       "live_score_ref": null
     },
     {
@@ -6491,22 +6495,8 @@
       "routes": [
         {
           "route": "Win the group",
-          "chance": 0.6703,
-          "own_form": "Win group: typically 9 pts (3W 0D 0L); as low as 7 pts in our simulations; from 6 pts now, ~3 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
-          "route": "Finish runner-up",
-          "chance": 0.3297,
-          "own_form": "Runner-up: typically 6 pts (2W 0D 1L); from 6 pts now, ~0 more from the last 1",
+          "chance": 1,
+          "own_form": "Win group: typically 9 pts (3W 0D 0L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -7019,23 +7009,9 @@
       "in_their_hands": true,
       "routes": [
         {
-          "route": "Win the group",
-          "chance": 0.3297,
-          "own_form": "Win group: typically 9 pts (3W 0D 0L); from 6 pts now, ~3 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
           "route": "Finish runner-up",
-          "chance": 0.6703,
-          "own_form": "Runner-up: typically 6 pts (2W 0D 1L); from 6 pts now, ~0 more from the last 1",
+          "chance": 1,
+          "own_form": "Runner-up: typically 6 pts (2W 0D 1L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -7720,8 +7696,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Senegal Facing Uphill Battle in Best-Third Race",
-      "body": "Senegal face a steep climb to reach the knockouts, with their hopes of a top-two finish completely gone. In Group I, France and Norway have already secured the top spots at a perfect 100% advancement chance, leaving Senegal to scrap with Iraq, who sit behind them at 2%. Currently sitting third in the group with zero points and a minus-three goal difference, Senegal's only remaining path to the Round of 32 is through the best-third-place ranking, where they currently sit at the very bottom of the provisional ladder. Our tournament simulation gives Senegal a 30% chance to advance. To keep this hope alive, they must defeat Iraq in their final match to reach three points. A draw or a loss will result in immediate elimination. Even with a victory, their fate is out of their hands; finishing third with three points gives them about a coin flip's chance—specifically a 44% conditional probability—of actually passing the cut-off, depending heavily on how goal differences shake out in other groups.",
+      "headline": "Senegal Face an Uphill Battle in the Best-Third Race",
+      "body": "Senegal find themselves in a tense position, facing an uphill battle to reach the knockouts. With two losses from their opening matches, they can no longer finish in the top two of Group I. France and Norway have already secured their places well clear at the top, leaving Senegal to scrap with Iraq, who sit right behind them, for a potential lifeline. Senegal hold a 30% chance to advance to the Round of 32, and their only remaining path is to qualify as one of the best third-placed teams. Currently, they sit at the bottom of the provisional third-place standings, three points behind the qualification cut-off. To keep their tournament alive, Senegal must defeat Iraq in their final match to reach three points. A draw or a loss will result in immediate elimination. Even with a victory, their fate is not entirely in their own hands; finishing third, they would advance in about 44% of simulated scenarios, meaning they will have to watch results in other groups closely to see if their goal difference is enough to slip through the back door.",
       "team_code": "SEN"
     },
     {
@@ -7768,8 +7744,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Norway Secure in the Knockouts as Group I Race Heats Up",
-      "body": "Norway are in the ultimate position of comfort, having already secured a 100% chance to reach the knockouts. With two rounds complete, they sit second in Group I on six points, right behind leaders France on goal difference. While France are neck-and-neck with them at the top, Norway are well clear of Senegal, who sit third with a 37% chance of advancing. Because Norway have already guaranteed their spot in the Round of 32, they do not need to worry about the complicated third-place back door. Instead, their focus is entirely on the final group placement. Our tournament simulation shows they are more likely than not to finish as the group runners-up, though they still have a real, roughly one-in-three chance to overtake France and win the group outright. Having won both of their opening matches, including a crucial 3-2 victory over Senegal, Norway have taken complete control of their tournament path before the final group games are even played.",
+      "headline": "Norway Secure Knockout Spot with Runner-Up Finish",
+      "body": "Norway have achieved their goal. Our tournament simulation shows they have officially clinched their place in the knockouts, meaning they are guaranteed to reach the Round of 32 regardless of how the remaining matches unfold. In Group I, Norway sit comfortably in second place with six points, safely behind group leaders France, who have already completed their matches. While Senegal and Iraq still have one game left to play, neither can catch Norway in the standings. Because Norway's runner-up position is completely locked in, they do not need to worry about the complicated third-place wild card race. Their main path is fully secured through their own on-pitch results, having earned two wins from their three group matches. Norwegian fans can look forward to the knockout stage with absolute certainty, as their spot in the next round is already safe.",
       "team_code": "NOR"
     },
     {
@@ -7816,8 +7792,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Iraq Face an Uphill Battle in Group I",
-      "body": "Iraq find themselves in a highly challenging position, with their hopes of reaching the knockouts hanging by a thread. Sitting at the bottom of Group I after two rounds, they are adrift of the pace, with Senegal positioned just above them. Our tournament simulation gives Iraq a 2% chance to advance to the Round of 32. Because they can no longer finish in the top two, their only remaining path is the best-third-place race. To keep that slim hope alive, Iraq must defeat Senegal in their final group match to claim third place. Even if they secure that win, the back-door route remains highly precarious; they would only advance in about 7% of third-place scenarios, leaving them heavily at the mercy of results in other groups.",
+      "headline": "Iraq Face an Uphill Battle to Keep Knockout Hopes Alive",
+      "body": "Iraq find themselves in a deeply challenging position at the bottom of Group I, with their hopes of reaching the knockouts hanging by a thread. They are currently adrift at the foot of the table, trailing Senegal, who sit just above them. With France and Norway already well clear and out of reach, Iraq can no longer finish in the top two. Our tournament simulation shows Iraq have just a 2% chance to reach the Round of 32. To keep this outside chance alive, they must defeat Senegal in their final match to claim third place. Even if they secure that vital win, their fate is not in their own hands. Because their goal difference has taken a heavy hit, finishing third only gives them a slim back-door route, with the prediction system estimating they would advance in only about 7% of those third-place scenarios. They will need a victory and a massive wave of helpful results from other groups to slip through.",
       "team_code": "IRQ"
     },
     {
@@ -7840,8 +7816,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "France Secure Knockout Spot but Face Battle for Top Seed",
-      "body": "France have officially secured their place in the knockouts, meaning fans can look forward to the Round of 32 with absolute certainty. With two wins from their opening two matches, they sit at the top of Group I with six points. However, they are locked in a tight race for the top spot, with Norway right on their heels, also sitting on six points and sharing a 100% chance of advancing. France's primary route is already locked into a top-two finish, leaving no need to worry about the third-place back door. To win the group outright, our tournament simulation shows they are well placed with around a two-in-three chance, which typically requires a result in their final match to stay ahead of Norway on goal difference. If they slip up, they are highly likely to finish as runners-up, which still guarantees safe passage. With Senegal and Iraq both yet to earn a point, the final round is a straight shootout between the two European heavyweights for the group's crown.",
+      "headline": "France Secure Knockout Spot with Perfect Group Stage Run",
+      "body": "France have done exactly what they set out to do, mathematically securing their place in the knockouts with a perfect nine points. Our tournament simulation shows they have a 100% chance of reaching the Round of 32, meaning fans can celebrate a job already completed. While France sit proudly at the top of Group I, Norway are right on their heels with a guaranteed advancement of their own. Because the final round of group games is still incomplete, Senegal and Iraq still have to play their final match, meaning the lower half of the table will move before the group is officially settled. For France, however, the pressure is entirely off. They have won all three of their matches, scoring ten goals and conceding just two, which guarantees they will finish in the top spot. There is no need to worry about third-place math or back-door routes; France have taken complete control of their own path and are moving on to the next round with absolute certainty.",
       "team_code": "FRA"
     },
     {
@@ -8860,7 +8836,7 @@
     "label": "Real group table computed from verified match results using the FIFA 2026 Article 13 tiebreakers — distinct from the predicted/projected probabilities table.",
     "source_label": "our verified results + the 2026 advancement rules",
     "status": "in_progress",
-    "results_counted": 60,
+    "results_counted": 61,
     "groups_complete": 6,
     "groups": [
       {
@@ -9434,20 +9410,20 @@
       {
         "group": "I",
         "complete": false,
-        "games_played": 4,
+        "games_played": 5,
         "standings": [
           {
             "position": 1,
             "code": "FRA",
             "name": "France",
-            "played": 2,
-            "won": 2,
+            "played": 3,
+            "won": 3,
             "drawn": 0,
             "lost": 0,
-            "goals_for": 6,
-            "goals_against": 1,
-            "goal_difference": 5,
-            "points": 6,
+            "goals_for": 10,
+            "goals_against": 2,
+            "goal_difference": 8,
+            "points": 9,
             "advance_state": "qualified",
             "band": "green",
             "decided": false
@@ -9456,13 +9432,13 @@
             "position": 2,
             "code": "NOR",
             "name": "Norway",
-            "played": 2,
+            "played": 3,
             "won": 2,
             "drawn": 0,
-            "lost": 0,
-            "goals_for": 7,
-            "goals_against": 3,
-            "goal_difference": 4,
+            "lost": 1,
+            "goals_for": 8,
+            "goals_against": 7,
+            "goal_difference": 1,
             "points": 6,
             "advance_state": "qualified",
             "band": "green",
