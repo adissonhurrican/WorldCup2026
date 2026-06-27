@@ -22,7 +22,7 @@
 // matchups. This is a reversible display toggle, not a removal; the export still carries projections + predictions.
 import annexCMapping from "../../../data/external/fifa/annex-c-r32-third-place-mapping.json" with { type: "json" };
 
-const SHOW_PROJECTIONS = true; // REVEALED 2026-06-19 alongside the "How the bracket works" explanation in BracketView
+const SHOW_PROJECTIONS = false; // structure-only while projected R32 slotting is unsafe
 
 const SLOT_TO_MATCH = {
   "1A": 79,
