@@ -6,8 +6,9 @@
 // Resolution per slot, in priority order:
 //   1. side.team present  -> REAL team (resolver filled it)
 //   2. R32 group slot     -> projected from the conditioned group standings (winner/runner-up) or the
-//                            de-duped best-third (from knockout_paths' projected_opponent — same source
-//                            the Path card uses)
+//                            deterministic Annex C current-best third allocation, falling back to the
+//                            old de-duped knockout_paths projection only if the Annex C current-best
+//                            input is unavailable
 //   3. match_winner/loser -> projected winner/loser of the (already-resolved, lower-numbered) source match
 // Winner of a match: real score if decided, else the higher-strength side (champion prob proxy).
 // As real knockout results land, decided matches mark winner FULL-COLOR / loser GREY and carry the real
@@ -19,7 +20,20 @@
 // results still light the winner / grey the loser. ALL projection code below (groupFinishers, bestThirdByMatch,
 // strengthMap, stronger/weaker) stays BUILT but dormant — flip SHOW_PROJECTIONS to true to restore the projected
 // matchups. This is a reversible display toggle, not a removal; the export still carries projections + predictions.
+import annexCMapping from "../../../data/external/fifa/annex-c-r32-third-place-mapping.json" with { type: "json" };
+
 const SHOW_PROJECTIONS = true; // REVEALED 2026-06-19 alongside the "How the bracket works" explanation in BracketView
+
+const SLOT_TO_MATCH = {
+  "1A": 79,
+  "1B": 85,
+  "1D": 81,
+  "1E": 74,
+  "1G": 82,
+  "1I": 77,
+  "1K": 87,
+  "1L": 80,
+};
 
 const ROUND_META = [
   { key: "round_of_32", label: "Round of 32", short: "R32", order: 1 },
@@ -69,18 +83,65 @@ function groupFinishers(data) {
   return { win, ru };
 }
 
-// de-duped best-third per R32 match, lifted from knockout_paths' already-allocated projected_opponent
-// (the same global de-dup the Path card ships) -> match_number -> third team code.
-function bestThirdByMatch(data) {
+// Fallback only: the old de-duped best-third per R32 match, lifted from knockout_paths'
+// already-allocated projected_opponent. Kept so malformed/missing current-best race data does not blank the bracket.
+function greedyBestThirdByMatch(data) {
   const m = {};
   for (const p of data.knockout_paths || []) {
     for (const dest of [p.as_group_winner, p.as_runner_up]) {
       if (dest && dest.opponent_kind === "best_third" && dest.projected_opponent && dest.match_number != null) {
-        m[dest.match_number] = dest.projected_opponent.code;
+        m[dest.match_number] = { code: dest.projected_opponent.code, real: false, source: "greedy_fallback" };
       }
     }
   }
   return m;
+}
+
+function concatThirdGroupKey(groups) {
+  return groups.map((g) => String(g).toUpperCase()).sort().join("");
+}
+
+function currentBestThirdEntries(data) {
+  const race = data?.real_standings?.best_third_race;
+  const ranked = Array.isArray(race?.ranked) ? race.ranked : [];
+  const qualifyCount = Number.isFinite(Number(race?.qualify_count)) ? Number(race.qualify_count) : 8;
+  return ranked
+    .filter((r) => r?.code && r?.group && (r.in_best_8 === true || Number(r.rank) <= qualifyCount))
+    .sort((a, b) => (Number(a.rank) || 99) - (Number(b.rank) || 99))
+    .slice(0, qualifyCount);
+}
+
+// Deterministic current-best Annex C allocation for the Bracket tab only.
+// Complete-group thirds render as real/determined; incomplete-group thirds still render as projected.
+export function bestThirdByMatch(data) {
+  const fallback = greedyBestThirdByMatch(data);
+  const selected = currentBestThirdEntries(data);
+  if (selected.length !== 8) return fallback;
+
+  const byGroup = {};
+  for (const entry of selected) byGroup[String(entry.group).toUpperCase()] = entry;
+
+  const key = concatThirdGroupKey(selected.map((entry) => entry.group));
+  const row = annexCMapping?.mappings?.[key];
+  const assignments = row?.third_place_slot_assignments;
+  if (!assignments) return fallback;
+
+  const m = {};
+  for (const [slot, groupRaw] of Object.entries(assignments)) {
+    const matchNumber = SLOT_TO_MATCH[slot];
+    const group = String(groupRaw).toUpperCase();
+    const entry = byGroup[group];
+    if (!matchNumber || !entry?.code) return fallback;
+    m[matchNumber] = {
+      code: entry.code,
+      real: entry.group_complete === true,
+      group,
+      source: "annex_c_current_best",
+      key,
+      combination_number: row.combination_number ?? null,
+    };
+  }
+  return Object.keys(m).length === 8 ? m : fallback;
 }
 
 const sideTeamCode = (side) => (side && side.team && side.team.code) || null;
@@ -120,9 +181,16 @@ export function buildBracket(data) {
     const meta = ROUND_BY_KEY[key];
     const aSlot = fx.side_a || {}, bSlot = fx.side_b || {};
     const a = resolveSlot(aSlot), b = resolveSlot(bSlot);
-    // best-third slots resolve by match number (the de-duped allocation) — projection only; OFF in structure-only.
-    if (SHOW_PROJECTIONS && aSlot.type === "best_third" && !a.code) a.code = bt[fx.match_number] ?? null;
-    if (SHOW_PROJECTIONS && bSlot.type === "best_third" && !b.code) b.code = bt[fx.match_number] ?? null;
+    // best-third slots resolve by deterministic Annex C current-best assignment, projection only unless the
+    // assigned third's group is complete. Fallback is the previous greedy projection if current-best cannot resolve.
+    if (SHOW_PROJECTIONS && aSlot.type === "best_third" && !a.code) {
+      const third = bt[fx.match_number];
+      if (third?.code) { a.code = third.code; a.real = third.real === true; }
+    }
+    if (SHOW_PROJECTIONS && bSlot.type === "best_third" && !b.code) {
+      const third = bt[fx.match_number];
+      if (third?.code) { b.code = third.code; b.real = third.real === true; }
+    }
 
     // real result? (the export's result = { a, b, winner, pens_a, pens_b }; a/b are the scores)
     const aScore = numOrNull(fx.result?.a);
