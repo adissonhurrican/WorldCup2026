@@ -8,28 +8,59 @@
 // ============================================================================
 
 import {
-  APP_DATA_REMOTE_URL, APP_DATA_FALLBACK_URL,
+  APP_DATA_REMOTE_URL, APP_DATA_FALLBACK_URL, APP_DATA_AUTHORITATIVE_URL,
   WEATHER_REMOTE_URL, WEATHER_FALLBACK_URL,
   SQUADS_REMOTE_URL, SQUADS_FALLBACK_URL,
 } from "../config.js";
+import { decodeGithubContentsJson, resolveAppDataSource } from "./appDataResolver.js";
 
 const BASE = import.meta.env.BASE_URL;
 const BUNDLED_APP_DATA = `${BASE}app-data.json`;
-// The two build-independent CDN copies of app-data: jsDelivr + GitHub raw. We fetch BOTH and use the FRESHEST,
-// because either one can serve a STALE-but-200 cached file (jsDelivr's @main can lag its purge; raw's Fastly
-// cache ignores ?cb) — and a stale 200 must NEVER win over a fresher sibling. (That was the bug that stuck the
-// site on a stale jsDelivr copy while raw was already current.) Bundled is the last resort if BOTH are down.
+// CDNs are the fast path. GitHub Contents is the authoritative committed source used to escape the
+// both-CDNs-stale-200 case; if that check fails, the loader degrades to the current freshest-CDN behavior.
 const APP_DATA_CDNS = [APP_DATA_REMOTE_URL, APP_DATA_FALLBACK_URL].filter(Boolean);
+const AUTHORITATIVE_APP_DATA = APP_DATA_AUTHORITATIVE_URL || "";
+const APP_DATA_FETCH_TIMEOUT_MS = 8000;
 
 // Cache-bust EVERY fetch (forces the current file from the Netlify/bundled copy; the CDNs largely ignore the
 // query string, which is exactly why we compare freshness below rather than trusting one source's 200).
 const bust = (u) => `${u}${u.includes("?") ? "&" : "?"}t=${Date.now()}`;
 
-// app-data freshness signal: results_counted rises monotonically as games finish (groups_complete breaks ties).
-// Higher = newer. Lets us pick the freshest CDN copy so a stale cache can never mask a current one.
-function appDataFreshness(d) {
-  const rs = (d && d.real_standings) || {};
-  return (Number(rs.results_counted) || 0) * 1000 + (Number(rs.groups_complete) || 0);
+// Keep external app-data fetches bounded so a hung source cannot strand first paint.
+function fetchWithTimeout(url, options = {}, timeoutMs = APP_DATA_FETCH_TIMEOUT_MS) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeoutMs);
+  return fetch(url, { ...options, signal: controller.signal }).finally(() => clearTimeout(id));
+}
+
+async function fetchJsonCandidate(source, url) {
+  try {
+    const res = await fetchWithTimeout(bust(url), { cache: "no-store" });
+    if (!res.ok) throw new Error(`${source} app-data ${res.status}`);
+    return { source, ok: true, data: await res.json() };
+  } catch (e) {
+    return { source, ok: false, error: e };
+  }
+}
+
+async function fetchAuthoritativeAppData(url = AUTHORITATIVE_APP_DATA) {
+  if (!url) return { source: "github_contents", ok: false, error: new Error("no authoritative source configured") };
+  try {
+    const res = await fetchWithTimeout(bust(url), {
+      cache: "no-store",
+      headers: { Accept: "application/vnd.github+json" },
+    });
+    if (!res.ok) throw new Error(`github contents app-data ${res.status}`);
+    const payload = await res.json();
+    return {
+      source: "github_contents",
+      ok: true,
+      data: decodeGithubContentsJson(payload),
+      meta: { sha: payload && payload.sha },
+    };
+  } catch (e) {
+    return { source: "github_contents", ok: false, error: e };
+  }
 }
 
 // Fetch the first source that returns OK JSON; throws the LAST error only if EVERY source fails — which surfaces
@@ -48,22 +79,20 @@ async function fetchFirstOkJson(urls) {
   throw lastErr;
 }
 
-// Load the published contract: fetch BOTH CDNs in parallel and return the FRESHEST that responded (by
-// results_counted). Only if EVERY CDN is unreachable does it fall back to the Netlify-bundled copy, and only if
-// that ALSO fails does it throw (same <LoadError> screen as before — no new failure mode).
+// Load the published contract. If both CDNs are stale but GitHub Contents has a newer committed file, return
+// the authoritative file. If GitHub Contents is unavailable, keep the previous freshest-CDN behavior.
 export async function loadAppData() {
-  if (APP_DATA_CDNS.length) {
-    const settled = await Promise.allSettled(
-      APP_DATA_CDNS.map((u) =>
-        fetch(bust(u), { cache: "no-store" }).then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status))))),
-      ),
-    );
-    const ok = settled.filter((s) => s.status === "fulfilled").map((s) => s.value);
-    if (ok.length) return ok.reduce((best, d) => (appDataFreshness(d) > appDataFreshness(best) ? d : best));
+  const [cdnCandidates, authoritativeCandidate] = await Promise.all([
+    Promise.all(APP_DATA_CDNS.map((u, i) => fetchJsonCandidate(i === 0 ? "jsdelivr" : "raw", u))),
+    fetchAuthoritativeAppData(),
+  ]);
+  try {
+    return resolveAppDataSource({ cdnCandidates, authoritativeCandidate }).data;
+  } catch {
+    // Fall through to bundled last-good.
   }
-  const res = await fetch(bust(BUNDLED_APP_DATA), { cache: "no-store" });
-  if (res.ok) return await res.json();
-  throw new Error("all app-data sources unreachable");
+  const bundledCandidate = await fetchJsonCandidate("bundled", BUNDLED_APP_DATA);
+  return resolveAppDataSource({ cdnCandidates, authoritativeCandidate, bundledCandidate }).data;
 }
 
 // Optional nickname overlay (public/nicknames.json), keyed by 3-letter code:

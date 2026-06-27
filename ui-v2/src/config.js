@@ -36,6 +36,11 @@ export const APP_DATA_REMOTE_URL =
   "https://cdn.jsdelivr.net/gh/adissonhurrican/WorldCup2026@main/ui-v2/public/app-data.json";
 export const APP_DATA_FALLBACK_URL =
   "https://raw.githubusercontent.com/adissonhurrican/WorldCup2026/main/ui-v2/public/app-data.json";
+// Authoritative committed app-data copy from GitHub's Contents API. The CDNs above are still the fast path, but
+// if BOTH return stale-200 for @main, this source tells the SPA the current committed results_counted and supplies
+// the current file directly. If GitHub API is unavailable/rate-limited, the loader degrades to the CDN race.
+export const APP_DATA_AUTHORITATIVE_URL =
+  "https://api.github.com/repos/adissonhurrican/WorldCup2026/contents/ui-v2/public/app-data.json?ref=main";
 
 // The weather + squad overlays are decoupled the SAME way (jsDelivr-first → raw → bundled). They're auto-
 // committed by the loop/weather bot (which also purges jsDelivr) and the build-ignore skips those commits, so
