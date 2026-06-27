@@ -5,11 +5,11 @@ import { teamByCode } from "../lib/select";
 import { buildBracket } from "../lib/bracket";
 
 // BRACKET tab — ESPN-style knockout tree (R32 -> Final) with connector lines linking each match to the two that
-// feed it. Shows the model's PROJECTED matchups (SHOW_PROJECTIONS=true in lib/bracket.js) together with the "How
-// the bracket works" explanation, so a projection never appears without its context. Each projected slot carries a
-// "proj" indicator; real teams fill in (and lose the indicator) as groups complete and knockout results advance.
-// Mobile: the rounds scroll horizontally. The connectors are an SVG overlay measured from the rendered card
-// positions, so they stay correct across the justify-around layout, horizontal scroll, and live re-projections.
+// feed it. Each slot shows a REAL team ONLY when it is mathematically CLINCHED into that exact slot (see
+// lib/bracket.js + lib/bracket-clinch.js); otherwise it shows the position/pool label. No projections, no "proj"
+// indicator — a slot fills in the moment its team is provable, and as knockout results advance. The "How the
+// bracket works" explanation rides alongside. Mobile: the rounds scroll horizontally. The connectors are an SVG
+// overlay measured from the rendered card positions, so they stay correct across the layout, scroll, and updates.
 
 const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 function dateText(m) {
@@ -30,23 +30,21 @@ function slotLabel(side) {
     .replace(/^Runner-up M/, "Loser M");
 }
 
-// One slot row. Three states: REAL team (resolved — flag + bold name, winner ✓ / loser greyed); PROJECTED team
-// (model's pick on an undecided slot — flag + muted name + a "proj" tag); or, until a team is known, the position label.
+// One slot row. Two states: a LOCKED-IN team (mathematically certain of the slot — flag + bold name, winner ✓ /
+// loser greyed once a result lands), or — until then — the position / pool label. No projections, so no "proj" tag.
 function Slot({ data, side }) {
   const team = side.code ? (teamByCode(data, side.code) || { code: side.code }) : null;
   const grey = side.isLoser;
-  const projected = side.projected;
   return (
     <div className={`flex items-center gap-1.5 px-2 py-1 ${grey ? "opacity-50" : ""}`}>
       {team
         ? <Flag team={team} size={18} className={grey ? "grayscale" : ""} />
         : <span className="h-[18px] w-[18px] shrink-0 rounded-full bg-fill/10" />}
       <span className={`min-w-0 flex-1 truncate ${team
-        ? `text-[12px] ${side.isWinner ? "font-bold text-ink" : grey ? "font-medium text-ink-3" : projected ? "font-medium text-ink-2" : "font-semibold text-ink-2"}`
+        ? `text-[12px] ${side.isWinner ? "font-bold text-ink" : grey ? "font-medium text-ink-3" : "font-semibold text-ink-2"}`
         : "text-[11px] font-medium text-ink-3"}`}>
         {team ? (team.name || team.code) : slotLabel(side)}
       </span>
-      {projected && <span className="shrink-0 rounded bg-fill/10 px-1 py-px text-[8px] font-semibold uppercase tracking-wide text-ink-3">proj</span>}
       {side.score != null && (
         <span className={`shrink-0 tabular-nums text-[12px] ${side.isWinner ? "font-bold text-ink" : "text-ink-3"}`}>{side.score}</span>
       )}
@@ -133,15 +131,14 @@ function BracketTree({ data, rounds }) {
   );
 }
 
-// "How the bracket works" — approved copy (verbatim). First sentence of each paragraph is emphasised for scanning;
-// the wording is unchanged. Collapsible so it is available but not overwhelming; a short framing line stays visible
-// above it so the projections are never shown without their context.
+// "How the bracket works" — explains the single clinch rule (a team shows only when mathematically locked into
+// its exact slot; otherwise the position/pool label). First sentence of each paragraph is emphasised for scanning.
+// Collapsible so it is available but not overwhelming; a short framing line stays visible above it.
 const HOW_PARAS = [
-  ["It's a projection, not a result.", "No knockout matches have been played yet, so every team you see in a slot is our model's best guess at who will end up there. It is based on the group games played so far plus 20,000 simulations of how the rest of the tournament could unfold."],
-  ["It updates after every match.", "Each result feeds back into the model, so the bracket recalculates continuously. A team that looks safe today can slip tomorrow, and a team on the bubble can climb in. If you check back after a match, expect things to have shifted. That is the model staying current, not flip flopping."],
-  ["We show the single most likely bracket.", "For each slot we place the team most likely to fill it, but most likely is not certain. Your team might be, say, 64 percent to advance across many different paths yet still not appear in this one snapshot. That is why we also show each team's overall chance to advance. That percentage is the fuller picture, and the bracket is one likely version of events."],
-  ["The third place spots are the trickiest, and they compare teams across groups.", "Eight of the twelve third placed teams qualify, so four groups miss out. To decide which eight, the model ranks every group's third placed team against the others and slots the qualifiers in following FIFA's official chart. Because that comparison spans all the groups, a third placed team can move in or out as other groups play, and the exact lineup only locks once every group has finished."],
-  ["It becomes real as groups finish.", "The moment a group is decided, its actual winner and runner up lock into the bracket with no more guessing. By the time the group stage ends, the projections are replaced entirely by the real teams, and from the Round of 32 onward, real results carry teams forward."],
+  ["We only show a team once it is mathematically locked in.", "Every team you see in a slot is certain of that exact spot, no matter how the remaining group games go. There is no guessing or projecting. Until a slot is locked, it shows where its team will come from, not a prediction."],
+  ["Group winners and runners up lock the moment they cannot be caught.", "As soon as a team is mathematically guaranteed to win its group, or to finish second, it drops into its knockout slot, even before the group has finished playing. Until then you see Winner Group X or Runner-up Group X."],
+  ["The eight best third placed teams are the trickiest.", "Eight of the twelve third placed teams advance, and FIFA's official chart decides which group's third plays whom, a decision that depends on all the groups. So a third only locks into a slot once it is certain both to qualify and that its exact opponent can no longer change. Until then you see the pool it will come from, for example Best 3rd from {A/B/C/D/F}."],
+  ["It fills in after every match, and becomes fully real as groups finish.", "Each result can lock another team into place. By the time the group stage ends every slot is a real team, and from the Round of 32 onward real results carry the winners forward."],
 ];
 
 function HowItWorks() {
@@ -213,12 +210,12 @@ export default function BracketView({ data, rightAction }) {
 
   return (
     <Screen stickyTitle="Bracket" rightAction={rightAction} header={header}>
-      {/* Always-visible framing so projections never read as settled results, + the full explanation one tap away.
-          Leads with the product principle: we never lock a matchup while any team still has a path to that spot. */}
+      {/* Always-visible framing, + the full explanation one tap away. Leads with the product principle: we never
+          lock a slot while any team still has a path to it — a team shows only once it's mathematically certain. */}
       <p className="px-1 text-[12.5px] leading-snug text-ink-2">
-        <span className="font-semibold text-ink">As long as any team still has a chance to reach the Round of 32, we won't lock a matchup in.</span>{" "}
-        So these are projected pairings, not results — our model's best guess, updating after every match as real teams
-        replace the projections when groups finish.
+        <span className="font-semibold text-ink">As long as any team still has a chance at a slot, we won't lock it in.</span>{" "}
+        We show a team only once it's mathematically certain of that exact spot — until then you see the group or pool
+        it'll come from. No guessing; real teams lock in as the math settles, after every match.
       </p>
       <HowItWorks />
 
@@ -234,7 +231,8 @@ export default function BracketView({ data, rightAction }) {
       )}
 
       <p className="mt-5 text-center text-[12px] text-ink-3">
-        Projected from our simulation. Updates after every match; real teams replace projections as groups finish.
+        A team appears only once it's mathematically locked into the slot. More lock in after every match, until
+        the whole bracket is real.
       </p>
     </Screen>
   );
