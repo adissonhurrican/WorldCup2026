@@ -644,54 +644,54 @@
       "group": "G",
       "standings": [
         {
-          "code": "EGY",
-          "win_group": 0.5692,
-          "top_2": 0.8223,
+          "code": "BEL",
+          "win_group": 0.652,
+          "top_2": 1,
           "advance": 1,
           "finish_distribution": {
-            "1st": 0.5692,
-            "2nd": 0.2531,
-            "3rd": 0.1777,
+            "1st": 0.652,
+            "2nd": 0.348,
+            "3rd": 0,
             "4th": 0
           },
           "projected_finish": "1st"
         },
         {
-          "code": "IRN",
-          "win_group": 0.2864,
-          "top_2": 0.4181,
-          "advance": 0.6434,
+          "code": "EGY",
+          "win_group": 0.3409,
+          "top_2": 0.6138,
+          "advance": 1,
           "finish_distribution": {
-            "1st": 0.2864,
-            "2nd": 0.1317,
-            "3rd": 0.4993,
-            "4th": 0.0825
+            "1st": 0.3409,
+            "2nd": 0.2729,
+            "3rd": 0.3862,
+            "4th": 0
           },
           "projected_finish": "3rd"
         },
         {
-          "code": "BEL",
-          "win_group": 0.1444,
-          "top_2": 0.5639,
-          "advance": 0.6713,
+          "code": "IRN",
+          "win_group": 0.0071,
+          "top_2": 0.3862,
+          "advance": 0.6411,
           "finish_distribution": {
-            "1st": 0.1444,
-            "2nd": 0.4195,
-            "3rd": 0.1659,
-            "4th": 0.2702
+            "1st": 0.0071,
+            "2nd": 0.3791,
+            "3rd": 0.6138,
+            "4th": 0
           },
-          "projected_finish": "2nd"
+          "projected_finish": "3rd"
         },
         {
           "code": "NZL",
           "win_group": 0,
-          "top_2": 0.1956,
-          "advance": 0.3211,
+          "top_2": 0,
+          "advance": 0,
           "finish_distribution": {
             "1st": 0,
-            "2nd": 0.1956,
-            "3rd": 0.1571,
-            "4th": 0.6473
+            "2nd": 0,
+            "3rd": 0,
+            "4th": 1
           },
           "projected_finish": "4th"
         }
@@ -787,7 +787,7 @@
           "code": "SEN",
           "win_group": 0,
           "top_2": 0,
-          "advance": 0.9816,
+          "advance": 0.9761,
           "finish_distribution": {
             "1st": 0,
             "2nd": 0,
@@ -1957,7 +1957,11 @@
         "draw": 0.2195,
         "away_win": 0.4625
       },
-      "result": null,
+      "result": {
+        "home_score": 1,
+        "away_score": 5,
+        "status": "final"
+      },
       "live_score_ref": null
     },
     {
@@ -3147,9 +3151,9 @@
         "team": null
       },
       "prediction": {
-        "team_a_win_probability": 0.4103,
-        "team_b_win_probability": 0.5897,
-        "elo_a": 1689,
+        "team_a_win_probability": 0.6584,
+        "team_b_win_probability": 0.3416,
+        "elo_a": 1866,
         "elo_b": 1752,
         "elo_source": "pre_tournament",
         "basis": "projected",
@@ -3282,10 +3286,10 @@
         "team": null
       },
       "prediction": {
-        "team_a_win_probability": 0.5331,
-        "team_b_win_probability": 0.4669,
+        "team_a_win_probability": 0.6776,
+        "team_b_win_probability": 0.3224,
         "elo_a": 1889,
-        "elo_b": 1866,
+        "elo_b": 1760,
         "elo_source": "pre_tournament",
         "basis": "projected",
         "method": "neutral_elo_single_match"
@@ -3417,10 +3421,10 @@
         "team": null
       },
       "prediction": {
-        "team_a_win_probability": 0.5331,
-        "team_b_win_probability": 0.4669,
+        "team_a_win_probability": 0.6321,
+        "team_b_win_probability": 0.3679,
         "elo_a": 1783,
-        "elo_b": 1760,
+        "elo_b": 1689,
         "elo_source": "pre_tournament",
         "basis": "projected",
         "method": "neutral_elo_single_match"
@@ -5624,9 +5628,9 @@
           "depends_on_other_groups": [
             "A",
             "C",
+            "I",
             "L",
-            "G",
-            "I"
+            "G"
           ],
           "decided_by": []
         }
@@ -5638,11 +5642,11 @@
         "watch_groups": [
           "A",
           "C",
+          "I",
           "L",
-          "G",
-          "I"
+          "G"
         ],
-        "needs": "Finishing 3rd, ALG advances in ~49% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#28) vs other groups' thirds (most often A/C/L/G/I).",
+        "needs": "Finishing 3rd, ALG advances in ~49% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#28) vs other groups' thirds (most often A/C/I/L/G).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -2,
@@ -5739,8 +5743,8 @@
             "A",
             "C",
             "L",
-            "G",
-            "I"
+            "I",
+            "G"
           ],
           "decided_by": []
         }
@@ -5753,10 +5757,10 @@
           "A",
           "C",
           "L",
-          "G",
-          "I"
+          "I",
+          "G"
         ],
-        "needs": "Finishing 3rd, AUT advances in ~61% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#24) vs other groups' thirds (most often A/C/L/G/I).",
+        "needs": "Finishing 3rd, AUT advances in ~61% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#24) vs other groups' thirds (most often A/C/L/I/G).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -1,
@@ -5768,13 +5772,13 @@
     },
     {
       "code": "BEL",
-      "advance_chance": 0.6713,
+      "advance_chance": 1,
       "in_their_hands": true,
       "routes": [
         {
           "route": "Win the group",
-          "chance": 0.1444,
-          "own_form": "Win group: typically 5 pts (1W 2D 0L); from 2 pts now, ~3 more from the last 1",
+          "chance": 0.652,
+          "own_form": "Win group: typically 5 pts (1W 2D 0L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -5787,8 +5791,8 @@
         },
         {
           "route": "Finish runner-up",
-          "chance": 0.4195,
-          "own_form": "Runner-up: typically 5 pts (1W 2D 0L); as low as 3 pts in our simulations; from 2 pts now, ~3 more from the last 1",
+          "chance": 0.348,
+          "own_form": "Runner-up: typically 5 pts (1W 2D 0L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -5798,39 +5802,15 @@
             "fair play",
             "FIFA ranking"
           ]
-        },
-        {
-          "route": "Advance as best third",
-          "chance": 0.1073,
-          "own_form": "Best third: typically 3 pts (0W 3D 0L); from 2 pts now, ~1 more from the last 1",
-          "depends_on_other_groups": [
-            "A",
-            "J",
-            "C",
-            "L",
-            "I"
-          ],
-          "decided_by": []
         }
       ],
       "third_place_race": {
-        "in_race": true,
-        "advances_if_third": 0.6468,
+        "in_race": false,
+        "advances_if_third": 0,
         "race_position": 7,
-        "watch_groups": [
-          "A",
-          "J",
-          "C",
-          "L",
-          "I"
-        ],
-        "needs": "Finishing 3rd, BEL advances in ~65% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#9) vs other groups' thirds (most often A/J/C/L/I).",
-        "thresholds": {
-          "min_points": 3,
-          "min_overall_gd": 0,
-          "min_goals_for": 1,
-          "beats_rival_if": "BEL overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 9)"
-        },
+        "watch_groups": [],
+        "needs": null,
+        "thresholds": null,
         "locked_record": null
       }
     },
@@ -6014,7 +5994,7 @@
             "J",
             "C",
             "L",
-            "G"
+            "I"
           ],
           "decided_by": []
         }
@@ -6028,9 +6008,9 @@
           "J",
           "C",
           "L",
-          "G"
+          "I"
         ],
-        "needs": "Finishing 3rd, COD advances in ~57% of cases; more likely than not once overall GD >= 0 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#46) vs other groups' thirds (most often A/J/C/L/G).",
+        "needs": "Finishing 3rd, COD advances in ~57% of cases; more likely than not once overall GD >= 0 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#46) vs other groups' thirds (most often A/J/C/L/I).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": 0,
@@ -6155,8 +6135,8 @@
             "A",
             "C",
             "J",
-            "G",
-            "I"
+            "I",
+            "G"
           ],
           "decided_by": []
         }
@@ -6169,10 +6149,10 @@
           "A",
           "C",
           "J",
-          "G",
-          "I"
+          "I",
+          "G"
         ],
-        "needs": "Finishing 3rd, CRO advances in ~56% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#11) vs other groups' thirds (most often A/C/J/G/I).",
+        "needs": "Finishing 3rd, CRO advances in ~56% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#11) vs other groups' thirds (most often A/C/J/I/G).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -1,
@@ -6281,8 +6261,8 @@
       "routes": [
         {
           "route": "Win the group",
-          "chance": 0.5692,
-          "own_form": "Win group: typically 7 pts (2W 1D 0L); as low as 5 pts in our simulations; from 4 pts now, ~3 more from the last 1",
+          "chance": 0.3409,
+          "own_form": "Win group: typically 7 pts (2W 1D 0L); from 4 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -6295,8 +6275,8 @@
         },
         {
           "route": "Finish runner-up",
-          "chance": 0.2531,
-          "own_form": "Runner-up: typically 4 pts (1W 1D 1L); from 4 pts now, ~0 more from the last 1",
+          "chance": 0.2729,
+          "own_form": "Runner-up: typically 5 pts (1W 2D 0L); from 4 pts now, ~1 more from the last 1",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -6309,14 +6289,14 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.1777,
+          "chance": 0.3862,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 4 pts now, ~0 more from the last 1",
           "depends_on_other_groups": [
             "A",
             "I",
             "J",
-            "L",
-            "C"
+            "C",
+            "L"
           ],
           "decided_by": []
         }
@@ -6329,10 +6309,10 @@
           "A",
           "I",
           "J",
-          "L",
-          "C"
+          "C",
+          "L"
         ],
-        "needs": "Finishing 3rd, EGY advances in ~100% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#29) vs other groups' thirds (most often A/I/J/L/C).",
+        "needs": "Finishing 3rd, EGY advances in ~100% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#29) vs other groups' thirds (most often A/I/J/C/L).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -3,
@@ -6383,8 +6363,8 @@
             "A",
             "J",
             "C",
-            "G",
-            "I"
+            "I",
+            "G"
           ],
           "decided_by": []
         }
@@ -6397,10 +6377,10 @@
           "A",
           "J",
           "C",
-          "G",
-          "I"
+          "I",
+          "G"
         ],
-        "needs": "Finishing 3rd, ENG advances in ~100% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#4) vs other groups' thirds (most often A/J/C/G/I).",
+        "needs": "Finishing 3rd, ENG advances in ~100% of cases; more likely than not once overall GD >= -3 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#4) vs other groups' thirds (most often A/J/C/I/G).",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -3,
@@ -6585,12 +6565,12 @@
     },
     {
       "code": "IRN",
-      "advance_chance": 0.6434,
+      "advance_chance": 0.6411,
       "in_their_hands": true,
       "routes": [
         {
           "route": "Win the group",
-          "chance": 0.2864,
+          "chance": 0.0071,
           "own_form": "Win group: typically 5 pts (1W 2D 0L); from 2 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [],
           "decided_by": [
@@ -6604,8 +6584,8 @@
         },
         {
           "route": "Finish runner-up",
-          "chance": 0.1317,
-          "own_form": "Runner-up: typically 5 pts (1W 2D 0L); as low as 3 pts in our simulations; from 2 pts now, ~3 more from the last 1",
+          "chance": 0.3791,
+          "own_form": "Runner-up: typically 5 pts (1W 2D 0L); from 2 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -6618,7 +6598,7 @@
         },
         {
           "route": "Advance as best third",
-          "chance": 0.2253,
+          "chance": 0.255,
           "own_form": "Best third: typically 3 pts (0W 3D 0L); from 2 pts now, ~1 more from the last 1",
           "depends_on_other_groups": [
             "A",
@@ -6632,7 +6612,7 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.4512,
+        "advances_if_third": 0.4154,
         "race_position": 7,
         "watch_groups": [
           "A",
@@ -6641,11 +6621,11 @@
           "L",
           "I"
         ],
-        "needs": "Finishing 3rd, IRN advances in ~45% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#20) vs other groups' thirds (most often A/J/C/L/I).",
+        "needs": "Finishing 3rd, IRN advances in ~42% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#20) vs other groups' thirds (most often A/J/C/L/I).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": 0,
-          "min_goals_for": 3,
+          "min_goals_for": 4,
           "beats_rival_if": "IRN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 20)"
         },
         "locked_record": null
@@ -6919,51 +6899,16 @@
     },
     {
       "code": "NZL",
-      "advance_chance": 0.3211,
+      "advance_chance": 0,
       "in_their_hands": true,
-      "routes": [
-        {
-          "route": "Finish runner-up",
-          "chance": 0.1956,
-          "own_form": "Runner-up: typically 4 pts (1W 1D 1L); from 1 pts now, ~3 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
-          "route": "Advance as best third",
-          "chance": 0.1255,
-          "own_form": "Best third: typically 4 pts (1W 1D 1L); from 1 pts now, ~3 more from the last 1",
-          "depends_on_other_groups": [
-            "A",
-            "I",
-            "J"
-          ],
-          "decided_by": []
-        }
-      ],
+      "routes": [],
       "third_place_race": {
-        "in_race": true,
-        "advances_if_third": 0.7985,
+        "in_race": false,
+        "advances_if_third": 0,
         "race_position": 7,
-        "watch_groups": [
-          "A",
-          "I",
-          "J"
-        ],
-        "needs": "Finishing 3rd, NZL advances in ~80% of cases; more likely than not once overall GD >= -1 (with >= 4 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#85) vs other groups' thirds (most often A/I/J).",
-        "thresholds": {
-          "min_points": 4,
-          "min_overall_gd": -1,
-          "min_goals_for": 4,
-          "beats_rival_if": "NZL overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 85)"
-        },
+        "watch_groups": [],
+        "needs": null,
+        "thresholds": null,
         "locked_record": null
       }
     },
@@ -7217,12 +7162,12 @@
     },
     {
       "code": "SEN",
-      "advance_chance": 0.9816,
+      "advance_chance": 0.9761,
       "in_their_hands": false,
       "routes": [
         {
           "route": "Advance as best third",
-          "chance": 0.9816,
+          "chance": 0.9761,
           "own_form": "Locked record: 3 pts / GD +2 / GF 8",
           "depends_on_other_groups": [
             "G",
@@ -7235,7 +7180,7 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.9816,
+        "advances_if_third": 0.9761,
         "race_position": 5,
         "watch_groups": [
           "G",
@@ -7499,7 +7444,7 @@
             "J",
             "L",
             "C",
-            "G"
+            "I"
           ],
           "decided_by": []
         }
@@ -7513,9 +7458,9 @@
           "J",
           "L",
           "C",
-          "G"
+          "I"
         ],
-        "needs": "Finishing 3rd, UZB advances in ~1% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#50) vs other groups' thirds (most often A/J/L/C/G).",
+        "needs": "Finishing 3rd, UZB advances in ~1% of cases; more likely than not once overall GD >= -1 (with >= 3 pts). Global last-qualifying third ~3 pts / GD -1 / GF 2; final slot decided by GD, GF, fair play, FIFA rank (#50) vs other groups' thirds (most often A/J/L/C/I).",
         "thresholds": {
           "min_points": 3,
           "min_overall_gd": -1,
@@ -7613,8 +7558,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "New Zealand Face an Uphill Climb in Group G",
-      "body": "New Zealand find themselves in a tough spot after two matches, facing an uphill battle to reach the knockouts. With one point on the board, our tournament simulation gives the All Whites a 32% chance to advance to the Round of 32. They are currently sitting at the bottom of Group G, adrift of the pace. Egypt have already secured their spot, leaving New Zealand chasing Iran, who sit comfortably ahead with a 66% chance of going through. To keep their hopes alive, New Zealand must find a win in their final group match. Their cleanest route is to leapfrog into the top two, though that remains a slim possibility. More likely, their path forward relies on a back-door route as one of the best third-placed teams, a scenario that would leave their fate resting on results in other groups. With all four placements still mathematically reachable, the final round of games will decide everything.",
+      "headline": "New Zealand Face a Clear Equation Against Belgium",
+      "body": "New Zealand find themselves in a highly challenging position at the bottom of Group G, currently sitting fourth with one point from three matches. They are adrift at the foot of the table, with their closest rival, Iran, holding a 64% chance to reach the knockouts. Because Egypt and Iran still have games in hand, the table remains provisional and will shift once those rivals play. For New Zealand, the tournament simulation shows a 0% overall chance of advancing under normal expectations, but a mathematical door remains open. Their path is entirely binary: they must defeat Belgium. A victory over Belgium would clinch a spot in the knockouts regardless of other groups. However, any other result—a draw or a loss—means elimination. Because they cannot finish in a stable third-place position with a draw, there is no back-door route to rely on. It is a dignified but steep climb for the All Whites, who must secure all three points in their final match to keep their journey alive.",
       "team_code": "NZL"
     },
     {
@@ -7673,8 +7618,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Iran Control Their Destiny in Tight Group G Race",
-      "body": "Iran are in a decent position to reach the knockouts, with their fate very much in their own hands. Sitting second in Group G with two points after two rounds, they are locked in a tight race, with Belgium right on their heels at 67% to advance. Our tournament simulation gives Iran a 64% chance to go through to the Round of 32. A win against Egypt in their final match guarantees advancement. If they draw, they will likely finish third, leaving them with roughly a coin-flip chance of moving on. In that scenario, their survival would depend on how third-place teams in other groups fare, with a three-point total and neutral goal difference leaving them right on the bubble. A narrow defeat keeps a slim back-door route open, but a loss by two or more goals means certain elimination. While finishing in the top two remains their cleanest path, avoiding defeat is the absolute priority to keep their tournament alive.",
+      "headline": "Iran's Knockout Hopes Hang on Final Group G Clash",
+      "body": "Iran are in a decent position to reach the knockouts, holding a 64% chance to advance to the Round of 32. They sit third in Group G, chasing Egypt who are comfortably ahead with a guaranteed spot. New Zealand are already out of the running. Because the group round is still incomplete, this table will shift once the final matches are played. A direct win over Egypt would instantly clinch a top-two finish, which is their cleanest route. If they draw, they will likely finish third and must rely on the best-third-place back door. Currently, Iran sit as the tenth-best third-place team, just one point behind the qualifying cut-off. If they do finish third, the back-door route is far from a guarantee—our tournament simulation shows they would advance in about 42% of those third-place scenarios, meaning they would be at the mercy of results in other groups. To keep control in their own hands, Iran need to target all three points in their final match.",
       "team_code": "IRN"
     },
     {
@@ -7697,8 +7642,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Egypt in Command of Group G",
-      "body": "Egypt are in a fantastic position to reach the knockouts, sitting comfortably clear at the top of Group G. Our group-stage model shows they have a 100% chance to advance to the Round of 32. While Belgium are their nearest rivals, Egypt hold a clear cushion over them and the rest of the chasing pack. With two rounds complete, Egypt lead the group on four points after a draw with Belgium and a convincing 3-1 win over New Zealand. Their primary route is finishing in the top two, which is highly likely. They can secure the top spot with a strong final match, though even a slip-up leaves them with a very reliable back-door route as one of the best third-place teams. Everything is in Egypt's hands as they look to close out the group stage.",
+      "headline": "Egypt on the Brink of the Knockout Stage",
+      "body": "Egypt are in a perfect position, with their place in the knockouts already mathematically assured. Sitting second in Group G on four points with a game in hand, they are chasing Belgium, who lead the group but are very catchable. A final-matchday meeting with Iran will settle the final order. Egypt are more likely than not to secure a top-two finish, which remains their cleanest path. However, even if they slip to third, the back-door route is a completely reliable safety net, as our tournament simulation shows they would advance in every single scenario from that position. A win or a draw against Iran guarantees a top-two spot, and they would even go through with a narrow defeat. Only an extremely heavy loss of four or more goals would force them to watch other groups, but even then, their current four-point foundation makes them incredibly safe. With one round of games still to play for the other teams, the table will shift, but Egypt's ticket to the Round of 32 is already secure.",
       "team_code": "EGY"
     },
     {
@@ -7757,8 +7702,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Belgium's Knockout Hopes Hang on Final Matchday Clash",
-      "body": "Belgium are in a decent position to reach the knockouts, but they face a tense final matchday to secure their spot. Our tournament simulation gives them a 67% chance to advance to the Round of 32. They currently sit third in Group G on two points, right behind Iran on goal difference, while Egypt have already run away with the top spot. A win over New Zealand guarantees safe passage into the top two. If they draw, they will finish with three points and likely have to rely on the third-place safety net. Fortunately, that back-door route is relatively reliable; if Belgium finish third, they still advance in about 65% of our model's scenarios. However, they cannot afford to slip up entirely. A loss by two or more goals would mean instant elimination. With Iran pressing hard from second place, Belgium's destiny is still very much in their own hands, but the margin for error has completely disappeared.",
+      "headline": "Belgium Lead Group G but Face a Tense Wait",
+      "body": "Belgium are in a fantastic position to reach the knockouts, holding a 100% chance of advancing to the Round of 32. They currently sit top of Group G with five points, but their work is not quite done. Egypt are right on their heels at 100% to advance, and because Egypt and Iran still have games in hand, this provisional lead will shift once those rivals play. Our tournament simulation shows Belgium are guaranteed to go through in the top two, with roughly a two-in-three chance of winning the group outright and a remaining 35% chance of finishing as runners-up. Because they are mathematically locked into a top-two finish, they do not need to worry about the complicated third-place back door. A win over New Zealand in their final match would have clinched their spot outright, but their undefeated five-point record has already secured their passage. Now, they must watch the remaining group fixtures to see if they will hold onto the top spot or advance as runners-up.",
       "team_code": "BEL"
     },
     {
@@ -8711,7 +8656,7 @@
     "label": "Real group table computed from verified match results using the FIFA 2026 Article 13 tiebreakers — distinct from the predicted/projected probabilities table.",
     "source_label": "our verified results + the 2026 advancement rules",
     "status": "in_progress",
-    "results_counted": 64,
+    "results_counted": 65,
     "groups_complete": 8,
     "groups": [
       {
@@ -9143,10 +9088,26 @@
       {
         "group": "G",
         "complete": false,
-        "games_played": 4,
+        "games_played": 5,
         "standings": [
           {
             "position": 1,
+            "code": "BEL",
+            "name": "Belgium",
+            "played": 3,
+            "won": 1,
+            "drawn": 2,
+            "lost": 0,
+            "goals_for": 6,
+            "goals_against": 2,
+            "goal_difference": 4,
+            "points": 5,
+            "advance_state": "qualified",
+            "band": "green",
+            "decided": false
+          },
+          {
+            "position": 2,
             "code": "EGY",
             "name": "Egypt",
             "played": 2,
@@ -9162,7 +9123,7 @@
             "decided": false
           },
           {
-            "position": 2,
+            "position": 3,
             "code": "IRN",
             "name": "Iran",
             "played": 2,
@@ -9173,22 +9134,6 @@
             "goals_against": 2,
             "goal_difference": 0,
             "points": 2,
-            "advance_state": "qualified",
-            "band": "green",
-            "decided": false
-          },
-          {
-            "position": 3,
-            "code": "BEL",
-            "name": "Belgium",
-            "played": 2,
-            "won": 0,
-            "drawn": 2,
-            "lost": 0,
-            "goals_for": 1,
-            "goals_against": 1,
-            "goal_difference": 0,
-            "points": 2,
             "advance_state": "best_third_out",
             "band": "amber",
             "decided": false
@@ -9197,13 +9142,13 @@
             "position": 4,
             "code": "NZL",
             "name": "New Zealand",
-            "played": 2,
+            "played": 3,
             "won": 0,
             "drawn": 1,
-            "lost": 1,
-            "goals_for": 3,
-            "goals_against": 5,
-            "goal_difference": -2,
+            "lost": 2,
+            "goals_for": 4,
+            "goals_against": 10,
+            "goal_difference": -6,
             "points": 1,
             "advance_state": "eliminated",
             "band": "gray",
@@ -9663,11 +9608,11 @@
           "group_complete": true
         },
         {
-          "code": "BEL",
+          "code": "IRN",
           "group": "G",
           "points": 2,
           "goal_difference": 0,
-          "goals_for": 1,
+          "goals_for": 2,
           "rank": 10,
           "in_best_8": false,
           "group_complete": false
@@ -9778,8 +9723,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -9868,8 +9813,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -9958,8 +9903,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -10048,8 +9993,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -10072,8 +10017,8 @@
         "opponent_slot": "Best 3rd from E/F/G/I/J",
         "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "BEL",
-          "name": "Belgium"
+          "code": "IRN",
+          "name": "Iran"
         },
         "real_opponent": null
       },
@@ -10165,8 +10110,8 @@
         "opponent_slot": "Best 3rd from E/F/G/I/J",
         "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "BEL",
-          "name": "Belgium"
+          "code": "IRN",
+          "name": "Iran"
         },
         "real_opponent": null
       },
@@ -10258,8 +10203,8 @@
         "opponent_slot": "Best 3rd from E/F/G/I/J",
         "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "BEL",
-          "name": "Belgium"
+          "code": "IRN",
+          "name": "Iran"
         },
         "real_opponent": null
       },
@@ -10351,8 +10296,8 @@
         "opponent_slot": "Best 3rd from E/F/G/I/J",
         "opponent_kind": "best_third",
         "projected_opponent": {
-          "code": "BEL",
-          "name": "Belgium"
+          "code": "IRN",
+          "name": "Iran"
         },
         "real_opponent": null
       },
@@ -10930,8 +10875,8 @@
         "opponent_slot": "Runner-up Group G",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "IRN",
-          "name": "Iran"
+          "code": "EGY",
+          "name": "Egypt"
         },
         "real_opponent": null
       },
@@ -11038,8 +10983,8 @@
         "opponent_slot": "Runner-up Group G",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "IRN",
-          "name": "Iran"
+          "code": "EGY",
+          "name": "Egypt"
         },
         "real_opponent": null
       },
@@ -11146,8 +11091,8 @@
         "opponent_slot": "Runner-up Group G",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "IRN",
-          "name": "Iran"
+          "code": "EGY",
+          "name": "Egypt"
         },
         "real_opponent": null
       },
@@ -11254,8 +11199,8 @@
         "opponent_slot": "Runner-up Group G",
         "opponent_kind": "group_runner_up",
         "projected_opponent": {
-          "code": "IRN",
-          "name": "Iran"
+          "code": "EGY",
+          "name": "Egypt"
         },
         "real_opponent": null
       },
@@ -11449,8 +11394,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -11617,8 +11562,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -11785,8 +11730,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -11953,8 +11898,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -13126,8 +13071,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -13252,8 +13197,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -13378,8 +13323,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -13504,8 +13449,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           }
@@ -13633,8 +13578,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -13801,8 +13746,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -13969,8 +13914,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -14137,8 +14082,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -14287,8 +14232,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -14437,8 +14382,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -14587,8 +14532,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
@@ -14737,8 +14682,8 @@
             "opponent_slot": "Winner Group G",
             "opponent_kind": "group_winner",
             "projected_opponent": {
-              "code": "EGY",
-              "name": "Egypt"
+              "code": "BEL",
+              "name": "Belgium"
             },
             "real_opponent": null
           },
