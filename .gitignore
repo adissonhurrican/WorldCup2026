@@ -86,6 +86,7 @@ scripts/**
 !scripts/worldcup/live/narration-affected-teams.ts
 !scripts/worldcup/live/live-update-orchestrator.ts
 !scripts/worldcup/live/run-supervised-loop-cron.mjs
+!scripts/worldcup/live/knockout-delayed-reenrich.mjs
 !scripts/worldcup/live/write-live-scores.ts
 !scripts/worldcup/live/fetch-match-lineups.mjs
 !scripts/worldcup/live/export-lineups.mjs

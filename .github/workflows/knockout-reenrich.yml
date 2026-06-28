@@ -1,0 +1,57 @@
+name: WC2026 Knockout Delayed Re-enrich
+
+# ISOLATED enrichment job — matures xG + assists for played KNOCKOUT fixtures a few hours AFTER full-time (the
+# group stage proved capture-at-FT misses them), and refreshes the context aggregates (leaderboards / injuries /
+# team stats / H2H). Runs SEPARATELY from the live loop.
+#
+# WHY THIS CANNOT HARM THE LIVE LOOP (isolation is the whole point):
+#  - It writes ONLY to API-Football enrichment + wc2026_* context tables. It NEVER touches app-data.json, the
+#    results/bracket/elo/prediction tables, or git. There is NO commit / push / publish step here at all.
+#  - Different workflow + concurrency group from the loop; shares no files. A failure here is logged and the job
+#    goes RED in isolation — the loop (results, bracket, K=60, publish) is completely unaffected.
+#  - The script itself is fail-soft (per-fixture + per-aggregate try/catch), idempotent (gap-fill NULLs only,
+#    insert-missing, upsert), and targets ONLY played KO fixtures still needing maturation (no speculative firing).
+
+"on":
+  schedule:
+    # Every 3h (UTC). The maturation window is ~3-6h after FT; the script also re-targets fixtures finished within
+    # the last 48h, so a KO match gets several passes until xG + assists land. No-op when nothing is played.
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run (no DB writes) — verify targeting + idempotency without committing data"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wc2026-knockout-reenrich
+  cancel-in-progress: false
+
+jobs:
+  reenrich:
+    name: Mature knockout xG/assists + refresh context aggregates (DB-only, isolated)
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install pg (the script's only dependency)
+        run: npm install pg --no-fund --no-audit
+
+      - name: Run delayed re-enrich
+        # DB-only writes (enrichment + context tables). dry_run dispatch input gates --execute so a manual run can
+        # verify targeting without writing. Scheduled runs always execute.
+        run: node scripts/worldcup/live/knockout-delayed-reenrich.mjs ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run == true) && ' ' || '--execute' }}
