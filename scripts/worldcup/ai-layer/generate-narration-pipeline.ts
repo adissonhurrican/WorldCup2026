@@ -5,8 +5,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateAndRepairAiOutput } from "./validate-and-repair";
 
-// AI NARRATION PRODUCTION PIPELINE — context (LIVE runs) -> Gemini (system-prompt v0.8) -> validate-and-repair -> store.
-// INTEGRATION ONLY: reuses system-prompt.md (v0.8), validate-and-repair.ts, and the Gemini fetch mechanism from the
+// AI NARRATION PRODUCTION PIPELINE — context (LIVE runs) -> Gemini (system-prompt v0.9) -> validate-and-repair -> store.
+// INTEGRATION ONLY: reuses system-prompt.md (v0.9), validate-and-repair.ts, and the Gemini fetch mechanism from the
 // bake-off. AI EXPLAINS, NEVER INVENTS — validate-and-repair gates storage; only valid output is stored (validated=true).
 // No internal IDs in prose. No odds/predictions/betting. Gemini = production model. CLI/execSql writes the narration
 // table; MCP/CLI read-only for run data. No model/prediction changes. Does NOT touch the export job / UI / player-stats.
@@ -19,7 +19,7 @@ const PROJECT = "ahcfrgxczbgdvrqmbisw";
 const credentialsPath = path.join(rootDir, "supebase.txt");
 const tempDir = path.join(rootDir, ".tmp", "worldcup-sql");
 const SYSTEM_PROMPT_PATH = path.join(rootDir, "scripts/worldcup/ai-layer/system-prompt.md");
-const PROMPT_VERSION = "ai-copredictor-system-prompt-v0.8";
+const PROMPT_VERSION = "ai-copredictor-system-prompt-v0.9";
 const DEFAULT_TEAMS = ["CAN", "ESP", "BRA", "ENG", "GHA"];
 let tmp = 0;
 
@@ -510,6 +510,223 @@ export const USER_MSG = (input: any, max: number) => [
   `Structured input:\n${JSON.stringify(input)}`,
 ].join("\n\n");
 
+// ============ KNOCKOUT NARRATION (content types pre_match_storyline + post_result_change) ============
+// Fixture-scoped consumer of contextual_inputs.team_story + the knockout per-tie data. ENGINES COMPUTE, AI EXPLAINS:
+// the per-tie K=60 win prob is read VERBATIM from the published app-data export (build-app-data knockout_fixtures[].prediction
+// — the single source of truth, already carries resolved teams + elo_source + basis); the AI explains it, never invents one.
+// Context tables (wc2026_*) are keyed by API-Football team_id -> map via live/api-team-code-map.json. Graceful: a missing
+// input is omitted (no team_story -> skip the national bits; xG not matured -> the post-match waits).
+function loadKnockoutFixtures(): any[] {
+  for (const rel of ["data/exports/app-data.json", "ui/app-data.json"]) {
+    try { const j = JSON.parse(readFileSync(path.join(rootDir, rel), "utf8")); if (Array.isArray(j?.knockout_fixtures)) return j.knockout_fixtures; } catch { /* try next */ }
+  }
+  return [];
+}
+let _apiIdByCode: Record<string, number> | null = null;
+function apiIdByCode(): Record<string, number> {
+  if (_apiIdByCode) return _apiIdByCode;
+  const m: Record<string, number> = {};
+  try {
+    const raw = JSON.parse(readFileSync(path.join(rootDir, "scripts/worldcup/live/api-team-code-map.json"), "utf8"));
+    for (const [id, code] of Object.entries(raw)) { if (id.startsWith("_")) continue; m[String(code)] = Number(id); }
+  } catch { /* empty map -> context joins yield null, narration stays graceful */ }
+  return (_apiIdByCode = m);
+}
+function idToCodeMap(): Record<number, string> { const m: Record<number, string> = {}; for (const [code, id] of Object.entries(apiIdByCode())) m[id] = code; return m; }
+function teamFormByCode(url: string, codes: string[]): Record<string, any> {
+  const ids = codes.map((c) => apiIdByCode()[c]).filter(Boolean);
+  if (!ids.length) return {};
+  const i2c = idToCodeMap(), out: Record<string, any> = {};
+  try {
+    const rows = q(url, `select team_id, played, wins, draws, loses, goals_for, goals_against, clean_sheets, failed_to_score, streak_wins, streak_draws, streak_loses from wc2026_team_statistics where team_id in (${ids.join(",")})`);
+    for (const r of rows as any[]) { const c = i2c[Number(r.team_id)]; if (c) out[c] = { played: Number(r.played), wins: Number(r.wins), draws: Number(r.draws), loses: Number(r.loses), goals_for: Number(r.goals_for), goals_against: Number(r.goals_against), clean_sheets: Number(r.clean_sheets), failed_to_score: Number(r.failed_to_score), streak: { wins: Number(r.streak_wins), draws: Number(r.streak_draws), loses: Number(r.streak_loses) } }; }
+  } catch { /* table absent -> empty */ }
+  return out;
+}
+function h2hForPair(url: string, aCode: string, bCode: string): any {
+  const idA = apiIdByCode()[aCode], idB = apiIdByCode()[bCode];
+  if (!idA || !idB) return { meetings: 0 };
+  const pk = [idA, idB].sort((x, y) => x - y).join("-");
+  try {
+    const rows = q(url, `select home_team_name, away_team_name, home_goals, away_goals, winner_team_id, to_char(meeting_date,'YYYY') yr, league_name from wc2026_head_to_head where pairing_key='${pk}' order by meeting_date desc nulls last`);
+    if (!rows.length) return { meetings: 0 };
+    let aWins = 0, bWins = 0, draws = 0;
+    for (const r of rows as any[]) { if (r.winner_team_id == null) draws++; else if (Number(r.winner_team_id) === idA) aWins++; else if (Number(r.winner_team_id) === idB) bWins++; }
+    const last: any = rows[0];
+    return { meetings: rows.length, [aCode]: aWins, [bCode]: bWins, draws, last_meeting: { year: last.yr, home: last.home_team_name, away: last.away_team_name, score: `${last.home_goals}-${last.away_goals}`, competition: last.league_name } };
+  } catch { return { meetings: 0 }; }
+}
+function topScorersForTeams(url: string, codes: string[]): any[] {
+  const ids = codes.map((c) => apiIdByCode()[c]).filter(Boolean);
+  if (!ids.length) return [];
+  const i2c = idToCodeMap();
+  try {
+    const rows = q(url, `select player_name, team_id, goals, assists, rank from wc2026_player_leaderboards where leaderboard_type='top_scorers' and team_id in (${ids.join(",")}) order by goals desc nulls last limit 6`);
+    return (rows as any[]).map((r) => ({ player: r.player_name, team_code: i2c[Number(r.team_id)] ?? null, goals: Number(r.goals), assists: r.assists != null ? Number(r.assists) : null, board_rank: r.rank != null ? Number(r.rank) : null }));
+  } catch { return []; }
+}
+export function buildKnockoutPreMatchInput(url: string, kf: any) {
+  const aCode = kf.side_a?.team?.code, bCode = kf.side_b?.team?.code;
+  const aName = kf.side_a?.team?.name ?? aCode, bName = kf.side_b?.team?.name ?? bCode;
+  const pred = kf.prediction ?? {};
+  const pA = pred.team_a_win_probability != null ? num(pred.team_a_win_probability) : null;
+  const pB = pred.team_b_win_probability != null ? num(pred.team_b_win_probability) : null;
+  const form = teamFormByCode(url, [aCode, bCode]);
+  const h2h = h2hForPair(url, aCode, bCode);
+  const danger = topScorersForTeams(url, [aCode, bCode]);
+  const storyA = loadTeamStory(aCode), storyB = loadTeamStory(bCode);
+  return {
+    request_id: `ko-pre-${aCode}-${bCode}`,
+    content_type: "pre_match_storyline", language: "en",
+    generated_for: { tournament_code: "WC2026", team_codes: [aCode, bCode], fixture_ids: [], date: kf.kickoff ?? null },
+    output_requirements: { schema_version: "ai_analysis_v1", length_target_words: { min: 120, max: 230 }, tone: "warm, plain-spoken, knockout stakes, light EARNED drama, grounded, non-betting", must_return_json_only: true },
+    source_runs: [{ source_run_id: "knockout-elo-prediction", run_type: "knockout_prediction", scope: "knockout", review_status: "live", current_best: false, notes: pred.elo_source === "post_group_k60" ? "the knockout model, updated on group-stage form" : "the pre-tournament knockout model" }],
+    fixture: { round: kf.round ?? null, label: `${aCode} vs ${bCode}`, kickoff: kf.kickoff ?? null, venue: kf.venue ?? null, city: kf.city ?? null, single_elimination: true },
+    probabilities: [
+      pA != null ? { entity_type: "team", team_code: aCode, metric: "win_tie", value: pA, display_value: pct(pA), rank_or_context: `${aName} win this knockout tie (single match; extra time / penalties subsumed)` } : null,
+      pB != null ? { entity_type: "team", team_code: bCode, metric: "win_tie", value: pB, display_value: pct(pB), rank_or_context: `${bName} win this knockout tie` } : null,
+    ].filter(Boolean),
+    scenario_data: {
+      matchup_source_id: "the-knockout-model",
+      prediction_basis: pred.basis ?? null,
+      prediction_note: "The win probability is the model's neutral single-match figure (extra time / penalties subsumed). Explain it; never invent a different number.",
+      form: { [aCode]: form[aCode] ?? null, [bCode]: form[bCode] ?? null },
+      head_to_head: h2h,
+      danger_men: danger,
+      stakes: "Knockout: one match decides it.",
+      unknowns: [
+        ...(storyA ? [] : [`No national-story file for ${aCode} — do not describe ${aName}'s national mood.`]),
+        ...(storyB ? [] : [`No national-story file for ${bCode} — do not describe ${bName}'s national mood.`]),
+        ...((form[aCode] || form[bCode]) ? [] : ["No aggregate team form supplied."]),
+        ...((h2h?.meetings ?? 0) > 0 ? [] : ["No prior head-to-head meetings supplied."]),
+      ],
+    },
+    team_context: [{ team_code: aCode, team_name: aName }, { team_code: bCode, team_name: bName }],
+    contextual_inputs: { venue: [], weather: [], news_and_injuries: [], team_story: { [aCode]: storyA ?? null, [bCode]: storyB ?? null } },
+    forbidden_sources_confirmed_absent: { odds: true, api_football_predictions_endpoint: true, raw_uncurated_web: true },
+    known_unknowns: ["No live lineups or in-play data supplied (pre-match)."],
+  };
+}
+export function buildKnockoutPostMatchInput(url: string, fixtureLabel: string): any {
+  const mm = (fixtureLabel || "").match(/([A-Za-z]{3})\s*vs\s*([A-Za-z]{3})/);
+  if (!mm) return { error: `bad fixture label '${fixtureLabel}' (expected 'AAA vs BBB')` };
+  const aCode = mm[1].toUpperCase(), bCode = mm[2].toUpperCase();
+  const mr: any = q(url, `select api_football_fixture_id fid, team_a_code a, team_b_code b, team_a_goals::int ga, team_b_goals::int gb, round_name,
+      (source_snapshot->'provider_fixture'->'score'->'penalty'->>'home') ph, (source_snapshot->'provider_fixture'->'score'->'penalty'->>'away') pa
+    from match_results where tournament_code='WC_2026' and match_status='finished' and api_football_fixture_id is not null and fixture_metadata_id is null
+      and ((team_a_code='${aCode}' and team_b_code='${bCode}') or (team_a_code='${bCode}' and team_b_code='${aCode}'))
+    order by updated_at desc limit 1`)[0];
+  if (!mr) return { error: `no finished knockout result for ${aCode} vs ${bCode}` };
+  const fid = Number(mr.fid);
+  const enr: any = q(url, `select statistics_status from wc2026_fixture_enrichment_status where api_football_fixture_id=${fid}`)[0];
+  const xgRows = q(url, `select team_id, stat_value_numeric v from api_football_fixture_statistics where fixture_id=${fid} and stat_type='expected_goals'`);
+  if (enr?.statistics_status !== "present" || (xgRows as any[]).length < 2) return { not_matured: true, fixture: `${aCode} vs ${bCode}`, fixture_id: fid, statistics_status: enr?.statistics_status ?? "unknown", xg_rows: (xgRows as any[]).length };
+  const i2c = idToCodeMap();
+  const xgByCode: Record<string, number> = {}; for (const r of xgRows as any[]) { const c = i2c[Number(r.team_id)]; if (c) xgByCode[c] = num(r.v); }
+  const goals = (q(url, `select team_id, player_name, event_elapsed, event_extra, assist_player_name from api_football_fixture_events where fixture_id=${fid} and event_type='Goal' order by event_elapsed nulls last, event_extra nulls last`) as any[])
+    .map((g) => ({ team_code: i2c[Number(g.team_id)] ?? null, scorer: g.player_name, minute: g.event_elapsed, assist: g.assist_player_name ?? null }));
+  const top_performers = (q(url, `select player_name, team_id, rating, passes_key, goals_total, assists from api_football_fixture_player_stats where fixture_id=${fid} and rating is not null order by rating desc limit 4`) as any[])
+    .map((p) => ({ player: p.player_name, team_code: i2c[Number(p.team_id)] ?? null, rating: num(p.rating), key_passes: p.passes_key != null ? Number(p.passes_key) : null, goals: p.goals_total != null ? Number(p.goals_total) : null, assists: p.assists != null ? Number(p.assists) : null }));
+  const aIsHome = mr.a === aCode;
+  const aGoals = aIsHome ? Number(mr.ga) : Number(mr.gb), bGoals = aIsHome ? Number(mr.gb) : Number(mr.ga);
+  const pens = (mr.ph != null && mr.pa != null) ? { [aCode]: aIsHome ? Number(mr.ph) : Number(mr.pa), [bCode]: aIsHome ? Number(mr.pa) : Number(mr.ph) } : null;
+  const winnerCode = aGoals > bGoals ? aCode : bGoals > aGoals ? bCode : (pens ? (pens[aCode] > pens[bCode] ? aCode : bCode) : null);
+  const rn = String(mr.round_name ?? "").toLowerCase();
+  const nextRound = rn.includes("32") ? "the Round of 16" : rn.includes("16") ? "the quarter-finals" : rn.includes("quarter") ? "the semi-finals" : rn.includes("semi") ? "the final" : null;
+  const winnerStory = winnerCode ? loadTeamStory(winnerCode) : null;
+  return {
+    request_id: `ko-post-${aCode}-${bCode}`,
+    content_type: "post_result_change", language: "en",
+    generated_for: { tournament_code: "WC2026", team_codes: [aCode, bCode], fixture_ids: [String(fid)], date: null },
+    output_requirements: { schema_version: "ai_analysis_v1", length_target_words: { min: 150, max: 290 }, tone: "warm, plain-spoken, the story of the completed tie, grounded, non-betting", must_return_json_only: true },
+    source_runs: [{ source_run_id: "knockout-result", run_type: "result", scope: "knockout", review_status: "live", current_best: false, notes: "the verified match result and matured match data" }],
+    fixture: { label: `${aCode} vs ${bCode}`, round: mr.round_name ?? null },
+    result: { [aCode]: aGoals, [bCode]: bGoals, winner_code: winnerCode, penalties: pens, decided_on_penalties: pens != null && aGoals === bGoals },
+    probabilities: [],
+    scenario_data: {
+      result_source_id: "the-verified-result",
+      goal_timeline: goals,
+      team_xg: xgByCode,
+      xg_note: "Matured (final) expected goals per team. Compare the scoreline to the xG — did the result match the performance? State the xG as supplied; never invent a figure.",
+      top_performers,
+      advancement: { winner_code: winnerCode, advances_to: nextRound, opponent_note: "Name the round only; the next opponent may be undetermined — gesture at 'the winner of the other tie', NEVER an undetermined team." },
+      national_payoff_for: winnerCode,
+      unknowns: [...(winnerStory || !winnerCode ? [] : [`No national-story file for the winner ${winnerCode}.`])],
+    },
+    team_context: [{ team_code: aCode, team_name: aCode }, { team_code: bCode, team_name: bCode }],
+    contextual_inputs: { venue: [], weather: [], news_and_injuries: [], team_story: winnerCode ? { [winnerCode]: winnerStory ?? null } : null },
+    forbidden_sources_confirmed_absent: { odds: true, api_football_predictions_endpoint: true, raw_uncurated_web: true },
+    known_unknowns: [],
+  };
+}
+export const USER_MSG_KNOCKOUT_PRE = (input: any, max: number) => [
+  "Return one complete valid JSON object only. No markdown, no code fences.",
+  "Write a KNOCKOUT MATCH PREVIEW for FANS — warm, plain-spoken, ~6-8 sentences, with the genuine stakes of a single-elimination tie.",
+  "OPEN WITH THE HOOK: the one compelling angle of this matchup, GROUNDED in the supplied data — the prediction (favourite vs underdog), the form, the head-to-head, the danger men, or a team_story national narrative. Lead with meaning, not a number. Do NOT invent an angle from outside knowledge (player backstories, transfer histories, personal ties) unless it appears in the supplied input.",
+  "THE PREDICTION + WHY: state the model's favourite and the win chance using the SUPPLIED figure (probabilities[].display_value), then explain WHY in plain terms — the rating gap and group-stage form behind it. The number is the model's; explain it, NEVER invent a different one. Do not state any percentage not in the supplied probabilities.",
+  "FORM + MOMENTUM: use scenario_data.form (wins/draws, clean sheets, streaks) to say how each side arrives — in words ('unbeaten through the group', 'three clean sheets'), not a stat dump.",
+  "DANGER MEN: from scenario_data.danger_men, name who carries the goal threat (the tournament's scorers); you may cite a player's goal tally as a supplied fact. Only players supplied there.",
+  "HEAD-TO-HEAD: from scenario_data.head_to_head, give the history plainly IF meetings exist ('they last met in 2018, a 2-0'); if no meetings are supplied, say nothing about H2H.",
+  "NATIONAL STAKES (both teams): from contextual_inputs.team_story (an object keyed by team_code), convey what each nation expects or fears — in WORDS, sourced. official+fact_grade may be stated as fact; discovery+attributed_context_only MUST be attributed ('per Marca', 'Spanish coverage suggests'), at most one short quote of <=20 words per team. If a team has no team_story, say nothing about that nation's mood. Honour gaps; a thin story means restraint; never let the story override the numbers.",
+  "WHAT TO WATCH: close with the key battle, grounded in what both have shown.",
+  "Mood in words, never invented numbers. No odds, no betting, no model jargon, no run IDs, no table names, no version tags. Real people only as on-pitch facts. This is the PREVIEW — do NOT predict the next round's opponent.",
+  "Required JSON fields: content_type, headline, body, probability_references, source_trace, context_caveats, unknowns, validation_notes.",
+  `Keep the body within ${max} words.`,
+  `Structured input:\n${JSON.stringify(input)}`,
+].join("\n\n");
+export const USER_MSG_KNOCKOUT_POST = (input: any, max: number) => [
+  "Return one complete valid JSON object only. No markdown, no code fences.",
+  "Write the STORY OF A COMPLETED KNOCKOUT MATCH for FANS — warm, plain-spoken, ~5-7 sentences. The match is over; tell what happened and what it means.",
+  "THE RESULT + HOW: state the final score as fact and how it unfolded — the scorers and key moments from scenario_data.goal_timeline (with minutes) and the turning points. If decided on penalties, say so.",
+  "THE xG STORY (the differentiator): use scenario_data.team_xg to compare the scoreline to the performance — did the result match the play? e.g. 'won 2-1, but the expected goals were a near-even 1.8 to 1.4 — closer than the scoreline suggests', OR 'the xG confirmed the dominance'. State the xG exactly as supplied; never invent a figure. This xG is matured (final), not in-play.",
+  "THE STANDOUT: from scenario_data.top_performers (match ratings), name the best performer and what they did (a goal, key passes).",
+  "WHAT IT MEANS: who advances, and to which round (scenario_data.advancement.advances_to). Gesture at the next stage HONESTLY — name the round; if the next opponent is undetermined, say 'the winner of the other tie' and NEVER name an undetermined team.",
+  "THE NATIONAL PAYOFF: tie the result to the WINNER's national story from contextual_inputs.team_story (keyed by the winner's code) — the run continues, a milestone reached — in WORDS, sourced (official=fact, discovery=attributed). Skip if no team_story for the winner.",
+  "Mood in words, never invented numbers. The only percentages allowed are those supplied. No odds, no betting, no model jargon, no run IDs, no table names, no version tags. Real people only as on-pitch facts.",
+  "Required JSON fields: content_type, headline, body, probability_references, source_trace, context_caveats, unknowns, validation_notes.",
+  `Keep the body within ${max} words.`,
+  `Structured input:\n${JSON.stringify(input)}`,
+].join("\n\n");
+async function runKnockoutNarration(url: string, mode: "pre" | "post", fixtureArg: string | null, execute: boolean) {
+  const apiKey = await loadApiKey();
+  const systemPrompt = readFileSync(SYSTEM_PROMPT_PATH, "utf8");
+  const model = await chooseGeminiModel(apiKey);
+  if (execute) ensureTable(url);
+  let targets: Array<{ label: string; input: any; max: number; content_type: string }> = [];
+  if (mode === "post") {
+    if (!fixtureArg) { console.log(JSON.stringify({ error: "--post-result requires \"HOME vs AWAY\"" })); return; }
+    const input = buildKnockoutPostMatchInput(url, fixtureArg);
+    if (input?.error) { console.log(JSON.stringify({ post_match: fixtureArg, ...input }, null, 2)); return; }
+    if (input?.not_matured) { console.log(JSON.stringify({ post_match: fixtureArg, status: "waiting_for_mature_xg", ...input }, null, 2)); return; }
+    targets = [{ label: input.fixture.label, input, max: 285, content_type: "post_result_change" }];
+  } else {
+    const determined = loadKnockoutFixtures().filter((k) => k?.side_a?.team?.code && k?.side_b?.team?.code && !k?.result);
+    const chosen = fixtureArg ? determined.filter((k) => `${k.side_a.team.code} vs ${k.side_b.team.code}`.toUpperCase() === fixtureArg.toUpperCase()) : determined;
+    targets = chosen.map((k) => { const input = buildKnockoutPreMatchInput(url, k); return { label: input.fixture.label, input, max: 225, content_type: "pre_match_storyline" }; });
+  }
+  console.log(`Knockout narration | mode=${mode} | model: ${model} | ${execute ? "EXECUTE (store validated)" : "DRY-RUN (no write)"} | targets: ${targets.length}\n`);
+  const results: any[] = [];
+  for (const t of targets) {
+    let raw = "", vr: any = null;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      const um = (mode === "post" ? USER_MSG_KNOCKOUT_POST : USER_MSG_KNOCKOUT_PRE)(t.input, attempt >= 2 ? t.max - 30 : t.max);
+      try { raw = await callGemini(apiKey, model, systemPrompt, um); }
+      catch (e: any) { if (attempt < 3) { await sleep(2000 * attempt); continue; } raw = ""; break; }
+      vr = validateAndRepairAiOutput(raw, t.input);
+      if (vr.valid) break;
+      if (attempt < 3) await sleep(800);
+    }
+    if (!raw || !vr || !vr.valid) { results.push({ fixture: t.label, status: raw ? "rejected_not_stored" : "generation_failed", rejections: vr?.rejections ?? ["no_validation"] }); await sleep(600); continue; }
+    const out: any = vr.cleaned_output;
+    const rec = { scope: "fixture", team: null as string | null, fixture: t.label, content_type: t.content_type, headline: String(out.headline), body: bodyOf(out) };
+    if (execute) storeNarration(url, rec);
+    results.push({ fixture: t.label, status: execute ? "stored(validated)" : "valid(dry-run)", repaired: vr.repaired, words: vr.metrics.body_word_count, headline: rec.headline, body: rec.body });
+    await sleep(700);
+  }
+  console.log(JSON.stringify({ project_id: PROJECT, mode, executed: execute, summary: results.map((r) => ({ fixture: r.fixture, status: r.status, words: r.words, repaired: r.repaired })) }, null, 2));
+  if (!execute) for (const r of results) if (r.body) console.log(`\n=== ${r.fixture} (${mode === "post" ? "post-match" : "pre-match"}) ===\nHEADLINE: ${r.headline}\n${r.body}`);
+}
+
 function ensureTable(url: string) {
   execSql(url, `create table if not exists public.ai_narrations (
     id uuid primary key default gen_random_uuid(),
@@ -574,9 +791,12 @@ async function main() {
   const url = await dbUrl();
   if (has("--ensure-table")) { ensureTable(url); console.log("ai_narrations ensured (idempotent)."); return; }
 
-  // post-result hook (loop step-6 entry point) — stub wiring; per-result variant refined later
+  // KNOCKOUT NARRATION modes (fixture-scoped): --post-result "X vs Y" (post_result_change) | --knockout-pre [--fixture "X vs Y"]
+  // (pre_match_storyline; no --fixture => all determined ties). Default dry-run; --execute stores validated. Ships dark until
+  // the loop firing hooks are wired (in-tournament-loop-runner) after these verify on real games.
   const postFixture = arg("--post-result");
-  if (postFixture) { console.log(JSON.stringify({ hook: "post_result_change", fixture: postFixture, note: "loop step-6 entry point: build old-vs-new context for this result -> Gemini (content_type post_result_change) -> validate-and-repair -> store(validated). Launch-minimum is team scenario narration; per-result refined later.", callable: true }, null, 2)); return; }
+  if (postFixture) { await runKnockoutNarration(url, "post", postFixture, has("--execute")); return; }
+  if (has("--knockout-pre")) { await runKnockoutNarration(url, "pre", arg("--fixture"), has("--execute")); return; }
 
   const teams = (arg("--teams")?.split(",").map((s) => s.trim().toUpperCase()).filter(Boolean)) ?? DEFAULT_TEAMS;
   const execute = has("--execute");
