@@ -1,0 +1,103 @@
+{
+  "team_code": "CAN",
+  "designed_for": "ai-copredictor-system-prompt-v0.8",
+  "round": "R32",
+  "next_opponent_code": "RSA",
+  "last_updated": "2026-06-28",
+  "review_status": "reviewed",
+  "confidence": "medium",
+
+  "national_expectations": {
+    "summary": "As co-hosts reaching the knockout stage for the first time, Canada are favourites against South Africa and carry real belief; before the tournament Jesse Marsch had openly set winning the group as the target.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      { "outlet": "Sports Illustrated", "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26", "date": "2026-06-28", "lang": "en" },
+      { "outlet": "GiveMeSport", "url": "https://www.givemesport.com/jesse-marsch-canada-world-cup-2026-interview/", "date": "2026-06-11", "lang": "en" }
+    ]
+  },
+
+  "national_mood": {
+    "summary": "Optimism tinged with frustration: a final-day loss to Switzerland cost Canada top spot and home advantage, sending them to Los Angeles rather than Vancouver, but the mood has lifted with Alphonso Davies fit to return for the knockouts.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      { "outlet": "ESPN", "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland", "date": "2026-06-24", "lang": "en" }
+    ]
+  },
+
+  "manager_situation": {
+    "summary": "Jesse Marsch is backed and ambitious but publicly rued losing home advantage, even admitting a tactical regret from the Switzerland defeat; he confirmed Davies would be ready for the next match.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      { "outlet": "ESPN", "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland", "date": "2026-06-24", "lang": "en" }
+    ]
+  },
+
+  "historical_context": {
+    "summary": "This is Canada's first-ever World Cup knockout match, and a first competitive meeting with South Africa — the only prior encounter was a friendly that South Africa won.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      { "outlet": "Sports Illustrated", "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26", "date": "2026-06-28", "lang": "en" }
+    ]
+  },
+
+  "dominant_storylines": [
+    {
+      "storyline": "Alphonso Davies returns from a hamstring injury for the Round of 32 — a major lift after he was held back through the group stage.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        { "outlet": "ESPN", "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland", "date": "2026-06-24", "lang": "en" }
+      ]
+    },
+    {
+      "storyline": "Canada's attacking threat — led by Jonathan David and Cyle Larin — against a disciplined South African defence is the tactical sub-plot.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        { "outlet": "Sports Illustrated", "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26", "date": "2026-06-28", "lang": "en" }
+      ]
+    },
+    {
+      "storyline": "Midfielder Ismael Kone is out for the rest of the tournament with a broken leg, a blow to Canada's transition play.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        { "outlet": "Sports Illustrated", "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26", "date": "2026-06-28", "lang": "en" }
+      ]
+    }
+  ],
+
+  "attributed_quotes": [
+    {
+      "quote": "I'm disappointed we weren't able to get a win or draw to keep us here.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Jesse Marsch",
+      "speaker_role": "manager",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland",
+      "date": "2026-06-24",
+      "context": "reported"
+    }
+  ],
+
+  "local_availability_reporting": [],
+
+  "gaps": [
+    "No official Canada Soccer statement sourced; quotes are via media reporting (Marsch's remarks relayed by ESPN from TSN).",
+    "Opponent-specific (South Africa) preparation detail not researched here — see RSA.json.",
+    "Davies' starting role vs minutes off the bench not confirmed beyond 'fit to return'."
+  ],
+
+  "source_data_snapshot": [
+    { "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland", "retrieved_at": "2026-06-28T16:00:00Z", "tier": "discovery" },
+    { "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26", "retrieved_at": "2026-06-28T16:00:00Z", "tier": "discovery" },
+    { "url": "https://www.givemesport.com/jesse-marsch-canada-world-cup-2026-interview/", "retrieved_at": "2026-06-28T16:00:00Z", "tier": "discovery" }
+  ]
+}
