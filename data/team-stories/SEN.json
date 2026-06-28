@@ -1,0 +1,335 @@
+{
+  "team_code": "SEN",
+  "round": "R32",
+  "next_opponent_code": "TBD",
+  "review_status": "reviewed",
+  "designed_for": "ai-copredictor-system-prompt-v0.8",
+  "last_updated": "2026-06-28",
+  "confidence": "high",
+  "national_expectations": {
+    "summary": "As reigning African champions (2021 AFCON) and one of the continent's highest-ranked nations, Senegal arrived in North America with genuine ambition to make a deep run and break new ground for Africa. Coverage frames this as a 'now or never' tournament for an ageing core built around Sadio Mane, Kalidou Koulibaly, Idrissa Gana Gueye and Edouard Mendy, several of whom are deep into their thirties and unlikely to return as a core in four years. Two opening defeats to France and Norway sharply lowered the bar; squeaking through as a best third-placed team is widely described as a relief and an underwhelming start relative to the side's pedigree, leaving expectations recalibrated around surviving and improving rather than the early talk of going far.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      {
+        "outlet": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/senegals-golden-generation-knows-2026-135011999.html",
+        "date": "2026-06",
+        "lang": "en"
+      },
+      {
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/espn/story/_/id/49078247/fifa-world-cup-2026-senegal-vs-france-remains-africa-biggest-moment-repeat-not-shock",
+        "date": "2026-06",
+        "lang": "en"
+      },
+      {
+        "outlet": "CAF Online",
+        "url": "https://www.cafonline.com/fifa-world-cup/news/senegal-have-the-quality-to-go-far-at-the-2026-world-cup/",
+        "date": "2026-06",
+        "lang": "en"
+      }
+    ]
+  },
+  "national_mood": {
+    "summary": "The mood swung from frustration to jubilation over the group stage. After the second loss (to Norway), reporting from Dakar captured disappointment mixed with cautious hope, with supporters lamenting defensive lapses and late substitutions while demanding a reaction. The win over Iraq, confirmed once a favourable result elsewhere in the group fell their way, turned the capital into an all-night street party: car convoys, motorbikes draped in national colours, patriotic chants and dancing until dawn. Residents described relief and renewed smiles after days of criticism, a release of tension for a qualification many had stopped expecting after the slow start.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      {
+        "outlet": "Afrik.com",
+        "url": "https://www.afrik.com/mondial-2026-le-senegal-etripe-l-irak-5-0-et-filent-en-seiziemes-liesse-populaire-a-dakar-avant-angleterre",
+        "date": "2026-06-27",
+        "lang": "fr"
+      },
+      {
+        "outlet": "franceinfo",
+        "url": "https://www.franceinfo.fr/coupe-du-monde/coupe-du-monde-2026-le-senegal-bat-facilement-l-irak-et-peut-croire-a-une-qualification-en-seiziemes-de-finale_8081885.html",
+        "date": "2026-06-26",
+        "lang": "fr"
+      },
+      {
+        "outlet": "Afrik.com",
+        "url": "https://www.afrik.com/mondial-2026-entre-frustration-et-lucidite-a-dakar-apres-la-defaite-du-senegal-face-a-la-norvege",
+        "date": "2026-06-23",
+        "lang": "fr"
+      }
+    ]
+  },
+  "manager_situation": {
+    "summary": "Coach Pape Bouna Thiaw kept the squad grounded after the Iraq rout, insisting there were still improvements to make despite the five-goal margin and stressing he could not relax until other group results secured Senegal's passage. He underlined the weight of national support and praised the team spirit of his veterans. His contractual status has been a recurring talking point: amid earlier reports of an unfinalised contract and bonus/accommodation grievances, Thiaw himself stated before the Norway match that the contract issue was settled and 'behind us'. After qualification, a former sports administrator and journalist publicly revived the debate, calling it 'incomprehensible' that administrative matters were unresolved and warning bonus questions could distract the squad. Thiaw also took an unconventional approach to the compressed schedule, sending players back to training within hours of the Iraq win rather than resting them.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      {
+        "outlet": "ANI News",
+        "url": "https://www.aninews.in/news/sports/football/fifa-world-cup-2026-still-improvements-to-be-made-says-pape-bouna-thiaw-following-senegals-5-0-victory-over-iraq20260627053518/",
+        "date": "2026-06-27",
+        "lang": "en"
+      },
+      {
+        "outlet": "Geo Super",
+        "url": "https://www.geosuper.tv/latest/57296-world-cup-2026-senegal-thrash-iraq-5-0-thiaw-still-sees-room-to-improve",
+        "date": "2026-06-27",
+        "lang": "en"
+      },
+      {
+        "outlet": "Africa Top Sports",
+        "url": "https://africatopsports.com/coupe-du-monde-2026/coupe-du-monde-2026-pape-thiaw-tensions-avec-le-senegal/",
+        "date": "2026-06-22",
+        "lang": "fr"
+      },
+      {
+        "outlet": "SeneNews",
+        "url": "https://www.senenews.com/actualites/mondial-2026-le-debat-autour-du-contrat-de-pape-thiaw-refait-surface-au-lendemain-de-la-qualification-en-16es-de-finale_591414.html",
+        "date": "2026-06-28",
+        "lang": "fr"
+      },
+      {
+        "outlet": "SeneNews",
+        "url": "https://www.senenews.com/actualites/equipe-nationale-du-senegal-la-decision-radicale-prise-par-le-selectionneur-pape-thiaw_591327.html",
+        "date": "2026-06-27",
+        "lang": "fr"
+      }
+    ]
+  },
+  "historical_context": {
+    "summary": "Senegal's World Cup pedigree dates to their 2002 debut, when they beat reigning champions France 1-0 (Papa Bouba Diop) en route to the quarter-finals, long regarded as one of Africa's greatest World Cup moments. They returned in 2018 and reached the Round of 16 in 2022, where they were eliminated by England. On the continental stage, Senegal were crowned African champions at the 2021 Africa Cup of Nations, beating Egypt on penalties in the final, their first AFCON title. The current squad is built around that title-winning generation, including Sadio Mane, who converted the decisive penalty in 2021.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      {
+        "outlet": "Wikipedia (Senegal at the FIFA World Cup)",
+        "url": "https://en.wikipedia.org/wiki/Senegal_at_the_FIFA_World_Cup",
+        "date": "2026-06",
+        "lang": "en"
+      },
+      {
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/espn/story/_/id/49078247/fifa-world-cup-2026-senegal-vs-france-remains-africa-biggest-moment-repeat-not-shock",
+        "date": "2026-06",
+        "lang": "en"
+      },
+      {
+        "outlet": "Wikipedia (2021 Africa Cup of Nations final)",
+        "url": "https://en.wikipedia.org/wiki/2021_Africa_Cup_of_Nations_final",
+        "date": "2026-06",
+        "lang": "en"
+      }
+    ]
+  },
+  "dominant_storylines": [
+    {
+      "storyline": "Survival on the back of a thrashing: after two opening defeats (France 1-3, Norway 2-3), Senegal needed to win and run up a margin against Iraq, doing exactly that with a 5-0 rout aided by an early Iraqi red card, then advancing as one of the eight best third-placed teams once results elsewhere fell their way. A scrappy, fortunate route into the knockouts rather than a commanding one.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/sport/20260626-world-cup-2026-senegal-crush-10-man-iraq-remain-in-hunt-for-knockout-round",
+          "date": "2026-06-26",
+          "lang": "en"
+        },
+        {
+          "outlet": "franceinfo",
+          "url": "https://www.franceinfo.fr/coupe-du-monde/coupe-du-monde-2026-le-senegal-bat-facilement-l-irak-et-peut-croire-a-une-qualification-en-seiziemes-de-finale_8081885.html",
+          "date": "2026-06-26",
+          "lang": "fr"
+        },
+        {
+          "outlet": "Footmercato",
+          "url": "https://www.footmercato.net/a977904509354133312-cdm-2026-le-senegal-officiellement-qualifie-pour-les-16es-de-finale",
+          "date": "2026-06-26",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "An ageing golden generation's last dance: Mane, Koulibaly, Gana Gueye and Mendy are deep into their thirties, and previews frame 2026 as a 'now or never' tournament for the core that won the 2021 AFCON, raising the stakes on a deep run before this group breaks up.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/senegals-golden-generation-knows-2026-135011999.html",
+          "date": "2026-06",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Off-field noise over the coach's status: Thiaw stated before the Norway game that his contract issue was settled and behind the team, but a day after qualification a veteran observer publicly revived the debate over unfinalised administrative and bonus matters, calling it 'incomprehensible' and warning it could unsettle the squad. The picture is contested rather than a confirmed crisis.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Africa Top Sports",
+          "url": "https://africatopsports.com/coupe-du-monde-2026/coupe-du-monde-2026-pape-thiaw-tensions-avec-le-senegal/",
+          "date": "2026-06-22",
+          "lang": "fr"
+        },
+        {
+          "outlet": "SeneNews",
+          "url": "https://www.senenews.com/actualites/mondial-2026-le-debat-autour-du-contrat-de-pape-thiaw-refait-surface-au-lendemain-de-la-qualification-en-16es-de-finale_591414.html",
+          "date": "2026-06-28",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "Coach keeps the brakes on the celebration: despite the five-goal win, Thiaw publicly insisted improvements were still needed and sent players back to training within hours, signalling a focus on the harder tests to come rather than the emphatic scoreline.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ANI News",
+          "url": "https://www.aninews.in/news/sports/football/fifa-world-cup-2026-still-improvements-to-be-made-says-pape-bouna-thiaw-following-senegals-5-0-victory-over-iraq20260627053518/",
+          "date": "2026-06-27",
+          "lang": "en"
+        },
+        {
+          "outlet": "SeneNews",
+          "url": "https://www.senenews.com/actualites/equipe-nationale-du-senegal-la-decision-radicale-prise-par-le-selectionneur-pape-thiaw_591327.html",
+          "date": "2026-06-27",
+          "lang": "fr"
+        }
+      ]
+    }
+  ],
+  "attributed_quotes": [
+    {
+      "quote": "Even though we scored five goals, there are still improvements to be made.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Pape Bouna Thiaw",
+      "speaker_role": "Senegal head coach",
+      "outlet": "ANI News",
+      "url": "https://www.aninews.in/news/sports/football/fifa-world-cup-2026-still-improvements-to-be-made-says-pape-bouna-thiaw-following-senegals-5-0-victory-over-iraq20260627053518/",
+      "date": "2026-06-27",
+      "context": "Thiaw speaking after Senegal's 5-0 win over Iraq, keeping expectations measured despite the big margin while awaiting other results to confirm qualification. Quote independently corroborated verbatim across Geo Super, Tribune India, Vodacom Soccer and Daily Sun.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "Maintenant, on a digere et l'equipe a faim d'aller chercher la victoire pour le match de demain.",
+      "quote_original": "Maintenant, on a digere et l'equipe a faim d'aller chercher la victoire pour le match de demain.",
+      "lang": "fr",
+      "speaker_name": "Pape Thiaw",
+      "speaker_role": "Senegal head coach",
+      "outlet": "Dakaractu",
+      "url": "https://www.dakaractu.com/Coupe-du-monde-2026-A-la-veille-d-Irak-Senegal-Pape-Thiaw-promet-une-equipe-affamee-de-victoire_a273095.html",
+      "date": "2026-06-25",
+      "context": "On the eve of the must-win Iraq match, after back-to-back defeats to France and Norway. Translation: 'Now we have processed it and the team is hungry to go and seek victory for tomorrow's match.' Verbatim confirmed via direct WebFetch of the URL.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    }
+  ],
+  "local_availability_reporting": [],
+  "gaps": [
+    "R32 opponent: DB FACTS state TBD, so next_opponent_code is set to TBD. Press sources actively contradict each other: Dakar/French coverage (Afrik.com, France 24 fr) frames a likely England matchup, some English-language aggregations name Belgium, and one aggregator even named Congo DR. Trusted the DB and did not lock an opponent; re-check once the Group G/the relevant winner is confirmed.",
+    "No confirmed or reported player injury / suspension / availability news for the R32 was found in credible sources, so local_availability_reporting is empty. Worth a targeted re-check closer to the match (e.g., yellow-card accumulation or knocks from the group stage).",
+    "No official FIFA, CAF or Senegalese FA (FSF) press statement was successfully retrieved (FIFA team-profile fetch returned no usable content; only a third-party-relayed FIFA social post about qualification was seen). All sourced sections rest on press/discovery tier; an official-tier confirmation of the squad/manager situation is missing.",
+    "Manager contract situation is contested rather than settled news: Thiaw himself said pre-Norway it was resolved ('Le probleme du contrat est regle... c'est derriere nous', via Africa Top Sports), while a commentator (Mbaye Jacques Diop on iRadio, via SeneNews) revived the debate post-qualification. No federation on-record response or fully independent confirmation of an ongoing dispute was obtained; SeneNews article is partly paywalled. Storyline softened accordingly.",
+    "One aggregated search result claimed Senegal 'won two recent AFCON titles'; the verified record is a single AFCON title (2021), so only that is stated. The double-title claim was treated as an error and excluded.",
+    "France 24 (en and fr), ANI and Dakaractu article pages returned HTTP 403 to direct fetch. The ANI 'improvements to be made' quote was confirmed verbatim via four corroborating outlets (Geo Super, Tribune India, Vodacom Soccer, Daily Sun) so it stands at quote grade; the Dakaractu French verbatim quote was confirmed via successful WebFetch of that URL.",
+    "No verbatim on-record quote from a current Senegal player (e.g., Mane, Koulibaly) was captured at exact <=20-word grade; player sentiment is paraphrased in previews only."
+  ],
+  "source_data_snapshot": [
+    {
+      "outlet": "Wikipedia (2026 FIFA World Cup Group I)",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_I",
+      "retrieved_at": "2026-06-28",
+      "note": "Confirms final standings: Senegal 3rd, 3 pts; matches DB FACTS. Results: France 3-1 SEN, Norway 3-2 SEN, SEN 5-0 Iraq."
+    },
+    {
+      "outlet": "France 24 (en)",
+      "url": "https://www.france24.com/en/sport/20260626-world-cup-2026-senegal-crush-10-man-iraq-remain-in-hunt-for-knockout-round",
+      "retrieved_at": "2026-06-28",
+      "note": "5-0 Iraq win, 10-man Iraq, hunt for knockout spot. Direct fetch 403; used via search snippet."
+    },
+    {
+      "outlet": "franceinfo",
+      "url": "https://www.franceinfo.fr/coupe-du-monde/coupe-du-monde-2026-le-senegal-bat-facilement-l-irak-et-peut-croire-a-une-qualification-en-seiziemes-de-finale_8081885.html",
+      "retrieved_at": "2026-06-28",
+      "note": "5-0 Iraq win; qualification dependent on favourable concurrent result; corroborates mood/route. Replaces a France 24 fr cite that 403'd."
+    },
+    {
+      "outlet": "Footmercato",
+      "url": "https://www.footmercato.net/a977904509354133312-cdm-2026-le-senegal-officiellement-qualifie-pour-les-16es-de-finale",
+      "retrieved_at": "2026-06-28",
+      "note": "Qualification details, fortunate concurrent results, FIFA social post."
+    },
+    {
+      "outlet": "Dakaractu",
+      "url": "https://www.dakaractu.com/Coupe-du-monde-2026-A-la-veille-d-Irak-Senegal-Pape-Thiaw-promet-une-equipe-affamee-de-victoire_a273095.html",
+      "retrieved_at": "2026-06-28",
+      "note": "Pre-Iraq Thiaw verbatim French quote (hungry team). Confirmed verbatim via WebFetch."
+    },
+    {
+      "outlet": "ANI News",
+      "url": "https://www.aninews.in/news/sports/football/fifa-world-cup-2026-still-improvements-to-be-made-says-pape-bouna-thiaw-following-senegals-5-0-victory-over-iraq20260627053518/",
+      "retrieved_at": "2026-06-28",
+      "note": "Post-Iraq Thiaw 'still improvements to be made' quote. Direct fetch 403; verbatim corroborated by Geo Super, Tribune India, Vodacom, Daily Sun."
+    },
+    {
+      "outlet": "Geo Super",
+      "url": "https://www.geosuper.tv/latest/57296-world-cup-2026-senegal-thrash-iraq-5-0-thiaw-still-sees-room-to-improve",
+      "retrieved_at": "2026-06-28",
+      "note": "Post-Iraq Thiaw quotes including national-support and Mane team-spirit comments."
+    },
+    {
+      "outlet": "Africa Top Sports",
+      "url": "https://africatopsports.com/coupe-du-monde-2026/coupe-du-monde-2026-pape-thiaw-tensions-avec-le-senegal/",
+      "retrieved_at": "2026-06-28",
+      "note": "Thiaw pre-Norway statement that the contract problem is settled ('c'est derriere nous'); balances the SeneNews contract debate."
+    },
+    {
+      "outlet": "Afrik.com",
+      "url": "https://www.afrik.com/mondial-2026-le-senegal-etripe-l-irak-5-0-et-filent-en-seiziemes-liesse-populaire-a-dakar-avant-angleterre",
+      "retrieved_at": "2026-06-28",
+      "note": "Dakar street celebrations after qualification; headline frames a likely England matchup."
+    },
+    {
+      "outlet": "Afrik.com",
+      "url": "https://www.afrik.com/mondial-2026-entre-frustration-et-lucidite-a-dakar-apres-la-defaite-du-senegal-face-a-la-norvege",
+      "retrieved_at": "2026-06-28",
+      "note": "Dakar mood after Norway defeat: frustration, tactical criticism, hope."
+    },
+    {
+      "outlet": "SeneNews",
+      "url": "https://www.senenews.com/actualites/mondial-2026-le-debat-autour-du-contrat-de-pape-thiaw-refait-surface-au-lendemain-de-la-qualification-en-16es-de-finale_591414.html",
+      "retrieved_at": "2026-06-28",
+      "note": "Thiaw contract debate revived; Mbaye Jacques Diop on iRadio calls it 'incomprehensible'. Partly paywalled."
+    },
+    {
+      "outlet": "SeneNews",
+      "url": "https://www.senenews.com/actualites/equipe-nationale-du-senegal-la-decision-radicale-prise-par-le-selectionneur-pape-thiaw_591327.html",
+      "retrieved_at": "2026-06-28",
+      "note": "Thiaw's 'radical decision' to send the squad back to training hours after the Iraq win."
+    },
+    {
+      "outlet": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/senegals-golden-generation-knows-2026-135011999.html",
+      "retrieved_at": "2026-06-28",
+      "note": "Golden generation 'now or never' framing; veterans deep into thirties."
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/espn/story/_/id/49078247/fifa-world-cup-2026-senegal-vs-france-remains-africa-biggest-moment-repeat-not-shock",
+      "retrieved_at": "2026-06-28",
+      "note": "2002 Senegal 1-0 France historical context; Thiaw pre-tournament quotes; African champions framing."
+    },
+    {
+      "outlet": "Wikipedia (Senegal at the FIFA World Cup)",
+      "url": "https://en.wikipedia.org/wiki/Senegal_at_the_FIFA_World_Cup",
+      "retrieved_at": "2026-06-28",
+      "note": "2002 QF, 2018, 2022 R16 (lost to England) record."
+    },
+    {
+      "outlet": "Wikipedia (2021 Africa Cup of Nations final)",
+      "url": "https://en.wikipedia.org/wiki/2021_Africa_Cup_of_Nations_final",
+      "retrieved_at": "2026-06-28",
+      "note": "Senegal first AFCON title 2021, beat Egypt on penalties, Mane decisive penalty."
+    }
+  ]
+}
