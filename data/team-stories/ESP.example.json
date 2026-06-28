@@ -1,0 +1,104 @@
+{
+  "team_code": "ESP",
+  "designed_for": "ai-copredictor-system-prompt-v0.8",
+  "round": "R16",
+  "next_opponent_code": "MAR",
+  "last_updated": "2026-06-28",
+  "review_status": "reviewed",
+  "confidence": "medium",
+
+  "national_expectations": {
+    "summary": "As reigning European champions, Spain are widely expected to reach at least the quarter-finals; an earlier exit would be read at home as a failure.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      { "outlet": "Marca", "url": "https://example.com/marca/esp-expectations-PLACEHOLDER", "date": "2026-06-26", "lang": "es" },
+      { "outlet": "AS", "url": "https://example.com/as/esp-expectations-PLACEHOLDER", "date": "2026-06-26", "lang": "es" }
+    ]
+  },
+
+  "national_mood": {
+    "summary": "Cautious optimism after topping the group, tempered by memories of past early knockout exits.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      { "outlet": "El Pais", "url": "https://example.com/elpais/esp-mood-PLACEHOLDER", "date": "2026-06-27", "lang": "es" }
+    ]
+  },
+
+  "manager_situation": {
+    "summary": "The head coach's position is secure after the group stage; local coverage praises the squad-rotation calls.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      { "outlet": "Mundo Deportivo", "url": "https://example.com/md/esp-manager-PLACEHOLDER", "date": "2026-06-27", "lang": "es" }
+    ]
+  },
+
+  "historical_context": {
+    "summary": "Spain are the 2010 world champions and reigning European champions; this run is measured against that recent pedigree.",
+    "source_tier": "official",
+    "verification": "fact_grade",
+    "sources": [
+      { "outlet": "FIFA", "url": "https://example.com/fifa/esp-honours-PLACEHOLDER", "date": "2026-06-01", "lang": "en" }
+    ]
+  },
+
+  "dominant_storylines": [
+    {
+      "storyline": "A young attacking core carrying the tournament, framed as a generational team.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        { "outlet": "Marca", "url": "https://example.com/marca/esp-young-core-PLACEHOLDER", "date": "2026-06-27", "lang": "es" }
+      ]
+    },
+    {
+      "storyline": "Tactical debate over the first-choice striker for the knockout rounds.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        { "outlet": "AS", "url": "https://example.com/as/esp-striker-debate-PLACEHOLDER", "date": "2026-06-28", "lang": "es" }
+      ]
+    }
+  ],
+
+  "attributed_quotes": [
+    {
+      "quote": "We're focused on the next match, nothing more.",
+      "quote_original": "Estamos centrados en el proximo partido, nada mas.",
+      "lang": "es",
+      "speaker_name": "Luis de la Fuente",
+      "speaker_role": "manager",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "AS",
+      "url": "https://example.com/as/esp-presser-PLACEHOLDER",
+      "date": "2026-06-27",
+      "context": "press_conference"
+    }
+  ],
+
+  "local_availability_reporting": [
+    {
+      "player_name": "Pedri",
+      "reported_status": "Doubtful - minor knock, reportedly likely to be fit",
+      "confirmed": false,
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Marca",
+      "url": "https://example.com/marca/esp-pedri-fitness-PLACEHOLDER",
+      "date": "2026-06-27"
+    }
+  ],
+
+  "gaps": [
+    "No credible source found on opponent-specific preparation.",
+    "No official federation statement on the striker decision."
+  ],
+
+  "source_data_snapshot": [
+    { "url": "https://example.com/marca/esp-expectations-PLACEHOLDER", "retrieved_at": "2026-06-28T08:00:00Z", "tier": "discovery" },
+    { "url": "https://example.com/fifa/esp-honours-PLACEHOLDER", "retrieved_at": "2026-06-28T08:00:00Z", "tier": "official" }
+  ]
+}

@@ -5,8 +5,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateAndRepairAiOutput } from "./validate-and-repair";
 
-// AI NARRATION PRODUCTION PIPELINE — context (LIVE runs) -> Gemini (system-prompt v0.4) -> validate-and-repair -> store.
-// INTEGRATION ONLY: reuses system-prompt.md (v0.4), validate-and-repair.ts, and the Gemini fetch mechanism from the
+// AI NARRATION PRODUCTION PIPELINE — context (LIVE runs) -> Gemini (system-prompt v0.8) -> validate-and-repair -> store.
+// INTEGRATION ONLY: reuses system-prompt.md (v0.8), validate-and-repair.ts, and the Gemini fetch mechanism from the
 // bake-off. AI EXPLAINS, NEVER INVENTS — validate-and-repair gates storage; only valid output is stored (validated=true).
 // No internal IDs in prose. No odds/predictions/betting. Gemini = production model. CLI/execSql writes the narration
 // table; MCP/CLI read-only for run data. No model/prediction changes. Does NOT touch the export job / UI / player-stats.
@@ -19,7 +19,7 @@ const PROJECT = "ahcfrgxczbgdvrqmbisw";
 const credentialsPath = path.join(rootDir, "supebase.txt");
 const tempDir = path.join(rootDir, ".tmp", "worldcup-sql");
 const SYSTEM_PROMPT_PATH = path.join(rootDir, "scripts/worldcup/ai-layer/system-prompt.md");
-const PROMPT_VERSION = "ai-copredictor-system-prompt-v0.7";
+const PROMPT_VERSION = "ai-copredictor-system-prompt-v0.8";
 const DEFAULT_TEAMS = ["CAN", "ESP", "BRA", "ENG", "GHA"];
 let tmp = 0;
 
@@ -321,8 +321,46 @@ export function buildGroupContext(scenAll: any, nameByCode: Record<string, strin
   };
 }
 
+// ---- TEAM STORY (curated national-context RAG) — optional, source-grounded, SHIPS DARK ----
+// Loads data/team-stories/{CODE}.json and gates it before it reaches the model. GRACEFUL by design: a missing,
+// invalid, unreviewed, or malformed file -> null -> contextual_inputs.team_story stays null and narration is
+// UNCHANGED from today. Hard gates (drop the whole story): not an object; review_status != 'reviewed'; a percentage
+// in any text field (the output validator rejects ungrounded percentages — keep mood in WORDS); an internal-ID/UUID
+// pattern in text. Outlet allowlist (data/team-stories/_outlet-allowlist.json) is enforced at curation/CI time, not here.
+const TEAM_STORIES_DIR = path.join(rootDir, "data", "team-stories");
+const STORY_PCT = /\d\s*%|\bper\s?cent\b|\bpercent\b/i;
+const STORY_INTERNAL = /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|monte[-_ ]?carlo|\bv\d+\.\d+\b|current_best|tournament_simulation|team_tactical_|player-impact-|team-strength-/i;
+const STORY_SKIP_KEYS = new Set(["url", "designed_for", "_guidance"]);
+function collectStoryText(v: any, out: string[] = []): string[] {
+  if (typeof v === "string") out.push(v);
+  else if (Array.isArray(v)) for (const x of v) collectStoryText(x, out);
+  else if (v && typeof v === "object") for (const k of Object.keys(v)) { if (STORY_SKIP_KEYS.has(k)) continue; collectStoryText(v[k], out); }
+  return out;
+}
+export function validateTeamStory(story: any, code: string): any | null {
+  if (!story || typeof story !== "object" || Array.isArray(story)) return null;
+  if (story.review_status !== "reviewed") { console.error(`[team_story] ${code}: review_status='${story.review_status ?? "missing"}' (not 'reviewed') -> skipped`); return null; }
+  if (story.team_code && String(story.team_code).toUpperCase() !== code) console.error(`[team_story] ${code}: file team_code='${story.team_code}' != filename -> using filename code`);
+  if (story.designed_for && story.designed_for !== PROMPT_VERSION) console.error(`[team_story] ${code}: designed_for='${story.designed_for}' != ${PROMPT_VERSION} (proceeding; re-check rules)`);
+  const texts = collectStoryText(story);
+  const badPct = texts.find((t) => STORY_PCT.test(t));
+  if (badPct) { console.error(`[team_story] ${code}: a text field contains a percentage ("${badPct.slice(0, 60)}") — mood must be in WORDS -> skipped`); return null; }
+  const badId = texts.find((t) => STORY_INTERNAL.test(t));
+  if (badId) { console.error(`[team_story] ${code}: a text field contains an internal identifier ("${badId.slice(0, 60)}") -> skipped`); return null; }
+  const { _guidance, ...clean } = story;
+  return clean;
+}
+export function loadTeamStory(code: string): any | null {
+  const fp = path.join(TEAM_STORIES_DIR, `${code}.json`);
+  if (!existsSync(fp)) return null;
+  let parsed: any;
+  try { parsed = JSON.parse(readFileSync(fp, "utf8")); }
+  catch (e: any) { console.error(`[team_story] ${code}: JSON parse failed (${String(e?.message ?? e).slice(0, 80)}) -> skipped`); return null; }
+  return validateTeamStory(parsed, code);
+}
+
 // ---- build the structured scenario_narration input (ID-FREE; plain source labels only) ----
-export function buildScenarioInput(teamCode: string, teamName: string, group: string, scen: any, ko: any, cond?: any, realCtx?: any, groupCtx?: any) {
+export function buildScenarioInput(teamCode: string, teamName: string, group: string, scen: any, ko: any, cond?: any, realCtx?: any, groupCtx?: any, teamStory?: any) {
   const pr = scen?.probabilities ?? {};
   const advance = num(pr.advance_total), winG = num(pr.win_group), runnerUp = num(pr.runner_up), topTwo = +(winG + runnerUp).toFixed(4), third = num(pr.third_place_advance);
   const tpd = scen?.third_place_dependency ?? {};
@@ -430,7 +468,7 @@ export function buildScenarioInput(teamCode: string, teamName: string, group: st
     },
     fixtures: [], standings: standingsBlock,
     team_context: [{ team_code: teamCode, team_name: teamName, team_strength: { source_id: null, score: null, confidence: "unknown", caveat: "context only" }, player_impact: { source_id: null, summary: null, confidence: "unknown", caveat: null }, tactical_profile: { source_id: null, base_snapshot_id: null, review_status: "unknown", confidence: "unknown", usable_fields: { formation_primary: "unknown", pressing_intensity: "unknown", build_up_style: "unknown", defensive_block_depth: "unknown", set_piece_strength: "unknown", transition_style: "unknown", attacking_width: "unknown" }, source_urls: [], caveat: "no signal" } }],
-    contextual_inputs: { venue: [], weather: [], news_and_injuries: [] },
+    contextual_inputs: { venue: [], weather: [], news_and_injuries: [], team_story: teamStory ?? null },
     forbidden_sources_confirmed_absent: { odds: true, api_football_predictions_endpoint: true, raw_uncurated_web: true },
     known_unknowns: ["No lineups, injuries, or live results supplied (pre-tournament)"],
     _meta_in_their_hands: topTwo >= third,
@@ -457,6 +495,7 @@ export const USER_MSG = (input: any, max: number) => [
   "NUMBERS: Keep the headline advancement chance as a real figure wrapped in human phrasing ('a 74% chance', 'around three-in-four') — but translate MOST secondary figures (top-two, third-place) into words ('more likely than not', 'roughly a coin flip'). Fewer raw numbers in the prose; the exact percentages live in the app's visuals. Say 'reach the knockouts' (you may clarify 'the Round of 32' once).",
   "ACCURACY OVER ACCESSIBILITY — calibrate the words to the supplied 'advance' value and NEVER overstate: below ~35% = an outside chance / uphill; ~35-50% = a real chance, roughly a coin flip; ~50-65% = more likely than not / in a decent position; ~65-80% = well placed / a strong chance; above ~80% = a very strong position / expected to go through. A figure near a boundary takes the more cautious wording. A 44% chance is 'about a coin flip', never 'very likely'.",
   "GROUP CONTEXT (add ONE or TWO sentences): Using scenario_data.group_context, place this team within its group — are they clear at the top, in a tight cluster, chasing, or scrapping at the bottom — and NAME the closest rival(s) by team name (see nearest_rival_above / nearest_rival_below / close_rivals). Follow group_context.shape and group_context.guidance, and calibrate to the REAL gap: a NARROW gap → convey a tight race and name who's close ('Germany right on their heels'); a CLEAR gap → say they're comfortably ahead / well off the pace and do NOT manufacture a race that isn't there. Keep it light — 'right behind', 'neck and neck', 'well clear' — one comparative figure is fine if it adds punch ('Germany right on their heels at 77%').",
+  "NATIONAL STORY (optional, at most 1-2 sentences — ONLY when contextual_inputs.team_story is present and not null): weave in at most ONE storyline OR one short attributed quote (<=20 words) from team_story that genuinely fits this team's situation. A 'official'+fact_grade item may be stated as fact; a 'discovery'+attributed_context_only item MUST be attributed ('per Marca', 'Spanish coverage suggests', 'the manager told AS'). Mood is in WORDS, never a number. Reported availability (confirmed:false) is hedged ('reports suggest'), never stated as fact and never moves a chance. Honour team_story.gaps and any absent/'unknown' field — do NOT fill them from outside knowledge. Never let the story contradict or soften the numbers. If team_story is null, write NOTHING about national mood — do not infer it.",
   "Ground EVERY percentage you state in the SUPPLIED input — the 'probabilities' array for this team AND scenario_data.group_context for any rival figure. Do NOT invent, combine, or derive any new percentage, including a rival's. If a rival number isn't in group_context, describe the gap in words instead.",
   "Cover, in plain language: the team's chance to reach the knockouts, whether their main route is finishing top two (their own results) or leaning on the best-third back door, and what they need.",
   "BEST-THIRD ROUTE — TWO DIFFERENT PROBABILITIES, NEVER CONFLATE THEM. probabilities.third_place_advance is a JOINT chance (the team BOTH finishes third AND that third is good enough); it is naturally small whenever the team usually finishes top two, and it is NOT a measure of how safe the back-door is. The SAFETY of the back-door is _third_race.passes_cutoff_in_pct = P(advance GIVEN they finish third), stated in plain words in _third_race.needs ('Finishing 3rd, X advances in ~N% of cases'). Characterise the route from THAT, not from the joint figure. RULE: when _third_race.passes_cutoff_in_pct is high (>= ~0.85) the back-door is RELIABLE/SAFE — say 'even if they slip to third they'd almost certainly still go through' or call it a dependable safety net, and NEVER call it 'slim', 'a long shot', 'a slim back-door', or 'out of their hands'. Reserve slim / outside / at-the-mercy-of-other-groups wording ONLY for a LOW passes_cutoff route. Keep the likelihood of NEEDING the route (a fallback they may rarely need) SEPARATE from its safety — e.g. 'They'll most likely go through in the top two, but even if they finish third they'd advance in nearly every case.' You may give the conditional figure once via _third_race.conditional_advance_display; never present the joint third_place_advance as if it were the route's safety.",
@@ -573,7 +612,7 @@ async function main() {
     const cond = has("--mock-crisp") ? MOCK_CRISP(code) : condByCode[code];
     const realCtx = has("--mock-real") ? MOCK_REAL(code, s.group_code ?? "?") : realContextForTeam(real, code, s.group_code ?? "?", groupResultsSoFar);
     const groupCtx = buildGroupContext(scen, nameByCode, code, s.group_code ?? "?");
-    const input = buildScenarioInput(code, nameByCode[code] ?? code, s.group_code ?? "?", s, koByCode[code], cond, realCtx, groupCtx);
+    const input = buildScenarioInput(code, nameByCode[code] ?? code, s.group_code ?? "?", s, koByCode[code], cond, realCtx, groupCtx, loadTeamStory(code));
     const sd: any = (input as any).scenario_data;
     console.log(JSON.stringify({
       preview: code,
@@ -608,7 +647,7 @@ async function main() {
     i++;
     const s = (scen as any)[code]; if (!s) { results.push({ team: code, status: "no_scenario_data" }); continue; }
     const groupCtx = buildGroupContext(scen, nameByCode, code, s.group_code);
-    const input = buildScenarioInput(code, nameByCode[code] ?? code, s.group_code, s, koByCode[code], condByCode[code], realContextForTeam(real, code, s.group_code, groupResultsSoFar), groupCtx);
+    const input = buildScenarioInput(code, nameByCode[code] ?? code, s.group_code, s, koByCode[code], condByCode[code], realContextForTeam(real, code, s.group_code, groupResultsSoFar), groupCtx, loadTeamStory(code));
     let raw = "", vr: any = null, attempts = 0, genErr = "";
     for (attempts = 1; attempts <= 3; attempts++) {
       try { raw = await callGemini(apiKey, model, systemPrompt, USER_MSG(input, attempts >= 2 ? 175 : 195)); }
