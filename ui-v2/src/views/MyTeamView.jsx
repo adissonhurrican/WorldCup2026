@@ -185,12 +185,28 @@ function OverviewPanel({ data, code }) {
 }
 
 // ---------- OVERVIEW: this team's fixtures (reuses the Matches-tab card verbatim) ----------
-// Lists group fixtures plus the team's current knockout fixture after both sides are real.
-// Each row is the shared MatchCard, so live/final states and tap-through detail stay consistent.
+// Stable per-game identity for de-dup + the React key (never the array index): a resolved KNOCKOUT game keys by
+// match_number — the SAME game arrives via BOTH data.fixtures (teamFixtures) and data.knockout_fixtures
+// (nextRealKnockoutFixture) since 9a7dbdf normalized knockouts into the unified list — and GROUP games key by
+// teams + kickoff. So a game present in both sources collapses to one card, and React keys on the game itself.
+function fixtureIdentity(fx) {
+  if (isKnockoutFixture(fx)) return `ko-${fx.match_number ?? `${fx.home}-${fx.away}`}`;
+  return `grp-${fx.home}-${fx.away}-${fx.kickoff_utc || fx.kickoff || ""}`;
+}
+// Lists the team's group fixtures plus its FULL knockout run (R32 → R16 → … + the next game), each as the shared
+// MatchCard so live/final/upcoming states + scores stay consistent. The two sources overlap on resolved knockout
+// games, so the assembled list is de-duped by fixtureIdentity (the game shows ONCE) and then sorted chronologically.
 function FixturesSection({ data, code, live, lineups, events, stats, onOpen, onTab }) {
   const knockoutFx = nextRealKnockoutFixture(data, code, live);
   const endState = teamTournamentEndState(data, code);
+  const seen = new Set();
   const fixtures = [...teamFixtures(data, code), ...(knockoutFx && !endState ? [knockoutFx] : [])]
+    .filter((fx) => {
+      const id = fixtureIdentity(fx);
+      if (seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    })
     .sort((a, b) => {
       const aIso = a.kickoff_utc || a.kickoff;
       const bIso = b.kickoff_utc || b.kickoff;
@@ -224,7 +240,7 @@ function FixturesSection({ data, code, live, lineups, events, stats, onOpen, onT
           const isLive = matchState(fx, live) === "live";
           const dayLabel = fixtureDayLabel(fx);
           return (
-            <div key={`${fx.home}-${fx.away}-${i}`}>
+            <div key={fixtureIdentity(fx)}>
               {isNext && (
                 <div className={`mb-1.5 flex items-center gap-1.5 px-1 text-[11px] font-bold uppercase tracking-wide ${isLive ? "text-live" : "text-accent"}`}>
                   <span className={`h-1.5 w-1.5 rounded-full ${isLive ? "animate-pulse bg-live" : "bg-accent"}`} />
