@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-06-11 21:26:22.483983+00",
+    "generated_at": "2026-06-28 04:02:38.120117+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -673,7 +673,7 @@
           "code": "IRN",
           "win_group": 0,
           "top_2": 0,
-          "advance": 0.7368,
+          "advance": 0,
           "finish_distribution": {
             "1st": 0,
             "2nd": 0,
@@ -830,12 +830,12 @@
         {
           "code": "AUT",
           "win_group": 0,
-          "top_2": 0.6485,
-          "advance": 0.6485,
+          "top_2": 1,
+          "advance": 1,
           "finish_distribution": {
             "1st": 0,
-            "2nd": 0.6485,
-            "3rd": 0.3514,
+            "2nd": 1,
+            "3rd": 0,
             "4th": 0
           },
           "projected_finish": "2nd"
@@ -843,12 +843,12 @@
         {
           "code": "ALG",
           "win_group": 0,
-          "top_2": 0.3514,
-          "advance": 0.6147,
+          "top_2": 0,
+          "advance": 1,
           "finish_distribution": {
             "1st": 0,
-            "2nd": 0.3514,
-            "3rd": 0.6485,
+            "2nd": 0,
+            "3rd": 1,
             "4th": 0
           },
           "projected_finish": "3rd"
@@ -2297,7 +2297,11 @@
         "draw": 0.2641,
         "away_win": 0.3885
       },
-      "result": null,
+      "result": {
+        "home_score": 3,
+        "away_score": 3,
+        "status": "final"
+      },
       "live_score_ref": null
     },
     {
@@ -2413,7 +2417,11 @@
         "draw": 0.1487,
         "away_win": 0.5426
       },
-      "result": null,
+      "result": {
+        "home_score": 1,
+        "away_score": 3,
+        "status": "final"
+      },
       "live_score_ref": null
     },
     {
@@ -2736,11 +2744,11 @@
         }
       },
       "prediction": {
-        "team_a_win_probability": 0.1829,
-        "team_b_win_probability": 0.8171,
-        "elo_a": 1524,
-        "elo_b": 1784,
-        "elo_source": "pre_tournament",
+        "team_a_win_probability": 0.2509,
+        "team_b_win_probability": 0.7491,
+        "elo_a": 1575,
+        "elo_b": 1765,
+        "elo_source": "post_group_k60",
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
@@ -2783,15 +2791,18 @@
           "F"
         ],
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "PAR",
+          "name": "Paraguay"
+        }
       },
       "prediction": {
-        "team_a_win_probability": 0.8692,
-        "team_b_win_probability": 0.1308,
-        "elo_a": 1923,
-        "elo_b": 1594,
-        "elo_source": "pre_tournament",
-        "basis": "projected",
+        "team_a_win_probability": 0.6493,
+        "team_b_win_probability": 0.3507,
+        "elo_a": 1907,
+        "elo_b": 1800,
+        "elo_source": "post_group_k60",
+        "basis": "real",
         "method": "neutral_elo_single_match"
       },
       "result": null,
@@ -2833,11 +2844,11 @@
         }
       },
       "prediction": {
-        "team_a_win_probability": 0.6912,
-        "team_b_win_probability": 0.3088,
-        "elo_a": 1961,
-        "elo_b": 1821,
-        "elo_source": "pre_tournament",
+        "team_a_win_probability": 0.6687,
+        "team_b_win_probability": 0.3313,
+        "elo_a": 1992,
+        "elo_b": 1870,
+        "elo_source": "post_group_k60",
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
@@ -2880,11 +2891,11 @@
         }
       },
       "prediction": {
-        "team_a_win_probability": 0.6131,
-        "team_b_win_probability": 0.3869,
-        "elo_a": 1984,
-        "elo_b": 1904,
-        "elo_source": "pre_tournament",
+        "team_a_win_probability": 0.628,
+        "team_b_win_probability": 0.372,
+        "elo_a": 2001,
+        "elo_b": 1910,
+        "elo_source": "post_group_k60",
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
@@ -2927,15 +2938,18 @@
           "H"
         ],
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "SWE",
+          "name": "Sweden"
+        }
       },
       "prediction": {
-        "team_a_win_probability": 0.8899,
-        "team_b_win_probability": 0.1101,
-        "elo_a": 2082,
-        "elo_b": 1719,
-        "elo_source": "pre_tournament",
-        "basis": "projected",
+        "team_a_win_probability": 0.9042,
+        "team_b_win_probability": 0.0958,
+        "elo_a": 2139,
+        "elo_b": 1749,
+        "elo_source": "post_group_k60",
+        "basis": "real",
         "method": "neutral_elo_single_match"
       },
       "result": null,
@@ -2977,11 +2991,11 @@
         }
       },
       "prediction": {
-        "team_a_win_probability": 0.2045,
-        "team_b_win_probability": 0.7955,
-        "elo_a": 1676,
-        "elo_b": 1912,
-        "elo_source": "pre_tournament",
+        "team_a_win_probability": 0.2477,
+        "team_b_win_probability": 0.7523,
+        "elo_a": 1728,
+        "elo_b": 1921,
+        "elo_source": "post_group_k60",
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
@@ -3024,15 +3038,18 @@
           "I"
         ],
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "ECU",
+          "name": "Ecuador"
+        }
       },
       "prediction": {
-        "team_a_win_probability": 0.3937,
-        "team_b_win_probability": 0.6063,
-        "elo_a": 1858,
-        "elo_b": 1933,
-        "elo_source": "pre_tournament",
-        "basis": "projected",
+        "team_a_win_probability": 0.5302,
+        "team_b_win_probability": 0.4698,
+        "elo_a": 1916,
+        "elo_b": 1895,
+        "elo_source": "post_group_k60",
+        "basis": "real",
         "method": "neutral_elo_single_match"
       },
       "result": null,
@@ -3074,15 +3091,18 @@
           "K"
         ],
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "COD",
+          "name": "Congo DR"
+        }
       },
       "prediction": {
-        "team_a_win_probability": 0.6925,
-        "team_b_win_probability": 0.3075,
-        "elo_a": 2020,
-        "elo_b": 1879,
-        "elo_source": "pre_tournament",
-        "basis": "projected",
+        "team_a_win_probability": 0.8639,
+        "team_b_win_probability": 0.1361,
+        "elo_a": 2037,
+        "elo_b": 1716,
+        "elo_source": "post_group_k60",
+        "basis": "real",
         "method": "neutral_elo_single_match"
       },
       "result": null,
@@ -3124,15 +3144,18 @@
           "J"
         ],
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "BIH",
+          "name": "Bosnia and Herzegovina"
+        }
       },
       "prediction": {
-        "team_a_win_probability": 0.4684,
-        "team_b_win_probability": 0.5316,
-        "elo_a": 1721,
-        "elo_b": 1743,
-        "elo_source": "pre_tournament",
-        "basis": "projected",
+        "team_a_win_probability": 0.7534,
+        "team_b_win_probability": 0.2466,
+        "elo_a": 1809,
+        "elo_b": 1615,
+        "elo_source": "post_group_k60",
+        "basis": "real",
         "method": "neutral_elo_single_match"
       },
       "result": null,
@@ -3174,15 +3197,18 @@
           "J"
         ],
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "SEN",
+          "name": "Senegal"
+        }
       },
       "prediction": {
-        "team_a_win_probability": 0.6584,
-        "team_b_win_probability": 0.3416,
-        "elo_a": 1866,
-        "elo_b": 1752,
-        "elo_source": "pre_tournament",
-        "basis": "projected",
+        "team_a_win_probability": 0.5072,
+        "team_b_win_probability": 0.4928,
+        "elo_a": 1862,
+        "elo_b": 1857,
+        "elo_source": "post_group_k60",
+        "basis": "real",
         "method": "neutral_elo_single_match"
       },
       "result": null,
@@ -3224,11 +3250,11 @@
         }
       },
       "prediction": {
-        "team_a_win_probability": 0.5771,
-        "team_b_win_probability": 0.4229,
-        "elo_a": 1984,
-        "elo_b": 1930,
-        "elo_source": "pre_tournament",
+        "team_a_win_probability": 0.5966,
+        "team_b_win_probability": 0.4034,
+        "elo_a": 1986,
+        "elo_b": 1918,
+        "elo_source": "post_group_k60",
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
@@ -3265,15 +3291,18 @@
         "group": "J",
         "pool": null,
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "AUT",
+          "name": "Austria"
+        }
       },
       "prediction": {
-        "team_a_win_probability": 0.875,
-        "team_b_win_probability": 0.125,
-        "elo_a": 2165,
-        "elo_b": 1827,
-        "elo_source": "pre_tournament",
-        "basis": "projected",
+        "team_a_win_probability": 0.8625,
+        "team_b_win_probability": 0.1375,
+        "elo_a": 2151,
+        "elo_b": 1832,
+        "elo_source": "post_group_k60",
+        "basis": "real",
         "method": "neutral_elo_single_match"
       },
       "result": null,
@@ -3315,15 +3344,18 @@
           "J"
         ],
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "ALG",
+          "name": "Algeria"
+        }
       },
       "prediction": {
-        "team_a_win_probability": 0.6776,
-        "team_b_win_probability": 0.3224,
-        "elo_a": 1889,
-        "elo_b": 1760,
-        "elo_source": "pre_tournament",
-        "basis": "projected",
+        "team_a_win_probability": 0.6937,
+        "team_b_win_probability": 0.3063,
+        "elo_a": 1905,
+        "elo_b": 1763,
+        "elo_source": "post_group_k60",
+        "basis": "real",
         "method": "neutral_elo_single_match"
       },
       "result": null,
@@ -3348,7 +3380,10 @@
         "group": "J",
         "pool": null,
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "ARG",
+          "name": "Argentina"
+        }
       },
       "side_b": {
         "label": "Runner-up Group H",
@@ -3362,12 +3397,12 @@
         }
       },
       "prediction": {
-        "team_a_win_probability": 0.9626,
-        "team_b_win_probability": 0.0374,
-        "elo_a": 2113,
-        "elo_b": 1549,
-        "elo_source": "pre_tournament",
-        "basis": "projected",
+        "team_a_win_probability": 0.9591,
+        "team_b_win_probability": 0.0409,
+        "elo_a": 2145,
+        "elo_b": 1597,
+        "elo_source": "post_group_k60",
+        "basis": "real",
         "method": "neutral_elo_single_match"
       },
       "result": null,
@@ -3409,15 +3444,18 @@
           "L"
         ],
         "source_match": null,
-        "team": null
+        "team": {
+          "code": "GHA",
+          "name": "Ghana"
+        }
       },
       "prediction": {
-        "team_a_win_probability": 0.6035,
-        "team_b_win_probability": 0.3965,
-        "elo_a": 1975,
-        "elo_b": 1902,
-        "elo_source": "pre_tournament",
-        "basis": "projected",
+        "team_a_win_probability": 0.9211,
+        "team_b_win_probability": 0.0789,
+        "elo_a": 1999,
+        "elo_b": 1572,
+        "elo_source": "post_group_k60",
+        "basis": "real",
         "method": "neutral_elo_single_match"
       },
       "result": null,
@@ -3459,11 +3497,11 @@
         }
       },
       "prediction": {
-        "team_a_win_probability": 0.6321,
-        "team_b_win_probability": 0.3679,
-        "elo_a": 1783,
-        "elo_b": 1689,
-        "elo_source": "pre_tournament",
+        "team_a_win_probability": 0.5785,
+        "team_b_win_probability": 0.4215,
+        "elo_a": 1792,
+        "elo_b": 1737,
+        "elo_source": "post_group_k60",
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
@@ -4010,11 +4048,11 @@
       "code": "ESP",
       "advance": 0.8538,
       "knockout": {
-        "reach_round_of_16": 0.6993,
-        "reach_quarterfinal": 0.5817,
-        "reach_semifinal": 0.4792,
-        "reach_final": 0.3729,
-        "champion": 0.272
+        "reach_round_of_16": 0.6781,
+        "reach_quarterfinal": 0.5537,
+        "reach_semifinal": 0.445,
+        "reach_final": 0.3268,
+        "champion": 0.2187
       },
       "group_games": [
         {
@@ -4044,11 +4082,11 @@
       "code": "ARG",
       "advance": 0.8018,
       "knockout": {
-        "reach_round_of_16": 0.6026,
-        "reach_quarterfinal": 0.4889,
-        "reach_semifinal": 0.3801,
-        "reach_final": 0.2687,
-        "champion": 0.1695
+        "reach_round_of_16": 0.6339,
+        "reach_quarterfinal": 0.5301,
+        "reach_semifinal": 0.4222,
+        "reach_final": 0.2994,
+        "champion": 0.1988
       },
       "group_games": [
         {
@@ -4078,11 +4116,11 @@
       "code": "FRA",
       "advance": 0.7804,
       "knockout": {
-        "reach_round_of_16": 0.6283,
-        "reach_quarterfinal": 0.4849,
-        "reach_semifinal": 0.3492,
-        "reach_final": 0.2108,
-        "champion": 0.1249
+        "reach_round_of_16": 0.6627,
+        "reach_quarterfinal": 0.5425,
+        "reach_semifinal": 0.4138,
+        "reach_final": 0.2759,
+        "champion": 0.1789
       },
       "group_games": [
         {
@@ -4112,11 +4150,11 @@
       "code": "ENG",
       "advance": 0.7895,
       "knockout": {
-        "reach_round_of_16": 0.5508,
-        "reach_quarterfinal": 0.3669,
-        "reach_semifinal": 0.2298,
-        "reach_final": 0.1309,
-        "champion": 0.0644
+        "reach_round_of_16": 0.5597,
+        "reach_quarterfinal": 0.3813,
+        "reach_semifinal": 0.2409,
+        "reach_final": 0.1363,
+        "champion": 0.067
       },
       "group_games": [
         {
@@ -4146,11 +4184,11 @@
       "code": "BRA",
       "advance": 0.772,
       "knockout": {
-        "reach_round_of_16": 0.5405,
-        "reach_quarterfinal": 0.3452,
-        "reach_semifinal": 0.2041,
-        "reach_final": 0.1003,
-        "champion": 0.0474
+        "reach_round_of_16": 0.5465,
+        "reach_quarterfinal": 0.3545,
+        "reach_semifinal": 0.2104,
+        "reach_final": 0.1051,
+        "champion": 0.0482
       },
       "group_games": [
         {
@@ -4177,48 +4215,14 @@
       ]
     },
     {
-      "code": "POR",
-      "advance": 0.7421,
-      "knockout": {
-        "reach_round_of_16": 0.4954,
-        "reach_quarterfinal": 0.3105,
-        "reach_semifinal": 0.1789,
-        "reach_final": 0.0953,
-        "champion": 0.0437
-      },
-      "group_games": [
-        {
-          "opponent": "COL",
-          "matchday": 2,
-          "win": 0.3684,
-          "draw": 0.2676,
-          "loss": 0.364
-        },
-        {
-          "opponent": "COD",
-          "matchday": 2,
-          "win": 0.4887,
-          "draw": 0.1961,
-          "loss": 0.3152
-        },
-        {
-          "opponent": "UZB",
-          "matchday": 3,
-          "win": 0.4506,
-          "draw": 0.2295,
-          "loss": 0.3199
-        }
-      ]
-    },
-    {
       "code": "COL",
       "advance": 0.7381,
       "knockout": {
-        "reach_round_of_16": 0.4862,
-        "reach_quarterfinal": 0.3013,
-        "reach_semifinal": 0.171,
-        "reach_final": 0.0893,
-        "champion": 0.0394
+        "reach_round_of_16": 0.5104,
+        "reach_quarterfinal": 0.327,
+        "reach_semifinal": 0.194,
+        "reach_final": 0.1019,
+        "champion": 0.0445
       },
       "group_games": [
         {
@@ -4248,11 +4252,11 @@
       "code": "NED",
       "advance": 0.7464,
       "knockout": {
-        "reach_round_of_16": 0.4889,
-        "reach_quarterfinal": 0.3195,
-        "reach_semifinal": 0.1774,
-        "reach_final": 0.0789,
-        "champion": 0.0348
+        "reach_round_of_16": 0.506,
+        "reach_quarterfinal": 0.3453,
+        "reach_semifinal": 0.2001,
+        "reach_final": 0.0949,
+        "champion": 0.0413
       },
       "group_games": [
         {
@@ -4279,36 +4283,36 @@
       ]
     },
     {
-      "code": "ECU",
-      "advance": 0.7755,
+      "code": "POR",
+      "advance": 0.7421,
       "knockout": {
-        "reach_round_of_16": 0.4914,
-        "reach_quarterfinal": 0.2744,
-        "reach_semifinal": 0.1476,
-        "reach_final": 0.0633,
-        "champion": 0.023
+        "reach_round_of_16": 0.501,
+        "reach_quarterfinal": 0.3141,
+        "reach_semifinal": 0.1796,
+        "reach_final": 0.0915,
+        "champion": 0.0389
       },
       "group_games": [
         {
-          "opponent": "CIV",
-          "matchday": 1,
+          "opponent": "COL",
+          "matchday": 2,
+          "win": 0.3684,
+          "draw": 0.2676,
+          "loss": 0.364
+        },
+        {
+          "opponent": "COD",
+          "matchday": 2,
+          "win": 0.4887,
+          "draw": 0.1961,
+          "loss": 0.3152
+        },
+        {
+          "opponent": "UZB",
+          "matchday": 3,
           "win": 0.4506,
           "draw": 0.2295,
           "loss": 0.3199
-        },
-        {
-          "opponent": "CUW",
-          "matchday": 2,
-          "win": 0.5785,
-          "draw": 0.1233,
-          "loss": 0.2982
-        },
-        {
-          "opponent": "GER",
-          "matchday": 2,
-          "win": 0.3686,
-          "draw": 0.2676,
-          "loss": 0.3638
         }
       ]
     },
@@ -4316,11 +4320,11 @@
       "code": "CRO",
       "advance": 0.7464,
       "knockout": {
-        "reach_round_of_16": 0.4489,
-        "reach_quarterfinal": 0.2504,
-        "reach_semifinal": 0.1306,
-        "reach_final": 0.0602,
-        "champion": 0.0228
+        "reach_round_of_16": 0.4365,
+        "reach_quarterfinal": 0.2388,
+        "reach_semifinal": 0.1187,
+        "reach_final": 0.0505,
+        "champion": 0.0173
       },
       "group_games": [
         {
@@ -4347,36 +4351,70 @@
       ]
     },
     {
-      "code": "GER",
-      "advance": 0.7751,
+      "code": "MEX",
+      "advance": 0.7416,
       "knockout": {
-        "reach_round_of_16": 0.4813,
-        "reach_quarterfinal": 0.2591,
-        "reach_semifinal": 0.1367,
-        "reach_final": 0.0556,
-        "champion": 0.0192
+        "reach_round_of_16": 0.5202,
+        "reach_quarterfinal": 0.2787,
+        "reach_semifinal": 0.124,
+        "reach_final": 0.0486,
+        "champion": 0.0169
       },
       "group_games": [
         {
-          "opponent": "ECU",
+          "opponent": "CZE",
+          "matchday": 1,
+          "win": 0.4027,
+          "draw": 0.2595,
+          "loss": 0.3377
+        },
+        {
+          "opponent": "KOR",
           "matchday": 2,
-          "win": 0.3638,
-          "draw": 0.2676,
-          "loss": 0.3686
+          "win": 0.3949,
+          "draw": 0.2623,
+          "loss": 0.3428
         },
         {
-          "opponent": "CIV",
+          "opponent": "RSA",
           "matchday": 3,
-          "win": 0.4459,
-          "draw": 0.2332,
-          "loss": 0.3208
+          "win": 0.4916,
+          "draw": 0.1935,
+          "loss": 0.3149
+        }
+      ]
+    },
+    {
+      "code": "SUI",
+      "advance": 0.7844,
+      "knockout": {
+        "reach_round_of_16": 0.535,
+        "reach_quarterfinal": 0.2842,
+        "reach_semifinal": 0.1229,
+        "reach_final": 0.0495,
+        "champion": 0.0163
+      },
+      "group_games": [
+        {
+          "opponent": "BIH",
+          "matchday": 1,
+          "win": 0.4698,
+          "draw": 0.2131,
+          "loss": 0.317
         },
         {
-          "opponent": "CUW",
+          "opponent": "CAN",
           "matchday": 3,
-          "win": 0.5741,
-          "draw": 0.126,
-          "loss": 0.2999
+          "win": 0.3946,
+          "draw": 0.2624,
+          "loss": 0.343
+        },
+        {
+          "opponent": "QAT",
+          "matchday": 3,
+          "win": 0.5625,
+          "draw": 0.1336,
+          "loss": 0.3038
         }
       ]
     },
@@ -4384,11 +4422,11 @@
       "code": "NOR",
       "advance": 0.697,
       "knockout": {
-        "reach_round_of_16": 0.4426,
-        "reach_quarterfinal": 0.2572,
-        "reach_semifinal": 0.1275,
-        "reach_final": 0.0493,
-        "champion": 0.0168
+        "reach_round_of_16": 0.4518,
+        "reach_quarterfinal": 0.2659,
+        "reach_semifinal": 0.1289,
+        "reach_final": 0.0505,
+        "champion": 0.016
       },
       "group_games": [
         {
@@ -4418,11 +4456,11 @@
       "code": "JPN",
       "advance": 0.7194,
       "knockout": {
-        "reach_round_of_16": 0.4224,
-        "reach_quarterfinal": 0.2435,
-        "reach_semifinal": 0.1211,
-        "reach_final": 0.0453,
-        "champion": 0.0162
+        "reach_round_of_16": 0.4192,
+        "reach_quarterfinal": 0.244,
+        "reach_semifinal": 0.1188,
+        "reach_final": 0.0445,
+        "champion": 0.0149
       },
       "group_games": [
         {
@@ -4449,138 +4487,70 @@
       ]
     },
     {
-      "code": "TUR",
-      "advance": 0.7165,
+      "code": "GER",
+      "advance": 0.7751,
       "knockout": {
-        "reach_round_of_16": 0.4814,
-        "reach_quarterfinal": 0.2564,
-        "reach_semifinal": 0.1105,
-        "reach_final": 0.0464,
-        "champion": 0.0155
+        "reach_round_of_16": 0.4629,
+        "reach_quarterfinal": 0.2296,
+        "reach_semifinal": 0.1112,
+        "reach_final": 0.0414,
+        "champion": 0.0129
       },
       "group_games": [
         {
-          "opponent": "AUS",
-          "matchday": 1,
-          "win": 0.3987,
-          "draw": 0.261,
-          "loss": 0.3402
+          "opponent": "ECU",
+          "matchday": 2,
+          "win": 0.3638,
+          "draw": 0.2676,
+          "loss": 0.3686
         },
         {
-          "opponent": "PAR",
-          "matchday": 2,
-          "win": 0.3844,
-          "draw": 0.2651,
-          "loss": 0.3506
+          "opponent": "CIV",
+          "matchday": 3,
+          "win": 0.4459,
+          "draw": 0.2332,
+          "loss": 0.3208
         },
         {
-          "opponent": "USA",
-          "matchday": 2,
-          "win": 0.4191,
-          "draw": 0.2517,
-          "loss": 0.3292
+          "opponent": "CUW",
+          "matchday": 3,
+          "win": 0.5741,
+          "draw": 0.126,
+          "loss": 0.2999
         }
       ]
     },
     {
-      "code": "SUI",
-      "advance": 0.7844,
+      "code": "ECU",
+      "advance": 0.7755,
       "knockout": {
-        "reach_round_of_16": 0.5157,
-        "reach_quarterfinal": 0.2683,
-        "reach_semifinal": 0.1124,
-        "reach_final": 0.0446,
-        "champion": 0.015
+        "reach_round_of_16": 0.4536,
+        "reach_quarterfinal": 0.2213,
+        "reach_semifinal": 0.1021,
+        "reach_final": 0.0382,
+        "champion": 0.0116
       },
       "group_games": [
         {
-          "opponent": "BIH",
+          "opponent": "CIV",
           "matchday": 1,
-          "win": 0.4698,
-          "draw": 0.2131,
-          "loss": 0.317
+          "win": 0.4506,
+          "draw": 0.2295,
+          "loss": 0.3199
         },
         {
-          "opponent": "CAN",
-          "matchday": 3,
-          "win": 0.3946,
-          "draw": 0.2624,
-          "loss": 0.343
-        },
-        {
-          "opponent": "QAT",
-          "matchday": 3,
-          "win": 0.5625,
-          "draw": 0.1336,
-          "loss": 0.3038
-        }
-      ]
-    },
-    {
-      "code": "URU",
-      "advance": 0.7271,
-      "knockout": {
-        "reach_round_of_16": 0.4027,
-        "reach_quarterfinal": 0.217,
-        "reach_semifinal": 0.1055,
-        "reach_final": 0.0441,
-        "champion": 0.0146
-      },
-      "group_games": [
-        {
-          "opponent": "KSA",
+          "opponent": "CUW",
           "matchday": 2,
-          "win": 0.4859,
-          "draw": 0.1987,
-          "loss": 0.3154
+          "win": 0.5785,
+          "draw": 0.1233,
+          "loss": 0.2982
         },
         {
-          "opponent": "CPV",
-          "matchday": 3,
-          "win": 0.4968,
-          "draw": 0.1887,
-          "loss": 0.3145
-        },
-        {
-          "opponent": "ESP",
-          "matchday": 3,
-          "win": 0.3186,
-          "draw": 0.223,
-          "loss": 0.4584
-        }
-      ]
-    },
-    {
-      "code": "SEN",
-      "advance": 0.6766,
-      "knockout": {
-        "reach_round_of_16": 0.4065,
-        "reach_quarterfinal": 0.2207,
-        "reach_semifinal": 0.0979,
-        "reach_final": 0.0347,
-        "champion": 0.0106
-      },
-      "group_games": [
-        {
-          "opponent": "FRA",
-          "matchday": 1,
-          "win": 0.326,
-          "draw": 0.2467,
-          "loss": 0.4273
-        },
-        {
-          "opponent": "NOR",
-          "matchday": 3,
-          "win": 0.3585,
-          "draw": 0.2668,
-          "loss": 0.3746
-        },
-        {
-          "opponent": "IRQ",
-          "matchday": 3,
-          "win": 0.4579,
-          "draw": 0.2234,
-          "loss": 0.3186
+          "opponent": "GER",
+          "matchday": 2,
+          "win": 0.3686,
+          "draw": 0.2676,
+          "loss": 0.3638
         }
       ]
     },
@@ -4588,11 +4558,11 @@
       "code": "BEL",
       "advance": 0.7371,
       "knockout": {
-        "reach_round_of_16": 0.4506,
-        "reach_quarterfinal": 0.2142,
-        "reach_semifinal": 0.0799,
-        "reach_final": 0.0321,
-        "champion": 0.0097
+        "reach_round_of_16": 0.4508,
+        "reach_quarterfinal": 0.2153,
+        "reach_semifinal": 0.0785,
+        "reach_final": 0.0288,
+        "champion": 0.008
       },
       "group_games": [
         {
@@ -4619,116 +4589,14 @@
       ]
     },
     {
-      "code": "MEX",
-      "advance": 0.7416,
-      "knockout": {
-        "reach_round_of_16": 0.4767,
-        "reach_quarterfinal": 0.2261,
-        "reach_semifinal": 0.0876,
-        "reach_final": 0.0301,
-        "champion": 0.0083
-      },
-      "group_games": [
-        {
-          "opponent": "CZE",
-          "matchday": 1,
-          "win": 0.4027,
-          "draw": 0.2595,
-          "loss": 0.3377
-        },
-        {
-          "opponent": "KOR",
-          "matchday": 2,
-          "win": 0.3949,
-          "draw": 0.2623,
-          "loss": 0.3428
-        },
-        {
-          "opponent": "RSA",
-          "matchday": 3,
-          "win": 0.4916,
-          "draw": 0.1935,
-          "loss": 0.3149
-        }
-      ]
-    },
-    {
-      "code": "AUT",
-      "advance": 0.6567,
-      "knockout": {
-        "reach_round_of_16": 0.3182,
-        "reach_quarterfinal": 0.1464,
-        "reach_semifinal": 0.0553,
-        "reach_final": 0.0198,
-        "champion": 0.0056
-      },
-      "group_games": [
-        {
-          "opponent": "ALG",
-          "matchday": 1,
-          "win": 0.3885,
-          "draw": 0.2641,
-          "loss": 0.3474
-        },
-        {
-          "opponent": "ARG",
-          "matchday": 2,
-          "win": 0.3176,
-          "draw": 0.2173,
-          "loss": 0.4651
-        },
-        {
-          "opponent": "JOR",
-          "matchday": 2,
-          "win": 0.4043,
-          "draw": 0.2589,
-          "loss": 0.3368
-        }
-      ]
-    },
-    {
-      "code": "PAR",
-      "advance": 0.6754,
-      "knockout": {
-        "reach_round_of_16": 0.4012,
-        "reach_quarterfinal": 0.183,
-        "reach_semifinal": 0.0635,
-        "reach_final": 0.0215,
-        "champion": 0.0053
-      },
-      "group_games": [
-        {
-          "opponent": "AUS",
-          "matchday": 1,
-          "win": 0.3792,
-          "draw": 0.2661,
-          "loss": 0.3547
-        },
-        {
-          "opponent": "TUR",
-          "matchday": 2,
-          "win": 0.3506,
-          "draw": 0.2651,
-          "loss": 0.3844
-        },
-        {
-          "opponent": "USA",
-          "matchday": 3,
-          "win": 0.3966,
-          "draw": 0.2617,
-          "loss": 0.3416
-        }
-      ]
-    },
-    {
       "code": "MAR",
       "advance": 0.6909,
       "knockout": {
-        "reach_round_of_16": 0.3527,
-        "reach_quarterfinal": 0.1603,
-        "reach_semifinal": 0.0558,
-        "reach_final": 0.0163,
-        "champion": 0.0047
+        "reach_round_of_16": 0.3895,
+        "reach_quarterfinal": 0.1978,
+        "reach_semifinal": 0.0789,
+        "reach_final": 0.0257,
+        "champion": 0.0073
       },
       "group_games": [
         {
@@ -4755,274 +4623,138 @@
       ]
     },
     {
-      "code": "CAN",
-      "advance": 0.7276,
+      "code": "TUR",
+      "advance": 0.7165,
       "knockout": {
-        "reach_round_of_16": 0.3878,
-        "reach_quarterfinal": 0.152,
-        "reach_semifinal": 0.0457,
-        "reach_final": 0.0131,
-        "champion": 0.0028
+        "reach_round_of_16": 0.4282,
+        "reach_quarterfinal": 0.1969,
+        "reach_semifinal": 0.0688,
+        "reach_final": 0.0223,
+        "champion": 0.0065
       },
       "group_games": [
         {
-          "opponent": "BIH",
-          "matchday": 2,
-          "win": 0.4224,
-          "draw": 0.2497,
-          "loss": 0.3279
-        },
-        {
-          "opponent": "QAT",
-          "matchday": 2,
-          "win": 0.505,
-          "draw": 0.1813,
-          "loss": 0.3137
-        },
-        {
-          "opponent": "SUI",
-          "matchday": 3,
-          "win": 0.343,
-          "draw": 0.2624,
-          "loss": 0.3946
-        }
-      ]
-    },
-    {
-      "code": "AUS",
-      "advance": 0.656,
-      "knockout": {
-        "reach_round_of_16": 0.3496,
-        "reach_quarterfinal": 0.1366,
-        "reach_semifinal": 0.0382,
-        "reach_final": 0.0107,
-        "champion": 0.0024
-      },
-      "group_games": [
-        {
-          "opponent": "TUR",
+          "opponent": "AUS",
           "matchday": 1,
-          "win": 0.3402,
+          "win": 0.3987,
           "draw": 0.261,
-          "loss": 0.3987
+          "loss": 0.3402
         },
         {
           "opponent": "PAR",
-          "matchday": 1,
-          "win": 0.3547,
-          "draw": 0.2661,
-          "loss": 0.3792
+          "matchday": 2,
+          "win": 0.3844,
+          "draw": 0.2651,
+          "loss": 0.3506
         },
         {
           "opponent": "USA",
-          "matchday": 3,
-          "win": 0.3824,
-          "draw": 0.2655,
-          "loss": 0.3521
+          "matchday": 2,
+          "win": 0.4191,
+          "draw": 0.2517,
+          "loss": 0.3292
         }
       ]
     },
     {
-      "code": "IRN",
-      "advance": 0.6811,
+      "code": "SEN",
+      "advance": 0.6766,
       "knockout": {
-        "reach_round_of_16": 0.3241,
-        "reach_quarterfinal": 0.1147,
-        "reach_semifinal": 0.0298,
-        "reach_final": 0.0075,
-        "champion": 0.0018
+        "reach_round_of_16": 0.392,
+        "reach_quarterfinal": 0.2029,
+        "reach_semifinal": 0.0803,
+        "reach_final": 0.0257,
+        "champion": 0.0065
       },
       "group_games": [
         {
-          "opponent": "BEL",
+          "opponent": "FRA",
           "matchday": 1,
-          "win": 0.3428,
-          "draw": 0.2623,
-          "loss": 0.3949
+          "win": 0.326,
+          "draw": 0.2467,
+          "loss": 0.4273
         },
         {
-          "opponent": "EGY",
-          "matchday": 2,
-          "win": 0.3849,
-          "draw": 0.265,
-          "loss": 0.3501
+          "opponent": "NOR",
+          "matchday": 3,
+          "win": 0.3585,
+          "draw": 0.2668,
+          "loss": 0.3746
         },
         {
-          "opponent": "NZL",
-          "matchday": 2,
-          "win": 0.417,
-          "draw": 0.2529,
-          "loss": 0.3302
+          "opponent": "IRQ",
+          "matchday": 3,
+          "win": 0.4579,
+          "draw": 0.2234,
+          "loss": 0.3186
         }
       ]
     },
     {
-      "code": "SCO",
-      "advance": 0.6754,
+      "code": "URU",
+      "advance": 0.7271,
       "knockout": {
-        "reach_round_of_16": 0.2959,
-        "reach_quarterfinal": 0.1148,
-        "reach_semifinal": 0.0347,
-        "reach_final": 0.0082,
-        "champion": 0.0016
+        "reach_round_of_16": 0.3565,
+        "reach_quarterfinal": 0.1706,
+        "reach_semifinal": 0.0707,
+        "reach_final": 0.0237,
+        "champion": 0.006
       },
       "group_games": [
         {
-          "opponent": "HAI",
+          "opponent": "KSA",
           "matchday": 2,
-          "win": 0.4406,
-          "draw": 0.2374,
-          "loss": 0.3221
+          "win": 0.4859,
+          "draw": 0.1987,
+          "loss": 0.3154
         },
         {
-          "opponent": "BRA",
+          "opponent": "CPV",
           "matchday": 3,
-          "win": 0.3242,
-          "draw": 0.2429,
-          "loss": 0.4329
+          "win": 0.4968,
+          "draw": 0.1887,
+          "loss": 0.3145
         },
         {
-          "opponent": "MAR",
+          "opponent": "ESP",
           "matchday": 3,
-          "win": 0.3538,
-          "draw": 0.2659,
-          "loss": 0.3803
+          "win": 0.3186,
+          "draw": 0.223,
+          "loss": 0.4584
         }
       ]
     },
     {
-      "code": "PAN",
-      "advance": 0.6457,
+      "code": "AUT",
+      "advance": 0.6567,
       "knockout": {
-        "reach_round_of_16": 0.2343,
-        "reach_quarterfinal": 0.0819,
-        "reach_semifinal": 0.0223,
-        "reach_final": 0.0056,
-        "champion": 0.0014
+        "reach_round_of_16": 0.3295,
+        "reach_quarterfinal": 0.1534,
+        "reach_semifinal": 0.0583,
+        "reach_final": 0.0193,
+        "champion": 0.0054
       },
       "group_games": [
         {
-          "opponent": "GHA",
-          "matchday": 2,
-          "win": 0.4393,
-          "draw": 0.2383,
-          "loss": 0.3224
-        },
-        {
-          "opponent": "CRO",
-          "matchday": 3,
-          "win": 0.3274,
-          "draw": 0.2491,
-          "loss": 0.4235
-        },
-        {
-          "opponent": "ENG",
-          "matchday": 3,
-          "win": 0.3178,
-          "draw": 0.2186,
-          "loss": 0.4635
-        }
-      ]
-    },
-    {
-      "code": "KOR",
-      "advance": 0.6892,
-      "knockout": {
-        "reach_round_of_16": 0.3569,
-        "reach_quarterfinal": 0.1277,
-        "reach_semifinal": 0.0333,
-        "reach_final": 0.0073,
-        "champion": 0.0013
-      },
-      "group_games": [
-        {
-          "opponent": "CZE",
-          "matchday": 2,
-          "win": 0.3728,
-          "draw": 0.2671,
-          "loss": 0.3601
-        },
-        {
-          "opponent": "MEX",
-          "matchday": 2,
-          "win": 0.3428,
-          "draw": 0.2623,
-          "loss": 0.3949
-        },
-        {
-          "opponent": "RSA",
-          "matchday": 3,
-          "win": 0.4375,
-          "draw": 0.2396,
-          "loss": 0.3228
-        }
-      ]
-    },
-    {
-      "code": "CZE",
-      "advance": 0.6743,
-      "knockout": {
-        "reach_round_of_16": 0.333,
-        "reach_quarterfinal": 0.1048,
-        "reach_semifinal": 0.0266,
-        "reach_final": 0.0059,
-        "champion": 0.0011
-      },
-      "group_games": [
-        {
-          "opponent": "MEX",
+          "opponent": "ALG",
           "matchday": 1,
-          "win": 0.3377,
-          "draw": 0.2595,
-          "loss": 0.4027
-        },
-        {
-          "opponent": "RSA",
-          "matchday": 1,
-          "win": 0.427,
-          "draw": 0.2469,
-          "loss": 0.3261
-        },
-        {
-          "opponent": "KOR",
-          "matchday": 2,
-          "win": 0.3601,
-          "draw": 0.2671,
-          "loss": 0.3728
-        }
-      ]
-    },
-    {
-      "code": "ALG",
-      "advance": 0.6173,
-      "knockout": {
-        "reach_round_of_16": 0.245,
-        "reach_quarterfinal": 0.0863,
-        "reach_semifinal": 0.0243,
-        "reach_final": 0.0058,
-        "champion": 0.0009
-      },
-      "group_games": [
-        {
-          "opponent": "AUT",
-          "matchday": 1,
-          "win": 0.3474,
+          "win": 0.3885,
           "draw": 0.2641,
-          "loss": 0.3885
+          "loss": 0.3474
         },
         {
           "opponent": "ARG",
-          "matchday": 1,
-          "win": 0.313,
-          "draw": 0.1744,
-          "loss": 0.5126
+          "matchday": 2,
+          "win": 0.3176,
+          "draw": 0.2173,
+          "loss": 0.4651
         },
         {
           "opponent": "JOR",
-          "matchday": 3,
-          "win": 0.38,
-          "draw": 0.2659,
-          "loss": 0.3541
+          "matchday": 2,
+          "win": 0.4043,
+          "draw": 0.2589,
+          "loss": 0.3368
         }
       ]
     },
@@ -5030,11 +4762,11 @@
       "code": "USA",
       "advance": 0.6176,
       "knockout": {
-        "reach_round_of_16": 0.2766,
-        "reach_quarterfinal": 0.0898,
-        "reach_semifinal": 0.0221,
-        "reach_final": 0.0052,
-        "champion": 0.0006
+        "reach_round_of_16": 0.3438,
+        "reach_quarterfinal": 0.1467,
+        "reach_semifinal": 0.0457,
+        "reach_final": 0.0149,
+        "champion": 0.0035
       },
       "group_games": [
         {
@@ -5061,14 +4793,184 @@
       ]
     },
     {
+      "code": "PAR",
+      "advance": 0.6754,
+      "knockout": {
+        "reach_round_of_16": 0.3744,
+        "reach_quarterfinal": 0.1553,
+        "reach_semifinal": 0.0474,
+        "reach_final": 0.0142,
+        "champion": 0.0027
+      },
+      "group_games": [
+        {
+          "opponent": "AUS",
+          "matchday": 1,
+          "win": 0.3792,
+          "draw": 0.2661,
+          "loss": 0.3547
+        },
+        {
+          "opponent": "TUR",
+          "matchday": 2,
+          "win": 0.3506,
+          "draw": 0.2651,
+          "loss": 0.3844
+        },
+        {
+          "opponent": "USA",
+          "matchday": 3,
+          "win": 0.3966,
+          "draw": 0.2617,
+          "loss": 0.3416
+        }
+      ]
+    },
+    {
+      "code": "AUS",
+      "advance": 0.656,
+      "knockout": {
+        "reach_round_of_16": 0.3558,
+        "reach_quarterfinal": 0.1421,
+        "reach_semifinal": 0.041,
+        "reach_final": 0.0116,
+        "champion": 0.0026
+      },
+      "group_games": [
+        {
+          "opponent": "TUR",
+          "matchday": 1,
+          "win": 0.3402,
+          "draw": 0.261,
+          "loss": 0.3987
+        },
+        {
+          "opponent": "PAR",
+          "matchday": 1,
+          "win": 0.3547,
+          "draw": 0.2661,
+          "loss": 0.3792
+        },
+        {
+          "opponent": "USA",
+          "matchday": 3,
+          "win": 0.3824,
+          "draw": 0.2655,
+          "loss": 0.3521
+        }
+      ]
+    },
+    {
+      "code": "CAN",
+      "advance": 0.7276,
+      "knockout": {
+        "reach_round_of_16": 0.372,
+        "reach_quarterfinal": 0.1351,
+        "reach_semifinal": 0.0383,
+        "reach_final": 0.0097,
+        "champion": 0.0019
+      },
+      "group_games": [
+        {
+          "opponent": "BIH",
+          "matchday": 2,
+          "win": 0.4224,
+          "draw": 0.2497,
+          "loss": 0.3279
+        },
+        {
+          "opponent": "QAT",
+          "matchday": 2,
+          "win": 0.505,
+          "draw": 0.1813,
+          "loss": 0.3137
+        },
+        {
+          "opponent": "SUI",
+          "matchday": 3,
+          "win": 0.343,
+          "draw": 0.2624,
+          "loss": 0.3946
+        }
+      ]
+    },
+    {
+      "code": "IRN",
+      "advance": 0.6811,
+      "knockout": {
+        "reach_round_of_16": 0.3194,
+        "reach_quarterfinal": 0.1134,
+        "reach_semifinal": 0.0288,
+        "reach_final": 0.0063,
+        "champion": 0.0013
+      },
+      "group_games": [
+        {
+          "opponent": "BEL",
+          "matchday": 1,
+          "win": 0.3428,
+          "draw": 0.2623,
+          "loss": 0.3949
+        },
+        {
+          "opponent": "EGY",
+          "matchday": 2,
+          "win": 0.3849,
+          "draw": 0.265,
+          "loss": 0.3501
+        },
+        {
+          "opponent": "NZL",
+          "matchday": 2,
+          "win": 0.417,
+          "draw": 0.2529,
+          "loss": 0.3302
+        }
+      ]
+    },
+    {
+      "code": "ALG",
+      "advance": 0.6173,
+      "knockout": {
+        "reach_round_of_16": 0.2616,
+        "reach_quarterfinal": 0.0989,
+        "reach_semifinal": 0.0294,
+        "reach_final": 0.0069,
+        "champion": 0.0011
+      },
+      "group_games": [
+        {
+          "opponent": "AUT",
+          "matchday": 1,
+          "win": 0.3474,
+          "draw": 0.2641,
+          "loss": 0.3885
+        },
+        {
+          "opponent": "ARG",
+          "matchday": 1,
+          "win": 0.313,
+          "draw": 0.1744,
+          "loss": 0.5126
+        },
+        {
+          "opponent": "JOR",
+          "matchday": 3,
+          "win": 0.38,
+          "draw": 0.2659,
+          "loss": 0.3541
+        }
+      ]
+    },
+    {
       "code": "SWE",
       "advance": 0.6212,
       "knockout": {
-        "reach_round_of_16": 0.2243,
-        "reach_quarterfinal": 0.0766,
-        "reach_semifinal": 0.021,
-        "reach_final": 0.0044,
-        "champion": 0.0006
+        "reach_round_of_16": 0.2427,
+        "reach_quarterfinal": 0.0915,
+        "reach_semifinal": 0.0272,
+        "reach_final": 0.0066,
+        "champion": 0.001
       },
       "group_games": [
         {
@@ -5095,116 +4997,14 @@
       ]
     },
     {
-      "code": "EGY",
-      "advance": 0.6486,
-      "knockout": {
-        "reach_round_of_16": 0.2488,
-        "reach_quarterfinal": 0.0652,
-        "reach_semifinal": 0.0124,
-        "reach_final": 0.0022,
-        "champion": 0.0003
-      },
-      "group_games": [
-        {
-          "opponent": "BEL",
-          "matchday": 1,
-          "win": 0.3299,
-          "draw": 0.2525,
-          "loss": 0.4177
-        },
-        {
-          "opponent": "IRN",
-          "matchday": 2,
-          "win": 0.3501,
-          "draw": 0.265,
-          "loss": 0.3849
-        },
-        {
-          "opponent": "NZL",
-          "matchday": 3,
-          "win": 0.3943,
-          "draw": 0.2625,
-          "loss": 0.3432
-        }
-      ]
-    },
-    {
-      "code": "JOR",
-      "advance": 0.5823,
-      "knockout": {
-        "reach_round_of_16": 0.2019,
-        "reach_quarterfinal": 0.0595,
-        "reach_semifinal": 0.0127,
-        "reach_final": 0.0028,
-        "champion": 0.0003
-      },
-      "group_games": [
-        {
-          "opponent": "AUT",
-          "matchday": 2,
-          "win": 0.3368,
-          "draw": 0.2589,
-          "loss": 0.4043
-        },
-        {
-          "opponent": "ALG",
-          "matchday": 3,
-          "win": 0.3541,
-          "draw": 0.2659,
-          "loss": 0.38
-        },
-        {
-          "opponent": "ARG",
-          "matchday": 3,
-          "win": 0.3087,
-          "draw": 0.1487,
-          "loss": 0.5426
-        }
-      ]
-    },
-    {
-      "code": "UZB",
-      "advance": 0.6183,
-      "knockout": {
-        "reach_round_of_16": 0.2295,
-        "reach_quarterfinal": 0.0786,
-        "reach_semifinal": 0.0221,
-        "reach_final": 0.0036,
-        "champion": 0.0003
-      },
-      "group_games": [
-        {
-          "opponent": "COD",
-          "matchday": 1,
-          "win": 0.3852,
-          "draw": 0.2649,
-          "loss": 0.3499
-        },
-        {
-          "opponent": "POR",
-          "matchday": 3,
-          "win": 0.3199,
-          "draw": 0.2295,
-          "loss": 0.4506
-        },
-        {
-          "opponent": "COL",
-          "matchday": 3,
-          "win": 0.3207,
-          "draw": 0.2329,
-          "loss": 0.4464
-        }
-      ]
-    },
-    {
       "code": "COD",
       "advance": 0.5685,
       "knockout": {
-        "reach_round_of_16": 0.1716,
-        "reach_quarterfinal": 0.046,
-        "reach_semifinal": 0.0098,
-        "reach_final": 0.0015,
-        "champion": 0.0003
+        "reach_round_of_16": 0.2098,
+        "reach_quarterfinal": 0.0696,
+        "reach_semifinal": 0.0187,
+        "reach_final": 0.0042,
+        "champion": 0.0008
       },
       "group_games": [
         {
@@ -5231,14 +5031,116 @@
       ]
     },
     {
+      "code": "KOR",
+      "advance": 0.6892,
+      "knockout": {
+        "reach_round_of_16": 0.3219,
+        "reach_quarterfinal": 0.0975,
+        "reach_semifinal": 0.0214,
+        "reach_final": 0.0035,
+        "champion": 0.0007
+      },
+      "group_games": [
+        {
+          "opponent": "CZE",
+          "matchday": 2,
+          "win": 0.3728,
+          "draw": 0.2671,
+          "loss": 0.3601
+        },
+        {
+          "opponent": "MEX",
+          "matchday": 2,
+          "win": 0.3428,
+          "draw": 0.2623,
+          "loss": 0.3949
+        },
+        {
+          "opponent": "RSA",
+          "matchday": 3,
+          "win": 0.4375,
+          "draw": 0.2396,
+          "loss": 0.3228
+        }
+      ]
+    },
+    {
+      "code": "SCO",
+      "advance": 0.6754,
+      "knockout": {
+        "reach_round_of_16": 0.2664,
+        "reach_quarterfinal": 0.0911,
+        "reach_semifinal": 0.0242,
+        "reach_final": 0.0046,
+        "champion": 0.0007
+      },
+      "group_games": [
+        {
+          "opponent": "HAI",
+          "matchday": 2,
+          "win": 0.4406,
+          "draw": 0.2374,
+          "loss": 0.3221
+        },
+        {
+          "opponent": "BRA",
+          "matchday": 3,
+          "win": 0.3242,
+          "draw": 0.2429,
+          "loss": 0.4329
+        },
+        {
+          "opponent": "MAR",
+          "matchday": 3,
+          "win": 0.3538,
+          "draw": 0.2659,
+          "loss": 0.3803
+        }
+      ]
+    },
+    {
+      "code": "EGY",
+      "advance": 0.6486,
+      "knockout": {
+        "reach_round_of_16": 0.2877,
+        "reach_quarterfinal": 0.0896,
+        "reach_semifinal": 0.0211,
+        "reach_final": 0.0042,
+        "champion": 0.0006
+      },
+      "group_games": [
+        {
+          "opponent": "BEL",
+          "matchday": 1,
+          "win": 0.3299,
+          "draw": 0.2525,
+          "loss": 0.4177
+        },
+        {
+          "opponent": "IRN",
+          "matchday": 2,
+          "win": 0.3501,
+          "draw": 0.265,
+          "loss": 0.3849
+        },
+        {
+          "opponent": "NZL",
+          "matchday": 3,
+          "win": 0.3943,
+          "draw": 0.2625,
+          "loss": 0.3432
+        }
+      ]
+    },
+    {
       "code": "CIV",
       "advance": 0.6425,
       "knockout": {
-        "reach_round_of_16": 0.2049,
-        "reach_quarterfinal": 0.0515,
-        "reach_semifinal": 0.0117,
-        "reach_final": 0.0021,
-        "champion": 0.0002
+        "reach_round_of_16": 0.244,
+        "reach_quarterfinal": 0.072,
+        "reach_semifinal": 0.0186,
+        "reach_final": 0.0036,
+        "champion": 0.0004
       },
       "group_games": [
         {
@@ -5265,36 +5167,138 @@
       ]
     },
     {
-      "code": "TUN",
-      "advance": 0.576,
+      "code": "CZE",
+      "advance": 0.6743,
       "knockout": {
-        "reach_round_of_16": 0.1571,
-        "reach_quarterfinal": 0.0399,
-        "reach_semifinal": 0.0079,
-        "reach_final": 0.001,
+        "reach_round_of_16": 0.2774,
+        "reach_quarterfinal": 0.0673,
+        "reach_semifinal": 0.0119,
+        "reach_final": 0.0018,
+        "champion": 0.0003
+      },
+      "group_games": [
+        {
+          "opponent": "MEX",
+          "matchday": 1,
+          "win": 0.3377,
+          "draw": 0.2595,
+          "loss": 0.4027
+        },
+        {
+          "opponent": "RSA",
+          "matchday": 1,
+          "win": 0.427,
+          "draw": 0.2469,
+          "loss": 0.3261
+        },
+        {
+          "opponent": "KOR",
+          "matchday": 2,
+          "win": 0.3601,
+          "draw": 0.2671,
+          "loss": 0.3728
+        }
+      ]
+    },
+    {
+      "code": "PAN",
+      "advance": 0.6457,
+      "knockout": {
+        "reach_round_of_16": 0.189,
+        "reach_quarterfinal": 0.0529,
+        "reach_semifinal": 0.011,
+        "reach_final": 0.0019,
+        "champion": 0.0002
+      },
+      "group_games": [
+        {
+          "opponent": "GHA",
+          "matchday": 2,
+          "win": 0.4393,
+          "draw": 0.2383,
+          "loss": 0.3224
+        },
+        {
+          "opponent": "CRO",
+          "matchday": 3,
+          "win": 0.3274,
+          "draw": 0.2491,
+          "loss": 0.4235
+        },
+        {
+          "opponent": "ENG",
+          "matchday": 3,
+          "win": 0.3178,
+          "draw": 0.2186,
+          "loss": 0.4635
+        }
+      ]
+    },
+    {
+      "code": "RSA",
+      "advance": 0.5682,
+      "knockout": {
+        "reach_round_of_16": 0.1794,
+        "reach_quarterfinal": 0.0287,
+        "reach_semifinal": 0.0037,
+        "reach_final": 0.0003,
         "champion": 0.0001
       },
       "group_games": [
         {
-          "opponent": "SWE",
-          "matchday": 2,
-          "win": 0.3476,
-          "draw": 0.2642,
-          "loss": 0.3883
+          "opponent": "CZE",
+          "matchday": 1,
+          "win": 0.3261,
+          "draw": 0.2469,
+          "loss": 0.427
         },
         {
-          "opponent": "JPN",
+          "opponent": "MEX",
           "matchday": 3,
-          "win": 0.3189,
-          "draw": 0.2251,
-          "loss": 0.4559
+          "win": 0.3149,
+          "draw": 0.1935,
+          "loss": 0.4916
         },
         {
-          "opponent": "NED",
+          "opponent": "KOR",
           "matchday": 3,
-          "win": 0.3154,
-          "draw": 0.1982,
-          "loss": 0.4864
+          "win": 0.3228,
+          "draw": 0.2396,
+          "loss": 0.4375
+        }
+      ]
+    },
+    {
+      "code": "CPV",
+      "advance": 0.526,
+      "knockout": {
+        "reach_round_of_16": 0.127,
+        "reach_quarterfinal": 0.0272,
+        "reach_semifinal": 0.0042,
+        "reach_final": 0.0006,
+        "champion": 0.0001
+      },
+      "group_games": [
+        {
+          "opponent": "KSA",
+          "matchday": 1,
+          "win": 0.3617,
+          "draw": 0.2673,
+          "loss": 0.371
+        },
+        {
+          "opponent": "ESP",
+          "matchday": 1,
+          "win": 0.2731,
+          "draw": 0.1059,
+          "loss": 0.621
+        },
+        {
+          "opponent": "URU",
+          "matchday": 3,
+          "win": 0.3145,
+          "draw": 0.1887,
+          "loss": 0.4968
         }
       ]
     },
@@ -5302,9 +5306,9 @@
       "code": "KSA",
       "advance": 0.5382,
       "knockout": {
-        "reach_round_of_16": 0.1087,
-        "reach_quarterfinal": 0.0195,
-        "reach_semifinal": 0.0025,
+        "reach_round_of_16": 0.1213,
+        "reach_quarterfinal": 0.0242,
+        "reach_semifinal": 0.0034,
         "reach_final": 0.0004,
         "champion": 0.0001
       },
@@ -5336,10 +5340,10 @@
       "code": "IRQ",
       "advance": 0.5194,
       "knockout": {
-        "reach_round_of_16": 0.1487,
-        "reach_quarterfinal": 0.0338,
-        "reach_semifinal": 0.006,
-        "reach_final": 0.0008,
+        "reach_round_of_16": 0.128,
+        "reach_quarterfinal": 0.0238,
+        "reach_semifinal": 0.0029,
+        "reach_final": 0.0003,
         "champion": 0.0001
       },
       "group_games": [
@@ -5367,36 +5371,70 @@
       ]
     },
     {
-      "code": "RSA",
-      "advance": 0.5682,
+      "code": "JOR",
+      "advance": 0.5823,
       "knockout": {
-        "reach_round_of_16": 0.1525,
-        "reach_quarterfinal": 0.0204,
-        "reach_semifinal": 0.0018,
-        "reach_final": 0.0001,
-        "champion": 0
+        "reach_round_of_16": 0.1714,
+        "reach_quarterfinal": 0.0413,
+        "reach_semifinal": 0.0069,
+        "reach_final": 0.001,
+        "champion": 0.0001
       },
       "group_games": [
         {
-          "opponent": "CZE",
+          "opponent": "AUT",
+          "matchday": 2,
+          "win": 0.3368,
+          "draw": 0.2589,
+          "loss": 0.4043
+        },
+        {
+          "opponent": "ALG",
+          "matchday": 3,
+          "win": 0.3541,
+          "draw": 0.2659,
+          "loss": 0.38
+        },
+        {
+          "opponent": "ARG",
+          "matchday": 3,
+          "win": 0.3087,
+          "draw": 0.1487,
+          "loss": 0.5426
+        }
+      ]
+    },
+    {
+      "code": "UZB",
+      "advance": 0.6183,
+      "knockout": {
+        "reach_round_of_16": 0.1825,
+        "reach_quarterfinal": 0.0456,
+        "reach_semifinal": 0.01,
+        "reach_final": 0.0011,
+        "champion": 0.0001
+      },
+      "group_games": [
+        {
+          "opponent": "COD",
           "matchday": 1,
-          "win": 0.3261,
-          "draw": 0.2469,
-          "loss": 0.427
+          "win": 0.3852,
+          "draw": 0.2649,
+          "loss": 0.3499
         },
         {
-          "opponent": "MEX",
+          "opponent": "POR",
           "matchday": 3,
-          "win": 0.3149,
-          "draw": 0.1935,
-          "loss": 0.4916
+          "win": 0.3199,
+          "draw": 0.2295,
+          "loss": 0.4506
         },
         {
-          "opponent": "KOR",
+          "opponent": "COL",
           "matchday": 3,
-          "win": 0.3228,
-          "draw": 0.2396,
-          "loss": 0.4375
+          "win": 0.3207,
+          "draw": 0.2329,
+          "loss": 0.4464
         }
       ]
     },
@@ -5404,10 +5442,10 @@
       "code": "BIH",
       "advance": 0.6244,
       "knockout": {
-        "reach_round_of_16": 0.1854,
-        "reach_quarterfinal": 0.0379,
-        "reach_semifinal": 0.0042,
-        "reach_final": 0.0006,
+        "reach_round_of_16": 0.204,
+        "reach_quarterfinal": 0.0449,
+        "reach_semifinal": 0.006,
+        "reach_final": 0.001,
         "champion": 0
       },
       "group_games": [
@@ -5438,9 +5476,9 @@
       "code": "QAT",
       "advance": 0.5342,
       "knockout": {
-        "reach_round_of_16": 0.0771,
-        "reach_quarterfinal": 0.008,
-        "reach_semifinal": 0.0006,
+        "reach_round_of_16": 0.0717,
+        "reach_quarterfinal": 0.007,
+        "reach_semifinal": 0.0003,
         "reach_final": 0,
         "champion": 0
       },
@@ -5472,10 +5510,10 @@
       "code": "HAI",
       "advance": 0.5334,
       "knockout": {
-        "reach_round_of_16": 0.1027,
-        "reach_quarterfinal": 0.0163,
-        "reach_semifinal": 0.0019,
-        "reach_final": 0.0002,
+        "reach_round_of_16": 0.0944,
+        "reach_quarterfinal": 0.0125,
+        "reach_semifinal": 0.0011,
+        "reach_final": 0.0001,
         "champion": 0
       },
       "group_games": [
@@ -5506,9 +5544,9 @@
       "code": "CUW",
       "advance": 0.4838,
       "knockout": {
-        "reach_round_of_16": 0.0587,
-        "reach_quarterfinal": 0.0056,
-        "reach_semifinal": 0.0004,
+        "reach_round_of_16": 0.0614,
+        "reach_quarterfinal": 0.0063,
+        "reach_semifinal": 0.0006,
         "reach_final": 0,
         "champion": 0
       },
@@ -5537,13 +5575,47 @@
       ]
     },
     {
+      "code": "TUN",
+      "advance": 0.576,
+      "knockout": {
+        "reach_round_of_16": 0.1253,
+        "reach_quarterfinal": 0.0256,
+        "reach_semifinal": 0.0029,
+        "reach_final": 0.0002,
+        "champion": 0
+      },
+      "group_games": [
+        {
+          "opponent": "SWE",
+          "matchday": 2,
+          "win": 0.3476,
+          "draw": 0.2642,
+          "loss": 0.3883
+        },
+        {
+          "opponent": "JPN",
+          "matchday": 3,
+          "win": 0.3189,
+          "draw": 0.2251,
+          "loss": 0.4559
+        },
+        {
+          "opponent": "NED",
+          "matchday": 3,
+          "win": 0.3154,
+          "draw": 0.1982,
+          "loss": 0.4864
+        }
+      ]
+    },
+    {
       "code": "NZL",
       "advance": 0.595,
       "knockout": {
-        "reach_round_of_16": 0.1616,
-        "reach_quarterfinal": 0.029,
-        "reach_semifinal": 0.0036,
-        "reach_final": 0.0002,
+        "reach_round_of_16": 0.1414,
+        "reach_quarterfinal": 0.0216,
+        "reach_semifinal": 0.0021,
+        "reach_final": 0.0001,
         "champion": 0
       },
       "group_games": [
@@ -5571,47 +5643,13 @@
       ]
     },
     {
-      "code": "CPV",
-      "advance": 0.526,
-      "knockout": {
-        "reach_round_of_16": 0.1028,
-        "reach_quarterfinal": 0.0169,
-        "reach_semifinal": 0.0019,
-        "reach_final": 0.0001,
-        "champion": 0
-      },
-      "group_games": [
-        {
-          "opponent": "KSA",
-          "matchday": 1,
-          "win": 0.3617,
-          "draw": 0.2673,
-          "loss": 0.371
-        },
-        {
-          "opponent": "ESP",
-          "matchday": 1,
-          "win": 0.2731,
-          "draw": 0.1059,
-          "loss": 0.621
-        },
-        {
-          "opponent": "URU",
-          "matchday": 3,
-          "win": 0.3145,
-          "draw": 0.1887,
-          "loss": 0.4968
-        }
-      ]
-    },
-    {
       "code": "GHA",
       "advance": 0.4919,
       "knockout": {
-        "reach_round_of_16": 0.0761,
-        "reach_quarterfinal": 0.0111,
-        "reach_semifinal": 0.0013,
-        "reach_final": 0.0001,
+        "reach_round_of_16": 0.1022,
+        "reach_quarterfinal": 0.02,
+        "reach_semifinal": 0.0031,
+        "reach_final": 0.0003,
         "champion": 0
       },
       "group_games": [
@@ -5642,48 +5680,62 @@
   "scenarios": [
     {
       "code": "ALG",
-      "advance_chance": 0.6147,
-      "in_their_hands": true,
+      "advance_chance": 1,
+      "in_their_hands": false,
       "routes": [
         {
-          "route": "Finish runner-up",
-          "chance": 0.3514,
-          "own_form": "Runner-up: typically 6 pts (2W 0D 1L); from 3 pts now, ~3 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
           "route": "Advance as best third",
-          "chance": 0.2632,
-          "own_form": "Best third: typically 4 pts (1W 1D 1L); from 3 pts now, ~1 more from the last 1",
-          "depends_on_other_groups": [
-            "G"
-          ],
+          "chance": 1,
+          "own_form": "Locked record: 4 pts / GD -2 / GF 5",
+          "depends_on_other_groups": [],
           "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.4059,
-        "race_position": 9,
-        "watch_groups": [
-          "G"
-        ],
-        "needs": "Finishing 3rd, ALG advances in ~41% of cases; more likely than not once overall GD >= -2 (with >= 4 pts). Global last-qualifying third ~3 pts / GD 0 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#28) vs other groups' thirds (most often G).",
+        "advances_if_third": 1,
+        "race_position": 6,
+        "watch_groups": [],
+        "needs": "Algeria are mathematically safe as a locked third-place team: at most 5 other third-place records can beat their 4 pts / GD -2 / GF 5, and eight third-place teams qualify.",
         "thresholds": {
           "min_points": 4,
           "min_overall_gd": -2,
-          "min_goals_for": 4,
+          "min_goals_for": 5,
           "beats_rival_if": "ALG overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 28)"
         },
-        "locked_record": null
+        "locked_record": {
+          "status": "already_safe",
+          "statement": "Algeria are mathematically safe as a locked third-place team: at most 5 other third-place records can beat their 4 pts / GD -2 / GF 5, and eight third-place teams qualify.",
+          "locked_record": {
+            "fair_play": 0,
+            "fifa_rank": 28,
+            "gd": -2,
+            "gf": 5,
+            "pts": 4,
+            "text": "4 pts / GD -2 / GF 5"
+          },
+          "min_other_thirds_above": 5,
+          "max_other_thirds_above": 5,
+          "remaining_beat_allowance": 2,
+          "already_beating_groups": [
+            "B",
+            "E",
+            "F",
+            "K",
+            "L"
+          ],
+          "already_settled_cannot_beat_groups": [
+            "A",
+            "C",
+            "D",
+            "G",
+            "H",
+            "I"
+          ],
+          "must_beat_groups": [],
+          "can_beat_groups": [],
+          "cannot_beat_groups": []
+        }
       }
     },
     {
@@ -5694,7 +5746,7 @@
         {
           "route": "Win the group",
           "chance": 1,
-          "own_form": "Win group: typically 9 pts (3W 0D 0L); as low as 6 pts in our simulations; from 6 pts now, ~3 more from the last 1",
+          "own_form": "Win group: typically 9 pts (3W 0D 0L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -5709,7 +5761,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 9,
+        "race_position": 6,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -5748,13 +5800,13 @@
     },
     {
       "code": "AUT",
-      "advance_chance": 0.6485,
+      "advance_chance": 1,
       "in_their_hands": true,
       "routes": [
         {
           "route": "Finish runner-up",
-          "chance": 0.6485,
-          "own_form": "Runner-up: typically 6 pts (2W 0D 1L); as low as 4 pts in our simulations; from 3 pts now, ~3 more from the last 1",
+          "chance": 1,
+          "own_form": "Runner-up: typically 4 pts (1W 1D 1L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -5767,13 +5819,11 @@
         }
       ],
       "third_place_race": {
-        "in_race": true,
+        "in_race": false,
         "advances_if_third": 0,
-        "race_position": 9,
-        "watch_groups": [
-          "G"
-        ],
-        "needs": "Finishing 3rd, AUT advances in ~0% of cases; more likely than not once overall GD >= 0 (with >= 3 pts). Global last-qualifying third ~3 pts / GD 0 / GF 3; final slot decided by GD, GF, fair play, FIFA rank (#24) vs other groups' thirds (most often G).",
+        "race_position": 6,
+        "watch_groups": [],
+        "needs": null,
         "thresholds": null,
         "locked_record": null
       }
@@ -5801,7 +5851,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 8,
+        "race_position": 11,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -5859,13 +5909,12 @@
             "D",
             "G",
             "H",
-            "I"
+            "I",
+            "J"
           ],
           "must_beat_groups": [],
           "can_beat_groups": [],
-          "cannot_beat_groups": [
-            "J"
-          ]
+          "cannot_beat_groups": []
         }
       }
     },
@@ -5892,7 +5941,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 11,
+        "race_position": 10,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -5975,7 +6024,7 @@
       "third_place_race": {
         "in_race": true,
         "advances_if_third": 1,
-        "race_position": 6,
+        "race_position": 7,
         "watch_groups": [],
         "needs": "Congo DR are mathematically safe as a locked third-place team: at most 0 other third-place records can beat their 4 pts / GD +1 / GF 4, and eight third-place teams qualify.",
         "thresholds": {
@@ -6009,13 +6058,12 @@
             "G",
             "H",
             "I",
+            "J",
             "L"
           ],
           "must_beat_groups": [],
           "can_beat_groups": [],
-          "cannot_beat_groups": [
-            "J"
-          ]
+          "cannot_beat_groups": []
         }
       }
     },
@@ -6042,7 +6090,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 6,
+        "race_position": 7,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6102,7 +6150,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 7,
+        "race_position": 8,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6132,7 +6180,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 10,
+        "race_position": 9,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6190,13 +6238,12 @@
             "G",
             "H",
             "I",
+            "J",
             "L"
           ],
           "must_beat_groups": [],
           "can_beat_groups": [],
-          "cannot_beat_groups": [
-            "J"
-          ]
+          "cannot_beat_groups": []
         }
       }
     },
@@ -6223,7 +6270,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 8,
+        "race_position": 11,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6253,7 +6300,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 7,
+        "race_position": 8,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6366,7 +6413,7 @@
       "third_place_race": {
         "in_race": true,
         "advances_if_third": 1,
-        "race_position": 7,
+        "race_position": 8,
         "watch_groups": [],
         "needs": "Ghana are mathematically safe as a locked third-place team: at most 3 other third-place records can beat their 4 pts / GD 0 / GF 2, and eight third-place teams qualify.",
         "thresholds": {
@@ -6401,13 +6448,12 @@
             "D",
             "G",
             "H",
-            "I"
+            "I",
+            "J"
           ],
           "must_beat_groups": [],
           "can_beat_groups": [],
-          "cannot_beat_groups": [
-            "J"
-          ]
+          "cannot_beat_groups": []
         }
       }
     },
@@ -6419,7 +6465,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 11,
+        "race_position": 10,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6428,36 +6474,19 @@
     },
     {
       "code": "IRN",
-      "advance_chance": 0.7368,
-      "in_their_hands": false,
-      "routes": [
-        {
-          "route": "Advance as best third",
-          "chance": 0.7368,
-          "own_form": "Locked record: 3 pts / GD 0 / GF 3",
-          "depends_on_other_groups": [
-            "J"
-          ],
-          "decided_by": []
-        }
-      ],
+      "advance_chance": 0,
+      "in_their_hands": true,
+      "routes": [],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.7368,
-        "race_position": 8,
-        "watch_groups": [
-          "J"
-        ],
-        "needs": "Iran qualify iff no more than 0 of the 1 remaining group thirds that can still pass them beat their locked 3 pts / GD 0 / GF 3. Watch Groups J.",
-        "thresholds": {
-          "min_points": 3,
-          "min_overall_gd": 0,
-          "min_goals_for": 3,
-          "beats_rival_if": "IRN overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 20)"
-        },
+        "advances_if_third": 0,
+        "race_position": 11,
+        "watch_groups": [],
+        "needs": "Iran are mathematically out of the best-third places: at least 8 other third-place records beat their locked 3 pts / GD 0 / GF 3, and only eight third-place teams qualify.",
+        "thresholds": null,
         "locked_record": {
-          "status": "conditional",
-          "statement": "Iran qualify iff no more than 0 of the 1 remaining group thirds that can still pass them beat their locked 3 pts / GD 0 / GF 3. Watch Groups J.",
+          "status": "eliminated",
+          "statement": "Iran are mathematically out of the best-third places: at least 8 other third-place records beat their locked 3 pts / GD 0 / GF 3, and only eight third-place teams qualify.",
           "locked_record": {
             "fair_play": 0,
             "fifa_rank": 20,
@@ -6466,15 +6495,16 @@
             "pts": 3,
             "text": "3 pts / GD 0 / GF 3"
           },
-          "min_other_thirds_above": 7,
+          "min_other_thirds_above": 8,
           "max_other_thirds_above": 8,
-          "remaining_beat_allowance": 0,
+          "remaining_beat_allowance": -1,
           "already_beating_groups": [
             "B",
             "D",
             "E",
             "F",
             "I",
+            "J",
             "K",
             "L"
           ],
@@ -6484,9 +6514,7 @@
             "H"
           ],
           "must_beat_groups": [],
-          "can_beat_groups": [
-            "J"
-          ],
+          "can_beat_groups": [],
           "cannot_beat_groups": []
         }
       }
@@ -6514,7 +6542,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 9,
+        "race_position": 6,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6559,13 +6587,13 @@
       "third_place_race": {
         "in_race": true,
         "advances_if_third": 0,
-        "race_position": 10,
+        "race_position": 9,
         "watch_groups": [],
-        "needs": "South Korea are mathematically out of the best-third places: at least 8 other third-place records beat their locked 3 pts / GD -1 / GF 2, and only eight third-place teams qualify.",
+        "needs": "South Korea are mathematically out of the best-third places: at least 9 other third-place records beat their locked 3 pts / GD -1 / GF 2, and only eight third-place teams qualify.",
         "thresholds": null,
         "locked_record": {
           "status": "eliminated",
-          "statement": "South Korea are mathematically out of the best-third places: at least 8 other third-place records beat their locked 3 pts / GD -1 / GF 2, and only eight third-place teams qualify.",
+          "statement": "South Korea are mathematically out of the best-third places: at least 9 other third-place records beat their locked 3 pts / GD -1 / GF 2, and only eight third-place teams qualify.",
           "locked_record": {
             "fair_play": 0,
             "fifa_rank": 25,
@@ -6574,9 +6602,9 @@
             "pts": 3,
             "text": "3 pts / GD -1 / GF 2"
           },
-          "min_other_thirds_above": 8,
+          "min_other_thirds_above": 9,
           "max_other_thirds_above": 9,
-          "remaining_beat_allowance": -1,
+          "remaining_beat_allowance": -2,
           "already_beating_groups": [
             "B",
             "D",
@@ -6584,6 +6612,7 @@
             "F",
             "G",
             "I",
+            "J",
             "K",
             "L"
           ],
@@ -6592,9 +6621,7 @@
             "H"
           ],
           "must_beat_groups": [],
-          "can_beat_groups": [
-            "J"
-          ],
+          "can_beat_groups": [],
           "cannot_beat_groups": []
         }
       }
@@ -6637,7 +6664,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 11,
+        "race_position": 10,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6667,7 +6694,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 10,
+        "race_position": 9,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6742,7 +6769,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 8,
+        "race_position": 11,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6757,7 +6784,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 7,
+        "race_position": 8,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6800,13 +6827,14 @@
             "pts": 4,
             "text": "4 pts / GD -2 / GF 2"
           },
-          "min_other_thirds_above": 5,
+          "min_other_thirds_above": 6,
           "max_other_thirds_above": 6,
-          "remaining_beat_allowance": 2,
+          "remaining_beat_allowance": 1,
           "already_beating_groups": [
             "B",
             "E",
             "F",
+            "J",
             "K",
             "L"
           ],
@@ -6818,9 +6846,7 @@
             "I"
           ],
           "must_beat_groups": [],
-          "can_beat_groups": [
-            "J"
-          ],
+          "can_beat_groups": [],
           "cannot_beat_groups": []
         }
       }
@@ -6848,7 +6874,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 6,
+        "race_position": 7,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6893,7 +6919,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 10,
+        "race_position": 9,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -6908,13 +6934,13 @@
       "third_place_race": {
         "in_race": true,
         "advances_if_third": 0,
-        "race_position": 11,
+        "race_position": 10,
         "watch_groups": [],
-        "needs": "Scotland are mathematically out of the best-third places: at least 9 other third-place records beat their locked 3 pts / GD -3 / GF 1, and only eight third-place teams qualify.",
+        "needs": "Scotland are mathematically out of the best-third places: at least 10 other third-place records beat their locked 3 pts / GD -3 / GF 1, and only eight third-place teams qualify.",
         "thresholds": null,
         "locked_record": {
           "status": "eliminated",
-          "statement": "Scotland are mathematically out of the best-third places: at least 9 other third-place records beat their locked 3 pts / GD -3 / GF 1, and only eight third-place teams qualify.",
+          "statement": "Scotland are mathematically out of the best-third places: at least 10 other third-place records beat their locked 3 pts / GD -3 / GF 1, and only eight third-place teams qualify.",
           "locked_record": {
             "fair_play": 0,
             "fifa_rank": 42,
@@ -6923,9 +6949,9 @@
             "pts": 3,
             "text": "3 pts / GD -3 / GF 1"
           },
-          "min_other_thirds_above": 9,
+          "min_other_thirds_above": 10,
           "max_other_thirds_above": 10,
-          "remaining_beat_allowance": -2,
+          "remaining_beat_allowance": -3,
           "already_beating_groups": [
             "A",
             "B",
@@ -6934,6 +6960,7 @@
             "F",
             "G",
             "I",
+            "J",
             "K",
             "L"
           ],
@@ -6941,9 +6968,7 @@
             "H"
           ],
           "must_beat_groups": [],
-          "can_beat_groups": [
-            "J"
-          ],
+          "can_beat_groups": [],
           "cannot_beat_groups": []
         }
       }
@@ -6984,14 +7009,15 @@
             "pts": 3,
             "text": "3 pts / GD +2 / GF 8"
           },
-          "min_other_thirds_above": 6,
+          "min_other_thirds_above": 7,
           "max_other_thirds_above": 7,
-          "remaining_beat_allowance": 1,
+          "remaining_beat_allowance": 0,
           "already_beating_groups": [
             "B",
             "D",
             "E",
             "F",
+            "J",
             "K",
             "L"
           ],
@@ -7002,9 +7028,7 @@
             "H"
           ],
           "must_beat_groups": [],
-          "can_beat_groups": [
-            "J"
-          ],
+          "can_beat_groups": [],
           "cannot_beat_groups": []
         }
       }
@@ -7090,13 +7114,12 @@
             "G",
             "H",
             "I",
+            "J",
             "L"
           ],
           "must_beat_groups": [],
           "can_beat_groups": [],
-          "cannot_beat_groups": [
-            "J"
-          ]
+          "cannot_beat_groups": []
         }
       }
     },
@@ -7165,13 +7188,12 @@
             "F",
             "G",
             "I",
+            "J",
             "K",
             "L"
           ],
           "already_settled_cannot_beat_groups": [],
-          "must_beat_groups": [
-            "J"
-          ],
+          "must_beat_groups": [],
           "can_beat_groups": [],
           "cannot_beat_groups": []
         }
@@ -7215,7 +7237,7 @@
       "third_place_race": {
         "in_race": false,
         "advances_if_third": 0,
-        "race_position": 6,
+        "race_position": 7,
         "watch_groups": [],
         "needs": null,
         "thresholds": null,
@@ -7269,13 +7291,13 @@
     {
       "content_type": "scenario_narration",
       "headline": "Senegal Secure Knockout Spot Through Safe Third-Place Route",
-      "body": "Senegal are officially through to the knockouts. While they can no longer finish in the top two of Group I, our tournament simulation confirms they have a 100% chance to reach the Round of 32. They finished third in the group behind France and Norway, but their record of three points and a plus-two goal difference is mathematically safe. In the cross-group comparison, they currently sit as the seventh-best third-placed team, safely inside the top eight who advance. Because at most seven other third-place records can possibly beat their numbers, Senegal's back-door route is completely secure. Even though they had to rely on this third-place safety net, they are guaranteed to advance. Senegal are mathematically safe as a locked third-place team: at most 7 other third-place records can beat their 3 pts / GD +2 / GF 8, and eight third-place teams qualify.",
+      "body": "Senegal are officially through to the knockouts. While they can no longer finish in the top two of Group I, our tournament simulation confirms they have a 100% chance to reach the Round of 32. In the final group standings, France took top spot with Norway finishing just ahead of Senegal in second. Senegal finished third with three points, but their strong goal difference of plus-two makes them mathematically safe. Because at most seven other third-place records across the tournament can beat their record of three points and a plus-two goal difference, Senegal are guaranteed to advance as one of the eight best third-placed teams. This back-door route is completely secure, serving as a perfect safety net that ensures their place in the next round. Senegal are mathematically safe as a locked third-place team: at most 7 other third-place records can beat their 3 pts / GD +2 / GF 8, and eight third-place teams qualify.",
       "team_code": "SEN"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Scotland's Campaign Ends in Heartbreak",
-      "body": "Scotland's journey has come to an end. With all three group matches played, they finish third in Group C with three points, while Brazil and Morocco comfortably claim the top two spots. Though Scotland secured a 1-0 win over Haiti, defeats to Brazil and Morocco left them with a goal difference of minus three. This locked record leaves them on the outside looking in. Our tournament simulation confirms Scotland have a 0% chance of reaching the knockouts. While they are guaranteed third place in their group, they are mathematically out of the running for the best-third places. At least nine other third-place records across the tournament beat Scotland's locked tally of three points and a minus-three goal difference, and only eight third-place teams qualify. They currently sit eleventh in the provisional third-place standings, well below the cutoff. It is a dignified exit for Scotland, who fought hard to secure a victory but ultimately fall short of the Round of 32 as the cross-group math seals their fate. Scotland are mathematically out of the best-third places: at least 9 other third-place records beat their locked 3 pts / GD -3 / GF 1, and only eight third-place teams qualify.",
+      "body": "Scotland's journey has come to an end. With all three group matches played, they finish third in Group C with three points, while Brazil and Morocco comfortably claim the top two spots. Though Scotland secured a 1-0 win over Haiti, defeats to Brazil and Morocco left them with a goal difference of minus three. This locked record leaves them on the outside looking in. Our tournament simulation confirms Scotland have a 0% chance of reaching the knockouts. While they are guaranteed third place in their group, they are mathematically out of the running for the best-third places. At least nine other third-place records across the tournament beat Scotland's locked tally of three points and a minus-three goal difference, and only eight third-place teams qualify. They currently sit eleventh in the provisional third-place standings, well below the cutoff. It is a dignified exit for Scotland, who fought hard to secure a victory but ultimately fall short of the Round of 32 as the cross-group math seals their fate. Scotland are mathematically out of the best-third places: at least 10 other third-place records beat their locked 3 pts / GD -3 / GF 1, and only eight third-place teams qualify.",
       "team_code": "SCO"
     },
     {
@@ -7298,8 +7320,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Paraguay Secure Knockout Spot from Group D",
-      "body": "Paraguay are officially through to the knockouts. Our tournament simulation confirms they have a 100% chance to reach the Round of 32, completing a highly competitive Group D campaign. They finish in a tight cluster with Australia and the USA, who both also hold a 100% chance of advancing, while Türkiye have been eliminated. Although Paraguay finished third in the group with four points and a minus-two goal difference, they are mathematically safe. In the cross-group comparison, they are currently the sixth-best third-placed team, which puts them comfortably inside the top eight who qualify. Because at most six other third-place records can possibly beat their tally, their back-door route is completely secure. They do not have to worry about other results or watch the remaining groups; their place in the next round is already locked in. Paraguay are mathematically safe as a locked third-place team: at most 6 other third-place records can beat their 4 pts / GD -2 / GF 2, and eight third-place teams qualify.",
+      "headline": "Paraguay Secure Knockout Spot as Best Third-Place Team",
+      "body": "Paraguay are officially through to the knockouts. While they cannot finish in the top two of Group D, their tournament continues. In Group D, they finished in a tight cluster with Australia and the USA, who both sit at a 100% chance to advance. Paraguay ended their group campaign in third place with four points and a minus-two goal difference. According to the tournament simulation, they are mathematically safe as a locked third-place team. Because at most six other third-place records across the tournament can beat their record, and eight third-place teams qualify, Paraguay's back-door route is completely secure. They currently sit as the seventh-best third-placed team overall, safely inside the qualifying zone. Even though they had to rely on the third-place comparison rather than automatic qualification, this safety net has proved entirely reliable, and their place in the Round of 32 is guaranteed. Paraguay are mathematically safe as a locked third-place team: at most 6 other third-place records can beat their 4 pts / GD -2 / GF 2, and eight third-place teams qualify.",
       "team_code": "PAR"
     },
     {
@@ -7347,7 +7369,7 @@
     {
       "content_type": "scenario_narration",
       "headline": "South Korea's Tournament Comes to a Dignified End",
-      "body": "South Korea's journey has reached its conclusion, and they will not reach the knockouts. In Group A, they finished in third place with three points, just ahead of the Czech Republic, who ended with one point. While South Korea fought hard to secure third, our tournament simulation confirms they have a 0% chance of advancing. Their final record of three points and a minus-one goal difference leaves them as the ninth-best third-placed team overall. Because only the top eight third-placed teams move on to the Round of 32, South Korea are mathematically eliminated from the competition. At least eight other third-place records across the tournament have already surpassed their locked total, closing the door on any back-door route. They exit the tournament with their heads held high after a competitive group stage. South Korea are mathematically out of the best-third places: at least 8 other third-place records beat their locked 3 pts / GD -1 / GF 2, and only eight third-place teams qualify.",
+      "body": "South Korea's journey has reached its conclusion, leaving them unable to reach the knockouts. In Group A, they finished in third place with three points, just ahead of the Czech Republic, who ended their campaign at the bottom of the standings. While South Korea secured third place, their hope of advancing through the back-door route has been closed. Our tournament simulation confirms they have a 0% chance of moving on. They are mathematically out of the best-third places because at least nine other third-place records beat their locked record of three points, a minus-one goal difference, and two goals scored, while only eight third-place teams qualify. They finish as the tenth-best third-placed team overall, missing the cutoff behind Senegal. Though they fought hard to secure a third-place finish, the math of the cross-group comparison has confirmed their elimination. South Korea are mathematically out of the best-third places: at least 9 other third-place records beat their locked 3 pts / GD -1 / GF 2, and only eight third-place teams qualify.",
       "team_code": "KOR"
     },
     {
@@ -7358,8 +7380,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Jordan Face a Steep Climb in Group J",
-      "body": "Jordan find themselves in a difficult position after two tough opening matches. Our tournament simulation currently shows a 0% chance of reaching the knockouts, leaving them adrift at the bottom of Group J. They are chasing Algeria, who sit in third place with a strong 76% chance to advance, while Austria and Argentina lead the pack. With two matches played, Jordan sit fourth in the standings with zero points and a minus-three goal difference, following a 3-1 defeat to Austria and a close 2-1 loss to Algeria. Because every team in the group has completed two matches, this is a clear picture of the mountain Jordan must climb. While they are not yet mathematically eliminated and all placements remain reachable, their direct routes are heavily compromised. To keep any slim hope alive of reaching the Round of 32, they will need a flawless performance in their final group match and favorable results elsewhere to even enter the conversation for a back-door qualifying spot.",
+      "headline": "Jordan's Tournament Journey Comes to an End",
+      "body": "Jordan's campaign has reached its conclusion, and they will not reach the knockouts. With three defeats from their three matches, they finish at the bottom of Group J with zero points. They find themselves adrift in a group where Algeria, Argentina, and Austria have all secured their places in the next round with perfect 100% advancement records. Our tournament simulation confirms that Jordan have a 0% chance of moving on, with no remaining paths to the Round of 32. Because they finish fourth, they cannot access the third-place comparison pool. While the final standings are tough to look at, Jordan played their matches to the end, but they simply ran out of road against highly clinical opposition.",
       "team_code": "JOR"
     },
     {
@@ -7370,8 +7392,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Iran on the Brink of the Knockouts as Group G Concludes",
-      "body": "Iran are in a strong position to reach the knockouts, holding a 74% chance to advance. In Group G, they sit in third place with three points, chasing Belgium and Egypt who are well clear at the top with five points each, while New Zealand are eliminated. Because Iran finished third, their direct top-two route is closed, meaning their tournament survival rests entirely on the third-place comparison. They currently occupy the eighth and final qualifying spot in the best-third standings, holding a slim one-goal difference margin over South Korea. Their fate is now conditional: Iran will qualify for the Round of 32 as long as Group J's third-placed team does not overtake their locked record of 3 points, a zero goal difference, and 3 goals scored. If Group J's third-place finisher fails to beat that mark, Iran's place in the next round is secure. Iran qualify iff no more than 0 of the 1 remaining group thirds that can still pass them beat their locked 3 pts / GD 0 / GF 3. Watch Groups J.",
+      "headline": "Iran's Tournament Ends in Heartbreak as Third-Place Route Closes",
+      "body": "Iran's journey has reached a dignified but painful end. Despite fighting to three hard-earned draws, our tournament simulation shows they now have a 0% chance to reach the knockouts. In Group G, they finished third with three points, holding off New Zealand who ended up at the bottom of the pile with a single point. While Iran kept their closest rivals at bay, the gap to Belgium and Egypt above them proved too wide to bridge. Because the group stage is complete, Iran's record is locked at three points and a neutral goal difference. In the cross-group comparison, they sit as the ninth-best third-placed team, just one agonizing spot outside the top eight who advance. At least eight other third-place records across the tournament have officially beaten Iran's numbers, meaning the back-door route is mathematically closed. There are no more matches to watch and no other groups to wait on; the calculations are final, and Iran are officially eliminated from the competition. Iran are mathematically out of the best-third places: at least 8 other third-place records beat their locked 3 pts / GD 0 / GF 3, and only eight third-place teams qualify.",
       "team_code": "IRN"
     },
     {
@@ -7460,8 +7482,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Austria Control Their Destiny in Group J Finale",
-      "body": "Austria are in a decent position to reach the knockouts, holding a 65% chance to advance. They currently sit second in Group J with three points after two rounds. However, the pressure is intense: Algeria are right on their heels with a 61% chance to go through, making the final matchday a direct battle to hold them off. Argentina have already secured the top spot, meaning Austria can no longer win the group. To secure their place in the Round of 32, Austria's task is clear. A win or a draw against Algeria guarantees a second-place finish and a direct ticket to the next round. If they slip to third, the back-door route is highly unreliable. In our simulations, finishing third with their current goal difference leaves them with virtually no chance of advancing through the wild-card pool, as they would be overtaken by third-place teams in other groups. It is a true winner-take-all scenario: avoid defeat to secure passage, or face a nearly impossible path from third.",
+      "headline": "Austria Secure Knockout Spot with Runner-Up Finish",
+      "body": "Austria have achieved their goal, securing their place in the knockouts with absolute certainty. Following a hard-fought group stage, they finish comfortably in second place behind Argentina, who topped Group J. While Algeria and Argentina also reached the next round, Jordan's campaign has come to an end. Our tournament simulation confirms Austria have a 100% chance of advancing, meaning they are officially through to the Round of 32. Because they locked down the runner-up spot, they did not have to rely on the third-place team comparison. Their path was decided entirely by their own results, culminating in a solid four-point finish that kept them clear of the third-place scramble. With their position settled, Austria can look forward to the knockout stage with quiet pride and confidence.",
       "team_code": "AUT"
     },
     {
@@ -7472,14 +7494,14 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Argentina in Complete Control of Group J",
-      "body": "Argentina have made reaching the knockouts look simple, putting themselves in a perfect position where their place in the Round of 32 is entirely secure. With two rounds of play complete, they sit comfortably at the top of Group J with six points and a commanding plus-five goal difference. Our tournament simulation shows they have a 100% chance of advancing, with their primary route being to win the group outright. While they are well clear at the summit, Austria remain their closest challenger with a 92% chance of going through, keeping the pressure on just behind them. Because Argentina have taken maximum points from their opening matches, they do not need to worry about the complicated third-place back door. Their path is entirely in their own hands as they look to close out the group stage and carry this flawless momentum into the knockout rounds.",
+      "headline": "Argentina Secure Top Spot with Perfect Group Stage",
+      "body": "Argentina have done everything asked of them, securing their place in the knockouts with absolute certainty. Our tournament simulation shows they have a 100% chance of reaching the Round of 32, having comfortably locked up first place in Group J. They finished the group stage with a perfect nine points from three matches, leaving no doubt about their progression. In the final group standings, Argentina sit comfortably at the top of the table, well clear of Austria and Algeria, who both finished on four points to join them in the next round. Because Argentina have already clinched the top spot, they do not need to worry about third-place math or help from other groups. Their main route was always finishing in the top two, and they executed it flawlessly by winning every single match. Fans can look forward to the knockout stage with complete confidence as the team awaits their next opponent.",
       "team_code": "ARG"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Algeria's Knockout Hopes Rest on a Final-Day Duel with Austria",
-      "body": "Algeria are in a decent position to reach the knockouts, with our tournament simulation giving them a 61% chance to advance to the Round of 32. They find themselves in a tight, live race in Group J, chasing Austria who sit just ahead of them with a 65% chance. Algeria are guaranteed to finish no lower than third, but they can no longer win the group. Their cleanest path is to beat Austria, which would clinch a top-two finish and a guaranteed ticket to the next round. A draw or a loss leaves them in third place, where their fate depends on the cross-group comparison. Currently, Algeria sit as the tenth-best third-placed team, just outside the qualifying zone on goal difference. If they finish third, the back-door route is far from a sure thing—they would advance in only about 41% of those scenarios. To make that safety net reliable, they likely need at least a draw against Austria to reach four points and improve their goal difference, keeping them from being overtaken by chasing teams in other groups.",
+      "headline": "Algeria Secure Knockout Spot as Mathematical Certainty",
+      "body": "Algeria are officially through to the knockouts. Our tournament simulation confirms they have a 100% chance to reach the Round of 32, meaning fans can celebrate a guaranteed place in the next stage. In Group J, Argentina finished comfortably at the top with nine points, while Algeria ended their group campaign in third place with four points, level with Austria but just behind on goal difference. Because the group stage is now complete, Algeria's record of four points and a minus-two goal difference is locked in. Under the tournament rules, they are mathematically safe as one of the best third-placed teams. At most five other third-place records across the tournament can possibly beat Algeria's numbers, and with eight third-place spots qualifying, their safety net is completely secure. They currently sit as the sixth-best third-placed team overall, safely above the cut-off line. There are no more matches to watch or scenarios to calculate—Algeria's ticket to the round of 32 is fully booked. Algeria are mathematically safe as a locked third-place team: at most 5 other third-place records can beat their 4 pts / GD -2 / GF 5, and eight third-place teams qualify.",
       "team_code": "ALG"
     },
     {
@@ -8407,9 +8429,9 @@
   "real_standings": {
     "label": "Real group table computed from verified match results using the FIFA 2026 Article 13 tiebreakers — distinct from the predicted/projected probabilities table.",
     "source_label": "our verified results + the 2026 advancement rules",
-    "status": "in_progress",
-    "results_counted": 70,
-    "groups_complete": 11,
+    "status": "complete",
+    "results_counted": 72,
+    "groups_complete": 12,
     "groups": [
       {
         "group": "A",
@@ -8462,7 +8484,7 @@
             "points": 3,
             "advance_state": "best_third_out",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -8533,7 +8555,7 @@
             "points": 4,
             "advance_state": "best_third_in",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -8604,7 +8626,7 @@
             "points": 3,
             "advance_state": "best_third_out",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -8675,7 +8697,7 @@
             "points": 4,
             "advance_state": "best_third_in",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -8746,7 +8768,7 @@
             "points": 4,
             "advance_state": "best_third_in",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -8817,7 +8839,7 @@
             "points": 4,
             "advance_state": "best_third_in",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -8886,9 +8908,9 @@
             "goals_against": 3,
             "goal_difference": 0,
             "points": 3,
-            "advance_state": "best_third_in",
+            "advance_state": "best_third_out",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -8959,7 +8981,7 @@
             "points": 2,
             "advance_state": "best_third_out",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -9030,7 +9052,7 @@
             "points": 3,
             "advance_state": "best_third_in",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -9052,72 +9074,72 @@
       },
       {
         "group": "J",
-        "complete": false,
-        "games_played": 4,
+        "complete": true,
+        "games_played": 6,
         "standings": [
           {
             "position": 1,
             "code": "ARG",
             "name": "Argentina",
-            "played": 2,
-            "won": 2,
+            "played": 3,
+            "won": 3,
             "drawn": 0,
             "lost": 0,
-            "goals_for": 5,
-            "goals_against": 0,
-            "goal_difference": 5,
-            "points": 6,
+            "goals_for": 8,
+            "goals_against": 1,
+            "goal_difference": 7,
+            "points": 9,
             "advance_state": "qualified",
             "band": "green",
-            "decided": false
+            "decided": true
           },
           {
             "position": 2,
             "code": "AUT",
             "name": "Austria",
-            "played": 2,
+            "played": 3,
             "won": 1,
-            "drawn": 0,
+            "drawn": 1,
             "lost": 1,
-            "goals_for": 3,
-            "goals_against": 3,
+            "goals_for": 6,
+            "goals_against": 6,
             "goal_difference": 0,
-            "points": 3,
+            "points": 4,
             "advance_state": "qualified",
             "band": "green",
-            "decided": false
+            "decided": true
           },
           {
             "position": 3,
             "code": "ALG",
             "name": "Algeria",
-            "played": 2,
+            "played": 3,
             "won": 1,
-            "drawn": 0,
+            "drawn": 1,
             "lost": 1,
-            "goals_for": 2,
-            "goals_against": 4,
+            "goals_for": 5,
+            "goals_against": 7,
             "goal_difference": -2,
-            "points": 3,
-            "advance_state": "best_third_out",
+            "points": 4,
+            "advance_state": "best_third_in",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
             "code": "JOR",
             "name": "Jordan",
-            "played": 2,
+            "played": 3,
             "won": 0,
             "drawn": 0,
-            "lost": 2,
-            "goals_for": 2,
-            "goals_against": 5,
-            "goal_difference": -3,
+            "lost": 3,
+            "goals_for": 3,
+            "goals_against": 8,
+            "goal_difference": -5,
             "points": 0,
             "advance_state": "eliminated",
             "band": "gray",
-            "decided": false
+            "decided": true
           }
         ]
       },
@@ -9172,7 +9194,7 @@
             "points": 4,
             "advance_state": "best_third_in",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -9243,7 +9265,7 @@
             "points": 4,
             "advance_state": "best_third_in",
             "band": "amber",
-            "decided": false
+            "decided": true
           },
           {
             "position": 4,
@@ -9265,9 +9287,9 @@
       }
     ],
     "best_third_race": {
-      "decided": false,
+      "decided": true,
       "qualify_count": 8,
-      "note": "Best-third race not yet decided — it is final only once all 12 groups finish; the order below is provisional from results so far.",
+      "note": "All 12 groups complete — the eight best third-placed teams are final.",
       "ranked": [
         {
           "code": "COD",
@@ -9320,12 +9342,22 @@
           "group_complete": true
         },
         {
+          "code": "ALG",
+          "group": "J",
+          "points": 4,
+          "goal_difference": -2,
+          "goals_for": 5,
+          "rank": 6,
+          "in_best_8": true,
+          "group_complete": true
+        },
+        {
           "code": "PAR",
           "group": "D",
           "points": 4,
           "goal_difference": -2,
           "goals_for": 2,
-          "rank": 6,
+          "rank": 7,
           "in_best_8": true,
           "group_complete": true
         },
@@ -9335,7 +9367,7 @@
           "points": 3,
           "goal_difference": 2,
           "goals_for": 8,
-          "rank": 7,
+          "rank": 8,
           "in_best_8": true,
           "group_complete": true
         },
@@ -9345,8 +9377,8 @@
           "points": 3,
           "goal_difference": 0,
           "goals_for": 3,
-          "rank": 8,
-          "in_best_8": true,
+          "rank": 9,
+          "in_best_8": false,
           "group_complete": true
         },
         {
@@ -9355,19 +9387,9 @@
           "points": 3,
           "goal_difference": -1,
           "goals_for": 2,
-          "rank": 9,
-          "in_best_8": false,
-          "group_complete": true
-        },
-        {
-          "code": "ALG",
-          "group": "J",
-          "points": 3,
-          "goal_difference": -2,
-          "goals_for": 2,
           "rank": 10,
           "in_best_8": false,
-          "group_complete": false
+          "group_complete": true
         },
         {
           "code": "SCO",
@@ -9412,7 +9434,10 @@
           "code": "ECU",
           "name": "Ecuador"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ECU",
+          "name": "Ecuador"
+        }
       },
       "as_runner_up": {
         "match_number": 73,
@@ -9505,7 +9530,10 @@
           "code": "ECU",
           "name": "Ecuador"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ECU",
+          "name": "Ecuador"
+        }
       },
       "as_runner_up": {
         "match_number": 73,
@@ -9598,7 +9626,10 @@
           "code": "ECU",
           "name": "Ecuador"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ECU",
+          "name": "Ecuador"
+        }
       },
       "as_runner_up": {
         "match_number": 73,
@@ -9691,7 +9722,10 @@
           "code": "ECU",
           "name": "Ecuador"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ECU",
+          "name": "Ecuador"
+        }
       },
       "as_runner_up": {
         "match_number": 73,
@@ -9784,7 +9818,10 @@
           "code": "IRN",
           "name": "Iran"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ALG",
+          "name": "Algeria"
+        }
       },
       "as_runner_up": {
         "match_number": 73,
@@ -9877,7 +9914,10 @@
           "code": "IRN",
           "name": "Iran"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ALG",
+          "name": "Algeria"
+        }
       },
       "as_runner_up": {
         "match_number": 73,
@@ -9970,7 +10010,10 @@
           "code": "IRN",
           "name": "Iran"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ALG",
+          "name": "Algeria"
+        }
       },
       "as_runner_up": {
         "match_number": 73,
@@ -10063,7 +10106,10 @@
           "code": "IRN",
           "name": "Iran"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ALG",
+          "name": "Algeria"
+        }
       },
       "as_runner_up": {
         "match_number": 73,
@@ -10624,7 +10670,10 @@
           "code": "ALG",
           "name": "Algeria"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "BIH",
+          "name": "Bosnia and Herzegovina"
+        }
       },
       "as_runner_up": {
         "match_number": 88,
@@ -10738,7 +10787,10 @@
           "code": "ALG",
           "name": "Algeria"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "BIH",
+          "name": "Bosnia and Herzegovina"
+        }
       },
       "as_runner_up": {
         "match_number": 88,
@@ -10852,7 +10904,10 @@
           "code": "ALG",
           "name": "Algeria"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "BIH",
+          "name": "Bosnia and Herzegovina"
+        }
       },
       "as_runner_up": {
         "match_number": 88,
@@ -10966,7 +11021,10 @@
           "code": "ALG",
           "name": "Algeria"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "BIH",
+          "name": "Bosnia and Herzegovina"
+        }
       },
       "as_runner_up": {
         "match_number": 88,
@@ -11080,7 +11138,10 @@
           "code": "BIH",
           "name": "Bosnia and Herzegovina"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "PAR",
+          "name": "Paraguay"
+        }
       },
       "as_runner_up": {
         "match_number": 78,
@@ -11257,7 +11318,10 @@
           "code": "BIH",
           "name": "Bosnia and Herzegovina"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "PAR",
+          "name": "Paraguay"
+        }
       },
       "as_runner_up": {
         "match_number": 78,
@@ -11434,7 +11498,10 @@
           "code": "BIH",
           "name": "Bosnia and Herzegovina"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "PAR",
+          "name": "Paraguay"
+        }
       },
       "as_runner_up": {
         "match_number": 78,
@@ -11611,7 +11678,10 @@
           "code": "BIH",
           "name": "Bosnia and Herzegovina"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "PAR",
+          "name": "Paraguay"
+        }
       },
       "as_runner_up": {
         "match_number": 78,
@@ -12424,7 +12494,10 @@
           "code": "KOR",
           "name": "South Korea"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "SEN",
+          "name": "Senegal"
+        }
       },
       "as_runner_up": {
         "match_number": 88,
@@ -12517,7 +12590,10 @@
           "code": "KOR",
           "name": "South Korea"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "SEN",
+          "name": "Senegal"
+        }
       },
       "as_runner_up": {
         "match_number": 88,
@@ -12610,7 +12686,10 @@
           "code": "KOR",
           "name": "South Korea"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "SEN",
+          "name": "Senegal"
+        }
       },
       "as_runner_up": {
         "match_number": 88,
@@ -12703,7 +12782,10 @@
           "code": "KOR",
           "name": "South Korea"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "SEN",
+          "name": "Senegal"
+        }
       },
       "as_runner_up": {
         "match_number": 88,
@@ -12796,7 +12878,10 @@
           "code": "AUT",
           "name": "Austria"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "AUT",
+          "name": "Austria"
+        }
       },
       "as_runner_up": {
         "match_number": 86,
@@ -12814,7 +12899,10 @@
           "code": "ARG",
           "name": "Argentina"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ARG",
+          "name": "Argentina"
+        }
       },
       "as_best_third": {
         "conditional": true,
@@ -12928,7 +13016,10 @@
           "code": "AUT",
           "name": "Austria"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "AUT",
+          "name": "Austria"
+        }
       },
       "as_runner_up": {
         "match_number": 86,
@@ -12946,7 +13037,10 @@
           "code": "ARG",
           "name": "Argentina"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ARG",
+          "name": "Argentina"
+        }
       },
       "as_best_third": {
         "conditional": true,
@@ -13060,7 +13154,10 @@
           "code": "AUT",
           "name": "Austria"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "AUT",
+          "name": "Austria"
+        }
       },
       "as_runner_up": {
         "match_number": 86,
@@ -13078,7 +13175,10 @@
           "code": "ARG",
           "name": "Argentina"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ARG",
+          "name": "Argentina"
+        }
       },
       "as_best_third": {
         "conditional": true,
@@ -13192,7 +13292,10 @@
           "code": "AUT",
           "name": "Austria"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "AUT",
+          "name": "Austria"
+        }
       },
       "as_runner_up": {
         "match_number": 86,
@@ -13210,7 +13313,10 @@
           "code": "ARG",
           "name": "Argentina"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "ARG",
+          "name": "Argentina"
+        }
       },
       "as_best_third": {
         "conditional": true,
@@ -13324,7 +13430,10 @@
           "code": "SWE",
           "name": "Sweden"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "SWE",
+          "name": "Sweden"
+        }
       },
       "as_runner_up": {
         "match_number": 78,
@@ -13501,7 +13610,10 @@
           "code": "SWE",
           "name": "Sweden"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "SWE",
+          "name": "Sweden"
+        }
       },
       "as_runner_up": {
         "match_number": 78,
@@ -13678,7 +13790,10 @@
           "code": "SWE",
           "name": "Sweden"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "SWE",
+          "name": "Sweden"
+        }
       },
       "as_runner_up": {
         "match_number": 78,
@@ -13855,7 +13970,10 @@
           "code": "SWE",
           "name": "Sweden"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "SWE",
+          "name": "Sweden"
+        }
       },
       "as_runner_up": {
         "match_number": 78,
@@ -14668,7 +14786,10 @@
           "code": "TUR",
           "name": "Türkiye"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "GHA",
+          "name": "Ghana"
+        }
       },
       "as_runner_up": {
         "match_number": 83,
@@ -14740,7 +14861,10 @@
           "code": "TUR",
           "name": "Türkiye"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "GHA",
+          "name": "Ghana"
+        }
       },
       "as_runner_up": {
         "match_number": 83,
@@ -14812,7 +14936,10 @@
           "code": "TUR",
           "name": "Türkiye"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "GHA",
+          "name": "Ghana"
+        }
       },
       "as_runner_up": {
         "match_number": 83,
@@ -14884,7 +15011,10 @@
           "code": "TUR",
           "name": "Türkiye"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "GHA",
+          "name": "Ghana"
+        }
       },
       "as_runner_up": {
         "match_number": 83,
@@ -14956,7 +15086,10 @@
           "code": "SEN",
           "name": "Senegal"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "COD",
+          "name": "Congo DR"
+        }
       },
       "as_runner_up": {
         "match_number": 83,
@@ -15028,7 +15161,10 @@
           "code": "SEN",
           "name": "Senegal"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "COD",
+          "name": "Congo DR"
+        }
       },
       "as_runner_up": {
         "match_number": 83,
@@ -15100,7 +15236,10 @@
           "code": "SEN",
           "name": "Senegal"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "COD",
+          "name": "Congo DR"
+        }
       },
       "as_runner_up": {
         "match_number": 83,
@@ -15172,7 +15311,10 @@
           "code": "SEN",
           "name": "Senegal"
         },
-        "real_opponent": null
+        "real_opponent": {
+          "code": "COD",
+          "name": "Congo DR"
+        }
       },
       "as_runner_up": {
         "match_number": 83,
