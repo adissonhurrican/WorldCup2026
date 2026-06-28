@@ -1,0 +1,93 @@
+{
+  "_guidance": "DELETE THIS FIELD after copying to {FIFA_CODE}.json. Rules: no source = not in the file; mood in WORDS not numbers; quotes verbatim <=20 words with attribution; official+fact_grade may be stated as fact, discovery+attributed_context_only is attributed-only; confirmed availability goes to the news channel (not here); list unsourced points in gaps[]; only review_status='reviewed' ships; outlets must be on _outlet-allowlist.json. See README.md.",
+
+  "team_code": "",
+  "designed_for": "ai-copredictor-system-prompt-v0.8",
+  "round": "",
+  "next_opponent_code": "",
+  "last_updated": "",
+  "review_status": "pending",
+  "confidence": "",
+
+  "national_expectations": {
+    "summary": "",
+    "source_tier": "",
+    "verification": "",
+    "sources": [
+      { "outlet": "", "url": "", "date": "", "lang": "" }
+    ]
+  },
+
+  "national_mood": {
+    "summary": "",
+    "source_tier": "",
+    "verification": "",
+    "sources": [
+      { "outlet": "", "url": "", "date": "", "lang": "" }
+    ]
+  },
+
+  "manager_situation": {
+    "summary": "",
+    "source_tier": "",
+    "verification": "",
+    "sources": [
+      { "outlet": "", "url": "", "date": "", "lang": "" }
+    ]
+  },
+
+  "historical_context": {
+    "summary": "",
+    "source_tier": "",
+    "verification": "",
+    "sources": [
+      { "outlet": "", "url": "", "date": "", "lang": "" }
+    ]
+  },
+
+  "dominant_storylines": [
+    {
+      "storyline": "",
+      "source_tier": "",
+      "verification": "",
+      "sources": [
+        { "outlet": "", "url": "", "date": "", "lang": "" }
+      ]
+    }
+  ],
+
+  "attributed_quotes": [
+    {
+      "quote": "",
+      "quote_original": null,
+      "lang": "",
+      "speaker_name": "",
+      "speaker_role": "",
+      "source_tier": "",
+      "verification": "",
+      "outlet": "",
+      "url": "",
+      "date": "",
+      "context": ""
+    }
+  ],
+
+  "local_availability_reporting": [
+    {
+      "player_name": "",
+      "reported_status": "",
+      "confirmed": false,
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "",
+      "url": "",
+      "date": ""
+    }
+  ],
+
+  "gaps": [],
+
+  "source_data_snapshot": [
+    { "url": "", "retrieved_at": "", "tier": "" }
+  ]
+}

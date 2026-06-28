@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "note": "Credible national/international outlets approved for team-story sourcing (decision D). Outlets not listed use provider/outlet 'other' and REQUIRE a reviewer note. Membership check is case-insensitive on the outlet string.",
+  "policy": {
+    "other_requires_note": true,
+    "press_is_discovery": "Press/media outlets are source_tier=discovery + verification=attributed_context_only (attributed reporting only). Only FIFA / confederation (UEFA, CONMEBOL, CONCACAF, AFC, CAF, OFC) / national federations are source_tier=official + verification=fact_grade.",
+    "denylist_keywords": ["bet365", "betway", "bwin", "odds", "betting", "gambling", "tipster", "prediction site"]
+  },
+
+  "official_sources": ["FIFA", "UEFA", "CONMEBOL", "CONCACAF", "AFC", "CAF", "OFC", "National Federation"],
+
+  "allowed_outlets": [
+    "Marca", "AS", "El Pais", "Mundo Deportivo", "Sport",
+    "Globo Esporte", "Lance!", "ge.globo", "A Bola", "Record", "O Jogo",
+    "ESPN", "ESPN Mexico", "Record (MX)", "Mediotiempo", "TUDN",
+    "Ole", "Clarin", "TyC Sports", "La Nacion",
+    "L'Equipe", "RMC Sport", "Le Parisien",
+    "Kicker", "Sky Sport DE", "Bild",
+    "BBC Sport", "The Guardian", "The Athletic", "Sky Sports",
+    "Gazzetta dello Sport", "Corriere dello Sport", "Tuttosport",
+    "De Telegraaf", "Voetbal International",
+    "Reuters", "Associated Press", "AFP", "The Associated Press"
+  ],
+
+  "by_region": {
+    "Spain": ["Marca", "AS", "El Pais", "Mundo Deportivo", "Sport"],
+    "Brazil/Portugal": ["Globo Esporte", "Lance!", "ge.globo", "A Bola", "Record", "O Jogo"],
+    "Mexico/CONCACAF": ["ESPN Mexico", "Record (MX)", "Mediotiempo", "TUDN"],
+    "Argentina": ["Ole", "Clarin", "TyC Sports", "La Nacion"],
+    "France": ["L'Equipe", "RMC Sport", "Le Parisien"],
+    "Germany": ["Kicker", "Sky Sport DE", "Bild"],
+    "England": ["BBC Sport", "The Guardian", "The Athletic", "Sky Sports"],
+    "Italy": ["Gazzetta dello Sport", "Corriere dello Sport", "Tuttosport"],
+    "Netherlands": ["De Telegraaf", "Voetbal International"],
+    "Wire/International": ["Reuters", "Associated Press", "AFP"]
+  },
+
+  "guidance": "This list is a floor, not a ceiling. For nations without a strong national press here (verify carefully, esp. smaller federations), use the recognized national broadcaster + the major newspaper's sport section, tag as 'other', and add a reviewer note naming the outlet and why it is credible. When in doubt, exclude and record the gap in the file's gaps[]."
+}
