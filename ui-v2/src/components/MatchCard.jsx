@@ -162,7 +162,8 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
 // stopPropagation so a tap never opens the match sheet) but renders a span[role=button] because the
 // whole card is already a <button> (nested buttons are invalid HTML). Dismisses on tap-away via a
 // document listener. The popover opens ABOVE the row so the card's overflow-hidden never clips it.
-function XgInfo() {
+// Exported so the KnockoutCard reuses the SAME xG (i) explainer (one source).
+export function XgInfo() {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
   useEffect(() => {

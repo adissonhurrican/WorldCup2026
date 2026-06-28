@@ -1,9 +1,9 @@
 import { Flag } from "./ui";
 import PredictionBar from "./PredictionBar";
-import { MatchEventSummary } from "./MatchCard";
+import { MatchEventSummary, XgInfo } from "./MatchCard";
 import {
   teamByCode, dualClock, weatherFor, isImminent, weatherEmoji, weatherConfidence, cToF, favorite, pct,
-  matchState, liveOf, scoreOf, eventsOf,
+  matchState, liveOf, scoreOf, eventsOf, lineupState, statsOf,
 } from "../lib/select";
 
 // Knockout-stage match card (R32 → Final). Full parity with the group MatchCard: the two "team" positions are
@@ -31,6 +31,8 @@ export default function KnockoutCard({ data, fx, live, lineups, events, stats, o
   const state = matchState(fx, live);
   const lv = liveOf(fx, live);
   const ev = eventsOf(fx, events);
+  const ls = lineupState(fx, lineups, live); // confirmed XI / ~60-min placeholder (same as the group card)
+  const st = statsOf(fx, stats);             // live xG (same descriptive in-play stat as the group card)
   const isLive = state === "live";
   const finished = state === "finished";
   const sc = scoreOf(fx);
@@ -96,6 +98,18 @@ export default function KnockoutCard({ data, fx, live, lineups, events, stats, o
         {/* goal/card events (live or final) — same summary the group card uses */}
         <MatchEventSummary fx={fx} match={ev} />
 
+        {/* live xG — DESCRIPTIVE in-play stat, IDENTICAL to the group MatchCard: shown only while live and only
+            once the provider posts statistics (st keys off home/away, which the resolved knockout fixture carries). */}
+        {isLive && st && (st.home_xg != null || st.away_xg != null) && (
+          <div className="relative mt-2 flex items-center justify-center gap-1.5 text-[11px] text-ink-3">
+            <span className="rounded-full bg-fill/10 px-2 py-0.5 font-semibold uppercase tracking-wide text-[9px]">Live xG</span>
+            <span className="tabular-nums font-medium text-ink-2">
+              {st.home_xg != null ? st.home_xg.toFixed(1) : "—"} – {st.away_xg != null ? st.away_xg.toFixed(1) : "—"}
+            </span>
+            <XgInfo />
+          </div>
+        )}
+
         {/* status / advancer for live + finished; upcoming shows the schedule date below instead */}
         {(isLive || finished) && (
           <div className={`mt-2 text-center text-[12px] ${isLive ? "font-semibold text-live" : "text-ink-2"}`}>
@@ -140,6 +154,25 @@ export default function KnockoutCard({ data, fx, live, lineups, events, stats, o
           </>
         ) : (
           <div className="mt-3 text-center text-[11px] text-ink-3">Prediction once teams are confirmed</div>
+        )}
+
+        {/* lineups: confirmed XI once stored, else the ~60-min placeholder — same as the group card. Only once
+            BOTH knockout teams are real (an unresolved slot has no teams, so no lineup line until then). */}
+        {aCode && bCode && (
+          ls.has ? (
+            <div className="mt-2 flex items-center justify-center gap-1.5 text-[11px] text-ink-3">
+              <span className="inline-flex items-center gap-1 rounded-full bg-qualified/10 px-2 py-0.5 font-semibold text-qualified">
+                <span className="h-1.5 w-1.5 rounded-full bg-qualified" /> Starting XI
+              </span>
+              {(ls.lineup?.home_lineup?.formation || ls.lineup?.away_lineup?.formation) && (
+                <span className="tabular-nums">
+                  {ls.lineup?.home_lineup?.formation || "—"} v {ls.lineup?.away_lineup?.formation || "—"}
+                </span>
+              )}
+            </div>
+          ) : ls.showPlaceholder ? (
+            <div className="mt-2 text-center text-[11px] text-ink-3">Lineups ~60 min before kickoff</div>
+          ) : null
         )}
       </div>
     </button>
