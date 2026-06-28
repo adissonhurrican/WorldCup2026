@@ -13,6 +13,7 @@ import {
   SQUADS_REMOTE_URL, SQUADS_FALLBACK_URL,
 } from "../config.js";
 import { decodeGithubContentsJson, resolveAppDataSource } from "./appDataResolver.js";
+import { realKnockoutFixture } from "./select.js";
 
 const BASE = import.meta.env.BASE_URL;
 const BUNDLED_APP_DATA = `${BASE}app-data.json`;
@@ -276,7 +277,11 @@ export async function loadAll() {
   // knockout:true lets the view pick the slot-label card. teamFixtures excludes them (no home/away) until the
   // post-group resolver fills real teams. The original data.knockout_fixtures stays available too.
   if (Array.isArray(data.knockout_fixtures) && data.knockout_fixtures.length) {
-    const ko = data.knockout_fixtures.map((k) => ({ ...k, group: null, knockout: true }));
+    // Normalize each knockout fixture to the GROUP-fixture shape (home/away + result home_score/away_score +
+    // probabilities) when both teams are real — so the SAME live/score helpers (matchState, liveOf, scoreOf) and
+    // event summary the group MatchCard uses work for knockouts too: live + final scores, the minute, the advancer.
+    // Unresolved knockouts (slot labels, no teams yet) fall back to the raw merge so they still render as slots.
+    const ko = data.knockout_fixtures.map((k) => realKnockoutFixture(k) || { ...k, group: null, knockout: true });
     data.fixtures = [...(data.fixtures || []), ...ko];
   }
   return data;

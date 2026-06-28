@@ -1,16 +1,21 @@
 import { Flag } from "./ui";
 import PredictionBar from "./PredictionBar";
+import { MatchEventSummary } from "./MatchCard";
 import {
   teamByCode, dualClock, weatherFor, isImminent, weatherEmoji, weatherConfidence, cToF, favorite, pct,
+  matchState, liveOf, scoreOf, eventsOf,
 } from "../lib/select";
 
-// Knockout-stage match card (R32 → Final). Full parity with the group MatchCard, but the two "team" positions
-// are BRACKET SLOTS ("Winner Group A", "Best 3rd from G/H/J/L", "Winner M74") until the post-group resolver
-// fills real teams. DATES are schedule-fixed and KNOWN: exact date/time where the schedule has it (QF onward),
-// else the real round date-window (R32/R16 have no per-match date in knockout_schedule yet — a data gap to fill;
-// NEVER imply the date depends on results). Forward-compatible: when a side's `team` (and fx.probabilities) are
-// filled, the card shows the real flag+name + prediction bar automatically. Weather attaches once the match is
-// within the 168h window (empty for now — expected). Clicking opens the same MatchSheet group cards use.
+// Knockout-stage match card (R32 → Final). Full parity with the group MatchCard: the two "team" positions are
+// BRACKET SLOTS ("Winner Group A", "Best 3rd from G/H/J/L", "Winner M74") until the post-group resolver fills real
+// teams, then they show real flags + names, the prediction, and — once the match plays — the SCORE inline:
+//   live   → the live score + minute (text-live), goal/card events
+//   final  → the final score, with the loser dimmed and an "X advance" line (penalty-aware: "· 4–3 pens")
+//   upcoming → the prediction + the schedule date (no result)
+// The live/score helpers (matchState/liveOf/scoreOf/eventsOf) key off home/away + the normalized result that
+// loadAll's realKnockoutFixture() fills in, so this is the SAME code path the group MatchCard uses. DATES are
+// schedule-fixed and KNOWN (only the teams depend on results — never imply the date does). Clicking opens the
+// same MatchSheet group cards use.
 const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const WD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 function fmtDateOnly(s) {
@@ -22,14 +27,28 @@ function fmtDateOnly(s) {
   return `${WD[dt.getUTCDay()]} ${MON[m - 1]} ${d}`;
 }
 
-export default function KnockoutCard({ data, fx, onOpen, cardRef = null }) {
+export default function KnockoutCard({ data, fx, live, lineups, events, stats, onOpen, cardRef = null }) {
+  const state = matchState(fx, live);
+  const lv = liveOf(fx, live);
+  const ev = eventsOf(fx, events);
+  const isLive = state === "live";
+  const finished = state === "finished";
+  const sc = scoreOf(fx);
   const wx = weatherFor(data, fx);
   const wxConf = weatherConfidence(wx);
   const showChip = wx && isImminent(fx); // knockouts are weeks out -> empty until they enter the 168h window
   const dc = dualClock(fx);
-  const resolved = !!fx.probabilities; // forward-compat: real prediction once teams + probabilities are filled
+  const resolved = !!fx.probabilities; // real prediction once teams + probabilities are filled
   const p = fx.probabilities || {};
   const fav = resolved ? favorite(fx) : null;
+  // advancer (knockout-specific): who goes through — penalty-aware (the normalized result carries winner_code + pens).
+  const r = fx.result || {};
+  const winnerCode = finished ? (r.winner_code ?? null) : null;
+  const winnerName = winnerCode ? ((teamByCode(data, winnerCode) || {}).name || winnerCode) : null;
+  const pensHome = r.pens_home, pensAway = r.pens_away;
+  const wentToPens = finished && pensHome != null && pensAway != null;
+  const aCode = fx.side_a?.team?.code ?? null;
+  const bCode = fx.side_b?.team?.code ?? null;
 
   return (
     <button
@@ -44,6 +63,12 @@ export default function KnockoutCard({ data, fx, onOpen, cardRef = null }) {
         <div className="flex items-start justify-between gap-2 text-[12px] text-ink-2">
           <span className="min-w-0 truncate">{fx.venue || "Venue TBC"}{fx.city ? ` · ${fx.city}` : ""}</span>
           <span className="flex shrink-0 items-start gap-1.5">
+            {isLive && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-live/10 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-live">
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
+                Live{lv && lv.minute != null ? ` ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}
+              </span>
+            )}
             {showChip ? (
               <span className="flex flex-col items-end gap-0.5 leading-tight">
                 <span className="text-[9px] font-semibold uppercase tracking-wide text-ink-3">Weather forecast</span>
@@ -59,35 +84,58 @@ export default function KnockoutCard({ data, fx, onOpen, cardRef = null }) {
           </span>
         </div>
 
+        {/* teams + score (slots until resolved). Live → live score; final → final score with the loser dimmed. */}
         <div className="mt-3 flex items-center gap-2">
-          <SlotSide data={data} side={fx.side_a} align="right" />
-          <span className="w-8 shrink-0 text-center text-[13px] font-semibold text-ink-3">v</span>
-          <SlotSide data={data} side={fx.side_b} align="left" />
+          <SlotSide data={data} side={fx.side_a} align="right" lose={finished && winnerCode != null && winnerCode !== aCode} />
+          <span className={`w-12 shrink-0 text-center text-[16px] font-bold tabular-nums ${isLive ? "text-live" : "text-ink-2"}`}>
+            {isLive ? `${lv.home_score ?? 0}–${lv.away_score ?? 0}` : finished ? `${sc.h ?? "-"}–${sc.a ?? "-"}` : "v"}
+          </span>
+          <SlotSide data={data} side={fx.side_b} align="left" lose={finished && winnerCode != null && winnerCode !== bCode} />
         </div>
 
-        {/* date — real where known, else the real round date-window (never tied to results) */}
-        <div className="mt-3 text-center text-[12px] text-ink-2">
-          {fx.kickoff_utc ? (
-            <>{fmtDateOnly(fx.kickoff) || ""}{dc.viewer ? ` · ${dc.viewer} your time` : ""}</>
-          ) : fx.kickoff ? (
-            fmtDateOnly(fx.kickoff)
-          ) : fx.round_window_label ? (
-            fx.round_window_label
-          ) : (
-            "Date TBC"
-          )}
-        </div>
+        {/* goal/card events (live or final) — same summary the group card uses */}
+        <MatchEventSummary fx={fx} match={ev} />
 
-        {/* prediction — real bar once teams are confirmed, else a clean explicit state (no empty/grey bar) */}
+        {/* status / advancer for live + finished; upcoming shows the schedule date below instead */}
+        {(isLive || finished) && (
+          <div className={`mt-2 text-center text-[12px] ${isLive ? "font-semibold text-live" : "text-ink-2"}`}>
+            {isLive
+              ? `In play${lv && lv.minute != null ? ` · ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}`
+              : winnerName
+                ? <><span className="font-semibold text-ink">{winnerName}</span> advance{wentToPens ? ` · ${pensHome}–${pensAway} pens` : ""}</>
+                : "Full-time"}
+          </div>
+        )}
+
+        {/* date — only before kickoff (live/finished show the status line above). Never tied to results. */}
+        {!isLive && !finished && (
+          <div className="mt-3 text-center text-[12px] text-ink-2">
+            {fx.kickoff_utc ? (
+              <>{fmtDateOnly(fx.kickoff) || ""}{dc.viewer ? ` · ${dc.viewer} your time` : ""}</>
+            ) : fx.kickoff ? (
+              fmtDateOnly(fx.kickoff)
+            ) : fx.round_window_label ? (
+              fx.round_window_label
+            ) : (
+              "Date TBC"
+            )}
+          </div>
+        )}
+
+        {/* prediction — real bar once teams are confirmed (no "draw" for knockouts); else a clean explicit state */}
         {resolved ? (
           <>
             <PredictionBar data={data} fx={fx} heightClass="h-1" className="mt-3" />
             <div className="mt-1.5 text-center text-[11px] text-ink-3">
-              <span className={fav.k === "home" ? "font-semibold text-ink-2" : ""}>{fx.home} {pct(p.home_win)}</span>
-              {" · "}
-              <span className={fav.k === "draw" ? "font-semibold text-ink-2" : ""}>draw {pct(p.draw)}</span>
-              {" · "}
-              <span className={fav.k === "away" ? "font-semibold text-ink-2" : ""}>{fx.away} {pct(p.away_win)}</span>
+              {finished ? (
+                <>we predicted <span className="font-semibold text-ink-2">{fav.k === "home" ? fx.home : fav.k === "away" ? fx.away : "Draw"} {pct(fav.v)}</span></>
+              ) : (
+                <>
+                  <span className={fav.k === "home" ? "font-semibold text-ink-2" : ""}>{fx.home} {pct(p.home_win)}</span>
+                  {" · "}
+                  <span className={fav.k === "away" ? "font-semibold text-ink-2" : ""}>{fx.away} {pct(p.away_win)}</span>
+                </>
+              )}
             </div>
           </>
         ) : (
@@ -99,15 +147,16 @@ export default function KnockoutCard({ data, fx, onOpen, cardRef = null }) {
 }
 
 // One bracket slot. Forward-compatible: real flag+name once `side.team` ({code,name,flag}) is filled by the
-// resolver; otherwise the slot label (e.g. "Winner Group E", "Best 3rd from A/B/C/D/F", "Winner M74").
-function SlotSide({ data, side, align }) {
+// resolver; otherwise the slot label (e.g. "Winner Group E", "Best 3rd from A/B/C/D/F", "Winner M74"). On a
+// finished knockout the eliminated side is dimmed (`lose`) so the advancer reads clearly.
+function SlotSide({ data, side, align, lose = false }) {
   const s = side || {};
   const team = s.team ? (teamByCode(data, s.team.code) || s.team) : null;
   if (team) {
     return (
-      <span className={`flex min-w-0 flex-1 items-center gap-2 ${align === "right" ? "justify-end" : ""}`}>
+      <span className={`flex min-w-0 flex-1 items-center gap-2 ${align === "right" ? "justify-end" : ""} ${lose ? "opacity-45" : ""}`}>
         {align === "right" && <span className="truncate text-[15px] font-semibold">{team.name || team.code}</span>}
-        <Flag team={team} size={26} />
+        <Flag team={team} size={26} className={lose ? "grayscale" : ""} />
         {align === "left" && <span className="truncate text-[15px] font-semibold">{team.name || team.code}</span>}
       </span>
     );

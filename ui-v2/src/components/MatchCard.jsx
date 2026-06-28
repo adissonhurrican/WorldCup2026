@@ -229,7 +229,7 @@ function ScheduledTime({ dc, city = null }) {
   );
 }
 
-function MatchEventSummary({ fx, match }) {
+export function MatchEventSummary({ fx, match }) {
   const items = (match && Array.isArray(match.events) ? match.events : []).slice().sort(eventSort);
   if (!items.length) return null;
   const homeItems = items.filter((ev) => ev.team === fx.home);

@@ -67,7 +67,7 @@ export default function MatchesView({ data, live, lineups, events, stats, onOpen
           <div className="space-y-3 md:grid md:grid-cols-2 md:gap-3 md:space-y-0 xl:grid-cols-3">
             {d.items.map((fx, i) =>
               fx.knockout ? (
-                <KnockoutCard key={`ko-${fx.match_number}`} data={data} fx={fx} onOpen={onOpenMatch} cardRef={liveId && idOf(fx) === liveId ? liveCardRef : null} />
+                <KnockoutCard key={`ko-${fx.match_number}`} data={data} fx={fx} live={live} lineups={lineups} events={events} stats={stats} onOpen={onOpenMatch} cardRef={liveId && idOf(fx) === liveId ? liveCardRef : null} />
               ) : (
                 <MatchCard key={`${fx.home}-${fx.away}-${i}`} data={data} fx={fx} live={live} lineups={lineups} events={events} stats={stats} onOpen={onOpenMatch} cardRef={liveId && idOf(fx) === liveId ? liveCardRef : null} />
               ),
