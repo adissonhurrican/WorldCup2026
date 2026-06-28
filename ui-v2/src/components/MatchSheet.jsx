@@ -4,7 +4,7 @@ import PredictionBar from "./PredictionBar";
 import LineupPitchSheet from "./LineupPitchSheet";
 import { IconChevronRight } from "./icons";
 import {
-  teamByCode, dualClock, weatherFor, venueFactsFor, venueProfileFor, isImminent, weatherEmoji, weatherConfidence, cToF, tempCF, pct, favorite, scoreOf, matchState, liveOf, lineupState, eventsOf, VIEWER_TZ,
+  teamByCode, dualClock, weatherFor, venueFactsFor, venueProfileFor, isImminent, weatherEmoji, weatherConfidence, cToF, tempCF, pct, favorite, scoreOf, matchState, liveOf, lineupState, eventsOf, knockoutNarrationFor, VIEWER_TZ,
 } from "../lib/select";
 
 // Match detail bottom sheet — two tabs inside the sheet: Info (kickoff, venue, prediction, weather,
@@ -108,6 +108,9 @@ function MatchDetail({ data, fx, live, lineups, events }) {
 
             <EventTimeline match={timeline} state={state} />
 
+            {/* knockout matchup story — AI preview (pre-match) / story (post-match), grounded in the model + match data + sourced national context */}
+            {isKnockout && <KnockoutStory data={data} fx={fx} finished={finished} />}
+
             {/* venue */}
             <VenueSection fx={fx} profile={venueProfile} open={showVenueInfo} onToggle={() => setShowVenueInfo((v) => !v)} />
 
@@ -137,6 +140,22 @@ function MatchDetail({ data, fx, live, lineups, events }) {
           <LineupsSection fx={fx} home={home} away={away} lineups={lineups} live={live} isKnockout={isKnockout} hasTeams={hasTeams} />
         )}
       </div>
+    </div>
+  );
+}
+
+// Knockout matchup story — the AI pre-match preview (pre_match_storyline) or post-match story (post_result_change),
+// matched by fixture_label. Display only; grounded in the model + match data + sourced national context. Renders
+// nothing when no narration exists for the tie (ships dark per fixture).
+function KnockoutStory({ data, fx, finished }) {
+  const story = knockoutNarrationFor(data, fx, finished);
+  if (!story) return null;
+  return (
+    <div className="card p-4">
+      <Label>{story.kind === "post_result_change" ? "The story" : "Match preview"}</Label>
+      {story.headline && <div className="mt-1 text-[15px] font-semibold leading-snug text-ink">{story.headline}</div>}
+      <p className="mt-1.5 whitespace-pre-line text-[13px] leading-relaxed text-ink-2">{story.body}</p>
+      <p className="mt-2 text-[11px] text-ink-3">AI summary — grounded in our model, the match data, and sourced national context. Display only; never a prediction input.</p>
     </div>
   );
 }

@@ -246,8 +246,8 @@ async function main() {
     try {
       // group_narration is PARKED: the 12 rows remain in the DB (not deleted) but are NOT surfaced, so the app
       // carries only the per-team narrations and no stale group text ships. Re-enable = drop the content_type filter.
-      const rows = q(url, `select content_type, headline, body, team_code, group_code from public.ai_narrations where coalesce(validated,true)=true and content_type <> 'group_narration' order by created_at desc limit 200`);
-      narration = rows.map((r: any) => ({ content_type: r.content_type, headline: r.headline, body: r.body, ...(r.team_code ? { team_code: r.team_code } : {}), ...(r.group_code ? { group: r.group_code } : {}) }));
+      const rows = q(url, `select content_type, headline, body, team_code, group_code, fixture_label from public.ai_narrations where coalesce(validated,true)=true and content_type <> 'group_narration' order by created_at desc limit 200`);
+      narration = rows.map((r: any) => ({ content_type: r.content_type, headline: r.headline, body: r.body, ...(r.team_code ? { team_code: r.team_code } : {}), ...(r.group_code ? { group: r.group_code } : {}), ...(r.fixture_label ? { fixture_label: r.fixture_label } : {}) }));
     } catch { narration = []; }
   } else if (narrTable?.b) {
     try { narration = q(url, `select content_type, headline, body from public.match_narrations where coalesce(validated,true)=true order by created_at desc limit 200`); } catch { narration = []; }
