@@ -91,7 +91,7 @@
     ]
   },
   "historical_context": {
-    "summary": "Bosnia and Herzegovina reached the World Cup knockout stage for the first time in their history at the 2026 tournament, finishing third in Group B with four points (a draw with Canada, a loss to Switzerland and a 3-1 win over Qatar in Seattle) and advancing as one of the best third-placed teams. It is only their second World Cup appearance ever; their debut came at Brazil 2014, where they were eliminated in the group stage in a group that included Argentina, a missing piece captain Edin Dzeko has long referenced. They qualified for 2026 under Barbarez via the UEFA play-offs, beating Wales and then Italy on penalties.",
+    "summary": "Bosnia and Herzegovina reached the World Cup knockout stage for the first time in their history at the 2026 tournament, finishing third in Group B with four points (a draw with Canada, a loss to Switzerland and a 3-1 win over Qatar in Seattle) and advancing as one of the best third-placed teams. It is only their second World Cup appearance ever; their debut came at Brazil 2014, where they were eliminated in the group stage in a group that included Argentina, a missing piece captain Edin Dzeko has long referenced. They qualified for 2026 under Barbarez via the UEFA play-offs, beating Wales and then Italy on penalties; the shootout win over Italy sparked a vast late-night celebration at Sarajevo's Eternal Flame, where Barbarez thanked the fans and said his players deserved every compliment for pushing through.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
@@ -115,6 +115,12 @@
         "outlet": "Sky Sports",
         "url": "https://www.skysports.com/football/news/11095/13541527/edin-dzeko-interview-bosnia-striker-on-playing-at-the-world-cup-aged-40-after-helping-schalke-back-to-the-bundesliga",
         "date": "2026-06-12"
+      },
+      {
+        "outlet": "SportSport.ba",
+        "url": "https://sportsport.ba/fudbal/vjecna-vatra-docek-bih-reprezentacija-sergej-brbarez-izjava/519275",
+        "date": "2026-04-01",
+        "lang": "bs"
       }
     ]
   },
@@ -187,6 +193,19 @@
           "date": "2026-06-26"
         }
       ]
+    },
+    {
+      "storyline": "A breakout star and a wary expert read: Bosnian outlet SportSport.ba spotlights young attacker Alajbegovic as the standout of the Qatar win, while pundit and former international Marko Topic warns the overall display oscillated and that Mauricio Pochettino's high-pressing United States will be a far sterner knockout test.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "SportSport.ba",
+          "url": "https://sportsport.ba/fudbal/marko-topic-sportsport-intervju/524679",
+          "date": "2026-06-25",
+          "lang": "bs"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -215,6 +234,19 @@
       "verification": "attributed_context_only",
       "quote_original": null,
       "lang": "en"
+    },
+    {
+      "quote": "Alajbegovic is a wonder of a player.",
+      "speaker_name": "Marko Topic",
+      "speaker_role": "pundit (former Bosnia and Herzegovina international)",
+      "outlet": "SportSport.ba",
+      "url": "https://sportsport.ba/fudbal/marko-topic-sportsport-intervju/524679",
+      "date": "2026-06-25",
+      "context": "In a SportSport.ba interview analysing Bosnia's 3-1 win over Qatar, praising the breakout attacker as the team's standout performer.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "quote_original": "Alajbegović je čudo od igrača",
+      "lang": "bs"
     }
   ],
   "local_availability_reporting": [
@@ -336,6 +368,20 @@
       "lang": "en",
       "retrieved_at": "2026-06-28",
       "used_for": "Barbarez appointment date (19 Apr 2024), four-year contract, Bundesliga/poker background"
+    },
+    {
+      "outlet": "SportSport.ba",
+      "url": "https://sportsport.ba/fudbal/marko-topic-sportsport-intervju/524679",
+      "lang": "bs",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Marko Topic interview: Alajbegovic breakout, balanced/critical analysis, USA (Pochettino) high-press warning"
+    },
+    {
+      "outlet": "SportSport.ba",
+      "url": "https://sportsport.ba/fudbal/vjecna-vatra-docek-bih-reprezentacija-sergej-brbarez-izjava/519275",
+      "lang": "bs",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Eternal Flame qualification celebration (large late-night crowd), Barbarez thank-you to fans"
     }
   ]
 }

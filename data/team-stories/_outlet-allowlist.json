@@ -19,7 +19,8 @@
     "BBC Sport", "The Guardian", "The Athletic", "Sky Sports",
     "Gazzetta dello Sport", "Corriere dello Sport", "Tuttosport",
     "De Telegraaf", "Voetbal International",
-    "Reuters", "Associated Press", "AFP", "The Associated Press"
+    "Reuters", "Associated Press", "AFP", "The Associated Press",
+    "SportSport.ba", "klix.ba", "Sarajevo Times", "Dnevni Avaz"
   ],
 
   "by_region": {
@@ -32,7 +33,8 @@
     "England": ["BBC Sport", "The Guardian", "The Athletic", "Sky Sports"],
     "Italy": ["Gazzetta dello Sport", "Corriere dello Sport", "Tuttosport"],
     "Netherlands": ["De Telegraaf", "Voetbal International"],
-    "Wire/International": ["Reuters", "Associated Press", "AFP"]
+    "Wire/International": ["Reuters", "Associated Press", "AFP"],
+    "Bosnia/Balkans": ["SportSport.ba", "klix.ba", "Sarajevo Times", "Dnevni Avaz", "Net.hr"]
   },
 
   "guidance": "This list is a floor, not a ceiling. For nations without a strong national press here (verify carefully, esp. smaller federations), use the recognized national broadcaster + the major newspaper's sport section, tag as 'other', and add a reviewer note naming the outlet and why it is credible. When in doubt, exclude and record the gap in the file's gaps[]."
