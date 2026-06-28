@@ -176,6 +176,64 @@
           "lang": "en"
         }
       ]
+    },
+    {
+      "storyline": "Ivorian press frames Norway as the more winnable half of the draw: outlets stress that France, group winners, avoided a rematch with the Elephants (whom they lost to 2-1 in a pre-tournament friendly), leaving the Norwegians, described as comparatively unaccustomed to major international competitions, as the kinder round-of-32 opponent, though pieces add the caveat that no opponent should be underestimated at this stage.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Connectionivoirienne",
+          "url": "https://connectionivoirienne.net/2026/06/27/la-france-evite-la-cote-divoire-la-norvege-en-ligne-de-mire-des-elephants-le-senegal-garde-espoir/",
+          "date": "2026-06-27",
+          "lang": "fr"
+        },
+        {
+          "outlet": "KOACI",
+          "url": "https://www.koaci.com/article/2026/06/27/cote-divoire/sport/cote-divoire-apres-sa-qualification-en-16e-de-finale-les-elephants-face-au-defi-norvegien-derling-haaland_198022.html",
+          "date": "2026-06-27",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "The tie is framed by Ivorian outlets as a Haaland problem: KOACI casts the round-of-32 as the Norwegian challenge of Erling Haaland and names veteran captain Franck Kessie as the man who must front up to Haaland's side, presenting the Norwegian striker as the central test for an Elephants team that is celebrating but wary.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "KOACI",
+          "url": "https://www.koaci.com/article/2026/06/27/cote-divoire/sport/cote-divoire-apres-sa-qualification-en-16e-de-finale-les-elephants-face-au-defi-norvegien-derling-haaland_198022.html",
+          "date": "2026-06-27",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "A confident not-afraid column from Abidjan: Afrikipresse argues the Elephants need not fear Norway, pointing to the side's collective strength, solidarity, tactical discipline and capacity for resilience as the basis for getting past a Norway team built around Haaland's attacking threat. (Page returned HTTP 403 on direct fetch; framing captured only via search snippets, so treat as lower-confidence sourcing; the column also carries a prediction/scoreline that was excluded.)",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Afrikipresse",
+          "url": "https://afrikipresse.com/amp/partis-pris-pronostic-et-decryptage-de-cote-divoire-norvege-au-mondial-2026-meme-pas-peur",
+          "date": "2026-06-26",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "Ivorian outlet relays Norwegian press respect for the Elephants: Zappingmedias reports Norwegian pundits view Ivory Coast as a clearly tougher proposition than Senegal, citing the Elephants leading Germany and holding on for a long time, while Norwegian media flag RB Leipzig winger Yan Diomande and his one-on-one ability down the left as the chief threat to Norway's defence, a cross-press angle underlining how seriously the opponent takes the tie.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Zappingmedias",
+          "url": "https://www.zappingmedias.com/a-j-4-la-pressenorvegienne-se-prononcesur-les-elephants-voici-son-analyse/",
+          "date": "2026-06-26",
+          "lang": "fr"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -204,6 +262,19 @@
       "context": "Speaking after qualification, before the round-of-32 opponent was confirmed, expressing the squad's ambition for the knockout tie.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "We have no preference between Norway and France. We'll take whoever shows up and anyway, if we want to go far, we must beat them all.",
+      "quote_original": "On n'a pas de préférence entre la Norvège et la France. On prendra l'équipe qui se présentera et de toute façon, si on veut aller loin, il faut toutes les battre.",
+      "lang": "fr",
+      "speaker_name": "Emerse Fae",
+      "speaker_role": "Ivory Coast head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Sport-ivoire.ci",
+      "url": "https://sport-ivoire.ci/football-mondial/2026-pas-de-pr%C3%A9f%C3%A9rence-en-16es-pour-emerse-fa%C3%A9",
+      "date": "2026-06-25",
+      "context": "Speaking after the Curacao win, before the round-of-32 opponent was confirmed as Norway, on his side's mindset for the knockouts."
     }
   ],
   "local_availability_reporting": [
@@ -312,6 +383,48 @@
       "url": "https://www.racingpost.com/sport/football-tips/world-cup-2026/ivory-coast-vs-norway-world-cup-prediction-team-news-odds-betting-tips-and-bet-builder-aft7k7N0mGMp/",
       "retrieved_at": "2026-06-28",
       "lang": "en"
+    },
+    {
+      "outlet": "Sport-ivoire.ci",
+      "url": "https://sport-ivoire.ci/football-mondial/2026-pas-de-pr%C3%A9f%C3%A9rence-en-16es-pour-emerse-fa%C3%A9",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Re-verified verbatim Emerse Fae 'no preference between Norway and France' quote (Ivorian national outlet)"
+    },
+    {
+      "outlet": "KOACI",
+      "url": "https://www.koaci.com/article/2026/06/27/cote-divoire/sport/cote-divoire-apres-sa-qualification-en-16e-de-finale-les-elephants-face-au-defi-norvegien-derling-haaland_198022.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Haaland-challenge framing (headline 'le defi norvegien d'Erling Haaland'), Kessie-vs-Haaland line, and the favourable-draw / Norway-fielded-B-team framing"
+    },
+    {
+      "outlet": "Connectionivoirienne",
+      "url": "https://connectionivoirienne.net/2026/06/27/la-france-evite-la-cote-divoire-la-norvege-en-ligne-de-mire-des-elephants-le-senegal-garde-espoir/",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "France-avoided-the-Elephants / Norway-unaccustomed-to-major-competitions framing, 2-1 friendly win over France, and the no-underestimation caveat"
+    },
+    {
+      "outlet": "Afrikipresse",
+      "url": "https://afrikipresse.com/amp/partis-pris-pronostic-et-decryptage-de-cote-divoire-norvege-au-mondial-2026-meme-pas-peur",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "'Meme pas peur' confidence/resilience/solidarity framing (page HTTP 403 on direct fetch; content via search snippets; prediction/scoreline excluded)"
+    },
+    {
+      "outlet": "Zappingmedias",
+      "url": "https://www.zappingmedias.com/a-j-4-la-pressenorvegienne-se-prononcesur-les-elephants-voici-son-analyse/",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Ivorian relay of Norwegian press respect (CIV tougher than Senegal, led Germany); Diomande flagged as main threat"
+    },
+    {
+      "outlet": "Abidjan.net",
+      "url": "https://news.abidjan.net/articles/748265/mondial-2026-la-cote-divoire-domine-curacao-2-0-et-decroche-son-billet-pour-les-16es-de-finale",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Cross-check of the Curacao 2-0 qualification and Pepe-as-architect framing (no new verbatim quote found)"
     }
   ]
 }

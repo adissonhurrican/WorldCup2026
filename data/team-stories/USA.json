@@ -142,6 +142,64 @@
           "date": "2026-06-25"
         }
       ]
+    },
+    {
+      "storyline": "Bosnia framed as a credible upset threat, not a walkover: national previews flag the USMNT's first knockout opponent as the tallest squad at the tournament, built around veteran striker Edin Dzeko and physically imposing center-backs, with set pieces and aerial duels cast as the danger area for Pochettino's shorter side. The same pieces note Bosnia stunned Italy in qualifying, lending the underdog real menace.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sports Illustrated",
+          "url": "https://www.si.com/soccer/three-reasons-why-bosnia-herzegovina-could-upset-usmnt-in-world-cup-knockout-clash",
+          "date": "2026-06-26",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "A homecoming subplot: Bosnia's young right winger Esmir Bajraktarevic, nicknamed the 'Milwaukee Messi,' grew up in Appleton, Wisconsin, played for U.S. youth teams and once debuted for the senior USMNT before switching allegiance to Bosnia, the country his parents fled during war. National coverage casts the PSV Eindhoven attacker, who scored the decisive penalty in Bosnia's qualifying upset of Italy, as a U.S.-born talent who will now line up against the country he nearly represented.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/stories/soccer/esmir-bajraktarevic-bosnia-herzegovina-world-cup-penalty-italy-milwaukee-messi",
+          "date": "2026-06-12",
+          "lang": "en"
+        },
+        {
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/stories/soccer/usa-vs-bosnia-herzegovina-confirmed-round-32-heres-what-know",
+          "date": "2026-06-25",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Opponent mood, an emboldened underdog: Bosnia head coach Sergej Barbarez, whose side reached the knockout round on a tournament breakthrough, publicly framed the run as a bonus and said his team was confident enough to take on anyone, a confident-underdog tone US outlets relayed as the backdrop to the tie.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49181937/usa-bosnia-herzegovina-world-cup-round-32-knockout",
+          "date": "2026-06-25",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "A former captain's bullish dismissal of the Turkiye scare: USMNT legend Tim Howard urged fans not to overreact to the dead-rubber defeat and predicted a comfortable US win over Bosnia, adding to a national-press through-line that the loss was inconsequential and the knockout side will look very different.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sports Illustrated",
+          "url": "https://www.si.com/soccer/usmnt-legend-tim-howard-warning-bosnia-and-herzegovina",
+          "date": "2026-06-27",
+          "lang": "en"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -170,6 +228,45 @@
       "verification": "attributed_context_only",
       "lang": "en",
       "quote_original": null
+    },
+    {
+      "quote": "Bosnia, they're better off not even getting on a plane and going to San Francisco.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Tim Howard",
+      "speaker_role": "Former USMNT goalkeeper / analyst",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Sports Illustrated",
+      "url": "https://www.si.com/soccer/usmnt-legend-tim-howard-warning-bosnia-and-herzegovina",
+      "date": "2026-06-27",
+      "context": "Downplaying the Turkiye loss and predicting a decisive USMNT win in the Round of 32."
+    },
+    {
+      "quote": "All of this is a bonus for us. We are confident enough to face anyone.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Sergej Barbarez",
+      "speaker_role": "Bosnia & Herzegovina head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49181937/usa-bosnia-herzegovina-world-cup-round-32-knockout",
+      "date": "2026-06-25",
+      "context": "After Bosnia secured a knockout-round place, on facing the USMNT and any opponent."
+    },
+    {
+      "quote": "Christian's a fantastic player. Just having him come into the game, he makes such a difference.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Brenden Aaronson",
+      "speaker_role": "USMNT midfielder",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49184846/christian-pulisic-return-vs-turkiye-looks-ready-make-mark-usmnt-world-cup",
+      "date": "2026-06-26",
+      "context": "On captain Christian Pulisic's return off the bench against Turkiye ahead of the knockouts."
     }
   ],
   "local_availability_reporting": [
@@ -283,6 +380,48 @@
       "url": "https://www.columbuscrew.com/news/pochettino-led-usmnt-make-history-in-world-cup-group-stage",
       "retrieved_at": "2026-06-28",
       "note": "Historic framing: first two wins since 1930, program-best six points (verified)"
+    },
+    {
+      "outlet": "Sports Illustrated",
+      "url": "https://www.si.com/soccer/three-reasons-why-bosnia-herzegovina-could-upset-usmnt-in-world-cup-knockout-clash",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Bosnia upset-threat storyline: tallest team, Dzeko, imposing center-backs, set-piece/aerial danger, Italy qualifying upset (no direct quotes; stat figures kept out of text)"
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49181937/usa-bosnia-herzegovina-world-cup-round-32-knockout",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Matchup context and Barbarez verbatim quote (opponent mood); venue stated as Santa Clara, kept out of text"
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49184846/christian-pulisic-return-vs-turkiye-looks-ready-make-mark-usmnt-world-cup",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Pulisic return/readiness teammate reactions; Aaronson verbatim quote"
+    },
+    {
+      "outlet": "Sports Illustrated",
+      "url": "https://www.si.com/soccer/usmnt-legend-tim-howard-warning-bosnia-and-herzegovina",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Tim Howard bullish warning storyline + verbatim quote"
+    },
+    {
+      "outlet": "FOX Sports",
+      "url": "https://www.foxsports.com/stories/soccer/esmir-bajraktarevic-bosnia-herzegovina-world-cup-penalty-italy-milwaukee-messi",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Bajraktarevic 'Milwaukee Messi' homecoming subplot: Appleton WI roots, US youth past, Jan 2024 USMNT debut, switch to Bosnia, PSV, Italy penalty hero (article dated 2026-06-12)"
+    },
+    {
+      "outlet": "FOX Sports",
+      "url": "https://www.foxsports.com/stories/soccer/usa-vs-bosnia-herzegovina-confirmed-round-32-heres-what-know",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "R32 confirmation (July 1) + Bajraktarevic US-born angle; venue label inconsistent across pieces (FOX 'Los Angeles Stadium' vs ESPN/SI Santa Clara), kept out of text"
     }
   ]
 }

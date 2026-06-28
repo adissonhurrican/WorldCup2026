@@ -175,6 +175,77 @@
           "date": "2026-06-27"
         }
       ]
+    },
+    {
+      "storyline": "The 'Real Madrid-ification' of the Selecao: Brazilian press increasingly frames Ancelotti's side as a national-team version of his title-winning Real Madrid, pointing to a vertical, transition-heavy approach and Vinicius Junior being shifted from the touchline into a central, interior attacking role to attack space between the lines, a model the press argues could be decisive in the knockouts.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Trivela",
+          "url": "https://trivela.com.br/copa-do-mundo/selecao-brasileira-parece-real-madrid-ancelotti/",
+          "date": "2026-06-27",
+          "lang": "pt"
+        }
+      ]
+    },
+    {
+      "storyline": "Load management in the build-up: in Brazil's first session before Japan, Ancelotti preserved eight regular starters (working in the gym) with only Douglas Santos, Vinicius and Rayan training fully in the open portion, while the press noted Neymar trained normally and lifted the mood by joking with reporters, before the full starters returned to the field for a sharper penultimate session.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Lance!",
+          "url": "https://www.lance.com.br/selecao-brasileira/primeiro-treino-do-brasil-para-encarar-o-japao-tem-oito-preservados.html",
+          "date": "2026-06-26",
+          "lang": "pt"
+        },
+        {
+          "outlet": "Gazeta Esportiva",
+          "url": "https://www.gazetaesportiva.com/times/brasil/titulares-vao-a-campo-e-brasil-faz-penultimo-treino-antes-de-jogo-com-japao/",
+          "date": "2026-06-27",
+          "lang": "pt"
+        }
+      ]
+    },
+    {
+      "storyline": "Brazil's defence faces its first genuine test: the press stresses that the back line's two clean sheets came against weaker opponents (Haiti and Scotland) and that Japan's attack, which came from two goals down to beat Brazil in the autumn friendly, represents the first real examination of the consolidated Alisson-Marquinhos-Gabriel Magalhaes rearguard in a knockout 'vida ou morte' setting.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Gazeta Esportiva",
+          "url": "https://www.gazetaesportiva.com/times/brasil/brasil-x-japao-oitavas-copa-2026-analise/",
+          "date": "2026-06-28",
+          "lang": "pt"
+        }
+      ]
+    },
+    {
+      "storyline": "Rayan steps into the spotlight as a press voice: with Raphinha sidelined the young forward has become a fresh player voice in the national press, talking up the squad's depth and embracing the do-or-die stakes of the knockout opener, framed as a coming-of-age moment for one of the squad's newer attackers.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Gazeta Esportiva",
+          "url": "https://www.gazetaesportiva.com/times/brasil/entrevista-rayan-brasil-26-06-26/",
+          "date": "2026-06-26",
+          "lang": "pt"
+        }
+      ]
+    },
+    {
+      "storyline": "Why the autumn friendly may not be a useful guide: Brazilian press argues the October 2025 defeat in Tokyo has limited predictive value because both squads have been heavily reshaped, with only a handful of Brazil's starters from that night still in the World Cup squad and Japan missing several key creators, so the press treats the result as poor evidence for the knockout tie.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Trivela",
+          "url": "https://trivela.com.br/copa-do-mundo/selecoes-brasil-japao-ultimo-jogo/",
+          "date": "2026-06-26",
+          "lang": "pt"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -203,6 +274,45 @@
       "context": "Ancelotti praising Vinicius Junior after his group-stage form.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "In the group stage you can fix mistakes, but now it's kill or be killed.",
+      "quote_original": "A gente sabe que na fase de grupos a gente pode concertar os erros, mas agora é matar ou morrer.",
+      "lang": "pt",
+      "speaker_name": "Rayan",
+      "speaker_role": "Brazil forward",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Gazeta Esportiva",
+      "url": "https://www.gazetaesportiva.com/times/brasil/entrevista-rayan-brasil-26-06-26/",
+      "date": "2026-06-26",
+      "context": "Rayan previewing the knockout opener against Japan and the rise in stakes."
+    },
+    {
+      "quote": "Our group here is very strong. If one comes in and another goes out, it's the same.",
+      "quote_original": "Nosso grupo aqui é muito forte. Se entrar um e sair outro, vai ser a mesma coisa.",
+      "lang": "pt",
+      "speaker_name": "Rayan",
+      "speaker_role": "Brazil forward",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Gazeta Esportiva",
+      "url": "https://www.gazetaesportiva.com/times/brasil/entrevista-rayan-brasil-26-06-26/",
+      "date": "2026-06-26",
+      "context": "Rayan praising the depth of the Brazil squad ahead of the Japan tie."
+    },
+    {
+      "quote": "Vini is dangerous not only one-on-one, but also attacking depth, in the centre.",
+      "quote_original": "Vini é perigoso não só no um contra um, mas também atacando a profundidade, no centro do campo.",
+      "lang": "pt",
+      "speaker_name": "Carlo Ancelotti",
+      "speaker_role": "Brazil head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Trivela",
+      "url": "https://trivela.com.br/copa-do-mundo/selecao-brasileira-parece-real-madrid-ancelotti/",
+      "date": "2026-06-27",
+      "context": "Ancelotti explaining Vinicius Junior's repositioned, more central attacking role in the press 'Real Madrid' tactical framing."
     }
   ],
   "local_availability_reporting": [
@@ -289,6 +399,48 @@
       "url": "https://www.rotowire.com/soccer/article/brazil-vs-japan-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120069",
       "retrieved_at": "2026-06-28",
       "lang": "en"
+    },
+    {
+      "outlet": "Trivela",
+      "url": "https://trivela.com.br/copa-do-mundo/selecao-brasileira-parece-real-madrid-ancelotti/",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Real Madrid-ification tactical narrative; Ancelotti quote on Vini's central role"
+    },
+    {
+      "outlet": "Trivela",
+      "url": "https://trivela.com.br/copa-do-mundo/selecoes-brasil-japao-ultimo-jogo/",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Why the October 2025 friendly is a weak comparison; squad turnover on both sides"
+    },
+    {
+      "outlet": "Gazeta Esportiva",
+      "url": "https://www.gazetaesportiva.com/times/brasil/brasil-x-japao-oitavas-copa-2026-analise/",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Defence-tested-for-first-time storyline vs Japan's attack"
+    },
+    {
+      "outlet": "Gazeta Esportiva",
+      "url": "https://www.gazetaesportiva.com/times/brasil/entrevista-rayan-brasil-26-06-26/",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Rayan player-voice storyline and verbatim quotes"
+    },
+    {
+      "outlet": "Gazeta Esportiva",
+      "url": "https://www.gazetaesportiva.com/times/brasil/titulares-vao-a-campo-e-brasil-faz-penultimo-treino-antes-de-jogo-com-japao/",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Penultimate training with full starters; corroborates load-management storyline"
+    },
+    {
+      "outlet": "Lance!",
+      "url": "https://www.lance.com.br/selecao-brasileira/primeiro-treino-do-brasil-para-encarar-o-japao-tem-oito-preservados.html",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Load management storyline (eight starters preserved); Neymar training fully"
     }
   ]
 }

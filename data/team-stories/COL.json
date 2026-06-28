@@ -176,6 +176,70 @@
           "lang": "es"
         }
       ]
+    },
+    {
+      "storyline": "Colombian national press distilled the Portugal draw into a single self-critical refrain: a side that dominated and created repeatedly but could not finish. Richard Ríos's lament that 'queda un poquito de amargura' over the missed chances was elevated by outlets like Infobae and El Heraldo into a defining player-voice narrative of an otherwise triumphant group stage, framing finishing as the one issue Colombia must fix before the knockouts.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Infobae Colombia",
+          "url": "https://www.infobae.com/colombia/deportes/2026/06/28/jugadores-de-la-seleccion-colombia-dieron-sus-primeras-reacciones-tras-el-empate-ante-portugal-hicimos-un-partidazo/",
+          "date": "2026-06-28",
+          "lang": "es"
+        },
+        {
+          "outlet": "El Heraldo (Barranquilla)",
+          "url": "https://www.elheraldo.co/deportes/2026/06/28/richard-rios-lamenta-las-ocasiones-desaprovechadas-para-vencer-a-portugal/",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "James Rodríguez gave Colombian media the tactical read of the night: Colombia is most comfortable and most dangerous when opponents come out to play and leave space, which Portugal did in chasing the win. Semana built a story around this 'clave' as the reason an isolated Cristiano Ronaldo suffered, with Davinson Sánchez and Jhon Lucumí singled out for shackling him, recasting the goalless draw as a controlled, front-foot Colombian performance.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Semana",
+          "url": "https://www.semana.com/deportes/articulo/la-reaccion-de-james-rodriguez-tras-el-empate-con-portugal-dio-la-clave-que-hizo-sufrir-a-cristiano-ronaldo/202620/",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "The disallowed Davinson Sánchez header became a national flashpoint over how marginal the offside call was, with Infobae describing it as among the most millimetric of the whole tournament, the margin being merely the tip of Sánchez's boot. Sánchez himself defused it diplomatically, saying he did not know the rule but that it was done, choosing to stress the first-place finish rather than fuel a refereeing grievance.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Infobae Colombia",
+          "url": "https://www.infobae.com/colombia/deportes/2026/06/28/polemico-fuera-de-lugar-le-nego-a-colombia-la-victoria-ante-portugal-en-el-mundial-2026-en-tiempo-de-reposicion/",
+          "date": "2026-06-28",
+          "lang": "es"
+        },
+        {
+          "outlet": "El Tiempo",
+          "url": "https://www.eltiempo.com/deportes/futbol-colombiano/la-reaccion-de-davinson-sanchez-tras-su-gol-anulado-en-el-partido-portugal-vs-colombia-del-mundial-2026-no-se-la-regla-pero-ya-esta-3567638",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "National coverage emphasised squad depth and internal competition as a strength heading into the knockouts, with veteran full-back Santiago Arias publicly insisting all twenty-six players are available and that whoever starts will deliver, a message of unity that the press read as Lorenzo having genuine selection options rather than a fixed eleven.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Infobae Colombia",
+          "url": "https://www.infobae.com/colombia/deportes/2026/06/28/jugadores-de-la-seleccion-colombia-dieron-sus-primeras-reacciones-tras-el-empate-ante-portugal-hicimos-un-partidazo/",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -204,6 +268,45 @@
       "context": "Pre-match press conference before facing Portugal, on Colombia's ultimate ambitions at the tournament.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "We played a great match against a big rival, excellent players. We were just missing the goal.",
+      "quote_original": "Jugamos un partidazo contra un rival grande, excelentes jugadores. Faltó solo el gol.",
+      "lang": "es",
+      "speaker_name": "James Rodríguez",
+      "speaker_role": "Colombia captain and midfielder",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Infobae Colombia",
+      "url": "https://www.infobae.com/colombia/deportes/2026/06/28/jugadores-de-la-seleccion-colombia-dieron-sus-primeras-reacciones-tras-el-empate-ante-portugal-hicimos-un-partidazo/",
+      "date": "2026-06-28",
+      "context": "Post-match reaction after the 0-0 draw with Portugal that sealed top spot in Group K."
+    },
+    {
+      "quote": "I don't know the rule, but that's it. What can you do.",
+      "quote_original": "No sé la regla, pero ya está. ¿Qué se le va a hacer?",
+      "lang": "es",
+      "speaker_name": "Davinson Sánchez",
+      "speaker_role": "Colombia defender",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "El Tiempo",
+      "url": "https://www.eltiempo.com/deportes/futbol-colombiano/la-reaccion-de-davinson-sanchez-tras-su-gol-anulado-en-el-partido-portugal-vs-colombia-del-mundial-2026-no-se-la-regla-pero-ya-esta-3567638",
+      "date": "2026-06-28",
+      "context": "Reacting to his stoppage-time header being disallowed by VAR for a marginal offside, while stressing Colombia's qualification."
+    },
+    {
+      "quote": "From so many times we arrived, there's a bit of bitterness because we had the chance to score.",
+      "quote_original": "De tantas veces que llegamos, queda un poquito de amargura porque tuvimos la oportunidad para hacer el gol.",
+      "lang": "es",
+      "speaker_name": "Richard Ríos",
+      "speaker_role": "Colombia midfielder",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "El Heraldo (Barranquilla)",
+      "url": "https://www.elheraldo.co/deportes/2026/06/28/richard-rios-lamenta-las-ocasiones-desaprovechadas-para-vencer-a-portugal/",
+      "date": "2026-06-28",
+      "context": "Lamenting Colombia's missed chances in the 0-0 draw with Portugal despite finishing top of Group K."
     }
   ],
   "local_availability_reporting": [
@@ -286,6 +389,41 @@
       "url": "https://en.wikipedia.org/wiki/Colombia_at_the_FIFA_World_Cup",
       "retrieved_at": "2026-06-28",
       "lang": "en"
+    },
+    {
+      "outlet": "Semana",
+      "url": "https://www.semana.com/deportes/articulo/la-reaccion-de-james-rodriguez-tras-el-empate-con-portugal-dio-la-clave-que-hizo-sufrir-a-cristiano-ronaldo/202620/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "James Rodríguez tactical read (Colombia comfortable when opponents leave space); Ronaldo isolated by Sánchez/Lucumí"
+    },
+    {
+      "outlet": "Infobae Colombia",
+      "url": "https://www.infobae.com/colombia/deportes/2026/06/28/jugadores-de-la-seleccion-colombia-dieron-sus-primeras-reacciones-tras-el-empate-ante-portugal-hicimos-un-partidazo/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Consolidated player reactions (James, Ríos, Arias, Lorenzo); squad-depth/unity storyline"
+    },
+    {
+      "outlet": "Infobae Colombia",
+      "url": "https://www.infobae.com/colombia/deportes/2026/06/28/polemico-fuera-de-lugar-le-nego-a-colombia-la-victoria-ante-portugal-en-el-mundial-2026-en-tiempo-de-reposicion/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "VAR controversy framing (most millimetric offside of the tournament; tip of Sánchez's boot)"
+    },
+    {
+      "outlet": "El Tiempo",
+      "url": "https://www.eltiempo.com/deportes/futbol-colombiano/la-reaccion-de-davinson-sanchez-tras-su-gol-anulado-en-el-partido-portugal-vs-colombia-del-mundial-2026-no-se-la-regla-pero-ya-esta-3567638",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Davinson Sánchez verbatim reaction to disallowed goal"
+    },
+    {
+      "outlet": "El Heraldo (Barranquilla)",
+      "url": "https://www.elheraldo.co/deportes/2026/06/28/richard-rios-lamenta-las-ocasiones-desaprovechadas-para-vencer-a-portugal/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Richard Ríos verbatim quote and 'lacked the finish' narrative"
     }
   ]
 }

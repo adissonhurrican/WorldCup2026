@@ -167,6 +167,45 @@
           "date": "2026-06-28"
         }
       ]
+    },
+    {
+      "storyline": "Miami homecoming / 'playing as locals': Argentina's own press frames the Cape Verde tie at Hard Rock Stadium as a virtual home game, with the large Argentine diaspora around Miami mobilising, soaring resale ticket prices and a planned flag-raising on the eve of the match feeding a euphoric, festive mood around Messi's side.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "La Nacion",
+          "url": "https://www.lanacion.com.ar/deportes/futbol/mundial-2026-argentina-es-feliz-con-messi-y-viaja-a-miami-para-jugar-de-local-contra-cabo-verde-nid28062026/",
+          "lang": "es",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "Anti-triumphalism mood: National outlet La Nacion explicitly frames the camp as refusing to ride the 'triumphalist wave' and eyeing Cape Verde warily, with senior players invoking the 2022 scare against Saudi Arabia as a cautionary tale to keep the squad grounded despite being heavy favourites.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "La Nacion",
+          "url": "https://www.lanacion.com.ar/estados-unidos/argentina-no-se-sube-a-la-ola-triunfalista-y-mira-con-recelo-a-cabo-verde-en-16avos-del-mundial-nid28062026/",
+          "lang": "es",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "Positionless attack debate: La Nacion's match analysis of the Jordan win highlights Scaloni experimenting with a fluid, almost position-less front-line in the group finale (Palacios at right-back, Nicolas Paz rotating between interior, playmaker and forward, a Lautaro-Julian pairing reserved for when Messi is absent) as a knockout-stage testing ground.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "La Nacion",
+          "url": "https://www.lanacion.com.ar/deportes/futbol/argentina-vencio-a-jordania-gano-con-otro-gol-de-lionel-messi-cuido-figuras-y-mejora-en-el-mundial-nid28062026/",
+          "lang": "es",
+          "date": "2026-06-28"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -195,6 +234,45 @@
       "verification": "attributed_context_only",
       "lang": "en",
       "quote_original": null
+    },
+    {
+      "quote": "Cape Verde got the results it got for a reason. It competed; it's an aggressive team.",
+      "quote_original": "Cabo Verde por algo obtuvo los resultados que logró. Compitió, es un equipo agresivo",
+      "lang": "es",
+      "speaker_name": "Nicolas Otamendi",
+      "speaker_role": "Argentina defender",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "La Nacion",
+      "url": "https://www.lanacion.com.ar/estados-unidos/argentina-no-se-sube-a-la-ola-triunfalista-y-mira-con-recelo-a-cabo-verde-en-16avos-del-mundial-nid28062026/",
+      "date": "2026-06-28",
+      "context": "Warning teammates against complacency ahead of the Round of 32 tie, in a piece framing Argentina's refusal to get carried away."
+    },
+    {
+      "quote": "Saudi Arabia was a so-called easy match and we ended up suffering.",
+      "quote_original": "Arabia Saudí era un partido entre comillas fácil y terminamos sufriendo",
+      "lang": "es",
+      "speaker_name": "Leandro Paredes",
+      "speaker_role": "Argentina midfielder",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "La Nacion",
+      "url": "https://www.lanacion.com.ar/estados-unidos/argentina-no-se-sube-a-la-ola-triunfalista-y-mira-con-recelo-a-cabo-verde-en-16avos-del-mundial-nid28062026/",
+      "date": "2026-06-28",
+      "context": "Recalling the 2022 group-stage upset by Saudi Arabia as a cautionary tale against underestimating Cape Verde."
+    },
+    {
+      "quote": "No, I told him Nico Paz was coming off and he was coming on. Nothing more.",
+      "quote_original": "No, le dije que salía Nico Paz y entraba él. Nada más.",
+      "lang": "es",
+      "speaker_name": "Lionel Scaloni",
+      "speaker_role": "Argentina head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Infobae",
+      "url": "https://www.infobae.com/deportes/2026/06/28/de-verdad-me-preguntas-eso-la-divertida-respuesta-de-scaloni-cuando-le-consultaron-por-las-indicaciones-que-le-dio-a-messi-antes-de-su-ingreso/",
+      "date": "2026-06-28",
+      "context": "Scaloni's bemused reply when asked what tactical instructions he gave Messi before bringing him off the bench against Jordan."
     }
   ],
   "local_availability_reporting": [
@@ -289,6 +367,34 @@
       "outlet": "Sky Sports",
       "retrieved_at": "2026-06-28",
       "note": "Holders/favourites framing."
+    },
+    {
+      "outlet": "La Nacion",
+      "url": "https://www.lanacion.com.ar/estados-unidos/argentina-no-se-sube-a-la-ola-triunfalista-y-mira-con-recelo-a-cabo-verde-en-16avos-del-mundial-nid28062026/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Anti-triumphalism mood angle; verbatim Otamendi and Paredes caution quotes (both re-fetched and corroborated via independent search)."
+    },
+    {
+      "outlet": "La Nacion",
+      "url": "https://www.lanacion.com.ar/deportes/futbol/mundial-2026-argentina-es-feliz-con-messi-y-viaja-a-miami-para-jugar-de-local-contra-cabo-verde-nid28062026/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Miami homecoming / 'playing as locals' diaspora storyline; festive mood around Messi (re-fetched, supports angle)."
+    },
+    {
+      "outlet": "La Nacion",
+      "url": "https://www.lanacion.com.ar/deportes/futbol/argentina-vencio-a-jordania-gano-con-otro-gol-de-lionel-messi-cuido-figuras-y-mejora-en-el-mundial-nid28062026/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Positionless-attack / tactical fluidity storyline from the Jordan match analysis (re-fetched, supports Palacios RB, Nico Paz rotation, Lautaro-Julian-when-no-Messi)."
+    },
+    {
+      "outlet": "Infobae",
+      "url": "https://www.infobae.com/deportes/2026/06/28/de-verdad-me-preguntas-eso-la-divertida-respuesta-de-scaloni-cuando-le-consultaron-por-las-indicaciones-que-le-dio-a-messi-antes-de-su-ingreso/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Verbatim Scaloni press-conference quote on instructions to Messi (re-fetched, confirmed verbatim)."
     }
   ]
 }

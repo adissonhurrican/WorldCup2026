@@ -194,6 +194,77 @@
           "lang": "fr"
         }
       ]
+    },
+    {
+      "storyline": "R32 opponent now confirmed by the Senegalese press as Belgium (not England): Wiwsport and Seneweb report the Lions will meet the Group G winners on Wednesday 1 July in Seattle, with the winner facing the USA-Bosnia survivor. Crucially, the national press explains the pairing flipped late: DR Congo's comeback on the final group day reshuffled the bracket, moving Senegal off a projected England matchup and onto Belgium. This resolves the conflicting England/Belgium/Congo reports flagged in the existing file.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only — opponent cross-checks with DB fact 'R32 vs a group winner' (Belgium won Group G); DB trusted on any conflict.",
+      "sources": [
+        {
+          "outlet": "Wiwsport",
+          "url": "https://wiwsport.com/2026/06/28/mondial-2026-le-senegal-affrontera-la-belgique-en-16es-de-finale/",
+          "date": "2026-06-28",
+          "lang": "fr"
+        },
+        {
+          "outlet": "Seneweb",
+          "url": "https://www.seneweb.com/fr/news/Sport/coupe-du-monde-2026-ce-sera-senegal-belgique-en-seiziemes-de-finale_n_496627.html",
+          "date": "2026-06-28",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "'Tableau d'enfer' — a bracket from hell: with qualification secured, Wiwsport frames Senegal's knockout path as brutal, Belgique now, then potentially the USA or Bosnia, and beyond that a quarter loaded with Spain, Portugal, Croatia, France, Germany or Morocco. The outlet calls it 'un parcours de combattant' to reach any final dream, recasting the relief of qualifying into the reality of one of the toughest possible roads.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Wiwsport",
+          "url": "https://wiwsport.com/2026/06/28/mondial-2026-belgique-etats-unis-espagne-portugal-france-maroc-le-senegal-dans-un-tableau-denfer/",
+          "date": "2026-06-28",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "The 'spectre de Bata' — facing their own demons: ahead of the must-win Iraq game, Seneweb framed the night through the trauma of the 2012 AFCON in Bata, Equatorial Guinea, when a star-laden Senegal (Demba Ba, Moussa Sow, Papiss Cissé) crashed out with three straight 1-2 defeats in one of the federation's biggest fiascos. After the Norway loss the local press argued the fear of reliving that disillusionment against Iraq was very real, a psychological framing the 5-0 win ultimately exorcised.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Seneweb",
+          "url": "https://www.seneweb.com/fr/news/Sport/mondial-2026-le-senegal-face-a-ses-demons-lirak-pour-chasser-le-spectre-de-bata_n_496490.html",
+          "date": "2026-06-26",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "How the Iraq rout was won — a super-sub and rewarded rotation: Wiwsport's player ratings credit Pape Gueye as the catalyst off the bench (a brace plus an assist after coming on), Iliman Ndiaye's lively entrance, and Thiaw's lineup changes that 'bore fruit from the opening minutes'. The flip side: much-anticipated Ibrahim Mbaye was rated the least involved player on the pitch, and Mané, though still without a goal in the tournament, was judged active and decisive in drawing the Iraqi red card.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Wiwsport",
+          "url": "https://wiwsport.com/2026/06/26/mondial-2026-senegal-irak-5-0-les-boulets-de-canon-de-pape-gueye-les-choix-payants-de-pape-thiaw-le-manque-de-tranchant-dibrahim-mbaye-les-lions-des-lions/",
+          "date": "2026-06-26",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "A tactical autopsy from an ex-Lions coach: former national-team manager Amara Traoré, interviewed by L'Observateur (via Seneweb), argued Senegal controlled France with a disciplined zone for an hour before the structure 'fell apart' from the 60th minute, blaming the goals on missing pressing, poor preventive defence and midfield disorganisation. His prescription, sustain the first-hour level across the full match, became a reference point in the national tactical debate after the group-stage stumbles.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Seneweb",
+          "url": "https://www.seneweb.com/fr/news/Sport/erreurs-fatales-contre-la-france-et-plan-anti-norvege-amara-traore-decortique-le-jeu-des-lions_n_495944.html",
+          "date": "2026-06-20",
+          "lang": "fr"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -222,6 +293,32 @@
       "context": "On the eve of the must-win Iraq match, after back-to-back defeats to France and Norway. Translation: 'Now we have processed it and the team is hungry to go and seek victory for tomorrow's match.' Verbatim confirmed via direct WebFetch of the URL.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "There won't be an anti-Haaland plan, there will be an anti-Norway plan.",
+      "quote_original": "Il n'y aura pas de plan anti-Haaland, il y aura un plan anti-Norvège.",
+      "lang": "fr",
+      "speaker_name": "Pape Bouna Thiaw",
+      "speaker_role": "Senegal head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Dakaractu",
+      "url": "https://www.dakaractu.com/Pape-Thiaw-a-la-veille-du-match-contre-les-Vikings-Il-n-y-aura-pas-de-plan-anti-Haaland-il-y-aura-un-plan-anti-Norvege_a272946.html",
+      "date": "2026-06-21",
+      "context": "At his pre-match press conference on the eve of Senegal vs Norway, Thiaw stressed his side would defend Norway as a collective rather than build a player-specific scheme around Erling Haaland. Verbatim confirmed via direct WebFetch of the Dakaractu URL and corroborated verbatim by APS (Senegal's national news agency)."
+    },
+    {
+      "quote": "For 60 minutes, the zone defence was well in place. But from the 60th minute, our block fell apart.",
+      "quote_original": "Pendant 60 minutes, la défense en zone était bien en place. Mais à partir de la 60e minute, notre bloc s'est disloqué.",
+      "lang": "fr",
+      "speaker_name": "Amara Traoré",
+      "speaker_role": "Former Senegal national-team head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Seneweb",
+      "url": "https://www.seneweb.com/fr/news/Sport/erreurs-fatales-contre-la-france-et-plan-anti-norvege-amara-traore-decortique-le-jeu-des-lions_n_495944.html",
+      "date": "2026-06-20",
+      "context": "Traoré, interviewed by L'Observateur (relayed by Seneweb), diagnosing where Senegal lost control against France and what to fix before Norway. Verbatim confirmed via direct WebFetch of the Seneweb article; single-source, so flagged discovery/attributed."
     }
   ],
   "local_availability_reporting": [],
@@ -330,6 +427,69 @@
       "url": "https://en.wikipedia.org/wiki/2021_Africa_Cup_of_Nations_final",
       "retrieved_at": "2026-06-28",
       "note": "Senegal first AFCON title 2021, beat Egypt on penalties, Mane decisive penalty."
+    },
+    {
+      "outlet": "Wiwsport",
+      "url": "https://wiwsport.com/2026/06/28/mondial-2026-le-senegal-affrontera-la-belgique-en-16es-de-finale/",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Confirms R32 opponent = Belgium (Group G winners), Wed 1 July, Seattle, 20:00 GMT; winner faces USA/Bosnia. Verified via WebFetch."
+    },
+    {
+      "outlet": "Seneweb",
+      "url": "https://www.seneweb.com/fr/news/Sport/coupe-du-monde-2026-ce-sera-senegal-belgique-en-seiziemes-de-finale_n_496627.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Second national-press confirmation of Senegal-Belgium R32; verbatim notes DR Congo's comeback reshuffled the bracket from a projected England tie to Belgium. Resolves the file's England/Belgium/Congo gap. Verified via WebFetch."
+    },
+    {
+      "outlet": "Wiwsport",
+      "url": "https://wiwsport.com/2026/06/28/mondial-2026-belgique-etats-unis-espagne-portugal-france-maroc-le-senegal-dans-un-tableau-denfer/",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "'Tableau d'enfer' bracket-path framing: Belgium then USA/Bosnia, then Spain/Portugal/Croatia/France/Germany/Morocco possible; 'parcours de combattant' phrasing confirmed via WebFetch."
+    },
+    {
+      "outlet": "Wiwsport",
+      "url": "https://wiwsport.com/2026/06/26/mondial-2026-senegal-irak-5-0-les-boulets-de-canon-de-pape-gueye-les-choix-payants-de-pape-thiaw-le-manque-de-tranchant-dibrahim-mbaye-les-lions-des-lions/",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Player-ratings/tactical read of the 5-0 Iraq win: Pape Gueye super-sub brace+assist, Thiaw's rotation rewarded, Iliman Ndiaye's impact, Ibrahim Mbaye flat (lowest rating), Mané active and drew the red card but still goalless. Verified via WebFetch (stat numbers left out of text)."
+    },
+    {
+      "outlet": "Seneweb",
+      "url": "https://www.seneweb.com/fr/news/Sport/mondial-2026-le-senegal-face-a-ses-demons-lirak-pour-chasser-le-spectre-de-bata_n_496490.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "'Spectre de Bata' psychological framing pre-Iraq: 2012 AFCON Bata fiasco (three 1-2 defeats vs Zambia/Equatorial Guinea/Libya) invoked. Verified via WebFetch."
+    },
+    {
+      "outlet": "Seneweb",
+      "url": "https://www.seneweb.com/fr/news/Sport/erreurs-fatales-contre-la-france-et-plan-anti-norvege-amara-traore-decortique-le-jeu-des-lions_n_495944.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Amara Traoré (ex-Lions coach) tactical autopsy of the France defeat via L'Observateur; verbatim 'bloc s'est disloqué' quote and the full-match prescription. Verified via WebFetch."
+    },
+    {
+      "outlet": "Dakaractu",
+      "url": "https://www.dakaractu.com/Pape-Thiaw-a-la-veille-du-match-contre-les-Vikings-Il-n-y-aura-pas-de-plan-anti-Haaland-il-y-aura-un-plan-anti-Norvege_a272946.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Pre-Norway Thiaw verbatim 'no anti-Haaland plan, an anti-Norway plan' quote; confirmed via WebFetch and corroborated by APS."
+    },
+    {
+      "outlet": "PressAfrik",
+      "url": "https://www.pressafrik.com/Mondial-2026-Sadio-Mane-croit-encore-a-la-qualification-malgre-la-defaite_a307285.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Post-Norway Mané sentiment (refuses pessimism, still believes in a small chance) — paraphrase only, no usable verbatim quote captured; NOT used for a quote."
+    },
+    {
+      "outlet": "APS (Agence de Presse Sénégalaise)",
+      "url": "https://aps.sn/pape-thiaw-sur-le-match-contre-la-norvege-il-ny-aura-pas-de-plan-anti-haaland-mais-une-strategie-collective/",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Senegal's national news agency corroborating the Thiaw anti-Haaland/anti-Norvège quote (verified via WebFetch; strengthens the quote toward fact-grade corroboration but quote remains discovery-tier press)."
     }
   ]
 }

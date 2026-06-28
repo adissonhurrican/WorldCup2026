@@ -130,6 +130,83 @@
           "date": "2026-06-26"
         }
       ]
+    },
+    {
+      "storyline": "The captain steps up as emotional standard-bearer: in Paraguay's own press, skipper Gustavo Gomez published a rallying message after learning the knockout opponent, recasting the patchy group run as years of hardship overcome and channeling national belief ahead of the tie. It is a leadership-and-mood angle distinct from the Alfaro-vs-critics row, with the captain rather than the coach voicing the country's hope.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "D10 / Última Hora",
+          "url": "https://d10.ultimahora.com/el-mensaje-del-capitan-nada-es-imposible",
+          "lang": "es",
+          "date": "2026-06-27"
+        }
+      ]
+    },
+    {
+      "storyline": "Presidential backing turns the run into a national event: President Santiago Pena publicly predicted before qualification was sealed that La Albirroja would reach the knockout round and even win it, lending a head-of-state, country-wide dimension to expectations that the local press amplified. The political endorsement underscores how far the team's return has moved beyond the sports pages into national life.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "D10 / Última Hora",
+          "url": "https://d10.ultimahora.com/pena-confia-en-la-clasificacion-albirroja",
+          "lang": "es",
+          "date": "2026-06-22"
+        }
+      ]
+    },
+    {
+      "storyline": "Reshuffled XI for the knockout tie: Paraguayan reporting says Alfaro must rebuild his lineup, with midfielder Diego Gomez suspended on accumulated yellows and winger Ramon Sosa still managing an ankle issue, while Miguel Almiron returns from the suspension he served against Australia, restoring attacking options. This is concrete, locally-sourced availability detail beyond the previously reported Alderete knee concern.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ABC Color",
+          "url": "https://www.abc.com.py/deportes/futbol/seleccion-paraguaya/2026/06/27/la-seleccion-paraguaya-ya-arma-el-plan-para-conseguir-el-boleto-a-octavos/",
+          "lang": "es",
+          "date": "2026-06-27"
+        },
+        {
+          "outlet": "D10 / Última Hora",
+          "url": "https://d10.ultimahora.com/alemania-y-paraguay-entre-el-alivio-y-la-presion",
+          "lang": "es",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "Two embattled sides 'under suspicion': Paraguay's national press frames the knockout matchup as a meeting of teams caught between relief and pressure, with the local angle being scrutiny of Alfaro's ultra-defensive setup that nearly backfired in the goalless draw against Australia, set against a more illustrious opponent under its own demands to attack. The home framing centres on tactical doubt rather than pure underdog romance.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ABC Color",
+          "url": "https://www.abc.com.py/deportes/futbol/internacional/2026/06/28/alemania-y-paraguay-entre-el-alivio-y-la-presion/",
+          "lang": "es",
+          "date": "2026-06-28"
+        },
+        {
+          "outlet": "D10 / Última Hora",
+          "url": "https://d10.ultimahora.com/alemania-y-paraguay-entre-el-alivio-y-la-presion",
+          "lang": "es",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "Chasing an unprecedented milestone: ABC Color highlighted that Paraguay have never won two matches in a single World Cup across their previous appearances, so the closing group push doubled as a bid to break a long-standing record, adding a historical-pride layer to the qualification chase that sits alongside the 2010 quarterfinal memory.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ABC Color",
+          "url": "https://www.abc.com.py/deportes/futbol/seleccion-paraguaya/2026/06/25/paraguay-buscara-por-primera-vez-su-segundo-triunfo-en-un-mismo-mundial/",
+          "lang": "es",
+          "date": "2026-06-25"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -158,6 +235,45 @@
       "context": "Alfaro framing the Round of 32 tie against a group winner, tempering expectations while refusing to concede the match.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "When a Paraguayan believes, nothing is impossible.",
+      "quote_original": "Cuando un paraguayo cree, nada es imposible.",
+      "lang": "es",
+      "speaker_name": "Gustavo Gomez",
+      "speaker_role": "Paraguay captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "D10 / Última Hora",
+      "url": "https://d10.ultimahora.com/el-mensaje-del-capitan-nada-es-imposible",
+      "date": "2026-06-27",
+      "context": "Captain's rallying message to the country (posted on Instagram) after learning Paraguay's knockout opponent, recasting the hard road back into a source of national belief."
+    },
+    {
+      "quote": "And if we end up eliminated, we end up eliminated.",
+      "quote_original": "Y si nos toca quedar eliminados, nos toca quedar eliminados.",
+      "lang": "es",
+      "speaker_name": "Gustavo Alfaro",
+      "speaker_role": "Paraguay head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ABC Color",
+      "url": "https://www.abc.com.py/deportes/futbol/internacional/2026/06/28/alemania-y-paraguay-entre-el-alivio-y-la-presion/",
+      "date": "2026-06-28",
+      "context": "Alfaro defending his cautious approach amid criticism of the defensive display in the goalless Australia draw, accepting the risk it carries."
+    },
+    {
+      "quote": "I believe Paraguay will reach the Round of 16, and will win that match.",
+      "quote_original": "Yo creo que Paraguay va a pasar a los dieciseisavos, y yo creo que va a pasar ese partido.",
+      "lang": "es",
+      "speaker_name": "Santiago Pena",
+      "speaker_role": "President of Paraguay",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "D10 / Última Hora",
+      "url": "https://d10.ultimahora.com/pena-confia-en-la-clasificacion-albirroja",
+      "date": "2026-06-22",
+      "context": "President Pena voicing public confidence in the national team after a government ceremony, before qualification was mathematically sealed."
     }
   ],
   "local_availability_reporting": [
@@ -237,6 +353,48 @@
       "outlet": "FourFourTwo",
       "retrieved_at": "2026-06-28",
       "used_for": "squad/historical context cross-check"
+    },
+    {
+      "outlet": "ABC Color",
+      "url": "https://www.abc.com.py/deportes/futbol/internacional/2026/06/28/alemania-y-paraguay-entre-el-alivio-y-la-presion/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Alfaro 'eliminados' verbatim quote, 'between relief and pressure' framing, tactical-doubt mood, Almiron return / Diego Gomez suspension"
+    },
+    {
+      "outlet": "ABC Color",
+      "url": "https://www.abc.com.py/deportes/futbol/seleccion-paraguaya/2026/06/27/la-seleccion-paraguaya-ya-arma-el-plan-para-conseguir-el-boleto-a-octavos/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "knockout lineup reshuffle: Diego Gomez suspended, Sosa ankle, Alderete knee (MRI, practically ruled out), Almiron return; training/travel detail"
+    },
+    {
+      "outlet": "ABC Color",
+      "url": "https://www.abc.com.py/deportes/futbol/seleccion-paraguaya/2026/06/25/paraguay-buscara-por-primera-vez-su-segundo-triunfo-en-un-mismo-mundial/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "historical angle: Paraguay never won two matches in one World Cup; milestone framing"
+    },
+    {
+      "outlet": "D10 / Última Hora",
+      "url": "https://d10.ultimahora.com/el-mensaje-del-capitan-nada-es-imposible",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "captain Gustavo Gomez verbatim rallying-message quote and leadership/mood storyline"
+    },
+    {
+      "outlet": "D10 / Última Hora",
+      "url": "https://d10.ultimahora.com/pena-confia-en-la-clasificacion-albirroja",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "President Santiago Pena confidence quote and presidential/national-event storyline"
+    },
+    {
+      "outlet": "D10 / Última Hora",
+      "url": "https://d10.ultimahora.com/alemania-y-paraguay-entre-el-alivio-y-la-presion",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "'under suspicion' / between-relief-and-pressure framing cross-check; Alfaro quote cross-check; availability detail"
     }
   ]
 }

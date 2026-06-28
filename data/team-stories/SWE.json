@@ -146,6 +146,51 @@
           "lang": "sv"
         }
       ]
+    },
+    {
+      "storyline": "Swedish national outlets turn the Hien injury into a concrete defensive reshuffle: when the centre-back went off against Japan, Potter brought on 18-year-old Lucas Bergvall and moved captain Victor Nilsson Lindelof back to his normal centre-back role, an adjustment Swedish coverage carries forward as the makeshift back-line question heading into the knockout tie reported to be against France.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "SVT Sport",
+          "url": "https://www.svt.se/sport/fotboll/svenska-smallen-isak-hien-utgick-skadad",
+          "date": "2026-06-26",
+          "lang": "sv"
+        }
+      ]
+    },
+    {
+      "storyline": "A secondary defensive scare runs alongside the Hien blow: captain Victor Nilsson Lindelof suffered double cramp in both calves during the Japan draw, an experience he says he had never felt before and admits left him a little panicked, before reassuring the national press that after treatment it is no problem for the knockout round.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "SVT Sport",
+          "url": "https://www.svt.se/sport/fotboll/svenska-smallen-isak-hien-utgick-skadad",
+          "date": "2026-06-26",
+          "lang": "sv"
+        },
+        {
+          "outlet": "Fotbollskanalen",
+          "url": "https://www.fotbollskanalen.se/artiklar/sverige/lindelof-aldrig-kant-det-tidigare---hade-lite-panik",
+          "date": "2026-06-26",
+          "lang": "sv"
+        }
+      ]
+    },
+    {
+      "storyline": "Swedish coverage attaches a named federation-handling layer to the Hien injury: the Swedish FA press chief Petra Thoren publicly walks through the scan-and-brief medical process (Hien to be examined and then briefed on), with reporting that he underwent an MR scan to determine severity, a process angle the earlier file did not capture.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Fotbollskanalen",
+          "url": "https://www.fotbollskanalen.se/artiklar/vm-2026/hien-utgick-med-skada",
+          "date": "2026-06-26",
+          "lang": "sv"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -174,6 +219,45 @@
       "context": "Bergvall reflecting on Sweden's resilience after the loss to the Netherlands and before the decisive Japan match.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "It's devastating for him.",
+      "quote_original": "Det är förkrossande för honom.",
+      "lang": "sv",
+      "speaker_name": "Graham Potter",
+      "speaker_role": "Sweden head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "SVT Sport",
+      "url": "https://www.svt.se/sport/fotboll/svenska-smallen-isak-hien-utgick-skadad",
+      "date": "2026-06-26",
+      "context": "Potter's pessimistic post-match assessment of Isak Hien's thigh injury against Japan, indicating it looks bad for the rest of the World Cup."
+    },
+    {
+      "quote": "It cramped up badly in both calves, a cramp I've never felt before.",
+      "quote_original": "Det krampade ihop rejält i båda vaderna, en kramp jag aldrig känt förut.",
+      "lang": "sv",
+      "speaker_name": "Victor Nilsson Lindelof",
+      "speaker_role": "Sweden captain and defender",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "SVT Sport",
+      "url": "https://www.svt.se/sport/fotboll/svenska-smallen-isak-hien-utgick-skadad",
+      "date": "2026-06-26",
+      "context": "Nilsson Lindelof describing the calf-cramp scare he suffered during the Japan draw, while playing down its seriousness ahead of the knockout round."
+    },
+    {
+      "quote": "Isak will be examined during the day. When we have an answer we'll brief on it.",
+      "quote_original": "Isak kommer undersökas under dagen. När vi har besked om hur det ser ut kommer vi briefa om det.",
+      "lang": "sv",
+      "speaker_name": "Petra Thoren",
+      "speaker_role": "Swedish FA press chief",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Fotbollskanalen",
+      "url": "https://www.fotbollskanalen.se/artiklar/vm-2026/hien-utgick-med-skada",
+      "date": "2026-06-26",
+      "context": "Swedish FA press chief outlining the scan-and-brief process for assessing Isak Hien's injury after the Japan match."
     }
   ],
   "local_availability_reporting": [
@@ -244,6 +328,27 @@
       "url": "https://www.uefa.com/european-qualifiers/news/02a6-20d159618c27-fd6d64ccd5f6-1000--sweden-at-the-world-cup-2026-squad-fixtures-group-and-hi/",
       "retrieved_at": "2026-06-28",
       "note": "Sweden's 2026 qualification route via European play-offs and squad/history overview."
+    },
+    {
+      "outlet": "SVT Sport",
+      "url": "https://www.svt.se/sport/fotboll/svenska-smallen-isak-hien-utgick-skadad",
+      "lang": "sv",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Verbatim Potter ('förkrossande för honom') and captain Nilsson Lindelof (double-calf-cramp) quotes; the in-match reshuffle (Bergvall on, Lindelof back to his normal centre-back role); Hien framed as a tough blow; article dated 2026-06-26. NOTE: article does not name France specifically for the reshuffle."
+    },
+    {
+      "outlet": "Fotbollskanalen",
+      "url": "https://www.fotbollskanalen.se/artiklar/vm-2026/hien-utgick-med-skada",
+      "lang": "sv",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Swedish FA press chief Petra Thoren verbatim quote on the scan-and-brief medical process; MR-scan reference; Potter's view that Hien likely misses the rest of the World Cup; article dated 2026-06-26. NOTE: no direct Jonas Werner (team doctor) quote found in the fetched text."
+    },
+    {
+      "outlet": "Fotbollskanalen",
+      "url": "https://www.fotbollskanalen.se/artiklar/sverige/lindelof-aldrig-kant-det-tidigare---hade-lite-panik",
+      "lang": "sv",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Corroborating the Nilsson Lindelof double-calf-cramp scare-and-reassurance subplot ahead of the knockout round ('hade lite panik')."
     }
   ]
 }

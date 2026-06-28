@@ -172,6 +172,83 @@
           "date": "2026-06-28"
         }
       ]
+    },
+    {
+      "storyline": "The FIFA-imposed travel headache: South Africa's own press flags a logistics burden into the last 32. Broos wanted to fly directly to Los Angeles but FIFA did not permit it, so Bafana had to route via Pachuca before the near-four-hour hop to LA, leaving under two days to prepare. Broos called the detour a pity and said recovery, not training, would be the priority in the compressed window. This scheduling angle is net-new and frames the underdog tie around fatigue management.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "TimesLIVE",
+          "url": "https://www.timeslive.co.za/sport/fifa-world-cup-2026/bafana-news/2026-06-26-canada-a-winnable-game-broos-despite-bafana-travel-headache-seems-to-think-so/",
+          "date": "2026-06-26",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Ramaphosa rallies the nation: President Cyril Ramaphosa made a public address urging all South Africans to get behind Bafana Bafana for the Canada knockout, encouraging citizens to wear the jersey and national colours and predicting the team would dazzle and defeat the co-hosts. The political/national-mobilisation dimension, with the head of state personally framing the match, is a fresh angle beyond the earlier government praise.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "The Citizen",
+          "url": "https://www.citizen.co.za/news/south-africa/ramaphosa-rallies-nation-ahead-canada-clash-fifa-world-cup-knockouts/",
+          "date": "2026-06-28",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Neutral-venue twist: South African outlets stress that Canada forfeited their co-host home advantage by finishing second in their group (a 2-1 loss to Switzerland), meaning the tie is played at a neutral SoFi Stadium in Los Angeles rather than before a hostile Canadian crowd. The local press reframes the matchup as Bafana facing co-hosts without the usual home-support disadvantage, a notable psychological flip.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "SuperSport",
+          "url": "https://supersport.com/football/news/98393bba-28be-412e-979c-ebf91d8a285a/bafana-bafana-and-co-hosts-canada-in-historic-world-cup-knockout-clash",
+          "date": "2026-06-28",
+          "lang": "en"
+        },
+        {
+          "outlet": "The Citizen",
+          "url": "https://www.citizen.co.za/sport/soccer/world-soccer/co-hosts-canada-and-south-africa-in-historic-world-cup-knockout-clash/",
+          "date": "2026-06-28",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "The tactical debate at home: national previews coalesce around a disciplined mid-block mirroring the South Korea win, where Bafana absorb pressure, stay compact and strike in transition with Maseko as the vertical runner stretching Canada's back line. The chief threat to guard against is the returning Alphonso Davies, sidelined for the whole group phase by a hamstring injury, whose pace on the counter is flagged as the danger; local analysis also argues a key Canada midfield absence tilts the engine room toward Bafana.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "IOL",
+          "url": "https://iol.co.za/fifa-world-cup-2026/updates/2026-06-27-what-bafana-must-guard-against-in-historic-world-cup-knockout-clash-with-co-hosts-canada/",
+          "date": "2026-06-27",
+          "lang": "en"
+        },
+        {
+          "outlet": "IOL",
+          "url": "https://iol.co.za/fifa-world-cup-2026/updates/2026-06-27-midfield-monopoly-why-kons-absence-gives-bafana-the-edge-against-canada/",
+          "date": "2026-06-27",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Broos's bold young centre-back pairing: TimesLIVE profiles the gamble of fielding two youngsters, 22-year-old Ime Okon and 20-year-old Mbekezeli Mbokazi, together at the heart of defence from the second match onward in front of captain-keeper Ronwen Williams. Okon casts the World Cup as an accelerated education against the world's best and stresses the partnership is still growing through training and matches, a development storyline behind Bafana's defensive solidity.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "TimesLIVE",
+          "url": "https://www.timeslive.co.za/sport/fifa-world-cup-2026/2026-06-28-bafana-defender-okon-on-lessons-from-the-word-cup-and-playing-with-mbokazi/",
+          "date": "2026-06-28",
+          "lang": "en"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -200,6 +277,45 @@
       "verification": "attributed_context_only",
       "lang": "en",
       "quote_original": null
+    },
+    {
+      "quote": "Recovery is the most important thing and on Sunday you are going to see a team that believes in themselves.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Hugo Broos",
+      "speaker_role": "South Africa head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "TimesLIVE",
+      "url": "https://www.timeslive.co.za/sport/fifa-world-cup-2026/bafana-news/2026-06-26-canada-a-winnable-game-broos-despite-bafana-travel-headache-seems-to-think-so/",
+      "date": "2026-06-26",
+      "context": "Broos on managing the compressed preparation window after the FIFA-mandated Pachuca-then-LA travel detour before the Canada Round of 32. Quote ends at a natural clause break of a longer sentence ('...and a team that is going to fight very hard for 90 minutes'); meaning unchanged."
+    },
+    {
+      "quote": "I'd like all South Africans to rally behind Bafana Bafana and give them maximum support.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Cyril Ramaphosa",
+      "speaker_role": "President of South Africa",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "The Citizen",
+      "url": "https://www.citizen.co.za/news/south-africa/ramaphosa-rallies-nation-ahead-canada-clash-fifa-world-cup-knockouts/",
+      "date": "2026-06-28",
+      "context": "Ramaphosa's public address urging national support before the historic Canada knockout tie. Verified verbatim."
+    },
+    {
+      "quote": "The more we play together at training and during matches, we understand each other even more.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Ime Okon",
+      "speaker_role": "South Africa centre-back",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "TimesLIVE",
+      "url": "https://www.timeslive.co.za/sport/fifa-world-cup-2026/2026-06-28-bafana-defender-okon-on-lessons-from-the-word-cup-and-playing-with-mbokazi/",
+      "date": "2026-06-28",
+      "context": "Okon on his developing central-defence partnership with 20-year-old Mbekezeli Mbokazi, Broos's young-pairing gamble. Verified verbatim."
     }
   ],
   "local_availability_reporting": [],
@@ -291,6 +407,62 @@
       "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-south-africa-celebrate-historic-knockout-qualification-thapelo-maseko",
       "outlet": "Olympics.com",
       "retrieved_at": "2026-06-28"
+    },
+    {
+      "outlet": "TimesLIVE",
+      "url": "https://www.timeslive.co.za/sport/fifa-world-cup-2026/bafana-news/2026-06-26-canada-a-winnable-game-broos-despite-bafana-travel-headache-seems-to-think-so/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "FIFA-imposed travel-headache storyline + verbatim Broos recovery/belief quote (both re-verified)"
+    },
+    {
+      "outlet": "The Citizen",
+      "url": "https://www.citizen.co.za/news/south-africa/ramaphosa-rallies-nation-ahead-canada-clash-fifa-world-cup-knockouts/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Ramaphosa national-rally storyline + verbatim presidential quote (re-verified)"
+    },
+    {
+      "outlet": "The Citizen",
+      "url": "https://www.citizen.co.za/sport/soccer/world-soccer/co-hosts-canada-and-south-africa-in-historic-world-cup-knockout-clash/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Neutral-venue / Canada lost-host-status framing"
+    },
+    {
+      "outlet": "SuperSport",
+      "url": "https://supersport.com/football/news/98393bba-28be-412e-979c-ebf91d8a285a/bafana-bafana-and-co-hosts-canada-in-historic-world-cup-knockout-clash",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Neutral-venue angle (SoFi Stadium LA) + Davies X-factor context + Canada 2-1 Switzerland loss (re-verified)"
+    },
+    {
+      "outlet": "TimesLIVE",
+      "url": "https://www.timeslive.co.za/sport/fifa-world-cup-2026/2026-06-28-bafana-defender-okon-on-lessons-from-the-word-cup-and-playing-with-mbokazi/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Young centre-back pairing storyline + verbatim Okon quote (re-verified)"
+    },
+    {
+      "outlet": "IOL",
+      "url": "https://iol.co.za/fifa-world-cup-2026/updates/2026-06-27-what-bafana-must-guard-against-in-historic-world-cup-knockout-clash-with-co-hosts-canada/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Tactical-debate storyline (mid-block, Davies threat, transition); page 403 on direct fetch, corroborated via WebSearch + SuperSport"
+    },
+    {
+      "outlet": "IOL",
+      "url": "https://iol.co.za/fifa-world-cup-2026/updates/2026-06-27-midfield-monopoly-why-kons-absence-gives-bafana-the-edge-against-canada/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Local analysis on Canada midfield absence (Kone) tilting the engine room to Bafana; corroborated via WebSearch"
+    },
+    {
+      "outlet": "IOL",
+      "url": "https://iol.co.za/fifa-world-cup-2026/updates/2026-06-28-world-cup-2026-teboho-mokoena-returns-as-bafana-bafana-name-line-up-for-canada-clash/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Corroboration of EXISTING squad-availability storyline (Mokoena return); not a new storyline"
     }
   ]
 }

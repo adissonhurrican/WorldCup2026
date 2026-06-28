@@ -151,6 +151,77 @@
           "lang": "es"
         }
       ]
+    },
+    {
+      "storyline": "A new captain for the knockouts: ahead of the World Cup, all-time top scorer Enner Valencia ceded the armband to 24-year-old Chelsea midfielder Moises Caicedo, with Caicedo confirmed as the new captain of La Tri. El Comercio frames Caicedo as the established on-pitch leader heading into the Mexico tie, while coach Beccacece casts Valencia as 'el legado vigente' (the living legacy) of Ecuador.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "El Comercio",
+          "url": "https://www.elcomercio.com/deportes/futbol/moises-caicedo-capitan-ecuador-enner-valencia-mundial/",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "Beating Germany rewrote the record books: Primicias details how Ecuador joined Argentina and Brazil as the only South American sides ever to defeat Germany at a World Cup, and is the only one to do so in the group stage rather than a final. The win also ended Germany's recent unbeaten run against CONMEBOL opposition and, per the piece, made La Tri the first South American team to score past a goalkeeper who had lifted the trophy as a World Cup-winning Germany champion (Manuel Neuer).",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Primicias",
+          "url": "https://www.primicias.ec/deportes/mundial-2026/seleccion-ecuador/tricolor-alemania-cinco-records-fifa-beccacece-126488/",
+          "date": "2026-06-26",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "A 24-year revancha at the Azteca: El Comercio and Expreso frame the Round of 32 tie against host Mexico as the rematch of the teams' only previous World Cup meeting, the 2002 group game in Korea-Japan that Mexico won 2-1 despite a historic Agustin Delgado goal. The Ecuadorian press casts the trip to the Estadio Azteca as both a hostile assignment against undefeated group winners and a chance to settle an old score.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "El Comercio",
+          "url": "https://www.elcomercio.com/deportes/futbol/ecuador-viaje-mexico-dieciseisavos-mundial/",
+          "date": "2026-06-28",
+          "lang": "es"
+        },
+        {
+          "outlet": "Expreso",
+          "url": "https://www.expreso.ec/deportes/copa-mundial-de-futbol/ecuador-vs-mexico-mundial-2026-asi-unico-duelo-mundialista-ambas-selecciones-287304.html",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "Angulo's breakout and Plata's 'viveza': El Universo presents wingers Nilson Angulo and Gonzalo Plata as the attacking revival behind the Germany comeback, with Angulo chosen by FIFA as best player of the match after his goal and an all-action display, and Plata praised for the 'viveza guayaca' (Guayaquil street-smarts) of beating Neuer for the winner. The piece frames the pair as the renewed source of hope going into the knockouts.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "El Universo",
+          "url": "https://www.eluniverso.com/deportes/futbol/nilson-angulo-y-gonzalo-plata-marcaron-goles-que-traen-calma-a-la-tricolor-y-reavivan-la-esperanza-mundialista-nota/",
+          "date": "2026-06-26",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "Quiet, controlled build-up out of Columbus: El Universo reports Beccacece kept the squad training behind closed doors in Columbus, Ohio, with a final session there before an afternoon flight of roughly three and a half hours to Mexico City, where the coach and one player are due at the FIFA pre-match press conference on arrival.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "El Universo",
+          "url": "https://www.eluniverso.com/deportes/futbol/esta-es-la-planificacion-de-ecuador-para-enfrentar-a-mexico-en-los-16-avos-de-final-del-mundial-2026-nota/",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -179,6 +250,19 @@
       "context": "Closing remark of the post-match press conference after beating Germany 2-1 and qualifying.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "brother, this armband is for you to carry",
+      "quote_original": "hermano, esta cinta es para que la lleves",
+      "lang": "es",
+      "speaker_name": "Enner Valencia",
+      "speaker_role": "Ecuador forward and outgoing captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "El Comercio",
+      "url": "https://www.elcomercio.com/deportes/futbol/moises-caicedo-capitan-ecuador-enner-valencia-mundial/",
+      "date": "2026-06-28",
+      "context": "Valencia recounting the moment he handed the captain's armband to Moises Caicedo ahead of the World Cup."
     }
   ],
   "local_availability_reporting": [],
@@ -274,6 +358,48 @@
       "retrieved_at": "2026-06-28",
       "lang": "es",
       "note": "Pre-confirmation piece listing possible R32 opponents and historical precedents."
+    },
+    {
+      "outlet": "El Comercio",
+      "url": "https://www.elcomercio.com/deportes/futbol/moises-caicedo-capitan-ecuador-enner-valencia-mundial/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Re-verified: Caicedo confirmed new captain; Valencia ceded the armband; verbatim Valencia quote 'hermano, esta cinta es para que la lleves'; Beccacece phrase 'el legado vigente de Ecuador'."
+    },
+    {
+      "outlet": "Primicias",
+      "url": "https://www.primicias.ec/deportes/mundial-2026/seleccion-ecuador/tricolor-alemania-cinco-records-fifa-beccacece-126488/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Re-verified: FIFA records/milestones from the Germany win (only SA side besides ARG/BRA to beat Germany; only one in group stage; ended a recent CONMEBOL unbeaten run; Neuer World-Cup-winner milestone)."
+    },
+    {
+      "outlet": "El Comercio",
+      "url": "https://www.elcomercio.com/deportes/futbol/ecuador-viaje-mexico-dieciseisavos-mundial/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Re-verified: 'revancha de 24 anos' framing of the R32 tie vs Mexico; recap of the 2002 WC meeting (Mexico 2-1 'pese al historico gol de Agustin Delgado'); Azteca/undefeated-leader narrative."
+    },
+    {
+      "outlet": "Expreso",
+      "url": "https://www.expreso.ec/deportes/copa-mundial-de-futbol/ecuador-vs-mexico-mundial-2026-asi-unico-duelo-mundialista-ambas-selecciones-287304.html",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Re-verified: corroborates the single prior Ecuador-Mexico World Cup meeting (9 June 2002, Mexico 2-1, Delgado opener; Borgetti+Torrado for Mexico)."
+    },
+    {
+      "outlet": "El Universo",
+      "url": "https://www.eluniverso.com/deportes/futbol/nilson-angulo-y-gonzalo-plata-marcaron-goles-que-traen-calma-a-la-tricolor-y-reavivan-la-esperanza-mundialista-nota/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Re-verified: Angulo chosen by FIFA as best player of the Germany match; Plata's 'viveza guayaca' winner over Neuer; renewed-hope framing (no direct player quotes in piece)."
+    },
+    {
+      "outlet": "El Universo",
+      "url": "https://www.eluniverso.com/deportes/futbol/esta-es-la-planificacion-de-ecuador-para-enfrentar-a-mexico-en-los-16-avos-de-final-del-mundial-2026-nota/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Re-verified: closed-door Columbus training, final Ohio session, ~3.5h afternoon flight to Mexico City, FIFA pre-match presser with coach + one player (no direct quotes). NOTE: 'Hotel Le Meridien' is NOT in this source and was removed."
     }
   ]
 }

@@ -157,6 +157,89 @@
           "date": "2026-06-28"
         }
       ]
+    },
+    {
+      "storyline": "The Portuguese sports press relayed a withering international-media verdict on the goalless Colombia draw, with Record leading its coverage on foreign headlines calling Portugal's display flat (L'Equipe's 'atuacao apagada') and Gazzetta dello Sport's 'too bad to be true,' while noting Ronaldo was easily neutralised and Diogo Costa was the standout. The domestic framing is less a defence than an amplification of the unease about the team's level entering the knockouts.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Record",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/detalhe/atuacao-apagada-e-mau-de-mais-para-ser-verdade-a-analise-da-imprensa-internacional-ao-empate-de-portugal",
+          "lang": "pt",
+          "date": "2026-06-28"
+        },
+        {
+          "outlet": "O Jogo",
+          "url": "https://www.ojogo.pt/internacional/artigo/portugal-foi-mau-demais-para-ser-verdade-le-se-na-imprensa-internacional/18100151",
+          "lang": "pt",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "Portuguese press detailed the squad's knockout logistics: the team stays based and trains in Palm Beach, Florida, with recovery and training sessions across the days before flying to Toronto only on the eve of the Croatia tie, and Record framed a possible quarter-final return to Dallas if they advance. It is the first concrete preparation/travel reporting around the R32.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Record",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/portugal-fica-a-treinar-em-palm-beach-e-viaja-para-toronto-na-vespera-do-jogo-com-a-croacia",
+          "lang": "pt",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "A domestic tactical debate emerged in the Portuguese media over whether Roberto Martinez must reshape his attack for Croatia, with commentary voices arguing the players' collective level has dipped below expectations and openly predicting Rafael Leao should now start, turning the selection question into a national talking point ahead of the knockout opener.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Record",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/amp/manuel-queiroz-a-croacia-e-um-bom-adversario-para-portugal",
+          "lang": "pt",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "Through the Portuguese press, Croatia's camp set the tone for the tie: captain Luka Modric, surfaced by CNN Portugal and TVI, praised Portugal's players as phenomenal yet insisted his side has nothing to fear, framing the R32 as a fresh tournament restart. The domestic outlets carried the opponent's defiance as part of the pre-match build-up.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "CNN Portugal",
+          "url": "https://cnnportugal.iol.pt/mundial-2026/internacional/modric-portugal-nao-temos-de-ter-medo-de-nada",
+          "lang": "pt",
+          "date": "2026-06-28"
+        },
+        {
+          "outlet": "TVI",
+          "url": "https://tvi.iol.pt/noticias/mundial-2026/internacional/modric-portugal-nao-temos-de-ter-medo-de-nada",
+          "lang": "pt",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "In his post-Colombia press conference, carried by Record and Maisfutebol, Martinez pushed back directly on speculation around Ronaldo's fitness and minutes, insisting there was no physical or mental issue in the captain playing the full 90 and casting him as a disciplined player in his position, an attempt to defuse the booing-and-form narrative before Croatia.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Record",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260628-031000-conferencia-de-roberto-martinez-em-direto",
+          "lang": "pt",
+          "date": "2026-06-28"
+        },
+        {
+          "outlet": "Maisfutebol",
+          "url": "https://maisfutebol.iol.pt/mundial2026/mundial-2026/martinez-muito-contente-com-a-exibicao-do-diogo-costa",
+          "lang": "pt",
+          "date": "2026-06-28"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -185,6 +268,45 @@
       "verification": "attributed_context_only",
       "lang": "en",
       "quote_original": null
+    },
+    {
+      "quote": "There was no physical or mental problem in playing the 90 minutes.",
+      "quote_original": "Nao existiu nenhum problema fisico e mental em jogar os 90 minutos.",
+      "lang": "pt",
+      "speaker_name": "Roberto Martinez",
+      "speaker_role": "Portugal head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Maisfutebol",
+      "url": "https://maisfutebol.iol.pt/mundial2026/mundial-2026/martinez-muito-contente-com-a-exibicao-do-diogo-costa",
+      "date": "2026-06-28",
+      "context": "Post-Colombia press conference, responding to speculation about Cristiano Ronaldo's fitness after he played the full match. Re-fetched and confirmed verbatim at Maisfutebol."
+    },
+    {
+      "quote": "Cristiano is used to being in the right place at the right time and is very disciplined in his position.",
+      "quote_original": "O Cristiano esta habituado a estar no sitio certo a hora certa e e muito disciplinado na sua posicao.",
+      "lang": "pt",
+      "speaker_name": "Roberto Martinez",
+      "speaker_role": "Portugal head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Record",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260628-031000-conferencia-de-roberto-martinez-em-direto",
+      "date": "2026-06-28",
+      "context": "Post-Colombia press conference, defending Ronaldo's performance and role despite the captain being booed and starved of service in the 0-0 draw. Re-fetched and confirmed verbatim at Record's live conference coverage."
+    },
+    {
+      "quote": "Portugal's players are phenomenal, they are a great team.",
+      "quote_original": "Os jogadores de Portugal sao fenomenais, sao uma grande equipa.",
+      "lang": "pt",
+      "speaker_name": "Luka Modric",
+      "speaker_role": "Croatia captain (Portugal's R32 opponent)",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "CNN Portugal",
+      "url": "https://cnnportugal.iol.pt/mundial-2026/internacional/modric-portugal-nao-temos-de-ter-medo-de-nada",
+      "date": "2026-06-28",
+      "context": "Pre-match remarks surfaced by Portuguese press; Modric praised Portugal yet said Croatia has nothing to fear ahead of the Toronto knockout tie. Verbatim cross-confirmed at both CNN Portugal and TVI."
     }
   ],
   "local_availability_reporting": [],
@@ -239,6 +361,69 @@
       "url": "https://en.wikipedia.org/wiki/Portugal_at_the_FIFA_World_Cup",
       "retrieved_at": "2026-06-28",
       "note": "Historical context confirmed: never won; best finish 3rd in 1966, 4th in 2006; those are their only two semifinal appearances."
+    },
+    {
+      "outlet": "Record",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260628-031000-conferencia-de-roberto-martinez-em-direto",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Martinez post-Colombia live press conference; verbatim quote on Ronaldo's positioning/discipline confirmed; also defends Ronaldo's full 90."
+    },
+    {
+      "outlet": "Maisfutebol",
+      "url": "https://maisfutebol.iol.pt/mundial2026/mundial-2026/martinez-muito-contente-com-a-exibicao-do-diogo-costa",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Cross-confirmation of Martinez post-Colombia quotes; verbatim source of the 'no physical or mental problem in playing the 90 minutes' line addressing Ronaldo's fitness; Diogo Costa praised."
+    },
+    {
+      "outlet": "Record",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/detalhe/atuacao-apagada-e-mau-de-mais-para-ser-verdade-a-analise-da-imprensa-internacional-ao-empate-de-portugal",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Portuguese outlet's roundup of international-press criticism of the Colombia draw (L'Equipe 'atuacao apagada', Gazzetta 'mau demais para ser verdade', The Guardian on Ronaldo neutralised, Marca praising Diogo Costa). Re-fetched and confirmed."
+    },
+    {
+      "outlet": "O Jogo",
+      "url": "https://www.ojogo.pt/internacional/artigo/portugal-foi-mau-demais-para-ser-verdade-le-se-na-imprensa-internacional/18100151",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Parallel O Jogo framing of the same international-press criticism; co-cited corroboration only. Article body 403'd on direct re-fetch; storyline rests on the verified Record parallel article, so O Jogo is not solo-sourced."
+    },
+    {
+      "outlet": "Record",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/portugal-fica-a-treinar-em-palm-beach-e-viaja-para-toronto-na-vespera-do-jogo-com-a-croacia",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Preparation/travel logistics: squad trains in Palm Beach through Wednesday (recovery session plus two more), flies to Toronto on the eve of the Croatia tie; possible return to Dallas if they advance. Re-fetched and confirmed."
+    },
+    {
+      "outlet": "Record",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/amp/manuel-queiroz-a-croacia-e-um-bom-adversario-para-portugal",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Domestic tactical debate: commentator Manuel Queiroz argues the average level of Portuguese players is below expectations, flags fatigue (Nuno Mendes, Ronaldo, Pedro Neto), predicts Rafael Leao starts, says Croatia is a favourable opponent. Re-fetched and confirmed."
+    },
+    {
+      "outlet": "CNN Portugal",
+      "url": "https://cnnportugal.iol.pt/mundial-2026/internacional/modric-portugal-nao-temos-de-ter-medo-de-nada",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Modric pre-match quotes surfaced by Portuguese press: praises Portugal's players ('fenomenais'), says Croatia fears nothing, frames knockout as a new tournament. Re-fetched and confirmed verbatim."
+    },
+    {
+      "outlet": "TVI",
+      "url": "https://tvi.iol.pt/noticias/mundial-2026/internacional/modric-portugal-nao-temos-de-ter-medo-de-nada",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Mirror of the Modric interview; verified exact verbatim wording. Full line: 'Nao temos de ter medo de nada, so temos de dar o nosso melhor e ver o que acontece' (the bare 'Portugal? Nao temos de ter medo de nada' is a headline construction, so it was NOT used as a quote)."
+    },
+    {
+      "outlet": "A Bola",
+      "url": "https://www.abola.pt/noticias/mundial-vem-ai-um-portugal-croacia-e-talvez-derbi-iberico-nos-oitavos-2026062800405819231",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Domestic R32 preview framing (Portugal-Croatia, Euro 2016 echo of Quaresma's extra-time winner, possible Iberian derby vs Spain next round). Re-fetched and confirmed. No net-new quote extracted; supports path framing already in the file."
     }
   ]
 }

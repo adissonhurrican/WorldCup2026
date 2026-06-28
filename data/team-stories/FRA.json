@@ -152,6 +152,76 @@
           "date": "2026-06"
         }
       ]
+    },
+    {
+      "storyline": "Maignan's rebound becomes a national-press subplot: French outlets frame the goalkeeper as having quieted doubters in the Norway win, saving a penalty and standing tall against Oscar Bobb, a 'reveil' (awakening) story that the existing attack-centric coverage had not surfaced. Eurosport FR went further, headlining that both Dembele and Maignan 'closed mouths' in the same match.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "franceinfo",
+          "url": "https://www.franceinfo.fr/coupe-du-monde/coupe-du-monde-2026-dembele-etincelant-mbappe-altruiste-le-reveil-de-maignan-les-notes-des-bleus-face-a-la-norvege_8081246.html",
+          "lang": "fr",
+          "date": "2026-06-26"
+        },
+        {
+          "outlet": "Eurosport (FR)",
+          "url": "https://www.eurosport.fr/football/coupe-du-monde/2026/france-norvege-les-notes-des-bleus-ousmane-dembele-a-ferme-les-bouches-mike-maignan-aussi_sto23313521/story.shtml",
+          "lang": "fr",
+          "date": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "storyline": "The French press reframes Dembele's Norway treble explicitly as an answer to his critics: franceinfo's headline casts the hat-trick as a treble 'to silence the criticism,' positioning the reigning Ballon d'Or holder as having finally produced his club-level best in a France shirt at the decisive moment, a redemption angle distinct from the existing 'fastest hat-trick' framing.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "franceinfo",
+          "url": "https://www.franceinfo.fr/coupe-du-monde/masculine/france-norvege-ousmane-dembele-un-triple-en-coupe-du-monde-pour-faire-taire-les-critiques_8081915.html",
+          "lang": "fr",
+          "date": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "storyline": "A friendly internal scoring race is emerging as its own storyline in the French media: Mbappe and Dembele are now level on goals and grouped among the World Cup's leading scorers, with national outlets billing them as a 'duo infernal' and tracking the chase behind Messi, framing France's knockout run partly through which of its two stars tops the charts.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "info.fr",
+          "url": "https://info.fr/coupe-du-monde-2026-mbappe-dembele-duo-infernal-bleus-top-5-buteurs/",
+          "lang": "fr",
+          "date": "2026-06"
+        },
+        {
+          "outlet": "Foot Mercato",
+          "url": "https://www.footmercato.net/international/coupe-du-monde/buteur",
+          "lang": "fr",
+          "date": "2026-06"
+        }
+      ]
+    },
+    {
+      "storyline": "The French press sizes up the looming opponent as a winnable but not risk-free tie: beIN SPORTS FR scouts Sweden as a 'paradoxical' side, dangerous through the Isak-Gyokeres strike pairing yet leaky at the back and now missing defender Isak Hien to a hamstring injury, with Sweden coached by Graham Potter and having finished third in their group, French coverage casting Les Bleus as favourites.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "beIN SPORTS (FR)",
+          "url": "https://www.beinsports.com/fr-fr/football/coupe-du-monde-de-la-fifa-2026/articles/coupe-du-monde-2026-gy-keres-isak-que-vaut-vraiment-la-su%C3%A8de-prochain-adversaire-des-bleus-2026-06-27",
+          "lang": "fr",
+          "date": "2026-06-27"
+        },
+        {
+          "outlet": "franceinfo",
+          "url": "https://www.franceinfo.fr/sports/foot/equipe-de-france/l-equipe-de-france-affrontera-la-suede-en-seiziemes-de-finale-de-la-coupe-du-monde-2026_8082047.html",
+          "lang": "fr",
+          "date": "2026-06-27"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -180,6 +250,32 @@
       "context": "Reflecting on defensive exposure when France's attack-heavy front four lost possession; English rendering trimmed to <=20 words, full French original retained",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "Ousmane Dembele closed mouths, Mike Maignan too.",
+      "quote_original": "Ousmane Dembélé a fermé les bouches, Mike Maignan aussi",
+      "lang": "fr",
+      "speaker_name": "Eurosport France (editorial)",
+      "speaker_role": "French national outlet, player-ratings headline",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Eurosport (FR)",
+      "url": "https://www.eurosport.fr/football/coupe-du-monde/2026/france-norvege-les-notes-des-bleus-ousmane-dembele-a-ferme-les-bouches-mike-maignan-aussi_sto23313521/story.shtml",
+      "date": "2026-06-26",
+      "context": "French outlet's player-ratings headline after France 4-1 Norway, framing both Dembele's treble and Maignan's return to form as answers to doubters; journalist/editorial wording, not a player quote"
+    },
+    {
+      "quote": "Dembele dazzling, Mbappe unselfish, the awakening of Maignan.",
+      "quote_original": "Dembélé étincelant, Mbappé altruiste, le réveil de Maignan",
+      "lang": "fr",
+      "speaker_name": "franceinfo (editorial)",
+      "speaker_role": "French national outlet, player-ratings headline",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "franceinfo",
+      "url": "https://www.franceinfo.fr/coupe-du-monde/coupe-du-monde-2026-dembele-etincelant-mbappe-altruiste-le-reveil-de-maignan-les-notes-des-bleus-face-a-la-norvege_8081246.html",
+      "date": "2026-06-26",
+      "context": "franceinfo's player-ratings headline summarising France's Norway win; journalist/editorial framing, not a player or coach quote"
     }
   ],
   "local_availability_reporting": [],
@@ -268,6 +364,55 @@
       "url": "https://www.nbcsports.com/soccer/news/2026-world-cup-round-of-32-confirmed-schedule-predictions-for-knockout-round",
       "retrieved_at": "2026-06-28",
       "used_for": "R32 schedule/opponent context (Sweden, MetLife, Jun 30) — gaps only, DB authoritative"
+    },
+    {
+      "outlet": "franceinfo",
+      "url": "https://www.franceinfo.fr/coupe-du-monde/coupe-du-monde-2026-dembele-etincelant-mbappe-altruiste-le-reveil-de-maignan-les-notes-des-bleus-face-a-la-norvege_8081246.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Maignan rebound storyline + editorial ratings quote; headline reverified via search, article body 403 on direct fetch"
+    },
+    {
+      "outlet": "Eurosport (FR)",
+      "url": "https://www.eurosport.fr/football/coupe-du-monde/2026/france-norvege-les-notes-des-bleus-ousmane-dembele-a-ferme-les-bouches-mike-maignan-aussi_sto23313521/story.shtml",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Maignan/Dembele 'closed mouths' storyline + editorial ratings quote (verbatim confirmed by direct fetch)"
+    },
+    {
+      "outlet": "franceinfo",
+      "url": "https://www.franceinfo.fr/coupe-du-monde/masculine/france-norvege-ousmane-dembele-un-triple-en-coupe-du-monde-pour-faire-taire-les-critiques_8081915.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Dembele 'hat-trick to silence critics' redemption storyline (headline reverified via search)"
+    },
+    {
+      "outlet": "info.fr",
+      "url": "https://info.fr/coupe-du-monde-2026-mbappe-dembele-duo-infernal-bleus-top-5-buteurs/",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "'duo infernal' top-5 scorers framing for Mbappe-Dembele (confirmed via search)"
+    },
+    {
+      "outlet": "Foot Mercato",
+      "url": "https://www.footmercato.net/international/coupe-du-monde/buteur",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Mbappe-Dembele internal scoring race / top-scorers chart (canonical buteur page; original proposed article URL unverified, swapped)"
+    },
+    {
+      "outlet": "beIN SPORTS (FR)",
+      "url": "https://www.beinsports.com/fr-fr/football/coupe-du-monde-de-la-fifa-2026/articles/coupe-du-monde-2026-gy-keres-isak-que-vaut-vraiment-la-su%C3%A8de-prochain-adversaire-des-bleus-2026-06-27",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Sweden scouting storyline (Isak, Gyokeres, Hien hamstring, Potter, 3rd place) - confirmed by direct fetch"
+    },
+    {
+      "outlet": "franceinfo",
+      "url": "https://www.franceinfo.fr/sports/foot/equipe-de-france/l-equipe-de-france-affrontera-la-suede-en-seiziemes-de-finale-de-la-coupe-du-monde-2026_8082047.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "France-Sweden knockout draw press context (DB opponent kept TBD)"
     }
   ]
 }

@@ -147,6 +147,76 @@
           "date": "2026-06"
         }
       ]
+    },
+    {
+      "storyline": "The Petkovic reunion: Swiss national press centres the Round of 32 on an emotional 'Wiedersehen' — Switzerland face Algeria, coached by Vladimir Petkovic, the Ticinese who led the Nati for seven years (Euro 2016, World Cup 2018, Euro 2020) before Murat Yakin succeeded him in 2021. SRF, Blick, Nau and Watson all frame it as Yakin meeting his predecessor; Algeria reached the knockout as a third-placed side after a 3:3 draw with Austria.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "SRF",
+          "url": "https://srf.ch/sport/fussball/fifa-wm-2026/wm-2026-sechzehntelfinals-yakin-trifft-auf-seinen-vorgaenger-petkovic",
+          "lang": "de",
+          "date": "2026-06-28"
+        },
+        {
+          "outlet": "Nau.ch",
+          "url": "https://www.nau.ch/sport/fussball/wm-2026-das-sagt-murat-yakin-uber-gegner-algerien-67143393",
+          "lang": "de",
+          "date": "2026-06-28"
+        },
+        {
+          "outlet": "20 Minuten",
+          "url": "https://www.20min.ch/story/sechzehntelfinal-es-wird-ein-wiedersehen-so-reagiert-die-nati-auf-wm-gegner-103591988",
+          "lang": "de",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "The unusually long wait as group winners: Swiss outlets report Yakin framing the gap before the knockout as something genuinely new for this team — the reward of topping Group B is extra rest and recovery time, but also a long stretch without a match while waiting to learn the opponent. Coverage notes Yakin planned to let players recuperate from travel and spend time with family during the break.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "20 Minuten",
+          "url": "https://www.20min.ch/story/warten-auf-natigegner-das-hatten-wir-in-der-form-noch-nie-gehabt-103590032",
+          "lang": "de",
+          "date": "2026-06-25"
+        },
+        {
+          "outlet": "Watson",
+          "url": "https://www.watson.ch/sport/fussball/127360047-das-sind-die-wahrscheinlichsten-nati-gegner-im-wm-sechzehntelfinal",
+          "lang": "de",
+          "date": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "storyline": "SRF's 'Superjoker' verdict and Yakin's 'goldenes Haendchen': In its own match analysis, Swiss public broadcaster SRF credited Yakin's halftime triple change against Bosnia — Sow, Manzambi and Vargas on for Rieder, Aebischer and Ndoye — as the turning point, dubbing the bench the 'Superjoker' and Yakin's reading of the game a 'golden touch', explicitly contrasting it with his self-criticism over substitutions after the Qatar opener.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "SRF",
+          "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-spiel-gegen-bosnien-und-dann-erloesen-die-superjoker-die-nati",
+          "lang": "de",
+          "date": "2026-06-18"
+        }
+      ]
+    },
+    {
+      "storyline": "An Austria sub-plot loaded with 1954 history: previewing the possible third-place opponents before the draw, Watson flagged that a meeting with Austria would have revived the memory of the legendary 1954 World Cup quarter-final 'heat battle' in Lausanne — Switzerland's 5:7 loss after leading 3:0 — adding a historical edge to the knockout build-up.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Watson",
+          "url": "https://www.watson.ch/sport/fussball/127360047-das-sind-die-wahrscheinlichsten-nati-gegner-im-wm-sechzehntelfinal",
+          "lang": "de",
+          "date": "2026-06-26"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -175,6 +245,32 @@
       "verification": "attributed_context_only",
       "lang": "en",
       "quote_original": null
+    },
+    {
+      "quote": "It will be a reunion with Vlado, whom I know from our encounters in Switzerland.",
+      "quote_original": "Es ist ein Wiedersehen mit Vlado, den ich aus unseren Begegnungen in der Schweiz kenne.",
+      "lang": "de",
+      "speaker_name": "Murat Yakin",
+      "speaker_role": "Switzerland head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Nau.ch",
+      "url": "https://www.nau.ch/sport/fussball/wm-2026-das-sagt-murat-yakin-uber-gegner-algerien-67143393",
+      "date": "2026-06-28",
+      "context": "Yakin reacting to drawing Algeria, coached by his predecessor Vladimir Petkovic, in the Round of 32; quote also reported verbatim by 20 Minuten and confirmed at headline level by Blick."
+    },
+    {
+      "quote": "An interesting opponent with many individual qualities.",
+      "quote_original": "Es ist ein interessanter Gegner mit vielen individuellen Qualitäten.",
+      "lang": "de",
+      "speaker_name": "Murat Yakin",
+      "speaker_role": "Switzerland head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Nau.ch",
+      "url": "https://www.nau.ch/sport/fussball/wm-2026-das-sagt-murat-yakin-uber-gegner-algerien-67143393",
+      "date": "2026-06-28",
+      "context": "Yakin assessing Algeria after watching their 3:3 draw with Austria, as Switzerland began preparing for the knockout tie. (20min/SRF render the same line within a fuller quote as 'Algerien ist ein interessanter Gegner...'.)"
     }
   ],
   "local_availability_reporting": [],
@@ -253,6 +349,55 @@
       "outlet": "FourFourTwo",
       "retrieved_at": "2026-06-28",
       "note": "Squad context: Yakin-led, Xhaka captain, Manzambi youth profile, Embolo as scorer"
+    },
+    {
+      "outlet": "SRF",
+      "url": "https://srf.ch/sport/fussball/fifa-wm-2026/wm-2026-sechzehntelfinals-yakin-trifft-auf-seinen-vorgaenger-petkovic",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Yakin vs Petkovic reunion storyline; Petkovic profile (62-yr-old Ticinese, Euro2016/WC2018/Euro2020 with the Nati, Algeria coach since Feb 2024); R32 vs Algeria framing (Algeria 3rd via 3:3 vs Austria)"
+    },
+    {
+      "outlet": "Nau.ch",
+      "url": "https://www.nau.ch/sport/fussball/wm-2026-das-sagt-murat-yakin-uber-gegner-algerien-67143393",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Verbatim Yakin quotes on Algeria and the Petkovic reunion (German originals confirmed on this page)"
+    },
+    {
+      "outlet": "20 Minuten",
+      "url": "https://www.20min.ch/story/sechzehntelfinal-es-wird-ein-wiedersehen-so-reagiert-die-nati-auf-wm-gegner-103591988",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Cross-confirmation of the full Yakin reunion quote and Nati reaction to drawing Algeria/Petkovic; match 2 July 21:00 Canadian time"
+    },
+    {
+      "outlet": "20 Minuten",
+      "url": "https://www.20min.ch/story/warten-auf-natigegner-das-hatten-wir-in-der-form-noch-nie-gehabt-103590032",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Long-break / recovery storyline (Yakin: 'Das hatten wir in der Form noch nie gehabt' / 'eine neue Erfahrung, so lange kein Spiel')"
+    },
+    {
+      "outlet": "Watson",
+      "url": "https://www.watson.ch/sport/fussball/127360047-das-sind-die-wahrscheinlichsten-nati-gegner-im-wm-sechzehntelfinal",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Pre-draw opponent preview; Petkovic reunion angle (Switzerland coach 2014-2021); 1954 Austria 'Hitzeschlacht von Lausanne' historical sub-plot. Probability percentages on the page were excluded from text per no-stat rule"
+    },
+    {
+      "outlet": "SRF",
+      "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-spiel-gegen-bosnien-und-dann-erloesen-die-superjoker-die-nati",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "'Superjoker' and 'goldenes Haendchen' framing of Yakin's halftime triple change vs Bosnia; confirmed contrast with his self-criticism after the Qatar opener"
+    },
+    {
+      "outlet": "Blick",
+      "url": "https://www.blick.ch/sport/fussball/nati/yakin-ueber-duell-mit-algerien-freue-mich-auf-das-wiedersehen-mit-vlado-id22065702.html",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Headline-level confirmation of Yakin's 'Wiedersehen mit Vlado' framing (page body returned HTTP 403; used only via search snippet, not fetched)"
     }
   ]
 }

@@ -162,6 +162,64 @@
           "date": "2026-06-28"
         }
       ]
+    },
+    {
+      "storyline": "Egypt scouted as a settled, fearless unit: Australia's assistant coach Hayden Foxe framed the Round of 32 tie as 'an almighty game,' warning that Egypt 'know each other' and 'play as a team, as a unit' after long time together, and praising a fearless, technical style he tied to an 'African-Arab' way of playing. It is the clearest public sign the Socceroos staff rate Egypt as a genuine, well-organised threat rather than a soft draw.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "SBS News",
+          "url": "https://www.sbs.com.au/news/article/how-good-is-egypt-meet-australias-world-cup-opponent/41gdncdep",
+          "lang": "en",
+          "date": "2026-06-27"
+        }
+      ]
+    },
+    {
+      "storyline": "The captain's benching as a simmering local subplot: skipper Maty Ryan, at his fourth World Cup, has not played a minute, with Popovic preferring 22-year-old Patrick Beach in goal. Ryan spoke openly of 'hurting' over the omission and of being told it was a coach's 'gut feeling' rather than anything he had done wrong, while vice-captain Jackson Irvine stressed reacting and focusing on training. Australian press treat it as a test of squad unity and a question mark over the goalkeeper choice into the knockout.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "The Canberra Times (AAP)",
+          "url": "https://www.canberratimes.com.au/story/9295954/skipper-ryan-hurting-over-socceroos-omission/",
+          "lang": "en",
+          "date": "2026-06-21"
+        }
+      ]
+    },
+    {
+      "storyline": "An inverted left-side experiment becomes the tactical talking point: forced by Jacob Italiano's tournament-ending injury, Popovic reconfigured his flanks against Paraguay, keeping veteran Aziz Behich on the left and pushing left-footed Jordan Bos to the right to cut inside. Australian coverage casts the left-foot-on-both-sides setup as a deliberate problem-causer for opponents and a sign of in-tournament tactical growth heading into the Egypt tie.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "The Canberra Times (AAP)",
+          "url": "https://www.canberratimes.com.au/story/9300376/socceroos-veer-left-to-get-it-right-at-world-cup/",
+          "lang": "en",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "Unfinished business and the heat solved indoors: the camp's framing pairs a hunger to right the previous knockout exit with relief at the venue. Behich described the last World Cup's round-of-16 loss as leaving 'a sour taste' and insisted everything is now 'in our hands,' while Foxe welcomed the indoor, air-conditioned Dallas stadium as taking the forecast summer heat out of the equation.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "The Canberra Times (AAP)",
+          "url": "https://www.canberratimes.com.au/story/9300159/socceroos-to-face-egypt-in-bid-for-world-cup-history/",
+          "lang": "en",
+          "date": "2026-06-27"
+        },
+        {
+          "outlet": "The Canberra Times (AAP)",
+          "url": "https://www.canberratimes.com.au/story/9300446/steeled-socceroos-belief-rising-ahead-of-egypt-clash/",
+          "lang": "en",
+          "date": "2026-06-28"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -190,6 +248,45 @@
       "verification": "attributed_context_only",
       "lang": "en",
       "quote_original": null
+    },
+    {
+      "quote": "It's going to be an almighty game, an exciting challenge.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Hayden Foxe",
+      "speaker_role": "Australia (Socceroos) assistant coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "SBS News",
+      "url": "https://www.sbs.com.au/news/article/how-good-is-egypt-meet-australias-world-cup-opponent/41gdncdep",
+      "date": "2026-06-27",
+      "context": "Foxe assessing the Round of 32 opponent Egypt, whom he described as a settled, fearless unit, ahead of the Dallas knockout tie."
+    },
+    {
+      "quote": "He just told me that I haven't done anything wrong or anything. But he just has a gut feeling that he wants to play Beachy.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Maty Ryan",
+      "speaker_role": "Australia (Socceroos) captain and goalkeeper",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "The Canberra Times (AAP)",
+      "url": "https://www.canberratimes.com.au/story/9295954/skipper-ryan-hurting-over-socceroos-omission/",
+      "date": "2026-06-21",
+      "context": "Ryan explaining why coach Tony Popovic preferred 22-year-old Patrick Beach in goal, leaving the four-time World Cup captain on the bench."
+    },
+    {
+      "quote": "Obviously second time out of the group now, but the last one left a bit of a sour taste in my mouth.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Aziz Behich",
+      "speaker_role": "Australia (Socceroos) defender",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "The Canberra Times (AAP)",
+      "url": "https://www.canberratimes.com.au/story/9300159/socceroos-to-face-egypt-in-bid-for-world-cup-history/",
+      "date": "2026-06-27",
+      "context": "Behich on the motivation drawn from Australia's previous knockout exit ahead of the Egypt tie."
     }
   ],
   "local_availability_reporting": [
@@ -231,5 +328,41 @@
     "Socceroos.com.au frames the tie as the nations' 'third meeting' and references only the 2010 friendly; the 1987 President's Cup penalty win is supported by independent head-to-head records but not by the official page, so the official meeting count differs slightly from the broader record.",
     "Mohamed Salah's availability for the Egypt match is reported as doubtful (bandaged leg vs Iran) but not officially resolved at retrieval time."
   ],
-  "source_data_snapshot": []
+  "source_data_snapshot": [
+    {
+      "outlet": "SBS News",
+      "url": "https://www.sbs.com.au/news/article/how-good-is-egypt-meet-australias-world-cup-opponent/41gdncdep",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Assistant coach Hayden Foxe's scouting of Egypt as a settled, fearless unit and the 'almighty game' framing of the R32 tie."
+    },
+    {
+      "outlet": "The Canberra Times (AAP)",
+      "url": "https://www.canberratimes.com.au/story/9295954/skipper-ryan-hurting-over-socceroos-omission/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Maty Ryan benching controversy and squad-unity subplot; verbatim Ryan quote on Popovic's 'gut feeling'; Irvine reaction context."
+    },
+    {
+      "outlet": "The Canberra Times (AAP)",
+      "url": "https://www.canberratimes.com.au/story/9300376/socceroos-veer-left-to-get-it-right-at-world-cup/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Inverted left-side tactical storyline (Behich left, Bos pushed right to cut inside) after Italiano injury."
+    },
+    {
+      "outlet": "The Canberra Times (AAP)",
+      "url": "https://www.canberratimes.com.au/story/9300159/socceroos-to-face-egypt-in-bid-for-world-cup-history/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Behich 'sour taste' / unfinished-business quote and 'in our hands' framing of the Egypt tie."
+    },
+    {
+      "outlet": "The Canberra Times (AAP)",
+      "url": "https://www.canberratimes.com.au/story/9300446/steeled-socceroos-belief-rising-ahead-of-egypt-clash/",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Foxe quote on the indoor, air-conditioned Dallas stadium relieving heat concerns; additional Behich squad-competition quotes (corroboration)."
+    }
+  ]
 }

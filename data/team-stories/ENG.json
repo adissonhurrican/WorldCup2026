@@ -170,6 +170,51 @@
           "lang": "en"
         }
       ]
+    },
+    {
+      "storyline": "Kane writes himself into the record books: in England's own press the dominant fresh angle is Harry Kane becoming the nation's all-time leading World Cup goalscorer, his header against Panama taking him past Gary Lineker's long-standing mark, a milestone framed as fitting reward for the captain even amid an otherwise unconvincing display.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "The Football Association (englandfootball.com)",
+          "url": "https://www.englandfootball.com/articles/2026/Jun/17/harry-kane-england-men-world-cup-goals-record-20261706",
+          "date": "2026-06-27",
+          "lang": "en"
+        },
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/panama-vs-england/report/549837",
+          "date": "2026-06-28",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Pundit split in the British press: Sky Sports' studio voices crystallised the knockout debate, with Gary Neville singling out Jude Bellingham as the one England player who looks fresh and in form, while Roy Keane was sharply critical, saying the win was far from pretty and that Tuchel still does not look settled on his best XI.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/12098/13556701/world-cup-2026-panama-0-2-england-jude-bellingham-stars-as-three-lions-secure-top-spot-in-group-l",
+          "date": "2026-06-28",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Bellingham reliance flagged as a knockout risk: England's national coverage repeatedly returns to the team's dependence on the Real Madrid midfielder, with reporting that others must step up around him if England are to go deep, casting the lop-sided burden on Bellingham as a central tactical question entering the last 32.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/panama-vs-england/report/549837",
+          "date": "2026-06-28",
+          "lang": "en"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -198,6 +243,32 @@
       "verification": "attributed_context_only",
       "lang": "en",
       "quote_original": null
+    },
+    {
+      "quote": "Bellingham is an absolute superstar and our best player in this game by a mile.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Gary Neville",
+      "speaker_role": "Sky Sports pundit / former England defender",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only - re-fetched, exact wording and Gary Neville attribution confirmed by direct fetch of the Sky Sports article",
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/12098/13556701/world-cup-2026-panama-0-2-england-jude-bellingham-stars-as-three-lions-secure-top-spot-in-group-l",
+      "date": "2026-06-28",
+      "context": "Analysing England's 2-0 win over Panama that secured top spot in Group L, before the Round of 32."
+    },
+    {
+      "quote": "I still don't think Tuchel has a clue what his best XI is.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Roy Keane",
+      "speaker_role": "Sky Sports pundit / former Republic of Ireland captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only - re-fetched, exact wording and Roy Keane attribution confirmed by direct fetch of the Sky Sports article",
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/12098/13556701/world-cup-2026-panama-0-2-england-jude-bellingham-stars-as-three-lions-secure-top-spot-in-group-l",
+      "date": "2026-06-28",
+      "context": "Critiquing England's performance against Panama and Tuchel's team selection as the knockouts begin. Full line: 'It wasn't pretty, far from it. I still don't think Tuchel has a clue what his best XI is.'"
     }
   ],
   "local_availability_reporting": [
@@ -357,6 +428,34 @@
       "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-team-profile-history",
       "retrieved_at": "2026-06-28",
       "note": "Historical context attempted (page returned no content on fetch; dropped from sources)"
+    },
+    {
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/12098/13556701/world-cup-2026-panama-0-2-england-jude-bellingham-stars-as-three-lions-secure-top-spot-in-group-l",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Verbatim Neville + Keane pundit quotes (knockout debate, Bellingham praise, Tuchel best-XI critique); Kane record context"
+    },
+    {
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/panama-vs-england/report/549837",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Panama match report: Kane passes Lineker as England's all-time WC scorer, Bellingham reliance storyline, DR Congo last-32 in Atlanta"
+    },
+    {
+      "outlet": "The Football Association (englandfootball.com)",
+      "url": "https://www.englandfootball.com/articles/2026/Jun/17/harry-kane-england-men-world-cup-goals-record-20261706",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Official federation confirmation Kane equalled then broke Lineker's England World Cup goals record (Croatia brace, Panama header)"
+    },
+    {
+      "outlet": "The Football Association (englandfootball.com)",
+      "url": "https://www.englandfootball.com/articles/2026/May/22/england-mens-world-cup-2026-squad-named-by-thomas-tuchel-20262205",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Squad context cross-check (Kane third WC captaincy, Henderson fourth finals); not used for net-new storyline"
     }
   ]
 }

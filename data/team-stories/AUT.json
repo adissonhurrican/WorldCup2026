@@ -158,6 +158,83 @@
           "lang": "en"
         }
       ]
+    },
+    {
+      "storyline": "Spanish-press disrespect as motivation: Austrian outlets pick up on Spain treating the tie lightly, with La Razón calling Austria an 'uncomplicated opponent' the European champions would happily draw, while forward Mikel Oyarzabal admitted Spain were already scoping potential knockout matchups. Austrian media frame this as bulletin-board material for an underdog.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "laola1.at",
+          "url": "https://www.laola1.at/de/red/fussball/wm-2026/sonstiges/oesterreich--spanisches-medium--ein-unkomplizierter-gegner-/",
+          "date": "2026-06-25",
+          "lang": "de"
+        },
+        {
+          "outlet": "oe24.at",
+          "url": "https://www.oe24.at/a/vor-ko-duell-spanien-laestert-ueber-oesterreich-900095136",
+          "date": "2026-06-25",
+          "lang": "de"
+        }
+      ]
+    },
+    {
+      "storyline": "The 'Schande von Kansas' tanking debate: before the decisive Algeria game, Austrian media openly chewed over whether a mutually convenient draw would echo the 1982 'Disgrace of Gijon', now nicknamed a possible 'Schande von Kansas City'. Midfielder Christoph Baumgartner argued that playing the clock smart late in a tight game would be normal football, not a disgrace, while Rangnick insisted you cannot enter a match intending to draw, and ORF framed it as the team leaving a back door open.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "sport.orf.at",
+          "url": "https://sport.orf.at/stories/3158496",
+          "date": "2026-06-26",
+          "lang": "de"
+        },
+        {
+          "outlet": "laola1.at",
+          "url": "https://www.laola1.at/de/red/fussball/oefb-nationalteam/a-team/news/baumi--das-hat-dann-nichts-mit-einer-schande-zu-tun--/",
+          "date": "2026-06-25",
+          "lang": "de"
+        }
+      ]
+    },
+    {
+      "storyline": "Euphoria laced with self-criticism: beneath the celebration, senior players are openly unhappy with how Austria conceded three times to Algeria. Marcel Sabitzer called parts of the display 'unseriös' (unserious) with plenty to analyse, and Michael Gregoritsch admitted the team played with fire and was negligent and nearly punished, signalling the defence must tighten dramatically before facing Spain.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "sn.at",
+          "url": "https://www.sn.at/sport/fussball/wm-2026/rot-weiss-rote-ekstase-in-kansas-city-so-etwas-habe-ich-noch-nicht-erlebt-art-659038",
+          "date": "2026-06-28",
+          "lang": "de"
+        }
+      ]
+    },
+    {
+      "storyline": "Logistics and a thin prep window: the squad flew straight back to its Santa Barbara base camp on the U.S. West Coast, which Austrian reporting frames as a deliberate move to avoid travel chaos before the Los Angeles tie, but it leaves Rangnick only one to three training days to fix the defensive lapses before Spain. The base camp will be dissolved straight after the Round of 16.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "oe24.at",
+          "url": "https://www.oe24.at/a/oefb-kassiert-top-praemie-und-fliegt-zurueck-ins-camp-900095629",
+          "date": "2026-06-28",
+          "lang": "de"
+        }
+      ]
+    },
+    {
+      "storyline": "Money won't make the federation rich: Austrian coverage notes the roughly one-million-dollar FIFA bonus for reaching this round will be almost entirely eaten up by travel, accommodation and organisation, with ÖFB CEO Bernhard Neuhold saying essentially nothing will be left over, and the next big payout only coming with a quarter-final spot.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "oe24.at",
+          "url": "https://www.oe24.at/a/oefb-kassiert-top-praemie-und-fliegt-zurueck-ins-camp-900095629",
+          "date": "2026-06-28",
+          "lang": "de"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -186,6 +263,32 @@
       "context": "Rejecting the idea that Austria would try to avoid a finishing position that meant facing Spain in the knockout round.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "Partly that was unserious. There is a lot to analyse to get better into the tournament.",
+      "quote_original": "Teilweise war das unseriös. Es gibt viel zu analysieren, um besser in das Turnier reinzukommen.",
+      "lang": "de",
+      "speaker_name": "Marcel Sabitzer",
+      "speaker_role": "Austria midfielder",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "sn.at",
+      "url": "https://www.sn.at/sport/fussball/wm-2026/rot-weiss-rote-ekstase-in-kansas-city-so-etwas-habe-ich-noch-nicht-erlebt-art-659038",
+      "date": "2026-06-28",
+      "context": "Self-critical reaction after Austria conceded three times to Algeria yet still qualified, signalling work needed before Spain."
+    },
+    {
+      "quote": "It is almost like a fairytale. It is one of the most beautiful moments of my career.",
+      "quote_original": "Es ist fast schon märchenhaft. Es ist einer der schönsten Momente meiner Karriere.",
+      "lang": "de",
+      "speaker_name": "Sasa Kalajdzic",
+      "speaker_role": "Austria forward",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "sn.at",
+      "url": "https://www.sn.at/sport/fussball/wm-2026/rot-weiss-rote-ekstase-in-kansas-city-so-etwas-habe-ich-noch-nicht-erlebt-art-659038",
+      "date": "2026-06-28",
+      "context": "Kalajdzic on scoring the stoppage-time equaliser against Algeria that sent Austria into the knockout round."
     }
   ],
   "local_availability_reporting": [
@@ -281,6 +384,55 @@
       "url": "https://www.foxsports.com/stories/soccer/world-cup-round-32-predictions-one-thing-watch-every-team",
       "retrieved_at": "2026-06-28",
       "note": "Preview centers on Spain's injuries (Nico Williams, Yeremy Pino); only brief note on Austria counterattacking — NOT a strong source for Austria's tactics, removed as a tactics anchor."
+    },
+    {
+      "outlet": "sn.at",
+      "url": "https://www.sn.at/sport/fussball/wm-2026/oefb-teamchef-ralf-rangnick-nach-wm-krimi-mit-seinen-nerven-am-ende-in-100000-versuchen-schiessen-wir-kein-tor-art-659139",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Nerves/euphoria framing after the Algeria thriller (the headline '100.000 Versuchen' line was NOT promoted to a quote — body paywalled and the actual utterance is conditional)."
+    },
+    {
+      "outlet": "sn.at",
+      "url": "https://www.sn.at/sport/fussball/wm-2026/rot-weiss-rote-ekstase-in-kansas-city-so-etwas-habe-ich-noch-nicht-erlebt-art-659038",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Self-critical mood; verbatim Sabitzer 'unseriös', Gregoritsch 'fahrlässig', Kalajdzic 'fast schon märchenhaft' quotes (all confirmed)."
+    },
+    {
+      "outlet": "laola1.at",
+      "url": "https://www.laola1.at/de/red/fussball/wm-2026/sonstiges/oesterreich--spanisches-medium--ein-unkomplizierter-gegner-/",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Spanish-media disrespect angle: La Razón 'unkomplizierter Gegner' (confirmed)."
+    },
+    {
+      "outlet": "oe24.at",
+      "url": "https://www.oe24.at/a/vor-ko-duell-spanien-laestert-ueber-oesterreich-900095136",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Spain dismissive of Austria; Oyarzabal scoping matchups (German rendering, confirmed)."
+    },
+    {
+      "outlet": "oe24.at",
+      "url": "https://www.oe24.at/a/oefb-kassiert-top-praemie-und-fliegt-zurueck-ins-camp-900095629",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Santa Barbara base camp, 1-3 prep days, prize-money/Neuhold logistics angle (all five points confirmed verbatim)."
+    },
+    {
+      "outlet": "sport.orf.at",
+      "url": "https://sport.orf.at/stories/3158496",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "'Hintertür offen' / Schande von Kansas tanking debate; Rangnick 'Du kannst nicht in ein Spiel gehen mit dem Vorsatz, remis zu spielen' + Baumgartner framing (confirmed)."
+    },
+    {
+      "outlet": "laola1.at",
+      "url": "https://www.laola1.at/de/red/fussball/oefb-nationalteam/a-team/news/baumi--das-hat-dann-nichts-mit-einer-schande-zu-tun--/",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Baumgartner 'Das hat dann aber nichts mit einer Schande von Kansas zu tun' context (confirmed verbatim)."
     }
   ]
 }

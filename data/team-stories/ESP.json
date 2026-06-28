@@ -176,6 +176,83 @@
           "lang": "en"
         }
       ]
+    },
+    {
+      "storyline": "Spanish previews firm up the fixture's logistics and history the file lacked: Spain face Austria on 2 July at SoFi Stadium in Los Angeles (21:00 CET / noon local, on La1 and DAZN), and outlets recall the only previous World Cup meeting was at Argentina 1978, when Austria beat Spain 2-1 (Schachner and Hans Krankl scoring, Dani replying) on 3 June 1978 - giving La Roja a small score to settle nearly half a century on.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "El Debate",
+          "url": "https://www.eldebate.com/deportes/mundial-futbol-2026/20260628/espana-vs-austria-horario-donde-ver-dieciseisavos-final-mundial-2026_433464.html",
+          "date": "2026-06-28",
+          "lang": "es"
+        },
+        {
+          "outlet": "Los Mundiales de Futbol",
+          "url": "https://www.losmundialesdefutbol.com/partidos/1978_austria_espana.php",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "Spanish reporting clarifies De la Fuente has no rescue route for his wing injuries: under FIFA's rules the squad-substitution window for injuries (up to 24 hours before a team's first match, goalkeepers excepted) has long closed, so Spain cannot call up replacements for Nico Williams or Yeremy Pino. With Lamine Yamal framed as effectively the only natural winger left, the press expects De la Fuente to improvise the flanks against Austria with non-wingers - Alex Baena, Dani Olmo, Ferran Torres and Gavi - while leaning on Pedri to unlock a packed Austrian block.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sports Illustrated (es-us)",
+          "url": "https://www.si.com/es-us/futbol/espana-puede-convocar-reemplazos-por-las-posibles-bajas-de-nico-williams-y-yeremy-pino",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "The Spanish press sizes up Austria with a mix of respect and suspicion. El Espanol casts a sceptical eye on how Rangnick's side reached the knockouts, branding the agonising 3-3 with Algeria a 'pacto de no agresion' it nicknamed the 'pacto de Kansas City' (echoing the infamous 1982 Gijon pact), and flags that captain David Alaba, hampered by Real Madrid injuries, has not finished a single group game. The threat is framed as Rangnick's pressing plus veterans Arnautovic and Sabitzer, with Spain told they must own the ball and stay patient to break a deliberately defensive Austria.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "El Espanol",
+          "url": "https://www.elespanol.com/deportes/futbol/mundial/20260628/austria-rival-espana-dieciseisavos-final-experta-biscottos-capitania-david-alaba-declive/1003744302728_0.html",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "Beyond the immediate tie, Spanish previews already map a glamorous projected route: a possible first-ever World Cup 'duelo iberico' against Portugal as soon as the next round, then a potential semi-final rematch with France - the side Spain beat 2-1 (Dani Olmo, Lamine Yamal) at Euro 2024 - framing Austria as the gateway to a marquee run.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "El Gol Digital",
+          "url": "https://www.elgoldigital.com/futbol/seleccion-espana/espana-camino-final-mundial-2026-austria-portugal-eeuu-francia/",
+          "date": "2026-06-28",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "Local coverage celebrates Lamine Yamal's group-stage milestone as a confidence marker heading into the knockouts: his early finish against Saudi Arabia (set up by Mikel Oyarzabal) made him one of the youngest scorers in World Cup history, passing the age at which Lionel Messi netted his first World Cup goal and trailing only a short list headed by Pele - a personal narrative Spanish outlets lean on as a reason for optimism around their teenage talisman.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sports Illustrated (es-us)",
+          "url": "https://www.si.com/es-us/futbol/lamine-yamal-hace-historia-en-el-mundial-2026-donde-queda-entre-los-goleadores-mas-jovenes-de-todos-los-tiempos",
+          "date": "2026-06-23",
+          "lang": "es"
+        },
+        {
+          "outlet": "Ultima Hora",
+          "url": "https://www.ultimahora.es/deportes/mundial-2026/2026/06/23/2656619/lamine-yamal-antes-messi.html",
+          "date": "2026-06-23",
+          "lang": "es"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -204,6 +281,19 @@
       "context": "Instagram message after suffering a moderate-grade adductor injury against Uruguay, putting his knockout availability in doubt.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "It could be a collarbone injury. He is suffering a lot. He'll have tests tomorrow.",
+      "quote_original": "Puede ser una lesion de clavicula. Esta sufriendo mucho. Manana pasara unas pruebas.",
+      "lang": "es",
+      "speaker_name": "Luis de la Fuente",
+      "speaker_role": "Spain head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "OKDiario",
+      "url": "https://okdiario.com/mundial/fuente-yeremy-pino-seguramente-tenga-clavicula-rota-18870864",
+      "date": "2026-06-27",
+      "context": "Post-Uruguay press conference on Yeremy Pino's shoulder before medical tests; imaging later ruled out a fracture (see existing file). Re-verified verbatim at OKDiario; DAZN carries a near-identical variant ('puede ser una lesion de hombro, puede ser una lesion de clavicula... manana le hacen unas pruebas'), so wording is treated as source-specific to OKDiario."
     }
   ],
   "local_availability_reporting": [
@@ -339,6 +429,55 @@
       "retrieved_at": "2026-06-28",
       "lang": "en",
       "used_for": "De la Fuente 2010 parallel framing (re-verified)"
+    },
+    {
+      "outlet": "El Espanol",
+      "url": "https://www.elespanol.com/deportes/futbol/mundial/20260628/austria-rival-espana-dieciseisavos-final-experta-biscottos-capitania-david-alaba-declive/1003744302728_0.html",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Austria opponent profile: alleged Algeria 'biscotto'/Kansas City pact, Alaba decline, Rangnick/Arnautovic/Sabitzer threat, Spain told to keep possession"
+    },
+    {
+      "outlet": "OKDiario",
+      "url": "https://okdiario.com/mundial/fuente-yeremy-pino-seguramente-tenga-clavicula-rota-18870864",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "De la Fuente verbatim quote on Pino (collarbone/tests). NOTE: the 'heroicidad' headline phrasing was NOT used as a quote - it is a headline, not a verbatim utterance."
+    },
+    {
+      "outlet": "Sports Illustrated (es-us)",
+      "url": "https://www.si.com/es-us/futbol/espana-puede-convocar-reemplazos-por-las-posibles-bajas-de-nico-williams-y-yeremy-pino",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "FIFA no-replacement rule (Art 24.2), wing-cover options (Yamal only natural winger; Baena/Olmo/Ferran/Gavi). De la Fuente 'sobrecarga' line is paraphrased here, not used as a verbatim quote."
+    },
+    {
+      "outlet": "Sports Illustrated (es-us)",
+      "url": "https://www.si.com/es-us/futbol/lamine-yamal-hace-historia-en-el-mundial-2026-donde-queda-entre-los-goleadores-mas-jovenes-de-todos-los-tiempos",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Lamine Yamal youngest-scorer record vs Saudi Arabia, Oyarzabal assist, surpassing Messi's first-WC-goal age"
+    },
+    {
+      "outlet": "El Gol Digital",
+      "url": "https://www.elgoldigital.com/futbol/seleccion-espana/espana-camino-final-mundial-2026-austria-portugal-eeuu-francia/",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Projected path (Austria, possible Portugal next-round 'duelo iberico', possible France SF), Euro 2024 France win reference"
+    },
+    {
+      "outlet": "El Debate",
+      "url": "https://www.eldebate.com/deportes/mundial-futbol-2026/20260628/espana-vs-austria-horario-donde-ver-dieciseisavos-final-mundial-2026_433464.html",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Fixture date/time (2 July, 21:00 CET / noon LA), SoFi Stadium, broadcast (La1/DAZN)"
+    },
+    {
+      "outlet": "Los Mundiales de Futbol",
+      "url": "https://www.losmundialesdefutbol.com/partidos/1978_austria_espana.php",
+      "lang": "es",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Spain-Austria 1978 head-to-head (Austria 2-1; Schachner 9', Krankl 76', Dani 21'; 3 Jun 1978) - fills file gap. Venue/city not on page, so not asserted."
     }
   ]
 }

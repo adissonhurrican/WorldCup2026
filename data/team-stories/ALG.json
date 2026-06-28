@@ -176,6 +176,58 @@
           "lang": "en"
         }
       ]
+    },
+    {
+      "storyline": "National-press selection debate ('4 pieces of the puzzle'): Algerian/French-African coverage frames Petković as still juggling four unresolved choices before the Switzerland tie — the goalkeeper question (Oussama Benbot, recalled from retirement, erred against Austria, reopening debate with the earlier-criticised Luca Zidane), Houssem Aouar's claim to a midfield berth after his two assists set up Mahrez, the left-flank call between an injury-doubtful Mohamed Amoura and the harder-working Farès Chaïbi, and how to stop the individual defensive errors that leaked goals across the group. Talk of reverting to a five-man defensive shape tested in friendlies is reported.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Afrik-Foot",
+          "url": "https://www.afrik-foot.com/algerie-petkovic-avance-sur-son-puzzle-mais-4-pieces-interrogent-encore-avant-le-match-contre-la-suisse-coupe-du-monde-2026",
+          "date": "2026-06-28",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "Petković's insider read as a 'battle in the shadows': Algerian outlet Algerie360 presents the coach's seven years building Switzerland (2014-2021) as a concrete analytical edge — he knows the Nati's methods, schemes and collective mechanisms — framing the tactical-preparation duel as competitive as the match itself, while portraying this Swiss side as a disciplined, cohesive unit that compensates for the absence of the old Shaqiri-era star power.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Algerie360",
+          "url": "https://www.algerie360.com/mondial-2026-ce-quil-faut-savoir-sur-la-suisse-cette-veille-connaissance-de-petkovic/",
+          "date": "2026-06-28",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "Forward-looking, respectful tone in the Algerian press after the Austria comeback: TSA's at-the-whistle reactions piece gathers the squad immediately pivoting to Switzerland rather than dwelling on the drama — Mahrez calling the next match the priority, Maza bracing for a complicated game, and Aouar voicing respect for a Swiss side that 'plays very well' — capturing a measured, focused mood inside the camp ahead of only Algeria's second-ever knockout appearance.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "TSA (Tout Sur l'Algérie)",
+          "url": "https://www.tsa-algerie.com/mondial-2026-algerie-suisse-16es-a-chaud-petkovic-mahrez-maza/",
+          "date": "2026-06-28",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "Mahrez frames qualification as merited, not lucky: in the Algerian Arabic-language press, the captain pushes back on any sense that the chaotic Austria draw flattered Algeria, insisting the side earned its passage through the level it produced and a fighting spirit — a message squarely aimed at a home audience still scarred by the 2022 Blida failure.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Shihab Presse (شهاب برس)",
+          "url": "https://www.shihabpresse.dz/%D8%B1%D9%8A%D8%A7%D8%B6-%D9%85%D8%AD%D8%B1%D8%B2-%D8%A7%D9%84%D8%AA%D8%A3%D9%87%D9%84-%D9%83%D8%A7%D9%86-%D9%85%D8%B3%D8%AA%D8%AD%D9%82%D9%8B%D8%A7/",
+          "date": "2026-06-28",
+          "lang": "ar"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -204,6 +256,45 @@
       "verification": "attributed_context_only",
       "quote_original": null,
       "lang": "en"
+    },
+    {
+      "quote": "It's a solid block. I know their style of play, even if they've evolved.",
+      "quote_original": "C'est un bloc solide. Je connais leur style de jeu, même s'ils ont évolué.",
+      "lang": "fr",
+      "speaker_name": "Vladimir Petković",
+      "speaker_role": "Algeria head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "TSA (Tout Sur l'Algérie)",
+      "url": "https://www.tsa-algerie.com/mondial-2026-algerie-suisse-16es-a-chaud-petkovic-mahrez-maza/",
+      "date": "2026-06-28",
+      "context": "At-the-whistle reaction after the 3-3 with Austria, previewing the Round of 32 against Switzerland, the team he coached from 2014 to 2021."
+    },
+    {
+      "quote": "The most important thing is the next match [against Switzerland] and trying to qualify.",
+      "quote_original": "Le plus important, c'est le prochain match [contre la Suisse] et essayer de se qualifier.",
+      "lang": "fr",
+      "speaker_name": "Riyad Mahrez",
+      "speaker_role": "Algeria captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "TSA (Tout Sur l'Algérie)",
+      "url": "https://www.tsa-algerie.com/mondial-2026-algerie-suisse-16es-a-chaud-petkovic-mahrez-maza/",
+      "date": "2026-06-28",
+      "context": "Post-Austria reaction, pivoting from his stoppage-time goals to the knockout tie with Switzerland."
+    },
+    {
+      "quote": "We deserved to advance based on the level we showed.",
+      "quote_original": "كنا نستحق العبور بالنظر إلى المستوى الذي قدمناه",
+      "lang": "ar",
+      "speaker_name": "Riyad Mahrez",
+      "speaker_role": "Algeria captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Shihab Presse (شهاب برس)",
+      "url": "https://www.shihabpresse.dz/%D8%B1%D9%8A%D8%A7%D8%B6-%D9%85%D8%AD%D8%B1%D8%B2-%D8%A7%D9%84%D8%AA%D8%A3%D9%87%D9%84-%D9%83%D8%A7%D9%86-%D9%85%D8%B3%D8%AA%D8%AD%D9%82%D9%8B%D8%A7/",
+      "date": "2026-06-28",
+      "context": "Mahrez rejecting any suggestion the dramatic Austria draw flattered Algeria's passage to the knockout phase."
     }
   ],
   "local_availability_reporting": [
@@ -289,6 +380,34 @@
       "url": "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/team-news/algeria-vs-austria-injury-suspension-list-predicted-xis_600063.html",
       "retrieved_at": "2026-06-28",
       "note": "No injuries/suspensions reported pre-Austria."
+    },
+    {
+      "outlet": "TSA (Tout Sur l'Algérie)",
+      "url": "https://www.tsa-algerie.com/mondial-2026-algerie-suisse-16es-a-chaud-petkovic-mahrez-maza/",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "At-the-whistle Algerian-press reactions; verbatim French quotes re-verified for Petković ('bloc solide / je connais leur style'), Mahrez ('le prochain match... essayer de se qualifier') and Maza ('un match compliqué'); respectful forward-looking mood toward Switzerland."
+    },
+    {
+      "outlet": "Shihab Presse (شهاب برس)",
+      "url": "https://www.shihabpresse.dz/%D8%B1%D9%8A%D8%A7%D8%B6-%D9%85%D8%AD%D8%B1%D8%B2-%D8%A7%D9%84%D8%AA%D8%A3%D9%87%D9%84-%D9%83%D8%A7%D9%86-%D9%85%D8%B3%D8%AA%D8%AD%D9%82%D9%8B%D8%A7/",
+      "lang": "ar",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Arabic-language Mahrez quote re-verified verbatim ('كنا نستحق العبور بالنظر إلى المستوى الذي قدمناه'); merited-qualification framing for a home audience."
+    },
+    {
+      "outlet": "Algerie360",
+      "url": "https://www.algerie360.com/mondial-2026-ce-quil-faut-savoir-sur-la-suisse-cette-veille-connaissance-de-petkovic/",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "National-press 'battle in the shadows' (la bataille dans l'ombre) tactical-knowledge storyline; Petković's 2014-2021 Swiss tenure as analytical edge; confirmed NO verbatim Petković quotes in piece (author analysis)."
+    },
+    {
+      "outlet": "Afrik-Foot",
+      "url": "https://www.afrik-foot.com/algerie-petkovic-avance-sur-son-puzzle-mais-4-pieces-interrogent-encore-avant-le-match-contre-la-suisse-coupe-du-monde-2026",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "'4 pieces of the puzzle' R32 selection-debate storyline (Benbot/Zidane GK, Aouar role, Amoura injury vs Chaïbi, defensive errors, possible 5-man shape); fills the file's flagged R32 team-news gap; confirmed no attributed verbatim quotes."
     }
   ],
   "gaps": [

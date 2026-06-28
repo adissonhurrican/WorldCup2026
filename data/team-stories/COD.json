@@ -164,6 +164,70 @@
           "lang": "en"
         }
       ]
+    },
+    {
+      "storyline": "A local selection controversy the international press missed: before the finals, Congolese outlet MediaCongo led a home debate over Desabre's 26-man list as 'sans audace' (without boldness) — a squad built on continuity and veteran experience rather than fresh blood, with critics questioning the limited game-time of some call-ups and a recurring goal-scoring fragility. The qualification has since softened the criticism, but it captures a genuinely Congolese tension between trust in the established core and a wish for renewal.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "MediaCongo",
+          "url": "https://www.mediacongo.net/article-actualite-163825_coupe_du_monde_2026_les_leopards_rd_congo_une_liste_sans_audace_qui_interroge.html",
+          "date": "2026-05-20",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "The comeback recast as a planned move, not an accident: in the African and Congolese-language coverage Desabre frames the Uzbekistan turnaround as the payoff of a deliberate three-match plan — keeping legs fresh across the group so the bench could detonate the decisive game. Reporters tie this to his shift away from the five-man defence used in the opening matches and a simultaneous attacking triple-change, reframing the 'in-game gamble' as long-prepared design.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Afrik-Foot",
+          "url": "https://www.afrik-foot.com/coupe-du-monde-2026-on-avait-une-strategie-comment-la-rdc-a-renverse-la-table-pour-soffrir-une-qualif-historique",
+          "date": "2026-06-28",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "An identity of dignified parity and never-surrender, voiced at home: Congolese national media set the Leopards' character not as happy tourists but as a side that 'looks Portugal in the eye', built on Congolese solidarity, defensive discipline and refusing to give in once behind. Radio Okapi, the Kinshasa national broadcaster, framed the qualification as the country 'writing its history in the most beautiful way', anchoring the run as a national identity story rather than a lucky upset.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Actualité.cd",
+          "url": "https://actualite.cd/2026/06/17/mondial-la-rdc-regarde-le-portugal-dans-les-yeux",
+          "date": "2026-06-17",
+          "lang": "fr"
+        },
+        {
+          "outlet": "Radio Okapi",
+          "url": "https://www.radiookapi.net/2026/06/28/actualite/sport/premiere-victoire-et-premiere-qualification-de-la-rdc-en-16es-de-finale",
+          "date": "2026-06-28",
+          "lang": "fr"
+        }
+      ]
+    },
+    {
+      "storyline": "The federation as cheerleader-in-chief: FECOFA president Véron Mosengo-Omba publicly rallied the squad after the Portugal draw, turning institutional disappointment into a fight-on message, and the federation rode the qualification with the rallying slogan 'Une équipe. Une nation. Une histoire'. It is a distinctly Congolese, top-down framing of the run as a collective national project rather than a sporting result.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "MediaCongo",
+          "url": "https://www.mediacongo.net/article-actualite-164803_mondial_2026_veron_mosengo_omba_appelle_les_leopards_a_poursuivre_le_combat_malgre_les_regrets_face_au_portugal.html",
+          "date": "2026-06-18",
+          "lang": "fr"
+        },
+        {
+          "outlet": "Afrik-Foot",
+          "url": "https://www.afrik-foot.com/angleterre-rdc-date-et-heure-de-ce-16e-de-finale-de-la-coupe-du-monde-2026",
+          "date": "2026-06-28",
+          "lang": "fr"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -192,6 +256,32 @@
       "context": "At the official state reception honoring the squad for qualifying, fulfilling a promised reward to the players.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "We had a strategy across three matches. We kept fresh players for these games, and that made the difference.",
+      "quote_original": "On avait une stratégie sur trois matches. On avait gardé des joueurs frais sur ces trois rencontres, et cela a fait la différence.",
+      "lang": "fr",
+      "speaker_name": "Sébastien Desabre",
+      "speaker_role": "DR Congo head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Afrik-Foot",
+      "url": "https://www.afrik-foot.com/coupe-du-monde-2026-on-avait-une-strategie-comment-la-rdc-a-renverse-la-table-pour-soffrir-une-qualif-historique",
+      "date": "2026-06-28",
+      "context": "After the 3-1 comeback win over Uzbekistan that sealed the historic knockout berth, explaining the turnaround as a prepared squad-rotation plan rather than improvisation."
+    },
+    {
+      "quote": "The road continues. The fight continues. And the dream remains intact.",
+      "quote_original": "La route continue. Le combat continue. Et le rêve demeure intact.",
+      "lang": "fr",
+      "speaker_name": "Véron Mosengo-Omba",
+      "speaker_role": "President of FECOFA (DR Congo Football Federation)",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "MediaCongo",
+      "url": "https://www.mediacongo.net/article-actualite-164803_mondial_2026_veron_mosengo_omba_appelle_les_leopards_a_poursuivre_le_combat_malgre_les_regrets_face_au_portugal.html",
+      "date": "2026-06-18",
+      "context": "A public message (via X) from the FECOFA president rallying the Leopards after the 1-1 draw with Portugal, urging them to fight on through the group stage. Corrected to a single contiguous verbatim sentence-run; the originally proposed wording spliced two non-adjacent sentences."
     }
   ],
   "local_availability_reporting": [
@@ -276,6 +366,48 @@
       "url": "https://www.france24.com/fr/sports/20260628-mondial-2026-une-qualification-historique-pour-la-rdc-la-colombie-termine-devant-le-portugal",
       "retrieved_at": "2026-06-28",
       "note": "Headline-level confirmation of historic RDC qualification; full body returned HTTP 403 on fetch"
+    },
+    {
+      "outlet": "Radio Okapi",
+      "url": "https://www.radiookapi.net/2026/06/28/actualite/sport/premiere-victoire-et-premiere-qualification-de-la-rdc-en-16es-de-finale",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Kinshasa national broadcaster framing: 'exploit historique', country 'writes its history in the most beautiful way', 1974 no-goals context, first-ever knockout berth"
+    },
+    {
+      "outlet": "MediaCongo",
+      "url": "https://www.mediacongo.net/article-actualite-163825_coupe_du_monde_2026_les_leopards_rd_congo_une_liste_sans_audace_qui_interroge.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Local pre-tournament debate over Desabre's 'liste sans audace' (continuity over renewal, veteran age, scoring fragility) — net-new local controversy"
+    },
+    {
+      "outlet": "MediaCongo",
+      "url": "https://www.mediacongo.net/article-actualite-164803_mondial_2026_veron_mosengo_omba_appelle_les_leopards_a_poursuivre_le_combat_malgre_les_regrets_face_au_portugal.html",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "FECOFA president Mosengo-Omba's rally message (via X) after the Portugal draw (verbatim French quotes captured)"
+    },
+    {
+      "outlet": "Actualité.cd",
+      "url": "https://actualite.cd/2026/06/17/mondial-la-rdc-regarde-le-portugal-dans-les-yeux",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "National identity framing: dignified parity ('regarde le Portugal dans les yeux'), Congolese solidarity, never-surrender; first Congolese WC goal context"
+    },
+    {
+      "outlet": "Afrik-Foot",
+      "url": "https://www.afrik-foot.com/coupe-du-monde-2026-on-avait-une-strategie-comment-la-rdc-a-renverse-la-table-pour-soffrir-une-qualif-historique",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Desabre verbatim three-match-strategy quote; reframing the comeback as a planned squad-rotation move; 5-at-back to 4-line switch + triple attacking change"
+    },
+    {
+      "outlet": "Afrik-Foot",
+      "url": "https://www.afrik-foot.com/angleterre-rdc-date-et-heure-de-ce-16e-de-finale-de-la-coupe-du-monde-2026",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "England vs DRC framing in African press (first-ever meeting, momentum-vs-reality, defence must tighten); FECOFA slogan 'Une équipe. Une nation. Une histoire'"
     }
   ]
 }

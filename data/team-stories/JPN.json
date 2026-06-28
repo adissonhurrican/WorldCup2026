@@ -176,6 +176,64 @@
           "lang": "en"
         }
       ]
+    },
+    {
+      "storyline": "Japan's national football press has opened a detailed tactical debate about the 'hidden drawers' Moriyasu has kept in reserve specifically for a Brazil knockout tie. Football Channel's analysis argues he rotated heavily through the group precisely so he could spring a Brazil-specific plan: deploying Junnosuke Suzuki at left wing-back to double up on Brazil's right-side attack, pushing Daizen Maeda to a true central striker to press the Brazil centre-backs, an asymmetric three-five-two with Kamada added in midfield to crowd out Brazil's trio, and a late-game tall 'tower' front pairing Ueda and Ogawa with Machino or Goto to bombard the box from crosses. The framing is that this is the match Moriyasu has been saving his most ambitious ideas for.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Football Channel (フットボールチャンネル)",
+          "url": "https://www.footballchannel.jp/2026/06/28/post934101/",
+          "date": "2026-06-28",
+          "lang": "ja"
+        }
+      ]
+    },
+    {
+      "storyline": "A veteran-leadership angle has emerged in the Japanese press around 39-year-old Yuto Nagatomo. After the Sweden draw confirmed the Brazil tie, Moriyasu singled out his introduction of Nagatomo as a calming, steadying influence when the match was level and chaotic, crediting the long-serving full-back with telling the side not to panic and bringing composure to an evenly matched contest. The local coverage casts the elder statesman's settling presence as a quiet asset heading into the biggest knockout test.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sakanowa (サカノワ)",
+          "url": "https://sakanowa.jp/topics/110177",
+          "date": "2026-06-26",
+          "lang": "ja"
+        }
+      ]
+    },
+    {
+      "storyline": "A distinctly local mood story has gripped Japanese fans two days out: FIFA confirmed the Samurai Blue will break out their much-loved white away kit against Brazil after wearing the traditional blue throughout the group stage. The Japanese press frames the kit reveal as long-awaited 'good news', with supporters reacting joyfully online and urging the team to turn the white shirt into a 'legendary' one by beating Brazil in it. The white kit had been a commercial hit since its spring friendly debut, and its first World Cup-proper appearance landing for the Brazil knockout has become its own feel-good narrative.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Soccer Digest Web (サッカーダイジェストWeb)",
+          "url": "https://www.soccerdigestweb.com/news/detail/id=193237",
+          "date": "2026-06-28",
+          "lang": "ja"
+        }
+      ]
+    },
+    {
+      "storyline": "Japanese outlets have surfaced the full head-to-head ledger as a motivational backdrop: Japan's all-time record against Brazil reads one win, two draws and eleven defeats, with that lone victory being last October's 3-2 comeback in Tokyo. The Japan Football Association's own match report underlines that the October win was Japan's first ever over Brazil in fourteen meetings, a result the national press repeatedly invokes as evidence the gap has narrowed and that the knockout tie is genuinely winnable rather than a foregone conclusion.",
+      "source_tier": "official",
+      "verification": "fact_grade",
+      "sources": [
+        {
+          "outlet": "JFA — Japan Football Association (日本サッカー協会)",
+          "url": "https://www.jfa.jp/news/00035627/",
+          "date": "2025-10-15",
+          "lang": "ja"
+        },
+        {
+          "outlet": "Soccer King (サッカーキング)",
+          "url": "https://www.soccer-king.jp/news/japan/national/20260626/2177048.html",
+          "date": "2026-06-26",
+          "lang": "ja"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -204,6 +262,32 @@
       "verification": "attributed_context_only",
       "lang": "en",
       "quote_original": null
+    },
+    {
+      "quote": "I personally am looking forward to being able to face the real Brazil.",
+      "quote_original": "本気のブラジルと戦えるということを私自身楽しみにしております",
+      "lang": "ja",
+      "speaker_name": "Hajime Moriyasu",
+      "speaker_role": "Japan head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Football Channel (フットボールチャンネル)",
+      "url": "https://news.yahoo.co.jp/articles/1bd14191efa08d8690f56e8c653ce1cca20fa301",
+      "date": "2026-06-26",
+      "context": "Post-Sweden press conference, on the Round of 32 draw against Brazil; distinct from his 'pushover' and 'development' remarks already on file."
+    },
+    {
+      "quote": "He brought calm to the team in an evenly matched contest.",
+      "quote_original": "五分五分の戦いのなかでチームに落ち着きをもたらしてくれました",
+      "lang": "ja",
+      "speaker_name": "Hajime Moriyasu",
+      "speaker_role": "Japan head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Sakanowa (サカノワ)",
+      "url": "https://sakanowa.jp/topics/110177",
+      "date": "2026-06-26",
+      "context": "Crediting veteran full-back Yuto Nagatomo's introduction during the 1-1 Sweden draw for steadying the side."
     }
   ],
   "local_availability_reporting": [],
@@ -294,6 +378,48 @@
       "url": "https://www.npr.org/2022/12/05/1140696436/world-cup-japan-croatia",
       "retrieved_at": "2026-06-28",
       "note": "Historical: 2022 Croatia loss (re-fetch timed out; corroborated by The Analyst/Sky Sports)"
+    },
+    {
+      "outlet": "Football Channel (フットボールチャンネル)",
+      "url": "https://www.footballchannel.jp/2026/06/28/post934101/",
+      "lang": "ja",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Tactical-options storyline: Suzuki at left WB, Maeda as central striker, asymmetric 3-5-2 with Kamada, late tall 'tower' front (Ueda+Ogawa+Machino/Goto). Author 河治良幸 (Yoshiyuki Kawaji). No direct Moriyasu quote in piece. Re-verified 2026-06-28."
+    },
+    {
+      "outlet": "Sakanowa (サカノワ)",
+      "url": "https://sakanowa.jp/topics/110177",
+      "lang": "ja",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Nagatomo veteran-influence storyline + verbatim Moriyasu quote on calm; post-Sweden press conference. Re-verified verbatim 2026-06-28."
+    },
+    {
+      "outlet": "Soccer Digest Web (サッカーダイジェストWeb)",
+      "url": "https://www.soccerdigestweb.com/news/detail/id=193237",
+      "lang": "ja",
+      "retrieved_at": "2026-06-28",
+      "used_for": "White away-kit 'good news' mood storyline; fan reaction; FIFA-confirmed kit choice for Brazil tie (June 30). Re-verified 2026-06-28."
+    },
+    {
+      "outlet": "Football Channel via Yahoo News Japan",
+      "url": "https://news.yahoo.co.jp/articles/1bd14191efa08d8690f56e8c653ce1cca20fa301",
+      "lang": "ja",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Verbatim Moriyasu '本気のブラジル' (real Brazil) quote, post-Sweden presser. Re-verified verbatim 2026-06-28 (quote sits within '...本気のブラジルと戦えるということを私自身楽しみにしております')."
+    },
+    {
+      "outlet": "Soccer King (サッカーキング)",
+      "url": "https://www.soccer-king.jp/news/japan/national/20260626/2177048.html",
+      "lang": "ja",
+      "retrieved_at": "2026-06-28",
+      "used_for": "All-time head-to-head ledger vs Brazil (1 win, 2 draws, 11 losses) framing the R32; Fuji TV broadcast context. WebFetch body empty (anti-scrape); existence + support confirmed via WebSearch (title verbatim) + Yahoo/Ultra-Soccer mirrors."
+    },
+    {
+      "outlet": "JFA — Japan Football Association (日本サッカー協会)",
+      "url": "https://www.jfa.jp/news/00035627/",
+      "lang": "ja",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Official-tier corroboration: Oct 14 2025 3-2 win was Japan's first ever over Brazil in 14 meetings (upgrades the friendly-win reference from press to federation source). Re-verified 2026-06-28."
     }
   ]
 }

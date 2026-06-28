@@ -158,6 +158,82 @@
           "lang": "nl"
         }
       ]
+    },
+    {
+      "storyline": "A homecoming/reunion subplot runs through the Dutch national press: NOS frames the Morocco tie as a duel with 'Marokkaanse vrienden' (Moroccan friends), with several Oranje players relishing facing former Eredivisie teammates and ex-clubmates (the piece names Mazraoui, Saibari, Amrabat and Salah-Eddine among the Dutch-linked Morocco players), casting the round of 32 as exactly the kind of knockout night they came to the World Cup for. This adds a warmer, personal layer to the Mazraoui/born-in-NL subplot already noted in the file.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "NOS",
+          "url": "https://nos.nl/artikel/2620353-oranje-kijkt-uit-naar-duel-met-marokkaanse-vrienden-hier-speel-je-wk-voor",
+          "date": "2026-06-27",
+          "lang": "nl"
+        }
+      ]
+    },
+    {
+      "storyline": "Dutch and international press elevate Achraf Hakimi to the central threat ahead of the tie: Koeman singled out the Morocco captain as the star man and a top-class right-back his side must prepare specifically for, describing an interesting game against a team that wants to attack with a full-back who can play attacking on every position, reframing the Dutch defensive concern around containing one elite individual. Players echoed wariness, with De Jong calling Morocco a 'heel sterk team' (very strong team) after watching them play Brazil.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Goal",
+          "url": "https://www.goal.com/en-us/lists/ronald-koeman-highlights-achraf-hakimi-threat-netherlands-morocco/blt79f3ad6079dc99cb",
+          "date": "2026-06-26",
+          "lang": "en"
+        },
+        {
+          "outlet": "NOS",
+          "url": "https://nos.nl/artikel/2620342-koeman-kritisch-na-groepswinst-als-we-ver-willen-komen-moeten-dingen-beter",
+          "date": "2026-06-26",
+          "lang": "nl"
+        },
+        {
+          "outlet": "NOS",
+          "url": "https://nos.nl/liveblog/2620227-beleef-hier-de-oranje-nacht-terug-nederland-treft-marokko-de-jong-heel-sterk-team",
+          "date": "2026-06-26",
+          "lang": "nl"
+        }
+      ]
+    },
+    {
+      "storyline": "Brobbey's rise is given a self-belief framing in the Dutch press distinct from the foreign 'Beast' angle: NOS profiles how the world now knows how good Brobbey is while he already knew it himself, with the striker insisting he had no doubts and crediting his move to a faster, more physical league plus coaching help (including from Van Nistelrooij); global pundits cited by VI single him out (alongside Dumfries) as a reason Oranje now look 'angstaanjagend' (frightening), comparing his scoring to elite strikers.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "NOS",
+          "url": "https://nos.nl/artikel/2620655-de-wereld-weet-nu-hoe-goed-brobbey-is-zelf-wist-hij-dat-al-geen-twijfels",
+          "date": "2026-06-26",
+          "lang": "nl"
+        },
+        {
+          "outlet": "Voetbal International",
+          "url": "https://www.vi.nl/nieuws/mondiale-media-prijzen-twee-uitblinkers-bij-angstaanjagend-oranje",
+          "date": "2026-06-26",
+          "lang": "nl"
+        }
+      ]
+    },
+    {
+      "storyline": "A midfield-selection question simmers in the Dutch press: Voetbalzone tracks scrutiny of Frenkie de Jong's form and a minor knock that briefly made him a doubt, with Koeman reluctant to drop him to the bench and Justin Kluivert floated as the alternative if De Jong cannot play. The internal squad solidarity around Cody Gakpo is also stressed, Brobbey saying the situation shows how close-knit the group is.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Voetbalzone",
+          "url": "https://www.voetbalzone.nl/nieuws/vermoedelijke-opstelling-nederlands-elftal-koeman-kiest-tussen-malen-en-depay/blt8b5869d63fc5f22e",
+          "date": "2026-06-20",
+          "lang": "nl"
+        },
+        {
+          "outlet": "Voetbalzone",
+          "url": "https://www.voetbalzone.nl/nieuws/brian-brobbey-leeft-mee-met-cody-gakpo-dit-laat-zien-hoe-hecht-onze-groep-is/bltd4b4fa2cd93a67d8",
+          "date": "2026-06-27",
+          "lang": "nl"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -186,6 +262,45 @@
       "verification": "attributed_context_only",
       "lang": "en",
       "quote_original": null
+    },
+    {
+      "quote": "This is a match I am hugely looking forward to. These are the games you want to play at a World Cup.",
+      "quote_original": "Dit is een potje waar ik enorm naar uitkijk. Deze wedstrijden wil je op een WK spelen.",
+      "lang": "nl",
+      "speaker_name": "Jan Paul van Hecke",
+      "speaker_role": "Netherlands defender",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "NOS",
+      "url": "https://nos.nl/artikel/2620353-oranje-kijkt-uit-naar-duel-met-marokkaanse-vrienden-hier-speel-je-wk-voor",
+      "date": "2026-06-27",
+      "context": "Looking ahead to the knockout tie against Morocco, several of whose players are former Eredivisie opponents/teammates."
+    },
+    {
+      "quote": "Everyone naturally sympathises with him. We are just trying to be there for him.",
+      "quote_original": "Iedereen leeft natuurlijk met hem mee. We proberen er gewoon voor hem te zijn.",
+      "lang": "nl",
+      "speaker_name": "Brian Brobbey",
+      "speaker_role": "Netherlands forward",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Voetbalzone",
+      "url": "https://www.voetbalzone.nl/nieuws/brian-brobbey-leeft-mee-met-cody-gakpo-dit-laat-zien-hoe-hecht-onze-groep-is/bltd4b4fa2cd93a67d8",
+      "date": "2026-06-27",
+      "context": "Brobbey on the squad rallying around Cody Gakpo after the loss of Gakpo's unborn son, saying it shows how close-knit the group is."
+    },
+    {
+      "quote": "No, I had no doubts. I know what I am capable of.",
+      "quote_original": "Nee, ik had geen twijfels. Ik weet wat ik kan.",
+      "lang": "nl",
+      "speaker_name": "Brian Brobbey",
+      "speaker_role": "Netherlands forward",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "NOS",
+      "url": "https://nos.nl/artikel/2620655-de-wereld-weet-nu-hoe-goed-brobbey-is-zelf-wist-hij-dat-al-geen-twijfels",
+      "date": "2026-06-26",
+      "context": "Brobbey on his self-belief amid earlier doubts about his ability, after emerging as one of the tournament's standout strikers."
     }
   ],
   "local_availability_reporting": [
@@ -297,6 +412,69 @@
       "retrieved_at": "2026-06-28",
       "lang": "nl",
       "used_for": "R32 confirmation, kickoff timing, Morocco players born in NL subplot"
+    },
+    {
+      "outlet": "NOS",
+      "url": "https://nos.nl/artikel/2620353-oranje-kijkt-uit-naar-duel-met-marokkaanse-vrienden-hier-speel-je-wk-voor",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "homecoming/Moroccan-friends reunion subplot, Van Hecke verbatim quote"
+    },
+    {
+      "outlet": "Goal",
+      "url": "https://www.goal.com/en-us/lists/ronald-koeman-highlights-achraf-hakimi-threat-netherlands-morocco/blt79f3ad6079dc99cb",
+      "lang": "en",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Koeman Hakimi-as-star-man framing (English-verified)"
+    },
+    {
+      "outlet": "NOS",
+      "url": "https://nos.nl/artikel/2620342-koeman-kritisch-na-groepswinst-als-we-ver-willen-komen-moeten-dingen-beter",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Koeman Hakimi-versatility framing, post-group-win caution"
+    },
+    {
+      "outlet": "NOS",
+      "url": "https://nos.nl/liveblog/2620227-beleef-hier-de-oranje-nacht-terug-nederland-treft-marokko-de-jong-heel-sterk-team",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "De Jong 'heel sterk team' framing, night-match context"
+    },
+    {
+      "outlet": "NOS",
+      "url": "https://nos.nl/artikel/2620655-de-wereld-weet-nu-hoe-goed-brobbey-is-zelf-wist-hij-dat-al-geen-twijfels",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Brobbey self-belief/emergence storyline, 'Geen twijfels' verbatim quote"
+    },
+    {
+      "outlet": "Voetbal International",
+      "url": "https://www.vi.nl/nieuws/mondiale-media-prijzen-twee-uitblinkers-bij-angstaanjagend-oranje",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "world-media 'angstaanjagend' framing, Brobbey + Dumfries standouts (NOTE: article references a Tunisia 3-1 result that conflicts with DB; scoreline NOT used)"
+    },
+    {
+      "outlet": "Voetbal International",
+      "url": "https://www.vi.nl/nieuws/nog-een-nachtduel-zo-laat-zijn-alle-tijden-van-oranje-in-de-knock-outfase",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "night-match/knockout kickoff-time context (informational only)"
+    },
+    {
+      "outlet": "Voetbalzone",
+      "url": "https://www.voetbalzone.nl/nieuws/vermoedelijke-opstelling-nederlands-elftal-koeman-kiest-tussen-malen-en-depay/blt8b5869d63fc5f22e",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "De Jong form/knock + Koeman reluctant to drop him; Kluivert as replacement option"
+    },
+    {
+      "outlet": "Voetbalzone",
+      "url": "https://www.voetbalzone.nl/nieuws/brian-brobbey-leeft-mee-met-cody-gakpo-dit-laat-zien-hoe-hecht-onze-groep-is/bltd4b4fa2cd93a67d8",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "squad solidarity around Gakpo, Brobbey verbatim quote"
     }
   ]
 }

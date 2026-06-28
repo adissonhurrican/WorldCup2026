@@ -149,6 +149,70 @@
           "date": "2026-06-27"
         }
       ]
+    },
+    {
+      "storyline": "German press frames the Paraguay Round-of-32 tie as a physicality test Nagelsmann himself fears: he openly conceded the squad's lack of bodily robustness cannot be fixed before the match and that Germany must play the ball earlier to dodge duels, while sportschau cast Gustavo Alfaro's Paraguay as proven giant-killers who beat both Brazil and Argentina in qualifying and conceded few goals — a passionate, compact defensive side that troubled Germany once before, in the 2002 last-16 won only by a late Oliver Neuville goal.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "sportschau.de (ARD)",
+          "url": "https://www.sportschau.de/fussball/fifa-wm-2026/warum-paraguay-deutschland-gefaehrlich-werden-kann,vorschau-paraguay-gegner-deutschland-100.html",
+          "lang": "de",
+          "date": "2026-06-27"
+        },
+        {
+          "outlet": "DFB.de",
+          "url": "https://www.dfb.de/news/im-sechzehntelfinale-deutschland-trifft-auf-paraguay",
+          "lang": "de",
+          "date": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "storyline": "A pointed national-press feature on the 'Wusiala' duo argues Jamal Musiala and Florian Wirtz have mislaid the 'magic wand' that dazzled at Euro 2024, both looking subdued into the knockouts; Nagelsmann publicly nursed them along individually, saying Wirtz lacked only fortune and the decisive 'tin-opener' moment, and that Musiala's issue is rhythm and self-belief — that the staff must coax his known abilities back out and that he should think less.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/fussball-wm/fussball-wm-2026-deutschland-wirtz-musiala-100.html",
+          "lang": "de",
+          "date": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "storyline": "A goalkeeping debate flared in the German press after Manuel Neuer's role in the second Ecuador goal, with t-online running a 'who should start Monday' selector and Bayern legends weighing in — Sepp Maier needling the veteran captain while ex-keeper Timo Hildebrand urged the public to leave Neuer alone and not make him the scapegoat; the reporting still presents Neuer as Germany's keeper going into the Paraguay last-32.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "t-online",
+          "url": "https://www.t-online.de/sport/fussball/wm/id_101314536/dfb-startelf-wer-soll-am-montag-gegen-paraguay-spielen-hier-waehlen.html",
+          "lang": "de",
+          "date": "2026-06-27"
+        },
+        {
+          "outlet": "t-online",
+          "url": "https://www.t-online.de/sport/fussball/wm/id_101314008/nagelsmann-staerkt-neuer-extrem-aergerlich-fuer-manu-.html",
+          "lang": "de",
+          "date": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "storyline": "Sportschau's expert panel split openly over how to set up against Paraguay's compact defence: Bastian Schweinsteiger argued for 'no experiments' and continuity, Almuth Schult wanted Leon Goretzka in for a stronger duel-winner plus pace and intensity, and Thomas Hitzlsperger pushed Deniz Undav over Kai Havertz up front — capturing a live tactical argument in the national press over muscle versus attacking firepower ahead of the knockout.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "sportschau.de (ARD)",
+          "url": "https://www.sportschau.de/fussball/fifa-wm-2026/mit-goretzka-oder-undav-so-stellen-die-sportschau-expertinnen-auf,wm-dfb-team-aufstellung-sechzehntelfinale-deutschland-paraguay-100.html",
+          "lang": "de",
+          "date": "2026-06-28"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -177,6 +241,45 @@
       "context": "Reflecting on the squad's mood after the final-group defeat to Ecuador despite already having topped the group.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "Physical robustness is hard to train. By Monday we won't be able to build any upper-body strength.",
+      "quote_original": "Körperlichkeit ist schwer zu trainieren. Bis Montag werden wir uns nichts auftrainieren können im Oberkörperbereich.",
+      "lang": "de",
+      "speaker_name": "Julian Nagelsmann",
+      "speaker_role": "Germany head coach",
+      "source_tier": "discovery",
+      "verification": "verbatim_confirmed_at_source",
+      "outlet": "sportschau.de (ARD)",
+      "url": "https://www.sportschau.de/fussball/fifa-wm-2026/warum-paraguay-deutschland-gefaehrlich-werden-kann,vorschau-paraguay-gegner-deutschland-100.html",
+      "date": "2026-06-27",
+      "context": "Conceding Germany cannot fix its physicality deficit before the Paraguay Round-of-32 tie, and proposing instead to play the ball earlier to avoid duels."
+    },
+    {
+      "quote": "With Jamal it's about rhythm. We all know his abilities. We must coax them out of him together.",
+      "quote_original": "Bei Jamal geht es um Rhythmus. Wir wissen alle, was er für Fähigkeiten hat. Diese müssen wir gemeinsam aus ihm rauskitzeln.",
+      "lang": "de",
+      "speaker_name": "Julian Nagelsmann",
+      "speaker_role": "Germany head coach",
+      "source_tier": "discovery",
+      "verification": "verbatim_confirmed_at_source",
+      "outlet": "ZDFheute",
+      "url": "https://www.zdfheute.de/sport/fussball-wm/fussball-wm-2026-deutschland-wirtz-musiala-100.html",
+      "date": "2026-06-26",
+      "context": "Backing a subdued Jamal Musiala ahead of the knockouts, in a feature on the misfiring 'Wusiala' duo."
+    },
+    {
+      "quote": "Flo tried very hard, he gave it everything. He lacks fortune, lacks a bit the goal, the tin-opener.",
+      "quote_original": "Flo war sehr bemüht, er hat Gas gegeben. Ihm fehlt Fortune, es fehlt ihm so ein bisschen das Tor, die Dosenöffner-Aktion.",
+      "lang": "de",
+      "speaker_name": "Julian Nagelsmann",
+      "speaker_role": "Germany head coach",
+      "source_tier": "discovery",
+      "verification": "verbatim_confirmed_at_source",
+      "outlet": "ZDFheute",
+      "url": "https://www.zdfheute.de/sport/fussball-wm/fussball-wm-2026-deutschland-wirtz-musiala-100.html",
+      "date": "2026-06-26",
+      "context": "On Florian Wirtz's effort but missing end-product, in the feature on the misfiring Musiala-Wirtz duo before the knockouts."
     }
   ],
   "local_availability_reporting": [
@@ -263,6 +366,48 @@
       "url": "https://www.nbcsports.com/soccer/news/2026-world-cup-round-of-32-confirmed-schedule-predictions-for-knockout-round",
       "retrieved_at": "2026-06-28",
       "lang": "en"
+    },
+    {
+      "outlet": "sportschau.de (ARD)",
+      "url": "https://www.sportschau.de/fussball/fifa-wm-2026/warum-paraguay-deutschland-gefaehrlich-werden-kann,vorschau-paraguay-gegner-deutschland-100.html",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Paraguay R32 preview; Nagelsmann physical-robustness quote; Paraguay-as-giant-killers (beat Brazil and Argentina in qualifying); 2002 last-16 history"
+    },
+    {
+      "outlet": "ZDFheute",
+      "url": "https://www.zdfheute.de/sport/fussball-wm/fussball-wm-2026-deutschland-wirtz-musiala-100.html",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "'Wusiala' misfiring-duo feature; Nagelsmann verbatim quotes on Musiala and Wirtz"
+    },
+    {
+      "outlet": "sportschau.de (ARD)",
+      "url": "https://www.sportschau.de/fussball/fifa-wm-2026/mit-goretzka-oder-undav-so-stellen-die-sportschau-expertinnen-auf,wm-dfb-team-aufstellung-sechzehntelfinale-deutschland-paraguay-100.html",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Expert lineup debate (Schweinsteiger/Schult/Hitzlsperger; Goretzka vs Undav) for the Paraguay knockout"
+    },
+    {
+      "outlet": "t-online",
+      "url": "https://www.t-online.de/sport/fussball/wm/id_101314536/dfb-startelf-wer-soll-am-montag-gegen-paraguay-spielen-hier-waehlen.html",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Goalkeeper/starting-XI debate after Neuer's Ecuador error ahead of Paraguay; presents Neuer as keeper into the tie"
+    },
+    {
+      "outlet": "t-online",
+      "url": "https://www.t-online.de/sport/fussball/wm/id_101314008/nagelsmann-staerkt-neuer-extrem-aergerlich-fuer-manu-.html",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Legends (Sepp Maier, Timo Hildebrand) weigh in on Neuer; scapegoat-debate context"
+    },
+    {
+      "outlet": "DFB.de",
+      "url": "https://www.dfb.de/news/im-sechzehntelfinale-deutschland-trifft-auf-paraguay",
+      "lang": "de",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Federation confirmation of R32 opponent Paraguay, Boston/Foxborough venue, Monday 22:30 CEST, ZDF/MagentaTV broadcast, 2002 history"
     }
   ]
 }

@@ -152,6 +152,64 @@
           "date": "2026-05-30"
         }
       ]
+    },
+    {
+      "storyline": "Amadou Onana faces his motherland: the Belgium midfielder, whose mother is Senegalese and who grew up in Dakar speaking Wolof before French, is recalled by the national press as having pleaded before the draw not to be paired with Senegal, the country he returns to yearly to 'reset' and reconnect with family. Sporza casts the tie as a deeply personal, emotional subplot rather than a routine knockout fixture.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sporza (VRT)",
+          "url": "https://sporza.be/nl/2026/06/28/-verlies-nog-liever-van-frankrijk-door-sterke-band-met-roots-wilde-amadou-onana-senegal-absoluut-vermijden~1782633199915/",
+          "lang": "nl",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "The Belgian press frames Senegal as the worst draw imaginable from the third-placed pool: Sporza calls them 'on paper the toughest opponent', an unofficial African champion (AFCON winners who later lost the title via official ruling) built on pace and power through Sadio Mane, Nicolas Jackson and Ismaila Sarr. The coverage tempers that with Senegal's leaky defence (conceding three against both France and Norway) and visible internal unrest in the camp over catering, late bonuses and the coach's contract, which national writers suggest could play into Belgium's hands.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sporza (VRT)",
+          "url": "https://sporza.be/nl/2026/06/28/op-papier-de-zwaarste-tegenstander-rode-duivels-treffen-senegal-in-1-16e-finales-officieuze-afrikaanse-kampioen-die-woelig-wk-kent~1782606738740/",
+          "lang": "nl",
+          "date": "2026-06-28"
+        },
+        {
+          "outlet": "Sporza (VRT)",
+          "url": "https://sporza.be/nl/2026/06/28/het-flitsende-gevaar-komt-van-overal-al-rommelt-het-in-interne-keuken-de-sterktes-en-zwaktes-van-senegal-uitgelicht~1782612133491/",
+          "lang": "nl",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "Francophone Belgium reads the bracket with cautious confidence: RTBF presents Senegal as a respectable but beatable first knockout test whose style could suit the Red Devils, while already mapping the road ahead, the United States or Bosnia winner next and only 'very distant' quarter-final talk of Portugal, Spain or Croatia. The base-camp advantage of staying in Seattle, near Lumen Field, is highlighted as a tangible edge.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "RTBF",
+          "url": "https://www.rtbf.be/article/coupe-du-monde-2026-les-diables-rouges-rencontreront-le-senegal-en-16es-de-finale-11748901",
+          "lang": "fr",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "Before the group decider, leading national commentator Peter Vandenbempt raised the emotional stakes to the level of national honour, branding the New Zealand match a 'turning point' and warning that elimination there would be the greatest disgrace in the Red Devils' history. Belgium's subsequent win quieted that alarm, but the framing set the high-pressure backdrop the squad now carries into the knockouts.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sporza (VRT)",
+          "url": "https://sporza.be/nl/2026/06/26/peter-vandenbempt-zet-alle-rode-duivels-op-scherp-voor-scharniermoment-dit-zou-de-grootste-blamage-uit-onze-geschiedenis-zijn~1782451890360/",
+          "lang": "nl",
+          "date": "2026-06-26"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -180,6 +238,45 @@
       "verification": "attributed_context_only",
       "quote_original": null,
       "lang": "en"
+    },
+    {
+      "quote": "I said before the group-stage draw: please, don't let us play against Senegal.",
+      "quote_original": "Ik zei voor de loting van de groepsfase nog: alsjeblieft, laat ons niet tegen Senegal spelen.",
+      "lang": "nl",
+      "speaker_name": "Amadou Onana",
+      "speaker_role": "Belgium midfielder (Senegalese mother, raised in Dakar)",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/06/28/-verlies-nog-liever-van-frankrijk-door-sterke-band-met-roots-wilde-amadou-onana-senegal-absoluut-vermijden~1782633199915/",
+      "date": "2026-06-28",
+      "context": "Onana words from an earlier interview with YouTuber Just Riadh given before the draw, re-reported by Sporza on the day Belgium drew Senegal, illustrating how he had hoped to avoid facing his mother's country in the knockouts."
+    },
+    {
+      "quote": "I would even rather lose to France.",
+      "quote_original": "Ik zou nog liever verliezen van Frankrijk.",
+      "lang": "nl",
+      "speaker_name": "Amadou Onana",
+      "speaker_role": "Belgium midfielder (Senegalese mother, raised in Dakar)",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/06/28/-verlies-nog-liever-van-frankrijk-door-sterke-band-met-roots-wilde-amadou-onana-senegal-absoluut-vermijden~1782633199915/",
+      "date": "2026-06-28",
+      "context": "Onana words from the same pre-draw Just Riadh interview, re-reported by Sporza, conveying how strongly he wanted to avoid Senegal and underscoring the emotional weight of the tie against his roots."
+    },
+    {
+      "quote": "It's tough but their style could suit the Red Devils.",
+      "quote_original": "C'est du costaud mais leur jeu peut convenir aux Diables Rouges.",
+      "lang": "fr",
+      "speaker_name": "Fred Waseige",
+      "speaker_role": "RTBF football consultant/analyst",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "RTBF",
+      "url": "https://www.rtbf.be/article/le-morning-le-prochain-adversaire-des-diables-est-connu-le-senegal-c-est-du-costaud-mais-leur-jeu-peut-nous-convenir-11748931",
+      "date": "2026-06-28",
+      "context": "RTBF 'Le Morning' analyst assessing the Senegal draw, respecting the opponent while suggesting their open style could favour Belgium."
     }
   ],
   "local_availability_reporting": [
@@ -276,6 +373,48 @@
       "outlet": "Belga News Agency",
       "url": "https://www.belganewsagency.eu/2026-world-cup-belgium-to-face-senegal-in-round-of-32",
       "retrieved_at": "2026-06-28"
+    },
+    {
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/06/28/-verlies-nog-liever-van-frankrijk-door-sterke-band-met-roots-wilde-amadou-onana-senegal-absoluut-vermijden~1782633199915/",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Amadou Onana Senegalese roots / emotional dilemma facing his motherland; two verbatim Onana quotes (re-reported from a pre-draw Just Riadh interview)"
+    },
+    {
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/06/28/op-papier-de-zwaarste-tegenstander-rode-duivels-treffen-senegal-in-1-16e-finales-officieuze-afrikaanse-kampioen-die-woelig-wk-kent~1782606738740/",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Sporza framing of Senegal as toughest draw on paper; unofficial-African-champion context; opponent/venue context (Lumen Field, Seattle), held as press-reported vs DB TBD"
+    },
+    {
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/06/28/het-flitsende-gevaar-komt-van-overal-al-rommelt-het-in-interne-keuken-de-sterktes-en-zwaktes-van-senegal-uitgelicht~1782612133491/",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Senegal strengths/weaknesses and internal turmoil angle (defence, late bonuses, catering, coach contract) as read by the Belgian press; Mane/Jackson/Sarr"
+    },
+    {
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/06/26/peter-vandenbempt-zet-alle-rode-duivels-op-scherp-voor-scharniermoment-dit-zou-de-grootste-blamage-uit-onze-geschiedenis-zijn~1782451890360/",
+      "lang": "nl",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Vandenbempt 'turning point / biggest disgrace' pre-knockout honour framing around the New Zealand decider"
+    },
+    {
+      "outlet": "RTBF",
+      "url": "https://www.rtbf.be/article/coupe-du-monde-2026-les-diables-rouges-rencontreront-le-senegal-en-16es-de-finale-11748901",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Francophone framing of the Senegal draw, bracket path (US/Bosnia winner, distant QF), base-camp edge"
+    },
+    {
+      "outlet": "RTBF",
+      "url": "https://www.rtbf.be/article/le-morning-le-prochain-adversaire-des-diables-est-connu-le-senegal-c-est-du-costaud-mais-leur-jeu-peut-nous-convenir-11748931",
+      "lang": "fr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Verbatim Fred Waseige analyst quote on the Senegal draw (dedicated 'Le Morning' article)"
     }
   ]
 }

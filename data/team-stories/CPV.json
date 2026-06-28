@@ -162,6 +162,71 @@
           "date": "2026-06-27"
         }
       ]
+    },
+    {
+      "storyline": "Native press reframes the Argentina tie around diaspora kinship, not just David-vs-Goliath: coach Bubista stresses pride at measuring up to the world champions and points to deep historical ties, recalling that many Cape Verdeans emigrated to Argentina - turning the matchup into a family reunion as much as an upset bid.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Expresso das Ilhas",
+          "url": "https://expressodasilhas.cv/desporto/2026/06/27/e-um-orgulho-poder-medir-forcas-com-a-argentina-bubista/103394",
+          "lang": "pt",
+          "date": "2026-06-27"
+        }
+      ]
+    },
+    {
+      "storyline": "Captain and goalkeeper Vozinha sets a defiant, no-passenger tone in the home press: insisting the Tubaroes Azuis did not travel to protect draws but to win, framing a small nation that simply knows how to compete - a leadership counter-narrative to the 'three draws, survived' storyline.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Expresso das Ilhas",
+          "url": "https://expressodasilhas.cv/desporto/2026/06/27/temos-um-grande-coracao-e-somos-lutadores-tubaroes-azuis-celebram-apuramento-historico-e-sonham-agora-com-a-argentina/103392",
+          "lang": "pt",
+          "date": "2026-06-27"
+        }
+      ]
+    },
+    {
+      "storyline": "Domestic outlet Expresso das Ilhas builds a 'turning improbabilities into history' identity: with predictive models again writing them off versus Argentina, the framing is that Cape Verde have learned to channel being underestimated into a competitive edge, leaning on defensive organisation and tactical discipline rather than fearing favouritism.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Expresso das Ilhas",
+          "url": "https://expressodasilhas.cv/desporto/2026/06/28/so-108-cabo-verde-ja-aprendeu-a-transformar-improbabilidades-em-historia/103400",
+          "lang": "pt",
+          "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "storyline": "Homecoming/mood angle from the capital: Gamboa beach in Praia was turned into a vast fan zone as the 32nd Gamboa Festival, themed 'Ambicionar e Concretizar - o futuro e nosso' (To aspire and achieve - the future is ours), doubled as a celebration of the Blue Sharks' World Cup run, deliberately scheduled so its opening day coincided with the decisive Saudi Arabia match.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "A Nação",
+          "url": "https://www.anacao.cv/noticia/2026/06/26/musica-arranca-esta-sexta-feira-a-32-a-edicao-do-festival-da-gamboa-em-homenagem-a-romeu-di-lurdis/",
+          "lang": "pt",
+          "date": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "storyline": "Local recognition of the midfield engine: A Nacao reports Deroy Duarte was voted Man of the Match against Saudi Arabia, the third different Cape Verdean so honoured in the group (after Vozinha vs Spain and Kevin Pina vs Uruguay), with home reporting casting him as the tireless connector who held the team's shape across the goalless decider.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "A Nação",
+          "url": "https://www.anacao.cv/noticia/2026/06/27/tubaroes-azuis-deroy-duarte-eleito-homem-do-jogo-no-duelo-com-a-arabia-saudita/",
+          "lang": "pt",
+          "date": "2026-06-27"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -190,6 +255,45 @@
       "context": "After the goalless draw with Saudi Arabia secured Cape Verde's historic place in the World Cup knockout stage.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
+    },
+    {
+      "quote": "It is a pride to be able to measure ourselves against Argentina.",
+      "quote_original": "É um orgulho poder medir forças com a Argentina.",
+      "lang": "pt",
+      "speaker_name": "Bubista (Pedro Leitao Brito)",
+      "speaker_role": "Cape Verde head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Expresso das Ilhas",
+      "url": "https://expressodasilhas.cv/desporto/2026/06/27/e-um-orgulho-poder-medir-forcas-com-a-argentina-bubista/103394",
+      "date": "2026-06-27",
+      "context": "Previewing the Round of 32 against the reigning world champions, stressing pride and historical ties between the two nations."
+    },
+    {
+      "quote": "We did not come to hold on to any draw. We always tried to win.",
+      "quote_original": "Não viemos segurar nenhum empate. Procurámos sempre ganhar.",
+      "lang": "pt",
+      "speaker_name": "Vozinha",
+      "speaker_role": "Cape Verde captain and goalkeeper",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Expresso das Ilhas",
+      "url": "https://expressodasilhas.cv/desporto/2026/06/27/temos-um-grande-coracao-e-somos-lutadores-tubaroes-azuis-celebram-apuramento-historico-e-sonham-agora-com-a-argentina/103392",
+      "date": "2026-06-27",
+      "context": "After the goalless draw with Saudi Arabia confirmed qualification, rejecting the idea Cape Verde merely played for draws."
+    },
+    {
+      "quote": "We are from a small country, but we know how to compete.",
+      "quote_original": "Somos de um país pequeno, mas sabemos como competir.",
+      "lang": "pt",
+      "speaker_name": "Vozinha",
+      "speaker_role": "Cape Verde captain and goalkeeper",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Expresso das Ilhas",
+      "url": "https://expressodasilhas.cv/desporto/2026/06/27/temos-um-grande-coracao-e-somos-lutadores-tubaroes-azuis-celebram-apuramento-historico-e-sonham-agora-com-a-argentina/103392",
+      "date": "2026-06-27",
+      "context": "Celebrating the historic advance to the knockout stage and looking ahead to Argentina."
     }
   ],
   "local_availability_reporting": [],
@@ -268,6 +372,48 @@
       "url": "https://www.tbsnews.net/sports/cabo-verde-become-first-team-1998-reach-world-cup-knockouts-3-draws-1473546",
       "retrieved_at": "2026-06-28",
       "note": "Headline authority for 'first team since 1998 to reach World Cup knockouts with 3 draws'."
+    },
+    {
+      "outlet": "Expresso das Ilhas",
+      "url": "https://expressodasilhas.cv/desporto/2026/06/27/e-um-orgulho-poder-medir-forcas-com-a-argentina-bubista/103394",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Bubista verbatim 'orgulho... medir forças' quote (PT original); diaspora/historical-ties framing vs Argentina. Re-fetched 2026-06-28: quote confirmed verbatim + ties context."
+    },
+    {
+      "outlet": "Expresso das Ilhas",
+      "url": "https://expressodasilhas.cv/desporto/2026/06/27/temos-um-grande-coracao-e-somos-lutadores-tubaroes-azuis-celebram-apuramento-historico-e-sonham-agora-com-a-argentina/103392",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Vozinha verbatim quotes (PT original): 'não viemos segurar nenhum empate', 'país pequeno mas sabemos como competir'; players' celebration mood. Both confirmed verbatim on re-fetch."
+    },
+    {
+      "outlet": "Expresso das Ilhas",
+      "url": "https://expressodasilhas.cv/desporto/2026/06/28/so-108-cabo-verde-ja-aprendeu-a-transformar-improbabilidades-em-historia/103400",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "'Transforming improbabilities into history' storyline; defensive-organisation + tactical-discipline framing vs Argentina (Opta percentage carried by source EXCLUDED per no-number rule)."
+    },
+    {
+      "outlet": "A Nação",
+      "url": "https://www.anacao.cv/noticia/2026/06/27/tubaroes-azuis-deroy-duarte-eleito-homem-do-jogo-no-duelo-com-a-arabia-saudita/",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Duarte Man of the Match vs Saudi Arabia (third different CPV MOTM in group: Vozinha vs Spain, Pina vs Uruguay); midfield-engine framing. Sofascore stats in source EXCLUDED per no-number rule."
+    },
+    {
+      "outlet": "A Nação",
+      "url": "https://www.anacao.cv/noticia/2026/06/26/musica-arranca-esta-sexta-feira-a-32-a-edicao-do-festival-da-gamboa-em-homenagem-a-romeu-di-lurdis/",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Gamboa Festival fan-zone homecoming/mood angle in Praia. CORRECTED theme to verbatim 'Ambicionar e Concretizar – o futuro é nosso'; festival explicitly tied to Blue Sharks' WC run, opening day on the Saudi match."
+    },
+    {
+      "outlet": "A Nação",
+      "url": "https://www.anacao.cv/noticia/2026/06/27/cabo-verde-argentina-e-a-partida-dos-16-avos-de-final001/",
+      "lang": "pt",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Cross-check of R32 match facts (Group H 2nd via 3 draws, debutants, vs Argentina Fri July 3 21h); native-press confirmation, no new quotes."
     }
   ]
 }

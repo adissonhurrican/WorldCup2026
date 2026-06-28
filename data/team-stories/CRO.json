@@ -142,6 +142,64 @@
           "date": "2026-06-16"
         }
       ]
+    },
+    {
+      "storyline": "Dalic's public mea culpa over his tactics: in the Croatian press the manager openly admitted he set up the first two group matches wrong and took personal responsibility for the poorer displays, then framed the Ghana win as a return to the team's true identity after he reverted to a familiar shape. This self-critical, accountability-driven angle reframes the campaign as a coaching correction rather than a smooth progression.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Index.hr",
+          "url": "https://www.index.hr/clanak.aspx?id=2807464",
+          "date": "2026-06-28",
+          "lang": "hr"
+        },
+        {
+          "outlet": "Index.hr",
+          "url": "https://www.index.hr/sport/clanak/hrvatska-na-spu-ovako-izgleda-put-hrvatske-do-finala-svjetski-mediji-slave-modrica/2805614.aspx",
+          "date": "2026-06-28",
+          "lang": "hr"
+        }
+      ]
+    },
+    {
+      "storyline": "The Euro 2016 grudge reawakened: Croatian outlets cast the Portugal tie as a rematch of the painful Euro 2016 last-16 defeat, when Ricardo Quaresma's late extra-time winner knocked Croatia out and Portugal went on to win the title. Reporting reopens that old wound for the home audience, lending the knockout a revenge subtext, and notes Portuguese paper A Bola also flagged the rematch.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "gol.dnevnik.hr",
+          "url": "https://gol.dnevnik.hr/clanak/rubrika/svjetsko-prvenstvo-2026/portugalci-saznali-da-igraju-protiv-vatrenih-odmah-su-podsjetili-na-bolnu-uspomenu---988253.html",
+          "date": "2026-06-28",
+          "lang": "hr"
+        }
+      ]
+    },
+    {
+      "storyline": "Modric the 40-year-old defending, not just dictating: Croatian coverage dwelt on a vivid late-game image against Ghana in which the captain dropped back to left-back during the closing pressure and stopped 18-year-old Ernest Nuamah with a sliding tackle, with the home commentator calling him impenetrable that night in Philadelphia. The national press uses the moment to celebrate his sacrifice and stamina, broadening the leader narrative from his record assist to his graft in defence.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Index.hr",
+          "url": "https://www.index.hr/sport/clanak/hrvatska-na-spu-ovako-izgleda-put-hrvatske-do-finala-svjetski-mediji-slave-modrica/2805614.aspx",
+          "date": "2026-06-28",
+          "lang": "hr"
+        }
+      ]
+    },
+    {
+      "storyline": "A daunting bracket and a human storyline behind the winning goal: national reporting frames Croatia's knockout path as brutal, potentially needing wins over top-tier opponents beyond Portugal, while also humanising the breakthrough through matchwinner Petar Sucic, who dedicated his goal to his pregnant wife and baby waiting at home. The pairing of a forbidding road ahead with an intimate dressing-room story captures the measured, emotionally invested mood in the Croatian press.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Index.hr",
+          "url": "https://www.index.hr/sport/clanak/hrvatska-na-spu-ovako-izgleda-put-hrvatske-do-finala-svjetski-mediji-slave-modrica/2805614.aspx",
+          "date": "2026-06-28",
+          "lang": "hr"
+        }
+      ]
     }
   ],
   "attributed_quotes": [
@@ -170,6 +228,45 @@
       "verification": "attributed_context_only",
       "lang": "en",
       "quote_original": null
+    },
+    {
+      "quote": "I set up the first two matches wrong, I took responsibility for the poorer performances.",
+      "quote_original": "Krivo sam postavio prve dvije utakmice, preuzeo odgovornost za lošije nastupe.",
+      "lang": "hr",
+      "speaker_name": "Zlatko Dalic",
+      "speaker_role": "Croatia head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Index.hr",
+      "url": "https://www.index.hr/clanak.aspx?id=2807464",
+      "date": "2026-06-28",
+      "context": "After the 2-1 win over Ghana, Dalic publicly took the blame for his earlier team selections before the Portugal knockout tie."
+    },
+    {
+      "quote": "When we get past Portugal, then we'll talk about what's next.",
+      "quote_original": "Kad prođemo Portugal, onda ćemo pričati što dalje.",
+      "lang": "hr",
+      "speaker_name": "Zlatko Dalic",
+      "speaker_role": "Croatia head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Index.hr",
+      "url": "https://www.index.hr/clanak.aspx?id=2807464",
+      "date": "2026-06-28",
+      "context": "Dalic keeping focus narrowly on the Portugal Round of 16 tie and refusing to look further ahead in the bracket."
+    },
+    {
+      "quote": "The manner in which the stoppage came angers me. An unnecessary foul.",
+      "quote_original": "Ljuti me način na kojem je došlo do prekida. Nepotreban faul.",
+      "lang": "hr",
+      "speaker_name": "Zlatko Dalic",
+      "speaker_role": "Croatia head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Index.hr",
+      "url": "https://www.index.hr/clanak.aspx?id=2807464",
+      "date": "2026-06-28",
+      "context": "Dalic expressing frustration over the foul that led to Ghana's goal in the 2-1 win; verbatim excerpt of a longer sentence."
     }
   ],
   "local_availability_reporting": [],
@@ -239,6 +336,34 @@
       "retrieved_at": "2026-06-28",
       "note": "Last-dance veterans framing including Modric and Ronaldo",
       "date": "2026-06"
+    },
+    {
+      "outlet": "Index.hr",
+      "url": "https://www.index.hr/clanak.aspx?id=2807464",
+      "lang": "hr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Verbatim Dalic quotes (mea culpa on first two matches, focus on Portugal, anger over the foul that led to Ghana's goal); tactical-correction storyline. Re-fetched and confirmed verbatim."
+    },
+    {
+      "outlet": "Index.hr",
+      "url": "https://www.index.hr/sport/clanak/hrvatska-na-spu-ovako-izgleda-put-hrvatske-do-finala-svjetski-mediji-slave-modrica/2805614.aspx",
+      "lang": "hr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Modric dropping to left-back and sliding-tackling 18-year-old Nuamah; commentator 'neprelazan/impenetrable' line; 'prava Hrvatska' framing; daunting knockout path; Sucic dedicating his goal to his pregnant wife and baby. Re-fetched and confirmed."
+    },
+    {
+      "outlet": "gol.dnevnik.hr",
+      "url": "https://gol.dnevnik.hr/clanak/rubrika/svjetsko-prvenstvo-2026/portugalci-saznali-da-igraju-protiv-vatrenih-odmah-su-podsjetili-na-bolnu-uspomenu---988253.html",
+      "lang": "hr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "Euro 2016 'painful memory' rematch angle (Quaresma's 117th-minute winner), A Bola reaction. Re-fetched; A Bola line confirmed as paraphrase, not quoted verbatim. NOTE: this source does NOT support a broad all-time H2H 'poor record' claim (only the Euro 2016 reference)."
+    },
+    {
+      "outlet": "Nacional.hr",
+      "url": "https://www.nacional.hr/drugi-krug-paklen-raspored-za-hrvatsku-na-pocetku-legendarni-ogled-luke-modrica-i-cristiana-ronalda/",
+      "lang": "hr",
+      "retrieved_at": "2026-06-28",
+      "used_for": "DROPPED as a citation: page returned HTTP 403 on re-fetch and could not be verified; the Modric-Ronaldo legends-duel angle already exists in the file and the 'brutal draw' framing is independently sourced to Index.hr 2805614. The unverifiable 'one win in ten' H2H detail was removed from the storyline text."
     }
   ]
 }
