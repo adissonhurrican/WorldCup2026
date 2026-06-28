@@ -873,12 +873,12 @@
       "standings": [
         {
           "code": "COL",
-          "win_group": 0.6251,
+          "win_group": 1,
           "top_2": 1,
           "advance": 1,
           "finish_distribution": {
-            "1st": 0.6251,
-            "2nd": 0.3749,
+            "1st": 1,
+            "2nd": 0,
             "3rd": 0,
             "4th": 0
           },
@@ -886,29 +886,16 @@
         },
         {
           "code": "POR",
-          "win_group": 0.3749,
-          "top_2": 0.9979,
+          "win_group": 0,
+          "top_2": 1,
           "advance": 1,
           "finish_distribution": {
-            "1st": 0.3749,
-            "2nd": 0.623,
-            "3rd": 0.0021,
+            "1st": 0,
+            "2nd": 1,
+            "3rd": 0,
             "4th": 0
           },
           "projected_finish": "2nd"
-        },
-        {
-          "code": "COD",
-          "win_group": 0,
-          "top_2": 0.0021,
-          "advance": 0.3534,
-          "finish_distribution": {
-            "1st": 0,
-            "2nd": 0.0021,
-            "3rd": 0.6163,
-            "4th": 0.3816
-          },
-          "projected_finish": "3rd"
         },
         {
           "code": "UZB",
@@ -922,6 +909,19 @@
             "4th": 0.6184
           },
           "projected_finish": "4th"
+        },
+        {
+          "code": "COD",
+          "win_group": 0,
+          "top_2": 0,
+          "advance": 0.3534,
+          "finish_distribution": {
+            "1st": 0,
+            "2nd": 0,
+            "3rd": 0.6184,
+            "4th": 0.3816
+          },
+          "projected_finish": "3rd"
         }
       ]
     },
@@ -2477,7 +2477,11 @@
         "draw": 0.2676,
         "away_win": 0.3684
       },
-      "result": null,
+      "result": {
+        "home_score": 0,
+        "away_score": 0,
+        "status": "final"
+      },
       "live_score_ref": null
     },
     {
@@ -5974,22 +5978,8 @@
       "in_their_hands": false,
       "routes": [
         {
-          "route": "Finish runner-up",
-          "chance": 0.0021,
-          "own_form": "Runner-up: typically 4 pts (1W 1D 1L); from 1 pts now, ~3 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
           "route": "Advance as best third",
-          "chance": 0.3514,
+          "chance": 0.3534,
           "own_form": "Best third: typically 4 pts (1W 1D 1L); from 1 pts now, ~3 more from the last 1",
           "depends_on_other_groups": [
             "A",
@@ -6001,7 +5991,7 @@
       ],
       "third_place_race": {
         "in_race": true,
-        "advances_if_third": 0.5701,
+        "advances_if_third": 0.5716,
         "race_position": 9,
         "watch_groups": [
           "A",
@@ -6025,22 +6015,8 @@
       "routes": [
         {
           "route": "Win the group",
-          "chance": 0.6251,
-          "own_form": "Win group: typically 9 pts (3W 0D 0L); as low as 7 pts in our simulations; from 6 pts now, ~3 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
-          "route": "Finish runner-up",
-          "chance": 0.3749,
-          "own_form": "Runner-up: typically 6 pts (2W 0D 1L); from 6 pts now, ~0 more from the last 1",
+          "chance": 1,
+          "own_form": "Win group: typically 7 pts (2W 1D 0L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -6867,23 +6843,9 @@
       "in_their_hands": true,
       "routes": [
         {
-          "route": "Win the group",
-          "chance": 0.3749,
-          "own_form": "Win group: typically 7 pts (2W 1D 0L); from 4 pts now, ~3 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": [
-            "points",
-            "head-to-head",
-            "goal difference",
-            "goals scored",
-            "fair play",
-            "FIFA ranking"
-          ]
-        },
-        {
           "route": "Finish runner-up",
-          "chance": 0.623,
-          "own_form": "Runner-up: typically 4 pts (1W 1D 1L); from 4 pts now, ~0 more from the last 1",
+          "chance": 1,
+          "own_form": "Runner-up: typically 5 pts (1W 2D 0L)",
           "depends_on_other_groups": [],
           "decided_by": [
             "points",
@@ -6893,27 +6855,15 @@
             "fair play",
             "FIFA ranking"
           ]
-        },
-        {
-          "route": "Advance as best third",
-          "chance": 0.0021,
-          "own_form": "Best third: typically 4 pts (1W 1D 1L); from 4 pts now, ~0 more from the last 1",
-          "depends_on_other_groups": [],
-          "decided_by": []
         }
       ],
       "third_place_race": {
         "in_race": false,
-        "advances_if_third": 1,
+        "advances_if_third": 0,
         "race_position": 9,
         "watch_groups": [],
         "needs": null,
-        "thresholds": {
-          "min_points": 4,
-          "min_overall_gd": 0,
-          "min_goals_for": 6,
-          "beats_rival_if": "POR overall GD > rival GD, else GF, else fair-play, else FIFA rank (rank 5)"
-        },
+        "thresholds": null,
         "locked_record": null
       }
     },
@@ -7310,8 +7260,8 @@
   "narration": [
     {
       "content_type": "scenario_narration",
-      "headline": "Uzbekistan facing a steep climb to keep knockout hopes alive",
-      "body": "Uzbekistan find themselves in a highly challenging position at the bottom of Group K, with a massive gap to close on Congo DR, who sit in third with 35% advancement odds. After two tough defeats, our tournament simulation shows Uzbekistan with a 0% chance of reaching the knockouts, though a mathematical sliver of hope remains. They can no longer finish in the top two, meaning their only possible route is the best-third-place back door. To have any chance, Uzbekistan must win their final match against Congo DR to finish third with three points. However, even if they secure third place, the back door is incredibly slim; they would only advance in about 1% of those scenarios, as their goal difference of minus seven leaves them heavily reliant on a highly unlikely chain of results in other groups. It is a dignified but incredibly steep hill to climb.",
+      "headline": "Uzbekistan Facing an Uphill Battle in Group K",
+      "body": "Uzbekistan find themselves in a very difficult position, with their hopes of reaching the knockouts hanging by a thread. Sitting at the bottom of Group K with zero points after two matches, they are adrift of the pace, with Congo DR holding a 35% chance to advance just ahead of them. With a top-two finish now mathematically out of reach, Uzbekistan's only remaining path is to fight for a third-place finish and hope for a back-door route. To even have a chance, they must defeat Congo DR in their final match. A draw or a loss will result in immediate elimination. Even if they secure that vital win to finish third, the prediction system shows their overall chance of advancing is near 0%. Because of their heavy goal difference, the third-place safety net is incredibly fragile, meaning they would remain at the mercy of results in other groups. It is a steep mountain to climb, but their tournament survival comes down to a must-win final matchday.",
       "team_code": "UZB"
     },
     {
@@ -7376,8 +7326,8 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Portugal on the Brink of the Knockout Stage",
-      "body": "Portugal are in a fantastic position, with their place in the knockouts virtually assured. Our tournament simulation gives them a 100% chance to reach the Round of 32. They sit second in Group K with four points after two matches, right behind Colombia, who lead the group with six points. While Colombia are just ahead, Portugal remain in a strong position to challenge them for the top spot, while Congo DR trail further back with only a single point. Portugal's primary route is finishing in the top two, which is almost certain. They are highly likely to go through as the group runners-up, while they still hold a decent chance to win the group outright if results go their way in the final round. Because their top-two path is so secure, they do not need to worry about the complicated back-door route of qualifying as a third-place team, which is a highly unlikely alternative. With four points already on the board, Portugal are in complete control of their own destiny heading into the final group match.",
+      "headline": "Portugal Secure Knockout Spot with Room to Spare",
+      "body": "Portugal have achieved their primary objective, officially securing their place in the knockouts with absolute certainty. Our tournament simulation shows they have a 100% chance of reaching the Round of 32, leaving them in a completely relaxed position. Within Group K, they sit comfortably in second place with five points, right behind leaders Colombia, who also sit on a perfect 100% advancement chance. While Portugal are guaranteed to move on, the group is not yet fully settled. Congo DR and Uzbekistan still have their final match to play, meaning the provisional table will shift slightly before the round is officially complete. Because Portugal have already clinched their spot, they do not need to worry about the complicated third-place tiebreakers or cross-group comparisons. Whether they finish as the runner-up or push for more, their ticket to the next round is already signed and delivered.",
       "team_code": "POR"
     },
     {
@@ -7514,14 +7464,14 @@
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Colombia Secure Knockout Spot but Face Battle for Top Seed",
-      "body": "Colombia have officially secured their place in the knockouts, with our tournament simulation showing a 100% chance of reaching the Round of 32. With six points from their opening two matches, they sit proudly at the top of Group K. However, the race for the top spot is incredibly tight, with Portugal right on their heels and also holding a 100% chance of advancing. Colombia's main focus now is defending their lead. Finishing as group winners is more likely than not, with our model placing those chances at 63%, while finishing as the runner-up remains a strong possibility. Because they are guaranteed to finish in the top two, they do not have to worry about the complicated third-place tiebreakers. A strong result in their final match will ensure they enter the next round with maximum momentum.",
+      "headline": "Colombia Secure Knockout Spot with Top-Two Finish Guaranteed",
+      "body": "Colombia have done the hard work and can breathe easy—they are officially through to the knockouts. With seven points already secured, our tournament simulation shows they have a 100% chance of reaching the Round of 32. They currently sit provisional top of Group K, though Portugal are right on their heels at 100% advancement and could still shake up the final seeding. Because Congo DR and Uzbekistan still have games left to play, the final shape of the table is not yet settled, but Colombia's own job is completely finished. They are guaranteed to finish in the top two regardless of how those final matches play out, meaning they do not have to worry about the complicated third-place comparison. Whether they advance as group winners or runners-up, their place in the next round is locked in.",
       "team_code": "COL"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Congo DR Face a Clear Final-Day Equation",
-      "body": "Congo DR find themselves in a tense position where their knockout hopes rest on a single match. With a 35% chance to reach the knockouts, they are chasing the pack in Group K, with Portugal and Colombia already well clear at the top. After two rounds, Congo DR sit third in the group with one point, currently ranking as the lowest of the third-placed teams across the tournament and sitting two points behind the qualification cut-off. A top-two finish is mathematically out of reach, meaning their only path to the Round of 32 is through the third-place back door. If they beat Uzbekistan in their final match, they are guaranteed to advance. However, a draw leaves them in a precarious spot, relying on a tiebreaker pool where they would advance in about 57% of scenarios. A loss would mean instant elimination. It is a straightforward, high-stakes finale: win and they are through, draw and they must watch other groups, lose and they go home.",
+      "headline": "Congo DR Face a Clear Task on the Final Matchday",
+      "body": "Congo DR's path to the knockouts is simple but tense: their fate is entirely on the line in their final match. With Colombia and Portugal having already secured their places at the top of Group K, Congo DR sit third in the provisional standings, well clear of Uzbekistan who are currently bottom with zero points. Our tournament simulation gives Congo DR a 35% chance to reach the Round of 32, and because they can no longer finish in the top two, their only hope is advancing as one of the best third-placed teams. Currently, they are on the outside looking in, sitting twelfth in the provisional third-place rankings and two points behind the cutoff. A win against Uzbekistan guarantees they go through. A draw leaves them in a precarious spot, relying on a coin-flip scenario where they must hope no more than seven other third-placed teams finish with a better record. A loss will result in elimination. If they do secure third place, it is a decent fallback, with a 57% chance of being enough to see them through.",
       "team_code": "COD"
     },
     {
@@ -8492,7 +8442,7 @@
     "label": "Real group table computed from verified match results using the FIFA 2026 Article 13 tiebreakers — distinct from the predicted/projected probabilities table.",
     "source_label": "our verified results + the 2026 advancement rules",
     "status": "in_progress",
-    "results_counted": 68,
+    "results_counted": 69,
     "groups_complete": 10,
     "groups": [
       {
@@ -9208,20 +9158,20 @@
       {
         "group": "K",
         "complete": false,
-        "games_played": 4,
+        "games_played": 5,
         "standings": [
           {
             "position": 1,
             "code": "COL",
             "name": "Colombia",
-            "played": 2,
+            "played": 3,
             "won": 2,
-            "drawn": 0,
+            "drawn": 1,
             "lost": 0,
             "goals_for": 4,
             "goals_against": 1,
             "goal_difference": 3,
-            "points": 6,
+            "points": 7,
             "advance_state": "qualified",
             "band": "green",
             "decided": false
@@ -9230,14 +9180,14 @@
             "position": 2,
             "code": "POR",
             "name": "Portugal",
-            "played": 2,
+            "played": 3,
             "won": 1,
-            "drawn": 1,
+            "drawn": 2,
             "lost": 0,
             "goals_for": 6,
             "goals_against": 1,
             "goal_difference": 5,
-            "points": 4,
+            "points": 5,
             "advance_state": "qualified",
             "band": "green",
             "decided": false
