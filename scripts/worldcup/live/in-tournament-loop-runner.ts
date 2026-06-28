@@ -252,6 +252,26 @@ function selfHealNarration(narration_built: boolean, export_built: boolean) {
   }
 }
 
+// ---- KNOCKOUT NARRATION firing (Phase 6b; best-effort, non-blocking, idempotent, ISOLATED). Spawns the knockout
+// pre/post generators AFTER the export, so the bracket (determined ties) + the matured xG are in place. Each spawn is
+// contained by run() (the CLI's exit code never propagates); a failure is ABSORBED here, NEVER thrown — it cannot
+// block or un-publish the advancement / bracket / K=60. The generator is IDEMPOTENT (it skips ties that already have a
+// row), so a tie that fails simply has no row and is retried next cycle — idempotency IS the self-heal, no marker
+// needed. Writes ONLY additive ai_narrations rows (pre_match_storyline / post_result_change); touches nothing on the
+// critical path. Pre = previews for ties with both teams real; post = played ties whose xG has matured (gated inside
+// the generator on wc2026_fixture_enrichment_status).
+function runKnockoutFiring(built: boolean, execute: boolean): { status: StepStatus; detail: string } {
+  if (!built) return { status: "not_built", detail: `${NARRATION_GENERATOR} not found -> knockout narration skipped` };
+  if (!execute) return { status: "skipped", detail: "knockout narration fires --execute in the live cycle only" };
+  const out: string[] = [];
+  for (const m of [{ k: "pre", args: ["--knockout-pre", "--execute"] }, { k: "post", args: ["--knockout-post", "--execute"] }]) {
+    try { const r = run(`knockout-${m.k}`, NARRATION_GENERATOR, m.args); out.push(`${m.k}:${r.ok ? "ok" : "fail(" + r.code + ")"}`); }
+    catch (e: any) { out.push(`${m.k}:absorbed(${String(e?.message ?? e).slice(0, 60)})`); }
+  }
+  const anyOk = out.some((s) => s.includes(":ok"));
+  return { status: anyOk ? "ok" : "failed", detail: `knockout narration fired (idempotent, additive, isolated) — ${out.join(" ")}` };
+}
+
 async function syntheticCycle(args: ReturnType<typeof parseArgs>) {
   const { mode, go, forceNarrationFail, forceExportFail, demoNotBuilt } = args;
   const trace: Step[] = [];
@@ -555,6 +575,13 @@ async function liveCycle(args: ReturnType<typeof parseArgs>) {
       reexp = runProductionExport(export_built, false);
       log("EXPORT", `reexport_status=${reexp.status}`, reexp.status === "ok", reexp.detail);
     }
+
+    // KNOCKOUT NARRATION firing (Phase 6b; isolated, non-blocking, idempotent) — pre-match for ties with both teams
+    // real + post-match for played ties whose xG has matured. AFTER the publish/export above; ABSORBED on failure;
+    // never touches results/bracket/K=60/publish; the generator skips ties that already have a row (no re-fires).
+    console.log("\nKNOCKOUT NARRATION - pre-match (determined ties) + post-match (played + xG-matured) [isolated; never blocks advancement]");
+    const koNarr = runKnockoutFiring(narration_built, true);
+    log("AI", `knockout_narration_status=${koNarr.status}`, koNarr.status !== "failed", koNarr.detail);
 
     // SQUAD CARD overlay (best-effort, non-blocking, ISOLATED) — AFTER the advancement publish above. Rebuilds
     // squads.json from the DB so per-player WC Min/G/A/Cards + injuries surface during the tournament. A failure

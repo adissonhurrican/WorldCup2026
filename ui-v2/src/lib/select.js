@@ -137,6 +137,19 @@ export function narrationFor(data, code) {
   return pool.find((n) => { const h = narrNorm(n && n.headline); return h && names.some((x) => h.includes(x)); }) || null;
 }
 
+// ---- knockout narration (per-tie matchup story): pre_match_storyline (preview) + post_result_change (post-match),
+// keyed by fixture_label "A vs B". Match EITHER orientation so it is robust to bracket-vs-result ordering. When the
+// tie is finished, prefer the post-match story; otherwise the preview. Returns { kind, headline, body } or null. ----
+export function knockoutNarrationFor(data, fx, finished) {
+  if (!fx || !fx.home || !fx.away) return null;
+  const list = data.narration || [];
+  const labels = [`${fx.home} vs ${fx.away}`, `${fx.away} vs ${fx.home}`];
+  const find = (ct) => list.find((n) => n && n.content_type === ct && labels.includes(n.fixture_label)) || null;
+  const post = find("post_result_change"), pre = find("pre_match_storyline");
+  const chosen = finished ? (post || pre) : (pre || post);
+  return chosen ? { kind: chosen.content_type, headline: chosen.headline, body: chosen.body } : null;
+}
+
 // ---- group narration (one comparative "story of the group" per group) ----
 // Prefer the explicit `group` key; fall back to "Group X" appearing in the headline/body.
 export function groupNarrationFor(data, letter) {
