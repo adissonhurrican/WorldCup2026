@@ -9,7 +9,7 @@ import {
   teamByCode, nicknameLine, heroFor, reachStats, narrationFor, scenarioFor,
   tacticalFor, knockoutFor, groupTable, bestThirdInfo, bandOf, BAND_TEXT, pct, ordinal,
   teamFixtures, nextMatchIndex, isKnockoutFixture, matchState, squadGroups, fixtureDayLabel,
-  nextRealKnockoutFixture, teamTournamentEndState, teamCurrentKnockoutNarration, knockoutHeroFor,
+  nextRealKnockoutFixture, teamTournamentEndState, teamCurrentKnockoutNarration, knockoutHeroFor, knockoutPhase,
 } from "../lib/select";
 
 const TABS = ["Overview", "Standing", "Path", "Squad"];
@@ -279,6 +279,12 @@ function AboveTabs({ data, code }) {
 
 // ---------- OVERVIEW: the "how far they could go" reach grid ----------
 function OverviewPanel({ data, code }) {
+  // This is a GROUP-STAGE projection: reachStats reads team_paths[].knockout.reach_*, which are the pre-tournament
+  // simulation values and never re-condition on real results. Once the groups are complete those numbers are stale
+  // (an eliminated team still shows a non-zero "Reach R16") and contradict the now-live knockout hero — while the
+  // bracket (actual path) + the hero (live K=60 odds) already cover the knockouts. So hide it post-groups; during the
+  // group phase it is the relevant projection, keep it unchanged.
+  if (knockoutPhase(data)) return null;
   const stats = reachStats(data, code);
   return (
     <Card className="p-5">
