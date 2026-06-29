@@ -22,6 +22,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 
 const PROJECT_ID = "ahcfrgxczbgdvrqmbisw";
 const ROOT = process.cwd();
@@ -169,12 +170,20 @@ export async function buildSquadsJson({ dryRun = false } = {}) {
     with_dob: players.filter((p) => p.date_of_birth != null).length,
     with_photo: players.filter((p) => p.api_football_player_id != null).length,
   };
-  const payload = {
-    generated_at: new Date().toISOString(),
+  const body = {
     source: "WC2026 confirmed squads from the DB (players + API-Football squad fields + player_status_events). Display-only; never a model/prediction input.",
     note: "Per-player status (goals/assists/cards/minutes) fills from api_football_fixture_player_stats as WC matches are played; 0 until then. availability (out/doubtful/suspended) comes from player_status_events (latest tournament-scope, non-rejected) and carries review_status — pending seeds are shown but flagged. Missing club/age/number are null (the UI omits them). Player-card bio (api_player_id, photo[derived URL], dob, nationality, height_cm, weight_kg, birth_place, birth_country) is ADDITIVE and only populated where backfilled (Canada first); the current squad card ignores these keys.",
     coverage,
     teams: byCode,
+  };
+  // Stamp from a CONTENT HASH, not wall-clock. `generated_at: new Date()` churned squads.json every cycle, so the
+  // live loop's `git diff --cached --quiet` was never a clean no-op -> a commit + Netlify build + jsDelivr purge
+  // every 10 min even when the rosters were byte-identical. content_hash advances ONLY when the squad data actually
+  // changes, so unchanged squads now produce an identical file (true no-op). (The UI's loadSquads reads only .teams,
+  // so no consumer depended on the old timestamp.)
+  const payload = {
+    content_hash: "sha256:" + createHash("sha256").update(JSON.stringify(body)).digest("hex"),
+    ...body,
   };
 
   const json = JSON.stringify(payload, null, 2) + "\n";
