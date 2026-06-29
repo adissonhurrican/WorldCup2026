@@ -247,14 +247,17 @@ function AboveTabs({ data, code }) {
   const narr = narrationFor(data, code);               // spent group-stage scenario story — the graceful fallback
   const scen = scenarioFor(data, code);
   const hero = heroFor(data, code);
+  const inKnockouts = knockoutPhase(data);
   const isBubble = (hero.predicted === "3rd") || (scen && scen.third_place_race && scen.third_place_race.in_race);
-  // Surface the story where the team actually is NOW: the live knockout matchup if we have one (matched by
-  // fixture_label), else the spent group-stage "chance to reach the knockouts" story. Eliminated-in-groups teams
-  // have no knockout tie -> they keep the old story (end-state unaffected).
+  // Post-groups the group-stage advancement surfaces are spent (same class as the hero + reach-grid). Once groups are
+  // complete: (a) HIDE the "Ways to advance" routes — the knockout path is already covered by the hero + bracket +
+  // the knockout narration; (b) the AI summary no longer falls back to the spent group-stage story (the hero already
+  // shows the "did not advance" end-state for eliminated teams). During the groups, both are unchanged.
+  const showRoutes = !inKnockouts && scen && isBubble;
   const story = ko
     ? { headline: ko.story.headline, body: ko.story.body, sub: `${ko.fx.home} vs ${ko.fx.away} · ${ko.story.kind === "post_result_change" ? "the story" : "match preview"}` }
-    : (narr ? { headline: narr.headline, body: narr.body, sub: "the story behind the numbers" } : null);
-  if (!story && !(scen && isBubble)) return null;
+    : (!inKnockouts && narr ? { headline: narr.headline, body: narr.body, sub: "the story behind the numbers" } : null);
+  if (!story && !showRoutes) return null;
   return (
     <div className="space-y-4">
       {story && (
@@ -272,7 +275,7 @@ function AboveTabs({ data, code }) {
           </p>
         </Card>
       )}
-      {scen && isBubble && <RoutesCard scen={scen} />}
+      {showRoutes && <RoutesCard scen={scen} />}
     </div>
   );
 }

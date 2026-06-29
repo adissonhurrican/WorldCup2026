@@ -3,7 +3,7 @@ import Screen from "../components/Screen";
 import { Card, Flag, SegmentedTabs } from "../components/ui";
 // NOTE: group_narration ("✦ AI summary") is PARKED — removed from the UI pending a decision.
 // The groupNarrationFor() selector remains in select.js (unused here) so re-enabling is a one-line revert.
-import { teamByCode, groupCardRows, BAND_TEXT, bestThirdRace, scenarioFor, phase, pct } from "../lib/select";
+import { teamByCode, groupCardRows, BAND_TEXT, bestThirdRace, scenarioFor, phase, pct, knockoutPhase } from "../lib/select";
 import { IconChevronRight } from "../components/icons";
 
 // The ranked third-place list with "what you need" surfacing. Each row expands on tap to show:
@@ -90,7 +90,10 @@ export default function GroupsView({ data, onSelectTeam, rightAction }) {
 
   return (
     <Screen stickyTitle="Groups" rightAction={rightAction} header={<h1 className="py-1 text-[34px] font-bold tracking-tight">Groups</h1>}>
-      <ThirdPlaceStrip data={data} />
+      {/* Best-third RACE — group-stage only. Once the groups are complete the race is settled, so hide the live-race
+          strip + its "what you need"/threshold sentences (same knockoutPhase gate as the hero + reach-grid). The group
+          TABLES below stay (valid historical record); the bracket shows who advanced as a best third. */}
+      {!knockoutPhase(data) && <ThirdPlaceStrip data={data} />}
 
       {/* Predicted / Live toggle (drives all 12 cards) — shared glass SegmentedTabs */}
       <SegmentedTabs tabs={["Predicted", "Live"]} value={layer} onChange={setLayer} className="mt-4 lg:max-w-[360px]" />
