@@ -2905,7 +2905,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 2,
+        "b": 1,
+        "winner": "BRA",
+        "pens_a": null,
+        "pens_b": null
+      },
       "kickoff": "2026-06-29",
       "kickoff_utc": "2026-06-29T17:00:00Z",
       "date_confirmed": true,
@@ -3602,7 +3608,10 @@
         "group": null,
         "pool": null,
         "source_match": 76,
-        "team": null
+        "team": {
+          "code": "BRA",
+          "name": "Brazil"
+        }
       },
       "side_b": {
         "label": "Winner M78",
