@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-06-11 21:26:22.483983+00",
+    "generated_at": "2026-06-28 04:02:38.120117+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -4057,11 +4057,11 @@
       "code": "ESP",
       "advance": 0.8538,
       "knockout": {
-        "reach_round_of_16": 0.6993,
-        "reach_quarterfinal": 0.5817,
-        "reach_semifinal": 0.4792,
-        "reach_final": 0.3729,
-        "champion": 0.272
+        "reach_round_of_16": 0.6781,
+        "reach_quarterfinal": 0.5537,
+        "reach_semifinal": 0.445,
+        "reach_final": 0.3268,
+        "champion": 0.2187
       },
       "group_games": [
         {
@@ -4091,11 +4091,11 @@
       "code": "ARG",
       "advance": 0.8018,
       "knockout": {
-        "reach_round_of_16": 0.6026,
-        "reach_quarterfinal": 0.4889,
-        "reach_semifinal": 0.3801,
-        "reach_final": 0.2687,
-        "champion": 0.1695
+        "reach_round_of_16": 0.6339,
+        "reach_quarterfinal": 0.5301,
+        "reach_semifinal": 0.4222,
+        "reach_final": 0.2994,
+        "champion": 0.1988
       },
       "group_games": [
         {
@@ -4125,11 +4125,11 @@
       "code": "FRA",
       "advance": 0.7804,
       "knockout": {
-        "reach_round_of_16": 0.6283,
-        "reach_quarterfinal": 0.4849,
-        "reach_semifinal": 0.3492,
-        "reach_final": 0.2108,
-        "champion": 0.1249
+        "reach_round_of_16": 0.6627,
+        "reach_quarterfinal": 0.5425,
+        "reach_semifinal": 0.4138,
+        "reach_final": 0.2759,
+        "champion": 0.1789
       },
       "group_games": [
         {
@@ -4159,11 +4159,11 @@
       "code": "ENG",
       "advance": 0.7895,
       "knockout": {
-        "reach_round_of_16": 0.5508,
-        "reach_quarterfinal": 0.3669,
-        "reach_semifinal": 0.2298,
-        "reach_final": 0.1309,
-        "champion": 0.0644
+        "reach_round_of_16": 0.5597,
+        "reach_quarterfinal": 0.3813,
+        "reach_semifinal": 0.2409,
+        "reach_final": 0.1363,
+        "champion": 0.067
       },
       "group_games": [
         {
@@ -4193,11 +4193,11 @@
       "code": "BRA",
       "advance": 0.772,
       "knockout": {
-        "reach_round_of_16": 0.5405,
-        "reach_quarterfinal": 0.3452,
-        "reach_semifinal": 0.2041,
-        "reach_final": 0.1003,
-        "champion": 0.0474
+        "reach_round_of_16": 0.5465,
+        "reach_quarterfinal": 0.3545,
+        "reach_semifinal": 0.2104,
+        "reach_final": 0.1051,
+        "champion": 0.0482
       },
       "group_games": [
         {
@@ -4224,48 +4224,14 @@
       ]
     },
     {
-      "code": "POR",
-      "advance": 0.7421,
-      "knockout": {
-        "reach_round_of_16": 0.4954,
-        "reach_quarterfinal": 0.3105,
-        "reach_semifinal": 0.1789,
-        "reach_final": 0.0953,
-        "champion": 0.0437
-      },
-      "group_games": [
-        {
-          "opponent": "COL",
-          "matchday": 2,
-          "win": 0.3684,
-          "draw": 0.2676,
-          "loss": 0.364
-        },
-        {
-          "opponent": "COD",
-          "matchday": 2,
-          "win": 0.4887,
-          "draw": 0.1961,
-          "loss": 0.3152
-        },
-        {
-          "opponent": "UZB",
-          "matchday": 3,
-          "win": 0.4506,
-          "draw": 0.2295,
-          "loss": 0.3199
-        }
-      ]
-    },
-    {
       "code": "COL",
       "advance": 0.7381,
       "knockout": {
-        "reach_round_of_16": 0.4862,
-        "reach_quarterfinal": 0.3013,
-        "reach_semifinal": 0.171,
-        "reach_final": 0.0893,
-        "champion": 0.0394
+        "reach_round_of_16": 0.5104,
+        "reach_quarterfinal": 0.327,
+        "reach_semifinal": 0.194,
+        "reach_final": 0.1019,
+        "champion": 0.0445
       },
       "group_games": [
         {
@@ -4295,11 +4261,11 @@
       "code": "NED",
       "advance": 0.7464,
       "knockout": {
-        "reach_round_of_16": 0.4889,
-        "reach_quarterfinal": 0.3195,
-        "reach_semifinal": 0.1774,
-        "reach_final": 0.0789,
-        "champion": 0.0348
+        "reach_round_of_16": 0.506,
+        "reach_quarterfinal": 0.3453,
+        "reach_semifinal": 0.2001,
+        "reach_final": 0.0949,
+        "champion": 0.0413
       },
       "group_games": [
         {
@@ -4326,36 +4292,36 @@
       ]
     },
     {
-      "code": "ECU",
-      "advance": 0.7755,
+      "code": "POR",
+      "advance": 0.7421,
       "knockout": {
-        "reach_round_of_16": 0.4914,
-        "reach_quarterfinal": 0.2744,
-        "reach_semifinal": 0.1476,
-        "reach_final": 0.0633,
-        "champion": 0.023
+        "reach_round_of_16": 0.501,
+        "reach_quarterfinal": 0.3141,
+        "reach_semifinal": 0.1796,
+        "reach_final": 0.0915,
+        "champion": 0.0389
       },
       "group_games": [
         {
-          "opponent": "CIV",
-          "matchday": 1,
+          "opponent": "COL",
+          "matchday": 2,
+          "win": 0.3684,
+          "draw": 0.2676,
+          "loss": 0.364
+        },
+        {
+          "opponent": "COD",
+          "matchday": 2,
+          "win": 0.4887,
+          "draw": 0.1961,
+          "loss": 0.3152
+        },
+        {
+          "opponent": "UZB",
+          "matchday": 3,
           "win": 0.4506,
           "draw": 0.2295,
           "loss": 0.3199
-        },
-        {
-          "opponent": "CUW",
-          "matchday": 2,
-          "win": 0.5785,
-          "draw": 0.1233,
-          "loss": 0.2982
-        },
-        {
-          "opponent": "GER",
-          "matchday": 2,
-          "win": 0.3686,
-          "draw": 0.2676,
-          "loss": 0.3638
         }
       ]
     },
@@ -4363,11 +4329,11 @@
       "code": "CRO",
       "advance": 0.7464,
       "knockout": {
-        "reach_round_of_16": 0.4489,
-        "reach_quarterfinal": 0.2504,
-        "reach_semifinal": 0.1306,
-        "reach_final": 0.0602,
-        "champion": 0.0228
+        "reach_round_of_16": 0.4365,
+        "reach_quarterfinal": 0.2388,
+        "reach_semifinal": 0.1187,
+        "reach_final": 0.0505,
+        "champion": 0.0173
       },
       "group_games": [
         {
@@ -4394,36 +4360,70 @@
       ]
     },
     {
-      "code": "GER",
-      "advance": 0.7751,
+      "code": "MEX",
+      "advance": 0.7416,
       "knockout": {
-        "reach_round_of_16": 0.4813,
-        "reach_quarterfinal": 0.2591,
-        "reach_semifinal": 0.1367,
-        "reach_final": 0.0556,
-        "champion": 0.0192
+        "reach_round_of_16": 0.5202,
+        "reach_quarterfinal": 0.2787,
+        "reach_semifinal": 0.124,
+        "reach_final": 0.0486,
+        "champion": 0.0169
       },
       "group_games": [
         {
-          "opponent": "ECU",
+          "opponent": "CZE",
+          "matchday": 1,
+          "win": 0.4027,
+          "draw": 0.2595,
+          "loss": 0.3377
+        },
+        {
+          "opponent": "KOR",
           "matchday": 2,
-          "win": 0.3638,
-          "draw": 0.2676,
-          "loss": 0.3686
+          "win": 0.3949,
+          "draw": 0.2623,
+          "loss": 0.3428
         },
         {
-          "opponent": "CIV",
+          "opponent": "RSA",
           "matchday": 3,
-          "win": 0.4459,
-          "draw": 0.2332,
-          "loss": 0.3208
+          "win": 0.4916,
+          "draw": 0.1935,
+          "loss": 0.3149
+        }
+      ]
+    },
+    {
+      "code": "SUI",
+      "advance": 0.7844,
+      "knockout": {
+        "reach_round_of_16": 0.535,
+        "reach_quarterfinal": 0.2842,
+        "reach_semifinal": 0.1229,
+        "reach_final": 0.0495,
+        "champion": 0.0163
+      },
+      "group_games": [
+        {
+          "opponent": "BIH",
+          "matchday": 1,
+          "win": 0.4698,
+          "draw": 0.2131,
+          "loss": 0.317
         },
         {
-          "opponent": "CUW",
+          "opponent": "CAN",
           "matchday": 3,
-          "win": 0.5741,
-          "draw": 0.126,
-          "loss": 0.2999
+          "win": 0.3946,
+          "draw": 0.2624,
+          "loss": 0.343
+        },
+        {
+          "opponent": "QAT",
+          "matchday": 3,
+          "win": 0.5625,
+          "draw": 0.1336,
+          "loss": 0.3038
         }
       ]
     },
@@ -4431,11 +4431,11 @@
       "code": "NOR",
       "advance": 0.697,
       "knockout": {
-        "reach_round_of_16": 0.4426,
-        "reach_quarterfinal": 0.2572,
-        "reach_semifinal": 0.1275,
-        "reach_final": 0.0493,
-        "champion": 0.0168
+        "reach_round_of_16": 0.4518,
+        "reach_quarterfinal": 0.2659,
+        "reach_semifinal": 0.1289,
+        "reach_final": 0.0505,
+        "champion": 0.016
       },
       "group_games": [
         {
@@ -4465,11 +4465,11 @@
       "code": "JPN",
       "advance": 0.7194,
       "knockout": {
-        "reach_round_of_16": 0.4224,
-        "reach_quarterfinal": 0.2435,
-        "reach_semifinal": 0.1211,
-        "reach_final": 0.0453,
-        "champion": 0.0162
+        "reach_round_of_16": 0.4192,
+        "reach_quarterfinal": 0.244,
+        "reach_semifinal": 0.1188,
+        "reach_final": 0.0445,
+        "champion": 0.0149
       },
       "group_games": [
         {
@@ -4496,138 +4496,70 @@
       ]
     },
     {
-      "code": "TUR",
-      "advance": 0.7165,
+      "code": "GER",
+      "advance": 0.7751,
       "knockout": {
-        "reach_round_of_16": 0.4814,
-        "reach_quarterfinal": 0.2564,
-        "reach_semifinal": 0.1105,
-        "reach_final": 0.0464,
-        "champion": 0.0155
+        "reach_round_of_16": 0.4629,
+        "reach_quarterfinal": 0.2296,
+        "reach_semifinal": 0.1112,
+        "reach_final": 0.0414,
+        "champion": 0.0129
       },
       "group_games": [
         {
-          "opponent": "AUS",
-          "matchday": 1,
-          "win": 0.3987,
-          "draw": 0.261,
-          "loss": 0.3402
+          "opponent": "ECU",
+          "matchday": 2,
+          "win": 0.3638,
+          "draw": 0.2676,
+          "loss": 0.3686
         },
         {
-          "opponent": "PAR",
-          "matchday": 2,
-          "win": 0.3844,
-          "draw": 0.2651,
-          "loss": 0.3506
+          "opponent": "CIV",
+          "matchday": 3,
+          "win": 0.4459,
+          "draw": 0.2332,
+          "loss": 0.3208
         },
         {
-          "opponent": "USA",
-          "matchday": 2,
-          "win": 0.4191,
-          "draw": 0.2517,
-          "loss": 0.3292
+          "opponent": "CUW",
+          "matchday": 3,
+          "win": 0.5741,
+          "draw": 0.126,
+          "loss": 0.2999
         }
       ]
     },
     {
-      "code": "SUI",
-      "advance": 0.7844,
+      "code": "ECU",
+      "advance": 0.7755,
       "knockout": {
-        "reach_round_of_16": 0.5157,
-        "reach_quarterfinal": 0.2683,
-        "reach_semifinal": 0.1124,
-        "reach_final": 0.0446,
-        "champion": 0.015
+        "reach_round_of_16": 0.4536,
+        "reach_quarterfinal": 0.2213,
+        "reach_semifinal": 0.1021,
+        "reach_final": 0.0382,
+        "champion": 0.0116
       },
       "group_games": [
         {
-          "opponent": "BIH",
+          "opponent": "CIV",
           "matchday": 1,
-          "win": 0.4698,
-          "draw": 0.2131,
-          "loss": 0.317
+          "win": 0.4506,
+          "draw": 0.2295,
+          "loss": 0.3199
         },
         {
-          "opponent": "CAN",
-          "matchday": 3,
-          "win": 0.3946,
-          "draw": 0.2624,
-          "loss": 0.343
-        },
-        {
-          "opponent": "QAT",
-          "matchday": 3,
-          "win": 0.5625,
-          "draw": 0.1336,
-          "loss": 0.3038
-        }
-      ]
-    },
-    {
-      "code": "URU",
-      "advance": 0.7271,
-      "knockout": {
-        "reach_round_of_16": 0.4027,
-        "reach_quarterfinal": 0.217,
-        "reach_semifinal": 0.1055,
-        "reach_final": 0.0441,
-        "champion": 0.0146
-      },
-      "group_games": [
-        {
-          "opponent": "KSA",
+          "opponent": "CUW",
           "matchday": 2,
-          "win": 0.4859,
-          "draw": 0.1987,
-          "loss": 0.3154
+          "win": 0.5785,
+          "draw": 0.1233,
+          "loss": 0.2982
         },
         {
-          "opponent": "CPV",
-          "matchday": 3,
-          "win": 0.4968,
-          "draw": 0.1887,
-          "loss": 0.3145
-        },
-        {
-          "opponent": "ESP",
-          "matchday": 3,
-          "win": 0.3186,
-          "draw": 0.223,
-          "loss": 0.4584
-        }
-      ]
-    },
-    {
-      "code": "SEN",
-      "advance": 0.6766,
-      "knockout": {
-        "reach_round_of_16": 0.4065,
-        "reach_quarterfinal": 0.2207,
-        "reach_semifinal": 0.0979,
-        "reach_final": 0.0347,
-        "champion": 0.0106
-      },
-      "group_games": [
-        {
-          "opponent": "FRA",
-          "matchday": 1,
-          "win": 0.326,
-          "draw": 0.2467,
-          "loss": 0.4273
-        },
-        {
-          "opponent": "NOR",
-          "matchday": 3,
-          "win": 0.3585,
-          "draw": 0.2668,
-          "loss": 0.3746
-        },
-        {
-          "opponent": "IRQ",
-          "matchday": 3,
-          "win": 0.4579,
-          "draw": 0.2234,
-          "loss": 0.3186
+          "opponent": "GER",
+          "matchday": 2,
+          "win": 0.3686,
+          "draw": 0.2676,
+          "loss": 0.3638
         }
       ]
     },
@@ -4635,11 +4567,11 @@
       "code": "BEL",
       "advance": 0.7371,
       "knockout": {
-        "reach_round_of_16": 0.4506,
-        "reach_quarterfinal": 0.2142,
-        "reach_semifinal": 0.0799,
-        "reach_final": 0.0321,
-        "champion": 0.0097
+        "reach_round_of_16": 0.4508,
+        "reach_quarterfinal": 0.2153,
+        "reach_semifinal": 0.0785,
+        "reach_final": 0.0288,
+        "champion": 0.008
       },
       "group_games": [
         {
@@ -4666,116 +4598,14 @@
       ]
     },
     {
-      "code": "MEX",
-      "advance": 0.7416,
-      "knockout": {
-        "reach_round_of_16": 0.4767,
-        "reach_quarterfinal": 0.2261,
-        "reach_semifinal": 0.0876,
-        "reach_final": 0.0301,
-        "champion": 0.0083
-      },
-      "group_games": [
-        {
-          "opponent": "CZE",
-          "matchday": 1,
-          "win": 0.4027,
-          "draw": 0.2595,
-          "loss": 0.3377
-        },
-        {
-          "opponent": "KOR",
-          "matchday": 2,
-          "win": 0.3949,
-          "draw": 0.2623,
-          "loss": 0.3428
-        },
-        {
-          "opponent": "RSA",
-          "matchday": 3,
-          "win": 0.4916,
-          "draw": 0.1935,
-          "loss": 0.3149
-        }
-      ]
-    },
-    {
-      "code": "AUT",
-      "advance": 0.6567,
-      "knockout": {
-        "reach_round_of_16": 0.3182,
-        "reach_quarterfinal": 0.1464,
-        "reach_semifinal": 0.0553,
-        "reach_final": 0.0198,
-        "champion": 0.0056
-      },
-      "group_games": [
-        {
-          "opponent": "ALG",
-          "matchday": 1,
-          "win": 0.3885,
-          "draw": 0.2641,
-          "loss": 0.3474
-        },
-        {
-          "opponent": "ARG",
-          "matchday": 2,
-          "win": 0.3176,
-          "draw": 0.2173,
-          "loss": 0.4651
-        },
-        {
-          "opponent": "JOR",
-          "matchday": 2,
-          "win": 0.4043,
-          "draw": 0.2589,
-          "loss": 0.3368
-        }
-      ]
-    },
-    {
-      "code": "PAR",
-      "advance": 0.6754,
-      "knockout": {
-        "reach_round_of_16": 0.4012,
-        "reach_quarterfinal": 0.183,
-        "reach_semifinal": 0.0635,
-        "reach_final": 0.0215,
-        "champion": 0.0053
-      },
-      "group_games": [
-        {
-          "opponent": "AUS",
-          "matchday": 1,
-          "win": 0.3792,
-          "draw": 0.2661,
-          "loss": 0.3547
-        },
-        {
-          "opponent": "TUR",
-          "matchday": 2,
-          "win": 0.3506,
-          "draw": 0.2651,
-          "loss": 0.3844
-        },
-        {
-          "opponent": "USA",
-          "matchday": 3,
-          "win": 0.3966,
-          "draw": 0.2617,
-          "loss": 0.3416
-        }
-      ]
-    },
-    {
       "code": "MAR",
       "advance": 0.6909,
       "knockout": {
-        "reach_round_of_16": 0.3527,
-        "reach_quarterfinal": 0.1603,
-        "reach_semifinal": 0.0558,
-        "reach_final": 0.0163,
-        "champion": 0.0047
+        "reach_round_of_16": 0.3895,
+        "reach_quarterfinal": 0.1978,
+        "reach_semifinal": 0.0789,
+        "reach_final": 0.0257,
+        "champion": 0.0073
       },
       "group_games": [
         {
@@ -4802,274 +4632,138 @@
       ]
     },
     {
-      "code": "CAN",
-      "advance": 0.7276,
+      "code": "TUR",
+      "advance": 0.7165,
       "knockout": {
-        "reach_round_of_16": 0.3878,
-        "reach_quarterfinal": 0.152,
-        "reach_semifinal": 0.0457,
-        "reach_final": 0.0131,
-        "champion": 0.0028
+        "reach_round_of_16": 0.4282,
+        "reach_quarterfinal": 0.1969,
+        "reach_semifinal": 0.0688,
+        "reach_final": 0.0223,
+        "champion": 0.0065
       },
       "group_games": [
         {
-          "opponent": "BIH",
-          "matchday": 2,
-          "win": 0.4224,
-          "draw": 0.2497,
-          "loss": 0.3279
-        },
-        {
-          "opponent": "QAT",
-          "matchday": 2,
-          "win": 0.505,
-          "draw": 0.1813,
-          "loss": 0.3137
-        },
-        {
-          "opponent": "SUI",
-          "matchday": 3,
-          "win": 0.343,
-          "draw": 0.2624,
-          "loss": 0.3946
-        }
-      ]
-    },
-    {
-      "code": "AUS",
-      "advance": 0.656,
-      "knockout": {
-        "reach_round_of_16": 0.3496,
-        "reach_quarterfinal": 0.1366,
-        "reach_semifinal": 0.0382,
-        "reach_final": 0.0107,
-        "champion": 0.0024
-      },
-      "group_games": [
-        {
-          "opponent": "TUR",
+          "opponent": "AUS",
           "matchday": 1,
-          "win": 0.3402,
+          "win": 0.3987,
           "draw": 0.261,
-          "loss": 0.3987
+          "loss": 0.3402
         },
         {
           "opponent": "PAR",
-          "matchday": 1,
-          "win": 0.3547,
-          "draw": 0.2661,
-          "loss": 0.3792
+          "matchday": 2,
+          "win": 0.3844,
+          "draw": 0.2651,
+          "loss": 0.3506
         },
         {
           "opponent": "USA",
-          "matchday": 3,
-          "win": 0.3824,
-          "draw": 0.2655,
-          "loss": 0.3521
+          "matchday": 2,
+          "win": 0.4191,
+          "draw": 0.2517,
+          "loss": 0.3292
         }
       ]
     },
     {
-      "code": "IRN",
-      "advance": 0.6811,
+      "code": "SEN",
+      "advance": 0.6766,
       "knockout": {
-        "reach_round_of_16": 0.3241,
-        "reach_quarterfinal": 0.1147,
-        "reach_semifinal": 0.0298,
-        "reach_final": 0.0075,
-        "champion": 0.0018
+        "reach_round_of_16": 0.392,
+        "reach_quarterfinal": 0.2029,
+        "reach_semifinal": 0.0803,
+        "reach_final": 0.0257,
+        "champion": 0.0065
       },
       "group_games": [
         {
-          "opponent": "BEL",
+          "opponent": "FRA",
           "matchday": 1,
-          "win": 0.3428,
-          "draw": 0.2623,
-          "loss": 0.3949
+          "win": 0.326,
+          "draw": 0.2467,
+          "loss": 0.4273
         },
         {
-          "opponent": "EGY",
-          "matchday": 2,
-          "win": 0.3849,
-          "draw": 0.265,
-          "loss": 0.3501
+          "opponent": "NOR",
+          "matchday": 3,
+          "win": 0.3585,
+          "draw": 0.2668,
+          "loss": 0.3746
         },
         {
-          "opponent": "NZL",
-          "matchday": 2,
-          "win": 0.417,
-          "draw": 0.2529,
-          "loss": 0.3302
+          "opponent": "IRQ",
+          "matchday": 3,
+          "win": 0.4579,
+          "draw": 0.2234,
+          "loss": 0.3186
         }
       ]
     },
     {
-      "code": "SCO",
-      "advance": 0.6754,
+      "code": "URU",
+      "advance": 0.7271,
       "knockout": {
-        "reach_round_of_16": 0.2959,
-        "reach_quarterfinal": 0.1148,
-        "reach_semifinal": 0.0347,
-        "reach_final": 0.0082,
-        "champion": 0.0016
+        "reach_round_of_16": 0.3565,
+        "reach_quarterfinal": 0.1706,
+        "reach_semifinal": 0.0707,
+        "reach_final": 0.0237,
+        "champion": 0.006
       },
       "group_games": [
         {
-          "opponent": "HAI",
+          "opponent": "KSA",
           "matchday": 2,
-          "win": 0.4406,
-          "draw": 0.2374,
-          "loss": 0.3221
+          "win": 0.4859,
+          "draw": 0.1987,
+          "loss": 0.3154
         },
         {
-          "opponent": "BRA",
+          "opponent": "CPV",
           "matchday": 3,
-          "win": 0.3242,
-          "draw": 0.2429,
-          "loss": 0.4329
+          "win": 0.4968,
+          "draw": 0.1887,
+          "loss": 0.3145
         },
         {
-          "opponent": "MAR",
+          "opponent": "ESP",
           "matchday": 3,
-          "win": 0.3538,
-          "draw": 0.2659,
-          "loss": 0.3803
+          "win": 0.3186,
+          "draw": 0.223,
+          "loss": 0.4584
         }
       ]
     },
     {
-      "code": "PAN",
-      "advance": 0.6457,
+      "code": "AUT",
+      "advance": 0.6567,
       "knockout": {
-        "reach_round_of_16": 0.2343,
-        "reach_quarterfinal": 0.0819,
-        "reach_semifinal": 0.0223,
-        "reach_final": 0.0056,
-        "champion": 0.0014
+        "reach_round_of_16": 0.3295,
+        "reach_quarterfinal": 0.1534,
+        "reach_semifinal": 0.0583,
+        "reach_final": 0.0193,
+        "champion": 0.0054
       },
       "group_games": [
         {
-          "opponent": "GHA",
-          "matchday": 2,
-          "win": 0.4393,
-          "draw": 0.2383,
-          "loss": 0.3224
-        },
-        {
-          "opponent": "CRO",
-          "matchday": 3,
-          "win": 0.3274,
-          "draw": 0.2491,
-          "loss": 0.4235
-        },
-        {
-          "opponent": "ENG",
-          "matchday": 3,
-          "win": 0.3178,
-          "draw": 0.2186,
-          "loss": 0.4635
-        }
-      ]
-    },
-    {
-      "code": "KOR",
-      "advance": 0.6892,
-      "knockout": {
-        "reach_round_of_16": 0.3569,
-        "reach_quarterfinal": 0.1277,
-        "reach_semifinal": 0.0333,
-        "reach_final": 0.0073,
-        "champion": 0.0013
-      },
-      "group_games": [
-        {
-          "opponent": "CZE",
-          "matchday": 2,
-          "win": 0.3728,
-          "draw": 0.2671,
-          "loss": 0.3601
-        },
-        {
-          "opponent": "MEX",
-          "matchday": 2,
-          "win": 0.3428,
-          "draw": 0.2623,
-          "loss": 0.3949
-        },
-        {
-          "opponent": "RSA",
-          "matchday": 3,
-          "win": 0.4375,
-          "draw": 0.2396,
-          "loss": 0.3228
-        }
-      ]
-    },
-    {
-      "code": "CZE",
-      "advance": 0.6743,
-      "knockout": {
-        "reach_round_of_16": 0.333,
-        "reach_quarterfinal": 0.1048,
-        "reach_semifinal": 0.0266,
-        "reach_final": 0.0059,
-        "champion": 0.0011
-      },
-      "group_games": [
-        {
-          "opponent": "MEX",
+          "opponent": "ALG",
           "matchday": 1,
-          "win": 0.3377,
-          "draw": 0.2595,
-          "loss": 0.4027
-        },
-        {
-          "opponent": "RSA",
-          "matchday": 1,
-          "win": 0.427,
-          "draw": 0.2469,
-          "loss": 0.3261
-        },
-        {
-          "opponent": "KOR",
-          "matchday": 2,
-          "win": 0.3601,
-          "draw": 0.2671,
-          "loss": 0.3728
-        }
-      ]
-    },
-    {
-      "code": "ALG",
-      "advance": 0.6173,
-      "knockout": {
-        "reach_round_of_16": 0.245,
-        "reach_quarterfinal": 0.0863,
-        "reach_semifinal": 0.0243,
-        "reach_final": 0.0058,
-        "champion": 0.0009
-      },
-      "group_games": [
-        {
-          "opponent": "AUT",
-          "matchday": 1,
-          "win": 0.3474,
+          "win": 0.3885,
           "draw": 0.2641,
-          "loss": 0.3885
+          "loss": 0.3474
         },
         {
           "opponent": "ARG",
-          "matchday": 1,
-          "win": 0.313,
-          "draw": 0.1744,
-          "loss": 0.5126
+          "matchday": 2,
+          "win": 0.3176,
+          "draw": 0.2173,
+          "loss": 0.4651
         },
         {
           "opponent": "JOR",
-          "matchday": 3,
-          "win": 0.38,
-          "draw": 0.2659,
-          "loss": 0.3541
+          "matchday": 2,
+          "win": 0.4043,
+          "draw": 0.2589,
+          "loss": 0.3368
         }
       ]
     },
@@ -5077,11 +4771,11 @@
       "code": "USA",
       "advance": 0.6176,
       "knockout": {
-        "reach_round_of_16": 0.2766,
-        "reach_quarterfinal": 0.0898,
-        "reach_semifinal": 0.0221,
-        "reach_final": 0.0052,
-        "champion": 0.0006
+        "reach_round_of_16": 0.3438,
+        "reach_quarterfinal": 0.1467,
+        "reach_semifinal": 0.0457,
+        "reach_final": 0.0149,
+        "champion": 0.0035
       },
       "group_games": [
         {
@@ -5108,14 +4802,184 @@
       ]
     },
     {
+      "code": "PAR",
+      "advance": 0.6754,
+      "knockout": {
+        "reach_round_of_16": 0.3744,
+        "reach_quarterfinal": 0.1553,
+        "reach_semifinal": 0.0474,
+        "reach_final": 0.0142,
+        "champion": 0.0027
+      },
+      "group_games": [
+        {
+          "opponent": "AUS",
+          "matchday": 1,
+          "win": 0.3792,
+          "draw": 0.2661,
+          "loss": 0.3547
+        },
+        {
+          "opponent": "TUR",
+          "matchday": 2,
+          "win": 0.3506,
+          "draw": 0.2651,
+          "loss": 0.3844
+        },
+        {
+          "opponent": "USA",
+          "matchday": 3,
+          "win": 0.3966,
+          "draw": 0.2617,
+          "loss": 0.3416
+        }
+      ]
+    },
+    {
+      "code": "AUS",
+      "advance": 0.656,
+      "knockout": {
+        "reach_round_of_16": 0.3558,
+        "reach_quarterfinal": 0.1421,
+        "reach_semifinal": 0.041,
+        "reach_final": 0.0116,
+        "champion": 0.0026
+      },
+      "group_games": [
+        {
+          "opponent": "TUR",
+          "matchday": 1,
+          "win": 0.3402,
+          "draw": 0.261,
+          "loss": 0.3987
+        },
+        {
+          "opponent": "PAR",
+          "matchday": 1,
+          "win": 0.3547,
+          "draw": 0.2661,
+          "loss": 0.3792
+        },
+        {
+          "opponent": "USA",
+          "matchday": 3,
+          "win": 0.3824,
+          "draw": 0.2655,
+          "loss": 0.3521
+        }
+      ]
+    },
+    {
+      "code": "CAN",
+      "advance": 0.7276,
+      "knockout": {
+        "reach_round_of_16": 0.372,
+        "reach_quarterfinal": 0.1351,
+        "reach_semifinal": 0.0383,
+        "reach_final": 0.0097,
+        "champion": 0.0019
+      },
+      "group_games": [
+        {
+          "opponent": "BIH",
+          "matchday": 2,
+          "win": 0.4224,
+          "draw": 0.2497,
+          "loss": 0.3279
+        },
+        {
+          "opponent": "QAT",
+          "matchday": 2,
+          "win": 0.505,
+          "draw": 0.1813,
+          "loss": 0.3137
+        },
+        {
+          "opponent": "SUI",
+          "matchday": 3,
+          "win": 0.343,
+          "draw": 0.2624,
+          "loss": 0.3946
+        }
+      ]
+    },
+    {
+      "code": "IRN",
+      "advance": 0.6811,
+      "knockout": {
+        "reach_round_of_16": 0.3194,
+        "reach_quarterfinal": 0.1134,
+        "reach_semifinal": 0.0288,
+        "reach_final": 0.0063,
+        "champion": 0.0013
+      },
+      "group_games": [
+        {
+          "opponent": "BEL",
+          "matchday": 1,
+          "win": 0.3428,
+          "draw": 0.2623,
+          "loss": 0.3949
+        },
+        {
+          "opponent": "EGY",
+          "matchday": 2,
+          "win": 0.3849,
+          "draw": 0.265,
+          "loss": 0.3501
+        },
+        {
+          "opponent": "NZL",
+          "matchday": 2,
+          "win": 0.417,
+          "draw": 0.2529,
+          "loss": 0.3302
+        }
+      ]
+    },
+    {
+      "code": "ALG",
+      "advance": 0.6173,
+      "knockout": {
+        "reach_round_of_16": 0.2616,
+        "reach_quarterfinal": 0.0989,
+        "reach_semifinal": 0.0294,
+        "reach_final": 0.0069,
+        "champion": 0.0011
+      },
+      "group_games": [
+        {
+          "opponent": "AUT",
+          "matchday": 1,
+          "win": 0.3474,
+          "draw": 0.2641,
+          "loss": 0.3885
+        },
+        {
+          "opponent": "ARG",
+          "matchday": 1,
+          "win": 0.313,
+          "draw": 0.1744,
+          "loss": 0.5126
+        },
+        {
+          "opponent": "JOR",
+          "matchday": 3,
+          "win": 0.38,
+          "draw": 0.2659,
+          "loss": 0.3541
+        }
+      ]
+    },
+    {
       "code": "SWE",
       "advance": 0.6212,
       "knockout": {
-        "reach_round_of_16": 0.2243,
-        "reach_quarterfinal": 0.0766,
-        "reach_semifinal": 0.021,
-        "reach_final": 0.0044,
-        "champion": 0.0006
+        "reach_round_of_16": 0.2427,
+        "reach_quarterfinal": 0.0915,
+        "reach_semifinal": 0.0272,
+        "reach_final": 0.0066,
+        "champion": 0.001
       },
       "group_games": [
         {
@@ -5142,116 +5006,14 @@
       ]
     },
     {
-      "code": "EGY",
-      "advance": 0.6486,
-      "knockout": {
-        "reach_round_of_16": 0.2488,
-        "reach_quarterfinal": 0.0652,
-        "reach_semifinal": 0.0124,
-        "reach_final": 0.0022,
-        "champion": 0.0003
-      },
-      "group_games": [
-        {
-          "opponent": "BEL",
-          "matchday": 1,
-          "win": 0.3299,
-          "draw": 0.2525,
-          "loss": 0.4177
-        },
-        {
-          "opponent": "IRN",
-          "matchday": 2,
-          "win": 0.3501,
-          "draw": 0.265,
-          "loss": 0.3849
-        },
-        {
-          "opponent": "NZL",
-          "matchday": 3,
-          "win": 0.3943,
-          "draw": 0.2625,
-          "loss": 0.3432
-        }
-      ]
-    },
-    {
-      "code": "JOR",
-      "advance": 0.5823,
-      "knockout": {
-        "reach_round_of_16": 0.2019,
-        "reach_quarterfinal": 0.0595,
-        "reach_semifinal": 0.0127,
-        "reach_final": 0.0028,
-        "champion": 0.0003
-      },
-      "group_games": [
-        {
-          "opponent": "AUT",
-          "matchday": 2,
-          "win": 0.3368,
-          "draw": 0.2589,
-          "loss": 0.4043
-        },
-        {
-          "opponent": "ALG",
-          "matchday": 3,
-          "win": 0.3541,
-          "draw": 0.2659,
-          "loss": 0.38
-        },
-        {
-          "opponent": "ARG",
-          "matchday": 3,
-          "win": 0.3087,
-          "draw": 0.1487,
-          "loss": 0.5426
-        }
-      ]
-    },
-    {
-      "code": "UZB",
-      "advance": 0.6183,
-      "knockout": {
-        "reach_round_of_16": 0.2295,
-        "reach_quarterfinal": 0.0786,
-        "reach_semifinal": 0.0221,
-        "reach_final": 0.0036,
-        "champion": 0.0003
-      },
-      "group_games": [
-        {
-          "opponent": "COD",
-          "matchday": 1,
-          "win": 0.3852,
-          "draw": 0.2649,
-          "loss": 0.3499
-        },
-        {
-          "opponent": "POR",
-          "matchday": 3,
-          "win": 0.3199,
-          "draw": 0.2295,
-          "loss": 0.4506
-        },
-        {
-          "opponent": "COL",
-          "matchday": 3,
-          "win": 0.3207,
-          "draw": 0.2329,
-          "loss": 0.4464
-        }
-      ]
-    },
-    {
       "code": "COD",
       "advance": 0.5685,
       "knockout": {
-        "reach_round_of_16": 0.1716,
-        "reach_quarterfinal": 0.046,
-        "reach_semifinal": 0.0098,
-        "reach_final": 0.0015,
-        "champion": 0.0003
+        "reach_round_of_16": 0.2098,
+        "reach_quarterfinal": 0.0696,
+        "reach_semifinal": 0.0187,
+        "reach_final": 0.0042,
+        "champion": 0.0008
       },
       "group_games": [
         {
@@ -5278,14 +5040,116 @@
       ]
     },
     {
+      "code": "KOR",
+      "advance": 0.6892,
+      "knockout": {
+        "reach_round_of_16": 0.3219,
+        "reach_quarterfinal": 0.0975,
+        "reach_semifinal": 0.0214,
+        "reach_final": 0.0035,
+        "champion": 0.0007
+      },
+      "group_games": [
+        {
+          "opponent": "CZE",
+          "matchday": 2,
+          "win": 0.3728,
+          "draw": 0.2671,
+          "loss": 0.3601
+        },
+        {
+          "opponent": "MEX",
+          "matchday": 2,
+          "win": 0.3428,
+          "draw": 0.2623,
+          "loss": 0.3949
+        },
+        {
+          "opponent": "RSA",
+          "matchday": 3,
+          "win": 0.4375,
+          "draw": 0.2396,
+          "loss": 0.3228
+        }
+      ]
+    },
+    {
+      "code": "SCO",
+      "advance": 0.6754,
+      "knockout": {
+        "reach_round_of_16": 0.2664,
+        "reach_quarterfinal": 0.0911,
+        "reach_semifinal": 0.0242,
+        "reach_final": 0.0046,
+        "champion": 0.0007
+      },
+      "group_games": [
+        {
+          "opponent": "HAI",
+          "matchday": 2,
+          "win": 0.4406,
+          "draw": 0.2374,
+          "loss": 0.3221
+        },
+        {
+          "opponent": "BRA",
+          "matchday": 3,
+          "win": 0.3242,
+          "draw": 0.2429,
+          "loss": 0.4329
+        },
+        {
+          "opponent": "MAR",
+          "matchday": 3,
+          "win": 0.3538,
+          "draw": 0.2659,
+          "loss": 0.3803
+        }
+      ]
+    },
+    {
+      "code": "EGY",
+      "advance": 0.6486,
+      "knockout": {
+        "reach_round_of_16": 0.2877,
+        "reach_quarterfinal": 0.0896,
+        "reach_semifinal": 0.0211,
+        "reach_final": 0.0042,
+        "champion": 0.0006
+      },
+      "group_games": [
+        {
+          "opponent": "BEL",
+          "matchday": 1,
+          "win": 0.3299,
+          "draw": 0.2525,
+          "loss": 0.4177
+        },
+        {
+          "opponent": "IRN",
+          "matchday": 2,
+          "win": 0.3501,
+          "draw": 0.265,
+          "loss": 0.3849
+        },
+        {
+          "opponent": "NZL",
+          "matchday": 3,
+          "win": 0.3943,
+          "draw": 0.2625,
+          "loss": 0.3432
+        }
+      ]
+    },
+    {
       "code": "CIV",
       "advance": 0.6425,
       "knockout": {
-        "reach_round_of_16": 0.2049,
-        "reach_quarterfinal": 0.0515,
-        "reach_semifinal": 0.0117,
-        "reach_final": 0.0021,
-        "champion": 0.0002
+        "reach_round_of_16": 0.244,
+        "reach_quarterfinal": 0.072,
+        "reach_semifinal": 0.0186,
+        "reach_final": 0.0036,
+        "champion": 0.0004
       },
       "group_games": [
         {
@@ -5312,36 +5176,138 @@
       ]
     },
     {
-      "code": "TUN",
-      "advance": 0.576,
+      "code": "CZE",
+      "advance": 0.6743,
       "knockout": {
-        "reach_round_of_16": 0.1571,
-        "reach_quarterfinal": 0.0399,
-        "reach_semifinal": 0.0079,
-        "reach_final": 0.001,
+        "reach_round_of_16": 0.2774,
+        "reach_quarterfinal": 0.0673,
+        "reach_semifinal": 0.0119,
+        "reach_final": 0.0018,
+        "champion": 0.0003
+      },
+      "group_games": [
+        {
+          "opponent": "MEX",
+          "matchday": 1,
+          "win": 0.3377,
+          "draw": 0.2595,
+          "loss": 0.4027
+        },
+        {
+          "opponent": "RSA",
+          "matchday": 1,
+          "win": 0.427,
+          "draw": 0.2469,
+          "loss": 0.3261
+        },
+        {
+          "opponent": "KOR",
+          "matchday": 2,
+          "win": 0.3601,
+          "draw": 0.2671,
+          "loss": 0.3728
+        }
+      ]
+    },
+    {
+      "code": "PAN",
+      "advance": 0.6457,
+      "knockout": {
+        "reach_round_of_16": 0.189,
+        "reach_quarterfinal": 0.0529,
+        "reach_semifinal": 0.011,
+        "reach_final": 0.0019,
+        "champion": 0.0002
+      },
+      "group_games": [
+        {
+          "opponent": "GHA",
+          "matchday": 2,
+          "win": 0.4393,
+          "draw": 0.2383,
+          "loss": 0.3224
+        },
+        {
+          "opponent": "CRO",
+          "matchday": 3,
+          "win": 0.3274,
+          "draw": 0.2491,
+          "loss": 0.4235
+        },
+        {
+          "opponent": "ENG",
+          "matchday": 3,
+          "win": 0.3178,
+          "draw": 0.2186,
+          "loss": 0.4635
+        }
+      ]
+    },
+    {
+      "code": "RSA",
+      "advance": 0.5682,
+      "knockout": {
+        "reach_round_of_16": 0.1794,
+        "reach_quarterfinal": 0.0287,
+        "reach_semifinal": 0.0037,
+        "reach_final": 0.0003,
         "champion": 0.0001
       },
       "group_games": [
         {
-          "opponent": "SWE",
-          "matchday": 2,
-          "win": 0.3476,
-          "draw": 0.2642,
-          "loss": 0.3883
+          "opponent": "CZE",
+          "matchday": 1,
+          "win": 0.3261,
+          "draw": 0.2469,
+          "loss": 0.427
         },
         {
-          "opponent": "JPN",
+          "opponent": "MEX",
           "matchday": 3,
-          "win": 0.3189,
-          "draw": 0.2251,
-          "loss": 0.4559
+          "win": 0.3149,
+          "draw": 0.1935,
+          "loss": 0.4916
         },
         {
-          "opponent": "NED",
+          "opponent": "KOR",
           "matchday": 3,
-          "win": 0.3154,
-          "draw": 0.1982,
-          "loss": 0.4864
+          "win": 0.3228,
+          "draw": 0.2396,
+          "loss": 0.4375
+        }
+      ]
+    },
+    {
+      "code": "CPV",
+      "advance": 0.526,
+      "knockout": {
+        "reach_round_of_16": 0.127,
+        "reach_quarterfinal": 0.0272,
+        "reach_semifinal": 0.0042,
+        "reach_final": 0.0006,
+        "champion": 0.0001
+      },
+      "group_games": [
+        {
+          "opponent": "KSA",
+          "matchday": 1,
+          "win": 0.3617,
+          "draw": 0.2673,
+          "loss": 0.371
+        },
+        {
+          "opponent": "ESP",
+          "matchday": 1,
+          "win": 0.2731,
+          "draw": 0.1059,
+          "loss": 0.621
+        },
+        {
+          "opponent": "URU",
+          "matchday": 3,
+          "win": 0.3145,
+          "draw": 0.1887,
+          "loss": 0.4968
         }
       ]
     },
@@ -5349,9 +5315,9 @@
       "code": "KSA",
       "advance": 0.5382,
       "knockout": {
-        "reach_round_of_16": 0.1087,
-        "reach_quarterfinal": 0.0195,
-        "reach_semifinal": 0.0025,
+        "reach_round_of_16": 0.1213,
+        "reach_quarterfinal": 0.0242,
+        "reach_semifinal": 0.0034,
         "reach_final": 0.0004,
         "champion": 0.0001
       },
@@ -5383,10 +5349,10 @@
       "code": "IRQ",
       "advance": 0.5194,
       "knockout": {
-        "reach_round_of_16": 0.1487,
-        "reach_quarterfinal": 0.0338,
-        "reach_semifinal": 0.006,
-        "reach_final": 0.0008,
+        "reach_round_of_16": 0.128,
+        "reach_quarterfinal": 0.0238,
+        "reach_semifinal": 0.0029,
+        "reach_final": 0.0003,
         "champion": 0.0001
       },
       "group_games": [
@@ -5414,36 +5380,70 @@
       ]
     },
     {
-      "code": "RSA",
-      "advance": 0.5682,
+      "code": "JOR",
+      "advance": 0.5823,
       "knockout": {
-        "reach_round_of_16": 0.1525,
-        "reach_quarterfinal": 0.0204,
-        "reach_semifinal": 0.0018,
-        "reach_final": 0.0001,
-        "champion": 0
+        "reach_round_of_16": 0.1714,
+        "reach_quarterfinal": 0.0413,
+        "reach_semifinal": 0.0069,
+        "reach_final": 0.001,
+        "champion": 0.0001
       },
       "group_games": [
         {
-          "opponent": "CZE",
+          "opponent": "AUT",
+          "matchday": 2,
+          "win": 0.3368,
+          "draw": 0.2589,
+          "loss": 0.4043
+        },
+        {
+          "opponent": "ALG",
+          "matchday": 3,
+          "win": 0.3541,
+          "draw": 0.2659,
+          "loss": 0.38
+        },
+        {
+          "opponent": "ARG",
+          "matchday": 3,
+          "win": 0.3087,
+          "draw": 0.1487,
+          "loss": 0.5426
+        }
+      ]
+    },
+    {
+      "code": "UZB",
+      "advance": 0.6183,
+      "knockout": {
+        "reach_round_of_16": 0.1825,
+        "reach_quarterfinal": 0.0456,
+        "reach_semifinal": 0.01,
+        "reach_final": 0.0011,
+        "champion": 0.0001
+      },
+      "group_games": [
+        {
+          "opponent": "COD",
           "matchday": 1,
-          "win": 0.3261,
-          "draw": 0.2469,
-          "loss": 0.427
+          "win": 0.3852,
+          "draw": 0.2649,
+          "loss": 0.3499
         },
         {
-          "opponent": "MEX",
+          "opponent": "POR",
           "matchday": 3,
-          "win": 0.3149,
-          "draw": 0.1935,
-          "loss": 0.4916
+          "win": 0.3199,
+          "draw": 0.2295,
+          "loss": 0.4506
         },
         {
-          "opponent": "KOR",
+          "opponent": "COL",
           "matchday": 3,
-          "win": 0.3228,
-          "draw": 0.2396,
-          "loss": 0.4375
+          "win": 0.3207,
+          "draw": 0.2329,
+          "loss": 0.4464
         }
       ]
     },
@@ -5451,10 +5451,10 @@
       "code": "BIH",
       "advance": 0.6244,
       "knockout": {
-        "reach_round_of_16": 0.1854,
-        "reach_quarterfinal": 0.0379,
-        "reach_semifinal": 0.0042,
-        "reach_final": 0.0006,
+        "reach_round_of_16": 0.204,
+        "reach_quarterfinal": 0.0449,
+        "reach_semifinal": 0.006,
+        "reach_final": 0.001,
         "champion": 0
       },
       "group_games": [
@@ -5485,9 +5485,9 @@
       "code": "QAT",
       "advance": 0.5342,
       "knockout": {
-        "reach_round_of_16": 0.0771,
-        "reach_quarterfinal": 0.008,
-        "reach_semifinal": 0.0006,
+        "reach_round_of_16": 0.0717,
+        "reach_quarterfinal": 0.007,
+        "reach_semifinal": 0.0003,
         "reach_final": 0,
         "champion": 0
       },
@@ -5519,10 +5519,10 @@
       "code": "HAI",
       "advance": 0.5334,
       "knockout": {
-        "reach_round_of_16": 0.1027,
-        "reach_quarterfinal": 0.0163,
-        "reach_semifinal": 0.0019,
-        "reach_final": 0.0002,
+        "reach_round_of_16": 0.0944,
+        "reach_quarterfinal": 0.0125,
+        "reach_semifinal": 0.0011,
+        "reach_final": 0.0001,
         "champion": 0
       },
       "group_games": [
@@ -5553,9 +5553,9 @@
       "code": "CUW",
       "advance": 0.4838,
       "knockout": {
-        "reach_round_of_16": 0.0587,
-        "reach_quarterfinal": 0.0056,
-        "reach_semifinal": 0.0004,
+        "reach_round_of_16": 0.0614,
+        "reach_quarterfinal": 0.0063,
+        "reach_semifinal": 0.0006,
         "reach_final": 0,
         "champion": 0
       },
@@ -5584,13 +5584,47 @@
       ]
     },
     {
+      "code": "TUN",
+      "advance": 0.576,
+      "knockout": {
+        "reach_round_of_16": 0.1253,
+        "reach_quarterfinal": 0.0256,
+        "reach_semifinal": 0.0029,
+        "reach_final": 0.0002,
+        "champion": 0
+      },
+      "group_games": [
+        {
+          "opponent": "SWE",
+          "matchday": 2,
+          "win": 0.3476,
+          "draw": 0.2642,
+          "loss": 0.3883
+        },
+        {
+          "opponent": "JPN",
+          "matchday": 3,
+          "win": 0.3189,
+          "draw": 0.2251,
+          "loss": 0.4559
+        },
+        {
+          "opponent": "NED",
+          "matchday": 3,
+          "win": 0.3154,
+          "draw": 0.1982,
+          "loss": 0.4864
+        }
+      ]
+    },
+    {
       "code": "NZL",
       "advance": 0.595,
       "knockout": {
-        "reach_round_of_16": 0.1616,
-        "reach_quarterfinal": 0.029,
-        "reach_semifinal": 0.0036,
-        "reach_final": 0.0002,
+        "reach_round_of_16": 0.1414,
+        "reach_quarterfinal": 0.0216,
+        "reach_semifinal": 0.0021,
+        "reach_final": 0.0001,
         "champion": 0
       },
       "group_games": [
@@ -5618,47 +5652,13 @@
       ]
     },
     {
-      "code": "CPV",
-      "advance": 0.526,
-      "knockout": {
-        "reach_round_of_16": 0.1028,
-        "reach_quarterfinal": 0.0169,
-        "reach_semifinal": 0.0019,
-        "reach_final": 0.0001,
-        "champion": 0
-      },
-      "group_games": [
-        {
-          "opponent": "KSA",
-          "matchday": 1,
-          "win": 0.3617,
-          "draw": 0.2673,
-          "loss": 0.371
-        },
-        {
-          "opponent": "ESP",
-          "matchday": 1,
-          "win": 0.2731,
-          "draw": 0.1059,
-          "loss": 0.621
-        },
-        {
-          "opponent": "URU",
-          "matchday": 3,
-          "win": 0.3145,
-          "draw": 0.1887,
-          "loss": 0.4968
-        }
-      ]
-    },
-    {
       "code": "GHA",
       "advance": 0.4919,
       "knockout": {
-        "reach_round_of_16": 0.0761,
-        "reach_quarterfinal": 0.0111,
-        "reach_semifinal": 0.0013,
-        "reach_final": 0.0001,
+        "reach_round_of_16": 0.1022,
+        "reach_quarterfinal": 0.02,
+        "reach_semifinal": 0.0031,
+        "reach_final": 0.0003,
         "champion": 0
       },
       "group_games": [
@@ -7384,265 +7384,265 @@
     {
       "content_type": "scenario_narration",
       "headline": "Tunisia's Journey Comes to an End",
-      "body": "For Tunisia, the tournament has reached its final whistle. There are no remaining paths, no mathematical lifelines, and no back-door routes left to explore. Our prediction system confirms they have a 0% chance to reach the knockouts, meaning they are officially eliminated from the competition. In Group F, they find themselves adrift at the bottom of the standings with zero points after three matches, well off the pace of Sweden, who finished just above them in third. While Japan and the Netherlands comfortably secured their passage to the Round of 32, Tunisia's three defeats leave them with a dignified exit to contemplate. Even a positive result in their final match against the Netherlands could not alter their fourth-place finish. The group stage is now fully complete, and the final standings are settled.",
+      "body": "For Tunisia, the tournament has reached its final whistle. There are no remaining paths, no mathematical lifelines, and no back-door routes left to explore—the prediction system shows a 0% chance of reaching the knockouts. It is a tough reality to face, but their campaign in Group F is officially over. With all three matches played, the final standings are settled. Tunisia finish at the bottom of the group with zero points, adrift of Sweden, who took third place with four points. Up at the top, the Netherlands and Japan have comfortably secured their places in the Round of 32. Even a positive result in their final match against the Netherlands could not have altered the outcome, as the gap was simply too wide to close. Tunisia played with pride, but they could not find the points needed to keep their tournament hopes alive.",
       "team_code": "TUN"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Sweden Secure Knockout Spot After Group Stage Drama",
-      "body": "Sweden have officially reached the knockouts, delivering a proud moment for a rebuilding squad. Our group-stage model confirms they have a 100% chance of advancing to the Round of 32. They finished third in Group F behind Japan and the Netherlands, who both ended with a perfect advancement record. While Sweden missed out on a top-two finish, their four points and even goal difference left them in a highly secure position. In fact, as a locked third-place team, they are mathematically safe. This back-door route is completely reliable; they are already through as the second-best third-placed team overall, well clear of the cutoff. Swedish coverage notes that reaching this stage meets their pre-tournament target, though the mood is tempered by defensive worries. Reports suggest centre-back Isak Hien is out for the rest of the tournament with a thigh injury, a blow coach Graham Potter called \"devastating for him.\" Nevertheless, Sweden have rebounded from their earlier heavy defeat to the Netherlands and can now look forward to the knockout rounds with quiet confidence. Sweden are mathematically safe as a locked third-place team: at most 1 other third-place records can beat their 4 pts / GD 0 / GF 7, and eight third-place teams qualify.",
+      "body": "Sweden have officially reached the knockouts, delivering a proud moment for a rebuilding squad. Our group-stage model confirms they have a 100% chance to advance to the Round of 32. They finished third in Group F behind Japan and the Netherlands, who both finished comfortably ahead. While Sweden missed out on a top-two finish, their route through the best-third-place back door is mathematically safe. With four points and a neutral goal difference, they are currently the second-best third-placed team, well clear of the cutoff. Even though they slipped to third, this route is a completely reliable safety net. Swedish coverage frames this achievement as a target met, though the mood is tempered by defensive worries. Reports suggest centre-back Isak Hien is out for the tournament with a thigh injury, which coach Graham Potter called \"devastating for him.\" Despite this blow, Sweden have achieved their primary goal and can look forward to the knockout stage with quiet pride. Sweden are mathematically safe as a locked third-place team: at most 1 other third-place records can beat their 4 pts / GD 0 / GF 7, and eight third-place teams qualify.",
       "team_code": "SWE"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Switzerland Secure Top Spot and Perfect Path to the Knockouts",
-      "body": "Switzerland have achieved the ultimate goal in Group B, comfortably reaching the knockouts as group winners. Our group-stage model shows they have a 100% chance of advancing, having completely bypassed the stressful third-place comparison. They finished the group stage unbeaten with seven points, leaving Canada and Bosnia and Herzegovina to battle behind them. This flawless run means their passage into the Round of 32 is entirely secure. The national mood is buoyant after topping the group, with Swiss coverage highlighting the team's growing confidence. Head coach Murat Yakin projected calm optimism throughout, telling Africa Top Sports, \"I am optimistic. I trust my players. We have a seasoned team.\" That trust has been fully rewarded. With first place locked in, Switzerland can now focus entirely on their upcoming knockout match in Vancouver, carrying the momentum of an undefeated group campaign.",
+      "headline": "Switzerland Secure Top Spot and Perfect Passage to the Knockouts",
+      "body": "Switzerland have achieved the ultimate peace of mind, comfortably reaching the knockouts with absolute certainty. By finishing unbeaten at the top of Group B with seven points, they have made the math simple: they are guaranteed to go through in first place, completely bypassing any stressful third-place calculations. This flawless group stage has placed them in a very strong position, with our group-stage model confirming they have a 100% chance of advancing to the Round of 32. They finished well clear of Canada and Bosnia and Herzegovina, who both ended on four points, while Qatar finished at the bottom. This dominant performance has fueled national optimism. Swiss coverage suggests the squad has moved past past divisions, and head coach Murat Yakin expressed his belief in this experienced group, stating, \"I am optimistic. I trust my players. We have a seasoned team, and they know how to handle stress very well.\" With their ticket to Vancouver booked, the Swiss can now focus entirely on preparing for their upcoming knockout challenge.",
       "team_code": "SUI"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Senegal Secure Knockout Spot After Group Stage Drama",
-      "body": "Senegal are officially through to the knockouts. After a tense group stage, our prediction system shows they have a 100% chance to reach the Round of 32. While they can no longer finish in the top two, their route is completely secure. They have finished third in Group I with three points, behind France and Norway. In the cross-group comparison, Senegal are currently the eighth-best third-placed team, which is mathematically safe to qualify. Even though they had to rely on the third-place back door, this route is a completely reliable safety net. According to reports, the mood in Dakar swung from frustration to jubilation, turning the capital into an all-night street party. Coach Pape Bouna Thiaw kept expectations measured, noting, 'Even though we scored five goals, there are still improvements to be made.' With their place in the next round guaranteed, Senegal can now focus entirely on their upcoming knockout matchup. Senegal are mathematically safe as a locked third-place team: at most 7 other third-place records can beat their 3 pts / GD +2 / GF 8, and eight third-place teams qualify.",
+      "headline": "Senegal Secure Knockout Spot After Dramatic Group Stage Recovery",
+      "body": "Senegal have officially reached the knockouts, overcoming a tense start to guarantee their place in the Round of 32. Our group-stage model confirms they have a 100% chance of advancing. While they can no longer finish in the top two, their route is completely secure through the best-third-place safety net. Because their final record of three points and a plus-two goal difference is mathematically safe, they are already through without having to worry about other groups. In Group I, France and Norway finished comfortably ahead to take the automatic spots, leaving Senegal to secure their passage from third place. This survival brings immense relief to Dakar, where fans celebrated long into the night. The team's recovery was capped by an emphatic five-goal victory over Iraq, though manager Pape Bouna Thiaw kept his squad focused, noting, 'Even though we scored five goals, there are still improvements to be made.' With their place in the next round officially locked in, the African champions can now look ahead to the knockout bracket. Senegal are mathematically safe as a locked third-place team: at most 7 other third-place records can beat their 3 pts / GD +2 / GF 8, and eight third-place teams qualify.",
       "team_code": "SEN"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Scotland's Tournament Comes to a Dignified End",
-      "body": "Scotland's journey has reached its conclusion. With all group matches played, there is no longer a path to reach the knockouts, as our prediction system shows a 0% chance of advancing. Scotland finished third in Group C with three points, comfortably ahead of Haiti, who finished bottom with zero points, but well off the pace of Brazil and Morocco, who both claimed seven points. While Scotland secured third place, they are mathematically out of the best-third places. At least ten other third-place records beat Scotland's locked record of three points and a minus-three goal difference, meaning they finish eleventh in the third-place standings. Because only eight third-place teams qualify for the Round of 32, Scotland's campaign is officially over. Scotland are mathematically out of the best-third places: at least 10 other third-place records beat their locked 3 pts / GD -3 / GF 1, and only eight third-place teams qualify.",
+      "body": "Scotland's journey has reached its conclusion, and they will not reach the knockouts. While they secured third place in Group C ahead of Haiti, our group-stage model shows they now have a 0% chance of advancing to the Round of 32. With Brazil and Morocco comfortably taking the top two spots, Scotland's only hope was the best-third back door. However, with their group stage complete, Scotland are mathematically out of the best-third places. Their locked record of three points and a minus-three goal difference leaves them eleventh in the third-place standings, five goals behind the eighth-place cutoff. At least ten other third-place records beat Scotland's final tally, meaning they cannot claim one of the eight qualifying spots. It is a tough end to the campaign, but Scotland finish clear of bottom-placed Haiti with their heads held high. Scotland are mathematically out of the best-third places: at least 10 other third-place records beat their locked 3 pts / GD -3 / GF 1, and only eight third-place teams qualify.",
       "team_code": "SCO"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Bafana Bafana Clinch Historic Knockout Spot",
-      "body": "South Africa have achieved the extraordinary, securing their place in the knockouts for the first time in their history. Our group-stage model shows Bafana Bafana have a 100% chance of advancing, locked into second place in Group A behind Mexico, who finished comfortably ahead at the top. This historic breakthrough has sparked nationwide joy. According to Al Jazeera, fans are celebrating a proud moment that has exceeded all pre-tournament expectations. Coach Hugo Broos was delighted with the achievement, telling reporters, \"It's historic. But I'm very happy for the guys.\" With four points from their three matches, South Africa's passage is completely secure. They do not need to worry about the complicated third-place math or rely on other results. Bafana Bafana are officially moving on to the Round of 32.",
+      "body": "South Africa have achieved the extraordinary, securing their place in the knockouts for the first time in history. Our group-stage model shows Bafana Bafana have a 100% chance of advancing, safely locked into the runner-up spot in Group A. They finished their group campaign with four points, chasing close behind group winners Mexico, who ended with a perfect nine points. This historic breakthrough has sparked nationwide joy. According to Al Jazeera, the win over South Korea triggered jubilant street celebrations, turning what was once pre-tournament pessimism into a proud moment for the country. Coach Hugo Broos expressed his delight, saying, \"It's historic. But I'm very happy for the guys.\" Because South Africa finished second, they bypass the third-place calculations entirely, moving directly into the Round of 32 with their destiny fully in their own hands.",
       "team_code": "RSA"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Qatar's Tournament Comes to an End",
-      "body": "Qatar's journey in the tournament has reached its conclusion. With all three group matches played, the team is officially eliminated and can no longer reach the knockouts. It is a tough moment for the squad, but they exit with their heads held high after fighting through a demanding campaign. In Group B, Qatar finished at the bottom of the standings with one point, adrift of Switzerland, who topped the group, as well as Canada and Bosnia and Herzegovina. While their opponents move on to the Round of 32, Qatar's focus now turns to the future and building on the valuable experience gained on the world stage.",
+      "headline": "Qatar's Tournament Journey Comes to an End",
+      "body": "Qatar's campaign has reached its conclusion. With the group stage matches now complete, the prediction system shows Qatar has a 0% chance of reaching the knockouts. It is a tough outcome for the team, who finish at the bottom of Group B with one point from their three matches. While Switzerland, Canada, and Bosnia and Herzegovina have all secured their places in the Round of 32, Qatar found themselves adrift at the foot of the standings, unable to close the gap on third-placed Bosnia and Herzegovina or Switzerland. Despite a hard-fought 1-1 draw against Switzerland in their final match, earlier defeats left Qatar out of contention for the top two spots or the third-place wildcard route. The team bows out of the tournament with dignity, having gained valuable experience on the world stage.",
       "team_code": "QAT"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Portugal Secure Knockout Spot as Group K Runners-Up",
-      "body": "Portugal have officially reached the knockouts. Our group-stage model shows they have a 100% chance of advancing, having locked down second place in Group K with five points. While they missed out on winning the group after a scoreless draw with Colombia, their passage to the Round of 32 is completely secure. They finished in the top two, meaning they do not need to rely on the third-place wildcard route. In the final group standings, Colombia took the top spot with seven points, while Portugal comfortably cleared Congo DR and Uzbekistan. Reports suggest a cooling national mood after some flat performances, but head coach Roberto Martinez remains focused, stating before the final group match that \"the focus is to try to win the game and not think about the next opponent.\" With their place in the next round guaranteed, Portugal can now turn their attention entirely to the knockout stage.",
+      "body": "Portugal have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. Our group-stage model confirms they have a 100% chance of advancing, having locked down the runner-up spot in Group K. They finished their group campaign unbeaten with five points, trailing Colombia who took the top spot with seven points, while Congo DR finished third and Uzbekistan were eliminated. Because Portugal's progression is already mathematically guaranteed through a top-two finish, they do not need to rely on the third-place wildcard pool. This secure standing comes despite a flat, goalless draw against Colombia in their final group match, which has cooled the national mood. According to international coverage, the team has faced criticism for looking slow and stagnant, with media reports suggesting the squad has not yet blended into a coherent, championship-level side. Head coach Roberto Martinez sought to keep the focus on the immediate challenge, having previously stated, \"The focus is to try to win the game and not think about the next opponent.\"",
       "team_code": "POR"
     },
     {
       "content_type": "scenario_narration",
       "headline": "La Albirroja Secure Knockout Spot After Sixteen-Year Wait",
-      "body": "Paraguay are officially through to the knockouts. Our group-stage model confirms La Albirroja have a 100% chance to reach the Round of 32, completing a historic return to the big stage. They finished third in a highly congested Group D, locked in a tight cluster with Australia and the USA, who both also finished with a perfect qualification chance. While their direct top-two route closed, Paraguay's third-place record of four points is mathematically safe. They are already through as a reliable best-third qualifier, currently sitting as the seventh-best third-placed team. This achievement has sparked intense national pride alongside tactical debate. Reflecting on the defensive underdog role, manager Gustavo Alfaro combatively told Depor, \"No, no existen los imposibles.\" Reports suggest defender Omar Alderete's availability remains unconfirmed due to an injury sustained against Australia, but the squad's place in the next round is fully secured. Paraguay are mathematically safe as a locked third-place team: at most 6 other third-place records can beat their 4 pts / GD -2 / GF 2, and eight third-place teams qualify.",
+      "body": "Paraguay are officially through to the knockouts. Our group-stage model confirms La Albirroja have a 100% chance to reach the Round of 32, completing a historic return to the big stage. They finished third in a congested Group D, locked in a tight cluster where Australia and the USA also advanced with perfect safety. While their direct top-two route closed, Paraguay's four points and minus-two goal difference made their third-place safety net completely reliable. They are mathematically safe as the seventh-best third-placed team, with only six other groups able to beat their record. This milestone ends a sixteen-year wait, sparking immense pride alongside intense debate back home. Reflecting on the defensive grit that got them here, manager Gustavo Alfaro told Depor, \"No, no existen los imposibles.\" Reports suggest defender Omar Alderete is managing an injury from the final group match, but the squad moves forward with their ticket booked. Paraguay are mathematically safe as a locked third-place team: at most 6 other third-place records can beat their 4 pts / GD -2 / GF 2, and eight third-place teams qualify.",
       "team_code": "PAR"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Panama's Tournament Journey Comes to an End",
-      "body": "Panama's campaign has reached its conclusion, and they will not reach the knockouts. With three matches played in Group L, the team finishes at the bottom of the standings with zero points, meaning their chance of advancing to the Round of 32 is now 0%. They found themselves in a challenging group, adrift at the foot of the table behind Ghana, who secured third place with four points, while England and Croatia claimed the top two spots to comfortably secure their progression. Panama fought hard but were unable to find the back of the net, conceding four goals across their three defeats. Because they finished fourth, the third-place wildcard route is not open to them. While the results did not go their way on the pitch, Panama exit the tournament with their heads held high after testing themselves against some of the world's strongest teams.",
+      "body": "Panama's campaign has reached its conclusion, with our group-stage model showing a 0% chance of reaching the knockouts. It is a tough reality to face, but their path to the Round of 32 is mathematically closed after three difficult matches. In Group L, Panama found themselves adrift at the bottom of the standings without a point, unable to close the gap on Ghana, who finished third with four points. England and Croatia have claimed the top two spots to secure their progression. Panama fought hard but ultimately finished fourth, meaning they cannot advance through either the direct top-two route or the third-place comparison. With the group stage now complete, Panama bows out of the tournament with dignity, having faced some of the world's strongest teams on the grandest stage.",
       "team_code": "PAN"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "New Zealand's Tournament Journey Comes to an End",
-      "body": "New Zealand have been eliminated from the World Cup, with our prediction system showing a 0% chance of reaching the knockouts. It is a dignified but tough conclusion for the team, who fought hard but ultimately found themselves at the bottom of Group G. They sit in fourth place with one point from their three matches, just behind Iran, who finished third with three points. With the group stage now complete, Belgium and Egypt have secured the top two spots to advance. New Zealand's final record of one draw and two defeats means they cannot progress to the Round of 32, leaving them to look ahead to the next cycle.",
+      "headline": "New Zealand Face Dignified Exit After Tough Group Campaign",
+      "body": "New Zealand's journey in the tournament has come to an end. With the group stage complete, the prediction system shows a 0% chance for the team to reach the knockouts. It is a tough outcome for the squad, who fought hard but find themselves at the bottom of Group G with one point from their three matches. They sit just behind Iran, who finished third on three points, while Belgium and Egypt have comfortably secured the top two spots to advance. Because the group matches are fully complete, there are no remaining paths or back-door routes left to explore. The team can hold their heads high after a demanding campaign against some of the world's strongest teams, but their focus must now turn to the future.",
       "team_code": "NZL"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Norway Secure Knockout Spot After Group Stage Drama",
-      "body": "Norway are officially through to the knockouts. Our group-stage model confirms they have a 100% chance of reaching the Round of 32, having locked down second place in Group I with six points. They finished in a tight cluster behind group leaders France and just ahead of Senegal, who also advanced. Because Norway's runner-up spot is fully secured, they do not need to worry about the third-place back-door route. This milestone is a massive moment for the nation's long-awaited return to the global stage. As captain Martin Odegaard told NRK, \"It is allowed to dream big, and we are going to go for it.\" Head coach Stale Solbakken was able to rotate his squad heavily in their final group match to keep key players fresh for the next round, unrepentantly telling the press, \"I am ruthless in everything to do with team selection.\" With their ticket to the knockouts officially punched, Norway can now focus entirely on their upcoming round of 32 clash.",
+      "body": "Norway are officially through to the knockouts. Our group-stage model confirms they have a 100% chance of reaching the Round of 32, having locked up second place in Group I with six points. They finished in a tight cluster behind group winners France and just ahead of Senegal, who also advanced. Because Norway's runner-up spot is fully secured, they do not need to worry about the third-place back door. This milestone is a massive relief for a nation enjoying its first World Cup since 1998. Captain Martin Odegaard captured the buoyant mood, telling NRK, \"It is allowed to dream big, and we are going to go for it.\" Head coach Stale Solbakken was widely backed for resting key starters in their final group match to keep them fresh for the knockouts, telling Sports Illustrated, \"We are very happy having six points. We should not become too greedy.\"",
       "team_code": "NOR"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Oranje Secure Top Spot to Seal Knockout Place",
-      "body": "The Netherlands have safely reached the knockouts, finishing their group stage with quiet authority. With seven points from three matches, their place in the Round of 32 is fully secured. They ended up in a tight cluster at the top of Group F, finishing just ahead of Japan and Sweden to claim first place. Because they won the group outright, they did not need to worry about the third-place safety net. This flawless progression has fueled belief back home, where Dutch media are already framing the team as a genuine title contender. However, the mood remains grounded; local coverage notes that while the attack has been free-scoring, the defense looked shaky at times and still has room to improve. Head coach Ronald Koeman has also sought to keep expectations in check, telling reporters, \"I'm not sure if we are the favourite in the match against Morocco.\" For a nation that has reached three finals without ever lifting the trophy, the real test begins now.",
+      "headline": "Oranje Secure Top Spot and Perfect Path to the Knockouts",
+      "body": "The Netherlands have achieved their ultimate group-stage goal, securing a flawless route to the knockouts. By finishing comfortably at the top of Group F with seven points, they have made their passage to the Round of 32 entirely certain. Our group-stage model confirms they have a 100% chance of advancing, completely bypassing the anxiety of the third-place wildcard race. They finished in a tight cluster at the top, with Japan right on their heels in second place. While Dutch media have begun framing the team as a genuine title contender, the mood back home remains slightly tempered by defensive worries. Ronald Koeman has also sought to keep expectations grounded, telling reporters, \"I'm not sure if we are the favourite in the match against Morocco.\" With their place in the next round fully locked in, Oranje can now focus entirely on the knockout challenges ahead.",
       "team_code": "NED"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Perfect Group Stage Propels Mexico into the Knockouts",
-      "body": "Mexico have reached the knockouts in absolute style, securing their place in the Round of 32 with a perfect nine points. Our group-stage model shows they had a 100% chance to advance, completely controlling their destiny by topping Group A. While South Africa finished as their closest rivals on four points, Mexico remained well clear at the summit. This flawless run has ignited the home crowd, though manager Javier Aguirre is deliberately keeping feet on the ground. Reflecting on the achievement, Aguirre told El Informador, \"It is anecdotal to finish as leader today and in 2002. In the end what counts is the final placing.\" With three wins, six goals scored, and zero conceded, the co-hosts have bypassed any need for a third-place safety net. They now head into the knockout bracket with maximum momentum.",
+      "body": "Mexico have reached the knockouts in absolute style, securing their place in the Round of 32 with a perfect nine points. Our group-stage model shows they had a 100% chance of advancing, a flawless run that saw them win Group A without conceding a single goal. While South Africa finished as runners-up, Mexico remained well clear at the top of the standings. This historic performance has fueled immense national pride, though manager Javier Aguirre is keeping feet on the ground. Reflecting on the achievement, Aguirre told El Informador, \"It is anecdotal to finish as leader today and in 2002. In the end what counts is the final placing.\" With their primary route to the next round safely secured through three straight victories, Mexico did not need to rely on any third-place back-door scenarios. They now head into the knockout stage with maximum momentum, carrying the hopes of a home crowd eager to see them break historical barriers.",
       "team_code": "MEX"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Atlas Lions Secure Knockout Spot with Calm Assurance",
-      "body": "Morocco have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. The Atlas Lions have clinched a top-two finish in Group C, meaning their path forward is entirely secure and they do not need to worry about the complicated third-place calculations. They finished the group stage in second place with seven points, level with Brazil, who took the top spot on goal difference. According to our group-stage model, Morocco had a 100% chance of advancing, matching Brazil's perfect qualification record. This leaves Scotland and Haiti completely out of the running. The team's unbeaten run has fueled immense pride back home. As head coach Mohamed Ouahbi told beIN SPORTS, \"The players now believe in their ability, and opponents respect Morocco.\" With their ticket to the next round booked, the Atlas Lions can now focus entirely on their upcoming elimination test, carrying the momentum of a highly successful group campaign.",
+      "headline": "Atlas Lions Secure Knockout Spot After Unbeaten Group Run",
+      "body": "Morocco have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. The Atlas Lions finished as runners-up in Group C with seven points, navigating their three matches without a single defeat. They pushed Brazil all the way in a tight race for the top spot, finishing level on points with the South American giants but just behind on goal difference. Because their qualification is already mathematically sealed, they do not need to worry about the third-place wildcard calculations. This flawless progression has fueled immense pride back home. According to beIN SPORTS, head coach Mohamed Ouahbi reflected on this growing stature, stating, \"The players now believe in their ability, and opponents respect Morocco.\" With their ticket to the next round booked, the team can now focus entirely on their upcoming elimination test.",
       "team_code": "MAR"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Saudi Arabia's Tournament Comes to an End",
-      "body": "Saudi Arabia have been eliminated from the tournament, with our group-stage model showing a 0% chance of reaching the knockouts. Following a tough campaign in Group H, they finish at the bottom of the standings with two points from their three matches. While Spain and Cape Verde Islands comfortably secured the top two spots to advance, Saudi Arabia found themselves in a tight scrap with Uruguay at the bottom. Although they finished level on points with Uruguay, a goal difference of minus-four kept them in fourth place. Because they finished at the bottom of the group, they do not qualify for the third-place wildcard race, meaning their journey ends here.",
+      "body": "Saudi Arabia have been eliminated from the World Cup and will not reach the knockouts. Our group-stage model confirms they have a 0% chance of advancing to the Round of 32, leaving them at the bottom of Group H. While Cape Verde Islands and Spain have comfortably secured their places in the next round, Saudi Arabia finished their campaign level on two points with Uruguay, who held them off for third place on goal difference. With all three group matches complete, the final standings are settled. Saudi Arabia's opening draw with Cape Verde and a hard-fought point against Uruguay were not enough to overcome a heavy defeat to Spain, leaving them with a goal difference of minus four. Because they finished in fourth place, they do not qualify for the third-place wild card comparison, meaning there are no remaining paths or outside results that can alter their position. The team bows out of the tournament with two draws from their three matches.",
       "team_code": "KSA"
     },
     {
       "content_type": "scenario_narration",
       "headline": "South Korea's Tournament Comes to a Dignified End",
-      "body": "South Korea's journey has reached its conclusion, and they will not reach the knockouts. While they fought hard to secure third place in Group A, our group-stage model shows they now have a 0% chance of advancing to the Round of 32. They finished their group campaign with three points, placing them behind Mexico and South Africa, who both secured automatic qualification. This left South Korea scrapping with the Czech Republic at the bottom of the group, ultimately finishing just ahead of them in third. Because the group stage is complete, South Korea's record is locked at three points with a minus-one goal difference. In the final cross-group comparison, they sit as the tenth-best third-placed team. With only eight third-place teams qualifying, they are mathematically out of the running, as at least nine other third-place records have beaten their total. It is a tough way to exit, but they bow out having secured a third-place finish on the big stage. South Korea are mathematically out of the best-third places: at least 9 other third-place records beat their locked 3 pts / GD -1 / GF 2, and only eight third-place teams qualify.",
+      "body": "South Korea's journey has reached its conclusion, with our group-stage model showing a 0% chance to reach the knockouts. While they fought hard to secure third place in Group A, finishing with three points, the door to the Round of 32 has officially closed. In Group A, Mexico and South Africa have both secured their places with perfect advancement records, leaving South Korea and Czech Republic at the bottom of the standings. Because the group stage is complete, South Korea's final record of three points, a minus-one goal difference, and two goals scored is locked. They finish as the tenth-best third-placed team overall. With only eight third-place teams qualifying for the next round, at least nine other third-place records beat their total, meaning they are mathematically out of the running. It is a tough way to exit, but they bow out having secured a victory on the big stage. South Korea are mathematically out of the best-third places: at least 9 other third-place records beat their locked 3 pts / GD -1 / GF 2, and only eight third-place teams qualify.",
       "team_code": "KOR"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Samurai Blue Secure Knockout Spot After Unbeaten Group Run",
-      "body": "Japan have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. Our group-stage model shows they have a 100% chance of advancing after finishing as unbeaten runners-up in Group F. They pushed hard at the top of the standings, finishing with five points, just behind the Netherlands who took the top spot on seven points. Because their passage is fully secured through a top-two finish, they do not need to rely on the third-place wildcard back door. This flawless qualification has fueled a buoyant national mood. Despite missing injured captain Wataru Endo, the team has rallied collectively. Looking ahead to their next challenge, head coach Hajime Moriyasu remains highly ambitious. Reflecting on their preparation, Moriyasu noted, \"Last time we proved to Brazil that we aren't a pushover.\" With their place in the next round guaranteed, Japan can focus entirely on their upcoming knockout clash.",
+      "body": "Japan have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. Our group-stage model shows they have a 100% chance of advancing after finishing as unbeaten runners-up in Group F. They pushed hard at the top of the group, but the Netherlands ultimately finished right on their heels to take first place. Because Japan's second-place finish is fully locked in, they do not need to rely on the third-place wildcard back door. This flawless progression has fueled a buoyant national mood back home. According to media coverage, fans are highly optimistic yet mindful of the massive challenge ahead, especially with a historic knockout tie against Brazil on the horizon. Head coach Hajime Moriyasu reflected this growing confidence, telling reporters, \"Last time we proved to Brazil that we aren't a pushover.\" Having safely navigated a demanding group, Japan can now focus entirely on their preparation for the knockout rounds.",
       "team_code": "JPN"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Jordan's Tournament Journey Comes to an End",
-      "body": "Jordan's campaign has reached a dignified conclusion. With three defeats from their three matches, they are mathematically eliminated and have a 0% chance to reach the knockouts. It is a tough outcome for a side that fought hard but ultimately found the step up in class too steep. In Group J, Jordan finish adrift at the bottom of the standings, with Austria comfortably ahead of them in the race for the next round. Because Jordan finish fourth in the group, they do not have access to the third-place comparison pool, meaning there are no back-door routes or external results that can alter their position. While the tournament ends here, Jordan can look back on the experience of competing on this stage as they begin to build for the future.",
+      "body": "Jordan's campaign has reached its conclusion, and they will not be moving on to the knockouts. With three defeats from their three matches, the prediction system shows a 0% chance of advancing to the Round of 32. It is a tough, dignified end for a side that fought hard but ultimately found themselves adrift at the bottom of Group J, unable to close the gap on Austria, who finished comfortably ahead in the standings. Because Jordan finished fourth in the group, the third-place back-door route is not an option. Even a positive result in their final match against Argentina would not have altered their final position, leaving them out of the running for the next round. While the results did not go their way, Jordan played with pride against some of the tournament's heavyweights.",
       "team_code": "JOR"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Iraq's Tournament Journey Comes to an End",
-      "body": "Iraq's hopes of reaching the knockouts have officially ended. Following three tough matches in Group I, the team sits at the bottom of the table with zero points and a 0% chance of advancing to the Round of 32. They are adrift at the foot of the group, with closest rivals Senegal well clear on three points and both France and Norway having secured 100% advancement. Because Iraq cannot finish in the top two or reach the third-place playoff pool, their tournament path is closed. It is a dignified exit for a side that fought hard but found themselves up against some of the tournament's strongest contenders.",
+      "body": "Iraq's hope of reaching the knockouts has officially ended. Following three tough group-stage matches, the team sits at the bottom of Group I with zero points and a 0% chance of advancing to the Round of 32. They find themselves adrift at the foot of the table, with closest rivals Senegal well clear on three points, while France and Norway have comfortably secured the top two spots. Because Iraq cannot finish in the top two or reach the third-place ranking pool, their path to the next round is mathematically closed. It is a dignified but tough conclusion to their campaign, as no combination of remaining results across the other groups can alter their final position.",
       "team_code": "IRQ"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Iran's Knockout Hopes Extinguished After Final Group Matches",
-      "body": "Iran's journey has come to a dignified end. With all group matches now complete, our prediction system shows they have a 0% chance to reach the knockouts. In Group G, Belgium and Egypt have secured the top two spots, while New Zealand finished at the bottom. Iran finished third with three points, but they are mathematically out of the best-third places. At least eight other third-place records beat their locked record of three points and a neutral goal difference, meaning they cannot claim one of the eight qualifying wild-card spots. They are currently ranked ninth in the third-place standings, just behind Senegal on goal difference. Iran are mathematically out of the best-third places: at least 8 other third-place records beat their locked 3 pts / GD 0 / GF 3, and only eight third-place teams qualify.",
+      "body": "Iran's journey has come to a dignified end. With the group stage complete, our prediction system shows they have a 0% chance to reach the knockouts. In Group G, Belgium and Egypt have secured the top two spots, while New Zealand finished at the bottom. Iran finished third with three points, but they are mathematically out of the best-third places. At least eight other third-place records beat their locked three points, meaning they cannot qualify for the Round of 32. Iran are mathematically out of the best-third places: at least 8 other third-place records beat their locked 3 pts / GD 0 / GF 3, and only eight third-place teams qualify.",
       "team_code": "IRN"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Haiti's Tournament Journey Comes to an End",
-      "body": "Haiti's campaign has reached its conclusion, and they can no longer reach the knockouts. With all three group matches played, the team finishes at the bottom of Group C with zero points. It is a dignified but tough end for Les Grenadiers, who fought hard but suffered three straight defeats, including a close 1-0 loss to Scotland and a high-scoring 4-2 battle against Morocco. Brazil and Morocco both finish comfortably at the top of the standings with seven points each, securing their places in the Round of 32. Scotland finish in third place with three points, leaving Haiti in fourth. Because the group stage is now complete and Haiti cannot advance under any remaining outcome, there are no qualification paths or third-place calculations left to watch. The team will look to build on the experience of competing on this stage as they head home.",
+      "body": "Haiti's campaign has reached its conclusion, and they can no longer reach the knockouts. With all three group matches played, the team finishes at the bottom of Group C with zero points. It is a dignified but tough end for Les Grenadiers, who fought hard but suffered three straight defeats, including a close 1-0 loss to Scotland and a 4-2 battle against Morocco. Brazil and Morocco both finish comfortably at the top of the group with seven points each, securing their places in the Round of 32. Scotland finish in third place with three points, leaving Haiti at the bottom of the standings. Because the group stage is now complete and Haiti cannot advance under any remaining outcome, they are officially eliminated from the tournament. The team will look to build on the experience of competing on this stage as they head home.",
       "team_code": "HAI"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Germany Secure Top Spot and Knockout Berth Despite Final-Group Wake-Up Call",
-      "body": "Germany have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. Our group-stage model confirms they have clinched first place in Group E, meaning their path forward is entirely secure. They finished at the summit of a highly competitive group with six points, level with Ivory Coast but ahead on goal difference, while Ecuador finished third. Despite the relief of qualifying, the mood in the camp soured after a jolting 2-1 final-group defeat to Ecuador. German coverage described the squad as disillusioned, and captain Manuel Neuer reflected on the team's state of mind, admitting to ZDFheute, \"We are all disillusioned.\" Head coach Julian Nagelsmann was also left to defend his heavily rotated lineup, snapping back at suggestions of a lack of commitment. With their ticket to the next round officially booked, Germany can now put the group stage behind them and focus entirely on their upcoming knockout challenge.",
+      "body": "Germany have officially reached the knockouts, securing their place in the Round of 32 as Group E winners. Our group-stage model shows they have a 100% chance of advancing, having clinched first place with six points. They finished level on points with Ivory Coast but ahead on goal difference, while Ecuador ended in third and Curaçao were eliminated. Despite this comfortable final standing, the mood in the camp soured after a jolting 2-1 defeat to Ecuador in their final group match. German coverage described the squad as disillusioned, and captain Manuel Neuer reflected on the team's state, admitting, \"We are all disillusioned.\" Head coach Julian Nagelsmann was also left to defend his heavy rotation and his players' commitment after the loss. Nevertheless, Germany's passage is completely secure. They avoided any reliance on the third-place back-door route, advancing directly via the top-two path. They now move on to the knockout stage, where they will face Paraguay in the Round of 32.",
       "team_code": "GER"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Perfect France Sweep Into the Knockouts",
-      "body": "France have comfortably reached the knockouts, securing their place in the Round of 32 with a flawless group stage. Our group-stage model shows Les Bleus have a 100% chance of advancing after winning all three of their matches to top Group I. While Norway finished right on their heels with six points, France remained entirely in control of their own path, bypassing any need for a third-place safety net. This dominant run has fueled a buoyant national mood. Supporters are openly optimistic about the team's frightening attacking depth, especially after Ousmane Dembele's rapid hat trick against Norway. However, head coach Didier Deschamps has sought to keep expectations grounded, noting, \"If there's a favourite team, it's Spain, even though France legitimately aspires to win the title.\" With nine points and ten goals scored, the reigning champions have lived up to their billing, transitioning seamlessly into the knockout bracket as group winners.",
+      "body": "France have achieved absolute certainty, securing a 100% chance to reach the knockouts after a flawless group stage. With three wins from three matches, Les Bleus have comfortably locked up top spot in Group I, leaving closest rivals Norway and Senegal to settle for the remaining spots. Our group-stage model confirms Didier Deschamps' side has clinched advancement, meaning they are guaranteed to continue their journey in the Round of 32. This perfect run has delighted supporters, with French coverage suggesting the team's frightening forward line is fully living up to its pre-tournament billing. Even as Deschamps deflected the favourites tag, telling Goal.com that \"if there's a favourite team, it's Spain, even though France legitimately aspires to win the title,\" his squad's dominant on-pitch performances have sent a clear message. Having won the group outright, France bypass any third-place complications entirely as they prepare for the knockout stage.",
       "team_code": "FRA"
     },
     {
       "content_type": "scenario_narration",
       "headline": "History Made: Egypt Secure Knockout Spot Unbeaten",
-      "body": "Egypt have achieved the extraordinary, securing their place in the knockouts for the first time in their history. Our group-stage model shows they have a 100% chance of reaching the Round of 32, having completed Group G unbeaten. They finish as runners-up behind Belgium, who took the top spot on goal difference. This historic achievement has sparked jubilant celebrations across Cairo and Giza. As supporter Karim Elshabini told Al Jazeera, \"We're so proud to be Egyptian and so proud of our national team. It feels amazing.\" With their second-place finish locked in, Egypt's route is entirely secure, meaning they do not need to rely on the third-place back door. They can now look forward to their upcoming knockout tie with absolute certainty.",
+      "body": "Egypt have achieved their ultimate goal, securing a place in the knockouts for the first time in their World Cup history. Our group-stage model shows they have a 100% chance of reaching the Round of 32, having completed Group G unbeaten. They finish as runners-up behind Belgium, who took the top spot on goal difference. This historic milestone has sparked jubilant celebrations across Cairo and Giza. As supporter Karim Elshabini told Al Jazeera, \"We're so proud to be Egyptian and so proud of our national team. It feels amazing.\" With their position locked in, Egypt do not need to worry about the third-place back door. They can now focus entirely on their upcoming Round of 32 clash against Australia in Dallas.",
       "team_code": "EGY"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Ecuador Secure Knockout Spot After Group E Drama",
-      "body": "Ecuador are officially through to the knockouts. Our group-stage model confirms La Tri have a 100% chance of reaching the Round of 32, completing a dramatic turnaround in Group E. They finished in a tight cluster on four points, right behind Ivory Coast and Germany, who both ended on six points. While Ecuador can no longer finish in the top two, their passage is completely secure. They advance as a mathematically safe third-place team, with their record of four points and a neutral goal difference locked in as the fourth-best third-place team overall. This back-door route is a guaranteed safety net, meaning they are already through regardless of other groups. This achievement has sparked immense pride back home. Following the historic comeback win over Germany, Argentine head coach Sebastian Beccacece pleaded for his players to get the credit they deserve, stating, \"The only thing I want is for us to be respected.\" With their place in the next round officially clinched, Ecuador can now look forward to the knockout stage with renewed belief. Ecuador are mathematically safe as a locked third-place team: at most 2 other third-place records can beat their 4 pts / GD 0 / GF 2, and eight third-place teams qualify.",
+      "body": "Ecuador have officially reached the knockouts. Our group-stage model confirms La Tri have a 100% chance of advancing to the Round of 32, completing a dramatic turnaround in Group E. They finished in a tight cluster on four points, level with group leaders Germany and Ivory Coast, who both finished on six points. While Ecuador can no longer finish in the top two, their passage is completely secure. They advance as a mathematically safe third-place team, currently ranked as the fourth-best third-placed side overall. Because eight third-place teams qualify, their record of four points and a neutral goal difference means they are already through. This achievement has sparked immense joy back home. Following the historic comeback win over Germany, local coverage described the national mood as euphoric, with President Daniel Noboa even declaring a national holiday. Reflecting on the journey, manager Sebastian Beccacece remarked, \"The only thing I want is for us to be respected.\" With their place in the next round guaranteed, Ecuador can now look forward to the knockout stage with renewed belief. Ecuador are mathematically safe as a locked third-place team: at most 2 other third-place records can beat their 4 pts / GD 0 / GF 2, and eight third-place teams qualify.",
       "team_code": "ECU"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Czech Republic's Tournament Comes to an End",
-      "body": "The tournament has reached a definitive and difficult conclusion for the Czech Republic. With all three group matches played, the team finishes at the bottom of Group A with one point, meaning they have a 0% chance to reach the knockouts. It is a dignified but tough exit for a side that fought hard but could not find the wins needed to keep their campaign alive. Looking at the final standings, Mexico dominated the group with a perfect nine points, while South Africa secured the second qualifying spot on four points. South Korea finished just ahead of the Czech Republic in third place with three points, leaving no path forward for the Czech team. Because they finished fourth, they do not enter the third-place wild card calculations. The group stage is now fully complete, and while the journey ends here, the team will look to rebuild from these three matches for future international campaigns.",
+      "body": "The tournament has reached a definitive and difficult conclusion for the Czech Republic. With all three group matches played, the team finishes at the bottom of Group A with one point, meaning they have a 0% chance to reach the knockouts. It is a dignified but tough exit for a side that fought hard but could not find the wins needed to keep their campaign alive. Looking at the final standings, Mexico dominated the group with a perfect nine points, while South Africa secured the second qualifying spot on four points. South Korea finished just ahead of the Czech Republic in third place with three points, leaving no path forward for the Czech team. Because they finished fourth, they do not enter the third-place wild card comparison. The group stage is now fully complete, and while the journey ends here, the team will look to rebuild from these three matches for future international campaigns.",
       "team_code": "CZE"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Curaçao Face Dignified End to Group Stage Campaign",
-      "body": "Curaçao's journey in Group E has reached a definitive conclusion. Following a tough run of results, including a heavy 7-1 defeat to Germany, our group-stage model shows Curaçao have a 0% chance to reach the knockouts. They are mathematically eliminated and can no longer advance to the Round of 32. In the final group standings, Curaçao sit adrift at the bottom of Group E with one point, well off the pace of Germany, who finished at the top of the cluster with six points. Because they finished fourth in the group, Curaçao are not in the third-place race, and their tournament run has officially come to an end.",
+      "headline": "Curaçao Face a Dignified End to Their Group Campaign",
+      "body": "Curaçao's journey in Group E has reached its mathematical end. Following three matches, the team sits at the bottom of the table with one point, meaning they have a 0% chance to reach the knockouts. In Group E, Germany, Ivory Coast, and Ecuador have pulled well clear, leaving Curaçao adrift at the foot of the standings. While their hopes of advancing to the Round of 32 are over, the team will look to finish their tournament with pride in their final matches.",
       "team_code": "CUW"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Croatia Secure Knockout Spot After Group L Battle",
-      "body": "Croatia have achieved their immediate goal, securing a guaranteed spot in the knockouts. Our group-stage model shows they have a 100% chance of reaching the Round of 32, having locked in a second-place finish in Group L. They pushed hard at the top of the group, though England ultimately finished just ahead of them. Croatia's path is entirely settled through their own results, meaning they do not need to rely on the complicated third-place back door. This progression brings immense pride back home, especially for the ageless Luka Modric. Midfielder Nikola Vlasic told CBS Sports that \"Luka was unbelievable today, I swear it seems like he tuned the time 10 years before.\" Head coach Zlatko Dalic has kept the squad's focus tight, telling ESPN that \"the next opponent doesn't matter, we know what we can do and what we want.\" With six points from their three matches, Croatia can now look forward to the knockout rounds with quiet confidence.",
+      "body": "Croatia have achieved their immediate target and are officially through to the knockouts. Our group-stage model shows they have a 100% chance of reaching the Round of 32, having locked up the runner-up spot in Group L with six points. They pushed hard at the top of the group, though England ultimately finished just ahead of them on seven points. Because their second-place finish is completely secure, Croatia do not need to worry about the complicated third-place back door. This progression brings immense pride back home, especially for the ageless Luka Modric. Midfielder Nikola Vlasic told CBS Sports that \"Luka was unbelievable today, I swear it seems like he tuned the time 10 years before.\" Head coach Zlatko Dalic has already turned his focus to the daunting Round of 32 clash against Portugal, telling ESPN, \"The next opponent doesn't matter, we know what we can do and what we want.\"",
       "team_code": "CRO"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Unbeaten Cape Verde Islands Secure Historic Knockout Spot",
-      "body": "Cape Verde have achieved the extraordinary, securing their place in the knockouts with absolute certainty. Our group-stage model confirms they have a 100% chance of reaching the Round of 32, advancing cleanly as the Group H runners-up. They navigated a challenging group without a single defeat, finishing behind Spain, who ended up right on their heels in a tight race at the top. By drawing all three matches—including holding Spain and Saudi Arabia goalless—the Blue Sharks became the first team since 1998 to advance with three group draws. This historic feat means they do not need to rely on any complicated third-place math; their runner-up spot is completely locked in. Back home, the national mood is euphoric. Fans celebrated into the early hours in Praia, and the team is embracing their status as history-makers. As captain Vozinha proudly told Expresso das Ilhas, \"We are from a small country, but we know how to compete.\" They now head into the Round of 32 with absolutely nothing to lose.",
+      "body": "Cape Verde have achieved the extraordinary, securing their place in the knockouts with absolute certainty. Our group-stage model confirms they have a 100% chance of reaching the Round of 32, advancing cleanly as the Group H runners-up. They navigated a challenging group without a single defeat, finishing behind Spain, who ended up right on their heels in a tight race at the top of the standings. By drawing all three of their matches—including holding Spain and Saudi Arabia goalless—the Blue Sharks became the first team since 1998 to advance with three group draws. This historic run has sparked emotional celebrations back home in Praia. Reflecting the squad's fearless attitude, captain Vozinha told Expresso das Ilhas, \"We are from a small country, but we know how to compete.\" Their reward is a dream Round of 32 clash against reigning champions Argentina in Miami on July 3. Having finished comfortably in the top two, they did not need to rely on the third-place back door, making their passage to the next round entirely secure.",
       "team_code": "CPV"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Colombia Seal Top Spot and Perfect Passage to the Knockouts",
-      "body": "Colombia have achieved absolute certainty, securing a 100% chance to reach the knockouts after a brilliant group-stage campaign. By finishing at the summit of Group K with seven points, their passage to the Round of 32 is completely assured. They ended up in a tight cluster at the top, finishing just ahead of Portugal and Congo DR, who both also secured their places with perfect advancement chances. Because Colombia won the group outright, they do not need to worry about third-place math or the wildcards. The team's performance has ignited belief back home. After a scoreless draw with Portugal confirmed their first-place finish, head coach Néstor Lorenzo shared his high ambitions, stating, \"Vamos por más y ojalá lleguemos a lo más alto para dejar a Colombia lo más arriba.\" With their defensive solidity and unbeaten record, Colombia head into the next round with maximum confidence, having fully controlled their own destiny from the opening whistle.",
+      "body": "Colombia have achieved absolute certainty, securing a 100% chance to reach the knockouts after finishing as the undefeated winners of Group K. By taking seven points from their three matches, they have made the Round of 32 through the front door, rendering any third-place math completely irrelevant. They finished in a tight cluster at the top of the standings, with Congo DR and Portugal right on their heels. Colombia's flawless group stage was capped by a hard-fought goalless draw against Portugal, confirming their first-place finish. Reflecting on the final match, head coach Néstor Lorenzo told Sky Sports, \"We deserved to win, we created so many chances, we lacked finishing.\" This triumphant run marks the first time Colombia has topped a World Cup group since 2014, setting a confident tone for the knockout stage.",
       "team_code": "COL"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Leopards Make History with Knockout Breakthrough",
-      "body": "Congo DR have achieved the extraordinary, securing their place in the knockouts for the first time in their history. Our group-stage model confirms they have a 100% chance of advancing to the Round of 32. While they finished third in Group K behind Colombia and Portugal, their path is completely secure. They are mathematically safe as a locked third-place team, sitting as the top-ranked third-place side with four points and a positive goal difference. Even though they missed out on a top-two finish, the third-place route has served as a flawless safety net. This historic milestone ends a 52-year wait since their only other World Cup appearance in 1974. According to media coverage, the achievement has sparked euphoric celebrations in Kinshasa, with captain Chancel Mbemba sharing the emotional weight of the run: \"We're still here; the war isn't over yet. But first of all, I want to say thank you, because it's been 52 years.\" Congo DR are mathematically safe as a locked third-place team: at most 0 other third-place records can beat their 4 pts / GD +1 / GF 4, and eight third-place teams qualify.",
+      "body": "Congo DR have achieved the extraordinary, securing their place in the knockouts for the first time in their history. Our group-stage model confirms they have a 100% chance of reaching the Round of 32. While they finished third in Group K behind Colombia and Portugal, their path forward is completely secure. They are mathematically safe as a locked third-place team, with four points and a positive goal difference that cannot be overtaken by other groups. This reliable back-door route serves as a guaranteed safety net, meaning they are already through. In Group K, they pushed their rivals to the limit in a tight race, finishing just behind Portugal and group leaders Colombia. This historic milestone has sparked euphoric celebrations back home. As captain Chancel Mbemba shared during their journey, \"We're still here; the war isn't over yet. But first of all, I want to say thank you, because it's been 52 years.\" Having waited over half a century to return to this stage, the Leopards have written a beautiful new chapter. Congo DR are mathematically safe as a locked third-place team: at most 0 other third-place records can beat their 4 pts / GD +1 / GF 4, and eight third-place teams qualify.",
       "team_code": "COD"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Elephants Secure Historic Knockout Spot",
-      "body": "Ivory Coast have achieved something truly special, securing their place in the knockouts for the first time in their history. Our group-stage model shows they have a 100% chance of reaching the Round of 32, locked in as the group runners-up. They finished the group stage level on six points with Germany, who took the top spot on goal difference, while Ecuador finished just behind them in third. The team's main route is completely secure, meaning they do not need to worry about the complicated third-place back door. This historic milestone has shifted expectations back home. According to Footmercato, the Ivorian press is already framing the Elephants as a credible dark horse capable of pushing this adventure as far as possible. Reflecting on the challenge ahead, manager Emerse Fae told info.fr, \"We respect all teams, but we have our ambitions.\" With their ticket to the next round officially booked, the squad can carry that quiet confidence and pride directly into their upcoming knockout match.",
+      "body": "Ivory Coast have achieved something truly special, securing their place in the knockouts for the first time in their history. Our group-stage model shows they have a 100% chance of reaching the Round of 32, locked in as the group runners-up. They are in a tight cluster at the top of Group E, level on six points with Germany, while Ecuador finished right on their heels with four points. Because they have already secured second place, they do not need to worry about the complicated third-place back door. This historic milestone has sparked immense pride back home. As head coach Emerse Fae told reporters, \"We respect all teams, but we have our ambitions.\" With their place in the next round fully guaranteed, the Elephants can now focus entirely on preparing for their upcoming knockout match.",
       "team_code": "CIV"
     },
     {
       "content_type": "scenario_narration",
       "headline": "History Written: Bosnia and Herzegovina Secure Knockout Spot",
-      "body": "Bosnia and Herzegovina have officially reached the knockouts for the first time in their history. Our group-stage model confirms they have a 100% chance of playing in the Round of 32. While they finished third in Group B behind Switzerland and Canada, their place in the next round is mathematically secure. They are currently ranked as the fifth-best third-placed team, comfortably inside the top-eight cutoff. Because their four points and minus-one goal difference cannot be overtaken by enough other groups, this back-door route is completely safe. They are already through. In Group B, Switzerland took the top spot with Canada right on their heels, leaving Bosnia and Herzegovina to advance via this reliable safety net. This historic milestone has sparked immense pride back home. According to ESPN, manager Sergej Barbarez has cast this achievement as a welcome release, stating, \"All of this is a bonus for us.\" With the pressure off, they can look forward to the knockouts with absolute calm. Bosnia and Herzegovina are mathematically safe as a locked third-place team: at most 4 other third-place records can beat their 4 pts / GD -1 / GF 5, and eight third-place teams qualify.",
+      "body": "Bosnia and Herzegovina have done it—they are officially through to the knockouts for the first time in their history. Our tournament simulation confirms they have a 100% chance to reach the Round of 32. While they finished third in Group B behind Switzerland and Canada, their place in the next round is mathematically secure. As a locked third-place team with four points, they are already safe, meaning they are guaranteed to advance as one of the best third-placed sides. In Group B, they finished in a tight cluster behind Switzerland and Canada, who both ended with a perfect advancement record. This historic milestone has sparked pure euphoria back home, with fans celebrating a landmark achievement. Manager Sergej Barbarez, who has built a remarkably tight-knit squad, put the achievement into perspective, saying, \"All of this is a bonus for us.\" With their ticket to the Round of 32 officially punched, they can look forward to the knockout stage completely unburdened and ready to face whoever comes next. Bosnia and Herzegovina are mathematically safe as a locked third-place team: at most 4 other third-place records can beat their 4 pts / GD -1 / GF 5, and eight third-place teams qualify.",
       "team_code": "BIH"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Belgium Secure Knockout Spot After Group G Drama",
-      "body": "Belgium have officially reached the knockouts, securing their place in the Round of 32 with a perfect 100% chance of advancement. After a tense start to the tournament, the Red Devils finished at the top of Group G with five points, edging out Egypt on goal difference. Our group-stage model confirms they have fully locked up a top-two finish, meaning they do not need to rely on the third-place back-door route. This is a tight race at the top, with Egypt finishing level on points and right on Belgium's heels. According to ESPN, the mood in the Belgian camp has swung from anxiety to relief following their decisive 5-1 victory over New Zealand, which kick-started their campaign. Head coach Rudi Garcia defended his veteran leaders against critics who labeled them too old, telling Goal.com, \"I really can't stand it when my four leaders are called 'veterans'. It's ugly.\" With their ticket to the next round officially booked, Belgium can now look forward to the knockout stage with renewed confidence.",
+      "body": "Belgium have officially reached the knockouts, completing their group stage with a sense of relief and quiet pride. After two tense opening draws threatened to derail their campaign, a resounding 5-1 victory over New Zealand secured their place in the Round of 32. Our group-stage model confirms they have a 100% chance of advancing, having successfully claimed the top spot in Group G. They finished level on five points with Egypt, who pushed them right to the wire, but Belgium took first place on goal difference. This dramatic turnaround has completely transformed the national mood. According to ESPN, the emphatic final victory has restored belief that one last deep run is possible for this veteran squad. Head coach Rudi Garcia fiercely defended his experienced leaders after the match, telling Goal.com, \"I really can't stand it when my four leaders are called 'veterans'. It's ugly.\" With their ticket to the next round officially booked, Belgium can now look forward to the knockout bracket with renewed confidence.",
       "team_code": "BEL"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Austria Secure Historic Knockout Spot After Group J Thriller",
-      "body": "Austria are officially through to the knockouts. Following a dramatic group stage, our tournament simulation confirms they have a 100% chance to reach the Round of 32, advancing cleanly as the Group J runners-up. They finished level on four points with Algeria but secured second place on goal difference, while Argentina topped the group. This means Austria's path is entirely settled; they do not need to worry about the complicated third-place comparison. The achievement has sparked incredible joy back home. After a wild 3-3 draw with Algeria sealed their progression, forward Sasa Kalajdzic described the moment as \"almost like a fairytale.\" It marks a historic milestone for the nation, representing their first time advancing past a World Cup group phase in 44 years. Under head coach Ralf Rangnick, the team now prepares to face Spain in the next round, carrying immense pride and a fearless attitude into the knockout stage.",
+      "body": "Austria have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. Our group-stage model confirms they have a 100% chance of advancing, locked in as the Group J runners-up. They finished level on four points with Algeria but claimed second place on goal difference, while Argentina topped the group. This puts Austria in a live race alongside Argentina and Algeria, who both also advanced with a 100% chance, leaving Jordan at the bottom. Because Austria's runner-up status is completely secure, they do not need to rely on the third-place wildcard pool. This historic achievement has sparked incredible joy back home. Following Sasa Kalajdzic's dramatic stoppage-time equaliser in the 3-3 draw with Algeria, Austrian media described the mood as \"complete World Cup madness.\" Forward Kalajdzic called the moment \"almost like a fairytale\" and \"one of the most beautiful moments of my career.\" Head coach Ralf Rangnick has guided the nation to its first World Cup knockout appearance in decades, and they now prepare to face Spain.",
       "team_code": "AUT"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Socceroos Secure Knockout Spot After Group D Battle",
-      "body": "Australia have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. Our group-stage model shows the Socceroos have a 100% chance of advancing after finishing as the Group D runners-up on four points. They locked in this second-place finish through their own on-pitch results, meaning they do not need to rely on the complicated third-place tiebreaker math. Australia finished in a tight cluster at the top of the group, level on points with Paraguay, who pushed them right to the wire. According to discovery reporting by FotMob, head coach Tony Popovic has already set his sights on the next challenge, challenging his squad to \"try and do something special\" as they prepare for their upcoming knockout clash in Dallas. Having successfully navigated a highly competitive group, the team can now focus entirely on their preparation without worrying about other results.",
+      "body": "Australia have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. Our group-stage model shows the Socceroos have a 100% chance of advancing after finishing as the Group D runners-up on four points. They ended up in a tight cluster at the top of the standings, level on points with Paraguay, who finished right on their heels. Because they secured second place, Australia did not have to rely on the third-place wildcard route. This milestone marks the first time the men's national team has reached the knockout stage in back-to-back World Cups. According to Australian media coverage, defender Aziz Behich reflected the rising confidence in the camp, stating, \"When you get 26 Australian boys together, that belief goes through the roof.\" Head coach Tony Popovic has already set his sights on their upcoming clash in Dallas, challenging his squad to \"try and do something special\" as they look to win a World Cup knockout match for the first time in their history.",
       "team_code": "AUS"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Perfect Argentina Cruise into the Knockouts",
-      "body": "Argentina have achieved complete control, securing their place in the knockouts with absolute certainty. By winning all three of their matches, the reigning champions have clinched first place in Group J and are guaranteed to reach the Round of 32. Our group-stage model reflects this flawless campaign, showing a 100% chance of advancement. They finished comfortably at the top of a group that featured Austria and Algeria, who both ended on four points, well clear of Jordan. Because they won the group outright, Argentina do not need to worry about the third-place back-door route. The mood around the camp is buoyant, yet grounded. Reflecting on the challenges ahead, midfielder Leandro Paredes recalled the 2022 tournament, warning that \"Saudi Arabia was a so-called easy match and we ended up suffering.\" Head coach Lionel Scaloni has also set a cautious tone, resting Lionel Messi from the start in their final group match to manage his minutes. With their perfect group stage complete, Argentina now turn their focus to the knockout rounds as they begin their title defense.",
+      "body": "Argentina have reached the knockouts with absolute authority, securing their place in the Round of 32 with a perfect group-stage record. Our group-stage model shows they have a 100% chance of advancing, having already clinched first place in Group J. They are comfortably clear at the top of the standings with nine points, leaving Austria and Algeria to battle behind them. The reigning world champions are in a very strong position as they prepare for the next round. While the squad is buoyant, the camp is keeping its feet on the ground. Reflecting on the team's focus, defender Nicolas Otamendi warned teammates in Argentine coverage, \"Cape Verde got the results it got for a reason. It competed; it's an aggressive team.\" With their passage fully secured through three straight wins, Argentina do not need to worry about third-place math or help from other groups. They move forward with maximum points and complete control over their title defense.",
       "team_code": "ARG"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Algeria Secure Knockout Spot After Group J Drama",
-      "body": "Algeria have reached the knockouts, delivering the proud return to the Round of 32 that fans have awaited for over a decade. Our group-stage model confirms they have a 100% chance of advancing. While they finished third in Group J behind Argentina and Austria, their place in the next round is mathematically secure. They are currently ranked as the sixth-best third-placed team, comfortably inside the qualifying zone. Because their four points and goal difference are already locked in, they are guaranteed to move on. This reliable back-door route serves as a perfect safety net, meaning they are completely safe regardless of other group results. The achievement brings immense relief to a nation still healing from missing out on the 2022 tournament. As captain Riyad Mahrez told Shihab Presse, \"We deserved to advance based on the level we showed.\" With their ticket officially punched, the focus now shifts entirely to the knockout stage. Algeria are mathematically safe as a locked third-place team: at most 5 other third-place records can beat their 4 pts / GD -2 / GF 5, and eight third-place teams qualify.",
+      "headline": "Algeria Secure Knockout Spot After Group Stage Drama",
+      "body": "Algeria have reached the knockouts, securing their place in the Round of 32 with absolute certainty. While they can no longer finish in the top two of Group J, our group-stage model shows they have a 100% chance to advance as one of the best third-placed teams. They finished third in the group with four points, just behind Argentina and Austria, who both sit on a 100% advancement chance. Even though they had to rely on the third-place route, this back-door path is completely safe and mathematically locked. Algeria are already safe because their record of four points and a minus-two goal difference cannot be overtaken by enough other groups to threaten their qualification. This achievement brings immense relief to a nation chasing its first knockout appearance since 2014. Reflecting on the decisive, high-stakes three-three draw with Austria that sealed their progression, manager Vladimir Petković remarked, \"I think the match was a little crazy. It sort of went beyond the limits of everyone's endurance.\" Algeria are mathematically safe as a locked third-place team: at most 5 other third-place records can beat their 4 pts / GD -2 / GF 5, and eight third-place teams qualify.",
       "team_code": "ALG"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Black Stars Seal Knockout Spot After Group L Drama",
-      "body": "Ghana have officially secured their place in the knockouts, ending a sixteen-year wait to reach the Round of 32. Our group-stage model confirms the Black Stars have a 100% chance of advancing. While finishing behind England and Croatia in Group L ruled out a top-two finish, Ghana are mathematically safe as a locked third-place team. With four points and a neutral goal difference, they are currently the third-best third-placed team, comfortably clear of the cut-off. Even though they had to rely on the third-place back door, this route was highly reliable, and they are now guaranteed to progress. Coach Carlos Queiroz has already set an ambitious tone for the next stage, telling reporters, \"I have just told my players that the real world championship starts in the next round.\" The achievement has sparked joyful and emotional celebrations across Ghana, rekindling belief after years of near-misses. Ghana are mathematically safe as a locked third-place team: at most 3 other third-place records can beat their 4 pts / GD 0 / GF 2, and eight third-place teams qualify.",
+      "headline": "Black Stars Secure Knockout Spot as Mathematical Certainty",
+      "body": "Ghana have officially reached the knockouts, securing their place in the Round of 32 with absolute certainty. Our group-stage model confirms the Black Stars have a 100% chance of advancing. While finishing in the top two of Group L is no longer possible, their third-place finish is mathematically safe. With four points and a neutral goal difference, they are already guaranteed to go through as one of the best third-placed teams, meaning this back-door route is a completely reliable safety net. In Group L, England finished comfortably ahead at the top, while Croatia claimed second. Ghana fought off Panama to secure third, and they now stand as the third-best third-placed team overall. This achievement has sparked immense pride across the nation, marking their first knockout appearance since 2010. Reflecting on the milestone, manager Carlos Queiroz told the press, \"I have just told my players that the real world championship starts in the next round.\" Ghana are mathematically safe as a locked third-place team: at most 3 other third-place records can beat their 4 pts / GD 0 / GF 2, and eight third-place teams qualify.",
       "team_code": "GHA"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "England Secure Top Spot to Reach the Knockouts",
-      "body": "England have safely reached the knockouts, securing their place in the Round of 32 with a calm and assured group-stage campaign. Our group-stage model shows they have a 100% chance of advancing, having finished comfortably at the top of Group L with seven points. While they were in a tight cluster with Croatia and Ghana, England's results kept them well clear of any third-place anxiety. They progressed entirely through the front door, meaning they do not need to rely on the best-third back-door route. This successful passage comes amid heavy national expectations, with media coverage framing anything short of a deep run as a disappointment. Reflecting on the challenge ahead, manager Thomas Tuchel noted, \"The bigger the games get, the bigger we will get.\" With their spot in the next round officially locked in, England can now focus entirely on their upcoming knockout tie.",
+      "headline": "England Secure Knockout Spot as Group L Winners",
+      "body": "England have safely reached the knockouts, securing their place in the Round of 32 with a calm and assured group-stage campaign. Our group-stage model shows England have a 100% chance of advancing, having topped Group L with seven points. They finished in a tight cluster at the top of the standings, with Croatia right on their heels with six points and Ghana finishing just behind with four. Because England won the group outright, they advanced entirely through their own results in the top two, meaning they do not need to rely on the third-place back-door route. This flawless advancement probability brings some relief to a national mood often tempered by anxiety. While expectations remain characteristically heavy back home, head coach Thomas Tuchel is looking forward to the challenges ahead, insisting, \"The bigger the games get, the bigger we will get.\"",
       "team_code": "ENG"
     },
     {
       "content_type": "scenario_narration",
       "headline": "Brazil Secure Top Spot and Perfect Path to the Knockouts",
-      "body": "Brazil have achieved their ultimate group-stage goal, securing their place in the knockouts with absolute certainty. By finishing at the top of Group C with seven points, they have cleared their baseline comfortably and avoided any reliance on a third-place back door. Our group-stage model shows they have a 100% chance of advancing, meaning their path forward is entirely in their own hands. They did not do it completely unchallenged, however; Morocco pushed them all the way, finishing neck-and-neck on points and right on their heels. The job is done, but the mood remains focused. As head coach Carlo Ancelotti told Fato Paulista, \"Now it's knockout. Need a strong heart.\" With their ticket to the Round of 32 officially punched, Brazil can now turn their full attention to the do-or-die matches ahead.",
+      "body": "Brazil have achieved their ultimate group-stage goal, securing their place in the knockouts with absolute certainty. By finishing at the top of Group C with seven points, they have cleared their baseline comfortably and avoided any reliance on the third-place back door. Our group-stage model shows they have a 100% chance of advancing, moving forward as clear group winners. They had to work for it, though, as Morocco pushed them all the way, finishing level on points and right on their heels. The job is done, but head coach Carlo Ancelotti is keeping expectations grounded. Reflecting on the rising stakes, he warned, \"Now it's knockout. Need a strong heart.\" With their path to the Round of 32 fully secured, Brazil can now focus entirely on the challenges ahead.",
       "team_code": "BRA"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Spain Seal Top Spot with Perfect Group Stage Finish",
-      "body": "Spain have reached the knockouts in the most assured way possible, securing their place in the Round of 32 with absolute certainty. By finishing at the very top of Group H with seven points and zero goals conceded, they have made their passage completely secure. Our group-stage model shows they have a 100% chance of advancement, having comfortably locked up the top spot ahead of Cape Verde Islands, who finished as runners-up. Because they won the group outright, Spain do not need to worry about any third-place calculations or relying on other results. This flawless group campaign has met high national expectations, though Spanish coverage suggests some caution remains after a few laboured attacking displays. As head coach Luis de la Fuente noted after the final group match, \"It has been a match that has tested us once again, and the team always responds.\" Spain now move forward into the knockout bracket with their status as tournament contenders firmly established.",
+      "headline": "Spain Secure Perfect Passage to the Knockouts",
+      "body": "Spain have completed their group-stage campaign in absolute control, securing their place in the knockouts with a perfect record. Our group-stage model shows La Roja with a 100% chance of advancing, having comfortably locked up the top spot in Group H. They finished well clear of Cape Verde Islands, who took second place, while Saudi Arabia and Uruguay have been eliminated. Luis de la Fuente's side navigated the group without conceding a single goal, culminating in a 1-0 victory over Uruguay to seal their flawless path. While the team has faced some attacking scrutiny, the manager praised their resilience, noting, \"It has been a match that has tested us once again, and the team always responds.\" Spain now move on to the Round of 32 as group winners, completely bypassing any third-place complications. Their focus shifts entirely to the knockout bracket, where they are expected to carry their defensive solidity into the next phase of the tournament.",
       "team_code": "ESP"
     },
     {
       "content_type": "scenario_narration",
-      "headline": "Canada Clinch Knockout Spot Despite Final-Day Slip",
-      "body": "Canada are officially through to the knockouts. Our group-stage model shows they have secured a 100% chance of advancing to the Round of 32, meaning their place in the next round is mathematically locked in. They finished the group stage as runners-up behind Switzerland, who ended up on top of Group B with seven points. Canada finished in a tight cluster on four points, level with Bosnia and Herzegovina but ahead on goal difference, while Qatar finished at the bottom. Because they secured the second spot, Canada did not have to rely on the third-place wildcard route. While there is some disappointment after a final-day loss to Switzerland cost them top spot, the national mood is lifting with captain Alphonso Davies fit to return. Reflecting on his manager's decision to hold him back earlier, Davies shared that Jesse Marsch \"sat me down and reminded me I wasn't ready yet,\" a choice that has paid off now that the knockouts are here.",
+      "headline": "Canada Clinch Knockout Spot Despite Swiss Setback",
+      "body": "Canada are officially through to the knockouts. Our group-stage model shows they have a 100% chance of reaching the Round of 32, having secured second place in Group B with four points. They finished in a tight cluster behind Switzerland, who took top spot with seven points, and just ahead of Bosnia and Herzegovina on goal difference. While a final-day loss to Switzerland cost them first place, Canada's passage is completely secure. They do not need to worry about the complicated third-place math or rely on other groups for help. According to ESPN, manager Jesse Marsch admitted some tactical regret after the Switzerland defeat, saying, \"I'm disappointed we weren't able to get a win or draw to keep us here.\" However, the co-hosts have achieved their primary goal of advancing. With their place in the next round guaranteed, Canada can now focus entirely on their upcoming knockout match in Los Angeles.",
       "team_code": "CAN"
     }
   ],
