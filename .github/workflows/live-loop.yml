@@ -13,10 +13,13 @@ name: WC2026 Live In-Tournament Loop
 #    never overwrite good data with empty/partial; no-change → green no-op; real failure → RED.
 
 "on":
-  schedule:
-    # Every 10 min, 24/7 (UTC). GitHub's 5-min floor + 10-30 min delay under load are fine — the loop self-guards
-    # (no-op before the 2026-06-11T19:00Z kickoff and whenever no verified result is material).
-    - cron: "*/10 * * * *"
+  # SOLE TRIGGER: the Cloudflare Worker cron (infra/cloudflare-loop-pinger) dispatches this every 10 min — it fires
+  # reliably (GitHub's `schedule:` cron was observed 1.7-5h apart). The GitHub `schedule:` cron was REMOVED: with two
+  # */10 triggers on the same boundary, each window queued two runs (the concurrency group serializes them), and the
+  # SECOND no-op cycle (a) raced the first's push -> the rebase-race failures, and (b) re-committed the every-cycle-
+  # churning squads.json -> a duplicate Netlify build per window. One trigger = no collision, no race, half the builds.
+  # (Worker PAT outlives the tournament; if the Worker ever dies there is no GitHub fallback now — pair with a
+  # site-freshness monitor, the other open unattended-readiness item.)
   workflow_dispatch:
     inputs:
       synthetic:
