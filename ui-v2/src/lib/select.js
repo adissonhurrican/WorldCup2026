@@ -118,6 +118,79 @@ export function reachStats(data, code) {
   ];
 }
 
+// ---- knockout-phase hero (My Team) ----
+// Once the group stage is COMPLETE, the "chance to reach the knockouts" headline is spent (it is 100% for everyone
+// through, and meaningless otherwise). This computes what to show instead, from LIVE data only: the per-tie K=60
+// prediction on the team's current knockout fixture. It deliberately does NOT use team_paths[].knockout.reach_* —
+// those are the pre-tournament simulation values and never re-condition on real results (an eliminated team still
+// shows a non-zero "reach R16"). In single-elimination, P(reach the next round) = P(win this tie), so the familiar
+// "chance to reach the [next round]" framing reads straight off the live tie prediction. Returns a mode object, or
+// null during the group phase (the caller keeps the group-stage hero unchanged).
+const KO_NEXT_ROUND = {
+  "Round of 32": "the Round of 16",
+  "Round of 16": "the Quarter-finals",
+  "Quarter-finals": "the Semi-finals",
+  "Semi-finals": "the Final",
+};
+export function knockoutPhase(data) {
+  const rs = data.real_standings || {};
+  return rs.status === "complete" || (rs.results_counted || 0) >= 72;
+}
+export function knockoutHeroFor(data, code, live = null) {
+  if (!knockoutPhase(data)) return null; // group phase -> legacy hero is correct, leave it
+  const fixtures = teamRealKnockoutFixtures(data, code);
+  // Never reached a knockout tie -> eliminated in the group stage.
+  if (!fixtures.length) {
+    const pg = predictedGroup(data, code);
+    const rg = pg?.group ? realGroup(data, pg.group) : null;
+    const row = rg && (rg.standings || []).find((r) => r.code === code);
+    return { mode: "out_group", position: row?.position ?? null, group: pg?.group ?? null };
+  }
+  // The team's next not-yet-decided tie (live or scheduled), if any -> live per-tie win probability.
+  // (nextMatchIndex only ever returns a live/scheduled fixture, never a finished one.)
+  const ni = nextMatchIndex(fixtures, live);
+  const upcoming = ni !== -1 ? fixtures[ni] : null;
+  if (upcoming) {
+    const isHome = upcoming.home === code;
+    const p = upcoming.probabilities || {};
+    const winPct = isHome ? (p.home_win ?? null) : (p.away_win ?? null);
+    const oppCode = isHome ? upcoming.away : upcoming.home;
+    return {
+      mode: "advance",
+      winPct,
+      currentRound: upcoming.round,
+      nextRound: KO_NEXT_ROUND[upcoming.round] ?? null, // null at the Final / third-place -> "win it all" / "finish third"
+      oppCode,
+      oppName: (teamByCode(data, oppCode) || {}).name || oppCode,
+      fx: upcoming,
+    };
+  }
+  // No live/scheduled tie remains -> the tournament is over for this team; their outcome is their LAST (deepest)
+  // tie. Read it off the last chronological fixture, NOT a reverse-find of the latest loss: the Third-place
+  // play-off sits AFTER the Semi-final loss, so a Semi-final loser who then WINS the bronze game must be judged by
+  // that final game (finished 3rd), not the earlier SF loss. The Final is likewise the deepest tie for both finalists.
+  const last = fixtures[fixtures.length - 1];
+  const winner = resultWinnerCode(last);
+  const wonLast = winner === code;
+  const lostLast = !!winner && winner !== code;
+  const round = last.round;
+  if (round === "Final") {
+    if (wonLast) return { mode: "champion" };
+    if (lostLast) return { mode: "runner_up" };
+  } else if (round === "Third-place play-off") {
+    if (wonLast) return { mode: "third" };
+    if (lostLast) return { mode: "fourth" };
+  } else if (lostLast) {
+    return { mode: "out_knockout", round };
+  } else if (wonLast) {
+    // Won their last tie but the next round's opponent is not resolved yet.
+    return { mode: "through", currentRound: round, nextRound: KO_NEXT_ROUND[round] ?? null };
+  }
+  // Defensive: a finished tie with no resolvable winner (malformed/transient feed). Never fall back to the spent
+  // group-stage hero — show a neutral terminal instead.
+  return { mode: "out_knockout", round };
+}
+
 // ---- narration: prefer the explicit target key the export now carries (team_code / group); fall back to
 // matching the team name in the headline for older exports that didn't key the entries. ----
 const NARR_ALIAS = { USA: "United States" };
@@ -297,16 +370,27 @@ function roundName(fx) {
   return "the knockout stage";
 }
 export function teamTournamentEndState(data, code) {
-  const koLoss = teamRealKnockoutFixtures(data, code)
-    .slice()
-    .reverse()
-    .find((fx) => matchState(fx) === "finished" && resultWinnerCode(fx) && resultWinnerCode(fx) !== code);
-  if (koLoss) {
-    return {
-      kind: "knockout",
-      title: "Tournament complete",
-      body: `Eliminated in ${roundName(koLoss)}.`,
-    };
+  // A team is "done" only once their LAST (deepest) knockout tie is finished. Judge by that last fixture, NOT a
+  // reverse-find of the latest loss: the Third-place play-off comes after the Semi-final loss, so a bronze winner
+  // would otherwise read as "Eliminated in the Semi-finals" (and a Final loser as "Eliminated in the Final"). This
+  // mirrors knockoutHeroFor so the hero headline and this end card never disagree.
+  const koFixtures = teamRealKnockoutFixtures(data, code);
+  const last = koFixtures.length ? koFixtures[koFixtures.length - 1] : null;
+  if (last && matchState(last) === "finished") {
+    const winner = resultWinnerCode(last);
+    const wonLast = winner === code;
+    const lostLast = !!winner && winner !== code;
+    const round = last.round;
+    if (round === "Final") {
+      if (wonLast) return null; // champions are celebrated in the hero, not an "eliminated" end card
+      if (lostLast) return { kind: "knockout", title: "Tournament complete", body: "Runners-up — reached the Final." };
+    } else if (round === "Third-place play-off") {
+      if (wonLast) return { kind: "knockout", title: "Tournament complete", body: "Finished third — won the third-place play-off." };
+      if (lostLast) return { kind: "knockout", title: "Tournament complete", body: "Finished fourth in the World Cup." };
+    } else if (lostLast) {
+      return { kind: "knockout", title: "Tournament complete", body: `Eliminated in ${roundName(last)}.` };
+    }
+    // wonLast in R32..SF (awaiting the next round) or an unresolved winner -> not terminal; fall through.
   }
   const pg = predictedGroup(data, code);
   const rg = pg?.group ? realGroup(data, pg.group) : null;

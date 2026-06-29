@@ -9,7 +9,7 @@ import {
   teamByCode, nicknameLine, heroFor, reachStats, narrationFor, scenarioFor,
   tacticalFor, knockoutFor, groupTable, bestThirdInfo, bandOf, BAND_TEXT, pct, ordinal,
   teamFixtures, nextMatchIndex, isKnockoutFixture, matchState, squadGroups, fixtureDayLabel,
-  nextRealKnockoutFixture, teamTournamentEndState, teamCurrentKnockoutNarration,
+  nextRealKnockoutFixture, teamTournamentEndState, teamCurrentKnockoutNarration, knockoutHeroFor,
 } from "../lib/select";
 
 const TABS = ["Overview", "Standing", "Path", "Squad"];
@@ -25,6 +25,7 @@ const NUMBER_INFO = {
   runnerUp: "The chance they finish 2nd in the group.",
   bestThird: "The chance they finish 3rd and still qualify as one of the best third-placed teams.",
   ifThird: "If they finish 3rd, this is their chance of still qualifying. Finished third-place teams use their locked record; active groups still depend on the remaining tables.",
+  knockoutAdvance: `Live win probability for this knockout tie from our post-group Elo model (K=60), updated from the verified group-stage results. ${UPDATE_TIMING_NOTE}`,
 };
 
 function routeInfoCopy(route = "") {
@@ -43,7 +44,7 @@ export default function MyTeamView({ data, code, tab, onTab, live, lineups, even
       <div key={tab} className="animate-panel mt-4">
         {tab === "Overview" && (
           <div className="space-y-4 lg:mx-auto lg:max-w-[960px]">
-            <Hero data={data} code={code} />
+            <Hero data={data} code={code} live={live} />
             <AboveTabs data={data} code={code} />
             <FixturesSection data={data} code={code} live={live} lineups={lineups} events={events} stats={stats} onOpen={onOpenMatch} onTab={onTab} />
             <OverviewPanel data={data} code={code} />
@@ -85,15 +86,118 @@ function BandChip({ pos, label }) {
   );
 }
 
-function Hero({ data, code }) {
+// Knockout-phase label for the advance %: at the Final / third-place there is no "next round" to reach.
+function koAdvanceLabel(currentRound, nextRound) {
+  if (currentRound === "Final") return "chance to win the World Cup";
+  if (currentRound === "Third-place play-off") return "chance to finish third";
+  return `chance to reach ${nextRound || "the next round"}`;
+}
+
+// Knockout-phase hero: replaces the spent group-stage "chance to reach the knockouts" once the groups are complete.
+// - advance:      live per-tie win % + "chance to reach the [next round]" + the current round & opponent (not "now 1st")
+// - through:      won their tie, next opponent not yet resolved
+// - champion / runner_up / third / fourth / out_knockout / out_group: terminal status (no spent percentage)
+function KnockoutHero({ kh }) {
+  if (kh.mode === "champion") {
+    return (
+      <Card className="px-5 pb-7 pt-7 text-center">
+        <div className="text-[44px] leading-none" aria-hidden="true">🏆</div>
+        <div className="mt-3 text-[26px] font-bold tracking-tight">World Cup Winners</div>
+        <p className="mx-auto mt-2 max-w-[18rem] text-[13px] text-ink-2">Champions of the 2026 FIFA World Cup.</p>
+        <div className="rainbow-line mx-auto mt-5 h-[3px] w-28 rounded-full" />
+      </Card>
+    );
+  }
+  // Podium / runner-up finishes — an achievement, not an "eliminated" line.
+  if (kh.mode === "runner_up" || kh.mode === "third" || kh.mode === "fourth") {
+    const medal = kh.mode === "runner_up" ? "🥈" : kh.mode === "third" ? "🥉" : null;
+    const title = kh.mode === "runner_up" ? "Runners-up" : kh.mode === "third" ? "Third place" : "Fourth place";
+    const sub = kh.mode === "runner_up"
+      ? "Reached the 2026 World Cup Final."
+      : kh.mode === "third" ? "Won the third-place play-off."
+      : "Lost the third-place play-off.";
+    return (
+      <Card className="px-5 pb-7 pt-7 text-center">
+        {medal && <div className="text-[40px] leading-none" aria-hidden="true">{medal}</div>}
+        <div className={`${medal ? "mt-3 " : ""}text-[24px] font-bold tracking-tight`}>{title}</div>
+        <p className="mx-auto mt-2 max-w-[18rem] text-[13px] text-ink-2">{sub}</p>
+        <div className="rainbow-line mx-auto mt-5 h-[3px] w-28 rounded-full" />
+      </Card>
+    );
+  }
+  if (kh.mode === "out_knockout" || kh.mode === "out_group") {
+    const line = kh.mode === "out_knockout"
+      ? `Eliminated in the ${kh.round}.`
+      : (kh.position ? `Finished ${ordinal(kh.position)} in Group ${kh.group} — did not advance.` : "Did not advance from the group stage.");
+    return (
+      <Card className="px-5 pb-7 pt-7 text-center">
+        <div className="text-[22px] font-bold tracking-tight text-ink-2">Tournament complete</div>
+        <p className="mx-auto mt-2 max-w-[20rem] text-[14px] leading-snug text-ink-2">{line}</p>
+        <div className="rainbow-line mx-auto mt-5 h-[3px] w-28 rounded-full opacity-60" />
+        <p className="mx-auto mt-4 text-[12px] text-ink-3">Final placing from the verified results.</p>
+      </Card>
+    );
+  }
+  if (kh.mode === "through") {
+    return (
+      <Card className="px-5 pb-7 pt-7 text-center">
+        <div className="text-[26px] font-bold tracking-tight text-qualified">
+          Through to {kh.nextRound || "the next round"}
+        </div>
+        <p className="mx-auto mt-2 max-w-[18rem] text-[13px] text-ink-2">Awaiting their next opponent.</p>
+        <div className="rainbow-line mx-auto mt-5 h-[3px] w-28 rounded-full" />
+      </Card>
+    );
+  }
+  // advance — live per-tie win probability
+  const n = kh.winPct == null ? null : Math.round(kh.winPct * 100);
+  // Graceful fallback: a resolved tie with no prediction yet -> show the matchup, never a misleading "—%".
+  if (n == null) {
+    return (
+      <Card className="px-5 pb-7 pt-7 text-center">
+        <div className="text-[22px] font-bold tracking-tight">{kh.currentRound}</div>
+        <p className="mx-auto mt-2 text-[15px] text-ink-2">vs {kh.oppName}</p>
+        <div className="rainbow-line mx-auto mt-5 h-[3px] w-28 rounded-full" />
+        <p className="mx-auto mt-4 max-w-[18rem] text-[12px] leading-snug text-ink-3">A live win probability appears once the model has both teams’ ratings. {UPDATE_TIMING_NOTE}</p>
+      </Card>
+    );
+  }
+  return (
+    <Card className="px-5 pb-6 pt-7 text-center">
+      <div className="font-bold leading-none tracking-[-0.03em] tabular-nums text-ink">
+        <span className="text-[64px]">{n}</span>
+        <span className="align-top text-[34px] text-ink-2">%</span>
+      </div>
+      <div className="mt-2.5 inline-flex items-center justify-center gap-1.5 text-[14px] font-medium text-ink-2">
+        <span>{koAdvanceLabel(kh.currentRound, kh.nextRound)}</span>
+        <InfoTip label="About this chance">{NUMBER_INFO.knockoutAdvance}</InfoTip>
+      </div>
+      <p className="mx-auto mt-2 max-w-[18rem] text-[12px] leading-snug text-ink-3">
+        Live estimate from our post-group Elo model (K=60), updated from the group-stage results.
+      </p>
+      <p className="mx-auto mt-1.5 max-w-[18rem] text-[11px] leading-snug text-ink-3">{UPDATE_TIMING_NOTE}</p>
+      <div className="rainbow-line mx-auto mt-5 h-[3px] w-28 rounded-full" />
+      <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-[13px] text-ink-2">
+        <span>{kh.currentRound}</span>
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-fill/10 px-2.5 py-1 text-[13px] font-semibold text-ink">
+          vs {kh.oppName}
+        </span>
+      </div>
+    </Card>
+  );
+}
+
+function Hero({ data, code, live }) {
+  const kh = knockoutHeroFor(data, code, live);
+  if (kh) return <KnockoutHero kh={kh} />;
   const h = heroFor(data, code);
   const n = h.advance == null ? null : Math.round(h.advance * 100);
-  const live = h.phase === "live";
-  const pos = live ? h.now : h.predictedNum;
-  const finishLabel = live ? (h.now != null ? ordinal(h.now) : "—") : h.predicted || "—";
+  const isLivePhase = h.phase === "live";
+  const pos = isLivePhase ? h.now : h.predictedNum;
+  const finishLabel = isLivePhase ? (h.now != null ? ordinal(h.now) : "—") : h.predicted || "—";
   const historicalMatchCount = data.meta?.historical_match_count ?? 7871;
   const simulationCount = data.meta?.simulation_count ?? 20000;
-  const contextLine = live
+  const contextLine = isLivePhase
     ? `Live estimate from ${historicalMatchCount.toLocaleString()} historical matches and ${simulationCount.toLocaleString()} tournament simulations.`
     : `Pre-tournament estimate from ${historicalMatchCount.toLocaleString()} historical matches and ${simulationCount.toLocaleString()} tournament simulations. Updates as real results come in.`;
   return (
@@ -110,13 +214,13 @@ function Hero({ data, code }) {
       <p className="mx-auto mt-1.5 max-w-[18rem] text-[11px] leading-snug text-ink-3">{UPDATE_TIMING_NOTE}</p>
       <div className="rainbow-line mx-auto mt-5 h-[3px] w-28 rounded-full" />
       <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-[13px] text-ink-2">
-        <span>{live ? "now" : "predicted finish"}</span>
+        <span>{isLivePhase ? "now" : "predicted finish"}</span>
         <BandChip pos={pos} label={finishLabel} />
-        <InfoTip label={live ? "About current position" : "About predicted finish"}>
-          {live ? NUMBER_INFO.currentFinish : NUMBER_INFO.predictedFinish}
+        <InfoTip label={isLivePhase ? "About current position" : "About predicted finish"}>
+          {isLivePhase ? NUMBER_INFO.currentFinish : NUMBER_INFO.predictedFinish}
         </InfoTip>
       </div>
-      {live && h.movement && (
+      {isLivePhase && h.movement && (
         <div className="mt-2 text-[12px] text-ink-2">
           <span className={h.movement === "up" ? "text-qualified" : "text-bubble"}>
             {h.movement === "up" ? "▲" : "▼"} {h.movement === "up" ? "up" : "down"} from predicted {ordinal(h.predictedNum)}
