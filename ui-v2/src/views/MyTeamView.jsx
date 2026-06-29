@@ -9,7 +9,7 @@ import {
   teamByCode, nicknameLine, heroFor, reachStats, narrationFor, scenarioFor,
   tacticalFor, knockoutFor, groupTable, bestThirdInfo, bandOf, BAND_TEXT, pct, ordinal,
   teamFixtures, nextMatchIndex, isKnockoutFixture, matchState, squadGroups, fixtureDayLabel,
-  nextRealKnockoutFixture, teamTournamentEndState,
+  nextRealKnockoutFixture, teamTournamentEndState, teamCurrentKnockoutNarration,
 } from "../lib/select";
 
 const TABS = ["Overview", "Standing", "Path", "Squad"];
@@ -139,23 +139,30 @@ function PanelHead({ title, sub }) {
 // ---------- ABOVE TABS: AI summary (story) + conditional routes for bubble teams ----------
 // Paired with the hero number — the number, then the "why", before the tabs.
 function AboveTabs({ data, code }) {
-  const narr = narrationFor(data, code);
+  const ko = teamCurrentKnockoutNarration(data, code); // the team's CURRENT knockout-tie story (preview/post), once resolved
+  const narr = narrationFor(data, code);               // spent group-stage scenario story — the graceful fallback
   const scen = scenarioFor(data, code);
   const hero = heroFor(data, code);
   const isBubble = (hero.predicted === "3rd") || (scen && scen.third_place_race && scen.third_place_race.in_race);
-  if (!narr && !(scen && isBubble)) return null;
+  // Surface the story where the team actually is NOW: the live knockout matchup if we have one (matched by
+  // fixture_label), else the spent group-stage "chance to reach the knockouts" story. Eliminated-in-groups teams
+  // have no knockout tie -> they keep the old story (end-state unaffected).
+  const story = ko
+    ? { headline: ko.story.headline, body: ko.story.body, sub: `${ko.fx.home} vs ${ko.fx.away} · ${ko.story.kind === "post_result_change" ? "the story" : "match preview"}` }
+    : (narr ? { headline: narr.headline, body: narr.body, sub: "the story behind the numbers" } : null);
+  if (!story && !(scen && isBubble)) return null;
   return (
     <div className="space-y-4">
-      {narr && (
+      {story && (
         <Card className="border-l-[3px] border-l-bubble/60 p-5">
           <div className="mb-2 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-bubble/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-bubble">
               ✦ AI summary
             </span>
-            <span className="text-[12px] italic text-ink-2">the story behind the numbers</span>
+            <span className="text-[12px] italic text-ink-2">{story.sub}</span>
           </div>
-          <h4 className="text-[16px] font-bold leading-snug tracking-tight">{narr.headline}</h4>
-          <p className="mt-2 text-[14px] leading-relaxed text-ink-2">{narr.body}</p>
+          <h4 className="text-[16px] font-bold leading-snug tracking-tight">{story.headline}</h4>
+          <p className="mt-2 text-[14px] leading-relaxed text-ink-2">{story.body}</p>
           <p className="mt-3 text-[12px] text-ink-3">
             AI summary of {data.meta?.model_label || "the simulation model"}’s output — it explains the numbers above, it doesn’t add data. {CARD_TIMING_NOTE}
           </p>

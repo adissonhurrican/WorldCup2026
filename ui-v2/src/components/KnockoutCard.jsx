@@ -3,7 +3,7 @@ import PredictionBar from "./PredictionBar";
 import { MatchEventSummary, XgInfo } from "./MatchCard";
 import {
   teamByCode, dualClock, weatherFor, isImminent, weatherEmoji, weatherConfidence, cToF, favorite, pct,
-  matchState, liveOf, scoreOf, eventsOf, lineupState, statsOf,
+  matchState, liveOf, scoreOf, eventsOf, lineupState, statsOf, knockoutNarrationFor,
 } from "../lib/select";
 
 // Knockout-stage match card (R32 → Final). Full parity with the group MatchCard: the two "team" positions are
@@ -51,6 +51,9 @@ export default function KnockoutCard({ data, fx, live, lineups, events, stats, o
   const wentToPens = finished && pensHome != null && pensAway != null;
   const aCode = fx.side_a?.team?.code ?? null;
   const bCode = fx.side_b?.team?.code ?? null;
+  // knockout matchup story (display only) — the AI preview/story for this tie, matched by fixture_label. Only once
+  // both teams are real (an unresolved slot has no narration). A light teaser here; the full text lives in the sheet.
+  const story = aCode && bCode ? knockoutNarrationFor(data, fx, finished) : null;
 
   return (
     <button
@@ -173,6 +176,21 @@ export default function KnockoutCard({ data, fx, live, lineups, events, stats, o
           ) : ls.showPlaceholder ? (
             <div className="mt-2 text-center text-[11px] text-ink-3">Lineups ~60 min before kickoff</div>
           ) : null
+        )}
+
+        {/* knockout narration teaser — the hook line only; tap the card for the full preview/story (MatchSheet → KnockoutStory) */}
+        {story && story.headline && (
+          <div className="mt-3 border-t border-separator/50 pt-2.5">
+            <span className="inline-flex items-center gap-1 rounded-full bg-bubble/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-bubble">
+              ✦ {story.kind === "post_result_change" ? "The story" : "Match preview"}
+            </span>
+            <p
+              className="mt-1.5 text-[12px] leading-snug text-ink-2"
+              style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}
+            >
+              {story.headline}
+            </p>
+          </div>
         )}
       </div>
     </button>

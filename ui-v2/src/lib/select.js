@@ -505,6 +505,20 @@ export function teamRealKnockoutFixtures(data, code) {
     .filter((fx) => fx && (fx.home === code || fx.away === code))
     .sort((a, b) => kickoffMs(a) - kickoffMs(b) || (a.match_number || 0) - (b.match_number || 0));
 }
+// ---- a team's CURRENT knockout-tie story (My Team): pick the tie the team is actually in right now — the live or
+// next upcoming one, else (champion / knocked out / awaiting the next round) their latest tie — and return that
+// matchup's narration via knockoutNarrationFor. Returns { story, fx, finished } or null. Null when the team has no
+// resolved knockout fixture yet (still in groups, or eliminated in groups), so callers fall back to the spent
+// group-stage scenario story. Display only — reuses the published pre_match_storyline / post_result_change rows. ----
+export function teamCurrentKnockoutNarration(data, code, live = null) {
+  const fixtures = teamRealKnockoutFixtures(data, code);
+  if (!fixtures.length) return null;
+  const ni = nextMatchIndex(fixtures, live);
+  const fx = ni !== -1 ? fixtures[ni] : fixtures[fixtures.length - 1];
+  const finished = matchState(fx, live) === "finished";
+  const story = knockoutNarrationFor(data, fx, finished);
+  return story ? { story, fx, finished } : null;
+}
 // Index of the "next" match in a chronological list: a live one wins, else the soonest
 // not-yet-played fixture. Returns -1 when nothing is upcoming (eliminated / tournament over).
 export function nextMatchIndex(fixtures, live = null, now = Date.now()) {
