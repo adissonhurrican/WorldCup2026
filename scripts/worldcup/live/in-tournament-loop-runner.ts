@@ -560,15 +560,29 @@ async function liveCycle(args: ReturnType<typeof parseArgs>) {
     log("EXPORT", `export_status=${exp.status}`, exp.status === "ok", exp.detail);
 
     let narrTeams = "ALL";
+    let groupsComplete = false;
     try {
       const nextAppData = JSON.parse(readFileSync(abs("data/exports/app-data.json"), "utf8"));
       const affected = computeAffectedNarrationTeams(prevAppData, nextAppData);
       if (affected && affected.length) narrTeams = affected.join(",");
-    } catch { /* fail-open -> ALL */ }
-    const scopeLabel = narrTeams === "ALL" ? "ALL [fail-open]" : `${narrTeams} [affected-set ${narrTeams.split(",").length}/48]`;
-    console.log(`\nPHASE 3 (Phase 6) - AI scenario_narration regeneration (--execute --teams ${scopeLabel}; best-effort, non-blocking)`);
-    narration = runNarration(narration_built, { execute: true, forceFail: forceNarrationFail, teams: narrTeams });
-    log("AI", `narration_status=${narration.status}`, narration.status !== "failed" && narration.status !== "not_built", narration.detail);
+      // GROUP STAGE COMPLETE? = every Round-of-32 tie has both teams real (the resolver filled them).
+      const r32 = Array.isArray(nextAppData?.knockout_fixtures) ? nextAppData.knockout_fixtures.filter((k: any) => k.round_key === "round_of_32") : [];
+      groupsComplete = r32.length > 0 && r32.every((k: any) => k?.side_a?.team?.code && k?.side_b?.team?.code);
+    } catch { /* fail-open -> ALL; groups treated as not-complete (scenario narration still runs) */ }
+    if (groupsComplete) {
+      // SCENARIO_NARRATION is the GROUP-STAGE content type ("chance to reach the knockouts") — SPENT once the group
+      // stage is over. Regenerating ~all 48 each cycle was the dominant per-cycle Gemini cost (the >8-min cycle that
+      // tripped the job timeout). SKIP the regeneration in the knockout phase: the group-stage narration already in
+      // the DB is static + still exported (build-app-data reads it), so nothing the UI shows changes — only the waste
+      // stops. The knockout narration (fired below) is the live content now.
+      narration = { status: "skipped" as StepStatus, pending: false, detail: "scenario_narration SKIPPED — group stage complete (spent content type; existing rows still exported); knockout narration carries the live phase" };
+      log("AI", "narration_status=skipped", true, narration.detail);
+    } else {
+      const scopeLabel = narrTeams === "ALL" ? "ALL [fail-open]" : `${narrTeams} [affected-set ${narrTeams.split(",").length}/48]`;
+      console.log(`\nPHASE 3 (Phase 6) - AI scenario_narration regeneration (--execute --teams ${scopeLabel}; best-effort, non-blocking)`);
+      narration = runNarration(narration_built, { execute: true, forceFail: forceNarrationFail, teams: narrTeams });
+      log("AI", `narration_status=${narration.status}`, narration.status !== "failed" && narration.status !== "not_built", narration.detail);
+    }
 
     if (narration.status === "ok" && exp.status === "ok") {
       console.log("\nEXPORT (2/2) - RE-EXPORT to embed the freshly regenerated narration (cheap, idempotent)");

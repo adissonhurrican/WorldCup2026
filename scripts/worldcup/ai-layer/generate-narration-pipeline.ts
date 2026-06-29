@@ -723,6 +723,15 @@ async function runKnockoutNarration(url: string, mode: "pre" | "post", fixtureAr
     targets = targets.filter((t) => !existing.has(t.label));
     if (before !== targets.length) console.log(`idempotency: skipped ${before - targets.length} already-generated ${content_type}.`);
   }
+  // PER-CYCLE CAP (loop firing): bound each all-mode run so a single cycle stays within the job budget; idempotency
+  // picks up the deferred ties on the next cycles. Manual single-fixture runs (--fixture) are uncapped.
+  const PER_CYCLE_CAP = 6;
+  if (execute && !fixtureArg && targets.length > PER_CYCLE_CAP) {
+    const deferred = targets.slice(PER_CYCLE_CAP).map((t) => t.label);
+    targets = targets.slice(0, PER_CYCLE_CAP);
+    for (const lbl of deferred) skipped.push({ fixture: lbl, reason: "deferred_per_cycle_cap" });
+    console.log(`per-cycle cap: deferring ${deferred.length} ${content_type} to later cycles (idempotent): ${deferred.join(", ")}`);
+  }
   console.log(`Knockout narration | mode=${mode} | content_type=${content_type} | model: ${model} | ${execute ? "EXECUTE (store validated)" : "DRY-RUN (no write)"} | targets: ${targets.length} | skipped: ${skipped.length}\n`);
   const results: any[] = [];
   for (const t of targets) {

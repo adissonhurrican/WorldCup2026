@@ -36,7 +36,10 @@ jobs:
   live-loop:
     name: Run the in-tournament loop (unattended) and publish app-data
     runs-on: ubuntu-latest
-    timeout-minutes: 8   # a hung cycle must not block the next scheduled run (10-min cadence)
+    timeout-minutes: 18  # knockout-phase cycles legitimately need >8 min; with scenario_narration skipped once groups
+                         # are done + the knockout firing capped per cycle, a cycle now finishes well within this.
+                         # Serialized via concurrency (cancel-in-progress:false): a slow cycle queues the next, never
+                         # overlapping a commit. (Was 8 -> cycles were killed mid-run, skipping the commit -> stale site.)
     env:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
       SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
