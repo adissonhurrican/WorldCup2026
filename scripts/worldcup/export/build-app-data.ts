@@ -18,8 +18,10 @@ import { buildResultLookup, resultForFixture } from "./result-join";
 // coach/tactical context, and validated AI narration if a narration table exists (else narration: []).
 // Strips ALL internal IDs (UUIDs / table names / model-version tags / status jargon) -> plain source_labels.
 // Probabilities are DECIMALS 0..1. Validates against data/exports/app-data.contract.json (shape + ranges + sums
-// + ID-leak scan) BEFORE writing — fails loud on any violation. Idempotent: meta.generated_at = the live runs'
-// provenance time, so re-running on the same live state yields a byte-identical file (loop step 7 self-heal).
+// + ID-leak scan) BEFORE writing — fails loud on any violation. Idempotent + advancing: meta.generated_at = the
+// latest of {the live runs' provenance time, the latest finished result, the latest narration} — all content-stable,
+// so re-running on the same live state yields a byte-identical file (loop step 7 self-heal) while ADVANCING on each
+// new knockout result/narration (the stale-CDN freshness override in appDataResolver depends on it advancing).
 // No model/prediction changes. No odds/predictions endpoints. CLI reads; writes the JSON file only.
 
 const rootDir = process.cwd();
@@ -205,9 +207,20 @@ async function main() {
       (select id::text from tournament_simulation_runs where scope='all-groups-group-stage' and source_snapshot->>'lifecycle'='live_current' limit 1) gsim,
       (select id::text from tournament_simulation_runs where scope='full-tournament-knockout' and source_snapshot->>'lifecycle'='live_current' limit 1) ko`)[0];
   if (!live?.pred || !live?.gsim || !live?.ko) throw new Error(`could not resolve all live runs: ${JSON.stringify(live)}`);
-  const asOf = q(url, `select max(created_at)::text t from (
-      select created_at from prediction_runs where id='${live.pred}'
-      union all select created_at from tournament_simulation_runs where id in ('${live.gsim}','${live.ko}')) x`)[0]?.t;
+  // meta.generated_at must ADVANCE on real knockout activity. The sim/prediction runs are NOT re-created per knockout
+  // tie, so their max(created_at) is frozen at group completion through the knockouts — which silently pinned
+  // generated_at (the stale-CDN freshness override in appDataResolver keys off it advancing, so it was a no-op once
+  // groups finished). Widen to the latest of {the live runs' provenance time, the latest FINISHED result, the latest
+  // narration}. Use finished_at (set once at FT — NOT last_ingested_at, which churns on every re-ingest) and
+  // ai_narrations.created_at; both are content-stable, so an idle cycle stays byte-identical (no churn) while each
+  // new result / new narration advances the stamp.
+  const asOf = q(url, `select greatest(
+      (select max(created_at) from (
+        select created_at from prediction_runs where id='${live.pred}'
+        union all select created_at from tournament_simulation_runs where id in ('${live.gsim}','${live.ko}')) x),
+      (select max(finished_at) from match_results where match_status='finished'),
+      (select max(created_at) from ai_narrations)
+    )::text t`)[0]?.t;
 
   // ---- pulls (read-only) ----
   const gs = q(url, `select team_code, team_name, group_code,
