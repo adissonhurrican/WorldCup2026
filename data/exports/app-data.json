@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-06-29 20:30:00+00",
+    "generated_at": "2026-06-29 23:34:29.801056+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7273,6 +7273,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Paraguay Stun Germany on Penalties After Dramatic Boston Battle",
+      "body": "Paraguay have pulled off a monumental upset in the Round of 32, defeating Germany 4-3 on penalties after a tense 1-1 draw through extra time. Julio Enciso opened the scoring for Paraguay in the 42nd minute, before Kai Havertz equalized for Germany in the 54th minute to send the match into a grueling scoreless extra period. While the scoreline remained deadlocked, the matured expected goals (xG) tell a story of German dominance, with Germany registering 1.49 xG to Paraguay's 0.42 xG—proving that the South Americans survived a heavy onslaught. Germany's Florian Wirtz was the standout performer on the pitch, earning an 8.3 rating with four key passes and the crucial assist for the equalizer. With this historic shootout victory, Paraguay advance to the Round of 16, where they will face the winner of the other tie. For Paraguay, this triumph represents a massive national milestone, vindicating the belief of captain Gustavo Gomez who rallied his country by stating that \"when a Paraguayan believes, nothing is impossible.\" Conversely, the defeat brings a dignified but painful end to Germany's campaign, leaving a disillusioned squad to face intense domestic scrutiny after failing to meet their football culture's expectation of a deep tournament run.",
+      "fixture_label": "GER vs PAR"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Brazil Edge Japan in Houston Thriller to Reach Round of 16",
