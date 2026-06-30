@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-06-30 19:05:33.819859+00",
+    "generated_at": "2026-06-30 21:00:00+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -2976,7 +2976,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 3,
+        "b": 0,
+        "winner": "FRA",
+        "pens_a": null,
+        "pens_b": null
+      },
       "kickoff": "2026-06-30",
       "kickoff_utc": "2026-06-30T21:00:00Z",
       "date_confirmed": true,
@@ -3568,9 +3574,20 @@
         "group": null,
         "pool": null,
         "source_match": 77,
-        "team": null
+        "team": {
+          "code": "FRA",
+          "name": "France"
+        }
       },
-      "prediction": null,
+      "prediction": {
+        "team_a_win_probability": 0.1244,
+        "team_b_win_probability": 0.8756,
+        "elo_a": 1800,
+        "elo_b": 2139,
+        "elo_source": "post_group_k60",
+        "basis": "real",
+        "method": "neutral_elo_single_match"
+      },
       "result": null,
       "kickoff": "2026-07-04",
       "kickoff_utc": "2026-07-04T21:00:00Z",
