@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-06-30 21:00:00+00",
+    "generated_at": "2026-06-30 23:04:58.839187+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7324,6 +7324,18 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "France Cruise Past Sweden to Reach Round of 16",
+      "body": "France booked their place in the Round of 16 with a commanding 3-0 victory over Sweden. The breakthrough came just before halftime when Kylian Mbappé found the net in the 45th minute. Bradley Barcola doubled the lead in the 53rd minute, before Mbappé sealed his brace in the 74th minute to put the tie beyond doubt. The final scoreline was a fair reflection of the on-pitch performance, as France's matured expected goals (xG) of 3.16 to Sweden's 0.56 confirmed their complete dominance. Mbappé was the standout performer, earning a superb 9.6 match rating with his two goals and four key passes, while Michael Olise pulled the strings with two assists. With this victory, France advance to the Round of 16, while Sweden's tournament comes to an end. For France, the win keeps their title aspirations alive as they seek to deliver a fitting farewell for manager Didier Deschamps in his final tournament. For Sweden, who exceeded modest pre-tournament expectations by reaching the knockouts under Graham Potter, the defeat marks a dignified end to a resilient campaign that was ultimately hampered by defensive reshuffles.",
+      "fixture_label": "FRA vs SWE"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "France's Frightening Attack Meets Paraguay's Defensive Wall in Philadelphia",
+      "body": "This Round of 16 clash presents a classic tournament contrast: France's free-flowing, star-studded attack going head-to-head with a stubborn Paraguay side built to defend deep and frustrate. According to our knockout model, France are heavy favourites with an 88% chance to win the tie, backed by a flawless group stage where they scored ten goals. Paraguay hold a 12% chance to pull off an upset, having advanced as a best third-placed team by relying on defensive organization to secure two clean sheets. Les Bleus arrive with immense momentum after three straight wins, powered by the tournament's joint-top scorers Kylian Mbappé and Ousmane Dembélé, who have netted four goals each. Paraguay's return to the knockouts after a 16-year absence has ignited a passionate domestic debate over their ultra-defensive style, but captain Gustavo Gómez rallied the nation, writing, \"When a Paraguayan believes, nothing is impossible.\" Meanwhile, France are playing with the emotional weight of Didier Deschamps' final campaign, though midfielder Adrien Rabiot warned that their attack-heavy shape has left them \"somewhat exposed\" at times. The key to this single-elimination tie will be whether Paraguay's low block can withstand France's early pressure, or if Mbappé and Dembélé will quickly find a way through.",
+      "fixture_label": "PAR vs FRA"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Haaland Strikes Late as Norway Edge Ivory Coast in Knockout Thriller",
