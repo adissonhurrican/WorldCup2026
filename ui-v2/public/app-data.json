@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-06-30 01:00:00+00",
+    "generated_at": "2026-06-30 04:04:45.750398+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7290,6 +7290,18 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Morocco Edge Netherlands on Penalties After Dramatic Monterrey Knockout",
+      "body": "Morocco have advanced to the Round of 16 after a dramatic 1-1 draw with the Netherlands was decided on penalties, with the Atlas Lions winning the shootout 3-2. Cody Gakpo broke the deadlock for the Dutch in the 72nd minute, but Morocco's Issa Diop equalized in the 90th minute to force extra time. While the scoreline remained level, the matured expected goals (xG) tell a different story of dominance: Morocco accumulated 1.4 xG compared to a mere 0.23 xG for the Netherlands, confirming that the Atlas Lions created the far better opportunities. Dutch goalkeeper Bart Verbruggen was the standout performer of the match, earning an 8.3 rating for keeping his side in the game. Morocco now advance to the Round of 16 to face the winner of the other tie. For Morocco, the victory keeps their ambitious dream alive under new manager Mohamed Ouahbi, who has urged his players to believe they can win the tournament outright. For the Netherlands, the defeat brings a heartbreaking end to a campaign filled with high expectations. The loss is particularly poignant for Gakpo, who chose to remain with the squad following a personal tragedy, a decision that had deeply united the close-knit Dutch team.",
+      "fixture_label": "NED vs MAR"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "A Historic First Knockout Meeting as Canada and Morocco Clash in Houston",
+      "body": "This single-elimination tie brings together two nations riding waves of historic momentum, with Canada entering their first-ever World Cup knockout match against a formidable Moroccan side. Our knockout model positions Morocco as the clear favourite with a 65% chance to win, backed by their unbeaten group-stage run and deep tournament pedigree. Canada hold a 35% chance to pull off the upset, arriving with two clean sheets from their group campaign. The match features a thrilling duel of in-form goalscorers: Canada's Jonathan David and Morocco's Ismael Saibari have each netted three goals so far. For Canada, the stakes are heightened by a mix of optimism and anxiety; per ESPN, manager Jesse Marsch confirmed captain Alphonso Davies is available, though he pointedly refused to guarantee a start. Meanwhile, Morocco carry immense national expectations under new manager Mohamed Ouahbi, who has guided them seamlessly after taking over just months before the tournament. According to beIN SPORTS, Ouahbi noted that \"the players now believe in their ability, and opponents respect Morocco.\" With no prior head-to-head meetings between these teams, this first encounter will be decided by who handles the intense pressure of the big stage. Watch for Canada's aggressive transition play to test Morocco's reshaped but highly disciplined defensive line.",
+      "fixture_label": "CAN vs MAR"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Paraguay Stun Germany on Penalties After Dramatic Boston Battle",
