@@ -177,7 +177,7 @@ export async function loadLiveScores(url = `/.netlify/functions/livescore`) {
     map[`${m.home}_${m.away}`] = m;
     const reverseKey = `${m.away}_${m.home}`;
     if (!map[reverseKey]) {
-      map[reverseKey] = { ...m, home: m.away, away: m.home, home_score: m.away_score, away_score: m.home_score };
+      map[reverseKey] = { ...m, home: m.away, away: m.home, home_score: m.away_score, away_score: m.home_score, pens_home: m.pens_away, pens_away: m.pens_home };
     }
   }
   return { as_of: (raw && raw.as_of) || null, map };

@@ -20,6 +20,9 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
   const st = statsOf(fx, stats);
   const finished = state === "finished";
   const isLive = state === "live";
+  // LIVE penalty shootout score (status "P") — group games never reach pens, so this stays null here; kept in sync
+  // with the knockout card so the shared live path renders identically if a tie ever surfaces through this card.
+  const livePens = isLive && lv && lv.pens_home != null && lv.pens_away != null;
   const sc = scoreOf(fx);
   const home = teamByCode(data, fx.home) || { code: fx.home };
   const away = teamByCode(data, fx.away) || { code: fx.away };
@@ -102,7 +105,9 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
         {/* dual clock / status */}
         <div className={`mt-2 text-center text-[12px] ${isLive ? "font-semibold text-live" : "text-ink-2"}`}>
           {isLive
-            ? `In play${lv && lv.minute != null ? ` · ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}`
+            ? (livePens
+                ? `Penalty shootout · ${lv.pens_home}–${lv.pens_away}`
+                : `In play${lv && lv.minute != null ? ` · ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}`)
             : finished
               ? "Full-time"
               : dc.venue && !dc.sameZone

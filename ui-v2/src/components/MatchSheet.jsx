@@ -50,6 +50,7 @@ function MatchDetail({ data, fx, live, lineups, events }) {
   const lv = liveOf(fx, live);
   const finished = state === "finished";
   const isLive = state === "live";
+  const livePens = isLive && lv && lv.pens_home != null && lv.pens_away != null; // live shootout (status "P")
   const sc = scoreOf(fx);
   const dc = dualClock(fx);
   const venueProfile = venueProfileFor(data, fx);
@@ -74,10 +75,15 @@ function MatchDetail({ data, fx, live, lineups, events }) {
               {isLive ? `${lv.home_score ?? 0}–${lv.away_score ?? 0}` : finished ? `${sc.h}–${sc.a}` : "vs"}
             </div>
             {isLive ? (
-              <div className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide text-live">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
-                Live{lv.minute != null ? ` ${lv.minute}'` : ""}
-              </div>
+              <>
+                <div className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide text-live">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
+                  Live{lv.minute != null ? ` ${lv.minute}'` : ""}
+                </div>
+                {livePens && (
+                  <div className="mt-1 text-[13px] font-bold tabular-nums text-live">Penalty shootout · {lv.pens_home}–{lv.pens_away}</div>
+                )}
+              </>
             ) : finished ? (
               <div className="text-[11px] font-semibold uppercase tracking-wide text-ink-3">Full-time</div>
             ) : null}

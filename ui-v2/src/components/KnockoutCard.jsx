@@ -49,6 +49,9 @@ export default function KnockoutCard({ data, fx, live, lineups, events, stats, o
   const winnerName = winnerCode ? ((teamByCode(data, winnerCode) || {}).name || winnerCode) : null;
   const pensHome = r.pens_home, pensAway = r.pens_away;
   const wentToPens = finished && pensHome != null && pensAway != null;
+  // LIVE shootout (status "P"): the feed carries pens_home/pens_away while the score stays at the ET goals. Drives the
+  // status line below; null/unset on a normal game so it renders unchanged. (Separate from wentToPens, the FINAL.)
+  const livePens = isLive && lv && lv.pens_home != null && lv.pens_away != null;
   const aCode = fx.side_a?.team?.code ?? null;
   const bCode = fx.side_b?.team?.code ?? null;
   // knockout matchup story (display only) — the AI preview/story for this tie, matched by fixture_label. Only once
@@ -117,7 +120,9 @@ export default function KnockoutCard({ data, fx, live, lineups, events, stats, o
         {(isLive || finished) && (
           <div className={`mt-2 text-center text-[12px] ${isLive ? "font-semibold text-live" : "text-ink-2"}`}>
             {isLive
-              ? `In play${lv && lv.minute != null ? ` · ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}`
+              ? (livePens
+                  ? `Penalty shootout · ${lv.pens_home}–${lv.pens_away}`
+                  : `In play${lv && lv.minute != null ? ` · ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}`)
               : winnerName
                 ? <><span className="font-semibold text-ink">{winnerName}</span> advance{wentToPens ? ` · ${pensHome}–${pensAway} pens` : ""}</>
                 : "Full-time"}

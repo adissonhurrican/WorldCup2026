@@ -71,6 +71,11 @@ function liveFixturesToMatches(apiFixtures) {
       extra: typeof f?.fixture?.status?.extra === "number" && f.fixture.status.extra > 0 ? f.fixture.status.extra : null,
       home_score: f?.goals?.home ?? 0,
       away_score: f?.goals?.away ?? 0,
+      // LIVE penalty shootout score (status "P") — the SAME score.penalty field we read for the final result, here
+      // updating kick-by-kick during the shootout. null outside a shootout, so a normal game carries no pens and the
+      // card renders exactly as before. Display-only (the goals/ET score stays home_score/away_score).
+      pens_home: typeof f?.score?.penalty?.home === "number" ? f.score.penalty.home : null,
+      pens_away: typeof f?.score?.penalty?.away === "number" ? f.score.penalty.away : null,
     });
   }
   return matches;
