@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-06-30 04:04:45.750398+00",
+    "generated_at": "2026-06-30 17:00:00+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -3023,7 +3023,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 1,
+        "b": 2,
+        "winner": "NOR",
+        "pens_a": null,
+        "pens_b": null
+      },
       "kickoff": "2026-06-30",
       "kickoff_utc": "2026-06-30T17:00:00Z",
       "date_confirmed": true,
@@ -3645,9 +3651,20 @@
         "group": null,
         "pool": null,
         "source_match": 78,
-        "team": null
+        "team": {
+          "code": "NOR",
+          "name": "Norway"
+        }
       },
-      "prediction": null,
+      "prediction": {
+        "team_a_win_probability": 0.6131,
+        "team_b_win_probability": 0.3869,
+        "elo_a": 2001,
+        "elo_b": 1921,
+        "elo_source": "post_group_k60",
+        "basis": "real",
+        "method": "neutral_elo_single_match"
+      },
       "result": null,
       "kickoff": "2026-07-05",
       "kickoff_utc": "2026-07-05T20:00:00Z",
