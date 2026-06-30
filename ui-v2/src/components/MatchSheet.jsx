@@ -51,6 +51,12 @@ function MatchDetail({ data, fx, live, lineups, events }) {
   const finished = state === "finished";
   const isLive = state === "live";
   const livePens = isLive && lv && lv.pens_home != null && lv.pens_away != null; // live shootout (status "P")
+  // FINISHED knockout result for the header (mirror KnockoutCard / MatchCard): the advancer + shootout score so the
+  // detail header shows "{winner} advance · X–Y pens" rather than a bare "Full-time" for a resolved knockout tie.
+  const koR = fx.result || {};
+  const koWinnerCode = finished && isKnockout ? (koR.winner_code ?? null) : null;
+  const koWinnerName = koWinnerCode ? ((teamByCode(data, koWinnerCode) || {}).name || koWinnerCode) : null;
+  const koWentToPens = finished && isKnockout && koR.pens_home != null && koR.pens_away != null;
   const sc = scoreOf(fx);
   const dc = dualClock(fx);
   const venueProfile = venueProfileFor(data, fx);
@@ -85,7 +91,11 @@ function MatchDetail({ data, fx, live, lineups, events }) {
                 )}
               </>
             ) : finished ? (
-              <div className="text-[11px] font-semibold uppercase tracking-wide text-ink-3">Full-time</div>
+              koWinnerName ? (
+                <div className="text-[12px] font-bold text-qualified">{koWinnerName} advance{koWentToPens ? ` · ${koR.pens_home}–${koR.pens_away} pens` : ""}</div>
+              ) : (
+                <div className="text-[11px] font-semibold uppercase tracking-wide text-ink-3">Full-time</div>
+              )
             ) : null}
           </div>
           <div className="flex w-24 flex-col items-center gap-1.5">

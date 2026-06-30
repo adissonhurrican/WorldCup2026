@@ -23,6 +23,13 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
   // LIVE penalty shootout score (status "P") — group games never reach pens, so this stays null here; kept in sync
   // with the knockout card so the shared live path renders identically if a tie ever surfaces through this card.
   const livePens = isLive && lv && lv.pens_home != null && lv.pens_away != null;
+  // FINISHED knockout result — the advancer + (penalty-aware) shootout score, mirroring KnockoutCard so a resolved tie
+  // that renders through this SHARED card (e.g. My Team fixtures) shows "{winner} advance · X–Y pens" instead of a bare
+  // "Full-time". Group games carry no fx.knockout / winner_code, so they stay "Full-time" (unchanged).
+  const koR = fx.result || {};
+  const koWinnerCode = finished && fx.knockout ? (koR.winner_code ?? null) : null;
+  const koWinnerName = koWinnerCode ? ((teamByCode(data, koWinnerCode) || {}).name || koWinnerCode) : null;
+  const koWentToPens = finished && fx.knockout && koR.pens_home != null && koR.pens_away != null;
   const sc = scoreOf(fx);
   const home = teamByCode(data, fx.home) || { code: fx.home };
   const away = teamByCode(data, fx.away) || { code: fx.away };
@@ -109,7 +116,9 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
                 ? `Penalty shootout · ${lv.pens_home}–${lv.pens_away}`
                 : `In play${lv && lv.minute != null ? ` · ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}`)
             : finished
-              ? "Full-time"
+              ? (koWinnerName
+                  ? <><span className="font-semibold text-ink">{koWinnerName}</span> advance{koWentToPens ? ` · ${koR.pens_home}–${koR.pens_away} pens` : ""}</>
+                  : "Full-time")
               : dc.venue && !dc.sameZone
                 ? <ScheduledTime dc={dc} city={fx.city || "venue"} />
                 : dc.viewer
