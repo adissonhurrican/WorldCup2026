@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-06-30 17:00:00+00",
+    "generated_at": "2026-06-30 19:05:33.819859+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7307,6 +7307,18 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Haaland Strikes Late as Norway Edge Ivory Coast in Knockout Thriller",
+      "body": "Norway have advanced to the Round of 16 after a tense 2-1 victory over Ivory Coast in Dallas. Antonio Nusa opened the scoring in the 39th minute following a setup from Martin Odegaard, but the Ivorian side fought back, with Amad Diallo leveling the score in the 74th minute. The decisive blow came in the 86th minute when Erling Haaland found the net from a Patrick Berg assist. The final scoreline reflected the underlying performance, as Norway's matured expected goals of 2.02 to Ivory Coast's 1.11 confirmed their attacking edge. Diallo was the standout performer of the match, earning a 9.2 rating for his tireless work and crucial equalizer. For Norway, this victory represents a massive milestone for their golden generation, keeping their long-awaited tournament run alive. For Ivory Coast, the defeat brings a dignified end to a historic campaign that saw them reach the World Cup knockout rounds for the first time in their history, fulfilling the high expectations of a proud nation.",
+      "fixture_label": "CIV vs NOR"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Heavyweight Ambition Meets a Golden Generation in New York",
+      "body": "A fascinating clash of styles takes center stage in New York as five-time champions Brazil face a rising Norwegian side in a single-elimination battle. Our knockout model positions Brazil as the favorite with a 61% chance to advance, backed by their superior rating gap and an unbeaten group stage. Norway, holding a 39% win chance, arrive hungry after navigating their group with two victories, though they are still searching for their first clean sheet of the tournament. The match features a spectacular duel between the tournament's joint-top scorers: Brazil's Vinícius Júnior and Norway's Erling Haaland, who have both netted four goals. For Brazil, the stakes are immense; ESPN reports that the country views this campaign as a \"win-or-bust\" quest to end a 24-year title drought. Meanwhile, Norwegian captain Martin Odegaard told NRK that \"it is allowed to dream big, and we are going to go for it\" as his nation enjoys its first knockout appearance since 1998. Watch for how Norway's rested stars handle Brazil's fluid, transition-heavy attack in a match where one mistake ends the journey.",
+      "fixture_label": "BRA vs NOR"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Morocco Edge Netherlands on Penalties After Dramatic Monterrey Knockout",
