@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-01 18:05:59.97317+00",
+    "generated_at": "2026-07-01 20:00:00+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -3259,7 +3259,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 3,
+        "b": 2,
+        "winner": "BEL",
+        "pens_a": null,
+        "pens_b": null
+      },
       "kickoff": "2026-07-01",
       "kickoff_utc": "2026-07-01T20:00:00Z",
       "date_confirmed": true,
@@ -3804,7 +3810,10 @@
         "group": null,
         "pool": null,
         "source_match": 82,
-        "team": null
+        "team": {
+          "code": "BEL",
+          "name": "Belgium"
+        }
       },
       "prediction": null,
       "result": null,
