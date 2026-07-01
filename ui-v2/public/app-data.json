@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-01 20:00:00+00",
+    "generated_at": "2026-07-01 22:56:37.903108+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7359,6 +7359,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Belgian Late Show Denies Senegal in Five-Goal Knockout Thriller",
+      "body": "Belgium secured a dramatic 3-2 victory over Senegal in the Round of 32 after a breathless comeback. Senegal looked poised for a famous win after Habib Diarra opened the scoring in the 25th minute and Ismaïla Sarr doubled the lead in the 51st. However, Belgium's veteran striker Romelu Lukaku pulled one back in the 86th minute before Youri Tielemans equalized in the 89th. Tielemans then struck the decisive blow in the 120th minute of extra time. Despite the scoreline, the matured expected goals (xG) tell a different story: Belgium won the match with an xG of 1.8, while Senegal dominated the performance with an xG of 3.22, showing the African side was far more dangerous than the final result suggests. Tielemans was the standout performer, earning an 8.3 match rating with his two crucial goals. With this victory, Belgium advances to the Round of 16, where they will face the winner of the other tie. For Belgium, this dramatic escape keeps the final World Cup run of their golden generation alive, restoring belief after a stuttering group stage. For Senegal, it is a dignified but heartbreaking end for an aging core that arrived with high hopes of a deep run, only to fall just short in a classic encounter.",
+      "fixture_label": "BEL vs SEN"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Kane Rescues England as Historic DR Congo Run Ends in Drama",
