@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-01 16:00:00+00",
+    "generated_at": "2026-07-01 18:05:59.97317+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7350,6 +7350,18 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Kane Rescues England as Historic DR Congo Run Ends in Drama",
+      "body": "England survived a major scare to defeat DR Congo 2-1 in the Round of 32, coming from behind to secure their passage. The Leopards took a shock lead in the 7th minute when B. Cipenga converted a pass from Chancel Mbemba, but England captain Harry Kane turned the match around with two late strikes in the 75th and 86th minutes, both assisted by Anthony Gordon. The final scoreline reflected the overall balance of play, as England's matured expected goals of 2.04 to DR Congo's 0.76 confirmed that the Three Lions created the higher-quality chances. Kane was the standout performer, earning a match rating of 8.3 for his decisive two-goal display. With this victory, England advance to the Round of 16, where they will face the winner of the other tie. For England, the win keeps their heavy national expectations alive, continuing a campaign where fans hope to finally end decades of major tournament near-misses. For DR Congo, the defeat brings a dignified end to a historic milestone. Having returned to the World Cup after a 52-year absence, the Leopards exceeded all expectations by reaching the knockout stage for the first time in their history, bringing immense pride and unity to their nation.",
+      "fixture_label": "ENG vs COD"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Co-Hosts Mexico Face Heavy England Test in Mexico City",
+      "body": "A perfect group stage has fueled belief that co-hosts Mexico can finally break their historic last-sixteen barrier on home soil. However, our knockout model positions England as the clear favorites with a 67% chance to win this single-elimination tie, leaving Mexico with a 33% chance. The prediction reflects England's rating advantage despite a mixed group stage where they won twice and drew once. Mexico arrive with flawless momentum, having won all four of their matches without conceding a single goal. England have been more workmanlike, keeping two clean sheets but still searching for a fluid attacking identity. This high-stakes clash features a direct battle of in-form goalscorers, as Mexico's Julian Quiñones and England's Harry Kane both enter the match with three goals to their name. For Mexico, the national press frames this as a generation's best shot at redemption, though manager Javier Aguirre has tempered expectations, stating that \"what counts is the final placing.\" Meanwhile, British coverage describes a familiar mix of heavy expectations and anxiety, with Thomas Tuchel insisting \"the bigger the games get, the bigger we will get.\" Watch for whether Mexico's stubborn, unbreached defense can withstand England's star-studded attack in the altitude of Mexico City.",
+      "fixture_label": "MEX vs ENG"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Mexico March Into the Round of 16 After Shutting Out Ecuador",
