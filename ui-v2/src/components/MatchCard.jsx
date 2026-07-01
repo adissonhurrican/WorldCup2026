@@ -3,7 +3,7 @@ import { Flag } from "./ui";
 import PredictionBar from "./PredictionBar";
 import {
   teamByCode, matchState, scoreOf, favorite, pct,
-  dualClock, teamTint, weatherFor, isImminent, weatherEmoji, weatherConfidence, cToF, liveOf, lineupState, eventsOf, statsOf,
+  dualClock, teamTint, weatherFor, isImminent, weatherEmoji, weatherConfidence, cToF, liveOf, lineupState, eventsOf, statsOf, koAdvancerVerb,
 } from "../lib/select";
 
 // Shared match card — the SINGLE source of card rendering, used by both the Matches
@@ -117,7 +117,7 @@ export default function MatchCard({ data, fx, live, lineups, events, stats, onOp
                 : `In play${lv && lv.minute != null ? ` · ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}`)
             : finished
               ? (koWinnerName
-                  ? <><span className="font-semibold text-ink">{koWinnerName}</span> advance{koWentToPens ? ` · ${koR.pens_home}–${koR.pens_away} pens` : ""}</>
+                  ? <><span className="font-semibold text-ink">{koWinnerName}</span> {koAdvancerVerb(fx.round)}{koWentToPens ? ` · ${koR.pens_home}–${koR.pens_away} pens` : ""}</>
                   : "Full-time")
               : dc.venue && !dc.sameZone
                 ? <ScheduledTime dc={dc} city={fx.city || "venue"} />

@@ -593,7 +593,14 @@ export function buildKnockoutPreMatchInput(url: string, kf: any) {
       form: { [aCode]: form[aCode] ?? null, [bCode]: form[bCode] ?? null },
       head_to_head: h2h,
       danger_men: danger,
-      stakes: "Knockout: one match decides it.",
+      stakes: (() => {
+        // Round-aware stakes so the medal-round previews frame correctly: the third-place game is the bronze match
+        // (no next round), the Final decides the champion. Detect third-place FIRST (its round name contains "final").
+        const rnPre = String(kf.round ?? "").toLowerCase();
+        if (/third|3rd|play.?off/.test(rnPre)) return "The third-place play-off — the bronze match: one game decides who finishes third at the World Cup. There is no next round; frame it as the podium match, not an advancement tie.";
+        if (!/semi|quarter/.test(rnPre) && /final/.test(rnPre)) return "THE WORLD CUP FINAL: one match decides the world champion.";
+        return "Knockout: one match decides it.";
+      })(),
       unknowns: [
         ...(storyA ? [] : [`No national-story file for ${aCode} — do not describe ${aName}'s national mood.`]),
         ...(storyB ? [] : [`No national-story file for ${bCode} — do not describe ${bName}'s national mood.`]),
@@ -632,6 +639,11 @@ export function buildKnockoutPostMatchInput(url: string, fixtureLabel: string): 
   const pens = (mr.ph != null && mr.pa != null) ? { [aCode]: aIsHome ? Number(mr.ph) : Number(mr.pa), [bCode]: aIsHome ? Number(mr.pa) : Number(mr.ph) } : null;
   const winnerCode = aGoals > bGoals ? aCode : bGoals > aGoals ? bCode : (pens ? (pens[aCode] > pens[bCode] ? aCode : bCode) : null);
   const rn = String(mr.round_name ?? "").toLowerCase();
+  // Medal rounds need their own framing — "advances" is wrong at both. Detect the third-place game FIRST: provider
+  // round names vary ("3rd Place Final", "Third-place play-off") and contain "final", which would otherwise match
+  // the Final check ("Semi-finals"/"Quarter-finals" also contain "final", hence the exclusions).
+  const isThirdPlace = /third|3rd|play.?off/.test(rn);
+  const isFinalRound = !isThirdPlace && !/semi|quarter/.test(rn) && /final/.test(rn);
   const nextRound = rn.includes("32") ? "the Round of 16" : rn.includes("16") ? "the quarter-finals" : rn.includes("quarter") ? "the semi-finals" : rn.includes("semi") ? "the final" : null;
   const loserCode = winnerCode ? (winnerCode === aCode ? bCode : aCode) : null;
   const storyA = loadTeamStory(aCode), storyB = loadTeamStory(bCode);
@@ -651,7 +663,11 @@ export function buildKnockoutPostMatchInput(url: string, fixtureLabel: string): 
       team_xg: xgByCode,
       xg_note: "Matured (final) expected goals per team. Compare the scoreline to the xG — did the result match the performance? State the xG as supplied; never invent a figure.",
       top_performers,
-      advancement: { winner_code: winnerCode, advances_to: nextRound, opponent_note: "Name the round only; the next opponent may be undetermined — gesture at 'the winner of the other tie', NEVER an undetermined team." },
+      advancement: isFinalRound
+        ? { winner_code: winnerCode, advances_to: null, outcome: "world_champions", note: "This was the WORLD CUP FINAL: the winner is the world champion — frame the triumph (champions of the world, the trophy). NEVER say they 'advance'. The loser is the runner-up — a podium finish; honour it, never frame as a mere elimination." }
+        : isThirdPlace
+          ? { winner_code: winnerCode, advances_to: null, outcome: "third_place", note: "This was the THIRD-PLACE PLAY-OFF (the bronze match): the winner finishes THIRD at the World Cup — a podium finish; the loser finishes fourth. Nobody advances; NEVER say 'advance'." }
+          : { winner_code: winnerCode, advances_to: nextRound, opponent_note: "Name the round only; the next opponent may be undetermined — gesture at 'the winner of the other tie', NEVER an undetermined team." },
       national_payoff_for: winnerCode,
       national_close_for: loserCode,
       unknowns: [...(winnerStory || !winnerCode ? [] : [`No national-story file for the winner ${winnerCode}.`])],
@@ -683,7 +699,7 @@ export const USER_MSG_KNOCKOUT_POST = (input: any, max: number) => [
   "THE RESULT + HOW: state the final score as fact and how it unfolded — the scorers and key moments from scenario_data.goal_timeline (with minutes) and the turning points. If decided on penalties, say so.",
   "THE xG STORY (the differentiator): use scenario_data.team_xg to compare the scoreline to the performance — did the result match the play? e.g. 'won 2-1, but the expected goals were a near-even 1.8 to 1.4 — closer than the scoreline suggests', OR 'the xG confirmed the dominance'. State the xG exactly as supplied; never invent a figure. This xG is matured (final), not in-play.",
   "THE STANDOUT: from scenario_data.top_performers (match ratings), name the best performer and what they did (a goal, key passes).",
-  "WHAT IT MEANS: who advances, and to which round (scenario_data.advancement.advances_to). Gesture at the next stage HONESTLY — name the round; if the next opponent is undetermined, say 'the winner of the other tie' and NEVER name an undetermined team.",
+  "WHAT IT MEANS: read scenario_data.advancement. If it carries advances_to, say who advances and to which round — gesture at the next stage HONESTLY (name the round; if the next opponent is undetermined, say 'the winner of the other tie' and NEVER name an undetermined team). If advancement.outcome is 'world_champions', this was the FINAL — crown the champions and honour the runners-up (a podium finish, not an elimination); if 'third_place', this was the bronze match — the winner finishes third, the loser fourth. In the medal cases NEVER say anyone 'advances'.",
   "THE NATIONAL PAYOFF (both sides): tie the result to the national stories in contextual_inputs.team_story (keyed by team_code) — the WINNER's payoff (the run continues, a milestone reached) and, with dignity and NEVER mocking, the LOSER's end if their story warrants it (a historic run ending, a generation falling short). In WORDS, sourced (official=fact, discovery=attributed). Skip a side that has no team_story.",
   "Mood in words, never invented numbers. The only percentages allowed are those supplied. No odds, no betting, no model jargon, no run IDs, no table names, no version tags. Real people only as on-pitch facts.",
   "Required JSON fields: content_type, headline, body, probability_references, source_trace, context_caveats, unknowns, validation_notes.",

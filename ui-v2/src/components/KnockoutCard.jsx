@@ -3,7 +3,7 @@ import PredictionBar from "./PredictionBar";
 import { MatchEventSummary, XgInfo } from "./MatchCard";
 import {
   teamByCode, dualClock, weatherFor, isImminent, weatherEmoji, weatherConfidence, cToF, favorite, pct,
-  matchState, liveOf, scoreOf, eventsOf, lineupState, statsOf, knockoutNarrationFor,
+  matchState, liveOf, scoreOf, eventsOf, lineupState, statsOf, knockoutNarrationFor, koAdvancerVerb,
 } from "../lib/select";
 
 // Knockout-stage match card (R32 → Final). Full parity with the group MatchCard: the two "team" positions are
@@ -124,7 +124,7 @@ export default function KnockoutCard({ data, fx, live, lineups, events, stats, o
                   ? `Penalty shootout · ${lv.pens_home}–${lv.pens_away}`
                   : `In play${lv && lv.minute != null ? ` · ${lv.minute}${lv.extra ? `+${lv.extra}` : ""}'` : ""}`)
               : winnerName
-                ? <><span className="font-semibold text-ink">{winnerName}</span> advance{wentToPens ? ` · ${pensHome}–${pensAway} pens` : ""}</>
+                ? <><span className="font-semibold text-ink">{winnerName}</span> {koAdvancerVerb(fx.round)}{wentToPens ? ` · ${pensHome}–${pensAway} pens` : ""}</>
                 : "Full-time"}
           </div>
         )}

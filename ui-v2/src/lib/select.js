@@ -136,6 +136,14 @@ export function knockoutPhase(data) {
   const rs = data.real_standings || {};
   return rs.status === "complete" || (rs.results_counted || 0) >= 72;
 }
+// Finished-tie advancer verb, round-aware (ONE source for KnockoutCard + MatchCard + MatchSheet so the three
+// surfaces can never disagree): "advance" is only right when there IS a next round (R32..SF). The Final crowns the
+// champions and the third-place play-off awards third — mirrors the hero's medal framing (champion / third).
+export function koAdvancerVerb(round) {
+  if (round === "Final") return "are World Cup champions";
+  if (round === "Third-place play-off") return "finish third";
+  return "advance";
+}
 export function knockoutHeroFor(data, code, live = null) {
   if (!knockoutPhase(data)) return null; // group phase -> legacy hero is correct, leave it
   const fixtures = teamRealKnockoutFixtures(data, code);

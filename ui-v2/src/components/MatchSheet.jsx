@@ -4,7 +4,7 @@ import PredictionBar from "./PredictionBar";
 import LineupPitchSheet from "./LineupPitchSheet";
 import { IconChevronRight } from "./icons";
 import {
-  teamByCode, dualClock, weatherFor, venueFactsFor, venueProfileFor, isImminent, weatherEmoji, weatherConfidence, cToF, tempCF, pct, favorite, scoreOf, matchState, liveOf, lineupState, eventsOf, knockoutNarrationFor, VIEWER_TZ,
+  teamByCode, dualClock, weatherFor, venueFactsFor, venueProfileFor, isImminent, weatherEmoji, weatherConfidence, cToF, tempCF, pct, favorite, scoreOf, matchState, liveOf, lineupState, eventsOf, knockoutNarrationFor, koAdvancerVerb, VIEWER_TZ,
 } from "../lib/select";
 
 // Match detail bottom sheet — two tabs inside the sheet: Info (kickoff, venue, prediction, weather,
@@ -92,7 +92,7 @@ function MatchDetail({ data, fx, live, lineups, events }) {
               </>
             ) : finished ? (
               koWinnerName ? (
-                <div className="text-[12px] font-bold text-qualified">{koWinnerName} advance{koWentToPens ? ` · ${koR.pens_home}–${koR.pens_away} pens` : ""}</div>
+                <div className="text-[12px] font-bold text-qualified">{koWinnerName} {koAdvancerVerb(fx.round)}{koWentToPens ? ` · ${koR.pens_home}–${koR.pens_away} pens` : ""}</div>
               ) : (
                 <div className="text-[11px] font-semibold uppercase tracking-wide text-ink-3">Full-time</div>
               )
