@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-01 01:00:00+00",
+    "generated_at": "2026-07-01 04:16:12.792095+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7333,6 +7333,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Mexico March Into the Round of 16 After Shutting Out Ecuador",
+      "body": "Mexico secured their place in the Round of 16 with a clinical 2-0 victory over Ecuador in the Round of 32. The co-hosts took control in the 22nd minute when Julián Quiñones found the net from a Roberto Alvarado assist, before veteran forward Raúl Jiménez doubled the advantage in the 31st minute. While the scoreline suggests a comfortable night, the matured expected goals (xG) tell a tighter story: Mexico finished with 1.02 xG to Ecuador's 0.73, indicating that clinical finishing rather than absolute dominance made the difference. Quiñones was the standout performer, earning an 8.3 match rating after scoring the opener, assisting the second, and creating three key passes. This victory keeps Mexico's home-soil dream alive as they advance to the Round of 16 to face the winner of another tie. For Mexico, the win fuels a hopeful nation that has long been haunted by the round-of-sixteen barrier, keeping them on course for a historic quarter-final run. Ecuador's brave campaign comes to an end; despite their emotional group-stage comeback against Germany, La Tri could not repeat the magic in a hostile atmosphere, concluding their second-ever knockout appearance with dignity.",
+      "fixture_label": "MEX vs ECU"
+    },
     {
       "content_type": "post_result_change",
       "headline": "France Cruise Past Sweden to Reach Round of 16",
