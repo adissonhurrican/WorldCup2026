@@ -630,7 +630,18 @@ export function buildKnockoutPostMatchInput(url: string, fixtureLabel: string): 
   if (enr?.statistics_status !== "present" || (xgRows as any[]).length < 2) return { not_matured: true, fixture: `${aCode} vs ${bCode}`, fixture_id: fid, statistics_status: enr?.statistics_status ?? "unknown", xg_rows: (xgRows as any[]).length };
   const i2c = idToCodeMap();
   const xgByCode: Record<string, number> = {}; for (const r of xgRows as any[]) { const c = i2c[Number(r.team_id)]; if (c) xgByCode[c] = num(r.v); }
-  const goals = (q(url, `select team_id, player_name, event_elapsed, event_extra, assist_player_name from api_football_fixture_events where fixture_id=${fid} and event_type='Goal' order by event_elapsed nulls last, event_extra nulls last`) as any[])
+  // GOAL TIMELINE — REAL goals only. The provider logs SHOOTOUT kicks as event_type='Goal' too (detail 'Penalty' /
+  // 'Missed Penalty', all at elapsed=120 with extra = the kick order) — GER-PAR fed a 1-1 pens tie to the model as a
+  // 14-entry "goal timeline". Filter: 'Missed Penalty' is NEVER a goal (drop always, in-game misses included); on a
+  // pens tie, also drop 'Penalty' entries at elapsed>=120 (the shootout kicks) while KEEPING in-game penalties
+  // (elapsed<120 — real goals; coalesce keeps a null-elapsed pen as in-game, the safe direction). The shootout
+  // RESULT is carried separately below (result.penalties / decided_on_penalties) — untouched.
+  const hadShootout = mr.ph != null && mr.pa != null;
+  const goals = (q(url, `select team_id, player_name, event_elapsed, event_extra, assist_player_name from api_football_fixture_events
+      where fixture_id=${fid} and event_type='Goal'
+        and event_detail is distinct from 'Missed Penalty'
+        ${hadShootout ? "and not (event_detail = 'Penalty' and coalesce(event_elapsed, 0) >= 120)" : ""}
+      order by event_elapsed nulls last, event_extra nulls last`) as any[])
     .map((g) => ({ team_code: i2c[Number(g.team_id)] ?? null, scorer: g.player_name, minute: g.event_elapsed, assist: g.assist_player_name ?? null }));
   const top_performers = (q(url, `select player_name, team_id, rating, passes_key, goals_total, assists from api_football_fixture_player_stats where fixture_id=${fid} and rating is not null order by rating desc limit 4`) as any[])
     .map((p) => ({ player: p.player_name, team_code: i2c[Number(p.team_id)] ?? null, rating: num(p.rating), key_passes: p.passes_key != null ? Number(p.passes_key) : null, goals: p.goals_total != null ? Number(p.goals_total) : null, assists: p.assists != null ? Number(p.assists) : null }));
