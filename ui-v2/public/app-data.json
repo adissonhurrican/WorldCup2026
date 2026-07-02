@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-01 22:56:37.903108+00",
+    "generated_at": "2026-07-02 00:00:00+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -3206,7 +3206,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 2,
+        "b": 0,
+        "winner": "USA",
+        "pens_a": null,
+        "pens_b": null
+      },
       "kickoff": "2026-07-01",
       "kickoff_utc": "2026-07-02T00:00:00Z",
       "date_confirmed": true,
@@ -3802,7 +3808,10 @@
         "group": null,
         "pool": null,
         "source_match": 81,
-        "team": null
+        "team": {
+          "code": "USA",
+          "name": "USA"
+        }
       },
       "side_b": {
         "label": "Winner M82",
@@ -3815,7 +3824,15 @@
           "name": "Belgium"
         }
       },
-      "prediction": null,
+      "prediction": {
+        "team_a_win_probability": 0.4243,
+        "team_b_win_probability": 0.5757,
+        "elo_a": 1809,
+        "elo_b": 1862,
+        "elo_source": "post_group_k60",
+        "basis": "real",
+        "method": "neutral_elo_single_match"
+      },
       "result": null,
       "kickoff": "2026-07-06",
       "kickoff_utc": "2026-07-07T00:00:00Z",
