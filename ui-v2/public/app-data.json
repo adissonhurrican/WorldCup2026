@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-02 19:00:00+00",
+    "generated_at": "2026-07-02 21:05:08.072258+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7385,6 +7385,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Spain Cruise Past Austria to Reach the Round of 16",
+      "body": "Spain comfortably secured their place in the Round of 16 with a dominant 3-0 victory over Austria. Mikel Oyarzabal opened the scoring in the 36th minute, assisted by Marc Cucurella, before Pedro Porro doubled the lead in the 66th minute off an Alex Baena pass. Oyarzabal sealed his brace in the 89th minute, again set up by Cucurella, to put the result beyond doubt. The final scoreline was a fair reflection of the performance, as Spain's matured expected goals (xG) of 2.8 completely overshadowed Austria's limited 0.49 xG. Mikel Oyarzabal was the standout performer of the match, earning a 9.3 rating for his clinical two-goal display. With this victory, Spain advance to the Round of 16, where they will face the winner of the other tie. The result delivers on Spain's national expectations as tournament favourites, keeping their quest for a second World Cup title firmly on track. For Austria, the defeat brings a dignified end to a historic campaign. Having reached the knockout stage for the first time in decades, Ralf Rangnick's side exits the tournament with their heads held high after capturing the imagination of their fans back home.",
+      "fixture_label": "ESP vs AUT"
+    },
     {
       "content_type": "post_result_change",
       "headline": "USA Secure Round of 16 Berth with Decisive Shutout",
