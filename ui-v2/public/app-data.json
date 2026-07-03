@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-03 06:35:14.46243+00",
+    "generated_at": "2026-07-03 17:18:38.41509+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7412,6 +7412,32 @@
   ],
   "narration": [
     {
+      "content_type": "pre_match_storyline",
+      "headline": "Iberian Giants Collide in Dallas as Spain Face Portugal",
+      "body": "The tournament's marquee Round-of-16 tie brings a classic Iberian derby to Dallas, reviving a fierce neighborhood rivalry with immense knockout stakes. Our prediction model makes Spain strong favourites with a 72% chance to advance, backed by their flawless defensive record of four consecutive clean sheets and an emphatic 3-0 victory over Austria. Portugal, given a 28% chance, arrive after a highly emotional 2-1 win over Croatia, where Goncalo Ramos headed a stoppage-time winner. Spain's attack is spearheaded by Mikel Oyarzabal, who has scored four goals this tournament, while Portugal rely on the legendary Cristiano Ronaldo, who has three goals. History heavily flavors this matchup: Spain beat Portugal 1-0 in the 2010 Round of 16, though they famously drew 3-3 in the 2018 group stage. According to Spanish coverage, Spain are riding a wave of euphoria after ending a sixteen-year World Cup knockout win drought, while Portuguese reports suggest a revived but braced national mood. Portugal head coach Roberto Martinez framed the clash as \"a fantastic game, a European game inside the World Cup.\" Watch for Spain's high-efficiency press to test Portugal's emotional control in what promises to be a tactical chess match.",
+      "fixture_label": "POR vs ESP",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "2-0",
+        "pick": "ESP",
+        "reasoning": "While Portugal hold a psychological edge from beating Spain on penalties in the 2025 Nations League final, Spain's current tournament form is simply too formidable. The model makes Spain strong favourites, and the data supports this through their thirty-four match unbeaten run in regulation and a defense that has yet to concede a goal in this World Cup. Portugal showed great heart against Croatia but admitted to losing emotional control under pressure, which Spain's highly efficient press is primed to exploit."
+      }
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Rematch in Houston: Canada's Historic Run Meets Morocco's Knockout Pedigree",
+      "body": "This Round of 16 clash in Houston carries a deep personal thread, as Morocco's Montreal-born goalkeeper Yassine Bounou faces the nation he once turned down to represent. Our knockout model positions Morocco as the clear favourites with a 65% chance to advance, backed by their unbeaten group-stage form and elite defensive structure. Canada, holding a 35% win chance, arrive riding the emotional high of their first-ever World Cup knockout victory, though they face a massive step up in class. Morocco have been formidable, conceding only four goals in four matches, while Canada's resilient backline has secured two clean sheets. The match features a direct duel of in-form danger men, with Canada's J. David and Morocco's breakout star I. Saibari both sitting on three goals for the tournament. History also looms large; Morocco defeated Canada 2-1 in the 2022 group stage during their historic run to the semi-finals. Canadian coverage suggests expectations have shifted to \"how far can this run go,\" while Moroccan press reports that coach Mohamed Ouahbi is aiming to surpass their 2022 legacy. To survive, Canada must find a way to contain Achraf Hakimi's attacking overlaps and Brahim Diaz's creative axis.",
+      "fixture_label": "CAN vs MAR",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "2-0",
+        "pick": "MAR",
+        "reasoning": "While Canada possess immense emotional momentum and benefit from extra rest after winning their previous match in regulation, Morocco's superior tactical discipline and tournament pedigree should prove decisive. The prediction system heavily favours the Atlas Lions, and their defensive stability is backed by goalkeeper Yassine Bounou's proven shootout heroics. Expect Morocco's creative axis to eventually unlock Canada's defense, even if Jesse Marsch's side fights valiantly."
+      }
+    },
+    {
       "content_type": "post_result_change",
       "headline": "Swiss Precision Shuts Down Algeria as Switzerland March into Round of 16",
       "body": "Switzerland secured their place in the Round of 16 with a disciplined 2-0 victory over Algeria in Vancouver. The Swiss took control early when Breel Embolo found the net in the 10th minute, assisted by Johan Manzambi, before Dan Ndoye doubled the lead immediately after halftime in the 46th minute. While the scoreline was decisive, the matured expected goals (xG) data confirmed Switzerland's complete dominance on the pitch, with the Swiss creating 2.56 xG compared to Algeria's limited 0.73 xG. Ndoye was the standout performer of the match, earning a rating of 8.14 with his crucial goal and creative play. With this victory, Switzerland advance to the Round of 16, where they will face the winner of another knockout tie. The result brings immense satisfaction to a buoyant Swiss side that arrived as quiet dark horses, reinforcing the belief that their experienced core can push deep into the tournament. For Algeria, the defeat brings a dignified end to their campaign, concluding a highly emotional journey under Vladimir Petkovic that saw the nation reach the knockout rounds for the first time in twelve years.",
@@ -7422,19 +7448,6 @@
       "headline": "Portugal Edge Croatia in Toronto Thriller to Reach Round of 16",
       "body": "Portugal secured their place in the Round of 16 with a hard-fought 2-1 victory over Croatia in Toronto. After Ivan Perisic opened the scoring for Croatia in the 53rd minute, Portugal responded through Cristiano Ronaldo in the 68th minute before Gonçalo Ramos netted a dramatic 90th-minute winner. The final scoreline reflected the underlying performance, as Portugal's matured expected goals of 2.18 to Croatia's 1.34 confirmed their attacking edge. Ramos and Perisic shared the spotlight as the match's top performers, both earning 7.9 ratings for their decisive goals. With this result, Portugal advance to the Round of 16 to face the winner of the other tie, keeping their pursuit of a maiden World Cup title alive. For Portugal, the victory offers a vital boost in cohesion after a flat group stage, keeping Ronaldo's historic final campaign on track. For Croatia, this dignified exit marks the end of a transitional tournament, closing a legendary chapter for their veteran core.",
       "fixture_label": "POR vs CRO"
-    },
-    {
-      "content_type": "pre_match_storyline",
-      "headline": "Iberian Giants Collide in High-Stakes Knockout Clash",
-      "body": "A classic European rivalry takes center stage in Dallas as Portugal and Spain battle for a place in the quarter-finals. Our knockout model makes Spain the clear favorites with a 72% chance to win the tie, backed by their flawless defensive record of four consecutive clean sheets. Portugal, holding a 28% win chance, must find their rhythm after an uneven group stage that cooled their pre-tournament title-favorite billing. While Spain have been defensively perfect, their attack has looked laboured, and they must now cope without injured wingers Nico Williams and Yeremy Pino. Luis de la Fuente's side will look to Mikel Oyarzabal, who has already struck twice in the tournament, to unlock the Portuguese defense. Portugal's head coach Roberto Martinez has urged his squad to focus entirely on the pitch, stating that \"the focus is to try to win the game and not think about the next opponent.\" With no prior head-to-head meetings in the database to separate them, this tie will be decided by whether Spain's improvised flanks can break through Portugal's talented but yet-to-cohere lineup.",
-      "fixture_label": "POR vs ESP",
-      "ai_prediction": {
-        "agrees_with_model": true,
-        "confidence_words": "comfortably",
-        "likely_scoreline": "2-0",
-        "pick": "ESP",
-        "reasoning": "While Spain are hampered by injuries to key wingers Nico Williams and Yeremy Pino, their defensive stability is unmatched in this tournament, having kept four consecutive clean sheets. Portugal possess immense individual talent but have struggled for cohesion, as seen in their flat group-stage performances. The prediction system heavily favors Spain, and their superior structural organization under Luis de la Fuente should allow them to control the tempo and limit Portugal's stagnant attack."
-      }
     },
     {
       "content_type": "pre_match_storyline",
@@ -7473,19 +7486,6 @@
         "likely_scoreline": "2-1",
         "pick": "NOR",
         "reasoning": "While the model makes Brazil strong favourites, Norway's historic 'tabu' over the Seleção and Erling Haaland's record-breaking scoring form provide a genuine edge. Brazil's aging midfield struggled with mobility against Japan, and the confirmed absence of Lucas Paquetá further weakens their central control. Norway's high-spirited squad is primed to exploit these defensive gaps on the counter-attack."
-      }
-    },
-    {
-      "content_type": "pre_match_storyline",
-      "headline": "Rematch in Houston: Canada's Historic Run Meets Morocco's Global Ambition",
-      "body": "This Round of 16 clash in Houston carries a fascinating personal edge: Morocco's star goalkeeper Yassine Bounou was born in Montreal and once turned down an approach to represent Canada, declaring that representing Morocco was \"something I had very deep inside.\" Our knockout model makes Morocco clear favourites with a 65% chance to win this single-elimination tie, backed by their unbeaten tournament run and elite global standing. Canada, holding a 35% win chance, enter as proud underdogs after securing their first-ever World Cup knockout victory with a dramatic 1-0 win over South Africa. While Canada's Jesse Marsch has managed captain Alphonso Davies' minutes carefully, Morocco's Mohamed Ouahbi has his side playing with immense tactical patience, having just navigated a grueling penalty shootout against the Netherlands. The match features a direct battle of clinical goalscorers, with Canada's J. David and Morocco's breakout star I. Saibari both sitting on three goals for the tournament. History also favors the Atlas Lions, who defeated Canada 2-1 during their historic 2022 semifinal run. Canada will look to harness their co-host energy to contain Morocco's dangerous right-sided overlaps, while Morocco must overcome the fatigue of their recent 120-minute battle to keep their dreams of surpassing their 2022 legacy alive.",
-      "fixture_label": "CAN vs MAR",
-      "ai_prediction": {
-        "agrees_with_model": true,
-        "confidence_words": "comfortably",
-        "likely_scoreline": "2-0",
-        "pick": "MAR",
-        "reasoning": "While Canada carry immense emotional momentum from their historic first knockout win, Morocco possess superior tournament pedigree and tactical control. The model makes Morocco clear favourites, and their defensive resilience—having just eliminated the Netherlands—should allow them to dictate the tempo. Canada's threat remains dangerous through J. David, but Morocco's experience in high-stakes shootouts and tournament management will likely prove decisive."
       }
     },
     {
