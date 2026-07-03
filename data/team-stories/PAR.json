@@ -1,400 +1,368 @@
 {
   "team_code": "PAR",
-  "round": "R32",
-  "next_opponent_code": "TBD",
+  "round": "R16",
+  "next_opponent_code": "FRA",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
-  "confidence": "high",
+  "last_updated": "2026-07-01",
+  "confidence": "medium",
   "national_expectations": {
-    "summary": "Simply reaching the Round of 32 is treated as a major achievement for Paraguay, framed by national and regional media as the payoff for ending a 16-year World Cup absence. Expectations for the knockout tie itself are modest: previews cast La Albirroja as a defensive underdog expected to sit deep, frustrate a stronger group winner and try to grind out a result, with coach Gustavo Alfaro openly insisting the squad will not settle for merely arriving and rejecting the idea that beating a top seed is impossible.",
+    "summary": "The Germany shootout win reset expectations overnight: reaching the knockout round was already framed as historic, but eliminating a four-time champion is widely described as having already exceeded anything realistically hoped for. Coverage now treats the Round of 16 tie with France as pure bonus territory for Paraguay, with the pressure seen as squarely on the heavy favorites; coach Gustavo Alfaro has publicly cautioned that the squad must not overvalue the Germany result heading into a France side several levels above them on paper.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Goal.com",
-        "url": "https://www.goal.com/en-us/news/germany-paraguay-world-cup-preview/blt69845ea4b54b1ac0",
-        "date": "2026-06"
+        "outlet": "El Colombiano",
+        "url": "https://www.elcolombiano.com/especiales/mundial-2026/gustavo-alfaro-frase-triunfo-historico-paraguay-ante-alemania-mundial-2026-HJ38312410",
+        "date": "2026-06-30",
+        "lang": "es"
       },
       {
-        "outlet": "Depor",
-        "url": "https://depor.com/futbol-internacional/mundial/gustavo-alfaro-arremete-contra-criticos-de-paraguay-tras-clasificar-en-el-mundial-2026-noticia/",
-        "date": "2026-06-26"
-      },
-      {
-        "outlet": "beIN Sports",
-        "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/paraguay-misses-out-on-direct-qualification-and-must-wait-to-learn-its-fate-at-the-2026-fifa-world-cup-2026-06-26",
-        "date": "2026-06-26"
+        "outlet": "Statsniper",
+        "url": "https://statsniper.com/blog/soccer/france-paraguay-world-cup-2026-round-of-16-philadelphia-mbappe-enciso-preview/",
+        "date": "2026-07-01",
+        "lang": "en"
       }
     ]
   },
   "national_mood": {
-    "summary": "The mood is split. There is genuine pride and relief at being back in the knockout rounds after sixteen years away, but the manner of advancing (an opening loss to the United States, then a win over Turkey and a goalless draw with Australia) left media describing a bitter taste rather than euphoria. The qualification as a best third-placed side sparked a noisy domestic debate, with legendary former goalkeeper Jose Luis Chilavert publicly attacking Alfaro's discourse while others defend the achievement, exposing a tension between pragmatism and traditional Paraguayan pride.",
+    "summary": "The mood is euphoric and described by multiple outlets as one of the country's biggest sporting nights in memory: after the shootout victory, crowds filled central Asuncion (the Palma street area became the focal point), with celebrations reported in streets, plazas and homes across the country and even among Paraguayans abroad. President Santiago Pena declared a national holiday for the following day, amplifying the result into a countrywide event rather than a purely sporting one. The bitter, divided tone that followed the group stage has been replaced by broad pride, though some coverage frames the celebration as tempered by an awareness that Paraguay remain heavy underdogs against France.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "beIN Sports",
-        "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/paraguay-misses-out-on-direct-qualification-and-must-wait-to-learn-its-fate-at-the-2026-fifa-world-cup-2026-06-26",
-        "date": "2026-06-26"
+        "outlet": "Infobae",
+        "url": "https://www.infobae.com/america/america-latina/2026/06/30/noche-de-fiesta-sin-fin-y-feriado-en-paraguay-las-calles-de-asuncion-estallaron-al-celebrar-la-victoria-contra-alemania-en-el-mundial/",
+        "date": "2026-06-30",
+        "lang": "es"
       },
       {
-        "outlet": "Ambito",
-        "url": "https://www.ambito.com/deportes/chilavert-destrozo-gustavo-alfaro-paraguay-el-dt-mas-farsante-del-futbol-mundial-n6293228",
-        "date": "2026-06-26"
-      },
-      {
-        "outlet": "Depor",
-        "url": "https://depor.com/futbol-internacional/mundial/gustavo-alfaro-arremete-contra-criticos-de-paraguay-tras-clasificar-en-el-mundial-2026-noticia/",
-        "date": "2026-06-26"
+        "outlet": "ABC Color",
+        "url": "https://www.abc.com.py/nacionales/2026/06/29/la-prensa-internacional-se-hizo-eco-de-la-hazana-de-paraguay-sobre-alemania/",
+        "date": "2026-06-29",
+        "lang": "es"
       }
     ]
   },
   "manager_situation": {
-    "summary": "Argentine head coach Gustavo Alfaro, who arrived in 2024 and is widely credited with reviving Paraguay's qualifying campaign, leads the side into the knockout round. After the Australia draw he combatively pushed back at critics, defended his players, refused to accept that Paraguay are already beaten, and insisted his team will fight a top seed with whatever arguments it has. He is the central figure of the team's narrative and the lightning rod for the domestic debate sparked by the patchy group displays.",
+    "summary": "Argentine head coach Gustavo Alfaro called the Germany win the biggest of his coaching career and framed it as vindication for a squad he says played with 'dignity' against a world power, dedicating it explicitly to earlier critics. In the same breath he has warned against reading too much into the result before France, telling reporters the team must not get carried away and stressing Paraguay still lack the experience ('bagaje') of a side used to going deep in tournaments. He remains the central figure of the team's story, now cast as the coach who orchestrated a genuine World Cup shock rather than merely as the man who got Paraguay back to the tournament.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Depor",
-        "url": "https://depor.com/futbol-internacional/mundial/gustavo-alfaro-arremete-contra-criticos-de-paraguay-tras-clasificar-en-el-mundial-2026-noticia/",
-        "date": "2026-06-26"
+        "outlet": "La Nacion",
+        "url": "https://www.lanacion.com.ar/estados-unidos/gustavo-alfaro-dt-de-paraguay-que-elimino-a-alemania-en-el-mundial-2026-trate-de-bajarlos-de-la-ola-nid30062026/",
+        "date": "2026-06-30",
+        "lang": "es"
       },
       {
-        "outlet": "ESPN Deportes",
-        "url": "https://espndeportes.espn.com/futbol/mundial/nota/_/id/15914493/mundial-2026-paraguay-perfil-figuras-como-juega-historia",
-        "date": "2026-06"
+        "outlet": "El Colombiano",
+        "url": "https://www.elcolombiano.com/especiales/mundial-2026/gustavo-alfaro-frase-triunfo-historico-paraguay-ante-alemania-mundial-2026-HJ38312410",
+        "date": "2026-06-30",
+        "lang": "es"
       }
     ]
   },
   "historical_context": {
-    "summary": "Paraguay returned to the World Cup in 2026 after a 16-year absence, their first appearance since South Africa 2010. That 2010 edition produced their best-ever run, a quarterfinal where they lost 1-0 to eventual champions Spain. The 2026 knockout berth, secured as one of the best third-placed teams from Group D, marks their first knockout-stage appearance since that 2010 quarterfinal and is framed as a landmark for the South American nation.",
+    "summary": "Paraguay's 2010 run to the quarterfinals (a 1-0 loss to eventual champions Spain) remained their best-ever World Cup result and their only prior knockout-stage win came in that same edition. The 2026 shootout win over Germany is now reported as a new landmark in its own right: press coverage describes it as Germany's first-ever penalty shootout loss at a World Cup, ending a run in which the four-time champions had never previously lost a World Cup shootout. Against France specifically, Paraguay have never won in two prior World Cup meetings: a 7-3 defeat in the 1958 group stage, and a 1-0 loss to a 114th-minute Laurent Blanc golden goal in the 1998 Round of 16 (played in Lens), a match in which Jose Luis Chilavert -- since a public critic of Alfaro -- was Paraguay's goalkeeper.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "ESPN Deportes",
-        "url": "https://espndeportes.espn.com/futbol/mundial/nota/_/id/15914493/mundial-2026-paraguay-perfil-figuras-como-juega-historia",
-        "date": "2026-06"
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49220268/germany-dumped-world-cup-paraguay-penalties",
+        "date": "2026-06-29",
+        "lang": "en"
       },
       {
-        "outlet": "FourFourTwo",
-        "url": "https://www.fourfourtwo.com/team/paraguay-world-cup-2026-squad",
-        "date": "2026-06"
+        "outlet": "FIFA.com",
+        "url": "https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/articles/historial-paraguay-francia-partidos-resultados-chilavert",
+        "date": "2026-07-01",
+        "lang": "es"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "Ending a 16-year wait: Paraguay are back in the World Cup knockout rounds for the first time since their 2010 quarterfinal run, a comeback engineered under Gustavo Alfaro and treated by media as a historic milestone in itself.",
+      "storyline": "A genuine World Cup shock: Paraguay's penalty-shootout win ended Germany's run of never having lost a World Cup shootout and is widely described as the tournament's first big knockout-round surprise, with even German outlets (per ABC Color's roundup of international press) calling it a national embarrassment.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "ESPN Deportes",
-          "url": "https://espndeportes.espn.com/futbol/mundial/nota/_/id/15914493/mundial-2026-paraguay-perfil-figuras-como-juega-historia",
-          "date": "2026-06"
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49220268/germany-dumped-world-cup-paraguay-penalties",
+          "date": "2026-06-29",
+          "lang": "en"
         },
-        {
-          "outlet": "beIN Sports",
-          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/paraguay-misses-out-on-direct-qualification-and-must-wait-to-learn-its-fate-at-the-2026-fifa-world-cup-2026-06-26",
-          "date": "2026-06-26"
-        }
-      ]
-    },
-    {
-      "storyline": "Underdog with a defensive blueprint: previews frame Paraguay as a stubborn, organized side that snuck through despite patchy displays, set up to defend deep, keep clean sheets and frustrate a more illustrious group winner.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Goal.com",
-          "url": "https://www.goal.com/en-us/news/germany-paraguay-world-cup-preview/blt69845ea4b54b1ac0",
-          "date": "2026-06"
-        }
-      ]
-    },
-    {
-      "storyline": "Alfaro vs the critics: the manner of qualification ignited a domestic row, with Alfaro shielding his players from criticism while former great Jose Luis Chilavert publicly branded him a fraud, exposing a split between pragmatism and Paraguayan footballing pride.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Depor",
-          "url": "https://depor.com/futbol-internacional/mundial/gustavo-alfaro-arremete-contra-criticos-de-paraguay-tras-clasificar-en-el-mundial-2026-noticia/",
-          "date": "2026-06-26"
-        },
-        {
-          "outlet": "Ambito",
-          "url": "https://www.ambito.com/deportes/chilavert-destrozo-gustavo-alfaro-paraguay-el-dt-mas-farsante-del-futbol-mundial-n6293228",
-          "date": "2026-06-26"
-        }
-      ]
-    },
-    {
-      "storyline": "The captain steps up as emotional standard-bearer: in Paraguay's own press, skipper Gustavo Gomez published a rallying message after learning the knockout opponent, recasting the patchy group run as years of hardship overcome and channeling national belief ahead of the tie. It is a leadership-and-mood angle distinct from the Alfaro-vs-critics row, with the captain rather than the coach voicing the country's hope.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "D10 / Última Hora",
-          "url": "https://d10.ultimahora.com/el-mensaje-del-capitan-nada-es-imposible",
-          "lang": "es",
-          "date": "2026-06-27"
-        }
-      ]
-    },
-    {
-      "storyline": "Presidential backing turns the run into a national event: President Santiago Pena publicly predicted before qualification was sealed that La Albirroja would reach the knockout round and even win it, lending a head-of-state, country-wide dimension to expectations that the local press amplified. The political endorsement underscores how far the team's return has moved beyond the sports pages into national life.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "D10 / Última Hora",
-          "url": "https://d10.ultimahora.com/pena-confia-en-la-clasificacion-albirroja",
-          "lang": "es",
-          "date": "2026-06-22"
-        }
-      ]
-    },
-    {
-      "storyline": "Reshuffled XI for the knockout tie: Paraguayan reporting says Alfaro must rebuild his lineup, with midfielder Diego Gomez suspended on accumulated yellows and winger Ramon Sosa still managing an ankle issue, while Miguel Almiron returns from the suspension he served against Australia, restoring attacking options. This is concrete, locally-sourced availability detail beyond the previously reported Alderete knee concern.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
         {
           "outlet": "ABC Color",
-          "url": "https://www.abc.com.py/deportes/futbol/seleccion-paraguaya/2026/06/27/la-seleccion-paraguaya-ya-arma-el-plan-para-conseguir-el-boleto-a-octavos/",
-          "lang": "es",
-          "date": "2026-06-27"
-        },
-        {
-          "outlet": "D10 / Última Hora",
-          "url": "https://d10.ultimahora.com/alemania-y-paraguay-entre-el-alivio-y-la-presion",
-          "lang": "es",
-          "date": "2026-06-28"
+          "url": "https://www.abc.com.py/nacionales/2026/06/29/la-prensa-internacional-se-hizo-eco-de-la-hazana-de-paraguay-sobre-alemania/",
+          "date": "2026-06-29",
+          "lang": "es"
         }
       ]
     },
     {
-      "storyline": "Two embattled sides 'under suspicion': Paraguay's national press frames the knockout matchup as a meeting of teams caught between relief and pressure, with the local angle being scrutiny of Alfaro's ultra-defensive setup that nearly backfired in the goalless draw against Australia, set against a more illustrious opponent under its own demands to attack. The home framing centres on tactical doubt rather than pure underdog romance.",
+      "storyline": "Orlando Gill, the keeper who saved a nation's night: goalkeeper Orlando Gill, already named the tournament's best goalkeeper of the group stage, made decisive saves in the shootout and has become the individual face of the win, with reporting also highlighting a difficult personal backstory that has amplified his standing as a folk hero at home.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "ABC Color",
-          "url": "https://www.abc.com.py/deportes/futbol/internacional/2026/06/28/alemania-y-paraguay-entre-el-alivio-y-la-presion/",
-          "lang": "es",
-          "date": "2026-06-28"
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49220268/germany-dumped-world-cup-paraguay-penalties",
+          "date": "2026-06-29",
+          "lang": "en"
         },
         {
-          "outlet": "D10 / Última Hora",
-          "url": "https://d10.ultimahora.com/alemania-y-paraguay-entre-el-alivio-y-la-presion",
-          "lang": "es",
-          "date": "2026-06-28"
+          "outlet": "El Universo",
+          "url": "https://www.eluniverso.com/deportes/futbol/quien-es-orlando-gill-el-arquero-de-paraguay-que-elimino-a-alemania-en-el-mundial-2026-nota/",
+          "date": "2026-06-30",
+          "lang": "es"
         }
       ]
     },
     {
-      "storyline": "Chasing an unprecedented milestone: ABC Color highlighted that Paraguay have never won two matches in a single World Cup across their previous appearances, so the closing group push doubled as a bid to break a long-standing record, adding a historical-pride layer to the qualification chase that sits alongside the 2010 quarterfinal memory.",
+      "storyline": "A national holiday and a country in the streets: President Santiago Pena declared the following Tuesday a national holiday, and reporting describes Asuncion's downtown and other cities erupting in impromptu, hours-long celebrations, turning a football result into a shared national event well beyond the sport.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "ABC Color",
-          "url": "https://www.abc.com.py/deportes/futbol/seleccion-paraguaya/2026/06/25/paraguay-buscara-por-primera-vez-su-segundo-triunfo-en-un-mismo-mundial/",
-          "lang": "es",
-          "date": "2026-06-25"
+          "outlet": "Infobae",
+          "url": "https://www.infobae.com/america/america-latina/2026/06/30/noche-de-fiesta-sin-fin-y-feriado-en-paraguay-las-calles-de-asuncion-estallaron-al-celebrar-la-victoria-contra-alemania-en-el-mundial/",
+          "date": "2026-06-30",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "Alfaro dedicates the win to the doubters, then pumps the brakes: the coach explicitly framed the result as an answer to critics from the group-stage debate (echoing the earlier Chilavert row), while in the same set of comments warning his squad against overvaluing a single result before a far tougher French test.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "El Colombiano",
+          "url": "https://www.elcolombiano.com/especiales/mundial-2026/gustavo-alfaro-frase-triunfo-historico-paraguay-ante-alemania-mundial-2026-HJ38312410",
+          "date": "2026-06-30",
+          "lang": "es"
+        },
+        {
+          "outlet": "La Nacion",
+          "url": "https://www.lanacion.com.ar/estados-unidos/gustavo-alfaro-dt-de-paraguay-que-elimino-a-alemania-en-el-mundial-2026-trate-de-bajarlos-de-la-ola-nid30062026/",
+          "date": "2026-06-30",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "Cast as extreme underdogs against France: previews describe this as one of the round's biggest mismatches on paper -- France pre-tournament top-3 in the world versus Paraguay 41st -- with France having scored three or more goals in five straight World Cup matches and Kylian Mbappe tied for the tournament's top scorer.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Statsniper",
+          "url": "https://statsniper.com/blog/soccer/france-paraguay-world-cup-2026-round-of-16-philadelphia-mbappe-enciso-preview/",
+          "date": "2026-07-01",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "A rematch Paraguay have never won: local and regional press are framing the France tie against the backdrop that Paraguay have lost both of their previous World Cup meetings with France, including the 1998 Round of 16 defeat to Laurent Blanc's golden goal, giving the match a 'revancha' (revenge) angle layered on top of the pure underdog story.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "FIFA.com",
+          "url": "https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/articles/historial-paraguay-francia-partidos-resultados-chilavert",
+          "date": "2026-07-01",
+          "lang": "es"
+        },
+        {
+          "outlet": "Infobae",
+          "url": "https://www.infobae.com/deportes/2026/07/01/los-mejores-memes-en-la-previa-de-francia-paraguay-por-los-octavos-del-mundial-de-la-nueva-utopia-a-la-revancha-del-98/",
+          "date": "2026-07-01",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "France publicly refuse to look past Paraguay: after the Germany result, Mbappe and French coverage have gone out of their way to praise Paraguay's resistance and warn against complacency, a notable shift in tone from the pure-mismatch framing of the pre-Germany previews.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Mi Telefe",
+          "url": "https://www.mitelefe.com/mundial-fifa-2026/noticias/kylian-mbappe-palpito-el-duelo-ante-paraguay-son-un-equipo-a-tomar-en-serio-pid2558093",
+          "date": "2026-07-01",
+          "lang": "es"
         }
       ]
     }
   ],
   "attributed_quotes": [
     {
-      "quote": "No, no existen los imposibles.",
-      "quote_original": "¿Imposible? No, no existen los imposibles.",
-      "lang": "es",
-      "speaker_name": "Gustavo Alfaro",
-      "speaker_role": "Paraguay head coach",
-      "outlet": "Depor",
-      "url": "https://depor.com/futbol-internacional/mundial/gustavo-alfaro-arremete-contra-criticos-de-paraguay-tras-clasificar-en-el-mundial-2026-noticia/",
-      "date": "2026-06-26",
-      "context": "Alfaro responding to critics after the 0-0 draw with Australia sealed Paraguay's advance, rejecting the idea that beating a top seed is impossible.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only"
-    },
-    {
-      "quote": "Eliminating a top seed will be difficult.",
-      "quote_original": "De la misma manera que era difícil clasificar, va a ser difícil eliminar a un cabeza de serie.",
-      "lang": "es",
-      "speaker_name": "Gustavo Alfaro",
-      "speaker_role": "Paraguay head coach",
-      "outlet": "Depor",
-      "url": "https://depor.com/futbol-internacional/mundial/gustavo-alfaro-arremete-contra-criticos-de-paraguay-tras-clasificar-en-el-mundial-2026-noticia/",
-      "date": "2026-06-26",
-      "context": "Alfaro framing the Round of 32 tie against a group winner, tempering expectations while refusing to concede the match.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only"
-    },
-    {
-      "quote": "When a Paraguayan believes, nothing is impossible.",
-      "quote_original": "Cuando un paraguayo cree, nada es imposible.",
-      "lang": "es",
-      "speaker_name": "Gustavo Gomez",
-      "speaker_role": "Paraguay captain",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "D10 / Última Hora",
-      "url": "https://d10.ultimahora.com/el-mensaje-del-capitan-nada-es-imposible",
-      "date": "2026-06-27",
-      "context": "Captain's rallying message to the country (posted on Instagram) after learning Paraguay's knockout opponent, recasting the hard road back into a source of national belief."
-    },
-    {
-      "quote": "And if we end up eliminated, we end up eliminated.",
-      "quote_original": "Y si nos toca quedar eliminados, nos toca quedar eliminados.",
+      "quote": "We didn't play well, and there are defeats that hurt and defeats that teach.",
+      "quote_original": "No jugamos bien y hay derrotas que duelen y hay derrotas que enseñan.",
       "lang": "es",
       "speaker_name": "Gustavo Alfaro",
       "speaker_role": "Paraguay head coach",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
-      "outlet": "ABC Color",
-      "url": "https://www.abc.com.py/deportes/futbol/internacional/2026/06/28/alemania-y-paraguay-entre-el-alivio-y-la-presion/",
-      "date": "2026-06-28",
-      "context": "Alfaro defending his cautious approach amid criticism of the defensive display in the goalless Australia draw, accepting the risk it carries."
+      "outlet": "La Nacion",
+      "url": "https://www.lanacion.com.ar/estados-unidos/gustavo-alfaro-dt-de-paraguay-que-elimino-a-alemania-en-el-mundial-2026-trate-de-bajarlos-de-la-ola-nid30062026/",
+      "date": "2026-06-30",
+      "context": "Alfaro reflecting on the campaign after eliminating Germany, weighing the earlier group-stage loss to the US against the shootout win."
     },
     {
-      "quote": "I believe Paraguay will reach the Round of 16, and will win that match.",
-      "quote_original": "Yo creo que Paraguay va a pasar a los dieciseisavos, y yo creo que va a pasar ese partido.",
+      "quote": "We had very big plans for this World Cup. It's very difficult to disappoint again.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Kai Havertz",
+      "speaker_role": "Germany forward",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49220268/germany-dumped-world-cup-paraguay-penalties",
+      "date": "2026-06-29",
+      "context": "Havertz reacting after missing a penalty in the shootout that eliminated Germany."
+    },
+    {
+      "quote": "What I want to highlight from our team is how united we are.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Jose Canale",
+      "speaker_role": "Paraguay midfielder/forward (scored the winning penalty)",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49220268/germany-dumped-world-cup-paraguay-penalties",
+      "date": "2026-06-29",
+      "context": "Canale speaking after scoring Paraguay's winning penalty in the shootout against Germany."
+    },
+    {
+      "quote": "It's a team that must be taken seriously.",
+      "quote_original": "Es un equipo que hay que tomar en serio.",
+      "lang": "es",
+      "speaker_name": "Kylian Mbappe",
+      "speaker_role": "France forward",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Mi Telefe",
+      "url": "https://www.mitelefe.com/mundial-fifa-2026/noticias/kylian-mbappe-palpito-el-duelo-ante-paraguay-son-un-equipo-a-tomar-en-serio-pid2558093",
+      "date": "2026-07-01",
+      "context": "Mbappe previewing the Round of 16 tie against Paraguay after their win over Germany."
+    },
+    {
+      "quote": "Paraguay never gives up! Holiday, damn it!",
+      "quote_original": "¡Paraguay nunca se rinde! ¡Feriado carajo!",
       "lang": "es",
       "speaker_name": "Santiago Pena",
       "speaker_role": "President of Paraguay",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
-      "outlet": "D10 / Última Hora",
-      "url": "https://d10.ultimahora.com/pena-confia-en-la-clasificacion-albirroja",
-      "date": "2026-06-22",
-      "context": "President Pena voicing public confidence in the national team after a government ceremony, before qualification was mathematically sealed."
+      "outlet": "Infobae",
+      "url": "https://www.infobae.com/america/america-latina/2026/06/30/noche-de-fiesta-sin-fin-y-feriado-en-paraguay-las-calles-de-asuncion-estallaron-al-celebrar-la-victoria-contra-alemania-en-el-mundial/",
+      "date": "2026-06-30",
+      "context": "President Pena announcing a national holiday on social media immediately after Paraguay's shootout win over Germany."
     }
   ],
   "local_availability_reporting": [
     {
       "player": "Omar Alderete",
-      "status_reported": "Reported to have picked up an injury that complicated the closing stages of the Australia group match; availability for the knockout round not confirmed.",
+      "status_reported": "Reported to still be in rehabilitation for a knee injury sustained in the closing stages of the Australia group match; as of July 1 he was doing light jogging to test his response, with fitness for the France match not confirmed.",
       "confirmed": false,
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "beIN Sports",
-          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/paraguay-misses-out-on-direct-qualification-and-must-wait-to-learn-its-fate-at-the-2026-fifa-world-cup-2026-06-26",
-          "date": "2026-06-26"
-        },
-        {
-          "outlet": "ESPN Deportes",
-          "url": "https://espndeportes.espn.com/futbol/mundial/nota/_/id/15914493/mundial-2026-paraguay-perfil-figuras-como-juega-historia",
-          "date": "2026-06"
+          "outlet": "ABC Color",
+          "url": "https://www.abc.com.py/deportes/futbol/seleccion-paraguaya/2026/07/01/otro-dia-pensando-en-francia/",
+          "date": "2026-07-01",
+          "lang": "es"
         }
       ]
     }
   ],
   "gaps": [
-    "DB FACTS list the R32 opponent as TBD, so next_opponent_code is kept as TBD; however multiple credible sources (ESPN match page, Goal.com, SI, NBC, Bavarian Football Works) report the opponent as Germany (Group E winner), with the match on 2026-06-29 at Foxborough, Massachusetts. Trusting the DB per the grounding contract and flagging the contradiction here.",
-    "beIN Sports' summary rendered the opener as a 0-4 USA win; ESPN, Goal.com and Wikipedia confirm a 4-1 loss in which Paraguay scored. The verified 4-1 is used and the scoreline is not attributed to beIN.",
-    "No quotes or coverage sourced directly from Paraguayan national outlets (e.g. ABC Color, Ultima Hora) on fan reaction to reaching the knockout round; mood drawn from regional/international media and an Argentine outlet.",
-    "Could not source confirmed (federation/FIFA-grade) team news or a final injury/availability list for the R32 match; only the reported Alderete injury and a quiet game from Julio Enciso were available, both attributed press context.",
-    "No official FIFA/CONMEBOL/Paraguayan FA statement located on expectations or mood; all expectation/mood material is press-attributed (discovery tier), not fact-grade.",
-    "Final standings cross-check: DB states 4 points as best third-placed from Group D, consistent with sourced loss to USA, 1-0 win over Turkey and 0-0 draw with Australia; no contradiction found, but the official standings table was not independently retrieved as a fact-grade source."
+    "Our DB ground facts record the Germany shootout as Paraguay winning 4-3; one AI-summarized fetch of an ESPN page rendered it as '5-4' and press accounts vary on exactly which Germany takers missed (some name Havertz, Woltemade and Tah; others only Havertz and Tah) and whether a Paraguay taker also missed before the winning kick. The 4-3 scoreline from our DB is treated as authoritative; the exact shootout kick-by-kick sequence is not stated as fact in this file and is deliberately kept general (multiple Germany misses, including Havertz) rather than asserting a specific order.",
+    "Minor spelling variance across outlets on the winning penalty-taker's name (Canale vs. a one-off 'Canali'); 'Jose Canale' is used here as the consistent spelling across Infobae, Telemundo and Mediotiempo.",
+    "No verbatim Alfaro quote specifically previewing the France match was located as of the 2026-07-01 cutoff; his available post-match comments concern the Germany result and general caution, not France-specific tactics or team news, so no France-specific manager quote is included.",
+    "Reported availability for Ramon Sosa (ankle) and the suspension status of Diego Gomez, both flagged ahead of the Germany match, were not re-confirmed by any source found for the France match; treated as unknown rather than assumed resolved.",
+    "No official FIFA/CONMEBOL/Paraguayan Football Association (APF) statement was located on mood, expectations, or squad availability; all national-mood and expectations material here is press-attributed (discovery tier), not fact-grade.",
+    "ABC Color and D10/Ultima Hora (Paraguay's leading national newspapers, each with dedicated sports desks) are not on the shared outlet allowlist; used here as 'other' per the allowlist's own guidance for under-covered federations -- both are mainstream, long-established national outlets, not fringe sources. Infobae, La Nacion (Argentina edition, distinct from any Paraguayan outlet of the same name), Mi Telefe/Noticias Argentinas, El Universo, El Colombiano, Statsniper and FIFA.com's editorial 'historial' article are similarly used as 'other' -- established regional/international outlets or FIFA's own editorial content, chosen given the limited Paraguay-specific coverage on the shared list."
   ],
   "source_data_snapshot": [
     {
-      "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/paraguay-misses-out-on-direct-qualification-and-must-wait-to-learn-its-fate-at-the-2026-fifa-world-cup-2026-06-26",
-      "outlet": "beIN Sports",
-      "retrieved_at": "2026-06-28",
-      "used_for": "qualification status, mood (bitter taste), Alderete injury, Enciso quiet game"
-    },
-    {
-      "url": "https://depor.com/futbol-internacional/mundial/gustavo-alfaro-arremete-contra-criticos-de-paraguay-tras-clasificar-en-el-mundial-2026-noticia/",
-      "outlet": "Depor",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Alfaro verbatim quotes (reverified), manager situation, expectations"
-    },
-    {
-      "url": "https://espndeportes.espn.com/futbol/mundial/nota/_/id/15914493/mundial-2026-paraguay-perfil-figuras-como-juega-historia",
-      "outlet": "ESPN Deportes",
-      "retrieved_at": "2026-06-28",
-      "used_for": "historical context (2010 QF, 16-year absence), key figures, playing style, Alfaro background"
-    },
-    {
-      "url": "https://www.goal.com/en-us/news/germany-paraguay-world-cup-preview/blt69845ea4b54b1ac0",
-      "outlet": "Goal.com",
-      "retrieved_at": "2026-06-28",
-      "used_for": "underdog framing, defensive blueprint, group path, 4-1 USA scoreline confirmation"
-    },
-    {
-      "url": "https://www.ambito.com/deportes/chilavert-destrozo-gustavo-alfaro-paraguay-el-dt-mas-farsante-del-futbol-mundial-n6293228",
-      "outlet": "Ambito",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Chilavert criticism storyline (most fraudulent coach), national debate"
-    },
-    {
-      "url": "https://www.espn.com/soccer/story/_/id/49123488/us-clinches-group-d-10-man-paraguay-edges-turkey",
+      "url": "https://www.espn.com/soccer/story/_/id/49220268/germany-dumped-world-cup-paraguay-penalties",
       "outlet": "ESPN",
-      "retrieved_at": "2026-06-28",
-      "used_for": "group results cross-check (4-1 USA loss, 1-0 Turkey win)"
+      "retrieved_at": "2026-07-01",
+      "used_for": "match result, goalscorers, penalty-shootout misses/quotes (Havertz, Canale), historical context (first-ever Germany WC shootout loss)"
     },
     {
-      "url": "https://www.aljazeera.com/sports/2026/6/28/which-teams-have-qualified-for-the-world-cup-2026-knockouts-round-of-32",
-      "outlet": "Al Jazeera",
-      "retrieved_at": "2026-06-28",
-      "used_for": "R32 qualification confirmation"
+      "url": "https://www.lanacion.com.ar/estados-unidos/gustavo-alfaro-dt-de-paraguay-que-elimino-a-alemania-en-el-mundial-2026-trate-de-bajarlos-de-la-ola-nid30062026/",
+      "outlet": "La Nacion",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Alfaro verbatim quotes, manager situation, national expectations framing"
     },
     {
-      "url": "https://www.fourfourtwo.com/team/paraguay-world-cup-2026-squad",
-      "outlet": "FourFourTwo",
-      "retrieved_at": "2026-06-28",
-      "used_for": "squad/historical context cross-check"
-    },
-    {
+      "url": "https://www.abc.com.py/nacionales/2026/06/29/la-prensa-internacional-se-hizo-eco-de-la-hazana-de-paraguay-sobre-alemania/",
       "outlet": "ABC Color",
-      "url": "https://www.abc.com.py/deportes/futbol/internacional/2026/06/28/alemania-y-paraguay-entre-el-alivio-y-la-presion/",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Alfaro 'eliminados' verbatim quote, 'between relief and pressure' framing, tactical-doubt mood, Almiron return / Diego Gomez suspension"
+      "retrieved_at": "2026-07-01",
+      "used_for": "international press reaction roundup, national pride framing, German press criticism of their own team"
     },
     {
+      "url": "https://www.abc.com.py/deportes/futbol/mundial-de-futbol/2026/06/30/francia-golea-y-se-cita-con-paraguay-en-octavos-de-fina/",
       "outlet": "ABC Color",
-      "url": "https://www.abc.com.py/deportes/futbol/seleccion-paraguaya/2026/06/27/la-seleccion-paraguaya-ya-arma-el-plan-para-conseguir-el-boleto-a-octavos/",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "knockout lineup reshuffle: Diego Gomez suspended, Sosa ankle, Alderete knee (MRI, practically ruled out), Almiron return; training/travel detail"
+      "retrieved_at": "2026-07-01",
+      "used_for": "underdog/emboldened framing of Paraguay vs France, Mbappe/France attacking threat framing"
     },
     {
+      "url": "https://www.abc.com.py/deportes/futbol/seleccion-paraguaya/2026/07/01/otro-dia-pensando-en-francia/",
       "outlet": "ABC Color",
-      "url": "https://www.abc.com.py/deportes/futbol/seleccion-paraguaya/2026/06/25/paraguay-buscara-por-primera-vez-su-segundo-triunfo-en-un-mismo-mundial/",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "historical angle: Paraguay never won two matches in one World Cup; milestone framing"
+      "retrieved_at": "2026-07-01",
+      "used_for": "Omar Alderete reported fitness status, training approach after the Germany match"
     },
     {
-      "outlet": "D10 / Última Hora",
-      "url": "https://d10.ultimahora.com/el-mensaje-del-capitan-nada-es-imposible",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "captain Gustavo Gomez verbatim rallying-message quote and leadership/mood storyline"
+      "url": "https://www.infobae.com/america/america-latina/2026/06/30/noche-de-fiesta-sin-fin-y-feriado-en-paraguay-las-calles-de-asuncion-estallaron-al-celebrar-la-victoria-contra-alemania-en-el-mundial/",
+      "outlet": "Infobae",
+      "retrieved_at": "2026-07-01",
+      "used_for": "national mood, national holiday declaration, presidential quote"
     },
     {
-      "outlet": "D10 / Última Hora",
-      "url": "https://d10.ultimahora.com/pena-confia-en-la-clasificacion-albirroja",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "President Santiago Pena confidence quote and presidential/national-event storyline"
+      "url": "https://www.infobae.com/deportes/2026/07/01/los-mejores-memes-en-la-previa-de-francia-paraguay-por-los-octavos-del-mundial-de-la-nueva-utopia-a-la-revancha-del-98/",
+      "outlet": "Infobae",
+      "retrieved_at": "2026-07-01",
+      "used_for": "1998 'revancha' framing of the France preview"
     },
     {
-      "outlet": "D10 / Última Hora",
-      "url": "https://d10.ultimahora.com/alemania-y-paraguay-entre-el-alivio-y-la-presion",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "'under suspicion' / between-relief-and-pressure framing cross-check; Alfaro quote cross-check; availability detail"
+      "url": "https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/articles/historial-paraguay-francia-partidos-resultados-chilavert",
+      "outlet": "FIFA.com",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Paraguay-France head-to-head history (1958, 1998 golden goal, Chilavert in goal)"
+    },
+    {
+      "url": "https://www.eluniverso.com/deportes/futbol/quien-es-orlando-gill-el-arquero-de-paraguay-que-elimino-a-alemania-en-el-mundial-2026-nota/",
+      "outlet": "El Universo",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Orlando Gill background/hero narrative, best-goalkeeper-of-group-stage detail"
+    },
+    {
+      "url": "https://www.elcolombiano.com/especiales/mundial-2026/gustavo-alfaro-frase-triunfo-historico-paraguay-ante-alemania-mundial-2026-HJ38312410",
+      "outlet": "El Colombiano",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Alfaro 'biggest win of his career' framing, warning against overvaluing the result"
+    },
+    {
+      "url": "https://www.mitelefe.com/mundial-fifa-2026/noticias/kylian-mbappe-palpito-el-duelo-ante-paraguay-son-un-equipo-a-tomar-en-serio-pid2558093",
+      "outlet": "Mi Telefe",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Mbappe verbatim quote and respect-for-Paraguay storyline"
+    },
+    {
+      "url": "https://statsniper.com/blog/soccer/france-paraguay-world-cup-2026-round-of-16-philadelphia-mbappe-enciso-preview/",
+      "outlet": "Statsniper",
+      "retrieved_at": "2026-07-01",
+      "used_for": "mismatch/ranking framing (France pre-tournament top-3 vs Paraguay 41st), France scoring streak, Mbappe/Enciso context"
     }
   ]
 }

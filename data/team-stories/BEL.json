@@ -1,119 +1,255 @@
 {
   "team_code": "BEL",
-  "round": "R32",
-  "next_opponent_code": "TBD",
+  "round": "R16",
+  "next_opponent_code": "USA",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
+  "last_updated": "2026-07-02",
   "confidence": "high",
   "national_expectations": {
-    "summary": "Pre-tournament, manager Rudi Garcia framed topping Group G as the priority objective, casting Belgium openly as underdogs in the wider field while insisting his side should fear nobody. Belgium entered ranked ninth by FIFA, but coverage stressed the team had lost lustre since the 2018 third-place run and that this is widely seen as the golden generation's last World Cup. After two opening draws nearly derailed those expectations, the emphatic win over New Zealand to seal the group restored belief that one final deep run is possible, though previews keep expectations measured beyond the knockout opener.",
+    "summary": "Expectations have been transformed by the last-32 escape against Senegal. A campaign that began with manager Rudi Garcia casting Belgium as underdogs who should fear nobody, and with coverage stressing this is widely seen as the golden generation's last World Cup, now carries genuine belief that a deep run is on. Foreign coverage relayed by the Belgian press describes a 'reborn' Belgium after the comeback, with outlets noting the golden generation's obituaries had already been written. The next test is framed as formidable but winnable: the co-host United States in Seattle, where Belgium have been based for four weeks, with a quarter-final place at stake.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
+      {
+        "outlet": "Sporza (VRT)",
+        "url": "https://sporza.be/nl/2026/07/02/-naar-de-hel-en-terug-buitenlandse-pers-ziet-herboren-belgen-onwaarschijnlijke-comeback-uit-de-mouw-toveren~1782968165675/",
+        "lang": "nl",
+        "date": "2026-07-02"
+      },
       {
         "outlet": "FIFA (Garcia interview, English aggregation via IANS)",
         "url": "https://ianslive.in/fifa-wc-2026-belgium-are-capable-of-achieving-great-things-says-coach-garcia--20260530122912",
         "date": "2026-05-30"
       },
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49194581/three-games-belgium-kick-started-their-world-cup",
-        "date": "2026-06-27"
-      },
-      {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49072841/group-g-2026-world-cup-teams-records-stats-know-belgium-iran-new-zealand-egypt",
-        "date": "2026-06-13"
+        "outlet": "Sporza (VRT)",
+        "url": "https://sporza.be/nl/2026/07/01/zet-de-wekker-alvast-vroeg-voor-duel-met-vs-dit-is-alles-wat-je-moet-weten-over-de-1-8e-finale-van-de-rode-duivels~1782937347454/",
+        "lang": "nl",
+        "date": "2026-07-01"
       }
     ]
   },
   "national_mood": {
-    "summary": "Mood swung sharply over the group stage. A 1-1 draw with Egypt off an own goal, then a 0-0 with Iran, brought serious questions about whether the ageing core could still compete, with elimination genuinely in play on the final matchday. The 5-1 dismantling of New Zealand transformed the atmosphere into relief and cautious optimism, reviving hope of a last flourish from the De Bruyne-Lukaku-Courtois generation. Coverage describes the side as having finally kick-started its World Cup while still stressing the campaign has only just begun.",
+    "summary": "Euphoria mixed with disbelief. Belgium trailed Senegal by two goals deep into the second half of their last-32 tie and were, in the words of press coverage relayed by Sporza, 'essentially already on the plane home' before Romelu Lukaku and Youri Tielemans scored in the final minutes of normal time and Tielemans converted a 125th-minute penalty to win it 3-2 after extra time. Sporza's own reaction coverage celebrated a team that 'played with guts' and kept believing in the remontada, while the round-up of international reaction carried framings like 'to hell and back' and 'an ode to football, not for the faint-hearted'. The mood pieces explicitly link the night to happy memories of the 2018 Japan comeback. Beneath the joy sits an acknowledged edge of controversy: the winning penalty came after a roughly seven-minute VAR review and was called harsh by British pundits, a debate the Belgian press has also covered.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49194581/three-games-belgium-kick-started-their-world-cup",
-        "date": "2026-06-27"
+        "outlet": "Sporza (VRT)",
+        "url": "https://sporza.be/nl/2026/07/01/-de-verklaring-speelden-met-ballen-rode-duivels-bleven-geloven-in-remontada-die-mooie-herinneringen-naar-boven-brengt~1782935790728/",
+        "lang": "nl",
+        "date": "2026-07-01"
       },
       {
-        "outlet": "Yahoo Sports",
-        "url": "https://sports.yahoo.com/soccer/breaking-news/article/2026-world-cup-belgium-leapfrogs-egypt-to-win-group-g-while-iran-experiences-var-heartbreak-052016991.html",
-        "date": "2026-06-26"
+        "outlet": "Sporza (VRT)",
+        "url": "https://sporza.be/nl/2026/07/02/-naar-de-hel-en-terug-buitenlandse-pers-ziet-herboren-belgen-onwaarschijnlijke-comeback-uit-de-mouw-toveren~1782968165675/",
+        "lang": "nl",
+        "date": "2026-07-02"
       },
       {
         "outlet": "Sky Sports",
-        "url": "https://www.skysports.com/football/news/29908/13556698/world-cup-2026-new-zealand-1-5-belgium-leandro-trossards-double-helps-red-devils-reach-knockout-stages",
-        "date": "2026-06-26"
+        "url": "https://www.skysports.com/football/news/29908/13558804/world-cup-2026-belgium-3-2-senegal-aet-youri-tielemans-extra-time-penalty-winner-wins-last-32-clash",
+        "date": "2026-07-02"
       }
     ]
   },
   "manager_situation": {
-    "summary": "Rudi Garcia, appointed in January 2025 to replace Domenico Tedesco on a deal through the 2026 World Cup, leads Belgium into the knockouts having delivered the stated objective of winning the group. After the New Zealand win he forcefully defended his veteran leaders against pre-tournament 'too old' criticism, calling such labels ugly, while keeping expectations grounded by stressing Belgium have won nothing yet and only cleared the group stage. He has consistently embraced an underdog framing for the wider tournament.",
+    "summary": "Rudi Garcia, appointed in January 2025 to replace Domenico Tedesco on a deal through this World Cup, emerges from the Senegal tie both vindicated and briefly embroiled in controversy. Facing elimination at 2-0 down, he made bold 56th-minute substitutions, withdrawing Kevin De Bruyne and Jeremy Doku, and the changes were credited in coverage with sparking the comeback. Post-match he explained Belgium had banked on Senegal retreating to protect their lead, calling that approach a serious mistake; when the remarks were read as a jab at Senegal he pushed back, insisting Senegal deserved to go through as much as Belgium and that his point was general. He has consistently embraced an underdog framing and now prepares his side to face the co-host USA in front of a home American crowd.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
         "outlet": "Goal.com",
-        "url": "https://www.goal.com/en-us/lists/rudi-garcia-defends-belgium-world-cup-kevin-de-bruyne-leandro-trossard-romelu-lukaku/bltf2ade5e404faf930",
-        "date": "2026-06-26"
+        "url": "https://www.goal.com/en/lists/belgium-rudi-garcia-explains-senegal-comeback-world-cup/bltdf66550bf2fa13bb",
+        "date": "2026-07-02"
       },
       {
-        "outlet": "FIFA (Garcia interview, English aggregation via IANS)",
-        "url": "https://ianslive.in/fifa-wc-2026-belgium-are-capable-of-achieving-great-things-says-coach-garcia--20260530122912",
-        "date": "2026-05-30"
+        "outlet": "Sports Mole",
+        "url": "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/feature/belgium-vs-senegal--the-rudi-garcia-post-match-controversy-explained_600520.html",
+        "date": "2026-07-02"
       },
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49194581/three-games-belgium-kick-started-their-world-cup",
-        "date": "2026-06-27"
+        "outlet": "FOX Sports",
+        "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+        "date": "2026-07-01"
       }
     ]
   },
   "historical_context": {
-    "summary": "Belgium are one of the World Cup's most consistent participants, with their fourth straight finals appearance in 2026. Their best result was third place at Russia 2018 with the so-called golden generation. That peak was followed by a sharp fall at Qatar 2022, where Belgium were eliminated in the group stage. Veterans Romelu Lukaku (Belgium's top World Cup scorer) and Kevin De Bruyne anchor a squad widely described as the golden generation's final World Cup; De Bruyne became the first Belgian to score at three different World Cups, and Thibaut Courtois has now made the most World Cup appearances of any Belgian.",
+    "summary": "Belgium are at their fourth straight World Cup, their best result the 2018 third place with the so-called golden generation, followed by a group-stage exit in Qatar 2022. The Senegal comeback slots straight into that history: Belgian coverage explicitly recalled the 2018 last-16 win over Japan, when Belgium also came from 2-0 down to win 3-2, almost on the same calendar date. The round-of-16 pairing with the USA is itself a rematch heavy with memory: at Brazil 2014 Belgium beat the United States 2-1 after extra time in the last 16, the night of Tim Howard's sixteen-save performance, with De Bruyne and Lukaku, both still in this squad, scoring the extra-time goals. Sporza has this year revisited that 2014 tie as the match in which 'the world discovered the Devils'.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
+        "outlet": "Sporza (VRT)",
+        "url": "https://sporza.be/nl/2026/07/01/-de-verklaring-speelden-met-ballen-rode-duivels-bleven-geloven-in-remontada-die-mooie-herinneringen-naar-boven-brengt~1782935790728/",
+        "lang": "nl",
+        "date": "2026-07-01"
+      },
+      {
+        "outlet": "FOX Sports",
+        "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+        "date": "2026-07-01"
+      },
+      {
+        "outlet": "Sporza (VRT)",
+        "url": "https://sporza.be/nl/2026/03/26/een-verhaal-vol-helden-maar-ook-een-pineut-wiens-leven-voorgoed-veranderde-reconstructie-van-het-vs-duel-waarin-wereld-de-duivels-ontdekte~1774531968094/",
+        "lang": "nl",
+        "date": "2026-03-26"
+      },
+      {
         "outlet": "ESPN",
         "url": "https://www.espn.com/soccer/story/_/id/49072841/group-g-2026-world-cup-teams-records-stats-know-belgium-iran-new-zealand-egypt",
         "date": "2026-06-13"
-      },
-      {
-        "outlet": "Big News Network",
-        "url": "https://www.bignewsnetwork.com/news/279151328/fifa-world-cup-2026-kevin-de-bruyne-becomes-first-belgium-player-to-score-in-three-editions",
-        "date": "2026-06-26"
-      },
-      {
-        "outlet": "Sky Sports",
-        "url": "https://www.skysports.com/football/news/29908/13556698/world-cup-2026-new-zealand-1-5-belgium-leandro-trossards-double-helps-red-devils-reach-knockout-stages",
-        "date": "2026-06-26"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "Belgium 'finally kick-started' their tournament: after two stuttering opening draws that flirted with elimination, a 5-1 rout of New Zealand sealed top spot in Group G on goal difference over Egypt and revived belief in a deep run.",
+      "storyline": "The great escape: 2-0 down to Senegal (Habib Diarra 25', Ismaila Sarr 51') and heading out until substitute Romelu Lukaku (86') and Youri Tielemans (89') struck in three minutes to force extra time, before Tielemans converted a 125th-minute penalty for a 3-2 win. Foreign press relayed by Sporza framed it as one of the most improbable comebacks in recent tournament history, a 'resurrection' of a team whose golden-generation obituaries were already being written.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49194581/three-games-belgium-kick-started-their-world-cup",
-          "date": "2026-06-27"
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/29908/13558804/world-cup-2026-belgium-3-2-senegal-aet-youri-tielemans-extra-time-penalty-winner-wins-last-32-clash",
+          "date": "2026-07-02"
         },
         {
-          "outlet": "Yahoo Sports",
-          "url": "https://sports.yahoo.com/soccer/breaking-news/article/2026-world-cup-belgium-leapfrogs-egypt-to-win-group-g-while-iran-experiences-var-heartbreak-052016991.html",
-          "date": "2026-06-26"
+          "outlet": "Sporza (VRT)",
+          "url": "https://sporza.be/nl/2026/07/02/-naar-de-hel-en-terug-buitenlandse-pers-ziet-herboren-belgen-onwaarschijnlijke-comeback-uit-de-mouw-toveren~1782968165675/",
+          "lang": "nl",
+          "date": "2026-07-02"
         }
       ]
     },
     {
-      "storyline": "The golden generation's last dance: a squad built around veterans De Bruyne, Lukaku and Courtois is framed as one final shot at the trophy the most talented group in Belgian history never won, with De Bruyne scoring at a third different World Cup.",
+      "storyline": "A controversial winner: the decisive penalty was awarded after a roughly seven-minute VAR review for Lamine Camara's foul on Tielemans, spotted in the build-up to Dodi Lukebakio hitting the bar. Sky Sports pundits Gary Neville and Roy Keane questioned the call, Keane calling it very harsh, and Garcia's own remark that Senegal's retreat was 'a serious mistake' triggered a post-match press-conference flashpoint before he clarified that Senegal deserved to go through as much as Belgium.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/29908/13558804/world-cup-2026-belgium-3-2-senegal-aet-youri-tielemans-extra-time-penalty-winner-wins-last-32-clash",
+          "date": "2026-07-02"
+        },
+        {
+          "outlet": "Sports Mole",
+          "url": "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/feature/belgium-vs-senegal--the-rudi-garcia-post-match-controversy-explained_600520.html",
+          "date": "2026-07-02"
+        },
+        {
+          "outlet": "Goal.com",
+          "url": "https://www.goal.com/en/lists/belgium-rudi-garcia-explains-senegal-comeback-world-cup/bltdf66550bf2fa13bb",
+          "date": "2026-07-02"
+        }
+      ]
+    },
+    {
+      "storyline": "Echo of Japan 2018: the Belgian press immediately connected the night to the golden generation's most famous comeback, the 3-2 last-16 win over Japan at Russia 2018 from 2-0 down, noting the near-identical scoreline and near-identical calendar date, and casting the Senegal escape as proof the old character survives in the ageing core.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sporza (VRT)",
+          "url": "https://sporza.be/nl/2026/07/01/-de-verklaring-speelden-met-ballen-rode-duivels-bleven-geloven-in-remontada-die-mooie-herinneringen-naar-boven-brengt~1782935790728/",
+          "lang": "nl",
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "storyline": "Tielemans the hero: the midfielder scored the 89th-minute equalising header, then, after the marathon VAR review, held his nerve to bury the 125th-minute penalty he had himself won, saying afterwards he was ready to take it. Lukaku's night carried its own emotional charge: the substitute scored the goal that started the comeback and afterwards suggested his father, watching from above, had helped him.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sporza (VRT)",
+          "url": "https://sporza.be/nl/2026/07/01/-de-verklaring-speelden-met-ballen-rode-duivels-bleven-geloven-in-remontada-die-mooie-herinneringen-naar-boven-brengt~1782935790728/",
+          "lang": "nl",
+          "date": "2026-07-01"
+        },
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/29908/13558804/world-cup-2026-belgium-3-2-senegal-aet-youri-tielemans-extra-time-penalty-winner-wins-last-32-clash",
+          "date": "2026-07-02"
+        }
+      ]
+    },
+    {
+      "storyline": "Garcia's gamble: facing elimination, the coach withdrew Kevin De Bruyne and Jeremy Doku in the 56th minute, substitutions reported as tactical and widely credited with bringing Belgium to life; post-match he explained Belgium had anticipated Senegal dropping deep to protect the lead and set out to exploit it.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/live-blog/soccer/belgium-vs-senegal-live-updates-score-latest-world-cup-news-goals",
+          "date": "2026-07-01"
+        },
+        {
+          "outlet": "Goal.com",
+          "url": "https://www.goal.com/en/lists/belgium-rudi-garcia-explains-senegal-comeback-world-cup/bltdf66550bf2fa13bb",
+          "date": "2026-07-02"
+        }
+      ]
+    },
+    {
+      "storyline": "Into the lion's den, but at home in Seattle: Belgium now meet co-host USA in the round of 16 in front of a home American crowd, in what is billed as Seattle's final match of the tournament and an expected sellout. The Belgian press flips the hostile-venue frame: Belgium have been based in Seattle for four weeks and this will be their third straight match at the same stadium, an edge in routine and zero travel. Sporza also flags the awkward kick-off for fans back home, deep in the Belgian night.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sporza (VRT)",
+          "url": "https://sporza.be/nl/2026/07/01/zet-de-wekker-alvast-vroeg-voor-duel-met-vs-dit-is-alles-wat-je-moet-weten-over-de-1-8e-finale-van-de-rode-duivels~1782937347454/",
+          "lang": "nl",
+          "date": "2026-07-01"
+        },
+        {
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "storyline": "A rematch of the Tim Howard game: for the second time in their last three World Cups, USA meet Belgium in the round of 16. At Brazil 2014 Belgium won 2-1 after extra time despite Tim Howard's sixteen saves, with De Bruyne and Lukaku, both involved again in 2026, scoring the extra-time goals. Sporza revisited that tie this year as the match in which the world discovered the Red Devils, and American coverage leans on the revenge angle.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+          "date": "2026-07-01"
+        },
+        {
+          "outlet": "Sporza (VRT)",
+          "url": "https://sporza.be/nl/2026/03/26/een-verhaal-vol-helden-maar-ook-een-pineut-wiens-leven-voorgoed-veranderde-reconstructie-van-het-vs-duel-waarin-wereld-de-duivels-ontdekte~1774531968094/",
+          "lang": "nl",
+          "date": "2026-03-26"
+        }
+      ]
+    },
+    {
+      "storyline": "The USA without their spearhead: American striker Folarin Balogun, scorer of the winner against Bosnia and Herzegovina, was sent off in that match and is reported as suspended for the Belgium tie, a development Belgian coverage treats as a significant break for the Red Devils, while Sporza notes speculation about American pressure to have the suspension lifted.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+          "date": "2026-07-01"
+        },
+        {
+          "outlet": "Sporza (VRT)",
+          "url": "https://sporza.be/nl/2026/07/01/zet-de-wekker-alvast-vroeg-voor-duel-met-vs-dit-is-alles-wat-je-moet-weten-over-de-1-8e-finale-van-de-rode-duivels~1782937347454/",
+          "lang": "nl",
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "storyline": "The golden generation's last dance, rewritten: what began the tournament as an elegy, an ageing core at its final World Cup after two stuttering group draws, has become a resilience story, with the veterans De Bruyne, Lukaku and Courtois central to a side the international press now describes as reborn.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
@@ -123,298 +259,194 @@
           "date": "2026-06-13"
         },
         {
-          "outlet": "Big News Network",
-          "url": "https://www.bignewsnetwork.com/news/279151328/fifa-world-cup-2026-kevin-de-bruyne-becomes-first-belgium-player-to-score-in-three-editions",
-          "date": "2026-06-26"
-        }
-      ]
-    },
-    {
-      "storyline": "Garcia versus the 'too old' narrative: the manager publicly pushed back on pre-tournament criticism of his veteran leaders, arguing the New Zealand performance answered the doubters while warning the team has won nothing yet.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Goal.com",
-          "url": "https://www.goal.com/en-us/lists/rudi-garcia-defends-belgium-world-cup-kevin-de-bruyne-leandro-trossard-romelu-lukaku/bltf2ade5e404faf930",
-          "date": "2026-06-26"
-        }
-      ]
-    },
-    {
-      "storyline": "Underdog framing for the knockouts: Garcia openly accepts Belgium will be underdogs deeper in the bracket, insisting the side should fear nobody and back themselves against any opponent despite slipping from their 2018 heights.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "FIFA (Garcia interview, English aggregation via IANS)",
-          "url": "https://ianslive.in/fifa-wc-2026-belgium-are-capable-of-achieving-great-things-says-coach-garcia--20260530122912",
-          "date": "2026-05-30"
-        }
-      ]
-    },
-    {
-      "storyline": "Amadou Onana faces his motherland: the Belgium midfielder, whose mother is Senegalese and who grew up in Dakar speaking Wolof before French, is recalled by the national press as having pleaded before the draw not to be paired with Senegal, the country he returns to yearly to 'reset' and reconnect with family. Sporza casts the tie as a deeply personal, emotional subplot rather than a routine knockout fixture.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
           "outlet": "Sporza (VRT)",
-          "url": "https://sporza.be/nl/2026/06/28/-verlies-nog-liever-van-frankrijk-door-sterke-band-met-roots-wilde-amadou-onana-senegal-absoluut-vermijden~1782633199915/",
+          "url": "https://sporza.be/nl/2026/07/02/-naar-de-hel-en-terug-buitenlandse-pers-ziet-herboren-belgen-onwaarschijnlijke-comeback-uit-de-mouw-toveren~1782968165675/",
           "lang": "nl",
-          "date": "2026-06-28"
-        }
-      ]
-    },
-    {
-      "storyline": "The Belgian press frames Senegal as the worst draw imaginable from the third-placed pool: Sporza calls them 'on paper the toughest opponent', an unofficial African champion (AFCON winners who later lost the title via official ruling) built on pace and power through Sadio Mane, Nicolas Jackson and Ismaila Sarr. The coverage tempers that with Senegal's leaky defence (conceding three against both France and Norway) and visible internal unrest in the camp over catering, late bonuses and the coach's contract, which national writers suggest could play into Belgium's hands.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Sporza (VRT)",
-          "url": "https://sporza.be/nl/2026/06/28/op-papier-de-zwaarste-tegenstander-rode-duivels-treffen-senegal-in-1-16e-finales-officieuze-afrikaanse-kampioen-die-woelig-wk-kent~1782606738740/",
-          "lang": "nl",
-          "date": "2026-06-28"
-        },
-        {
-          "outlet": "Sporza (VRT)",
-          "url": "https://sporza.be/nl/2026/06/28/het-flitsende-gevaar-komt-van-overal-al-rommelt-het-in-interne-keuken-de-sterktes-en-zwaktes-van-senegal-uitgelicht~1782612133491/",
-          "lang": "nl",
-          "date": "2026-06-28"
-        }
-      ]
-    },
-    {
-      "storyline": "Francophone Belgium reads the bracket with cautious confidence: RTBF presents Senegal as a respectable but beatable first knockout test whose style could suit the Red Devils, while already mapping the road ahead, the United States or Bosnia winner next and only 'very distant' quarter-final talk of Portugal, Spain or Croatia. The base-camp advantage of staying in Seattle, near Lumen Field, is highlighted as a tangible edge.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "RTBF",
-          "url": "https://www.rtbf.be/article/coupe-du-monde-2026-les-diables-rouges-rencontreront-le-senegal-en-16es-de-finale-11748901",
-          "lang": "fr",
-          "date": "2026-06-28"
-        }
-      ]
-    },
-    {
-      "storyline": "Before the group decider, leading national commentator Peter Vandenbempt raised the emotional stakes to the level of national honour, branding the New Zealand match a 'turning point' and warning that elimination there would be the greatest disgrace in the Red Devils' history. Belgium's subsequent win quieted that alarm, but the framing set the high-pressure backdrop the squad now carries into the knockouts.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Sporza (VRT)",
-          "url": "https://sporza.be/nl/2026/06/26/peter-vandenbempt-zet-alle-rode-duivels-op-scherp-voor-scharniermoment-dit-zou-de-grootste-blamage-uit-onze-geschiedenis-zijn~1782451890360/",
-          "lang": "nl",
-          "date": "2026-06-26"
+          "date": "2026-07-02"
         }
       ]
     }
   ],
   "attributed_quotes": [
     {
-      "quote": "I really can't stand it when my four leaders are called 'veterans'. It's ugly. It is awful.",
+      "quote": "At 2-0, we knew they would do everything to protect their goal, which in my opinion is a serious mistake.",
       "speaker_name": "Rudi Garcia",
       "speaker_role": "Belgium head coach",
       "outlet": "Goal.com",
-      "url": "https://www.goal.com/en-us/lists/rudi-garcia-defends-belgium-world-cup-kevin-de-bruyne-leandro-trossard-romelu-lukaku/bltf2ade5e404faf930",
-      "date": "2026-06-26",
-      "context": "Defending De Bruyne, Lukaku, Trossard and Courtois against pre-tournament age criticism after Belgium's 5-1 win over New Zealand sealed top spot in Group G.",
+      "url": "https://www.goal.com/en/lists/belgium-rudi-garcia-explains-senegal-comeback-world-cup/bltdf66550bf2fa13bb",
+      "date": "2026-07-02",
+      "context": "Post-match, explaining how Belgium anticipated and exploited Senegal's retreat while 2-0 up; he later clarified the remark was a general tactical point, not a jab at Senegal.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "quote_original": null,
       "lang": "en"
     },
     {
-      "quote": "We'll just be the underdogs, but I don't mind that – in fact, I prefer it.",
+      "quote": "In extra time, it was like a boxing match, with two teams trading blows.",
       "speaker_name": "Rudi Garcia",
       "speaker_role": "Belgium head coach",
-      "outlet": "FIFA (English aggregation via IANS)",
-      "url": "https://ianslive.in/fifa-wc-2026-belgium-are-capable-of-achieving-great-things-says-coach-garcia--20260530122912",
-      "date": "2026-05-30",
-      "context": "Pre-tournament FIFA interview setting out Belgium's objective to top the group and his embrace of an underdog role deeper in the bracket.",
+      "outlet": "Goal.com",
+      "url": "https://www.goal.com/en/lists/belgium-rudi-garcia-explains-senegal-comeback-world-cup/bltdf66550bf2fa13bb",
+      "date": "2026-07-02",
+      "context": "Describing the frantic extra-time period against Senegal before Tielemans' 125th-minute penalty settled it.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "quote_original": null,
       "lang": "en"
     },
     {
-      "quote": "I said before the group-stage draw: please, don't let us play against Senegal.",
-      "quote_original": "Ik zei voor de loting van de groepsfase nog: alsjeblieft, laat ons niet tegen Senegal spelen.",
+      "quote": "I was ready to take the penalty.",
+      "quote_original": "Ik was klaar om penalty te nemen.",
       "lang": "nl",
-      "speaker_name": "Amadou Onana",
-      "speaker_role": "Belgium midfielder (Senegalese mother, raised in Dakar)",
+      "speaker_name": "Youri Tielemans",
+      "speaker_role": "Belgium midfielder, scorer of the equaliser and the extra-time penalty winner",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "outlet": "Sporza (VRT)",
-      "url": "https://sporza.be/nl/2026/06/28/-verlies-nog-liever-van-frankrijk-door-sterke-band-met-roots-wilde-amadou-onana-senegal-absoluut-vermijden~1782633199915/",
-      "date": "2026-06-28",
-      "context": "Onana words from an earlier interview with YouTuber Just Riadh given before the draw, re-reported by Sporza on the day Belgium drew Senegal, illustrating how he had hoped to avoid facing his mother's country in the knockouts."
+      "url": "https://sporza.be/nl/2026/07/01/-de-verklaring-speelden-met-ballen-rode-duivels-bleven-geloven-in-remontada-die-mooie-herinneringen-naar-boven-brengt~1782935790728/",
+      "date": "2026-07-01",
+      "context": "After winning and converting the 125th-minute penalty, following a roughly seven-minute VAR review, that beat Senegal 3-2.",
+      "quote_translated": true
     },
     {
-      "quote": "I would even rather lose to France.",
-      "quote_original": "Ik zou nog liever verliezen van Frankrijk.",
+      "quote": "At 2-0 you still keep believing.",
+      "quote_original": "Bij 2-0 blijf je er nog in geloven.",
       "lang": "nl",
-      "speaker_name": "Amadou Onana",
-      "speaker_role": "Belgium midfielder (Senegalese mother, raised in Dakar)",
+      "speaker_name": "Thibaut Courtois",
+      "speaker_role": "Belgium goalkeeper",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "outlet": "Sporza (VRT)",
-      "url": "https://sporza.be/nl/2026/06/28/-verlies-nog-liever-van-frankrijk-door-sterke-band-met-roots-wilde-amadou-onana-senegal-absoluut-vermijden~1782633199915/",
-      "date": "2026-06-28",
-      "context": "Onana words from the same pre-draw Just Riadh interview, re-reported by Sporza, conveying how strongly he wanted to avoid Senegal and underscoring the emotional weight of the tie against his roots."
+      "url": "https://sporza.be/nl/2026/07/01/-de-verklaring-speelden-met-ballen-rode-duivels-bleven-geloven-in-remontada-die-mooie-herinneringen-naar-boven-brengt~1782935790728/",
+      "date": "2026-07-01",
+      "context": "On the dressing-room belief that fuelled the comeback from 2-0 down against Senegal.",
+      "quote_translated": true
     },
     {
-      "quote": "It's tough but their style could suit the Red Devils.",
-      "quote_original": "C'est du costaud mais leur jeu peut convenir aux Diables Rouges.",
-      "lang": "fr",
-      "speaker_name": "Fred Waseige",
-      "speaker_role": "RTBF football consultant/analyst",
+      "quote": "I think my father up above helped me.",
+      "quote_original": "Ik denk dat mijn vader hierboven me heeft geholpen.",
+      "lang": "nl",
+      "speaker_name": "Romelu Lukaku",
+      "speaker_role": "Belgium striker, scored the 86th-minute goal that started the comeback",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
-      "outlet": "RTBF",
-      "url": "https://www.rtbf.be/article/le-morning-le-prochain-adversaire-des-diables-est-connu-le-senegal-c-est-du-costaud-mais-leur-jeu-peut-nous-convenir-11748931",
-      "date": "2026-06-28",
-      "context": "RTBF 'Le Morning' analyst assessing the Senegal draw, respecting the opponent while suggesting their open style could favour Belgium."
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/07/01/-de-verklaring-speelden-met-ballen-rode-duivels-bleven-geloven-in-remontada-die-mooie-herinneringen-naar-boven-brengt~1782935790728/",
+      "date": "2026-07-01",
+      "context": "Emotional post-match reflection after coming off the bench to score against Senegal, invoking his father watching over him.",
+      "quote_translated": true
     }
   ],
   "local_availability_reporting": [
     {
-      "player": "Romelu Lukaku",
-      "status": "Carried a pre-tournament fitness cloud (a hip injury that had sidelined him at Napoli) when named in the squad, but reportedly featured and scored off the bench in the 5-1 win over New Zealand, easing concern heading into the knockouts.",
+      "player": "Zeno Debast",
+      "status": "Reported to have been struggling with an injury since the start of the tournament and was not expected to be fit for the Senegal tie; no fresh update sourced on his availability for the USA match.",
       "confirmed": false,
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "beIN Sports",
-          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/de-bruyne-and-lukaku-named-in-belgium-world-cup-squad-despite-injuries-2026-05-15",
-          "date": "2026-05-15"
-        },
-        {
-          "outlet": "Sky Sports",
-          "url": "https://www.skysports.com/football/news/29908/13556698/world-cup-2026-new-zealand-1-5-belgium-leandro-trossards-double-helps-red-devils-reach-knockout-stages",
-          "date": "2026-06-26"
-        }
-      ]
-    },
-    {
-      "player": "Kevin De Bruyne",
-      "status": "Reported to have carried a pre-tournament eye injury at squad selection but was included and is reported to be playing, scoring against New Zealand; no fresh fitness doubt found for the R32.",
-      "confirmed": false,
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "beIN Sports",
-          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/de-bruyne-and-lukaku-named-in-belgium-world-cup-squad-despite-injuries-2026-05-15",
-          "date": "2026-05-15"
-        },
-        {
-          "outlet": "Big News Network",
-          "url": "https://www.bignewsnetwork.com/news/279151328/fifa-world-cup-2026-kevin-de-bruyne-becomes-first-belgium-player-to-score-in-three-editions",
-          "date": "2026-06-26"
+          "outlet": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/watch-on-us-tv/how-to-watch-belgium-vs-senegal-in-the-usa-live-stream-and-tv-for-2026-world-cup/",
+          "date": "2026-07-01"
         }
       ]
     }
   ],
   "gaps": [
-    "R32 opponent is TBD per DB FACTS and held as TBD here; multiple media (Belga News Agency, Sky Sports, NBC, CBS, Seneweb) report the opponent as Senegal in Seattle on 1 July. Treated as unconfirmed against the authoritative DB and not asserted as fact.",
-    "Source conflict on the Egypt scoreline (Yahoo 1-1 via own goal vs an ESPN summary reading 0-0); the DB result (W1 D2, group won on goal difference over Egypt) is consistent with two draws, and the Yahoo-sourced 1-1 framing was retained.",
-    "No direct verbatim quotes located from Belgian players (De Bruyne, Lukaku, Courtois) reacting specifically to reaching the knockouts; manager quotes only.",
-    "No dedicated R32-window injury bulletin or official Royal Belgian FA medical update sourced after the New Zealand match; availability for Lukaku and De Bruyne inferred from reported match participation, not from a confirmed team-news release.",
-    "Belgian-language national outlet (Sporza) coverage available pre-final-matchday was statistical/probability-driven, so it was not used for mood text (numbers-in-words constraint); a clean post-NZ Sporza/HLN/RBFA mood quote was not captured.",
-    "No official FIFA/UEFA/RBFA fact-grade source loaded for the historical record beyond press summaries (Big News Network URL returned HTTP 403 on re-fetch, though its De Bruyne/Courtois facts are independently corroborated); historical context rests on credible media rather than a confederation source.",
-    "Captain identity (noted elsewhere as Youri Tielemans) not independently re-confirmed for the knockout phase, so no captain claim is asserted in the body."
+    "No official RBFA or FIFA team-news/medical bulletin sourced after the 120-minute Senegal match; there is no verified fitness picture for the USA tie beyond the absence of reported new injuries.",
+    "De Bruyne and Doku were withdrawn in the 56th minute against Senegal; coverage frames the substitutions as tactical, not injury-related, and no injury inference is made here.",
+    "Reviewer note (allowlist): Sporza (VRT) is Flanders' public-broadcaster sport service and a primary national outlet, used under 'other'. FOX Sports (US World Cup rights holder), Sports Mole, Al Jazeera and World Soccer Talk are also not on the allowlist and are used under 'other'; the World Soccer Talk Debast item is a single weaker source and is flagged as such.",
+    "A claim that Tielemans' 125th-minute penalty is the latest winning goal in World Cup history appeared in aggregated search snippets but could not be verified on-page in a cited article, so it is omitted.",
+    "Goal-minute discrepancies between reports (Lukaku 86' vs 87', Tielemans 89' vs 90'); Sky Sports timings are used here.",
+    "Balogun's suspension for the USA is reported as the normal consequence of his red card; Sporza noted speculation about pressure to overturn it, so it is treated as reported rather than certain.",
+    "Dedicated Belgian preview coverage of the USA tie beyond Sporza's practical guide (and any Garcia pre-match press conference) was still thin as of 2026-07-02; no fresh manager or player quotes about facing the USA were sourced.",
+    "No francophone (RTBF/DH/La Derniere Heure) reaction piece was captured this cycle; the mood picture rests on Flemish (Sporza) and international coverage.",
+    "Captain identity not independently re-confirmed for the knockout phase, so no captain claim is asserted in the body.",
+    "The 2014 Belgium-USA echo is sourced to FOX Sports (US) and a pre-tournament Sporza reconstruction; a post-draw Belgian article explicitly replaying the 2014 angle for this rematch was not yet found."
   ],
   "source_data_snapshot": [
     {
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49194581/three-games-belgium-kick-started-their-world-cup",
-      "retrieved_at": "2026-06-28"
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/29908/13558804/world-cup-2026-belgium-3-2-senegal-aet-youri-tielemans-extra-time-penalty-winner-wins-last-32-clash",
+      "retrieved_at": "2026-07-02",
+      "used_for": "Match report: scorers/minutes, 2-0 deficit, seven-minute VAR review, Camara foul in build-up to Lukebakio hitting the bar, Neville/Keane criticism, next match vs USA"
+    },
+    {
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/07/01/-de-verklaring-speelden-met-ballen-rode-duivels-bleven-geloven-in-remontada-die-mooie-herinneringen-naar-boven-brengt~1782935790728/",
+      "lang": "nl",
+      "retrieved_at": "2026-07-02",
+      "used_for": "Belgian dressing-room reaction; verbatim Tielemans, Courtois and Lukaku quotes; 2018 Japan comeback echo"
+    },
+    {
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/07/02/-naar-de-hel-en-terug-buitenlandse-pers-ziet-herboren-belgen-onwaarschijnlijke-comeback-uit-de-mouw-toveren~1782968165675/",
+      "lang": "nl",
+      "retrieved_at": "2026-07-02",
+      "used_for": "Foreign-press round-up ('to hell and back', 'reborn', golden-generation obituaries) as relayed by the Belgian broadcaster"
+    },
+    {
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/07/01/zet-de-wekker-alvast-vroeg-voor-duel-met-vs-dit-is-alles-wat-je-moet-weten-over-de-1-8e-finale-van-de-rode-duivels~1782937347454/",
+      "lang": "nl",
+      "retrieved_at": "2026-07-02",
+      "used_for": "USA-tie preview: Seattle base-camp advantage (four weeks, third straight match at the stadium), night-time Belgian kick-off, Balogun suspension framing"
+    },
+    {
+      "outlet": "Goal.com",
+      "url": "https://www.goal.com/en/lists/belgium-rudi-garcia-explains-senegal-comeback-world-cup/bltdf66550bf2fa13bb",
+      "retrieved_at": "2026-07-02",
+      "used_for": "Verbatim Garcia post-match quotes (serious-mistake analysis, boxing-match line) and his clarification"
+    },
+    {
+      "outlet": "Sports Mole",
+      "url": "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/feature/belgium-vs-senegal--the-rudi-garcia-post-match-controversy-explained_600520.html",
+      "retrieved_at": "2026-07-02",
+      "used_for": "The Garcia post-match press-conference controversy and clarification"
+    },
+    {
+      "outlet": "FOX Sports",
+      "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+      "retrieved_at": "2026-07-02",
+      "used_for": "USA-Belgium R16 confirmation, 2014 Tim Howard game (2-1 AET, De Bruyne/Lukaku extra-time goals, 16 saves), Balogun red card/suspension"
+    },
+    {
+      "outlet": "FOX Sports",
+      "url": "https://www.foxsports.com/live-blog/soccer/belgium-vs-senegal-live-updates-score-latest-world-cup-news-goals",
+      "retrieved_at": "2026-07-02",
+      "used_for": "De Bruyne/Doku 56th-minute tactical substitutions while facing elimination"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/7/2/belgium-stage-3-2-comeback-win-over-senegal-to-enter-world-cup-last",
+      "retrieved_at": "2026-07-02",
+      "used_for": "Cross-check of scoreline, penalty circumstances and next-round pairing (notes 87'/90' minute variance vs Sky)"
+    },
+    {
+      "outlet": "Sporza (VRT)",
+      "url": "https://sporza.be/nl/2026/03/26/een-verhaal-vol-helden-maar-ook-een-pineut-wiens-leven-voorgoed-veranderde-reconstructie-van-het-vs-duel-waarin-wereld-de-duivels-ontdekte~1774531968094/",
+      "lang": "nl",
+      "retrieved_at": "2026-07-02",
+      "used_for": "Belgian-press memory of the 2014 Belgium-USA tie ('the match in which the world discovered the Devils')"
+    },
+    {
+      "outlet": "World Soccer Talk",
+      "url": "https://worldsoccertalk.com/watch-on-us-tv/how-to-watch-belgium-vs-senegal-in-the-usa-live-stream-and-tv-for-2026-world-cup/",
+      "retrieved_at": "2026-07-02",
+      "used_for": "Sole source for the Zeno Debast injury doubt (flagged weak in gaps)"
     },
     {
       "outlet": "ESPN",
       "url": "https://www.espn.com/soccer/story/_/id/49072841/group-g-2026-world-cup-teams-records-stats-know-belgium-iran-new-zealand-egypt",
-      "retrieved_at": "2026-06-28"
-    },
-    {
-      "outlet": "Goal.com",
-      "url": "https://www.goal.com/en-us/lists/rudi-garcia-defends-belgium-world-cup-kevin-de-bruyne-leandro-trossard-romelu-lukaku/bltf2ade5e404faf930",
-      "retrieved_at": "2026-06-28"
-    },
-    {
-      "outlet": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/soccer/breaking-news/article/2026-world-cup-belgium-leapfrogs-egypt-to-win-group-g-while-iran-experiences-var-heartbreak-052016991.html",
-      "retrieved_at": "2026-06-28"
-    },
-    {
-      "outlet": "Sky Sports",
-      "url": "https://www.skysports.com/football/news/29908/13556698/world-cup-2026-new-zealand-1-5-belgium-leandro-trossards-double-helps-red-devils-reach-knockout-stages",
-      "retrieved_at": "2026-06-28"
+      "retrieved_at": "2026-06-28",
+      "used_for": "Retained golden-generation/historical framing from the group-stage cycle"
     },
     {
       "outlet": "FIFA (Garcia interview, English aggregation via IANS)",
       "url": "https://ianslive.in/fifa-wc-2026-belgium-are-capable-of-achieving-great-things-says-coach-garcia--20260530122912",
-      "retrieved_at": "2026-06-28"
-    },
-    {
-      "outlet": "beIN Sports",
-      "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/de-bruyne-and-lukaku-named-in-belgium-world-cup-squad-despite-injuries-2026-05-15",
-      "retrieved_at": "2026-06-28"
-    },
-    {
-      "outlet": "Big News Network",
-      "url": "https://www.bignewsnetwork.com/news/279151328/fifa-world-cup-2026-kevin-de-bruyne-becomes-first-belgium-player-to-score-in-three-editions",
-      "retrieved_at": "2026-06-28"
-    },
-    {
-      "outlet": "Belga News Agency",
-      "url": "https://www.belganewsagency.eu/2026-world-cup-belgium-to-face-senegal-in-round-of-32",
-      "retrieved_at": "2026-06-28"
-    },
-    {
-      "outlet": "Sporza (VRT)",
-      "url": "https://sporza.be/nl/2026/06/28/-verlies-nog-liever-van-frankrijk-door-sterke-band-met-roots-wilde-amadou-onana-senegal-absoluut-vermijden~1782633199915/",
-      "lang": "nl",
       "retrieved_at": "2026-06-28",
-      "used_for": "Amadou Onana Senegalese roots / emotional dilemma facing his motherland; two verbatim Onana quotes (re-reported from a pre-draw Just Riadh interview)"
-    },
-    {
-      "outlet": "Sporza (VRT)",
-      "url": "https://sporza.be/nl/2026/06/28/op-papier-de-zwaarste-tegenstander-rode-duivels-treffen-senegal-in-1-16e-finales-officieuze-afrikaanse-kampioen-die-woelig-wk-kent~1782606738740/",
-      "lang": "nl",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Sporza framing of Senegal as toughest draw on paper; unofficial-African-champion context; opponent/venue context (Lumen Field, Seattle), held as press-reported vs DB TBD"
-    },
-    {
-      "outlet": "Sporza (VRT)",
-      "url": "https://sporza.be/nl/2026/06/28/het-flitsende-gevaar-komt-van-overal-al-rommelt-het-in-interne-keuken-de-sterktes-en-zwaktes-van-senegal-uitgelicht~1782612133491/",
-      "lang": "nl",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Senegal strengths/weaknesses and internal turmoil angle (defence, late bonuses, catering, coach contract) as read by the Belgian press; Mane/Jackson/Sarr"
-    },
-    {
-      "outlet": "Sporza (VRT)",
-      "url": "https://sporza.be/nl/2026/06/26/peter-vandenbempt-zet-alle-rode-duivels-op-scherp-voor-scharniermoment-dit-zou-de-grootste-blamage-uit-onze-geschiedenis-zijn~1782451890360/",
-      "lang": "nl",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Vandenbempt 'turning point / biggest disgrace' pre-knockout honour framing around the New Zealand decider"
-    },
-    {
-      "outlet": "RTBF",
-      "url": "https://www.rtbf.be/article/coupe-du-monde-2026-les-diables-rouges-rencontreront-le-senegal-en-16es-de-finale-11748901",
-      "lang": "fr",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Francophone framing of the Senegal draw, bracket path (US/Bosnia winner, distant QF), base-camp edge"
-    },
-    {
-      "outlet": "RTBF",
-      "url": "https://www.rtbf.be/article/le-morning-le-prochain-adversaire-des-diables-est-connu-le-senegal-c-est-du-costaud-mais-leur-jeu-peut-nous-convenir-11748931",
-      "lang": "fr",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Verbatim Fred Waseige analyst quote on the Senegal draw (dedicated 'Le Morning' article)"
+      "used_for": "Retained pre-tournament Garcia underdog framing"
     }
   ]
 }

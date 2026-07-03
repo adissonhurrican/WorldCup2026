@@ -1,495 +1,373 @@
 {
   "team_code": "MEX",
-  "round": "R32",
-  "next_opponent_code": "TBD",
+  "round": "R16",
+  "next_opponent_code": "ENG",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
-  "confidence": "high",
+  "last_updated": "2026-07-01",
+  "confidence": "medium",
   "national_expectations": {
-    "summary": "As co-hosts who topped Group A without dropping a point or conceding a goal, the country expects Mexico to finally break the so-called fifth-game barrier and reach a quarter-final on home soil. Mexican press frames the Round of 32 at the renamed Azteca (Estadio Ciudad de Mexico) as the start of a deeper run; manager Javier Aguirre repeatedly tells reporters that finishing first is anecdotal and only the final placing matters, deliberately pointing the bar beyond the next match.",
+    "summary": "Expectations have jumped overnight from hoping to avoid another early exit to genuinely believing this is the year El Tri finally get past the round of 16. Beating Ecuador 2-0 at the Azteca ended a 40-year wait for a World Cup knockout win and put Mexico into the so-called quinto partido (fifth match) for the first time since hosting in 1986. Press coverage now frames the England tie, at the same Azteca where Mexico's only prior fifth-match appearance came, as both the biggest test of the tournament and, since quarter-finals onward move exclusively to the United States and Canada, Mexico's last match on home soil this World Cup.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "El Informador",
-        "url": "https://www.informador.mx/deportes/mundial-2026-javier-aguirre-pone-freno-a-la-euforia-tras-el-liderato-de-mexico-20260618-0236.html",
-        "date": "2026-06-18",
-        "lang": "es"
-      },
-      {
-        "outlet": "Reuters via Cyprus Mail",
-        "url": "https://cyprus-mail.com/2026/06/03/mexicos-world-cup-curse-faces-ultimate-test-on-home-soil",
-        "date": "2026-06-03",
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49232657/mexico-ecuador-2026-world-cup-knockout-win",
+        "date": "2026-07-01",
         "lang": "en"
       },
       {
+        "outlet": "Mediotiempo",
+        "url": "https://www.mediotiempo.com/futbol/copa-mundial/proximo-partido-de-mexico-fecha-y-rival-en-octavos-final-mundial-2026",
+        "date": "2026-07-01",
+        "lang": "es"
+      },
+      {
         "outlet": "El Informador",
-        "url": "https://www.informador.mx/deportes/mundial-2026-cuando-juega-mexico-los-16avos-y-contra-quien-20260626-0213.html",
-        "date": "2026-06-26",
+        "url": "https://www.informador.mx/deportes/mundial-2026-cuantos-partidos-faltan-por-jugarse-en-mexico-tras-la-despedida-de-guadalajara-20260628-0043.html",
+        "date": "2026-06-28",
         "lang": "es"
       }
     ]
   },
   "national_mood": {
-    "summary": "Optimism is high and tinged with cautious hope rather than full euphoria. Mexican outlets describe a country illusioned by the first perfect group stage in its World Cup history, with the home crowd and the Mexico City venue feeding belief, yet the long shadow of repeated last-sixteen exits keeps anxiety present. Coverage emphasises confidence and momentum into the knockout match while the manager openly works to temper celebration.",
+    "summary": "Jubilant but not giddy. Coverage describes a Azteca crowd unlike anything seen in decades and a manager, Javier Aguirre, who called it the best win of his career purely because it happened at home, yet the same coverage carries Aguirre's own post-match self-criticism about chances not converted, keeping the tone grounded rather than triumphant. There is real respect for England's quality (Harry Kane's brace against DR Congo is repeatedly cited), mixed with confidence drawn from the perfect group stage, the clean run to the round of 16, and the altitude of the Azteca as a home-continent equalizer.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "El Informador",
-        "url": "https://www.informador.mx/deportes/mundial-2026-javier-aguirre-pone-freno-a-la-euforia-tras-el-liderato-de-mexico-20260618-0236.html",
-        "date": "2026-06-18",
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49232657/mexico-ecuador-2026-world-cup-knockout-win",
+        "date": "2026-07-01",
+        "lang": "en"
+      },
+      {
+        "outlet": "Récord",
+        "url": "https://www.record.com.mx/historia/se-nos-escapa-aguirre-lamento-falta-de-contundencia-en-triunfo-de-mexico-contra-ecuador-2026070105165069646",
+        "date": "2026-06-30",
         "lang": "es"
       },
       {
-        "outlet": "El Financiero",
-        "url": "https://www.elfinanciero.com.mx/deportes/mundial-2026/2026/06/24/mexico-vs-chequia-en-vivo-resultado-del-ultimo-partido-de-la-fase-de-grupos/",
-        "date": "2026-06-24",
-        "lang": "es"
-      },
-      {
-        "outlet": "El Informador",
-        "url": "https://www.informador.mx/deportes/mundial-2026-cuando-juega-mexico-los-16avos-y-contra-quien-20260626-0213.html",
-        "date": "2026-06-26",
-        "lang": "es"
+        "outlet": "TV Azteca",
+        "url": "https://www.tvazteca.com/aztecadeportes/mexico-vs-inglaterra-altura-cdmx-mundial-2026/",
+        "date": "2026-07-01",
+        "lang": "es",
+        "reviewer_note": "Not on the team-story outlet allowlist; included as 'other' per policy. TV Azteca is Grupo Salinas' national sports broadcaster and a mainstream, non-betting outlet, used only for the altitude/oxygen framing."
       }
     ]
   },
   "manager_situation": {
-    "summary": "Javier Aguirre, known as El Vasco, is in his third World Cup cycle in charge of Mexico and is riding a wave of credibility after delivering the team's first perfect group stage. His standing is strong, but it carries weight: his previous two World Cup spells both ended in last-sixteen defeats, so the home knockout match is framed as his chance to rewrite that record. He has been pointedly pragmatic in press conferences, downplaying the group win and deflecting questions about veteran goalkeeper Guillermo Ochoa.",
+    "summary": "Javier Aguirre is now the first Mexico coach in a generation to win a World Cup knockout match: his previous two cycles in charge (2002, 2010) both ended in round-of-16 defeats, and he was on the pitch, and was sent off, as a player when Mexico lost the 1986 quarter-final to West Germany at the same Azteca. He called the Ecuador win the most important victory of his career specifically because it came at home in front of Mexican fans. He remained pragmatic afterward, lamenting missed chances that could have made the scoreline more emphatic, and explained his surprise call to leave Edson Alvarez out of the starting eleven as a tactical choice, in favour of Cesar Montes and Johan Vasquez at the back and a more technical Erik Lira-Luis Romo-Gilberto Mora midfield, rather than any fitness issue.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Sports Illustrated (es-us)",
-        "url": "https://www.si.com/es-us/futbol/las-declaraciones-de-javier-aguirre-previo-al-duelo-de-mexico-vs-republica-checa",
-        "date": "2026-06-23",
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49232657/mexico-ecuador-2026-world-cup-knockout-win",
+        "date": "2026-07-01",
+        "lang": "en"
+      },
+      {
+        "outlet": "Récord",
+        "url": "https://www.record.com.mx/historia/se-nos-escapa-aguirre-lamento-falta-de-contundencia-en-triunfo-de-mexico-contra-ecuador-2026070105165069646",
+        "date": "2026-06-30",
         "lang": "es"
       },
       {
-        "outlet": "El Informador",
-        "url": "https://www.informador.mx/deportes/mundial-2026-javier-aguirre-pone-freno-a-la-euforia-tras-el-liderato-de-mexico-20260618-0236.html",
-        "date": "2026-06-18",
-        "lang": "es"
-      },
-      {
-        "outlet": "Reporte Indigo",
-        "url": "https://www.reporteindigo.com/deportes/por-que-le-dicen-el-vasco-a-javier-aguirre-de-jugar-el-quinto-partido-en-mexico-1986-a-hacer-historia-en-el-mundial-2026-20260625-0048.html",
-        "date": "2026-06-25",
-        "lang": "es"
+        "outlet": "TV Azteca",
+        "url": "https://www.tvazteca.com/aztecadeportes/por-que-no-juega-edson-alvarez-en-mexico-vs-ecuador/",
+        "date": "2026-06-30",
+        "lang": "es",
+        "reviewer_note": "Not on the allowlist; included as 'other'. TV Azteca is a mainstream national broadcaster, used here only to source the tactical (not fitness) explanation for benching Edson Alvarez."
       }
     ]
   },
   "historical_context": {
-    "summary": "Mexico's defining World Cup history is the so-called fifth-game curse: in the modern era they have repeatedly advanced from the group stage only to fall in the last sixteen, and they have not reached a quarter-final since hosting the tournament in nineteen eighty-six. Their deepest runs, in nineteen seventy and nineteen eighty-six, both came on home soil. The squad now carries the first perfect group stage in the country's World Cup history, and Raul Jimenez scored his first ever World Cup goal in the opening win over South Africa after three previous tournaments without one. Aguirre himself was part of the nineteen eighty-six side that reached the last eight at home, and was sent off in that quarter-final against West Germany.",
+    "summary": "Mexico's defining World Cup story remains the fifth-game barrier: in the modern era they had repeatedly advanced from the group stage only to fall in the round of 16, and had not reached a quarter-final since hosting in 1986. That barrier is now down. Beating Ecuador 2-0 put Mexico into the quinto partido for the first time in 40 years, and Aguirre, who played in the 1986 side that reached that same stage (and the quarter-final after it, losing to West Germany), is now the coach who finally got a Mexico team through it. England add their own symbolism to the reunion at the Azteca: their last World Cup match at the stadium was the 1986 quarter-final defeat to Argentina, settled by Diego Maradona's Hand of God and Goal of the Century. This round-of-16 tie is also, by tournament design, Mexico's last match on home soil this World Cup: every match from the quarter-finals onward is played exclusively in the United States and Canada.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Goal.com",
-        "url": "https://www.goal.com/story/mexicocurse/index.html",
-        "date": "2026-06-01",
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49232657/mexico-ecuador-2026-world-cup-knockout-win",
+        "date": "2026-07-01",
         "lang": "en"
       },
       {
-        "outlet": "Reuters via Cyprus Mail",
-        "url": "https://cyprus-mail.com/2026/06/03/mexicos-world-cup-curse-faces-ultimate-test-on-home-soil",
-        "date": "2026-06-03",
-        "lang": "en"
-      },
-      {
-        "outlet": "Reporte Indigo",
-        "url": "https://www.reporteindigo.com/deportes/por-que-le-dicen-el-vasco-a-javier-aguirre-de-jugar-el-quinto-partido-en-mexico-1986-a-hacer-historia-en-el-mundial-2026-20260625-0048.html",
-        "date": "2026-06-25",
+        "outlet": "El Financiero",
+        "url": "https://www.elfinanciero.com.mx/deportes/mundial-2026/2026/07/01/inglaterra-es-el-proximo-rival-de-mexico-donde-y-cuando-es-el-partido-de-octavos-de-final/",
+        "date": "2026-07-01",
         "lang": "es"
       },
       {
-        "outlet": "Goal.com",
-        "url": "https://www.goal.com/en/lists/mexico-player-ratings-south-africa-world-cup-julian-quinones-raul-jimenez/blt365e80204ee279c1",
-        "date": "2026-06-11",
-        "lang": "en"
+        "outlet": "Mediotiempo",
+        "url": "https://www.mediotiempo.com/futbol/copa-mundial/proximo-partido-de-mexico-fecha-y-rival-en-octavos-final-mundial-2026",
+        "date": "2026-07-01",
+        "lang": "es"
+      },
+      {
+        "outlet": "El Informador",
+        "url": "https://www.informador.mx/deportes/mundial-2026-cuantos-partidos-faltan-por-jugarse-en-mexico-tras-la-despedida-de-guadalajara-20260628-0043.html",
+        "date": "2026-06-28",
+        "lang": "es"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "The fifth-game curse and a home-soil shot at redemption: the dominant frame in Mexican and international press is that this knockout match, played at the Mexico City venue, is Mexico's best chance in a generation to finally pass the last sixteen and reach a quarter-final, with the perfect group stage and home crowd feeding the belief and Aguirre's two prior last-sixteen exits adding personal stakes.",
+      "storyline": "The quinto partido curse is over, and it has Aguirre's fingerprints on both ends: as a player he was part of the 1986 team that reached the fifth match and the quarter-final that followed, and as coach he has now, on his third World Cup cycle in charge, finally taken a Mexico team past the round-of-32 stage where his own two prior cycles (2002, 2010) both ended. Outlets frame the England tie as the payoff match for a narrative the country has carried for 40 years.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Goal.com",
-          "url": "https://www.goal.com/story/mexicocurse/index.html",
-          "date": "2026-06-01",
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49232657/mexico-ecuador-2026-world-cup-knockout-win",
+          "date": "2026-07-01",
           "lang": "en"
         },
         {
-          "outlet": "Reuters via Cyprus Mail",
-          "url": "https://cyprus-mail.com/2026/06/03/mexicos-world-cup-curse-faces-ultimate-test-on-home-soil",
-          "date": "2026-06-03",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "A perfect group stage as a generational milestone: outlets repeatedly highlight that this is the first time Mexico has taken nine points from nine, scored six and conceded none in a World Cup group, framing it as the best group phase in the country's history and a foundation for confidence going into the knockouts.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "El Informador",
-          "url": "https://www.informador.mx/deportes/mundial-2026-cuando-juega-mexico-los-16avos-y-contra-quien-20260626-0213.html",
-          "date": "2026-06-26",
-          "lang": "es"
-        },
-        {
-          "outlet": "El Financiero",
-          "url": "https://www.elfinanciero.com.mx/deportes/mundial-2026/2026/06/24/mexico-vs-chequia-en-vivo-resultado-del-ultimo-partido-de-la-fase-de-grupos/",
-          "date": "2026-06-24",
+          "outlet": "Récord",
+          "url": "https://www.record.com.mx/historia/y-si-si-mexico-vence-a-ecuador-y-avanza-a-octavos-de-final-en-el-mundial-2026-2026070104044826829",
+          "date": "2026-06-30",
           "lang": "es"
         }
       ]
     },
     {
-      "storyline": "Aguirre's selection puzzle in central defence and midfield: TUDN reports the manager is weighing Cesar Montes against Edson Alvarez at the back and rotating his midfield pairing for the knockout, with Raul Jimenez, Julian Quinones and Roberto Alvarado expected to lead the attack, making the lineup a live tactical debate ahead of the match.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "TUDN",
-          "url": "https://www.tudn.com/mundial-2026/equipos/seleccion-mexico/javier-aguirre-ya-vislumbra-la-alineacion-de-mexico-contra-ecuador-o-escocia-en-la-copa-del-mundo-2026",
-          "date": "2026-06-26",
-          "lang": "es"
-        }
-      ]
-    },
-    {
-      "storyline": "Raul Jimenez's redemption as the home striker: the veteran finally scored his first World Cup goal in the opening win over South Africa after going scoreless across three previous tournaments, and is framed as the figurehead of the attack at his home World Cup.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Goal.com",
-          "url": "https://www.goal.com/en/lists/mexico-player-ratings-south-africa-world-cup-julian-quinones-raul-jimenez/blt365e80204ee279c1",
-          "date": "2026-06-11",
-          "lang": "en"
-        },
-        {
-          "outlet": "Bolavip US",
-          "url": "https://bolavip.com/en/world-cup/mexico-vs-south-africa-live-2026-world-cup-opening-game",
-          "date": "2026-06-11",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "Tala Rangel has displaced legend Ochoa as the settled number one: Mexican press frames Raul 'Tala' Rangel, the Chivas keeper, as Aguirre's chosen starter, having played all three group games and kept a clean sheet throughout against South Africa, South Korea and Czechia. Record stresses he equalled a Mexico mark for a clean group stage not matched since Nacho Calderon in 1970, with veteran Ochoa kept on the bench, turning the goalkeeper question into a generational changing-of-the-guard story going into the knockout.",
+      "storyline": "A grounded reaction to a landmark win: rather than pure celebration, Aguirre's own post-match tone stressed what went wrong (chances not converted, defensive lapses late on) even while calling it the best win of his career, and Récord's headline framing captured his self-criticism directly. The team's messaging stays measured heading into a bigger test against England.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Récord",
-          "url": "https://www.record.com.mx/historia/tala-rangel-iguala-una-historica-marca-con-la-seleccion-mexicana-2026062619582465822",
-          "date": "2026-06-26",
+          "url": "https://www.record.com.mx/historia/se-nos-escapa-aguirre-lamento-falta-de-contundencia-en-triunfo-de-mexico-contra-ecuador-2026070105165069646",
+          "date": "2026-06-30",
           "lang": "es"
         },
         {
-          "outlet": "Mediotiempo",
-          "url": "https://www.mediotiempo.com/futbol/seleccion-mayor/ochoa-no-va-de-titular-cambios-alineacion-mexico-enfrentar-chequia-mundial-2026",
-          "date": "2026-06-24",
-          "lang": "es"
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49232657/mexico-ecuador-2026-world-cup-knockout-win",
+          "date": "2026-07-01",
+          "lang": "en"
         }
       ]
     },
     {
-      "storyline": "Gilberto Mora's teenage breakout is the feel-good subplot of Mexico's run: the Xolos de Tijuana midfielder started against Czechia and was named by the national press as the youngest Mexican ever to start a World Cup match, breaking a record that had stood since Manuel Rosas. Outlets describe him as among the best on the pitch and built into Aguirre's plans, with El Universal reporting his agent Rafaela Pimenta expects him to become a transfer-market protagonist after the tournament.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Mediotiempo",
-          "url": "https://www.mediotiempo.com/futbol/copa-mundial/gilberto-mora-jugador-joven-titular-mexico-mundial",
-          "date": "2026-06-24",
-          "lang": "es"
-        },
-        {
-          "outlet": "TUDN",
-          "url": "https://www.tudn.com/mundial-2026/chequia-vs-mexico/gilberto-mora-reconoce-a-memo-ochoa-tras-homenaje-ante-chequia",
-          "date": "2026-06-24",
-          "lang": "es"
-        },
-        {
-          "outlet": "El Universal",
-          "url": "https://www.eluniversal.com.mx/deportes/gilberto-mora-sera-el-protagonista-del-mercado-tras-el-mundial-2026/",
-          "date": "2026-05-07",
-          "lang": "es"
-        }
-      ]
-    },
-    {
-      "storyline": "Ochoa's emotional cameo as a sentimental thread: with Rangel established in goal, the press built the final group win over Czechia into a homage to Ochoa, who came on late at the Estadio Ciudad de Mexico to a warm reception, his standing as the first Mexican to feature across six World Cups celebrated even as the team turns the page to a younger keeper for the knockout.",
+      "storyline": "Julian Quinones, named Player of the Match after scoring and setting up Mexico's second goal, used the post-match platform to fire back at critics who question naturalized players' commitment to the national team, insisting the squad's Europe-based players are not inherently better than those, like him, playing outside Europe. It reopens a recurring identity debate around Mexico's naturalized-player selections in a moment of triumph rather than tension.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "TUDN",
-          "url": "https://www.tudn.com/mundial-2026/chequia-vs-mexico/gilberto-mora-reconoce-a-memo-ochoa-tras-homenaje-ante-chequia",
-          "date": "2026-06-24",
-          "lang": "es"
-        },
-        {
-          "outlet": "Récord",
-          "url": "https://www.record.com.mx/historia/tala-rangel-iguala-una-historica-marca-con-la-seleccion-mexicana-2026062619582465822",
-          "date": "2026-06-26",
+          "url": "https://www.tudn.com/mundial-2026/mexico-vs-ecuador/mexico-vs-ecuador-julian-quinones-lanza-tajante-respuesta-a-quienes-critican-naturalizados",
+          "date": "2026-07-01",
           "lang": "es"
         }
       ]
     },
     {
-      "storyline": "A fresh midfield selection debate for the Round of 32: Record's projected XI reports that alongside the established defensive question of Cesar Montes versus Edson Alvarez, a new battle has opened in midfield between teenager Gilberto Mora and Brian Gutierrez, with both having impressed in the group stage, while Erik Lira and Alvaro Fidalgo are pencilled in and the attack of Roberto Alvarado, Julian Quinones and Raul Jimenez is projected to lead the line for the knockout.",
+      "storyline": "The Azteca's altitude, roughly 2,240 metres above sea level versus sea-level venues England is used to, is being pushed hard by Mexican outlets as an invisible home advantage for the England tie, alongside Mexico's historically strong record at the stadium in World Cup knockout football and an extra day of rest compared to England's schedule.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Récord",
-          "url": "https://www.record.com.mx/historia/seleccion-mexicana-posible-xl-de-javier-aguirre-en-dieciseisavos-de-final-2026062722284874752",
-          "date": "2026-06-27",
-          "lang": "es"
+          "outlet": "TV Azteca",
+          "url": "https://www.tvazteca.com/aztecadeportes/mexico-vs-inglaterra-altura-cdmx-mundial-2026/",
+          "date": "2026-07-01",
+          "lang": "es",
+          "reviewer_note": "Not on the allowlist; included as 'other'. Mainstream national broadcaster, used for the altitude/rest-day framing only; betting-odds content in the same piece was excluded per the no-odds rule."
+        }
+      ]
+    },
+    {
+      "storyline": "England's own players are treating the Azteca visit as one of the tournament's defining tests: reported comments (via a Latin American outlet's translation of press-conference remarks, not verified as primary-language verbatim) have Harry Kane and Declan Rice both describing the atmosphere Mexico will generate as being as big as it gets. Not used as a direct quote here because the sourcing is a translation of a translation, but the sentiment is attributed reporting, not narrated as fact.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Infobae",
+          "url": "https://www.infobae.com/mexico/deportes/2026/07/02/harry-kane-declan-rice-y-mas-jugadores-hablan-sobre-el-mexico-vs-inglaterra-en-el-estadio-azteca-no-hay-nada-mas-grande/",
+          "date": "2026-07-02",
+          "lang": "es",
+          "reviewer_note": "Not on the allowlist; included as 'other'. Infobae is a major, mainstream Latin American digital outlet (non-betting, non-tabloid), used only for this England-side colour; quotes were English originally, so no verbatim claim is made from this Spanish-language rendering."
+        }
+      ]
+    },
+    {
+      "storyline": "Edson Alvarez's absence from the starting eleven against Ecuador was initially read by some outlets as a fitness question, but reporting resolved it as a tactical call by Aguirre, who preferred Cesar Montes and Johan Vasquez in central defence and a more technical midfield trio. Alvarez remains in the squad and available, but is reported to be one caution away from a suspension that would rule him out of a potential quarter-final, making his participation against England, if he plays, a disciplinary watch point rather than a fitness one.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "TV Azteca",
+          "url": "https://www.tvazteca.com/aztecadeportes/por-que-no-juega-edson-alvarez-en-mexico-vs-ecuador/",
+          "date": "2026-06-30",
+          "lang": "es",
+          "reviewer_note": "Not on the allowlist; included as 'other'. Mainstream national broadcaster, used for the tactical explanation and yellow-card count."
         }
       ]
     }
   ],
   "attributed_quotes": [
     {
-      "quote": "It is anecdotal to finish as leader today and in 2002. In the end what counts is the final placing",
-      "quote_original": "Es anecdotico quedar de lider hoy y en 2002. Al final lo que cuenta es el lugar final",
+      "quote": "It had been about 40 years since the last time I saw the Azteca like this",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Javier Aguirre",
+      "speaker_role": "Mexico head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49232657/mexico-ecuador-2026-world-cup-knockout-win",
+      "date": "2026-07-01",
+      "context": "Aguirre reacting to the crowd and atmosphere after Mexico's 2-0 win over Ecuador, drawing a direct line to the 1986 home World Cup. Quoted in ESPN's English-language report; original Spanish wording not separately confirmed."
+    },
+    {
+      "quote": "I was one of those players who couldn't make it to the fifth game. It hurts a lot",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Javier Aguirre",
+      "speaker_role": "Mexico head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49232657/mexico-ecuador-2026-world-cup-knockout-win",
+      "date": "2026-07-01",
+      "context": "Aguirre explaining the personal significance of the win, referencing his own playing career (he reached this round in 1986 but not as a coach until now). Excerpt of a longer quote ('This win means a lot to me...'); meaning unchanged."
+    },
+    {
+      "quote": "Se nos escapa ahi, teniamos para hacer el tercer gol",
+      "quote_original": "Se nos escapa ahi, teniamos para hacer el tercer gol",
       "lang": "es",
       "speaker_name": "Javier Aguirre",
       "speaker_role": "Mexico head coach",
-      "outlet": "El Informador",
-      "url": "https://www.informador.mx/deportes/mundial-2026-javier-aguirre-pone-freno-a-la-euforia-tras-el-liderato-de-mexico-20260618-0236.html",
-      "date": "2026-06-18",
-      "context": "Aguirre tempering euphoria after Mexico secured first place in Group A, referencing his 2002 side that also led its group but went out in the last sixteen. Re-fetched and confirmed verbatim.",
       "source_tier": "discovery",
-      "verification": "attributed_context_only"
+      "verification": "attributed_context_only",
+      "outlet": "Récord",
+      "url": "https://www.record.com.mx/historia/se-nos-escapa-aguirre-lamento-falta-de-contundencia-en-triunfo-de-mexico-contra-ecuador-2026070105165069646",
+      "date": "2026-06-30",
+      "context": "Aguirre self-critical in the post-match press conference despite the win, saying the win could and should have been by a wider margin. English sense: 'It slips away there, we had the chances to make it a third goal.'"
     },
     {
-      "quote": "I am not here to prove things to people, I am here so these 26 play good football",
-      "quote_original": "Yo no estoy aqui para demostrarle a la gente, estoy para que estos 26 jueguen bien al futbol",
+      "quote": "Aunque algunos no estemos en Europa, eso no quiere decir que no trabajemos al maximo para nuestra seleccion",
+      "quote_original": "Aunque algunos no estemos en Europa, eso no quiere decir que no trabajemos al maximo para nuestra seleccion",
       "lang": "es",
-      "speaker_name": "Javier Aguirre",
-      "speaker_role": "Mexico head coach",
-      "outlet": "Sports Illustrated (es-us)",
-      "url": "https://www.si.com/es-us/futbol/las-declaraciones-de-javier-aguirre-previo-al-duelo-de-mexico-vs-republica-checa",
-      "date": "2026-06-23",
-      "context": "Aguirre defending his merit-based approach in the pre-match press conference before the final group game against Czechia. Verbatim prefix of a longer sentence ('...e ir partido a partido a ver hasta donde nos alcanza'); meaning unchanged.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only"
-    },
-    {
-      "quote": "The Mexican team is here to be champions",
-      "quote_original": "La Seleccion Mexicana esta para ser campeones",
-      "lang": "es",
-      "speaker_name": "Gilberto Mora",
-      "speaker_role": "Mexico midfielder",
+      "speaker_name": "Julian Quinones",
+      "speaker_role": "Mexico forward, Player of the Match vs Ecuador",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "outlet": "TUDN",
-      "url": "https://www.tudn.com/mundial-2026/chequia-vs-mexico/gilberto-mora-reconoce-a-memo-ochoa-tras-homenaje-ante-chequia",
-      "date": "2026-06-24",
-      "context": "Teenage midfielder Mora expressing belief in Mexico's ambitions after the perfect group stage and the win over Czechia. First player-voice quote located (existing file logged absence of one). Re-fetched and confirmed verbatim."
+      "url": "https://www.tudn.com/mundial-2026/mexico-vs-ecuador/mexico-vs-ecuador-julian-quinones-lanza-tajante-respuesta-a-quienes-critican-naturalizados",
+      "date": "2026-07-01",
+      "context": "Quinones responding to criticism of naturalized players after scoring and assisting in the win over Ecuador. English sense: 'Even though some of us aren't in Europe, that doesn't mean we don't work our hardest for our national team.' Exact publish timestamp on TUDN's site not independently confirmed; dated to match-reaction cycle."
     },
     {
-      "quote": "I am very happy, I am as if in a dream, the truth is",
-      "quote_original": "Estoy muy contento, estoy como en un sueno la verdad",
+      "quote": "Yo no callo bocas",
+      "quote_original": "Yo no callo bocas",
       "lang": "es",
-      "speaker_name": "Gilberto Mora",
-      "speaker_role": "Mexico midfielder",
+      "speaker_name": "Julian Quinones",
+      "speaker_role": "Mexico forward, Player of the Match vs Ecuador",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "outlet": "TUDN",
-      "url": "https://www.tudn.com/mundial-2026/chequia-vs-mexico/gilberto-mora-reconoce-a-memo-ochoa-tras-homenaje-ante-chequia",
-      "date": "2026-06-24",
-      "context": "Mora reacting to his historic start and Mexico's win over Czechia. Verbatim; meaning unchanged. Re-fetched and confirmed verbatim."
-    },
-    {
-      "quote": "It was the night for him, that he could come on, very happy for him",
-      "quote_original": "Era la noche para el, que pudiera entrar, muy contento por el",
-      "lang": "es",
-      "speaker_name": "Gilberto Mora",
-      "speaker_role": "Mexico midfielder",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "TUDN",
-      "url": "https://www.tudn.com/mundial-2026/chequia-vs-mexico/gilberto-mora-reconoce-a-memo-ochoa-tras-homenaje-ante-chequia",
-      "date": "2026-06-24",
-      "context": "Mora paying tribute to Ochoa, who came on as a substitute against Czechia at the Estadio Ciudad de Mexico. Verbatim excerpt of a longer answer ('...muy feliz por tenerlo como companero. Es un idolo para mi'); meaning unchanged. Re-fetched and confirmed verbatim."
+      "url": "https://www.tudn.com/mundial-2026/mexico-vs-ecuador/mexico-vs-ecuador-julian-quinones-lanza-tajante-respuesta-a-quienes-critican-naturalizados",
+      "date": "2026-07-01",
+      "context": "Quinones on continuing to answer critics rather than staying silent, after being questioned throughout the tournament over his naturalized status. English sense: 'I don't shut mouths (i.e., I won't be silenced).' Exact publish timestamp not independently confirmed."
     }
   ],
   "local_availability_reporting": [
     {
       "player_name": "Edson Alvarez",
-      "summary": "Reported as a selection question rather than a confirmed absence. In the days before the knockout, TUDN frames him as competing with Cesar Montes for the central role, leaving his start uncertain. Earlier pre-tournament reporting had flagged a recurring ankle problem that put his fitness in doubt, but he is in the squad and the live story is who Aguirre picks, not availability.",
+      "reported_status": "Not a fitness or injury doubt: reporting confirms his omission from the starting eleven against Ecuador was a tactical decision by Aguirre (Montes/Vasquez preferred at the back, a more technical midfield trio). He picked up a yellow card during the group stage and is now reported to be one caution away from a suspension that would rule him out of a subsequent match if he plays and is booked against England; this is a disciplinary risk, not a confirmed absence.",
       "confirmed": false,
       "source_tier": "discovery",
       "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "TUDN",
-          "url": "https://www.tudn.com/mundial-2026/equipos/seleccion-mexico/javier-aguirre-ya-vislumbra-la-alineacion-de-mexico-contra-ecuador-o-escocia-en-la-copa-del-mundo-2026",
-          "date": "2026-06-26",
-          "lang": "es"
-        },
-        {
-          "outlet": "Sports Illustrated (es-us)",
-          "url": "https://www.si.com/es-us/futbol/quienes-no-llegarian-al-mundial-2026-edson-alvarez-santiago-gimenez-y-otros-jugadores-de-mexico-en-duda",
-          "date": "2026-01-26",
-          "lang": "es"
-        }
-      ]
+      "outlet": "TV Azteca",
+      "url": "https://www.tvazteca.com/aztecadeportes/por-que-no-juega-edson-alvarez-en-mexico-vs-ecuador/",
+      "date": "2026-06-30"
     }
   ],
   "gaps": [
-    "DB lists the R32 opponent as best-third to be confirmed; multiple Mexican and international outlets (El Informador, Infobae, Olympics.com, TUDN, Sports Illustrated) report the opponent will come from the third-placed pool, with Ecuador and Scotland most floated and Senegal named in earlier previews. Kept next_opponent_code as TBD per DB; opponent identity not treated as fact-grade.",
-    "No federation (FMF) or FIFA official statement on Mexico's expectations, mood or squad availability was sourced; all expectation/mood/manager claims rest on national press (discovery tier).",
-    "No verbatim quote from a Mexican player (only from manager Aguirre) was located within the constraints; player-voice quotes not included.",
-    "No confirmed injury or suspension ruling a Mexico player out of the R32 match was found in credible reporting as of the retrieval date; only the reported Edson Alvarez selection/fitness question is logged.",
-    "Group-stage scorers were taken from press match reports rather than an official FIFA/federation list: the June 11 opener vs South Africa was scored by Julian Quinones and Raul Jimenez (Goal.com, Bolavip), and the June 24 win vs Czechia by Mateo Chavez, Julian Quinones and Alvaro Fidalgo (Mediotiempo, El Financiero). An official goal-by-goal cross-check was not completed.",
-    "The Goal.com 'mexicocurse' feature is an evergreen, non-dated piece; its date is an approximation and it is used only for the well-corroborated curse/1986 framing, not as a sole source for any dated fact."
+    "No FIFA or CONCACAF official statement was sourced for Mexico's expectations, mood, manager situation, or squad availability; all claims here rest on national or international press (discovery tier only).",
+    "A FIFA.com article about Aguirre and the Ecuador win appeared in search results (fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/articles/javier-aguirre-mexico-mundial-2026-ecuador-octavos) but returned empty content on fetch; it could not be confirmed or used as an official source.",
+    "Reported comments from England players Harry Kane and Declan Rice about the magnitude of playing Mexico at the Azteca were only located via a Latin American outlet's Spanish translation of press-conference remarks originally given in English. Because a translation-of-a-translation cannot be confirmed verbatim, this was described only as attributed reporting in dominant_storylines, not included in attributed_quotes.",
+    "A claim that Mexico is the third team in World Cup history to open a tournament with four consecutive wins and a clean sheet (after Brazil 1986 and Italy 1990) surfaced in aggregated search summaries but could not be confirmed in any single fetched primary article; it was left out rather than stated as fact.",
+    "A claim that Raul Jimenez tied Hugo Sanchez's all-time Mexico scoring record with his goal against Ecuador appeared in one fetch summary but is numerically inconsistent with widely known Mexico scoring records; treated as unverified/likely erroneous and excluded.",
+    "Exact publish timestamps for the two TUDN-sourced Julian Quinones quotes were not independently confirmed; they are dated to the same-day/next-day match-reaction news cycle (2026-06-30/07-01) rather than a verified byline timestamp.",
+    "No confirmed injury or suspension ruling any Mexico player out of the England match was found in credible reporting as of the 2026-07-02 retrieval date; press coverage of team news specific to the England tie (predicted lineups, fresh knocks) remains thin this far out from kickoff (2026-07-06T00:00Z), which is reflected in the 'medium' confidence rating above.",
+    "TV Azteca and Infobae are used above as 'other' (non-allowlisted) outlets with reviewer notes, per policy, for supplementary colour (altitude framing, Edson Alvarez tactical explanation, England players' reported reaction); no primary claim about Mexico's own mood or manager situation rests solely on a non-allowlisted outlet.",
+    "Carried over from the prior (R32) file version: earlier storylines about Gilberto Mora's breakout and Guillermo Ochoa/Rangel's goalkeeper handover were not re-verified against fresh sourcing for this update and were trimmed rather than restated as current; Mora's continued selection ahead of Edson Alvarez in the Ecuador XI is corroborated above via TV Azteca, but no new sourcing was sought on Ochoa or Rangel specifically for this refresh."
   ],
   "source_data_snapshot": [
     {
-      "outlet": "Sports Illustrated",
-      "url": "https://www.si.com/soccer/mexico-2026-world-cup-knockout-stage-path-after-winning-group-a",
-      "retrieved_at": "2026-06-28",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49232657/mexico-ecuador-2026-world-cup-knockout-win",
+      "retrieved_at": "2026-07-02",
       "lang": "en"
     },
     {
-      "outlet": "El Informador",
-      "url": "https://www.informador.mx/deportes/mundial-2026-javier-aguirre-pone-freno-a-la-euforia-tras-el-liderato-de-mexico-20260618-0236.html",
-      "retrieved_at": "2026-06-28",
+      "outlet": "Récord",
+      "url": "https://www.record.com.mx/historia/se-nos-escapa-aguirre-lamento-falta-de-contundencia-en-triunfo-de-mexico-contra-ecuador-2026070105165069646",
+      "retrieved_at": "2026-07-02",
       "lang": "es"
     },
     {
-      "outlet": "El Informador",
-      "url": "https://www.informador.mx/deportes/mundial-2026-cuando-juega-mexico-los-16avos-y-contra-quien-20260626-0213.html",
-      "retrieved_at": "2026-06-28",
+      "outlet": "Récord",
+      "url": "https://www.record.com.mx/historia/mexico-clasifica-a-octavos-y-javier-aguirre-deja-claro-que-el-objetivo-no-esta-cumplido-2026070106032963825",
+      "retrieved_at": "2026-07-02",
       "lang": "es"
     },
     {
-      "outlet": "Sports Illustrated (es-us)",
-      "url": "https://www.si.com/es-us/futbol/las-declaraciones-de-javier-aguirre-previo-al-duelo-de-mexico-vs-republica-checa",
-      "retrieved_at": "2026-06-28",
-      "lang": "es"
-    },
-    {
-      "outlet": "Sports Illustrated (es-us)",
-      "url": "https://www.si.com/es-us/futbol/quienes-no-llegarian-al-mundial-2026-edson-alvarez-santiago-gimenez-y-otros-jugadores-de-mexico-en-duda",
-      "retrieved_at": "2026-06-28",
+      "outlet": "Récord",
+      "url": "https://www.record.com.mx/historia/y-si-si-mexico-vence-a-ecuador-y-avanza-a-octavos-de-final-en-el-mundial-2026-2026070104044826829",
+      "retrieved_at": "2026-07-02",
       "lang": "es"
     },
     {
       "outlet": "TUDN",
-      "url": "https://www.tudn.com/mundial-2026/equipos/seleccion-mexico/javier-aguirre-ya-vislumbra-la-alineacion-de-mexico-contra-ecuador-o-escocia-en-la-copa-del-mundo-2026",
-      "retrieved_at": "2026-06-28",
+      "url": "https://www.tudn.com/mundial-2026/mexico-vs-ecuador/mexico-vs-ecuador-julian-quinones-lanza-tajante-respuesta-a-quienes-critican-naturalizados",
+      "retrieved_at": "2026-07-02",
       "lang": "es"
-    },
-    {
-      "outlet": "Reporte Indigo",
-      "url": "https://www.reporteindigo.com/deportes/por-que-le-dicen-el-vasco-a-javier-aguirre-de-jugar-el-quinto-partido-en-mexico-1986-a-hacer-historia-en-el-mundial-2026-20260625-0048.html",
-      "retrieved_at": "2026-06-28",
-      "lang": "es"
-    },
-    {
-      "outlet": "Goal.com",
-      "url": "https://www.goal.com/story/mexicocurse/index.html",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
-    },
-    {
-      "outlet": "Goal.com",
-      "url": "https://www.goal.com/en/lists/mexico-player-ratings-south-africa-world-cup-julian-quinones-raul-jimenez/blt365e80204ee279c1",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
-    },
-    {
-      "outlet": "Bolavip US",
-      "url": "https://bolavip.com/en/world-cup/mexico-vs-south-africa-live-2026-world-cup-opening-game",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
-    },
-    {
-      "outlet": "Reuters via Cyprus Mail",
-      "url": "https://cyprus-mail.com/2026/06/03/mexicos-world-cup-curse-faces-ultimate-test-on-home-soil",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
     },
     {
       "outlet": "Mediotiempo",
-      "url": "https://www.mediotiempo.com/futbol/copa-mundial/resumen-partido-chequia-vs-mexico-0-3-grupo-a-mundial-2026",
-      "retrieved_at": "2026-06-28",
+      "url": "https://www.mediotiempo.com/futbol/copa-mundial/proximo-partido-de-mexico-fecha-y-rival-en-octavos-final-mundial-2026",
+      "retrieved_at": "2026-07-02",
       "lang": "es"
     },
     {
       "outlet": "El Financiero",
-      "url": "https://www.elfinanciero.com.mx/deportes/mundial-2026/2026/06/24/mexico-vs-chequia-en-vivo-resultado-del-ultimo-partido-de-la-fase-de-grupos/",
-      "retrieved_at": "2026-06-28",
+      "url": "https://www.elfinanciero.com.mx/deportes/mundial-2026/2026/07/01/inglaterra-es-el-proximo-rival-de-mexico-donde-y-cuando-es-el-partido-de-octavos-de-final/",
+      "retrieved_at": "2026-07-02",
       "lang": "es"
+    },
+    {
+      "outlet": "El Informador",
+      "url": "https://www.informador.mx/deportes/mundial-2026-cuantos-partidos-faltan-por-jugarse-en-mexico-tras-la-despedida-de-guadalajara-20260628-0043.html",
+      "retrieved_at": "2026-07-02",
+      "lang": "es"
+    },
+    {
+      "outlet": "TV Azteca",
+      "url": "https://www.tvazteca.com/aztecadeportes/mexico-vs-inglaterra-altura-cdmx-mundial-2026/",
+      "retrieved_at": "2026-07-02",
+      "lang": "es",
+      "used_for": "Altitude/oxygen and rest-day framing for the England match; odds content in the same piece excluded"
+    },
+    {
+      "outlet": "TV Azteca",
+      "url": "https://www.tvazteca.com/aztecadeportes/por-que-no-juega-edson-alvarez-en-mexico-vs-ecuador/",
+      "retrieved_at": "2026-07-02",
+      "lang": "es",
+      "used_for": "Tactical (not fitness) explanation for Edson Alvarez's omission vs Ecuador; his yellow-card/suspension-risk count"
     },
     {
       "outlet": "Infobae",
-      "url": "https://www.infobae.com/mexico/deportes/2026/06/25/contra-quien-jugara-mexico-y-donde-tras-ganarle-a-chequia-en-el-mundial-2026/",
-      "retrieved_at": "2026-06-28",
-      "lang": "es"
-    },
-    {
-      "outlet": "Olympics.com",
-      "url": "https://www.olympics.com/es/noticias/mundial-2026-mexico-ecuador-escocia",
-      "retrieved_at": "2026-06-28",
-      "lang": "es"
-    },
-    {
-      "outlet": "Récord",
-      "url": "https://www.record.com.mx/historia/tala-rangel-iguala-una-historica-marca-con-la-seleccion-mexicana-2026062619582465822",
+      "url": "https://www.infobae.com/mexico/deportes/2026/07/02/harry-kane-declan-rice-y-mas-jugadores-hablan-sobre-el-mexico-vs-inglaterra-en-el-estadio-azteca-no-hay-nada-mas-grande/",
+      "retrieved_at": "2026-07-02",
       "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Tala Rangel started all three group games keeping clean sheets; clean group-stage mark not matched since Calderon 1970; Ochoa late cameo/ovation"
-    },
-    {
-      "outlet": "Récord",
-      "url": "https://www.record.com.mx/historia/seleccion-mexicana-posible-xl-de-javier-aguirre-en-dieciseisavos-de-final-2026062722284874752",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Projected R32 XI; new midfield battle Mora vs Brian Gutierrez plus Montes vs Edson Alvarez at the back"
-    },
-    {
-      "outlet": "Mediotiempo",
-      "url": "https://www.mediotiempo.com/futbol/seleccion-mayor/ochoa-no-va-de-titular-cambios-alineacion-mexico-enfrentar-chequia-mundial-2026",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Aguirre kept faith in Rangel ahead of Ochoa for the Czechia game; Martinez and Chavez WC debuts"
-    },
-    {
-      "outlet": "Mediotiempo",
-      "url": "https://www.mediotiempo.com/futbol/copa-mundial/gilberto-mora-jugador-joven-titular-mexico-mundial",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Gilberto Mora youngest Mexican to start a World Cup match, breaking Manuel Rosas record"
-    },
-    {
-      "outlet": "TUDN",
-      "url": "https://www.tudn.com/mundial-2026/chequia-vs-mexico/gilberto-mora-reconoce-a-memo-ochoa-tras-homenaje-ante-chequia",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Mora verbatim player quotes; Ochoa tribute/homage cameo vs Czechia"
-    },
-    {
-      "outlet": "El Universal",
-      "url": "https://www.eluniversal.com.mx/deportes/gilberto-mora-sera-el-protagonista-del-mercado-tras-el-mundial-2026/",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Mora as post-tournament transfer-market protagonist; agent Rafaela Pimenta interest (dated 2026-05-07)"
+      "used_for": "England players' reported reaction to facing Mexico at the Azteca (referenced as attributed reporting, not verbatim quotes)"
     }
   ]
 }

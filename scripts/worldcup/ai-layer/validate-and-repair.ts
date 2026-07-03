@@ -490,6 +490,37 @@ export function validateAndRepairAiOutput(rawOutput: string, structuredInput: Js
   const percentageIssues = ungroundedPercentages(body, structuredInput);
   const metaIssues = metaTextHits(body);
 
+  // ai_prediction — the AI's OWN pick on a knockout tie (co-predictor next to the model's number). REQUIRED on
+  // pre_match_storyline: {pick: 3-letter code, reasoning, confidence_words, likely_scoreline}. Its text obeys the
+  // body's discipline (internal-id scrub, no meta text) PLUS a STRICTER words-only rule — NO percentage at all,
+  // grounded or not (confidence lives in words; the model's number already lives in the body). Validated separately
+  // from the body so its words never count against the body word limit.
+  if (isObject(output)) {
+    const ap = (output as { [key: string]: JsonValue }).ai_prediction;
+    if (output.content_type === "pre_match_storyline") {
+      const apOk = isObject(ap)
+        && typeof ap.pick === "string" && /^[A-Z]{3}$/.test(ap.pick)
+        && typeof ap.reasoning === "string" && ap.reasoning.trim().length > 0
+        && typeof ap.confidence_words === "string" && ap.confidence_words.trim().length > 0
+        && typeof ap.likely_scoreline === "string" && ap.likely_scoreline.trim().length > 0;
+      if (!apOk) rejections.push("missing_or_invalid_ai_prediction");
+    }
+    if (ap != null) {
+      const apHits: string[] = [];
+      const apCleaned = mapNarrativeStrings(ap, apHits);
+      if (apCleaned.changed) {
+        (output as { [key: string]: JsonValue }).ai_prediction = apCleaned.value;
+        repairActions.push("scrubbed_internal_identifiers_from_ai_prediction");
+      }
+      const apText = stringsFromValue((output as { [key: string]: JsonValue }).ai_prediction).join("\n");
+      if (/\d+(?:\.\d+)?\s*%/.test(apText)) rejections.push("percentage_in_ai_prediction:confidence_must_be_words_only");
+      const apMeta = metaTextHits(apText);
+      if (apMeta.length) rejections.push(`meta_or_guardrail_text_in_ai_prediction:${apMeta.join("|")}`);
+      const apInternal = internalHits(apText);
+      if (apInternal.length) rejections.push(`internal_identifiers_in_ai_prediction:${apInternal.join("|")}`);
+    }
+  }
+
   rejections.push(...schemaRejections(output));
   if (remainingInternalHits.length) rejections.push(`internal_identifiers_in_user_text:${remainingInternalHits.join("|")}`);
   if (percentageIssues.length) rejections.push(`ungrounded_percentages_in_body:${percentageIssues.join("|")}`);

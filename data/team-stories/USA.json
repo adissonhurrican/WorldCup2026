@@ -1,202 +1,217 @@
 {
   "team_code": "USA",
-  "round": "R32",
-  "next_opponent_code": "TBD",
+  "round": "R16",
+  "next_opponent_code": "BEL",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
-  "confidence": "high",
+  "last_updated": "2026-07-02",
+  "confidence": "medium",
   "national_expectations": {
-    "summary": "As co-hosts who topped Group D, the USMNT enters the Round of 32 carrying raised but still cautious expectations. A bracket preview framed the projected knockout path as seemingly favorable and boosting the team's chances of a deep run, while stressing that outright optimists remained in the minority. A potential home quarterfinal in Los Angeles was cast as the fixture that would define whether the tournament was merely good or one for the ages.",
+    "summary": "Expectations have climbed with the run: beating Bosnia and Herzegovina delivered the program's first knockout-stage win since 2002, and coverage now frames the Belgium tie as the chance for the first back-to-back knockout victories in USMNT history. The long-standing question of whether this team can beat a highly ranked European nation, flagged in bracket previews as the doubt hanging over a deep run, has become concrete with Belgium next. Analysis pieces argue the multifaceted, gritty nature of the Bosnia win bodes well for the co-hosts' World Cup hopes.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49244675/usmnt-multifaceted-win-vs-bosnia-herzegovina-bodes-well-world-cup-hopes",
+        "date": "2026-07-01",
+        "lang": "en"
+      },
+      {
         "outlet": "Sports Illustrated",
         "url": "https://www.si.com/soccer/2026-world-cup-projected-bracket-opening-up-usmnt",
-        "date": "2026-06-24"
+        "date": "2026-06-24",
+        "lang": "en"
       }
     ]
   },
   "national_mood": {
-    "summary": "The mood is one of cautious optimism after a historic group stage. Outlets noted the USMNT recorded its best-ever group performance and reached the knockout round at the fastest pace in the modern format, energizing host-nation fans, even as one preview observed that outright optimists remained in the minority. A dead-rubber loss to Turkiye tempered the celebration without denting belief in the knockout run.",
+    "summary": "The overnight mood is proud and defiant rather than simply celebratory. The 2-0 win over Bosnia and Herzegovina in front of a heavily pro-USMNT Santa Clara crowd was hailed as a historic, character-proving night: the team protected a lead with ten men for over half an hour after Folarin Balogun's controversial red card, then sealed it through Malik Tillman's free kick, described as calming the nerves in the stadium. Celebration is laced with widely reported anger at the officiating call and anxiety about facing Belgium without the team's leading scorer. Reaction is still same-day fresh and considered takes are only starting to land.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "U.S. Soccer",
-        "url": "https://www.ussoccer.com/stories/2026/06/usmnt/usmnt-enjoys-historic-group-stage-performance-fifa-world-cup-2026",
-        "date": "2026-06-26"
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49244675/usmnt-multifaceted-win-vs-bosnia-herzegovina-bodes-well-world-cup-hopes",
+        "date": "2026-07-01",
+        "lang": "en"
       },
       {
-        "outlet": "Sports Illustrated",
-        "url": "https://www.si.com/soccer/2026-world-cup-projected-bracket-opening-up-usmnt",
-        "date": "2026-06-24"
+        "outlet": "Associated Press",
+        "url": "https://abcnews.com/Sports/wireStory/soft-spoken-malik-tillman-delivers-loud-statement-bloody-134415450",
+        "date": "2026-07-02",
+        "lang": "en"
+      },
+      {
+        "outlet": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/didn-t-deserve-christian-pulisic-103035669.html",
+        "date": "2026-07-02",
+        "lang": "en"
       }
     ]
   },
   "manager_situation": {
-    "summary": "Mauricio Pochettino is firmly in control of the program with an identity-first, unapologetic leadership style described as never minding being the villain. He made nine changes for the Turkiye match, his most ever between two USMNT World Cup games, resting yellow-card-risk regulars, and after the loss dismissed criticism as petty and narrow, noting no one congratulated the team for finishing first in a difficult group. He framed the knockout phase as the real test, calling it a final the squad is ready for, and prioritized restoring Christian Pulisic's fitness over the dead-rubber result.",
+    "summary": "Mauricio Pochettino's authority over the program has hardened into the defining frame of the tournament: a profile describes him as having remodelled the team in his own image, with players reading from his script and pressing far more aggressively than the 2022 side. The Bosnia win was reported as his third World Cup victory, the most ever by a USMNT manager. Post-match he praised the players' emotional control after going down to ten men and publicly disputed Balogun's red card, insisting there was no intent in the challenge, while facing a selection decision up front for Belgium with Ricardo Pepi and Haji Wright the named alternatives.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
         "outlet": "Sports Illustrated",
-        "url": "https://www.si.com/soccer/usmnt-living-mauricio-pochettino-world-doesnt-care-who-likes-it",
-        "date": "2026-06-26"
+        "url": "https://www.si.com/soccer/mauricio-pochettino-has-usmnt-reading-script-world-cup",
+        "date": "2026-07-02",
+        "lang": "en"
       },
       {
         "outlet": "U.S. Soccer",
-        "url": "https://www.ussoccer.com/stories/2026/06/usmnt/usmnt-enjoys-historic-group-stage-performance-fifa-world-cup-2026",
-        "date": "2026-06-26"
+        "url": "https://www.ussoccer.com/stories/2026/07/usmnt/match-recap-highlights-vs-bosnia-and-herzegovina-world-cup-round-of-32",
+        "date": "2026-07-02",
+        "lang": "en"
       },
       {
-        "outlet": "CBS Sports",
-        "url": "https://www.cbssports.com/soccer/news/usmnt-coach-mauricio-pochettino-lineup-decisions-christian-pulisic-world-cup/",
-        "date": "2026-06-25"
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49243703/usa-folarin-balogun-red-card-bosnia-herzegovina-world-cup-2026",
+        "date": "2026-07-01",
+        "lang": "en"
       }
     ]
   },
   "historical_context": {
-    "summary": "The USMNT entered the 2026 World Cup as a co-host (alongside Mexico and Canada). By winning its opening two matches against Paraguay and Australia, the team won its first two World Cup matches for the first time since 1930 and reached the knockout stage at the fastest pace in the tournament's modern format. The six points collected in Group D were reported as the program's highest-ever World Cup group-stage total.",
+    "summary": "The co-hosts won Group D with a program-best group stage (wins over Paraguay and Australia before a dead-rubber loss to Turkiye), then beat Bosnia and Herzegovina 2-0 in the Round of 32 for their first knockout-stage victory since 2002, reported as only the second knockout win in program history. Tillman's clincher was noted as the USA's first World Cup free-kick goal in over three decades. The Round of 16 opponent carries its own history: Belgium eliminated the USA 2-1 after extra time in the 2014 Round of 16, a match remembered for Tim Howard's record-setting save performance, and reporting notes Thibaut Courtois, Kevin De Bruyne and Romelu Lukaku from that Belgian squad are still involved now.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Columbus Crew",
-        "url": "https://www.columbuscrew.com/news/pochettino-led-usmnt-make-history-in-world-cup-group-stage",
-        "date": "2026-06-26"
+        "outlet": "U.S. Soccer",
+        "url": "https://www.ussoccer.com/stories/2026/07/usmnt/match-recap-highlights-vs-bosnia-and-herzegovina-world-cup-round-of-32",
+        "date": "2026-07-02",
+        "lang": "en"
       },
       {
-        "outlet": "U.S. Soccer",
-        "url": "https://www.ussoccer.com/stories/2026/06/usmnt/usmnt-enjoys-historic-group-stage-performance-fifa-world-cup-2026",
-        "date": "2026-06-26"
+        "outlet": "Associated Press",
+        "url": "https://abcnews.com/Sports/wireStory/soft-spoken-malik-tillman-delivers-loud-statement-bloody-134415450",
+        "date": "2026-07-02",
+        "lang": "en"
       },
       {
         "outlet": "FOX Sports",
-        "url": "https://www.foxsports.com/stories/soccer/usa-round-of-32-opponent-2026-fifa-world-cup",
-        "date": "2026-06-26"
+        "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+        "date": "2026-07-01",
+        "lang": "en"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "A historic group stage: the USMNT won Group D with back-to-back victories over Paraguay (4-1) and Australia (2-0), clinching the knockout round after just two matches before a 3-2 loss to Turkiye in a dead rubber. Outlets framed the six points and goal output as a program-best World Cup group showing.",
+      "storyline": "A drought-breaking, character-proving win: Folarin Balogun's strike on the stroke of half-time and Malik Tillman's 82nd-minute free kick beat Bosnia and Herzegovina 2-0 in Santa Clara for the USMNT's first knockout-stage victory since 2002. The team protected the lead with ten men for the final half hour plus after Balogun's 64th-minute red card, a stretch analysts cast as the tournament's biggest test passed and proof of tactical versatility under Pochettino.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "U.S. Soccer",
-          "url": "https://www.ussoccer.com/stories/2026/06/usmnt/usmnt-enjoys-historic-group-stage-performance-fifa-world-cup-2026",
-          "date": "2026-06-26"
+          "url": "https://www.ussoccer.com/stories/2026/07/usmnt/match-recap-highlights-vs-bosnia-and-herzegovina-world-cup-round-of-32",
+          "date": "2026-07-02",
+          "lang": "en"
         },
         {
-          "outlet": "Columbus Crew",
-          "url": "https://www.columbuscrew.com/news/pochettino-led-usmnt-make-history-in-world-cup-group-stage",
-          "date": "2026-06-26"
-        }
-      ]
-    },
-    {
-      "storyline": "Pochettino's rotation gamble: with qualification secured, the coach made nine changes for the Turkiye finale, his most ever between two USMNT World Cup matches, resting four yellow-card-risk regulars (Tyler Adams, Folarin Balogun, Chris Richards, Antonee Robinson) and reintegrating Pulisic. He defended the approach over chasing a perfect record.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Sports Illustrated",
-          "url": "https://www.si.com/soccer/usmnt-living-mauricio-pochettino-world-doesnt-care-who-likes-it",
-          "date": "2026-06-26"
-        },
-        {
-          "outlet": "FOX Sports",
-          "url": "https://www.foxsports.com/stories/soccer/usmnt-world-cup-starting-lineup-pulisic-turkiye",
-          "date": "2026-06-25"
-        }
-      ]
-    },
-    {
-      "storyline": "The European-opposition question: a bracket preview repeatedly flagged the USMNT's capacity to beat a highly ranked European nation as the lingering doubt over how far the team can go, casting a potential later-round clash with a top side as the tournament's defining test despite a favorable-looking bracket.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Sports Illustrated",
-          "url": "https://www.si.com/soccer/2026-world-cup-projected-bracket-opening-up-usmnt",
-          "date": "2026-06-24"
-        }
-      ]
-    },
-    {
-      "storyline": "Pulisic's fitness watch: the captain's calf injury, suffered in the opener against Paraguay, dominated coverage, with his roughly 32-minute cameo against Turkiye framed as a managed return designed to have him ready for the knockouts.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Yahoo Sports",
-          "url": "https://sports.yahoo.com/articles/mauricio-pochettino-confirms-christian-pulisic-102729566.html",
-          "date": "2026-06-26"
-        },
-        {
-          "outlet": "CBS Sports",
-          "url": "https://www.cbssports.com/soccer/news/usmnt-coach-mauricio-pochettino-lineup-decisions-christian-pulisic-world-cup/",
-          "date": "2026-06-25"
-        }
-      ]
-    },
-    {
-      "storyline": "Bosnia framed as a credible upset threat, not a walkover: national previews flag the USMNT's first knockout opponent as the tallest squad at the tournament, built around veteran striker Edin Dzeko and physically imposing center-backs, with set pieces and aerial duels cast as the danger area for Pochettino's shorter side. The same pieces note Bosnia stunned Italy in qualifying, lending the underdog real menace.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Sports Illustrated",
-          "url": "https://www.si.com/soccer/three-reasons-why-bosnia-herzegovina-could-upset-usmnt-in-world-cup-knockout-clash",
-          "date": "2026-06-26",
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49244675/usmnt-multifaceted-win-vs-bosnia-herzegovina-bodes-well-world-cup-hopes",
+          "date": "2026-07-01",
           "lang": "en"
         }
       ]
     },
     {
-      "storyline": "A homecoming subplot: Bosnia's young right winger Esmir Bajraktarevic, nicknamed the 'Milwaukee Messi,' grew up in Appleton, Wisconsin, played for U.S. youth teams and once debuted for the senior USMNT before switching allegiance to Bosnia, the country his parents fled during war. National coverage casts the PSV Eindhoven attacker, who scored the decisive penalty in Bosnia's qualifying upset of Italy, as a U.S.-born talent who will now line up against the country he nearly represented.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "FOX Sports",
-          "url": "https://www.foxsports.com/stories/soccer/esmir-bajraktarevic-bosnia-herzegovina-world-cup-penalty-italy-milwaukee-messi",
-          "date": "2026-06-12",
-          "lang": "en"
-        },
-        {
-          "outlet": "FOX Sports",
-          "url": "https://www.foxsports.com/stories/soccer/usa-vs-bosnia-herzegovina-confirmed-round-32-heres-what-know",
-          "date": "2026-06-25",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "Opponent mood, an emboldened underdog: Bosnia head coach Sergej Barbarez, whose side reached the knockout round on a tournament breakthrough, publicly framed the run as a bonus and said his team was confident enough to take on anyone, a confident-underdog tone US outlets relayed as the backdrop to the tie.",
+      "storyline": "The Balogun red card controversy dominates the aftermath: the striker, the team's leading scorer at the tournament with three goals, was sent off after a VAR review for dragging his cleats down a defender's leg, and reporting confirms the automatic one-match ban rules him out of the Belgium tie with no appeal available for a one-game suspension. Pochettino publicly rejected the call, Weston McKennie called it bogus, and coverage frames replacing Balogun (Ricardo Pepi and Haji Wright the listed options) as the defining selection question of the week.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49181937/usa-bosnia-herzegovina-world-cup-round-32-knockout",
-          "date": "2026-06-25",
+          "url": "https://www.espn.com/soccer/story/_/id/49243703/usa-folarin-balogun-red-card-bosnia-herzegovina-world-cup-2026",
+          "date": "2026-07-01",
+          "lang": "en"
+        },
+        {
+          "outlet": "CBS Sports",
+          "url": "https://www.cbssports.com/soccer/news/folarin-balogun-red-card-suspension-usmnt-appeal-world-cup-round-of-16/",
+          "date": "2026-07-02",
           "lang": "en"
         }
       ]
     },
     {
-      "storyline": "A former captain's bullish dismissal of the Turkiye scare: USMNT legend Tim Howard urged fans not to overreact to the dead-rubber defeat and predicted a comfortable US win over Bosnia, adding to a national-press through-line that the loss was inconsequential and the knockout side will look very different.",
+      "storyline": "Malik Tillman's bloody-sock hero moment: moments before his free kick, Tillman was in pain from being stepped on and had his right boot cut off and replaced, then curled in the USA's first World Cup free-kick goal in over three decades and celebrated in front of the huge American contingent. The soft-spoken midfielder's emergence, with his coach and captain publicly lauding him, is a feel-good national thread heading into the Belgium tie.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Associated Press",
+          "url": "https://abcnews.com/Sports/wireStory/soft-spoken-malik-tillman-delivers-loud-statement-bloody-134415450",
+          "date": "2026-07-02",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Belgium in Seattle as a 2014 rematch: previews explicitly frame the Round of 16 as a rerun of the 2014 tie Belgium won 2-1 in extra time despite Tim Howard's record-setting save performance, noting Courtois, De Bruyne and Lukaku remain from that Belgian side while no current American was on the 2014 squad. Coverage also flags Belgium's recent 3-1 friendly win over the USA in March and picks out De Bruyne and Leandro Trossard as the principal threats.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+          "date": "2026-07-01",
+          "lang": "en"
+        },
+        {
+          "outlet": "Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/last-time-usa-played-belgium-113954561.html",
+          "date": "2026-07-02",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "A forewarned opponent: Belgium arrive off one of the tournament's great escapes, trailing Senegal by two goals in their Round of 32 before rallying through Romelu Lukaku and Youri Tielemans, who completed the 3-2 comeback from the penalty spot, with the tie going the distance. US previews present the comeback as proof of the veterans' enduring danger even as the Red Devils looked vulnerable for an hour.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+          "date": "2026-07-01",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "The home-soil march continues: the co-hosts drew a reported 68,827 to the Bay Area for the Bosnia win and now get another home crowd at Seattle Stadium on Monday, July 6, with local and national coverage leaning into the host-nation atmosphere as a genuine advantage in the knockout rounds.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "U.S. Soccer",
+          "url": "https://www.ussoccer.com/stories/2026/07/usmnt/match-recap-highlights-vs-bosnia-and-herzegovina-world-cup-round-of-32",
+          "date": "2026-07-02",
+          "lang": "en"
+        },
+        {
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+          "date": "2026-07-01",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Pochettino's script: a national profile casts the coach as having remodelled the USMNT in his own image, with the side pressing far more aggressively than the 2022 team and players openly crediting his methods, a leadership narrative now central to belief that the co-hosts can finally take down an elite European opponent.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Sports Illustrated",
-          "url": "https://www.si.com/soccer/usmnt-legend-tim-howard-warning-bosnia-and-herzegovina",
-          "date": "2026-06-27",
+          "url": "https://www.si.com/soccer/mauricio-pochettino-has-usmnt-reading-script-world-cup",
+          "date": "2026-07-02",
           "lang": "en"
         }
       ]
@@ -204,224 +219,191 @@
   ],
   "attributed_quotes": [
     {
-      "quote": "The objective was to finish first, and we are first. Now, it's the next stage.",
-      "speaker_name": "Mauricio Pochettino",
-      "speaker_role": "USMNT head coach",
-      "outlet": "U.S. Soccer",
-      "url": "https://www.ussoccer.com/stories/2026/06/usmnt/usmnt-enjoys-historic-group-stage-performance-fifa-world-cup-2026",
-      "date": "2026-06-26",
-      "context": "After winning Group D, on shifting focus to the knockout round.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "lang": "en",
-      "quote_original": null
-    },
-    {
-      "quote": "The objective was not just to win, but to get Christian 30-40 minutes.",
-      "speaker_name": "Mauricio Pochettino",
-      "speaker_role": "USMNT head coach",
-      "outlet": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/mauricio-pochettino-confirms-christian-pulisic-102729566.html",
-      "date": "2026-06-26",
-      "context": "After the Turkiye loss, on prioritizing Pulisic's return to fitness over the result.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "lang": "en",
-      "quote_original": null
-    },
-    {
-      "quote": "Bosnia, they're better off not even getting on a plane and going to San Francisco.",
+      "quote": "I think the team showed the qualities, the capacity to compete, to fight for each other.",
       "quote_original": null,
       "lang": "en",
-      "speaker_name": "Tim Howard",
-      "speaker_role": "Former USMNT goalkeeper / analyst",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "Sports Illustrated",
-      "url": "https://www.si.com/soccer/usmnt-legend-tim-howard-warning-bosnia-and-herzegovina",
-      "date": "2026-06-27",
-      "context": "Downplaying the Turkiye loss and predicting a decisive USMNT win in the Round of 32."
-    },
-    {
-      "quote": "All of this is a bonus for us. We are confident enough to face anyone.",
-      "quote_original": null,
-      "lang": "en",
-      "speaker_name": "Sergej Barbarez",
-      "speaker_role": "Bosnia & Herzegovina head coach",
+      "speaker_name": "Mauricio Pochettino",
+      "speaker_role": "USMNT head coach",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49181937/usa-bosnia-herzegovina-world-cup-round-32-knockout",
-      "date": "2026-06-25",
-      "context": "After Bosnia secured a knockout-round place, on facing the USMNT and any opponent."
+      "url": "https://www.espn.com/soccer/story/_/id/49244675/usmnt-multifaceted-win-vs-bosnia-herzegovina-bodes-well-world-cup-hopes",
+      "date": "2026-07-01",
+      "context": "After the 2-0 win over Bosnia and Herzegovina, on the ten-man resilience."
     },
     {
-      "quote": "Christian's a fantastic player. Just having him come into the game, he makes such a difference.",
+      "quote": "For me, never is it a red card. Never was there intention to step on the player.",
       "quote_original": null,
       "lang": "en",
-      "speaker_name": "Brenden Aaronson",
+      "speaker_name": "Mauricio Pochettino",
+      "speaker_role": "USMNT head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49243703/usa-folarin-balogun-red-card-bosnia-herzegovina-world-cup-2026",
+      "date": "2026-07-01",
+      "context": "Disputing Folarin Balogun's VAR red card that rules him out of the Belgium tie."
+    },
+    {
+      "quote": "We had to dig deep for that one.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Christian Pulisic",
+      "speaker_role": "USMNT captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/didn-t-deserve-christian-pulisic-103035669.html",
+      "date": "2026-07-02",
+      "context": "After the ten-man win over Bosnia and Herzegovina; he also said the team did not deserve the red card."
+    },
+    {
+      "quote": "I've been dreaming about maybe taking a free kick and scoring a free kick.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Malik Tillman",
+      "speaker_role": "USMNT midfielder",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Associated Press",
+      "url": "https://abcnews.com/Sports/wireStory/soft-spoken-malik-tillman-delivers-loud-statement-bloody-134415450",
+      "date": "2026-07-02",
+      "context": "On his match-sealing free kick against Bosnia and Herzegovina, scored after his boot was cut off and replaced."
+    },
+    {
+      "quote": "I think in this stage of the tournament where every player is important, I think it's a bit bogus.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Weston McKennie",
       "speaker_role": "USMNT midfielder",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49184846/christian-pulisic-return-vs-turkiye-looks-ready-make-mark-usmnt-world-cup",
-      "date": "2026-06-26",
-      "context": "On captain Christian Pulisic's return off the bench against Turkiye ahead of the knockouts."
+      "url": "https://www.espn.com/soccer/story/_/id/49243703/usa-folarin-balogun-red-card-bosnia-herzegovina-world-cup-2026",
+      "date": "2026-07-01",
+      "context": "On Balogun's red card and the resulting suspension for the Belgium match."
     }
   ],
   "local_availability_reporting": [
     {
       "player": "Christian Pulisic",
-      "status": "Reported recovering from a calf injury suffered in the opener; played roughly 32 minutes off the bench vs Turkiye and reportedly came through unscathed and on track for the knockouts, but full fitness not confirmed.",
+      "status": "Started against Bosnia and was substituted late; his removal and an earlier knock briefly sparked re-injury concern among supporters, but reporting says no new injury has been surfaced and he is expected to be ready for the Belgium match. Not officially confirmed.",
       "confirmed": false,
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "FOX Sports",
-          "url": "https://www.foxsports.com/stories/soccer/usmnt-world-cup-starting-lineup-pulisic-turkiye",
-          "date": "2026-06-25"
+          "outlet": "Athlon Sports",
+          "url": "https://athlonsports.com/soccer/did-christian-pulisic-get-re-injured-against-bosnia-and-herzegovina",
+          "date": "2026-07-02",
+          "lang": "en"
         },
         {
-          "outlet": "Yahoo Sports",
-          "url": "https://sports.yahoo.com/articles/mauricio-pochettino-confirms-christian-pulisic-102729566.html",
-          "date": "2026-06-26"
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49241870/christian-pulisic-usa-vs-bosnia-herzegovina-lineup-2026-world-cup",
+          "date": "2026-07-01",
+          "lang": "en"
         }
       ]
     },
     {
-      "player": "Cristian Roldan",
-      "status": "Reported unavailable for the Turkiye match due to a quadriceps issue dealt with throughout the week; knockout-round availability not confirmed.",
+      "player": "Malik Tillman",
+      "status": "Reported playing through pain against Bosnia after being stepped on, showing off a bloody sock post-match and having his boot cut off and replaced mid-game; no absence reported for the Belgium tie but his condition has not been officially confirmed.",
       "confirmed": false,
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "FOX Sports",
-          "url": "https://www.foxsports.com/stories/soccer/usmnt-world-cup-starting-lineup-pulisic-turkiye",
-          "date": "2026-06-25"
-        }
-      ]
-    },
-    {
-      "player": "Tyler Adams; Folarin Balogun; Chris Richards; Antonee Robinson",
-      "status": "Reported rested for the Turkiye dead rubber to avoid a yellow-card suspension risk in the Round of 32; expected available but not independently confirmed.",
-      "confirmed": false,
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "FOX Sports",
-          "url": "https://www.foxsports.com/stories/soccer/usmnt-world-cup-starting-lineup-pulisic-turkiye",
-          "date": "2026-06-25"
-        },
-        {
-          "outlet": "CBS Sports",
-          "url": "https://www.cbssports.com/soccer/news/usmnt-coach-mauricio-pochettino-lineup-decisions-christian-pulisic-world-cup/",
-          "date": "2026-06-25"
+          "outlet": "Associated Press",
+          "url": "https://abcnews.com/Sports/wireStory/soft-spoken-malik-tillman-delivers-loud-statement-bloody-134415450",
+          "date": "2026-07-02",
+          "lang": "en"
         }
       ]
     }
   ],
   "gaps": [
-    "DB FACTS list the R32 opponent as TBD. U.S. Soccer (official federation) and several previews (SI, FOX recap) named Bosnia and Herzegovina with a July 1 match, while a separate FOX piece framed it as one of multiple possible best-placed third teams. Per the grounding contract the opponent is kept TBD and the Bosnia reporting is treated as unconfirmed projection.",
-    "No FIFA / U.S. Soccer official (fact_grade) source explicitly cleared for the DB was used to set the confirmed R32 opponent; all opponent claims surfaced here are press-tier projection, kept TBD to match the DB.",
-    "No verbatim quote sourced that directly addresses the specific Round of 32 opponent or matchup plan.",
-    "Detailed final Group D table (exact placings/points of Paraguay, Australia, Turkiye) not captured beyond USA's W2-L1, 6 points; only USA's record cross-checked against DB FACTS.",
-    "No confirmed (official) injury/availability list from U.S. Soccer for the Round of 32; all player-fitness items are press-reported and uncertain.",
-    "A FOX Sports odds/oddsmaker piece was dropped under the betting-source exclusion; broader non-betting national-expectations coverage beyond the SI bracket preview not fully captured.",
-    "No granular fan-sentiment or city/host-market atmosphere reporting from a recognized outlet beyond general national-mood framing; local mood not separately sourced."
+    "Recency: the Bosnia match finished only hours before this research pass (early 2026-07-02 UTC); considered reaction, Belgium-side previews and Pochettino's pre-Belgium press conference are not yet published, so confidence is set to medium.",
+    "Folarin Balogun's one-match suspension for the Belgium tie is a confirmed FIFA disciplinary fact; per the grounding contract confirmed availability belongs to the news channel, so it appears here only as attributed press context within storylines, not in local_availability_reporting.",
+    "Reviewer note on non-allowlisted outlets (tagged as press/'other' per policy): FOX Sports and CBS Sports (major US rights-holder/national sports networks), Sports Illustrated (long-established US national sports magazine), Yahoo Sports (established US sports desk), Athlon Sports (long-running US sports publisher), U.S. Soccer treated as National Federation (official). The AP items are wire stories carried on abcnews.com with AP bylines.",
+    "No official U.S. Soccer injury or availability list for the Round of 16 was found; all player-fitness items are press-reported and unconfirmed.",
+    "Tim Howard's exact 2014 save count varies across retellings; the number is kept out of the text and described as record-setting per reporting.",
+    "Belgium's current squad composition is described only via US previews (Courtois, De Bruyne, Lukaku as 2014 survivors; Trossard flagged as a threat); no Belgian-press or federation source was captured, and no Belgian-camp quotes about facing the USMNT were found yet.",
+    "No dedicated Seattle host-city atmosphere or ticket-demand reporting from a recognized outlet captured yet; home-crowd framing rests on the Santa Clara attendance and general previews.",
+    "No fresh reporting captured on squad players beyond Pulisic and Tillman (e.g. Cristian Roldan's earlier quadriceps issue) since the Bosnia match."
   ],
   "source_data_snapshot": [
     {
       "outlet": "U.S. Soccer",
-      "url": "https://www.ussoccer.com/stories/2026/06/usmnt/usmnt-enjoys-historic-group-stage-performance-fifa-world-cup-2026",
-      "retrieved_at": "2026-06-28",
-      "note": "Group-stage summary, results, Pochettino quote (verified verbatim); names B&H July 1 (kept TBD per DB)"
+      "url": "https://www.ussoccer.com/stories/2026/07/usmnt/match-recap-highlights-vs-bosnia-and-herzegovina-world-cup-round-of-32",
+      "retrieved_at": "2026-07-02",
+      "note": "Official federation recap: 2-0, Balogun 45' + Tillman 82', Balogun red card 64', attendance 68,827, first knockout win since 2002, Pochettino third WC win (most by a USMNT manager), Belgium in Seattle Monday July 6 (verified)"
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49244675/usmnt-multifaceted-win-vs-bosnia-herzegovina-bodes-well-world-cup-hopes",
+      "retrieved_at": "2026-07-02",
+      "note": "Post-match analysis: tactical versatility, ten-man resilience, Balogun absence 'a huge blow', first-ever back-to-back knockout wins framing; Pochettino verbatim quote (verified)"
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49243703/usa-folarin-balogun-red-card-bosnia-herzegovina-world-cup-2026",
+      "retrieved_at": "2026-07-02",
+      "note": "Red card detail (VAR, referee monitor review, foul on Muharemovic), suspension confirmed for Belgium, Pepi/Wright options; Pochettino + McKennie verbatim quotes (verified)"
+    },
+    {
+      "outlet": "CBS Sports",
+      "url": "https://www.cbssports.com/soccer/news/folarin-balogun-red-card-suspension-usmnt-appeal-world-cup-round-of-16/",
+      "retrieved_at": "2026-07-02",
+      "note": "No-appeal explanation for one-match red-card bans per FIFA regulations (headline/summary level)"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://abcnews.com/Sports/wireStory/soft-spoken-malik-tillman-delivers-loud-statement-bloody-134415450",
+      "retrieved_at": "2026-07-02",
+      "note": "AP wire (Josh Dubow byline) via abcnews.com: Tillman bloody sock/boot replaced, first US WC free-kick goal in over three decades, crowd scenes; Tillman verbatim quote (verified)"
+    },
+    {
+      "outlet": "FOX Sports",
+      "url": "https://www.foxsports.com/stories/soccer/usa-vs-belgium-confirmed-round-16-heres-what-know",
+      "retrieved_at": "2026-07-02",
+      "note": "R16 confirmed: Seattle Stadium, Monday July 6, 8pm ET; Belgium 3-2 comeback vs Senegal (Lukaku, Tielemans, penalty); 2014 rematch framing, Howard save record, Courtois/De Bruyne/Lukaku survivors, March friendly 3-1, Trossard threat (verified)"
+    },
+    {
+      "outlet": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/didn-t-deserve-christian-pulisic-103035669.html",
+      "retrieved_at": "2026-07-02",
+      "note": "Pulisic post-match reaction incl. 'dig deep' verbatim quote and officiating grievance (summary level)"
+    },
+    {
+      "outlet": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/last-time-usa-played-belgium-113954561.html",
+      "retrieved_at": "2026-07-02",
+      "note": "2014 USA-Belgium retrospective: 2-1 AET, Howard record saves, De Bruyne/Lukaku scorers, Julian Green reply (summary level; save-count figure kept out of text)"
+    },
+    {
+      "outlet": "Sports Illustrated",
+      "url": "https://www.si.com/soccer/mauricio-pochettino-has-usmnt-reading-script-world-cup",
+      "retrieved_at": "2026-07-02",
+      "note": "Pochettino profile: remodelled team in his own image, players reading from his script, pressing intensity leap vs 2022, Belgium next (verified; press-intensity stat figures kept out of text)"
+    },
+    {
+      "outlet": "Athlon Sports",
+      "url": "https://athlonsports.com/soccer/did-christian-pulisic-get-re-injured-against-bosnia-and-herzegovina",
+      "retrieved_at": "2026-07-02",
+      "note": "Pulisic late-substitution injury scare: no new injury reported, expected ready for Belgium (non-allowlisted outlet, see reviewer note in gaps)"
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49241870/christian-pulisic-usa-vs-bosnia-herzegovina-lineup-2026-world-cup",
+      "retrieved_at": "2026-07-02",
+      "note": "Pulisic returned to the starting lineup vs Bosnia (headline/summary level)"
     },
     {
       "outlet": "Sports Illustrated",
       "url": "https://www.si.com/soccer/2026-world-cup-projected-bracket-opening-up-usmnt",
       "retrieved_at": "2026-06-28",
-      "note": "Bracket outlook, expectations, LA quarterfinal framing, European-opposition concern; optimists in minority"
-    },
-    {
-      "outlet": "Sports Illustrated",
-      "url": "https://www.si.com/soccer/usmnt-living-mauricio-pochettino-world-doesnt-care-who-likes-it",
-      "retrieved_at": "2026-06-28",
-      "note": "Pochettino leadership/manager situation, nine changes, response to criticism (verified)"
-    },
-    {
-      "outlet": "FOX Sports",
-      "url": "https://www.foxsports.com/stories/soccer/usmnt-world-cup-starting-lineup-pulisic-turkiye",
-      "retrieved_at": "2026-06-28",
-      "note": "Nine lineup changes, four rested for yellow-card risk, Pulisic/Roldan availability (verified)"
-    },
-    {
-      "outlet": "FOX Sports",
-      "url": "https://www.foxsports.com/stories/soccer/usa-round-of-32-opponent-2026-fifa-world-cup",
-      "retrieved_at": "2026-06-28",
-      "note": "Group D win confirmation; R32 opponent framed as multiple possible third-place teams (TBD)"
-    },
-    {
-      "outlet": "CBS Sports",
-      "url": "https://www.cbssports.com/soccer/news/usmnt-coach-mauricio-pochettino-lineup-decisions-christian-pulisic-world-cup/",
-      "retrieved_at": "2026-06-28",
-      "note": "Pochettino lineup decisions, yellow-card-risk rest rationale, Pulisic context (verified)"
-    },
-    {
-      "outlet": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/mauricio-pochettino-confirms-christian-pulisic-102729566.html",
-      "retrieved_at": "2026-06-28",
-      "note": "Pochettino quote on Pulisic minutes (verified verbatim); ~32 min vs Turkiye"
-    },
-    {
-      "outlet": "Columbus Crew",
-      "url": "https://www.columbuscrew.com/news/pochettino-led-usmnt-make-history-in-world-cup-group-stage",
-      "retrieved_at": "2026-06-28",
-      "note": "Historic framing: first two wins since 1930, program-best six points (verified)"
-    },
-    {
-      "outlet": "Sports Illustrated",
-      "url": "https://www.si.com/soccer/three-reasons-why-bosnia-herzegovina-could-upset-usmnt-in-world-cup-knockout-clash",
-      "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Bosnia upset-threat storyline: tallest team, Dzeko, imposing center-backs, set-piece/aerial danger, Italy qualifying upset (no direct quotes; stat figures kept out of text)"
-    },
-    {
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49181937/usa-bosnia-herzegovina-world-cup-round-32-knockout",
-      "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Matchup context and Barbarez verbatim quote (opponent mood); venue stated as Santa Clara, kept out of text"
-    },
-    {
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49184846/christian-pulisic-return-vs-turkiye-looks-ready-make-mark-usmnt-world-cup",
-      "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Pulisic return/readiness teammate reactions; Aaronson verbatim quote"
-    },
-    {
-      "outlet": "Sports Illustrated",
-      "url": "https://www.si.com/soccer/usmnt-legend-tim-howard-warning-bosnia-and-herzegovina",
-      "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Tim Howard bullish warning storyline + verbatim quote"
-    },
-    {
-      "outlet": "FOX Sports",
-      "url": "https://www.foxsports.com/stories/soccer/esmir-bajraktarevic-bosnia-herzegovina-world-cup-penalty-italy-milwaukee-messi",
-      "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Bajraktarevic 'Milwaukee Messi' homecoming subplot: Appleton WI roots, US youth past, Jan 2024 USMNT debut, switch to Bosnia, PSV, Italy penalty hero (article dated 2026-06-12)"
-    },
-    {
-      "outlet": "FOX Sports",
-      "url": "https://www.foxsports.com/stories/soccer/usa-vs-bosnia-herzegovina-confirmed-round-32-heres-what-know",
-      "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "R32 confirmation (July 1) + Bajraktarevic US-born angle; venue label inconsistent across pieces (FOX 'Los Angeles Stadium' vs ESPN/SI Santa Clara), kept out of text"
+      "note": "Carried over from R32 file: bracket expectations and the beat-a-top-European-side question, now concrete with Belgium"
     }
   ]
 }

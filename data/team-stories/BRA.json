@@ -1,142 +1,162 @@
 {
   "team_code": "BRA",
-  "round": "R32",
-  "next_opponent_code": "JPN",
+  "round": "R16",
+  "next_opponent_code": "NOR",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
+  "last_updated": "2026-07-01",
   "confidence": "high",
   "national_expectations": {
-    "summary": "As record five-time world champions and among the tournament favourites, Brazil carry the heavy burden of expected deep progress; the press frames this as a win-or-bust campaign in which nothing short of ending a title drought stretching back more than two decades will satisfy the country, and the early knockout rounds are treated as a baseline the squad's talent is expected to clear comfortably.",
+    "summary": "Brazil are through to the Round of 16 after surviving a scare against Japan, and the press continues to frame this World Cup as win-or-bust for the record five-time champions, who are chasing a sixth star and their first title since 2002 under Carlo Ancelotti. Reporting is more cautious than before the Japan tie: pundits stress that a sluggish, error-prone first half in that game was a warning that lapses punished only lightly in the group stage could be fatal against stronger knockout opposition, starting with Norway.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Goal",
-        "url": "https://www.goal.com/en/news/brazil-japan-world-cup-preview/bltfacb1acd696ead12",
-        "date": "2026-06-25"
-      },
-      {
         "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49021550/24-years-their-last-world-cup-title-win-bust-brazil",
-        "date": "2026-06-24"
+        "url": "https://www.espn.com/soccer/story/_/id/49216717/brazil-avoid-world-cup-shock-late-win-vs-japan-reach-round-16",
+        "date": "2026-06-29"
       },
       {
-        "outlet": "Olympics.com",
-        "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-brazil-players-squad-list-key-stats-schedule",
-        "date": "2026-06-24"
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/12098/13558811/world-cup-2026-brazil-2-1-japan-gabriel-martinelli-scores-dramatic-winner-as-carlo-ancelottis-side-advance-with-comeback-win",
+        "date": "2026-06-30"
       }
     ]
   },
   "national_mood": {
-    "summary": "The mood has lifted into cautious optimism, even euphoria among fans, after a convincing closing win over Scotland sealed top spot in the group; the team is described as sharper, more solid and more cohesive than at the start, though the manager and press are deliberately tempering the excitement and stressing feet on the ground as the knockout rounds begin.",
-    "source_tier": "discovery",
-    "verification": "attributed_context_only",
-    "sources": [
-      {
-        "outlet": "DOL",
-        "url": "https://dol.com.br/esporte/copa-do-mundo/945516/mais-solido-brasil-anima-ancelotti-para-o-mata-mata-da-copa",
-        "date": "2026-06-25",
-        "lang": "pt"
-      },
-      {
-        "outlet": "Fato Paulista",
-        "url": "https://fatopaulista.com.br/ancelotti-celebra-brasil-copa-cautela-mata-mata/",
-        "date": "2026-06-24",
-        "lang": "pt"
-      },
-      {
-        "outlet": "Goal",
-        "url": "https://www.goal.com/en/news/brazil-japan-world-cup-preview/bltfacb1acd696ead12",
-        "date": "2026-06-25"
-      }
-    ]
-  },
-  "manager_situation": {
-    "summary": "Carlo Ancelotti, described in the press as a foreigner and Brazil's first non-domestic coach for this World Cup cycle, inherited a disjointed team after a troubled qualifying campaign and had only a handful of international windows to prepare; his standing has risen as the team grew through the group stage, and he is publicly satisfied with the progress while urging caution and grit for the knockout rounds. He is expected to name an unchanged starting eleven against Japan, reportedly the first time he has repeated a lineup since taking charge.",
+    "summary": "The mood swings between relief and pride: players described tearful, emotional celebrations after Casemiro's equaliser and Gabriel Martinelli's stoppage-time winner completed a comeback from a goal down, Brazil's first such recovery under Ancelotti. But the celebration is tempered by unease, since Brazil trailed at the break, struggled for long spells to break down a well-organised Japan, and fielded their second-oldest World Cup starting XI since 1966 - fuelling debate over whether the same lack of mobility could be exploited by Norway.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
         "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49021550/24-years-their-last-world-cup-title-win-bust-brazil",
-        "date": "2026-06-24"
+        "url": "https://www.espn.com/soccer/story/_/id/49217693/brazil-survive-world-cup-scare-japan-advance",
+        "date": "2026-06-29"
       },
       {
-        "outlet": "DOL",
-        "url": "https://dol.com.br/esporte/copa-do-mundo/945516/mais-solido-brasil-anima-ancelotti-para-o-mata-mata-da-copa",
-        "date": "2026-06-25",
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49216717/brazil-avoid-world-cup-shock-late-win-vs-japan-reach-round-16",
+        "date": "2026-06-29"
+      },
+      {
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/12098/13558811/world-cup-2026-brazil-2-1-japan-gabriel-martinelli-scores-dramatic-winner-as-carlo-ancelottis-side-advance-with-comeback-win",
+        "date": "2026-06-30"
+      },
+      {
+        "outlet": "Lance!",
+        "url": "https://www.lance.com.br/selecao-brasileira/como-ancelotti-conduziu-o-brasil-as-oitavas-da-copa-com-conviccao.html",
+        "date": "2026-06-30",
+        "lang": "pt"
+      }
+    ]
+  },
+  "manager_situation": {
+    "summary": "Ancelotti made a single change against Japan, bringing on Endrick for Lucas Paqueta to add box presence, and called it 'the most complete game we have played' at this World Cup, praising his side's composure once they found space in the second half. He must reshuffle again for Norway: Paqueta suffered a confirmed left thigh strain against Japan and will miss the tie, with Botafogo's Danilo the press's favoured replacement, while Raphinha (hamstring injury from the Haiti group match) remains unavailable, meaning Rayan continues deputising on the right.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      {
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/12098/13558811/world-cup-2026-brazil-2-1-japan-gabriel-martinelli-scores-dramatic-winner-as-carlo-ancelottis-side-advance-with-comeback-win",
+        "date": "2026-06-30"
+      },
+      {
+        "outlet": "Lance!",
+        "url": "https://www.lance.com.br/selecao-brasileira/quem-entra-no-lugar-de-paqueta-veja-as-opcoes-de-ancelotti.html",
+        "date": "2026-06-30",
         "lang": "pt"
       },
       {
-        "outlet": "Bolavip Brasil",
-        "url": "https://br.bolavip.com/selecao-brasileira/ancelotti-repete-time-do-brasil-contra-japao-e-rayan-ganha-sequencia-na-copa",
-        "date": "2026-06-27",
+        "outlet": "other",
+        "outlet_name": "Terra Esportes",
+        "note": "Major Brazilian sports/news portal (terra.com.br), not on the outlet allowlist; used for the confirmed-injury medical detail (CBF-confirmed left thigh strain) which was not found on an allowlisted outlet within the research window.",
+        "url": "https://www.terra.com.br/esportes/futebol/copa-2026/lucas-paqueta-esta-fora-da-copa-do-mundo-meio-campista-da-selecao-brasileira-tem-lesao-na-coxa-esquerda-e-desfalca-brasil-e-noruega-nas-oitavas,4f49598de591f3723527df127ab0f633ekuncxm2.html",
+        "date": "2026-06-30",
         "lang": "pt"
       }
     ]
   },
   "historical_context": {
-    "summary": "Brazil are the record five-time world champions but have not lifted the trophy since their last title more than two decades ago; the press frames the tournament as win-or-bust, casting failure as a deepening of that drought while Brazil chase a sixth star under a foreign coach. The tie also carries a recent edge, as Japan beat Brazil in a friendly the previous autumn after Brazil had led.",
+    "summary": "Brazil are the record five-time world champions but have not lifted the trophy since 2002, and press coverage continues to cast the tournament as win-or-bust as the Selecao chase a sixth star under a foreign coach. The Round of 16 draw also revives an unusual quirk: Norway are the only side to have played Brazil more than once without ever losing to them - a 1-1 draw in 1988, a 4-2 Norway win in 1997, Norway's famous 2-1 win over Brazil in the final Group A game at France 1998, and another 1-1 draw in 2006 - a 'tabu' (jinx) Brazilian press have been highlighting ahead of the tie.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
         "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49021550/24-years-their-last-world-cup-title-win-bust-brazil",
-        "date": "2026-06-24"
-      },
-      {
-        "outlet": "Olympics.com",
-        "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-brazil-players-squad-list-key-stats-schedule",
-        "date": "2026-06-24"
-      },
-      {
-        "outlet": "Gulf Times",
-        "url": "https://www.gulf-times.com/article/728235/sport/football/brazil-get-japan-rematch-as-ancelottis-world-cup-crash-course-faces-knockout-test/amp",
-        "date": "2026-06-27"
+        "url": "https://www.espn.com.br/futebol/copa-do-mundo/artigo/_/id/16933656/brasil-ja-ganhou-da-noruega-historico-dos-confrontos-tem-tabu-unico-para-selecao",
+        "date": "2026-07-01",
+        "lang": "pt"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "Vinicius Junior's emergence as the team's undisputed protagonist: under Ancelotti's tactical freedom he was the standout of the group stage, scoring in every match and being directly involved in most of Brazil's goals, with the press framing him as Brazil's main attacking focal point and noting his World Cup tally now sits alongside Brazilian greats.",
+      "storyline": "Vinicius Junior remains Brazil's talisman: he was denied a wonder goal against Japan only by a fine save from goalkeeper Suzuki onto the post, and the press continues to frame him as the side's principal attacking threat heading into the knockouts.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Trivela",
-          "url": "https://trivela.com.br/copa-do-mundo/vini-jr-protagonista-selecao-brasileira-ancelotti/",
-          "date": "2026-06-25",
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49216717/brazil-avoid-world-cup-shock-late-win-vs-japan-reach-round-16",
+          "date": "2026-06-29"
+        }
+      ]
+    },
+    {
+      "storyline": "The stoppage-time escape against Japan: Brazil trailed to Kaishu Sano's 29th-minute strike, needed a Casemiro header to level it, and only won it through substitute Gabriel Martinelli's 90+5' finish from a Bruno Guimaraes pass - the first time Ancelotti's Brazil have come from behind to win, and a result described internationally as an escape rather than a convincing statement.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/12098/13558811/world-cup-2026-brazil-2-1-japan-gabriel-martinelli-scores-dramatic-winner-as-carlo-ancelottis-side-advance-with-comeback-win",
+          "date": "2026-06-30"
+        },
+        {
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49216717/brazil-avoid-world-cup-shock-late-win-vs-japan-reach-round-16",
+          "date": "2026-06-29"
+        }
+      ]
+    },
+    {
+      "storyline": "The 'Real Madrid-ification' of the Selecao persists as a press framing: Ancelotti's vertical, transition-heavy approach and Vinicius Junior's shift into a more central attacking role are still described as a national-team echo of Ancelotti's title-winning Real Madrid sides, a model credited with late-game composure such as the Japan comeback.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "other",
+          "outlet_name": "Metropoles",
+          "note": "Not on the outlet allowlist; included because it aggregates and directly quotes reactions from allowlisted outlets (L'Equipe, A Bola, The Athletic, AS) that could not be independently retrieved in full within the research window.",
+          "url": "https://www.metropoles.com/esportes/imprensa-internacional-exalta-virada-do-brasil-sobre-o-japao-na-copa",
+          "date": "2026-06-29"
+        }
+      ]
+    },
+    {
+      "storyline": "Confirmed absence of Lucas Paqueta: the midfielder suffered a left thigh strain against Japan, was confirmed by the CBF as injured, and will miss the Norway tie; Danilo (Botafogo) is the press's favoured replacement, ahead of Gabriel Martinelli, Endrick or Fabinho as alternative options Ancelotti is weighing.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Lance!",
+          "url": "https://www.lance.com.br/selecao-brasileira/quem-entra-no-lugar-de-paqueta-veja-as-opcoes-de-ancelotti.html",
+          "date": "2026-06-30",
           "lang": "pt"
         },
         {
-          "outlet": "Olympics.com (PT)",
-          "url": "https://www.olympics.com/pt/noticias/copa-do-mundo-2026-brasil-japao-escalacoes-horario-assistir-1o-mata-mata",
-          "date": "2026-06-27",
+          "outlet": "other",
+          "outlet_name": "Terra Esportes",
+          "note": "Not on the allowlist; used for the CBF-confirmed medical detail on Paqueta's thigh injury.",
+          "url": "https://www.terra.com.br/esportes/futebol/copa-2026/lucas-paqueta-esta-fora-da-copa-do-mundo-meio-campista-da-selecao-brasileira-tem-lesao-na-coxa-esquerda-e-desfalca-brasil-e-noruega-nas-oitavas,4f49598de591f3723527df127ab0f633ekuncxm2.html",
+          "date": "2026-06-30",
           "lang": "pt"
         }
       ]
     },
     {
-      "storyline": "Revenge and a measuring stick against Japan: the rematch is widely cast as a chance to avenge the previous autumn's friendly defeat, when Brazil led before collapsing, and as a test of how far Ancelotti has rebuilt the side, with the entire defensive line from that loss now absent from the World Cup squad.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Gulf Times",
-          "url": "https://www.gulf-times.com/article/728235/sport/football/brazil-get-japan-rematch-as-ancelottis-world-cup-crash-course-faces-knockout-test/amp",
-          "date": "2026-06-27"
-        },
-        {
-          "outlet": "Goal",
-          "url": "https://www.goal.com/en/news/brazil-japan-world-cup-preview/bltfacb1acd696ead12",
-          "date": "2026-06-25"
-        }
-      ]
-    },
-    {
-      "storyline": "Confirmed absence of Raphinha: the winger is out with a hamstring injury, and the young forward Rayan has taken his place on the flank and earned a run in the side, a change Ancelotti is expected to keep for the knockout opener.",
+      "storyline": "Raphinha remains sidelined with the hamstring injury suffered in the group stage, with Rayan continuing to deputise on the right flank - a role he has held since the injury and is expected to keep against Norway.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
@@ -151,296 +171,222 @@
           "url": "https://dol.com.br/esporte/copa-do-mundo/945516/mais-solido-brasil-anima-ancelotti-para-o-mata-mata-da-copa",
           "date": "2026-06-25",
           "lang": "pt"
-        },
-        {
-          "outlet": "Goal",
-          "url": "https://www.goal.com/en/news/brazil-japan-world-cup-preview/bltfacb1acd696ead12",
-          "date": "2026-06-25"
         }
       ]
     },
     {
-      "storyline": "Neymar's return as a squad option: after years out through persistent injury he is back with the national team and featured off the bench against Scotland, giving Ancelotti an extra attacking choice for the knockouts.",
+      "storyline": "The headline duel of the tie is being built around Gabriel Magalhaes (Arsenal) against Erling Haaland (Manchester City): the pair have met 11 times in the Premier League and domestic finals (Haaland's side winning 5, Gabriel's 2, 4 draws) with a needle history, including a September 2024 incident where Haaland struck Gabriel during a goal celebration and Gabriel later admitted a retaliatory celebration of his own - a rivalry the Brazilian press expects to resume on the biggest stage.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Goal",
-          "url": "https://www.goal.com/en/news/brazil-japan-world-cup-preview/bltfacb1acd696ead12",
-          "date": "2026-06-25"
-        },
-        {
-          "outlet": "Gulf Times",
-          "url": "https://www.gulf-times.com/article/728235/sport/football/brazil-get-japan-rematch-as-ancelottis-world-cup-crash-course-faces-knockout-test/amp",
-          "date": "2026-06-27"
-        }
-      ]
-    },
-    {
-      "storyline": "The 'Real Madrid-ification' of the Selecao: Brazilian press increasingly frames Ancelotti's side as a national-team version of his title-winning Real Madrid, pointing to a vertical, transition-heavy approach and Vinicius Junior being shifted from the touchline into a central, interior attacking role to attack space between the lines, a model the press argues could be decisive in the knockouts.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Trivela",
-          "url": "https://trivela.com.br/copa-do-mundo/selecao-brasileira-parece-real-madrid-ancelotti/",
-          "date": "2026-06-27",
+          "outlet": "other",
+          "outlet_name": "O Tempo",
+          "note": "Not on the outlet allowlist; used for the detailed Gabriel Magalhaes vs Haaland head-to-head record and rivalry history, not found on an allowlisted outlet within the research window.",
+          "url": "https://www.otempo.com.br/sports/selecao-brasileira/2026/7/1/brasil-x-noruega-haaland-saiu-mais-vitorioso-que-gabriel-magalhaes-em-duelos",
+          "date": "2026-07-01",
           "lang": "pt"
         }
       ]
     },
     {
-      "storyline": "Load management in the build-up: in Brazil's first session before Japan, Ancelotti preserved eight regular starters (working in the gym) with only Douglas Santos, Vinicius and Rayan training fully in the open portion, while the press noted Neymar trained normally and lifted the mood by joking with reporters, before the full starters returned to the field for a sharper penultimate session.",
+      "storyline": "Age and mobility concerns: Brazil fielded their second-oldest World Cup starting XI since 1966 against Japan, and their lack of energy and pace in the first half is flagged by the press as a real risk against Norway's more direct, powerful attacking approach built around Haaland's running and hold-up play.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49216717/brazil-avoid-world-cup-shock-late-win-vs-japan-reach-round-16",
+          "date": "2026-06-29"
+        }
+      ]
+    },
+    {
+      "storyline": "Norway's own underdog framing adds contrast: star man Erling Haaland has publicly rated Norway's chances of beating Brazil as small, while noting Norway - who scored 18 goals across their four group games - have already exceeded expectations by reaching the last 16 at all, a narrative Brazilian press is using to reinforce Brazil's favourites tag while still flagging Haaland (five goals, level for the tournament's joint-second top scorer position) as the single biggest threat to it.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Lance!",
-          "url": "https://www.lance.com.br/selecao-brasileira/primeiro-treino-do-brasil-para-encarar-o-japao-tem-oito-preservados.html",
-          "date": "2026-06-26",
+          "url": "https://www.lance.com.br/copa-do-mundo/haaland-diz-que-chances-da-noruega-contra-o-brasil-sao-pequenas.html",
+          "date": "2026-06-30",
           "lang": "pt"
         },
         {
-          "outlet": "Gazeta Esportiva",
-          "url": "https://www.gazetaesportiva.com/times/brasil/titulares-vao-a-campo-e-brasil-faz-penultimo-treino-antes-de-jogo-com-japao/",
-          "date": "2026-06-27",
-          "lang": "pt"
-        }
-      ]
-    },
-    {
-      "storyline": "Brazil's defence faces its first genuine test: the press stresses that the back line's two clean sheets came against weaker opponents (Haiti and Scotland) and that Japan's attack, which came from two goals down to beat Brazil in the autumn friendly, represents the first real examination of the consolidated Alisson-Marquinhos-Gabriel Magalhaes rearguard in a knockout 'vida ou morte' setting.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Gazeta Esportiva",
-          "url": "https://www.gazetaesportiva.com/times/brasil/brasil-x-japao-oitavas-copa-2026-analise/",
-          "date": "2026-06-28",
-          "lang": "pt"
-        }
-      ]
-    },
-    {
-      "storyline": "Rayan steps into the spotlight as a press voice: with Raphinha sidelined the young forward has become a fresh player voice in the national press, talking up the squad's depth and embracing the do-or-die stakes of the knockout opener, framed as a coming-of-age moment for one of the squad's newer attackers.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Gazeta Esportiva",
-          "url": "https://www.gazetaesportiva.com/times/brasil/entrevista-rayan-brasil-26-06-26/",
-          "date": "2026-06-26",
-          "lang": "pt"
-        }
-      ]
-    },
-    {
-      "storyline": "Why the autumn friendly may not be a useful guide: Brazilian press argues the October 2025 defeat in Tokyo has limited predictive value because both squads have been heavily reshaped, with only a handful of Brazil's starters from that night still in the World Cup squad and Japan missing several key creators, so the press treats the result as poor evidence for the knockout tie.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Trivela",
-          "url": "https://trivela.com.br/copa-do-mundo/selecoes-brasil-japao-ultimo-jogo/",
-          "date": "2026-06-26",
-          "lang": "pt"
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/12098/13558812/world-cup-2026-ivory-coast-1-2-norway-erling-haaland-scores-dramatic-winner-to-set-up-last-16-clash-with-brazil",
+          "date": "2026-06-30"
         }
       ]
     }
   ],
   "attributed_quotes": [
     {
-      "quote": "Now it's knockout. Need a strong heart.",
-      "quote_original": "Agora é mata-mata. É preciso ter coração forte",
-      "lang": "pt",
+      "quote": "This was the most complete game we have played at the World Cup.",
+      "quote_original": null,
+      "lang": "en",
       "speaker_name": "Carlo Ancelotti",
       "speaker_role": "Brazil head coach",
-      "outlet": "Fato Paulista",
-      "url": "https://fatopaulista.com.br/ancelotti-celebra-brasil-copa-cautela-mata-mata/",
-      "date": "2026-06-24",
-      "context": "Ancelotti tempering fan euphoria after the Scotland win and previewing the knockout stage.",
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/12098/13558811/world-cup-2026-brazil-2-1-japan-gabriel-martinelli-scores-dramatic-winner-as-carlo-ancelottis-side-advance-with-comeback-win",
+      "date": "2026-06-30",
+      "context": "Ancelotti assessing Brazil's come-from-behind win over Japan in the Round of 32.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
     },
     {
-      "quote": "For me, he's top. One of the world's best.",
-      "quote_original": "Para mim, ele é top. Um dos melhores do mundo",
-      "lang": "pt",
-      "speaker_name": "Carlo Ancelotti",
-      "speaker_role": "Brazil head coach",
-      "outlet": "Fato Paulista",
-      "url": "https://fatopaulista.com.br/ancelotti-celebra-brasil-copa-cautela-mata-mata/",
-      "date": "2026-06-24",
-      "context": "Ancelotti praising Vinicius Junior after his group-stage form.",
+      "quote": "The victory was about our calm and our patience in pressuring and pressuring.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Casemiro",
+      "speaker_role": "Brazil midfielder",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49217693/brazil-survive-world-cup-scare-japan-advance",
+      "date": "2026-06-29",
+      "context": "Casemiro explaining Brazil's second-half turnaround against a well-organised Japan defence.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
     },
     {
-      "quote": "In the group stage you can fix mistakes, but now it's kill or be killed.",
-      "quote_original": "A gente sabe que na fase de grupos a gente pode concertar os erros, mas agora é matar ou morrer.",
-      "lang": "pt",
-      "speaker_name": "Rayan",
-      "speaker_role": "Brazil forward",
+      "quote": "In a World Cup, it is crucial to value the players coming off the bench.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Casemiro",
+      "speaker_role": "Brazil midfielder",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49217693/brazil-survive-world-cup-scare-japan-advance",
+      "date": "2026-06-29",
+      "context": "Casemiro praising the impact of substitutes Endrick and Martinelli, and Rayan's cover for Raphinha.",
       "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "Gazeta Esportiva",
-      "url": "https://www.gazetaesportiva.com/times/brasil/entrevista-rayan-brasil-26-06-26/",
-      "date": "2026-06-26",
-      "context": "Rayan previewing the knockout opener against Japan and the rise in stakes."
+      "verification": "attributed_context_only"
     },
     {
-      "quote": "Our group here is very strong. If one comes in and another goes out, it's the same.",
-      "quote_original": "Nosso grupo aqui é muito forte. Se entrar um e sair outro, vai ser a mesma coisa.",
-      "lang": "pt",
-      "speaker_name": "Rayan",
+      "quote": "I don't even have the words to describe the joy in my heart.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Gabriel Martinelli",
       "speaker_role": "Brazil forward",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49217693/brazil-survive-world-cup-scare-japan-advance",
+      "date": "2026-06-29",
+      "context": "Martinelli reacting after scoring the stoppage-time winner against Japan.",
       "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "Gazeta Esportiva",
-      "url": "https://www.gazetaesportiva.com/times/brasil/entrevista-rayan-brasil-26-06-26/",
-      "date": "2026-06-26",
-      "context": "Rayan praising the depth of the Brazil squad ahead of the Japan tie."
+      "verification": "attributed_context_only"
     },
     {
-      "quote": "Vini is dangerous not only one-on-one, but also attacking depth, in the centre.",
-      "quote_original": "Vini é perigoso não só no um contra um, mas também atacando a profundidade, no centro do campo.",
+      "quote": "The possibilities will be small, but no one expected we would get this far.",
+      "quote_original": "As possibilidades serao pequenas, mas ninguem esperava que chegassemos ate aqui.",
       "lang": "pt",
-      "speaker_name": "Carlo Ancelotti",
-      "speaker_role": "Brazil head coach",
+      "speaker_name": "Erling Haaland",
+      "speaker_role": "Norway forward",
+      "outlet": "Lance!",
+      "url": "https://www.lance.com.br/copa-do-mundo/haaland-diz-que-chances-da-noruega-contra-o-brasil-sao-pequenas.html",
+      "date": "2026-06-30",
+      "context": "Haaland rating Norway's chances of beating Brazil in the Round of 16 after Norway's win over Ivory Coast.",
       "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "Trivela",
-      "url": "https://trivela.com.br/copa-do-mundo/selecao-brasileira-parece-real-madrid-ancelotti/",
-      "date": "2026-06-27",
-      "context": "Ancelotti explaining Vinicius Junior's repositioned, more central attacking role in the press 'Real Madrid' tactical framing."
+      "verification": "attributed_context_only"
     }
   ],
-  "local_availability_reporting": [
-    {
-      "player": "Takefusa Kubo",
-      "note": "Opponent (Japan) player reported doubtful and not in the projected lineup; not a Brazil availability matter and only noted because previews pair the two squads.",
-      "confirmed": false,
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Rotowire",
-          "url": "https://www.rotowire.com/soccer/article/brazil-vs-japan-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120069",
-          "date": "2026-06-27"
-        }
-      ]
-    }
-  ],
+  "local_availability_reporting": [],
   "gaps": [
-    "No FIFA / CBF / confederation official-tier source loaded successfully, so historical context and squad facts are tagged discovery rather than fact_grade.",
-    "No reported (uncertain) fitness concerns were found for any BRA player; Raphinha is a confirmed absence (placed in dominant_storylines), so local_availability_reporting contains no genuine Brazil entries.",
-    "No verbatim quote from a Brazil player (e.g. Vinicius, Casemiro) about the Japan tie was sourced exactly enough to include within the word limit; only Ancelotti quotes were confirmed.",
-    "Could not confirm via an official CBF/FIFA channel the exact starting eleven for the Japan match; the unchanged-lineup claim is from Brazilian press projections only (Bolavip).",
-    "Brazil's precise group scorelines (draw vs Morocco, wins over Haiti and Scotland) are corroborated by press (Bolavip) but not cross-checked against an official confederation match record; DB facts (Group C winners, W2 D1, 7 pts) are treated as authoritative and align with press reporting.",
-    "The 'first foreigner to coach Brazil at a World Cup' framing rests on ESPN's characterisation (foreigner / first non-domestic coach for this cycle); not independently confirmed against an official federation statement."
+    "No FIFA / CBF / confederation official-tier source could be fetched in full (FIFA match/preview pages render via JavaScript and returned empty; the CBF.com.br article on Ancelotti's post-Japan reaction failed to load due to a certificate error), so all claims are tagged discovery/attributed_context_only even where a federation source likely exists; only the CBF article's headline phrase ('jogo completo', 'buscamos solucoes') could be corroborated indirectly via search snippet and is not quoted directly here.",
+    "No verbatim quote from Vinicius Junior about either the Japan match or the Norway preview met the sourcing bar within the word limit; a social-media reaction was found (football360.com.au) but not included given uncertain verbatim/attribution rigor for a social post.",
+    "Danilo as Lucas Paqueta's likely replacement is a press projection (Lance!) based on internal squad-option analysis, not a confirmed teamsheet or CBF statement.",
+    "Paqueta's and Raphinha's precise recovery timelines are press estimates (roughly 10 days / a possible quarter-final return) rather than CBF-confirmed medical timelines, so no return date is stated as fact anywhere in this file.",
+    "Some detail (Gabriel Magalhaes vs Haaland head-to-head record, Paqueta's CBF-confirmed diagnosis) could only be sourced via outlets not on the allowlist (Terra Esportes, O Tempo, Metropoles); each is tagged outlet:'other' with a reviewer note per policy, since no allowlisted outlet was found carrying the same specific detail within the 2026-07-01 research cutoff.",
+    "Reporting dated after 2026-07-01 (e.g. a Goal.com Brazil-Norway preview dated 2026-07-02 claiming Raphinha had been 'cleared to resume training', and same-day Brazilian training-session reports) was excluded per the research cutoff and is NOT reflected here; Raphinha's exact fitness status for the Norway match itself should be treated as unconfirmed beyond 'still recovering from the Haiti-match hamstring injury' as of 2026-06-30 reporting.",
+    "The 'first foreigner to coach Brazil at a World Cup' framing (carried over from the R32 file) rests on ESPN's earlier characterisation and was not re-verified this cycle."
   ],
   "source_data_snapshot": [
     {
-      "outlet": "Gulf Times",
-      "url": "https://www.gulf-times.com/article/728235/sport/football/brazil-get-japan-rematch-as-ancelottis-world-cup-crash-course-faces-knockout-test/amp",
-      "retrieved_at": "2026-06-28",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49216717/brazil-avoid-world-cup-shock-late-win-vs-japan-reach-round-16",
+      "retrieved_at": "2026-07-01",
       "lang": "en"
     },
     {
-      "outlet": "Goal",
-      "url": "https://www.goal.com/en/news/brazil-japan-world-cup-preview/bltfacb1acd696ead12",
-      "retrieved_at": "2026-06-28",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49217693/brazil-survive-world-cup-scare-japan-advance",
+      "retrieved_at": "2026-07-01",
       "lang": "en"
+    },
+    {
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/12098/13558811/world-cup-2026-brazil-2-1-japan-gabriel-martinelli-scores-dramatic-winner-as-carlo-ancelottis-side-advance-with-comeback-win",
+      "retrieved_at": "2026-07-01",
+      "lang": "en"
+    },
+    {
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/12098/13558812/world-cup-2026-ivory-coast-1-2-norway-erling-haaland-scores-dramatic-winner-to-set-up-last-16-clash-with-brazil",
+      "retrieved_at": "2026-07-01",
+      "lang": "en"
+    },
+    {
+      "outlet": "Lance!",
+      "url": "https://www.lance.com.br/selecao-brasileira/quem-entra-no-lugar-de-paqueta-veja-as-opcoes-de-ancelotti.html",
+      "retrieved_at": "2026-07-01",
+      "lang": "pt",
+      "used_for": "Paqueta absence and replacement options for the Norway tie"
+    },
+    {
+      "outlet": "Lance!",
+      "url": "https://www.lance.com.br/copa-do-mundo/haaland-diz-que-chances-da-noruega-contra-o-brasil-sao-pequenas.html",
+      "retrieved_at": "2026-07-01",
+      "lang": "pt",
+      "used_for": "Haaland verbatim quote on Norway's chances against Brazil"
+    },
+    {
+      "outlet": "Lance!",
+      "url": "https://www.lance.com.br/selecao-brasileira/como-ancelotti-conduziu-o-brasil-as-oitavas-da-copa-com-conviccao.html",
+      "retrieved_at": "2026-07-01",
+      "lang": "pt",
+      "used_for": "National mood / Ancelotti's composed handling of the Japan comeback"
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com.br/futebol/copa-do-mundo/artigo/_/id/16933656/brasil-ja-ganhou-da-noruega-historico-dos-confrontos-tem-tabu-unico-para-selecao",
+      "retrieved_at": "2026-07-01",
+      "lang": "pt",
+      "used_for": "Brazil-Norway historical head-to-head / 'tabu' storyline"
+    },
+    {
+      "outlet": "other",
+      "outlet_name": "Terra Esportes",
+      "note": "Not on allowlist; used for CBF-confirmed Paqueta injury medical detail only, per reviewer note in manager_situation/dominant_storylines.",
+      "url": "https://www.terra.com.br/esportes/futebol/copa-2026/lucas-paqueta-esta-fora-da-copa-do-mundo-meio-campista-da-selecao-brasileira-tem-lesao-na-coxa-esquerda-e-desfalca-brasil-e-noruega-nas-oitavas,4f49598de591f3723527df127ab0f633ekuncxm2.html",
+      "retrieved_at": "2026-07-01",
+      "lang": "pt"
+    },
+    {
+      "outlet": "other",
+      "outlet_name": "O Tempo",
+      "note": "Not on allowlist; used for Gabriel Magalhaes vs Haaland head-to-head/rivalry detail only, per reviewer note in dominant_storylines.",
+      "url": "https://www.otempo.com.br/sports/selecao-brasileira/2026/7/1/brasil-x-noruega-haaland-saiu-mais-vitorioso-que-gabriel-magalhaes-em-duelos",
+      "retrieved_at": "2026-07-01",
+      "lang": "pt"
+    },
+    {
+      "outlet": "other",
+      "outlet_name": "Metropoles",
+      "note": "Not on allowlist; used only to relay attributed reactions from allowlisted outlets (L'Equipe, A Bola, The Athletic, AS), per reviewer note in dominant_storylines.",
+      "url": "https://www.metropoles.com/esportes/imprensa-internacional-exalta-virada-do-brasil-sobre-o-japao-na-copa",
+      "retrieved_at": "2026-07-01",
+      "lang": "pt"
     },
     {
       "outlet": "DOL",
       "url": "https://dol.com.br/esporte/copa-do-mundo/945516/mais-solido-brasil-anima-ancelotti-para-o-mata-mata-da-copa",
       "retrieved_at": "2026-06-28",
-      "lang": "pt"
+      "lang": "pt",
+      "used_for": "Carried over from R32 file: Raphinha absence / Rayan deputising context, still true"
     },
     {
       "outlet": "Fato Paulista",
       "url": "https://fatopaulista.com.br/ancelotti-celebra-brasil-copa-cautela-mata-mata/",
       "retrieved_at": "2026-06-28",
-      "lang": "pt"
-    },
-    {
-      "outlet": "Trivela",
-      "url": "https://trivela.com.br/copa-do-mundo/vini-jr-protagonista-selecao-brasileira-ancelotti/",
-      "retrieved_at": "2026-06-28",
-      "lang": "pt"
-    },
-    {
-      "outlet": "Bolavip Brasil",
-      "url": "https://br.bolavip.com/selecao-brasileira/ancelotti-repete-time-do-brasil-contra-japao-e-rayan-ganha-sequencia-na-copa",
-      "retrieved_at": "2026-06-28",
-      "lang": "pt"
-    },
-    {
-      "outlet": "Olympics.com (PT)",
-      "url": "https://www.olympics.com/pt/noticias/copa-do-mundo-2026-brasil-japao-escalacoes-horario-assistir-1o-mata-mata",
-      "retrieved_at": "2026-06-28",
-      "lang": "pt"
-    },
-    {
-      "outlet": "Olympics.com",
-      "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-brazil-players-squad-list-key-stats-schedule",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
-    },
-    {
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49021550/24-years-their-last-world-cup-title-win-bust-brazil",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
-    },
-    {
-      "outlet": "Rotowire",
-      "url": "https://www.rotowire.com/soccer/article/brazil-vs-japan-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120069",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
-    },
-    {
-      "outlet": "Trivela",
-      "url": "https://trivela.com.br/copa-do-mundo/selecao-brasileira-parece-real-madrid-ancelotti/",
       "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Real Madrid-ification tactical narrative; Ancelotti quote on Vini's central role"
-    },
-    {
-      "outlet": "Trivela",
-      "url": "https://trivela.com.br/copa-do-mundo/selecoes-brasil-japao-ultimo-jogo/",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Why the October 2025 friendly is a weak comparison; squad turnover on both sides"
-    },
-    {
-      "outlet": "Gazeta Esportiva",
-      "url": "https://www.gazetaesportiva.com/times/brasil/brasil-x-japao-oitavas-copa-2026-analise/",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Defence-tested-for-first-time storyline vs Japan's attack"
-    },
-    {
-      "outlet": "Gazeta Esportiva",
-      "url": "https://www.gazetaesportiva.com/times/brasil/entrevista-rayan-brasil-26-06-26/",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Rayan player-voice storyline and verbatim quotes"
-    },
-    {
-      "outlet": "Gazeta Esportiva",
-      "url": "https://www.gazetaesportiva.com/times/brasil/titulares-vao-a-campo-e-brasil-faz-penultimo-treino-antes-de-jogo-com-japao/",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Penultimate training with full starters; corroborates load-management storyline"
-    },
-    {
-      "outlet": "Lance!",
-      "url": "https://www.lance.com.br/selecao-brasileira/primeiro-treino-do-brasil-para-encarar-o-japao-tem-oito-preservados.html",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Load management storyline (eight starters preserved); Neymar training fully"
+      "used_for": "Carried over from R32 file: Raphinha absence / Rayan deputising context, still true"
     }
   ]
 }

@@ -1,390 +1,250 @@
 {
   "team_code": "MAR",
-  "round": "R32",
-  "next_opponent_code": "NED",
+  "round": "R16",
+  "next_opponent_code": "CAN",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
+  "last_updated": "2026-07-01",
   "confidence": "high",
   "national_expectations": {
-    "summary": "After the historic semi-final run at Qatar 2022, the bar for the Atlas Lions is set extraordinarily high. The new coach has publicly framed the objective as winning the tournament outright and becoming the first African nation to lift the World Cup, and national coverage treats reaching the deeper knockout rounds as the expected outcome. A round-of-thirty-two exit against the Netherlands would, against that ambition, be regarded as a disappointment.",
+    "summary": "After surviving a dramatic penalty shootout against the Netherlands, Moroccan and pan-Arab press have doubled down on the idea that this squad can go beyond 2022, with coach Mohamed Ouahbi repeating that the goal is to go further than the Qatar semi-final and saying the win means 'everyone respects Morocco now.' Meeting co-host Canada, ranked far below Morocco in FIFA's table, in the last 16 is being framed domestically as a highly winnable step toward the quarter-finals, while coverage still stresses not underestimating the occasion or Canada's home crowd.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
-      {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49170899/morocco-world-cup-2026-fifa-win-africa-haiti",
-        "date": "2026-06-24"
-      },
-      {
-        "outlet": "Morocco World News",
-        "url": "https://www.moroccoworldnews.com/2026/06/324834/mohamed-ouahbi-morocco-must-aim-to-win-the-world-cup/",
-        "date": "2026-06-25"
-      },
-      {
-        "outlet": "beIN SPORTS",
-        "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/ouahbi-tells-morocco-to-believe-they-can-win-the-world-cup-after-reaching-last-32-2026-06-25",
-        "date": "2026-06-25"
-      }
+      { "outlet": "CAF Online", "url": "https://www.cafonline.com/fifa-world-cup/news/ouahbi-eyes-bigger-dreams-as-morocco-build-on-world-cup-legacy-by-blending-experience-with-a-new-generation/", "date": "2026-06-15", "lang": "en" },
+      { "outlet": "Morocco World News", "url": "https://www.moroccoworldnews.com/2026/06/326385/mohamed-ouahbi-netherlands-five-man-defense-showed-respect-for-morocco/", "date": "2026-06-30", "lang": "en" },
+      { "outlet": "Hespress", "url": "https://www.hespress.com/%D9%88%D8%B5%D9%81%D8%A9-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1-%D8%A5%D9%84%D9%89-%D8%B1%D8%A8%D8%B9-%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A-%D9%86%D9%82%D8%A7%D8%B7-%D9%82%D9%88%D8%A9-%D8%A7-1770071.html", "date": "2026-06-30", "lang": "ar" }
     ]
   },
   "national_mood": {
-    "summary": "The mood is buoyant and confident after the Atlas Lions came through a tough group unbeaten, drawing with Brazil, beating Scotland and seeing off Haiti to finish second behind the Brazilians. Coverage describes renewed self-belief and a sense that the squad respects and is respected by elite opponents. There is also a note of caution from inside the camp that confidence must not tip into arrogance, and an undertone that the country is eager to prove the 2022 run was no fluke against a heavyweight European side.",
+    "summary": "Jubilant and drained after an extraordinary round-of-32 shootout: Issa Diop's stoppage-time header forced extra time, five penalties were missed across both sides (including one from captain Achraf Hakimi, who struck the post), Dutch keeper Bart Verbruggen deflected a Moroccan kick into his own net, and Yassine Bounou's save of Crysencio Summerville's attempt sent Ismael Saibari through to score the winner. Pan-Arab press quoted via Hespress (Tunisian outlets Al-Shorouk, Al-Maghreb, Al-Sabah, Lokuotidian) framed the result as proof Morocco is a genuine 'global football power,' with one outlet calling Bounou's shootout display 'the birth of a new school in goalkeeping.' Moroccan coverage credits mental strength and composure across two knockout rounds now won.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
-      {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49170899/morocco-world-cup-2026-fifa-win-africa-haiti",
-        "date": "2026-06-24"
-      },
-      {
-        "outlet": "beIN SPORTS",
-        "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/ouahbi-tells-morocco-to-believe-they-can-win-the-world-cup-after-reaching-last-32-2026-06-25",
-        "date": "2026-06-25"
-      },
-      {
-        "outlet": "Morocco Football Tribune",
-        "url": "https://moroccofootballtribune.com/morocco-vs-netherlands-preview-can-the-atlas-lions-reach-the-round-of-16/",
-        "date": "2026-06-27"
-      }
+      { "outlet": "Al Jazeera", "url": "https://www.aljazeera.com/sports/2026/6/30/morocco-netherlands-world-cup-knockout-penalty-shootout-saibari-diop-gakpo", "date": "2026-06-30", "lang": "en" },
+      { "outlet": "Al Jazeera", "url": "https://www.aljazeera.net/sport/2026/6/30/5-%D8%B6%D8%A7%D8%A6%D8%B9%D8%A9-%D9%88%D9%87%D9%81%D9%88%D8%A9-%D8%BA%D8%B1%D9%8A%D8%A8%D8%A9-%D8%AF%D8%B1%D8%A7%D9%85%D8%A7-%D8%B1%D9%83%D9%84%D8%A7%D8%AA", "date": "2026-06-30", "lang": "ar" },
+      { "outlet": "Hespress", "url": "https://www.hespress.com/%D8%B5%D8%AD%D9%81-%D8%AA%D9%88%D9%86%D8%B3%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8-%D9%82%D9%88%D8%A9-%D9%83%D8%B1%D9%88%D9%8A%D8%A9-1770832.html", "date": "2026-07-01", "lang": "ar" }
     ]
   },
   "manager_situation": {
-    "summary": "Morocco are at this World Cup under a new manager, not the man who led them to the 2022 semi-finals. Walid Regragui departed after the controversial 2025 Africa Cup of Nations final, and the federation appointed Mohamed Ouahbi in early March 2026, just months before the tournament. Ouahbi arrived having won the 2025 Under-20 World Cup with Morocco and is a Belgium-born technician with a long background at Anderlecht's academy. His standing has strengthened sharply after navigating the group unbeaten, and he has openly told his players to dream of winning the whole tournament, while preaching that confidence should not become arrogance.",
+    "summary": "Mohamed Ouahbi — the Belgium-born former Under-20 World Cup-winning coach who replaced Walid Regragui in March 2026 — has now delivered his first senior knockout win, further cementing his standing. He credited the result to patience and belief, said his side handled an unexpectedly defensive Dutch set-up ('We were surprised to see the Netherlands play with so many defenders'), praised his substitutes and younger players, and reiterated in mid-June that his ambition is to surpass the 2022 semi-final rather than merely repeat it.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
-      {
-        "outlet": "FIFA",
-        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mohamed-ouahbi-replaces-walid-regragui-morocco",
-        "date": "2026-03-05"
-      },
-      {
-        "outlet": "CAF Online",
-        "url": "https://www.cafonline.com/news/morocco-turn-to-ouahbi-for-leadership-after-coach-walid-regraguis-departure/",
-        "date": "2026-03-06"
-      },
-      {
-        "outlet": "beIN SPORTS",
-        "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/ouahbi-tells-morocco-to-believe-they-can-win-the-world-cup-after-reaching-last-32-2026-06-25",
-        "date": "2026-06-25"
-      },
-      {
-        "outlet": "The National",
-        "url": "https://www.thenationalnews.com/sport/2026/05/29/morocco-world-cup-talking-points-atlas-lions-have-high-hopes-under-new-leadership-of-mohamed-ouahbi/",
-        "date": "2026-05-29"
-      }
+      { "outlet": "FIFA", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mohamed-ouahbi-replaces-walid-regragui-morocco", "date": "2026-03-05", "lang": "en" },
+      { "outlet": "CAF Online", "url": "https://www.cafonline.com/fifa-world-cup/news/ouahbi-eyes-bigger-dreams-as-morocco-build-on-world-cup-legacy-by-blending-experience-with-a-new-generation/", "date": "2026-06-15", "lang": "en" },
+      { "outlet": "Africa Top Sports", "url": "https://en.africatopsports.com/2026-fifa-world-cup-ouahbi-hails-fully-deserved-morocco-triumph-after-penalty-shootout-win-over-netherlands/", "date": "2026-06-30", "lang": "en" },
+      { "outlet": "Morocco World News", "url": "https://www.moroccoworldnews.com/2026/06/326385/mohamed-ouahbi-netherlands-five-man-defense-showed-respect-for-morocco/", "date": "2026-06-30", "lang": "en" }
     ]
   },
   "historical_context": {
-    "summary": "Morocco arrive as one of Africa's strongest-ever sides, riding the legacy of their groundbreaking run to the semi-finals at Qatar 2022, the first African nation to reach the last four of a World Cup. That breakthrough has been backed by years of federation investment in academies and infrastructure and reinforced across age groups, including an Under-20 World Cup title in 2025 won by their current senior coach. The recent past also carries a bitter edge: the 2025 Africa Cup of Nations final against Senegal was mired in controversy, contributing to Regragui's departure. Monterrey itself echoes Moroccan World Cup history, the city tied to their memorable 1986 campaign.",
+    "summary": "Morocco carry the enduring legacy of their 2022 semi-final run, the first by an African nation, and coverage now credits them with reaching the knockouts and winning a knockout match in consecutive World Cups. Their next opponent, Canada, was beaten 2-1 by Morocco in the Qatar 2022 group stage en route to that run. Morocco goalkeeper Yassine Bounou (Bono) was born in Montreal and, as a young player, turned down an approach from a former Canada coach to represent Canada instead — 'representing my national team was something I had very deep inside,' he has said — adding a personal thread to the rematch on North American soil in Houston.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
-      {
-        "outlet": "Al Jazeera",
-        "url": "https://www.aljazeera.com/sports/2026/5/31/from-afcon-to-world-cup-2026-how-morocco-became-a-football-powerhouse",
-        "date": "2026-05-31"
-      },
-      {
-        "outlet": "Al Jazeera",
-        "url": "https://www.aljazeera.com/sports/2026/3/18/how-senegals-afcon-win-was-awarded-to-morocco-and-what-next-all-to-know",
-        "date": "2026-03-18"
-      },
-      {
-        "outlet": "Morocco World News",
-        "url": "https://www.moroccoworldnews.com/2026/06/324834/mohamed-ouahbi-morocco-must-aim-to-win-the-world-cup/",
-        "date": "2026-06-25"
-      }
+      { "outlet": "Al Jazeera", "url": "https://www.aljazeera.com/sports/2026/5/31/from-afcon-to-world-cup-2026-how-morocco-became-a-football-powerhouse", "date": "2026-05-31", "lang": "en" },
+      { "outlet": "TSN", "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-to-face-morocco-on-saturday-at-1pm-et-in-round-of-16-at-2026-fifa-world-cup-on-tsn/", "date": "2026-06-30", "lang": "en" },
+      { "outlet": "Hespress", "url": "https://www.hespress.com/%D9%88%D8%B5%D9%81%D8%A9-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1-%D8%A5%D9%84%D9%89-%D8%B1%D8%A8%D8%B9-%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A-%D9%86%D9%82%D8%A7%D8%B7-%D9%82%D9%88%D8%A9-%D8%A7-1770071.html", "date": "2026-06-30", "lang": "ar" }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "The new-coach story dominates: Mohamed Ouahbi has steered the side unbeaten through a tough group in only his first tournament in charge after taking over from Walid Regragui months before kickoff, and he has boldly told the country to believe it can win the World Cup outright and become the first African champions. His standing has soared, and his measured warning against arrogance is part of the narrative.",
+      "storyline": "'Morocco does it again': a stoppage-time equaliser and a wild shootout keep the Qatar 2022 magic alive. Issa Diop's 91st-minute header forced extra time, then Morocco won 3-2 on penalties in a shootout that saw five misses in total — including a post-hitting attempt from captain Hakimi — plus a bizarre own goal from Dutch keeper Bart Verbruggen, before Bounou's save of Summerville's kick let Saibari clinch it.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
-        {
-          "outlet": "beIN SPORTS",
-          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/ouahbi-tells-morocco-to-believe-they-can-win-the-world-cup-after-reaching-last-32-2026-06-25",
-          "date": "2026-06-25"
-        },
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49170899/morocco-world-cup-2026-fifa-win-africa-haiti",
-          "date": "2026-06-24"
-        }
+        { "outlet": "Al Jazeera", "url": "https://www.aljazeera.com/sports/2026/6/30/morocco-netherlands-world-cup-knockout-penalty-shootout-saibari-diop-gakpo", "date": "2026-06-30", "lang": "en" },
+        { "outlet": "Al Jazeera", "url": "https://www.aljazeera.net/sport/2026/6/30/5-%D8%B6%D8%A7%D8%A6%D8%B9%D8%A9-%D9%88%D9%87%D9%81%D9%88%D8%A9-%D8%BA%D8%B1%D9%8A%D8%A8%D8%A9-%D8%AF%D8%B1%D8%A7%D9%85%D8%A7-%D8%B1%D9%83%D9%84%D8%A7%D8%AA", "date": "2026-06-30", "lang": "ar" },
+        { "outlet": "ESPN", "url": "https://www.espn.com/soccer/story/_/id/49222205/morocco-win-shootout-send-netherlands-home-world-cup", "date": "2026-06-29", "lang": "en" }
       ]
     },
     {
-      "storyline": "Breakout star Ismael Saibari is the talk of the camp: he scored in the group stage, including the fastest goal of the tournament against Scotland, and is linked with a transfer to Bayern Munich reported to be finalized after the World Cup. Ouahbi has spoken about the move while stressing the player is focused only on Morocco.",
+      "storyline": "Ouahbi frames the win as validation and doubles down on ambition, saying the team 'completely controlled the match' with a commanding hold on possession over the Netherlands, and that Morocco has now 'gained everybody's respect' — while continuing to repeat, first stated in mid-June, that he wants to go further than the 2022 semi-final rather than just match it.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/espn/story/_/id/49120866/bayern-munich-fans-thrilled-morocco-ismael-saibari-based-fifa-world-cup-efforts",
-          "date": "2026-06-20"
-        },
-        {
-          "outlet": "Yahoo Sports",
-          "url": "https://sports.yahoo.com/articles/morocco-coach-talks-match-winner-203000576.html",
-          "date": "2026-06-21"
-        }
+        { "outlet": "Africa Top Sports", "url": "https://en.africatopsports.com/2026-fifa-world-cup-ouahbi-hails-fully-deserved-morocco-triumph-after-penalty-shootout-win-over-netherlands/", "date": "2026-06-30", "lang": "en" },
+        { "outlet": "CAF Online", "url": "https://www.cafonline.com/fifa-world-cup/news/ouahbi-eyes-bigger-dreams-as-morocco-build-on-world-cup-legacy-by-blending-experience-with-a-new-generation/", "date": "2026-06-15", "lang": "en" }
       ]
     },
     {
-      "storyline": "Defensive reshuffle from a confirmed injury blow: veteran centre-back Nayef Aguerd, a 2022 semi-final pillar, was ruled out before the opener with a long-standing groin problem and a pubic-bone fracture after surgery, with younger options including the promoted Issa Diop pressed into the centre-back picture. Winger Abde Ezzalzouli was also cut on the eve of the tournament after failing fitness tests.",
+      "storyline": "A personal rematch angle vs. Canada: goalkeeper Yassine Bounou was born in Montreal and once turned down interest from a former Canada coach to represent his adopted country instead; Morocco also beat Canada 2-1 in the Qatar 2022 group stage on the way to the semi-finals, giving this last-16 meeting a nostalgic, confidence-building framing in Moroccan press.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49027277/morocco-cut-injured-aguerd-ezzalzouli-last-minute-world-cup-reshuffle",
-          "date": "2026-06-11"
-        },
-        {
-          "outlet": "The National",
-          "url": "https://www.thenationalnews.com/sport/2026/05/29/morocco-world-cup-talking-points-atlas-lions-have-high-hopes-under-new-leadership-of-mohamed-ouahbi/",
-          "date": "2026-05-29"
-        }
+        { "outlet": "TSN", "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-to-face-morocco-on-saturday-at-1pm-et-in-round-of-16-at-2026-fifa-world-cup-on-tsn/", "date": "2026-06-30", "lang": "en" },
+        { "outlet": "Hespress", "url": "https://www.hespress.com/%D9%88%D8%B5%D9%81%D8%A9-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1-%D8%A5%D9%84%D9%89-%D8%B1%D8%A8%D8%B9-%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A-%D9%86%D9%82%D8%A7%D8%B7-%D9%82%D9%88%D8%A9-%D8%A7-1770071.html", "date": "2026-06-30", "lang": "ar" }
       ]
     },
     {
-      "storyline": "Captain Achraf Hakimi's fitness was a build-up talking point: he returned to training in late May after a hamstring injury carried in from the club season, and previews now describe him providing exceptional energy on the right flank against the Netherlands, framed as Morocco's primary attacking weapon down that side.",
+      "storyline": "Pan-Arab press reception: a Hespress round-up of Tunisian newspapers (Al-Shorouk, Al-Maghreb, Al-Sabah, Lokuotidian) hailed Morocco as a 'global football power not to be underestimated' after eliminating 'one of Europe's football giants,' with commentary suggesting the run could feed into 'Africa's first World Cup' narrative, and singling out Bounou's penalty-saving performance as exceptional.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
-        {
-          "outlet": "The National",
-          "url": "https://www.thenationalnews.com/sport/2026/05/29/morocco-world-cup-talking-points-atlas-lions-have-high-hopes-under-new-leadership-of-mohamed-ouahbi/",
-          "date": "2026-05-29"
-        },
-        {
-          "outlet": "Morocco Football Tribune",
-          "url": "https://moroccofootballtribune.com/morocco-vs-netherlands-preview-can-the-atlas-lions-reach-the-round-of-16/",
-          "date": "2026-06-27"
-        }
+        { "outlet": "Hespress", "url": "https://www.hespress.com/%D8%B5%D8%AD%D9%81-%D8%AA%D9%88%D9%86%D8%B3%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8-%D9%82%D9%88%D8%A9-%D9%83%D8%B1%D9%88%D9%8A%D8%A9-1770832.html", "date": "2026-07-01", "lang": "ar" }
       ]
     },
     {
-      "storyline": "Morocco's own press is framing the Netherlands tie as a 'Moroccan-Dutch derby' built on personal connections: several Atlas Lions know the Oranje camp intimately. Hespress notes Ismael Saibari recently won a Dutch cup alongside Xavi Simons at PSV, Hakimi is a former AS Roma teammate of Donyell Malen (now at Borussia Dortmund), Mazraoui came through Ajax with De Jong and Gravenberch, and Anass Salah-Eddin played his football in the Netherlands, lending the match a special, friendly-rivalry character against a large Moroccan-origin community in Amsterdam.",
+      "storyline": "Ismael Saibari's breakout tournament continues: after scoring in the group stage (including the tournament's fastest goal, versus Scotland) and drawing reported Bayern Munich transfer interest, he stepped up to score the winning penalty against the Netherlands, reinforcing his status as Morocco's standout performer of the tournament so far.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
-        {
-          "outlet": "Hespress",
-          "url": "https://www.hespress.com/%D8%AA%D9%86%D8%A7%D9%81%D8%B3-%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8-%D9%88%D9%87%D9%88%D9%84%D9%86%D8%AF%D8%A7-%D8%A8%D8%B7%D8%A7%D8%A8%D8%B9-%D8%AE%D8%A7%D8%B5-1768830.html",
-          "lang": "ar",
-          "date": "2026-06-28"
-        }
-      ]
-    },
-    {
-      "storyline": "Inside the Moroccan press, named ex-international pundits are debating the tie as evenly poised rather than a heavy task. On Hespress, former Atlas Lion Youssef Rossi calls it Morocco's true first knockout test and says the side can go beyond its Qatar achievement if it holds its level, while coach Abdessalam Sikabi rates it among the round's strongest matches with no clear favourite, likely to stretch to extra time or penalties and decided by who makes fewer mistakes.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Hespress",
-          "url": "https://www.hespress.com/%D8%AE%D8%A8%D8%B1%D8%A7%D8%A1-%D9%8A%D8%AA%D9%88%D9%82%D8%B9%D9%88%D9%86-%D9%85%D9%88%D8%A7%D8%AC%D9%87%D8%A9-%D9%85%D8%AA%D9%83%D8%A7%D9%81%D8%A6%D8%A9-%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D9%85-1768580.html",
-          "lang": "ar",
-          "date": "2026-06-28"
-        }
-      ]
-    },
-    {
-      "storyline": "The captaincy and dressing-room mood is its own storyline in the national press: Hespress carries Hakimi crediting federation president Fouzi Lekjaa for easing the team's task and describing a squad that spends time together dancing, laughing and playing cards and feels 'like a family', which he calls the secret going into the knockouts. Hakimi also publicly praised Saibari's form, saying what the player offers is no surprise because he has long known his quality.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Hespress",
-          "url": "https://www.hespress.com/%D8%AD%D9%83%D9%8A%D9%85%D9%8A-%D8%AD%D9%84%D9%85%D9%8A-%D8%B1%D9%81%D8%B9-%D9%83%D8%A3%D8%B3-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D9%88%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3-%D9%84%D9%82%D8%AC-1768726.html",
-          "lang": "ar",
-          "date": "2026-06-27"
-        }
-      ]
-    },
-    {
-      "storyline": "Local outlets are tracking the build-up day by day, casting the tie as a defining moment for coach Mohamed Ouahbi. Fes24 reports him raising the intensity and focus of the camp before this first elimination test in Monterrey, with recovery work for the Haiti starters and more intensive tactical drills on defensive-to-offensive transitions for the rest of the squad.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Fes24",
-          "url": "https://www.fes24.com/%D8%A3%D8%B3%D9%88%D8%AF-%D8%A7%D9%84%D8%A3%D8%B7%D9%84%D8%B3-%D9%8A%D8%B4%D8%AD%D8%B0%D9%88%D9%86-%D8%A7%D9%84%D8%A3%D8%B3%D9%84%D8%AD%D8%A9-%D9%84%D9%85%D9%88%D9%82%D8%B9%D8%A9-%D9%87%D9%88%D9%84/",
-          "lang": "ar",
-          "date": "2026-06-27"
-        }
+        { "outlet": "Al Jazeera", "url": "https://www.aljazeera.com/sports/2026/6/30/morocco-netherlands-world-cup-knockout-penalty-shootout-saibari-diop-gakpo", "date": "2026-06-30", "lang": "en" },
+        { "outlet": "ESPN", "url": "https://www.espn.com/espn/story/_/id/49120866/bayern-munich-fans-thrilled-morocco-ismael-saibari-based-fifa-world-cup-efforts", "date": "2026-06-20", "lang": "en" }
       ]
     }
   ],
   "attributed_quotes": [
     {
-      "quote": "The players now believe in their ability, and opponents respect Morocco.",
+      "quote": "It is a fully deserved victory in every sense of the word.",
+      "quote_original": null,
+      "lang": "en",
       "speaker_name": "Mohamed Ouahbi",
       "speaker_role": "Morocco head coach",
-      "outlet": "beIN SPORTS",
-      "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/ouahbi-tells-morocco-to-believe-they-can-win-the-world-cup-after-reaching-last-32-2026-06-25",
-      "date": "2026-06-25",
-      "context": "After Morocco beat Haiti 4-2 to finish the group unbeaten and reach the round of 32; in the same remarks he said the objective must be to win the World Cup.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
-      "lang": "en",
-      "quote_original": null
+      "outlet": "Africa Top Sports",
+      "url": "https://en.africatopsports.com/2026-fifa-world-cup-ouahbi-hails-fully-deserved-morocco-triumph-after-penalty-shootout-win-over-netherlands/",
+      "date": "2026-06-30",
+      "context": "Post-match reaction after Morocco's 3-2 penalty-shootout win over the Netherlands in the round of 32."
     },
     {
-      "quote": "We are really proud when Moroccan players are able to play for big clubs like Bayern Munich.",
+      "quote": "We were surprised to see the Netherlands play with so many defenders.",
+      "quote_original": null,
+      "lang": "en",
       "speaker_name": "Mohamed Ouahbi",
       "speaker_role": "Morocco head coach",
-      "outlet": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/morocco-coach-talks-match-winner-203000576.html",
-      "date": "2026-06-21",
-      "context": "On match-winner Ismael Saibari's reported Bayern Munich move; Ouahbi added the player is concentrating on playing for Morocco.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
+      "outlet": "Morocco World News",
+      "url": "https://www.moroccoworldnews.com/2026/06/326385/mohamed-ouahbi-netherlands-five-man-defense-showed-respect-for-morocco/",
+      "date": "2026-06-30",
+      "context": "On having to adapt tactically to the Netherlands' five-man defensive setup."
+    },
+    {
+      "quote": "This did not happen because of words. It happened because of the work we have done over many years.",
+      "quote_original": null,
       "lang": "en",
-      "quote_original": null
-    },
-    {
-      "quote": "There are no friendships inside the pitch.",
-      "quote_original": "لا توجد صداقات داخل الملعب",
-      "lang": "ar",
-      "speaker_name": "Achraf Hakimi",
-      "speaker_role": "Morocco captain",
+      "speaker_name": "Mohamed Ouahbi",
+      "speaker_role": "Morocco head coach",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
-      "outlet": "Hespress",
-      "url": "https://www.hespress.com/%D8%AA%D9%86%D8%A7%D9%81%D8%B3-%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8-%D9%88%D9%87%D9%88%D9%84%D9%86%D8%AF%D8%A7-%D8%A8%D8%B7%D8%A7%D8%A8%D8%B9-%D8%AE%D8%A7%D8%B5-1768830.html",
-      "date": "2026-06-28",
-      "context": "On the personal-connections angle to the Netherlands tie; Hakimi stressed respect for former teammates but no favours once the match starts."
+      "outlet": "Morocco World News",
+      "url": "https://www.moroccoworldnews.com/2026/06/326385/mohamed-ouahbi-netherlands-five-man-defense-showed-respect-for-morocco/",
+      "date": "2026-06-30",
+      "context": "On the claim that 'everyone respects Morocco now' after beating the Netherlands."
     },
     {
-      "quote": "I'll meet some friends, and that is truly wonderful.",
-      "quote_original": "سألتقي ببعض الأصدقاء، وهذا أمر رائع حقا",
-      "lang": "ar",
-      "speaker_name": "Ismael Saibari",
-      "speaker_role": "Morocco midfielder",
+      "quote": "If you offered me another semi-final like we managed in 2022, I'd tell you that I want to go further.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Mohamed Ouahbi",
+      "speaker_role": "Morocco head coach",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
-      "outlet": "Hespress",
-      "url": "https://www.hespress.com/%D8%AA%D9%86%D8%A7%D9%81%D8%B3-%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8-%D9%88%D9%87%D9%88%D9%84%D9%86%D8%AF%D8%A7-%D8%A8%D8%B7%D8%A7%D8%A8%D8%B9-%D8%AE%D8%A7%D8%B5-1768830.html",
-      "date": "2026-06-28",
-      "context": "On possibly facing Dutch-based friends including PSV teammate Xavi Simons in the Round of 32."
+      "outlet": "CAF Online",
+      "url": "https://www.cafonline.com/fifa-world-cup/news/ouahbi-eyes-bigger-dreams-as-morocco-build-on-world-cup-legacy-by-blending-experience-with-a-new-generation/",
+      "date": "2026-06-15",
+      "context": "On not being satisfied with repeating the 2022 semi-final run, ahead of the knockout rounds."
+    },
+    {
+      "quote": "Representing my national team was something I had very deep inside.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Yassine Bounou",
+      "speaker_role": "Morocco goalkeeper",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "TSN",
+      "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-to-face-morocco-on-saturday-at-1pm-et-in-round-of-16-at-2026-fifa-world-cup-on-tsn/",
+      "date": "2026-06-30",
+      "context": "On having been born in Montreal and once approached about representing Canada before choosing Morocco, ahead of facing Canada in the round of 16."
     }
   ],
   "local_availability_reporting": [],
   "gaps": [
-    "No major REPORTED/uncertain fitness doubts could be sourced for the Netherlands match: the Tribune preview describes Hakimi as fit and active on the right flank (his hamstring was a May build-up issue resolved before the tournament), and Mazraoui/Amrabat changes are described as tactical, so local_availability_reporting is empty. The only availability issues found are confirmed pre-tournament ruleouts (Aguerd, Ezzalzouli), placed in dominant_storylines.",
-    "The ESPN reshuffle article (cited for the Aguerd/Ezzalzouli ruleouts) does NOT name Issa Diop as Aguerd's replacement or mention Hakimi's hamstring; Diop's promotion and Hakimi's hamstring are sourced separately to The National. Storylines were re-sourced accordingly.",
-    "Saibari's goal tally was softened: ESPN confirms goals against Brazil and Scotland (including the tournament's fastest goal, 71 seconds, vs Scotland) but does not confirm a goal in all three group games, so 'scored in all three' was removed.",
-    "Sources diverge on AFCON 2025's outcome: one Al Jazeera feature frames Senegal as having won the final on the pitch, while a dedicated Al Jazeera report confirms CAF later awarded the title to Morocco (result changed to 3-0) after Senegal walked off; this contested sequence is included only as attributed context, not as a clean fact.",
-    "No verbatim quote from a current Morocco player (Hakimi, Saibari, Bono) for the R32 build-up could be sourced cleanly within the limit; only paraphrased player references were available, so player quotes are omitted.",
-    "Direct national-federation (FRMF) official statement on R32 expectations/mood was not located; manager and press framing used instead, tagged discovery. The cited FIFA appointment URL returned blank on re-fetch but the appointment (5 March 2026) is corroborated by FIFA's own search result and multiple outlets.",
-    "No confirmed FIFA/confederation 'official' fact-grade source was used for mood/expectations; all such sections rest on attributed press reporting."
+    "A Hespress training report on a minor reported knock for defender Shadi Riad (said not to be a concern) is dated 2026-07-02, after this file's 2026-07-01 research cutoff, so it is deliberately excluded here; should be checked and added if still current at the next refresh.",
+    "No verbatim reaction quotes from Morocco outfield players (Saibari, Diop, Hakimi, Mazraoui) about the Netherlands shootout itself could be sourced within the cutoff — only coach Ouahbi's press-conference quotes and one older Bounou quote (from pre-tournament reporting on his Canada connection) were available.",
+    "No verbatim original-language (Arabic/French) quote text could be confirmed exactly as spoken; all quotes used here come from English-language outlets or English renderings, so quote_original is null throughout. If exact Arabic-language originals are later confirmed (e.g., from Hespress interviews), they should be added with lang tags.",
+    "The Tunisian press reactions (Al-Shorouk, Al-Maghreb, Al-Sabah, Lokuotidian) are relayed via a Hespress round-up rather than the primary Tunisian outlets directly, so they are summarized as attributed context/storyline rather than presented as standalone sourced quotes.",
+    "Spelling of some Moroccan players varies across outlets (e.g. El Aynaoui; Rahimi vs. Rhaimi for the penalty-taker whose kick was turned into an own goal by Verbruggen) — the most common English-language spellings were used.",
+    "No FIFA/CAF official (fact-grade) statement specific to the Canada round-of-16 tie was located; all expectation/mood content for this round remains press-sourced (discovery tier), consistent with the R32 file.",
+    "Direct Moroccan federation (FRMF) comment on the Canada tie was not located; manager and press framing used instead."
   ],
   "source_data_snapshot": [
     {
-      "outlet": "FIFA",
-      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mohamed-ouahbi-replaces-walid-regragui-morocco",
-      "retrieved_at": "2026-06-28",
-      "note": "Ouahbi replaces Regragui, 5 March 2026 appointment (corroborated via FIFA search snippet; page body blank on direct fetch)"
-    },
-    {
-      "outlet": "CAF Online",
-      "url": "https://www.cafonline.com/news/morocco-turn-to-ouahbi-for-leadership-after-coach-walid-regraguis-departure/",
-      "retrieved_at": "2026-06-28",
-      "note": "Regragui departure / Ouahbi leadership"
-    },
-    {
-      "outlet": "beIN SPORTS",
-      "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/ouahbi-tells-morocco-to-believe-they-can-win-the-world-cup-after-reaching-last-32-2026-06-25",
-      "retrieved_at": "2026-06-28",
-      "note": "Verbatim Ouahbi quotes confirmed: 'The players now believe in their ability, and opponents respect Morocco. For that reason, our objective must be to win the World Cup.'"
+      "outlet": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/6/30/morocco-netherlands-world-cup-knockout-penalty-shootout-saibari-diop-gakpo",
+      "retrieved_at": "2026-07-01",
+      "note": "Full R32 result: Diop 91' header forces ET, Morocco win shootout 3-2, advance to face Canada in Houston"
     },
     {
       "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49170899/morocco-world-cup-2026-fifa-win-africa-haiti",
-      "retrieved_at": "2026-06-28",
-      "note": "First African winners ambition; confirms 2nd in Group C behind Brazil, 4-2 over Haiti; dated June 24 (draft had June 25)"
+      "url": "https://www.espn.com/soccer/story/_/id/49222205/morocco-win-shootout-send-netherlands-home-world-cup",
+      "retrieved_at": "2026-07-01",
+      "note": "Shootout detail: Bounou saves Summerville, Saibari scores winner; published 2026-06-29 23:58 ET"
+    },
+    {
+      "outlet": "Africa Top Sports",
+      "url": "https://en.africatopsports.com/2026-fifa-world-cup-ouahbi-hails-fully-deserved-morocco-triumph-after-penalty-shootout-win-over-netherlands/",
+      "retrieved_at": "2026-07-01",
+      "note": "Verbatim Ouahbi quotes on 'fully deserved victory', possession stats (70/30)"
     },
     {
       "outlet": "Morocco World News",
-      "url": "https://www.moroccoworldnews.com/2026/06/324834/mohamed-ouahbi-morocco-must-aim-to-win-the-world-cup/",
-      "retrieved_at": "2026-06-28",
-      "note": "Expectations/mood; Monterrey/1986 reference; confidence-not-arrogance"
+      "url": "https://www.moroccoworldnews.com/2026/06/326385/mohamed-ouahbi-netherlands-five-man-defense-showed-respect-for-morocco/",
+      "retrieved_at": "2026-07-01",
+      "note": "Verbatim Ouahbi quotes on Dutch five-man defense and 'everyone respects Morocco now'"
     },
     {
-      "outlet": "The National",
-      "url": "https://www.thenationalnews.com/sport/2026/05/29/morocco-world-cup-talking-points-atlas-lions-have-high-hopes-under-new-leadership-of-mohamed-ouahbi/",
-      "retrieved_at": "2026-06-28",
-      "note": "Confirms Hakimi returned to training May 26 after hamstring; Aguerd groin; Issa Diop promoted; En-Nesyri omitted"
+      "outlet": "CAF Online",
+      "url": "https://www.cafonline.com/fifa-world-cup/news/ouahbi-eyes-bigger-dreams-as-morocco-build-on-world-cup-legacy-by-blending-experience-with-a-new-generation/",
+      "retrieved_at": "2026-07-01",
+      "note": "Pre-knockout (2026-06-15) Ouahbi quote on wanting to surpass the 2022 semi-final; blending experience with young talent"
     },
     {
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49027277/morocco-cut-injured-aguerd-ezzalzouli-last-minute-world-cup-reshuffle",
-      "retrieved_at": "2026-06-28",
-      "note": "Confirmed pre-tournament ruleouts: Aguerd (groin + pubic-bone fracture, out), Ezzalzouli (failed fitness test); dated June 11 (draft had June 12); does NOT mention Diop pairing or Hakimi hamstring"
+      "outlet": "Al Jazeera",
+      "url": "https://www.aljazeera.net/sport/2026/6/30/5-%D8%B6%D8%A7%D8%A6%D8%B9%D8%A9-%D9%88%D9%87%D9%81%D9%88%D8%A9-%D8%BA%D8%B1%D9%8A%D8%A8%D8%A9-%D8%AF%D8%B1%D8%A7%D9%85%D8%A7-%D8%B1%D9%83%D9%84%D8%A7%D8%AA",
+      "retrieved_at": "2026-07-01",
+      "note": "Shootout drama detail: 5 misses (El Aynaoui, Kluivert, Tijjani/Tiefer, Hakimi all hit frame/missed), Verbruggen own goal off Rahimi's kick"
     },
     {
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/espn/story/_/id/49120866/bayern-munich-fans-thrilled-morocco-ismael-saibari-based-fifa-world-cup-efforts",
-      "retrieved_at": "2026-06-28",
-      "note": "Saibari goals vs Brazil and Scotland incl. fastest goal (71s); Bayern move not yet official; dated June 20 (draft had June 22)"
+      "outlet": "Hespress",
+      "url": "https://www.hespress.com/%D9%88%D8%B5%D9%81%D8%A9-%D8%A7%D9%84%D8%B9%D8%A8%D9%88%D8%B1-%D8%A5%D9%84%D9%89-%D8%B1%D8%A8%D8%B9-%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A-%D9%86%D9%82%D8%A7%D8%B7-%D9%82%D9%88%D8%A9-%D8%A7-1770071.html",
+      "lang": "ar",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Canada preview 'with memories of Qatar': group-stage record recap, expert analysis (Said Razki, Tarek Al-Taliani) on Morocco's tactical edge; NRG/Houston Stadium climate note"
     },
     {
-      "outlet": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/morocco-coach-talks-match-winner-203000576.html",
-      "retrieved_at": "2026-06-28",
-      "note": "Verbatim Ouahbi quote on Saibari/Bayern confirmed; dated June 21"
+      "outlet": "Hespress",
+      "url": "https://www.hespress.com/%D8%B5%D8%AD%D9%81-%D8%AA%D9%88%D9%86%D8%B3%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8-%D9%82%D9%88%D8%A9-%D9%83%D8%B1%D9%88%D9%8A%D8%A9-1770832.html",
+      "lang": "ar",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Round-up of Tunisian press reaction hailing Morocco as a 'global football power'; tagged 'other'-adjacent via Hespress relay, reviewer note: Hespress is a mainstream Moroccan outlet already used across this file, not itself a betting/odds source"
+    },
+    {
+      "outlet": "TSN",
+      "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-to-face-morocco-on-saturday-at-1pm-et-in-round-of-16-at-2026-fifa-world-cup-on-tsn/",
+      "retrieved_at": "2026-07-01",
+      "note": "REVIEWER NOTE (outlet not on the pre-built allowlist, no Canada region listed): TSN is Canada's dedicated national sports broadcaster (rights-holder for CFL/NHL/soccer coverage), a mainstream credible outlet comparable in tier to BBC Sport/Sky Sports; used for Bounou Montreal-birth/Floro anecdote and the 2022 Qatar 2-1 head-to-head, not for odds or predictions."
     },
     {
       "outlet": "Al Jazeera",
       "url": "https://www.aljazeera.com/sports/2026/5/31/from-afcon-to-world-cup-2026-how-morocco-became-a-football-powerhouse",
       "retrieved_at": "2026-06-28",
-      "note": "Historical rise, Mohammed VI academy (Aguerd/Ounahi), 2022 semi-final, AFCON 2025 controversy, Regragui-Ouahbi transition"
+      "note": "Carried over from R32 file: historical rise, academy investment, 2022 semi-final legacy"
     },
     {
-      "outlet": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/3/18/how-senegals-afcon-win-was-awarded-to-morocco-and-what-next-all-to-know",
+      "outlet": "FIFA",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mohamed-ouahbi-replaces-walid-regragui-morocco",
       "retrieved_at": "2026-06-28",
-      "note": "CAF appeals board changed final to 3-0 Morocco after Senegal walkoff; Senegal appealing to CAS"
+      "note": "Carried over from R32 file: Ouahbi replaces Regragui, 5 March 2026 appointment"
     },
     {
-      "outlet": "Morocco Football Tribune",
-      "url": "https://moroccofootballtribune.com/morocco-vs-netherlands-preview-can-the-atlas-lions-reach-the-round-of-16/",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/espn/story/_/id/49120866/bayern-munich-fans-thrilled-morocco-ismael-saibari-based-fifa-world-cup-efforts",
       "retrieved_at": "2026-06-28",
-      "note": "R32 preview: Morocco v Netherlands 30 June, Monterrey; Hakimi right flank, Amrabat anchor, Bono saves"
-    },
-    {
-      "outlet": "Hespress",
-      "url": "https://www.hespress.com/%D8%AE%D8%A8%D8%B1%D8%A7%D8%A1-%D9%8A%D8%AA%D9%88%D9%82%D8%B9%D9%88%D9%86-%D9%85%D9%88%D8%A7%D8%AC%D9%87%D8%A9-%D9%85%D8%AA%D9%83%D8%A7%D9%81%D8%A6%D8%A9-%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D9%85-1768580.html",
-      "lang": "ar",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Named Moroccan pundits (Youssef Rossi, Abdessalam Sikabi) framing the Netherlands tie as Morocco's true first knockout test, balanced, no clear favourite; editorial punditry, not a betting site. Re-fetched and confirmed."
-    },
-    {
-      "outlet": "Hespress",
-      "url": "https://www.hespress.com/%D8%AD%D9%83%D9%8A%D9%85%D9%8A-%D8%AD%D9%84%D9%85%D9%8A-%D8%B1%D9%81%D8%B9-%D9%83%D8%A3%D8%B3-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D9%88%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3-%D9%84%D9%82%D8%AC-1768726.html",
-      "lang": "ar",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Hakimi interview: praise for federation president Lekjaa, squad-as-family cohesion, praise for Saibari. NOTE: the 'World Cup dream' line is headline-only, not a verbatim body quote — the stitched WC-dream quote was DROPPED."
-    },
-    {
-      "outlet": "Hespress",
-      "url": "https://www.hespress.com/%D8%AA%D9%86%D8%A7%D9%81%D8%B3-%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8-%D9%88%D9%87%D9%88%D9%84%D9%86%D8%AF%D8%A7-%D8%A8%D8%B7%D8%A7%D8%A8%D8%B9-%D8%AE%D8%A7%D8%B5-1768830.html",
-      "lang": "ar",
-      "retrieved_at": "2026-06-28",
-      "used_for": "'Moroccan-Dutch derby' personal-connections storyline (Saibari-Simons, Hakimi-Malen via Roma now at Dortmund, Mazraoui-Ajax, Salah-Eddin); verbatim Hakimi and Saibari quotes confirmed."
-    },
-    {
-      "outlet": "Fes24",
-      "url": "https://www.fes24.com/%D8%A3%D8%B3%D9%88%D8%AF-%D8%A7%D9%84%D8%A3%D8%B7%D9%84%D8%B3-%D9%8A%D8%B4%D8%AD%D8%B0%D9%88%D9%86-%D8%A7%D9%84%D8%A3%D8%B3%D9%84%D8%AD%D8%A9-%D9%84%D9%85%D9%88%D9%82%D8%B9%D8%A9-%D9%87%D9%88%D9%84/",
-      "lang": "ar",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Build-up storyline: Ouahbi raising camp intensity/focus before first elimination test in Monterrey; recovery + tactical-transition drills. Full article body reachable on re-fetch (supersedes the earlier ETIMEOUT caveat). Lists kickoff as 29 June."
+      "note": "Carried over from R32 file: Saibari goals vs Brazil/Scotland incl. fastest goal (71s); Bayern move reported not yet official"
     }
   ]
 }

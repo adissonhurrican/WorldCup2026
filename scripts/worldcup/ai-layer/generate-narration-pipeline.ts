@@ -700,7 +700,8 @@ export const USER_MSG_KNOCKOUT_PRE = (input: any, max: number) => [
   "NATIONAL STAKES (both teams): from contextual_inputs.team_story (an object keyed by team_code), convey what each nation expects or fears — in WORDS, sourced. official+fact_grade may be stated as fact; discovery+attributed_context_only MUST be attributed ('per Marca', 'Spanish coverage suggests'), at most one short quote of <=20 words per team. If a team has no team_story, say nothing about that nation's mood. Honour gaps; a thin story means restraint; never let the story override the numbers.",
   "WHAT TO WATCH: close with the key battle, grounded in what both have shown.",
   "Mood in words, never invented numbers. No odds, no betting, no model jargon, no run IDs, no table names, no version tags. Real people only as on-pitch facts. This is the PREVIEW — do NOT predict the next round's opponent.",
-  "Required JSON fields: content_type, headline, body, probability_references, source_trace, context_caveats, unknowns, validation_notes.",
+  "YOUR OWN PREDICTION (the ai_prediction field — you are a CO-PREDICTOR alongside the model, neither subordinate): make YOUR OWN call on the tie as a JSON object: { \"pick\": \"<the 3-letter code of the team you expect to advance>\", \"reasoning\": \"<2-4 sentences>\", \"confidence_words\": \"<in words: 'narrowly', 'comfortably', 'a coin-flip lean', ...>\", \"likely_scoreline\": \"<e.g. '2-1'>\", \"agrees_with_model\": true|false }. Ground EVERY reason in the supplied data — the model's win figure, form, head-to-head, danger men, and the team_story national narratives (momentum, shootout nerve, a keeper's form, mood) that the pure rating maths cannot see. You may AGREE with the model's favourite or DISAGREE where that qualitative evidence justifies it — the divergence is the point, but it must be earned from the data, never vibes. Reference the model explicitly IN WORDS (e.g. 'the model makes France strong favourites and the data backs it' or 'the model narrowly favours X, but ...'). HARD RULE: no percentage or probability NUMBER anywhere inside ai_prediction — confidence lives in words; the model's number already lives in the body. The scoreline is a prediction, framed as such, never asserted fact. No betting language.",
+  "Required JSON fields: content_type, headline, body, ai_prediction, probability_references, source_trace, context_caveats, unknowns, validation_notes.",
   `Keep the body within ${max} words.`,
   `Structured input:\n${JSON.stringify(input)}`,
 ].join("\n\n");
@@ -773,13 +774,13 @@ async function runKnockoutNarration(url: string, mode: "pre" | "post", fixtureAr
     }
     if (!raw || !vr || !vr.valid) { results.push({ fixture: t.label, status: raw ? "rejected_not_stored" : "generation_failed", rejections: vr?.rejections ?? ["no_validation"] }); await sleep(600); continue; }
     const out: any = vr.cleaned_output;
-    const rec = { scope: "fixture", team: null as string | null, fixture: t.label, content_type, headline: String(out.headline), body: bodyOf(out) };
+    const rec = { scope: "fixture", team: null as string | null, fixture: t.label, content_type, headline: String(out.headline), body: bodyOf(out), ai_prediction: out.ai_prediction ?? null };
     if (execute) storeNarration(url, rec);
-    results.push({ fixture: t.label, status: execute ? "stored(validated)" : "valid(dry-run)", repaired: vr.repaired, words: vr.metrics.body_word_count, headline: rec.headline, body: rec.body });
+    results.push({ fixture: t.label, status: execute ? "stored(validated)" : "valid(dry-run)", repaired: vr.repaired, words: vr.metrics.body_word_count, headline: rec.headline, body: rec.body, ai_prediction: rec.ai_prediction });
     await sleep(700);
   }
   console.log(JSON.stringify({ project_id: PROJECT, mode, executed: execute, generated: results.length, skipped, summary: results.map((r) => ({ fixture: r.fixture, status: r.status, words: r.words, repaired: r.repaired })) }, null, 2));
-  if (!execute) for (const r of results) if (r.body) console.log(`\n=== ${r.fixture} (${mode === "post" ? "post-match" : "pre-match"}) ===\nHEADLINE: ${r.headline}\n${r.body}`);
+  if (!execute) for (const r of results) if (r.body) console.log(`\n=== ${r.fixture} (${mode === "post" ? "post-match" : "pre-match"}) ===\nHEADLINE: ${r.headline}\n${r.body}${r.ai_prediction ? `\n\nAI PREDICTION — pick: ${r.ai_prediction.pick} (${r.ai_prediction.confidence_words}; likely ${r.ai_prediction.likely_scoreline}; ${r.ai_prediction.agrees_with_model ? "agrees with the model" : "DIVERGES from the model"})\n${r.ai_prediction.reasoning}` : ""}`);
 }
 
 function ensureTable(url: string) {
@@ -802,6 +803,9 @@ function ensureTable(url: string) {
     created_at timestamptz not null default now(),
     constraint ai_narr_scope_chk check (scope in ('team','fixture'))
   )`);
+  // The AI's OWN pick for a knockout tie (pre_match_storyline only) — {pick, reasoning, confidence_words,
+  // likely_scoreline, agrees_with_model}. Nullable: older rows/content types simply have none (graceful).
+  execSql(url, `alter table public.ai_narrations add column if not exists ai_prediction jsonb`);
   // Self-healing unique index. CREATE UNIQUE INDEX IF NOT EXISTS matches by NAME only — it CANNOT repair an index
   // left in a drifted (legacy 4-expression) shape, which makes storeNarration's 5-expression ON CONFLICT fail with
   // 42P10 forever on that DB. Read the REAL definition (pg_indexes.indexdef) and rebuild ONLY if it's missing or the
@@ -822,12 +826,13 @@ function ensureTable(url: string) {
   execSql(url, `comment on table public.ai_narrations is 'Validated AI narration consumed by the app-data export. Stored only after validate-and-repair passes (validated=true). No odds/predictions; AI explains, never invents.'`);
 }
 
-function storeNarration(url: string, r: { scope: string; team: string | null; fixture: string | null; content_type: string; headline: string; body: string }) {
+function storeNarration(url: string, r: { scope: string; team: string | null; fixture: string | null; content_type: string; headline: string; body: string; ai_prediction?: any }) {
   const j = (s: string) => `$x$${s}$x$`;
-  execSql(url, `insert into public.ai_narrations (scope, team_code, fixture_label, content_type, headline, body, source_label, validated, validation_notes, prompt_version)
-    values (${j(r.scope)}, ${r.team ? j(r.team) : "null"}, ${r.fixture ? j(r.fixture) : "null"}, ${j(r.content_type)}, ${j(r.headline)}, ${j(r.body)}, ${j("our World Cup simulation model")}, true, $x$[]$x$::jsonb, ${j(PROMPT_VERSION)})
+  const ap = r.ai_prediction != null ? `${j(JSON.stringify(r.ai_prediction))}::jsonb` : "null";
+  execSql(url, `insert into public.ai_narrations (scope, team_code, fixture_label, content_type, headline, body, source_label, validated, validation_notes, prompt_version, ai_prediction)
+    values (${j(r.scope)}, ${r.team ? j(r.team) : "null"}, ${r.fixture ? j(r.fixture) : "null"}, ${j(r.content_type)}, ${j(r.headline)}, ${j(r.body)}, ${j("our World Cup simulation model")}, true, $x$[]$x$::jsonb, ${j(PROMPT_VERSION)}, ${ap})
     on conflict (tournament_code, content_type, coalesce(team_code,''), coalesce(fixture_label,''), coalesce(group_code,''))
-    do update set headline=excluded.headline, body=excluded.body, validated=true, prompt_version=excluded.prompt_version, generated_at=now()`);
+    do update set headline=excluded.headline, body=excluded.body, ai_prediction=excluded.ai_prediction, validated=true, prompt_version=excluded.prompt_version, generated_at=now()`);
 }
 
 export function bodyOf(o: any): string { for (const k of ["body", "summary", "narrative", "analysis"]) if (typeof o?.[k] === "string") return o[k]; return ""; }

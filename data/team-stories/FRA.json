@@ -1,13 +1,13 @@
 {
   "team_code": "FRA",
-  "round": "R32",
-  "next_opponent_code": "TBD",
+  "round": "R16",
+  "next_opponent_code": "PAR",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
+  "last_updated": "2026-07-01",
   "confidence": "high",
   "national_expectations": {
-    "summary": "As reigning 2018 winners and 2022 finalists, France arrive among the small group of nations realistically expected to contend for the title, with supporters anticipating Les Bleus will still be in the running deep into July; Deschamps himself has framed the squad as legitimately aspiring to win while publicly resisting the favourites label. Anything short of a deep run would land as a disappointment.",
+    "summary": "As reigning 2018 winners and 2022 finalists, France arrive among the small group of nations realistically expected to contend for the title, with supporters anticipating Les Bleus will still be in the running deep into July; Deschamps himself has framed the squad as legitimately aspiring to win while publicly resisting the favourites label. Anything short of a deep run would land as a disappointment. A routine Round of 32 win over Sweden, in which Deschamps became the winningest coach in World Cup history, has only reinforced that expectation heading into the last 16.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
@@ -25,11 +25,17 @@
         "outlet": "Yahoo Sports",
         "url": "https://sports.yahoo.com/articles/don-t-didier-deschamps-rejects-132000084.html",
         "date": "2026-05-29"
+      },
+      {
+        "outlet": "info.fr",
+        "url": "https://info.fr/coupe-du-monde-2026-bleus-paraguay-huitiemes-remake/",
+        "lang": "fr",
+        "date": "2026-07-01"
       }
     ]
   },
   "national_mood": {
-    "summary": "Buoyant and confident after a flawless group stage in which France scored heavily in every match and looked rarely stretched. The press is openly enthused about the attacking depth, with Dembele's rapid hat trick against Norway and Mbappe's hot form fuelling talk of a frightening forward line; the prevailing tone is optimism that Les Bleus are living up to their pre-tournament billing, tempered only by a recurring debate about defensive exposure.",
+    "summary": "Buoyant and increasingly confident after a routine 3-0 Round of 32 win over Sweden extended France's flawless run through the tournament; Mbappe's brace and Olise's creative influence kept the press enthused about the squad's attacking ceiling, and the same night saw Deschamps become the winningest manager in World Cup history by victories. The prevailing tone remains near-total conviction that Les Bleus are genuine contenders, tempered by two recurring notes of caution: the ongoing defensive-exposure debate, and Deschamps' own on-the-record warning against complacency before a Paraguay side that has already eliminated one favourite.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
@@ -44,14 +50,20 @@
         "date": "2026-06"
       },
       {
-        "outlet": "The Analyst (Opta)",
-        "url": "https://theanalyst.com/articles/mbappe-dembele-olise-france-stars-power-them-to-world-cup-glory",
-        "date": "2026-06"
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/11095/13558813/world-cup-2026-france-3-0-sweden-kylian-mbappe-and-michael-olise-star-in-dominant-win-to-set-up-paraguay-tie",
+        "date": "2026-06-30"
+      },
+      {
+        "outlet": "info.fr",
+        "url": "https://info.fr/coupe-du-monde-2026-bleus-paraguay-huitiemes-remake/",
+        "lang": "fr",
+        "date": "2026-07-01"
       }
     ]
   },
   "manager_situation": {
-    "summary": "Didier Deschamps is leading France in what he has confirmed will be his final tournament in charge after a tenure beginning in 2012, lending an end-of-era weight to the campaign. During the group stage his standing was overshadowed by personal tragedy: his mother died, and he flew home for the funeral, missing the Norway match while long-time assistant Guy Stephan took charge. The federation publicly asked for respect and restraint, and France won that game comfortably in his absence.",
+    "summary": "Didier Deschamps is leading France in what he has confirmed will be his final tournament in charge after a tenure beginning in 2012, lending an end-of-era weight to the campaign. During the group stage his standing was overshadowed by personal tragedy: his mother died, and he flew home for the funeral, missing the Norway match while long-time assistant Guy Stephan took charge. The federation publicly asked for respect and restraint, and France won that game comfortably in his absence. The Sweden win carried fresh personal resonance: after opening the scoring, Mbappe sprinted to embrace his manager, who later said the gesture 'really struck me' and praised his captain as exemplary; teammate Adrien Rabiot described Deschamps as still visibly affected by grief but trying to stay upbeat for the group. That same night, Deschamps' 17th World Cup win made him the most successful manager in the competition's history, surpassing Helmut Schon and Mario Zagallo, giving his farewell campaign a record-breaking coda. Ahead of Paraguay he has struck a deliberately cautious tone, warning against complacency and stressing that Paraguay's South American 'DNA' and shootout win over Germany mean they are no accident in the last 16.",
     "source_tier": "official",
     "verification": "fact_grade",
     "sources": [
@@ -64,11 +76,28 @@
         "outlet": "Al Jazeera",
         "url": "https://www.aljazeera.com/sports/2026/6/25/norway-vs-france-at-world-cup-2026-mbappe-vs-haaland-team-news-lineups",
         "date": "2026-06-25"
+      },
+      {
+        "outlet": "amNewYork",
+        "url": "https://www.amny.com/sports/didier-deschamps-mbappe-world-cup-6-30-26/",
+        "date": "2026-06-30"
+      },
+      {
+        "outlet": "info.fr",
+        "url": "https://info.fr/coupe-du-monde-2026-bleus-paraguay-huitiemes-remake/",
+        "lang": "fr",
+        "date": "2026-07-01"
+      },
+      {
+        "outlet": "Foot Mercato",
+        "url": "https://www.footmercato.net/a4358469505134975284-coupe-du-monde-2026-didier-deschamps-se-mefie-du-paraguay",
+        "lang": "fr",
+        "date": "2026-07-01"
       }
     ]
   },
   "historical_context": {
-    "summary": "France are two-time world champions, lifting the trophy in 1998 on home soil and again in 2018, and they reached the most recent final, losing to Argentina on penalties in 2022. That recent pedigree, paired with a generation of elite attackers, underpins the country's expectation that France belong among the very few realistic contenders each tournament.",
+    "summary": "France are two-time world champions, lifting the trophy in 1998 on home soil and again in 2018, and they reached the most recent final, losing to Argentina on penalties in 2022. That recent pedigree, paired with a generation of elite attackers, underpins the country's expectation that France belong among the very few realistic contenders each tournament. Their Round of 16 tie with Paraguay carries its own echo of that 1998 triumph: the same two nations met at the identical knockout stage that year, when Laurent Blanc scored the first golden goal in World Cup history to send France through, at Lens, en route to the trophy - a parallel the French press has revived 28 years on.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
@@ -81,12 +110,35 @@
         "outlet": "Sports Mole",
         "url": "https://www.sportsmole.co.uk/football/france/world-cup/feature/france-2026-world-cup-preview-squad-fixtures-and-prediction_598918.html",
         "date": "2026-06"
+      },
+      {
+        "outlet": "info.fr",
+        "url": "https://info.fr/coupe-du-monde-2026-bleus-paraguay-huitiemes-remake/",
+        "lang": "fr",
+        "date": "2026-07-01"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "An embarrassment of attacking riches is the headline narrative: France scored heavily in all three group games, with Ousmane Dembele (the reigning Ballon d'Or holder) scoring a first-half hat trick against Norway, described by ESPN as one of the fastest in World Cup history, alongside in-form Mbappe, Olise and a deep forward line widely called frightening.",
+      "storyline": "France beat Sweden 3-0 in the Round of 32 (New York/New Jersey Stadium, 2026-06-30) to reach the last 16: Kylian Mbappe scored twice (45', assisted by Dembele; 74', assisted by Olise) either side of a Bradley Barcola goal (53') set up by Michael Olise, with Barcola preferred to Desire Doue in the front four - a reminder that France's attacking depth extends well past its headline names.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558813/world-cup-2026-france-3-0-sweden-kylian-mbappe-and-michael-olise-star-in-dominant-win-to-set-up-paraguay-tie",
+          "date": "2026-06-30"
+        },
+        {
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49227768/france-sweden-live-world-cup-2026-latest-updates-commentary-score-result",
+          "date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "storyline": "An embarrassment of attacking riches is the headline narrative: France scored heavily in every group game and then again against Sweden, with Ousmane Dembele's rapid Norway hat trick, Mbappe's continued scoring and Olise's creative influence fuelling talk of a frightening forward line so deep that Barcola's goal off the bench barely register as a surprise.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
@@ -99,11 +151,16 @@
           "outlet": "The Analyst (Opta)",
           "url": "https://theanalyst.com/articles/mbappe-dembele-olise-france-stars-power-them-to-world-cup-glory",
           "date": "2026-06"
+        },
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558813/world-cup-2026-france-3-0-sweden-kylian-mbappe-and-michael-olise-star-in-dominant-win-to-set-up-paraguay-tie",
+          "date": "2026-06-30"
         }
       ]
     },
     {
-      "storyline": "A generational Mbappe milestone moment: captain Kylian Mbappe surpassed Olivier Giroud to become France's all-time leading scorer with a brace in the opener against Senegal, and reached his 100th cap during the group stage against Iraq, framing this run as a personal landmark campaign.",
+      "storyline": "A generational Mbappe milestone chase has become the defining individual storyline: captain Kylian Mbappe passed Olivier Giroud as France's all-time leading scorer and reached his 100th cap during the group stage, then against Sweden moved level with Lionel Messi on six goals in this tournament's Golden Boot race, took his career World Cup tally to 18 (one behind Messi's all-time record of 19), and set the record for most goals in World Cup knockout-stage history with nine in nine such games, surpassing Leonidas and Ronaldo (eight each).",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
@@ -116,11 +173,33 @@
           "outlet": "Bolavip US",
           "url": "https://bolavip.com/en/world-cup/mbappe-scores-in-100th-cap-for-france-how-his-numbers-compare-to-messi-ronaldo-after-100-games",
           "date": "2026-06-22"
+        },
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558813/world-cup-2026-france-3-0-sweden-kylian-mbappe-and-michael-olise-star-in-dominant-win-to-set-up-paraguay-tie",
+          "date": "2026-06-30"
+        },
+        {
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49230559/fifa-world-cup-2026-stats-kylian-mbappe-tops-lionel-messi-beats-ronaldo-record-michael-olise-pele-erling-haaland-25-mora",
+          "date": "2026-07-01"
         }
       ]
     },
     {
-      "storyline": "A running tactical debate over defensive exposure: French and English media question whether the Upamecano-Saliba pairing, behind an attack-heavy four of Dembele, Olise, Doue and Mbappe, leaves Les Bleus vulnerable on transitions, a concern crystallised by midfielder Adrien Rabiot's own admission of being exposed in spells.",
+      "storyline": "Michael Olise's own record chase is running alongside Mbappe's: his assist for Barcola against Sweden took him to five assists for the tournament, the most by any player since Pele set six in 1970, adding a quieter but historically significant thread to France's attacking story.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49230559/fifa-world-cup-2026-stats-kylian-mbappe-tops-lionel-messi-beats-ronaldo-record-michael-olise-pele-25-mora",
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "storyline": "A running tactical debate over defensive exposure persists into the knockouts: French media have questioned whether the Upamecano-Saliba pairing, behind an attack-heavy front four, leaves Les Bleus vulnerable on transitions - a concern Adrien Rabiot admitted to during the group stage and one Deschamps himself echoed before Sweden, acknowledging France had conceded 'a few chances too many' even while insisting the team would not abandon its attacking identity.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
@@ -137,24 +216,25 @@
       ]
     },
     {
-      "storyline": "The end-of-era framing: this is Deschamps' confirmed final tournament as France manager, a backdrop made more emotional by his mother's death during the group phase, which forced him to miss the Norway match while assistant Guy Stephan deputised and France won comfortably.",
+      "storyline": "The end-of-era framing has deepened emotionally: this remains Deschamps' confirmed final tournament, made more poignant by his mother's death during the group phase, and against Sweden it produced a visible moment of connection when Mbappe embraced his manager after scoring - a gesture Deschamps said 'really struck me' - even as the same win made Deschamps statistically the most successful coach in World Cup history.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Yahoo Sports",
-          "url": "https://sports.yahoo.com/soccer/article/world-cup-2026-france-manager-didier-deschamps-will-miss-match-vs-norway-to-attend-mothers-funeral-201309200.html",
-          "date": "2026-06-23"
+          "outlet": "amNewYork",
+          "url": "https://www.amny.com/sports/didier-deschamps-mbappe-world-cup-6-30-26/",
+          "date": "2026-06-30"
         },
         {
-          "outlet": "Sports Mole",
-          "url": "https://www.sportsmole.co.uk/football/france/world-cup/feature/france-2026-world-cup-preview-squad-fixtures-and-prediction_598918.html",
-          "date": "2026-06"
+          "outlet": "info.fr",
+          "url": "https://info.fr/coupe-du-monde-2026-bleus-paraguay-huitiemes-remake/",
+          "lang": "fr",
+          "date": "2026-07-01"
         }
       ]
     },
     {
-      "storyline": "Maignan's rebound becomes a national-press subplot: French outlets frame the goalkeeper as having quieted doubters in the Norway win, saving a penalty and standing tall against Oscar Bobb, a 'reveil' (awakening) story that the existing attack-centric coverage had not surfaced. Eurosport FR went further, headlining that both Dembele and Maignan 'closed mouths' in the same match.",
+      "storyline": "Maignan's rebound remains a national-press subplot from the group stage: French outlets framed the goalkeeper as having quieted doubters in the Norway win, saving a penalty and standing tall against Oscar Bobb, a 'reveil' (awakening) story that ran alongside the attack-centric coverage; Eurosport FR headlined that both Dembele and Maignan 'closed mouths' in the same match.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
@@ -173,7 +253,7 @@
       ]
     },
     {
-      "storyline": "The French press reframes Dembele's Norway treble explicitly as an answer to his critics: franceinfo's headline casts the hat-trick as a treble 'to silence the criticism,' positioning the reigning Ballon d'Or holder as having finally produced his club-level best in a France shirt at the decisive moment, a redemption angle distinct from the existing 'fastest hat-trick' framing.",
+      "storyline": "The French press had reframed Dembele's Norway treble explicitly as an answer to his critics, and that redemption arc continues into the knockouts as the reigning Ballon d'Or holder keeps producing at his club level for France, positioning his hat trick as the moment he silenced doubters at the decisive point of the group stage.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
@@ -186,7 +266,56 @@
       ]
     },
     {
-      "storyline": "A friendly internal scoring race is emerging as its own storyline in the French media: Mbappe and Dembele are now level on goals and grouped among the World Cup's leading scorers, with national outlets billing them as a 'duo infernal' and tracking the chase behind Messi, framing France's knockout run partly through which of its two stars tops the charts.",
+      "storyline": "France's Round of 16 opponent, Paraguay, is one of the tournament's great surprise packages: they eliminated Germany, a title favourite, on penalties (1-1, 4-3) behind a standout display from goalkeeper Orlando Gill, and now face France having never historically reached this stage of the World Cup before - a genuine shock package rather than a soft draw.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/france-vs-paraguay-world-cup-230119095.html",
+          "date": "2026-07-01"
+        },
+        {
+          "outlet": "Squawka",
+          "url": "https://www.squawka.com/us/news/world-cup/match-preview-paraguay-vs-france-07-04-26-world-cup-2026-round-of-16/",
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "storyline": "French press and pundits largely frame the Paraguay tie as very winnable for Les Bleus - RMC Sport pundit Christophe Dugarry predicted Paraguay 'will take a beating' and called their attack 'catastrophic' - but Deschamps has publicly pushed back on any complacency, describing Paraguay's 'South American DNA' as making them tough in duels and stressing they did not reach the last 16 by accident.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "info.fr",
+          "url": "https://info.fr/dugarry-rouste-paraguay-france-huitieme-coupe-du-monde/",
+          "lang": "fr",
+          "date": "2026-07-01"
+        },
+        {
+          "outlet": "Foot Mercato",
+          "url": "https://www.footmercato.net/a4358469505134975284-coupe-du-monde-2026-didier-deschamps-se-mefie-du-paraguay",
+          "lang": "fr",
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "storyline": "The French press has seized on a historical echo for the Paraguay tie: the same two nations met at the identical Round of 16 stage in 1998, when Laurent Blanc's golden goal - the first in World Cup history - sent France through at Lens on the way to their maiden title; 28 years on, the fixture is being revived as a good-omen storyline ahead of Philadelphia.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "info.fr",
+          "url": "https://info.fr/coupe-du-monde-2026-bleus-paraguay-huitiemes-remake/",
+          "lang": "fr",
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "storyline": "A friendly internal scoring race between Mbappe and Dembele had been its own storyline in the French media, billing the pair as a 'duo infernal' among the tournament's leading scorers; Mbappe's Sweden brace and record-setting milestones have since pulled him into a race of his own with Messi's all-time World Cup goal record, even as Dembele's group-stage form keeps the pairing central to France's attacking output.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
@@ -197,29 +326,9 @@
           "date": "2026-06"
         },
         {
-          "outlet": "Foot Mercato",
-          "url": "https://www.footmercato.net/international/coupe-du-monde/buteur",
-          "lang": "fr",
-          "date": "2026-06"
-        }
-      ]
-    },
-    {
-      "storyline": "The French press sizes up the looming opponent as a winnable but not risk-free tie: beIN SPORTS FR scouts Sweden as a 'paradoxical' side, dangerous through the Isak-Gyokeres strike pairing yet leaky at the back and now missing defender Isak Hien to a hamstring injury, with Sweden coached by Graham Potter and having finished third in their group, French coverage casting Les Bleus as favourites.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "beIN SPORTS (FR)",
-          "url": "https://www.beinsports.com/fr-fr/football/coupe-du-monde-de-la-fifa-2026/articles/coupe-du-monde-2026-gy-keres-isak-que-vaut-vraiment-la-su%C3%A8de-prochain-adversaire-des-bleus-2026-06-27",
-          "lang": "fr",
-          "date": "2026-06-27"
-        },
-        {
-          "outlet": "franceinfo",
-          "url": "https://www.franceinfo.fr/sports/foot/equipe-de-france/l-equipe-de-france-affrontera-la-suede-en-seiziemes-de-finale-de-la-coupe-du-monde-2026_8082047.html",
-          "lang": "fr",
-          "date": "2026-06-27"
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558813/world-cup-2026-france-3-0-sweden-kylian-mbappe-and-michael-olise-star-in-dominant-win-to-set-up-paraguay-tie",
+          "date": "2026-06-30"
         }
       ]
     }
@@ -276,15 +385,93 @@
       "url": "https://www.franceinfo.fr/coupe-du-monde/coupe-du-monde-2026-dembele-etincelant-mbappe-altruiste-le-reveil-de-maignan-les-notes-des-bleus-face-a-la-norvege_8081246.html",
       "date": "2026-06-26",
       "context": "franceinfo's player-ratings headline summarising France's Norway win; journalist/editorial framing, not a player or coach quote"
+    },
+    {
+      "quote": "It really struck me. He's our captain. He's been exemplary since Day 1.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Didier Deschamps",
+      "speaker_role": "France head coach",
+      "outlet": "amNewYork",
+      "url": "https://www.amny.com/sports/didier-deschamps-mbappe-world-cup-6-30-26/",
+      "date": "2026-06-30",
+      "context": "Reacting after Mbappe embraced him on the pitch following the opening goal against Sweden, days after Deschamps' mother's death",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "I think the whole team was there with him. It's the DNA of this group to be all together.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Kylian Mbappe",
+      "speaker_role": "France captain",
+      "outlet": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/kylian-mbappe-sends-touching-message-031320237.html",
+      "date": "2026-06-30",
+      "context": "Explaining the team's support for Deschamps after his mother's death, following the Sweden win",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "He smiled a lot, he tried to be enthusiastic, although he's very affected by this grief.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Adrien Rabiot",
+      "speaker_role": "France midfielder",
+      "outlet": "amNewYork",
+      "url": "https://www.amny.com/sports/didier-deschamps-mbappe-world-cup-6-30-26/",
+      "date": "2026-06-30",
+      "context": "Describing Deschamps' demeanour around the squad in the days after his mother's death",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "I'm fully aware of what's at stake, where I am and what I have to do.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Kylian Mbappe",
+      "speaker_role": "France captain",
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/11095/13558813/world-cup-2026-france-3-0-sweden-kylian-mbappe-and-michael-olise-star-in-dominant-win-to-set-up-paraguay-tie",
+      "date": "2026-06-30",
+      "context": "Post-match remarks after the Sweden win, on personal focus and the team's knockout-stage mentality",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "I've seen them, it's not by chance. There's that South American DNA - tenacious, tough in duels.",
+      "quote_original": "Je les ai vus, ce n'est pas par hasard. L'Allemagne est une belle équipe, après, il y a cet ADN sud-américain. Ça accroche, c'est dur dans les duels, mais il y a de bons joueurs aussi.",
+      "lang": "fr",
+      "speaker_name": "Didier Deschamps",
+      "speaker_role": "France head coach",
+      "outlet": "Foot Mercato",
+      "url": "https://www.footmercato.net/a4358469505134975284-coupe-du-monde-2026-didier-deschamps-se-mefie-du-paraguay",
+      "date": "2026-07-01",
+      "context": "Pre-Paraguay press conference, cautioning against underestimating a side that eliminated Germany on penalties; English rendering trimmed to <=20 words, full French original retained",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "Le Paraguay va prendre une rouste.",
+      "quote_original": "Le Paraguay va prendre une rouste.",
+      "lang": "fr",
+      "speaker_name": "Christophe Dugarry",
+      "speaker_role": "RMC Sport pundit, 1998 World Cup winner",
+      "outlet": "info.fr",
+      "url": "https://info.fr/dugarry-rouste-paraguay-france-huitieme-coupe-du-monde/",
+      "date": "2026-07-01",
+      "context": "On RMC Sport's 'Rothen s'enflamme', predicting a comfortable French win over Paraguay and calling Paraguay's attack 'catastrophic'; English rendering: 'Paraguay are going to get a beating'",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
     }
   ],
   "local_availability_reporting": [],
   "gaps": [
-    "R32 opponent unconfirmed in DB (logged as best-third 'to be confirmed'); NBC Sports and other media name Sweden as France's Round of 32 opponent at MetLife Stadium on 2026-06-30, but next_opponent_code kept as TBD per DB authority and pending confirmation.",
     "Dropped the sub-claim that Mbappe is 'the first Frenchman to reach 100 caps before turning 30' — it is not stated by Bolavip and the FIFA 100-caps page rendered empty/blocked, so the milestone is reported only as (a) passing Giroud as all-time top scorer (confirmed by Real Madrid, official) and (b) reaching his 100th cap vs Iraq (Bolavip).",
-    "Could not retrieve a verbatim Mbappe quote about his top-scorer/100-cap milestone (FIFA milestone page blocked/empty), so the milestone is reported as factual context only, not via a player quote.",
-    "No France-specific REPORTED/uncertain fitness concern found for the R32 window; William Saliba's pre-tournament back issue had resolved (he featured in the group stage) and no fresh injury doubt surfaced, so local_availability_reporting is intentionally empty.",
-    "French-language national-press front-page mood pieces (e.g. L'Equipe, Le Parisien) were not directly accessible; the national-mood read is built from international and English-language outlets plus one French outlet (Eurosport)."
+    "Could not retrieve a verbatim Mbappe quote about his all-time World Cup scoring milestones (level with Messi's tournament tally / one behind Messi's career record / most knockout-stage goals ever); those facts are reported via ESPN/Sky Sports stats coverage, not a player quote.",
+    "No REPORTED/unconfirmed fitness doubt found for the Paraguay window; Bradley Barcola's selection ahead of Desire Doue against Sweden was reported as a starting-XI/rotation choice in match previews, not an injury, so local_availability_reporting is intentionally empty. William Saliba's pre-tournament back issue had already resolved (he featured throughout) and no fresh doubt has surfaced.",
+    "French-language national-press front-page mood pieces (L'Equipe, Le Parisien) remained inaccessible directly (paywall/blocked) for this refresh; RMC Sport content (the Dugarry quote, Deschamps' Paraguay remarks) was obtained only via secondary French-outlet reporting (info.fr, Foot Mercato), not RMC's own site.",
+    "Several outlets used for continuing coverage (info.fr, amNewYork, Al Jazeera, Yahoo Sports, franceinfo, Foot Mercato, Eurosport FR, beIN Sports FR, Squawka, The Analyst) are not on the formal outlet allowlist, which names L'Equipe/RMC Sport/Le Parisien for France plus a wire/English-language list; consistent with this file's practice since the R32 refresh, they are used directly as discovery-tier attributed press (not tagged 'other') because they were the only accessible sources found for the relevant French-team reporting and verbatim quotes. Flagged here per README policy for reviewer awareness."
   ],
   "source_data_snapshot": [
     {
@@ -360,12 +547,6 @@
       "used_for": "Mbappe 100th-cap fact (vs Iraq)"
     },
     {
-      "outlet": "NBC Sports",
-      "url": "https://www.nbcsports.com/soccer/news/2026-world-cup-round-of-32-confirmed-schedule-predictions-for-knockout-round",
-      "retrieved_at": "2026-06-28",
-      "used_for": "R32 schedule/opponent context (Sweden, MetLife, Jun 30) — gaps only, DB authoritative"
-    },
-    {
       "outlet": "franceinfo",
       "url": "https://www.franceinfo.fr/coupe-du-monde/coupe-du-monde-2026-dembele-etincelant-mbappe-altruiste-le-reveil-de-maignan-les-notes-des-bleus-face-a-la-norvege_8081246.html",
       "lang": "fr",
@@ -394,25 +575,74 @@
       "used_for": "'duo infernal' top-5 scorers framing for Mbappe-Dembele (confirmed via search)"
     },
     {
-      "outlet": "Foot Mercato",
-      "url": "https://www.footmercato.net/international/coupe-du-monde/buteur",
-      "lang": "fr",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Mbappe-Dembele internal scoring race / top-scorers chart (canonical buteur page; original proposed article URL unverified, swapped)"
-    },
-    {
       "outlet": "beIN SPORTS (FR)",
       "url": "https://www.beinsports.com/fr-fr/football/coupe-du-monde-de-la-fifa-2026/articles/coupe-du-monde-2026-gy-keres-isak-que-vaut-vraiment-la-su%C3%A8de-prochain-adversaire-des-bleus-2026-06-27",
       "lang": "fr",
       "retrieved_at": "2026-06-28",
-      "used_for": "Sweden scouting storyline (Isak, Gyokeres, Hien hamstring, Potter, 3rd place) - confirmed by direct fetch"
+      "used_for": "Sweden scouting storyline (Isak, Gyokeres, Hien hamstring, Potter, 3rd place) - confirmed by direct fetch; superseded now that R32 has been played"
     },
     {
-      "outlet": "franceinfo",
-      "url": "https://www.franceinfo.fr/sports/foot/equipe-de-france/l-equipe-de-france-affrontera-la-suede-en-seiziemes-de-finale-de-la-coupe-du-monde-2026_8082047.html",
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/11095/13558813/world-cup-2026-france-3-0-sweden-kylian-mbappe-and-michael-olise-star-in-dominant-win-to-set-up-paraguay-tie",
+      "retrieved_at": "2026-07-01",
+      "used_for": "R32 result, scorers/minutes, Mbappe post-match quote, Golden Boot/all-time-goals stats (direct fetch, verbatim confirmed)"
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49227768/france-sweden-live-world-cup-2026-latest-updates-commentary-score-result",
+      "retrieved_at": "2026-07-01",
+      "used_for": "R32 result confirmation, Mbappe sixth-goal detail"
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49230559/fifa-world-cup-2026-stats-kylian-mbappe-tops-lionel-messi-beats-ronaldo-record-michael-olise-pele-25-mora",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Mbappe all-time World Cup scoring/knockout-goals records, Olise assist record (direct fetch)"
+    },
+    {
+      "outlet": "amNewYork",
+      "url": "https://www.amny.com/sports/didier-deschamps-mbappe-world-cup-6-30-26/",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Deschamps/Mbappe embrace moment, Deschamps and Rabiot quotes on grief (direct fetch, verbatim confirmed)"
+    },
+    {
+      "outlet": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/kylian-mbappe-sends-touching-message-031320237.html",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Mbappe quote on team unity around Deschamps"
+    },
+    {
+      "outlet": "Foot Mercato",
+      "url": "https://www.footmercato.net/a4358469505134975284-coupe-du-monde-2026-didier-deschamps-se-mefie-du-paraguay",
       "lang": "fr",
-      "retrieved_at": "2026-06-28",
-      "used_for": "France-Sweden knockout draw press context (DB opponent kept TBD)"
+      "retrieved_at": "2026-07-01",
+      "used_for": "Deschamps' Paraguay-wariness quote, 'South American DNA' framing (direct fetch, verbatim confirmed)"
+    },
+    {
+      "outlet": "info.fr",
+      "url": "https://info.fr/dugarry-rouste-paraguay-france-huitieme-coupe-du-monde/",
+      "lang": "fr",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Dugarry 'rouste' prediction quote (direct fetch, verbatim confirmed; originally aired on RMC Sport's Rothen s'enflamme)"
+    },
+    {
+      "outlet": "info.fr",
+      "url": "https://info.fr/coupe-du-monde-2026-bleus-paraguay-huitiemes-remake/",
+      "lang": "fr",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Deschamps' 17-win record as most successful World Cup coach, 1998 Laurent Blanc golden-goal remake storyline (direct fetch)"
+    },
+    {
+      "outlet": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/france-vs-paraguay-world-cup-230119095.html",
+      "retrieved_at": "2026-07-01",
+      "used_for": "France-Paraguay R16 fixture details, Paraguay's shock-package framing"
+    },
+    {
+      "outlet": "Squawka",
+      "url": "https://www.squawka.com/us/news/world-cup/match-preview-paraguay-vs-france-07-04-26-world-cup-2026-round-of-16/",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Paraguay preview context, Orlando Gill penalty-shootout heroics vs Germany"
     }
   ]
 }

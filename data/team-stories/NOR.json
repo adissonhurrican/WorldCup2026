@@ -1,405 +1,427 @@
 {
   "team_code": "NOR",
-  "round": "R32",
-  "next_opponent_code": "CIV",
+  "round": "R16",
+  "next_opponent_code": "BRA",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
+  "last_updated": "2026-07-01",
   "confidence": "high",
   "national_expectations": {
-    "summary": "After a long absence from the World Cup, simply reaching the knockout rounds is treated as a milestone for this Haaland-and-Odegaard generation, widely framed as the strongest in Norwegian history. Coverage describes a country allowing itself to dream big while treating the Ivory Coast tie as a genuinely even, winnable match rather than a formality, with the captain openly saying it is permitted to dream large and go for it.",
+    "summary": "Reaching the Round of 16 for the first time since 1998 is already being treated as a historic milestone in itself, and the mood has shifted from 'dare to dream' during the group stage to open belief that this Haaland-Odegaard generation can compete with anyone. Facing five-time champions Brazil is framed by Norwegian press and experts as arguably the biggest game in the national team's history, an occasion to be embraced rather than feared, with the manager insisting Norway will not shrink from the stage or change how it plays.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
         "outlet": "NRK",
-        "url": "https://www.nrk.no/fotballvm2026/slik-blir-veien-videre-for-norge-i-vm-etter-drommestarten-1.17932031",
-        "date": "2026-06-26",
+        "url": "https://www.nrk.no/fotballvm2026/slik-er-veien-videre-i-vm-for-norge-_-na-venter-brasil-1.17942528",
+        "date": "2026-06-30",
         "lang": "no"
       },
       {
-        "outlet": "Yahoo Sports",
-        "url": "https://sports.yahoo.com/soccer/article/can-erling-haaland-lead-norway-to-success-at-the-2026-world-cup-040023486.html",
-        "date": "2026-06-27",
-        "lang": "en"
+        "outlet": "VG",
+        "url": "https://www.vg.no/sport/i/OkWOlb/kommentar-enorm-norsk-triumf-det-er-dette-vm-handler-om",
+        "date": "2026-06-30",
+        "lang": "no"
       }
     ]
   },
   "national_mood": {
-    "summary": "Buoyant and optimistic but measured. Norway navigated early tournament nerves to advance, and the manager's relief was visible after the decisive group win. The press conveys a rested, hungry squad and a nation enjoying a long-awaited return, tempered by respect for an Ivory Coast side that the manager describes as a coin-flip opponent requiring Norway's best.",
+    "summary": "Euphoric and historic. NRK's own sports editor describes mobilising for 'the greatest celebration day for Norway and Norwegian football' on the day of the Brazil match and calls it 'a summer for the history books'. A VG commentary calls the Ivory Coast win the most impressive victory by a Norwegian team the columnist has witnessed, praising the squad's mental resilience after conceding a late equaliser. Haaland's own comment that the achievement 'is going to change Norway forever' has been widely repeated across Norwegian outlets as capturing the national mood.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Nettavisen",
-        "url": "https://www.nettavisen.no/sport/stale-solbakken-og-norge-i-vm-slik-blir-blir-veien-videre/s/5-95-3116394",
-        "date": "2026-06-24",
+        "outlet": "VG",
+        "url": "https://www.vg.no/sport/i/OkWOyk/haaland-sikret-historisk-seier-for-norge",
+        "date": "2026-06-30",
+        "lang": "no"
+      },
+      {
+        "outlet": "VG",
+        "url": "https://www.vg.no/sport/i/OkWOlb/kommentar-enorm-norsk-triumf-det-er-dette-vm-handler-om",
+        "date": "2026-06-30",
         "lang": "no"
       },
       {
         "outlet": "NRK",
-        "url": "https://www.nrk.no/fotballvm2026/slik-blir-veien-videre-for-norge-i-vm-etter-drommestarten-1.17932031",
-        "date": "2026-06-26",
+        "url": "https://www.nrk.no/fotballvm2026/slik-er-veien-videre-i-vm-for-norge-_-na-venter-brasil-1.17942528",
+        "date": "2026-06-30",
         "lang": "no"
       }
     ]
   },
   "manager_situation": {
-    "summary": "Stale Solbakken stands on solid ground, having guided Norway back to the global stage and out of the group. He was widely backed for boldly rotating heavily for the dead-rubber final group match, resting Haaland and other starters to keep his squad fresh for the knockout. He has publicly framed Ivory Coast as physically among the tournament's best and the tie as an even, Senegal-like contest, signalling a respectful, hungry approach rather than complacency.",
+    "summary": "Stale Solbakken emerges fully vindicated after earlier criticism of his rotation, having guided Norway to its first-ever World Cup knockout win. He described himself as emotionally spent after the Ivory Coast match ('if I survive this, I survive everything') and repeatedly deflected credit to players and staff. In a moment filmed by the Norwegian federation and widely shared, he closed his dressing-room speech with a message to Brazil boss Carlo Ancelotti - 'Carlo Ancelotti, we are coming for you' - which he later described in follow-up comments as good-humoured respect rather than provocation, calling Ancelotti one of the greatest coaches in European football history and 'a great guy with a great sense of humour'. He has also said publicly that Norway will not change its attacking identity because of Brazil's prestige, and separately called Haaland 'the greatest goal scorer in the world' after the Ivory Coast winner.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
         "outlet": "NRK",
-        "url": "https://www.nrk.no/fotballvm2026/slik-blir-veien-videre-for-norge-i-vm-etter-drommestarten-1.17932031",
-        "date": "2026-06-26",
+        "url": "https://www.nrk.no/fotballvm2026/fotball-vm-2026_-stale-solbakken-preget-etter-historisk-bragd-1.17942473",
+        "date": "2026-06-30",
+        "lang": "no"
+      },
+      {
+        "outlet": "VG",
+        "url": "https://www.vg.no/sport/i/3pRAg0/brasil-fikk-staale-solbakkens-melding-carlo-ancelotti-vi-kommer-for-deg",
+        "date": "2026-07-01",
         "lang": "no"
       },
       {
         "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49188052/norway-erling-haaland-miss-france-world-cup-clash-sources",
-        "date": "2026-06-25",
+        "url": "https://www.espn.com/soccer/story/_/id/49229201/erling-haaland-greatest-goalscorer-world-norway-coach-stale-solbakken",
+        "date": "2026-06-30",
         "lang": "en"
       },
       {
-        "outlet": "Sports Illustrated",
-        "url": "https://www.si.com/soccer/why-erling-haaland-isnt-playing-norway-vs-france-2026-world-cup",
-        "date": "2026-06-26",
+        "outlet": "beIN Sports",
+        "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/norway-s-head-coach-sends-a-warning-to-carlo-ancelotti-and-brazil-ahead-of-their-2026-fifa-world-cup-clash-2026-07-01",
+        "date": "2026-07-01",
         "lang": "en"
       }
     ]
   },
   "historical_context": {
-    "summary": "Norway reached this World Cup after a generation away from the finals, their first appearance since 1998. The qualifying run was dominant and included statement wins over Italy, and the campaign has been built around Haaland's prolific scoring and Odegaard's playmaking, fuelling talk of a potential golden generation.",
+    "summary": "Norway's return to the World Cup after a 28-year absence (last appearing in 1998) was already a landmark story; a first-ever World Cup knockout win over Ivory Coast has amplified it further. The Brazil tie directly revives Norway's own 1998 folklore: a 2-1 comeback win over Brazil in their final group match that year, completed by a late Tore Andre Flo penalty and remembered in Norway as the 'Miracle in Marseille'. Martin Odegaard invoked that history directly after the Ivory Coast win, saying Norway has 'heard the story of the Brazil match' and will now 'write our own history'. Erling Haaland, in only his third-ever World Cup match, became the first player in 72 years to score in each of his first three World Cup games and the fastest man in international football history to reach 60 goals for his country, doing so in 53 caps.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Yahoo Sports",
-        "url": "https://sports.yahoo.com/soccer/article/can-erling-haaland-lead-norway-to-success-at-the-2026-world-cup-040023486.html",
-        "date": "2026-06-27",
+        "outlet": "FOX Sports",
+        "url": "https://www.foxsports.com/articles/soccer/norway-isnt-looking-ahead-to-potential-world-cup-matchup-with-brazil-which-it-upset-in-1998",
+        "date": "2026-06-29",
+        "lang": "en"
+      },
+      {
+        "outlet": "VG",
+        "url": "https://www.vg.no/sport/i/OkWOyk/haaland-sikret-historisk-seier-for-norge",
+        "date": "2026-06-30",
+        "lang": "no"
+      },
+      {
+        "outlet": "World Soccer Talk",
+        "url": "https://worldsoccertalk.com/world-cup/erling-haaland-rewrites-72-year-world-cup-history-with-record-neither-lionel-messi-nor-cristiano-ronaldo-reached/",
+        "date": "2026-07-01",
         "lang": "en"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "Haaland's tournament: after a flying start of four goals across the two opening group wins, the talisman was deliberately rested for the dead-rubber final group match and is now the central question for the knockout - whether he rediscovers his clinical edge on the big stage to fire Norway through.",
+      "storyline": "Haaland's historic run continues: goals against Iraq and Senegal followed by the late winner against Ivory Coast make him the first player in 72 years to score in each of his first three World Cup matches, and the fastest player ever to reach 60 international goals (53 caps) - a tournament that is rewriting the record books for a 'little country like Norway', in Solbakken's words.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Yahoo Sports",
-          "url": "https://sports.yahoo.com/articles/norway-play-next-world-cup-210030570.html",
-          "date": "2026-06-27",
+          "outlet": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/erling-haaland-rewrites-72-year-world-cup-history-with-record-neither-lionel-messi-nor-cristiano-ronaldo-reached/",
+          "date": "2026-07-01",
           "lang": "en"
         },
-        {
-          "outlet": "VG",
-          "url": "https://www.vg.no/sport/i/PdngGe/vm-2026-erling-braut-haaland-bryr-seg-ikke-om-frankrike",
-          "date": "2026-06-23",
-          "lang": "no"
-        }
-      ]
-    },
-    {
-      "storyline": "The big rotation gamble: with qualification already secured, Solbakken made sweeping changes for the final group game - resting Haaland, the captain and the defence - prioritising fresh legs for the knockout over chasing top spot. The full-strength France side duly won, sending Norway to face Ivory Coast, and the press has largely endorsed the trade-off.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
         {
           "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49188052/norway-erling-haaland-miss-france-world-cup-clash-sources",
-          "date": "2026-06-25",
-          "lang": "en"
-        },
-        {
-          "outlet": "Sports Illustrated",
-          "url": "https://www.si.com/soccer/why-erling-haaland-isnt-playing-norway-vs-france-2026-world-cup",
-          "date": "2026-06-26",
+          "url": "https://www.espn.com/soccer/story/_/id/49229201/erling-haaland-greatest-goalscorer-world-norway-coach-stale-solbakken",
+          "date": "2026-06-30",
           "lang": "en"
         }
       ]
     },
     {
-      "storyline": "A coin-flip knockout against Ivory Coast: the manager and Norwegian press frame the Dallas tie as an even, winnable contest he likens to Norway's tight group test against Senegal, with the Nusa-versus-Diomande RB Leipzig club-team-mate subplot on the right flank flagged as a potentially pivotal tactical battle.",
+      "storyline": "Norway's first-ever World Cup knockout win: Antonio Nusa's curled opener (assisted by Odegaard) and Haaland's 86th-minute winner overturned an Amad Diallo equaliser to beat Ivory Coast 2-1 in Dallas, sending Norway through to a last-16 meeting with Brazil and settling, in the press's framing, the debate over Solbakken's earlier rotation gamble.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/12098/13558812/world-cup-2026-ivory-coast-1-2-norway-erling-haaland-scores-dramatic-winner-to-set-up-last-16-clash-with-brazil",
+          "date": "2026-06-30",
+          "lang": "en"
+        },
+        {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/6/30/norway-edge-ivory-coast-2-1-to-enter-world-cup-round-of",
+          "date": "2026-06-30",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "A 1998 rematch, 28 years on: Norway's own 'Miracle in Marseille' - a 2-1 comeback win over Brazil in their final 1998 group game - is the constant historical reference point for the Brazil tie, with Odegaard explicitly framing the current squad as writing its 'own history' rather than living off the old one.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/articles/soccer/norway-isnt-looking-ahead-to-potential-world-cup-matchup-with-brazil-which-it-upset-in-1998",
+          "date": "2026-06-29",
+          "lang": "en"
+        },
+        {
+          "outlet": "VG",
+          "url": "https://www.vg.no/sport/i/OkWOyk/haaland-sikret-historisk-seier-for-norge",
+          "date": "2026-06-30",
+          "lang": "no"
+        }
+      ]
+    },
+    {
+      "storyline": "'It doesn't get any bigger': NRK's football experts frame the Brazil tie as a defining, potentially once-in-a-generation occasion for Norwegian football, while the broadcaster's own sports editor describes mobilising coverage for the country's biggest football celebration day, underlining how the occasion has eclipsed even the Ivory Coast breakthrough in scale.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "NRK",
-          "url": "https://www.nrk.no/fotballvm2026/slik-blir-veien-videre-for-norge-i-vm-etter-drommestarten-1.17932031",
-          "date": "2026-06-26",
+          "url": "https://www.nrk.no/fotballvm2026/slik-er-veien-videre-i-vm-for-norge-_-na-venter-brasil-1.17942528",
+          "date": "2026-06-30",
+          "lang": "no"
+        }
+      ]
+    },
+    {
+      "storyline": "Defiance tempered by realism: Solbakken says Norway will not change its attacking identity just because Brazil are favourites and reportedly stayed true to that philosophy throughout the tournament, while Haaland himself has been strikingly blunt in rating Norway's chances against Brazil as 'very slim' - a mix of underdog belief and honest respect running through the squad's public comments.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "beIN Sports",
+          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/norway-s-head-coach-sends-a-warning-to-carlo-ancelotti-and-brazil-ahead-of-their-2026-fifa-world-cup-clash-2026-07-01",
+          "date": "2026-07-01",
+          "lang": "en"
+        },
+        {
+          "outlet": "VG",
+          "url": "https://www.vg.no/sport/i/OkWOyk/haaland-sikret-historisk-seier-for-norge",
+          "date": "2026-06-30",
+          "lang": "no"
+        }
+      ]
+    },
+    {
+      "storyline": "A viral dressing-room message to Ancelotti: footage released by the Norwegian federation showed Solbakken ending his post-match speech with 'Carlo Ancelotti, we are coming for you', a moment that spread quickly across Norwegian and international coverage; Solbakken subsequently stressed it was meant as tribute and good humour toward a coach he holds in the highest regard, not a real taunt.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "VG",
+          "url": "https://www.vg.no/sport/i/3pRAg0/brasil-fikk-staale-solbakkens-melding-carlo-ancelotti-vi-kommer-for-deg",
+          "date": "2026-07-01",
           "lang": "no"
         },
         {
-          "outlet": "Goal.com",
-          "url": "https://www.goal.com/en/news/ivory-coast-norway-world-cup-preview/bltc20cf346c3521000",
-          "date": "2026-06-27",
+          "outlet": "beIN Sports",
+          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/norway-s-head-coach-sends-a-warning-to-carlo-ancelotti-and-brazil-ahead-of-their-2026-fifa-world-cup-clash-2026-07-01",
+          "date": "2026-07-01",
           "lang": "en"
         }
       ]
     },
     {
-      "storyline": "Penalty preparation becomes a public theme: with the knockout's shootout risk in mind, Solbakken says Norway started spot-kick practice in earnest, while the country's renowned penalty psychologist Geir Jordet weighs in on what elite nations do. The manager concedes a shootout is hard to replicate in training, a subtext sharpened by Jorgen Strand Larsen's missed penalty against France.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "VG",
-          "url": "https://www.vg.no/sport/i/8pR1lw/norge-og-staale-solbakken-med-straffegrep-foer-vm-alvoret-starter-mot-elfenbenskysten-vanskelig-aa-trene-paa",
-          "date": "2026-06-28",
-          "lang": "no"
-        }
-      ]
-    },
-    {
-      "storyline": "A scout's blunt warning reframes the tie: football scout Stig Torbjornsen, who says he has visited Ivory Coast many times, tells Norwegian readers they face a 'monster', rating the Ivorians above Senegal and flagging captain Franck Kessie and a physical, organised side under Emerson Fae - a tougher characterisation than the manager's even-contest framing.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Nettavisen",
-          "url": "https://www.nettavisen.no/sport/advarer-norge-moter-et-monster/s/5-95-3117973",
-          "date": "2026-06-28",
-          "lang": "no"
-        }
-      ]
-    },
-    {
-      "storyline": "Solbakken goes on the front foot over the rotation: facing criticism after the France defeat, he delivered an unrepentant, several-minutes-long defence of resting his stars, calling himself ruthless on selection, voicing no regret and insisting fatigue and a brutally short turnaround after Senegal forced his hand. The press logs it as a combative, no-apology stance rather than a contrite one.",
+      "storyline": "The manager's own toll: beyond the on-pitch triumph, Solbakken has been candid about the emotional and physical cost of the Ivory Coast win, describing himself as completely drained and repeatedly redirecting credit toward his players and support staff rather than himself.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "NRK",
-          "url": "https://www.nrk.no/fotballvm2026/stale-solbakken-med-brennende-forsvarstale_-_-jeg-er-skruppellos-1.17939076",
-          "date": "2026-06-28",
+          "url": "https://www.nrk.no/fotballvm2026/fotball-vm-2026_-stale-solbakken-preget-etter-historisk-bragd-1.17942473",
+          "date": "2026-06-30",
           "lang": "no"
         }
       ]
     },
     {
-      "storyline": "A vivid sideline image went viral at home: during France's early onslaught NRK cameras caught Solbakken growing visibly furious next to assistant Brede Hangeland, with a tablet ending up on the ground - studio analysis describing him as 'fly forbanna'. The moment crystallised how heavily France overran the rotated side and fed the post-match debate.",
+      "storyline": "Respect for Brazil's firepower: previews single out Vinicius Junior, who scored in all three Brazil group games, as the chief individual threat Norway must manage, alongside a Premier League subplot in Arsenal's Gabriel Magalhaes potentially facing Manchester City's Haaland in central defence, framing Brazil's quality as the clearest danger to Norway's own attacking game plan.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Nettavisen",
-          "url": "https://www.nettavisen.no/sport/norge-mot-frankrike-solbakken-er-fly-forbanna/s/5-95-3118121",
-          "date": "2026-06-28",
-          "lang": "no"
-        }
-      ]
-    },
-    {
-      "storyline": "A cross-press view from Abidjan: the president of Ivory Coast's sports journalists' association, Ouattara Gahoussou, told VG many Ivorians openly preferred drawing Norway over France and that, while they respect Haaland, his players are not afraid of him - giving Norwegian readers a window into the opponent's confident mood.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "VG",
-          "url": "https://www.vg.no/sport/i/V6jey6/fotballekspert-fra-elfenbenskysten-oensker-seg-norge-i-16-delsfinalen",
-          "date": "2026-06-27",
-          "lang": "no"
-        }
-      ]
-    },
-    {
-      "storyline": "A relief for tired fans at home: after group games that kicked off in the middle of the night in Norway, the knockout schedule gives supporters fan-friendly evening kickoffs, with the Ivory Coast tie set for early evening Norwegian time - a small but widely welcomed mood lift framed as the end of the night matches.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Nettavisen",
-          "url": "https://www.nettavisen.no/sport/gladmelding-til-norske-fans-ingen-flere-nattkamper/s/5-95-3117971",
-          "date": "2026-06-26",
-          "lang": "no"
+          "outlet": "FOX Sports",
+          "url": "https://www.foxsports.com/articles/soccer/norway-isnt-looking-ahead-to-potential-world-cup-matchup-with-brazil-which-it-upset-in-1998",
+          "date": "2026-06-29",
+          "lang": "en"
         }
       ]
     }
   ],
   "attributed_quotes": [
     {
-      "quote": "It is allowed to dream big, and we are going to go for it.",
-      "quote_original": "Det er lov a dromme stort, og vi skal kline til.",
+      "quote": "Jeg tror dette kommer til å endre Norge for alltid.",
+      "quote_original": "Jeg tror dette kommer til å endre Norge for alltid.",
       "lang": "no",
-      "speaker_name": "Martin Odegaard",
-      "speaker_role": "Norway captain",
-      "outlet": "NRK",
-      "url": "https://www.nrk.no/fotballvm2026/slik-blir-veien-videre-for-norge-i-vm-etter-drommestarten-1.17932031",
-      "date": "2026-06-26",
-      "context": "The captain speaking after the group-stage win over Senegal that sent Norway through, as the team looked ahead to the knockout rounds.",
+      "speaker_name": "Erling Braut Haaland",
+      "speaker_role": "Norway forward",
+      "outlet": "VG",
+      "url": "https://www.vg.no/sport/i/OkWOyk/haaland-sikret-historisk-seier-for-norge",
+      "date": "2026-06-30",
+      "context": "Reacting to national celebrations and the historic significance of beating Ivory Coast to reach the last 16, 28 years after Norway's last World Cup.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
     },
     {
-      "quote": "We are very happy having six points. We should not become too greedy.",
+      "quote": "Vi har hørt historien om Brasil-kampen, nå skriver vi vår egen historie.",
+      "quote_original": "Vi har hørt historien om Brasil-kampen, nå skriver vi vår egen historie.",
+      "lang": "no",
+      "speaker_name": "Martin Odegaard",
+      "speaker_role": "Norway captain",
+      "outlet": "VG",
+      "url": "https://www.vg.no/sport/i/OkWOyk/haaland-sikret-historisk-seier-for-norge",
+      "date": "2026-06-30",
+      "context": "Looking ahead to facing Brazil in the Round of 16, invoking Norway's famous 1998 win over Brazil while stressing the current squad wants to make its own mark.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "Jeg må si at det er litt vanskelig å sette ord på det nå.",
+      "quote_original": "Jeg må si at det er litt vanskelig å sette ord på det nå.",
+      "lang": "no",
+      "speaker_name": "Antonio Nusa",
+      "speaker_role": "Norway forward",
+      "outlet": "Nettavisen",
+      "url": "https://www.nettavisen.no/sport/nusa-ble-helt-da-norge-slo-ut-elfenbenskysten-dette-endrer-alt/s/5-95-3124059",
+      "date": "2026-06-30",
+      "context": "Reacting to his opening goal and Norway's win securing a first-ever World Cup knockout victory.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "Det gjelder ikke så mye meg. Det gjelder spillere, støtteapparat.",
+      "quote_original": "Det gjelder ikke så mye meg. Det gjelder spillere, støtteapparat.",
+      "lang": "no",
+      "speaker_name": "Stale Solbakken",
+      "speaker_role": "Norway head coach",
+      "outlet": "NRK",
+      "url": "https://www.nrk.no/fotballvm2026/fotball-vm-2026_-stale-solbakken-preget-etter-historisk-bragd-1.17942473",
+      "date": "2026-06-30",
+      "context": "Deflecting personal credit after the Ivory Coast win, while describing himself as emotionally drained by the occasion.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "Carlo Ancelotti, we are coming for you.",
       "quote_original": null,
       "lang": "en",
       "speaker_name": "Stale Solbakken",
       "speaker_role": "Norway head coach",
-      "outlet": "Sports Illustrated",
-      "url": "https://www.si.com/soccer/why-erling-haaland-isnt-playing-norway-vs-france-2026-world-cup",
-      "date": "2026-06-26",
-      "context": "Explaining his decision to rotate heavily and rest Haaland and other starters for the final group match, with qualification already secured.",
+      "outlet": "VG",
+      "url": "https://www.vg.no/sport/i/3pRAg0/brasil-fikk-staale-solbakkens-melding-carlo-ancelotti-vi-kommer-for-deg",
+      "date": "2026-07-01",
+      "context": "Closing line of a post-match dressing-room speech filmed by the Norwegian football federation, later described by Solbakken as good-humoured respect for Ancelotti rather than a real taunt.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
     },
     {
-      "quote": "I am ruthless in everything to do with team selection. I am ruthless about what I believe is best.",
-      "quote_original": "Jeg er skruppelløs i alt som er med laguttak. Jeg er skruppelløs med tanke på det jeg mener er best.",
-      "lang": "no",
+      "quote": "He is the greatest goal scorer in the world, there is no doubt about that.",
+      "quote_original": null,
+      "lang": "en",
       "speaker_name": "Stale Solbakken",
       "speaker_role": "Norway head coach",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49229201/erling-haaland-greatest-goalscorer-world-norway-coach-stale-solbakken",
+      "date": "2026-06-30",
+      "context": "Praising Haaland after his late winner sent Norway through to face Brazil, adding he 'wouldn't swap him for anyone'.",
       "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "NRK",
-      "url": "https://www.nrk.no/fotballvm2026/stale-solbakken-med-brennende-forsvarstale_-_-jeg-er-skruppellos-1.17939076",
-      "date": "2026-06-28",
-      "context": "Defending his decision to rotate heavily and rest Haaland and Odegaard for the France defeat, amid criticism, ahead of the Ivory Coast knockout tie."
-    },
-    {
-      "quote": "It is difficult to train on, but we do the best we can.",
-      "quote_original": "Det er vanskelig å trene på, men vi gjør så godt vi kan.",
-      "lang": "no",
-      "speaker_name": "Stale Solbakken",
-      "speaker_role": "Norway head coach",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "VG",
-      "url": "https://www.vg.no/sport/i/8pR1lw/norge-og-staale-solbakken-med-straffegrep-foer-vm-alvoret-starter-mot-elfenbenskysten-vanskelig-aa-trene-paa",
-      "date": "2026-06-28",
-      "context": "On Norway practising penalties before the Ivory Coast knockout, acknowledging a real shootout's pressure is hard to replicate in training."
-    },
-    {
-      "quote": "Norway faces a monster.",
-      "quote_original": "Norge møter et monster.",
-      "lang": "no",
-      "speaker_name": "Stig Torbjornsen",
-      "speaker_role": "Football scout (Nettavisen source)",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "Nettavisen",
-      "url": "https://www.nettavisen.no/sport/advarer-norge-moter-et-monster/s/5-95-3117973",
-      "date": "2026-06-28",
-      "context": "A scout familiar with Ivory Coast warning Norwegian readers about the Ivorians, rating them above Senegal and highlighting captain Franck Kessie; logged as the press's attributed characterization (subhead framing; in-body he calls Kessie 'a monster in midfield')."
+      "verification": "attributed_context_only"
     }
   ],
-  "local_availability_reporting": [
-    {
-      "player": "Julian Ryerson",
-      "detail": "Reported as rested rather than injured for the final group match against France; previews expect him to return at right-back for the knockout tie.",
-      "confirmed": false,
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Goal.com",
-          "url": "https://www.goal.com/en/news/ivory-coast-norway-world-cup-preview/bltc20cf346c3521000",
-          "date": "2026-06-27",
-          "lang": "en"
-        }
-      ]
-    }
-  ],
+  "local_availability_reporting": [],
   "gaps": [
-    "No official Norwegian Football Federation (NFF) or FIFA statement was sourced for national expectations, mood, the manager's standing, or historical context; all sections rest on media/press (discovery tier).",
-    "The detail that Solbakken personally featured in Norway's last (1998) World Cup squad could not be verified from a cited source and was removed; only Norway's 1998 last-appearance is press-confirmed (Yahoo Sports).",
-    "No confirmed injury or suspension was reported for Norway for the R32 tie; previews state Ryerson was rested (not injured) and expected to return, so it is logged as reported/uncertain availability only.",
-    "The full verbatim Solbakken Norwegian-language quote calling Ivory Coast 'physically one of the best teams' and a '50/50' game was located at NRK/SI but is summarised in the storyline/manager blocks rather than carried as a third attributed quote (cap of two).",
-    "DB cross-check confirmed: press corroborates Group I results Iraq 4-1 W, Senegal 3-2 W, France 4-1 L (W2 L1, 2nd behind France), consistent with DB FACTS."
+    "No official NFF/FIFA/UEFA statement was directly retrieved as an official-tier source: fifa.com's 'Haaland, Berg and Solbakken on Norway's historical triumph' reaction piece could not be fetched directly (JS-rendered/empty on two attempts), so its quotes were only used where independently corroborated by ESPN's own verbatim reporting; the FIFA URL itself is not cited as a standalone source here and all sections remain discovery/press-attributed rather than official/fact_grade.",
+    "Whether Stale Solbakken personally featured in Norway's specific 1998 win over Brazil (as opposed to other 1998 group games) is disputed/unconfirmed across sources - one search-derived summary claimed he played only the Morocco and Scotland games that tournament, another claimed general squad involvement in the Brazil match. This file therefore only states Norway's 1998 win over Brazil and Norway's 28-year absence as facts, and does not assert Solbakken's personal role in that specific match.",
+    "Reports on Julian Ryerson's fitness across the group stage and R32 were inconsistent (variously described as rested, thigh-injured, or returned as a substitute) across lower-tier aggregator sources; the closest in-cutoff, higher-quality team-news coverage did not confirm any specific unconfirmed doubt for the Brazil tie, so local_availability_reporting is left empty rather than asserting a specific player concern from unreliable sourcing.",
+    "NRK's own 'VM-sjansen' predictive model gave a percentage split for Norway vs Brazil; this and any other numeric win-probability figures were deliberately excluded per the no-odds/no-numbers rule.",
+    "Outlet-allowlist note: VG, NRK, Nettavisen (Norway's principal public broadcaster and national newspapers), plus Yahoo Sports, FOX Sports, Al Jazeera, World Soccer Talk, beIN Sports and Goal.com are not on the formal _outlet-allowlist.json (no dedicated Norway entry exists). They are used here as credible 'other'-tier national/international sport press per the README's floor-not-ceiling guidance; NRK is Norway's state broadcaster and VG/Nettavisen are among its largest national newspapers by readership.",
+    "Some post-R32 material was excluded for falling after the stated 2026-07-01 research cutoff, even though available and likely reliable: a Goal.com team-news preview (2026-07-02), a second beIN Sports follow-up (2026-07-02), and Tribune/ANI wire pickups of the Ancelotti quote (2026-07-02). The Ancelotti quote itself was instead sourced to in-cutoff VG/Nettavisen originals dated 2026-07-01.",
+    "DB cross-check retained: press corroborates Group I results (Iraq 4-1 W, Senegal 3-2 W, France 4-1 L, Norway 2nd behind France) and the R32 scoreline Ivory Coast 1-2 Norway (Nusa 39', Amad equaliser c.74', Haaland 86'), consistent with DB FACTS for the R32 result (Cote d'Ivoire 1-2 Norway, Dallas Stadium, 2026-06-30) and the confirmed R16 fixture (Brazil vs Norway, New York/New Jersey Stadium, 2026-07-05T20:00Z)."
   ],
   "source_data_snapshot": [
     {
-      "outlet": "NRK",
-      "url": "https://www.nrk.no/fotballvm2026/slik-blir-veien-videre-for-norge-i-vm-etter-drommestarten-1.17932031",
-      "retrieved_at": "2026-06-28",
-      "lang": "no"
-    },
-    {
-      "outlet": "VG",
-      "url": "https://www.vg.no/sport/i/PdngGe/vm-2026-erling-braut-haaland-bryr-seg-ikke-om-frankrike",
-      "retrieved_at": "2026-06-28",
-      "lang": "no"
-    },
-    {
-      "outlet": "Nettavisen",
-      "url": "https://www.nettavisen.no/sport/stale-solbakken-og-norge-i-vm-slik-blir-blir-veien-videre/s/5-95-3116394",
-      "retrieved_at": "2026-06-28",
-      "lang": "no"
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/12098/13558812/world-cup-2026-ivory-coast-1-2-norway-erling-haaland-scores-dramatic-winner-to-set-up-last-16-clash-with-brazil",
+      "retrieved_at": "2026-07-01",
+      "used_for": "R32 match report confirming 2-1 scoreline, Haaland's dramatic winner, and the Brazil last-16 pairing."
     },
     {
       "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49188052/norway-erling-haaland-miss-france-world-cup-clash-sources",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
+      "url": "https://www.espn.com/soccer/story/_/id/49225673/norway-ivory-coast-live-world-cup-2026-latest-updates-commentary-score-result",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Live match report cross-check; confirms 2-1 result and Brazil fixture, published 2026-06-30."
     },
     {
-      "outlet": "Sports Illustrated",
-      "url": "https://www.si.com/soccer/why-erling-haaland-isnt-playing-norway-vs-france-2026-world-cup",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
-    },
-    {
-      "outlet": "Goal.com",
-      "url": "https://www.goal.com/en/news/ivory-coast-norway-world-cup-preview/bltc20cf346c3521000",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
-    },
-    {
-      "outlet": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/norway-play-next-world-cup-210030570.html",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
-    },
-    {
-      "outlet": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/soccer/article/can-erling-haaland-lead-norway-to-success-at-the-2026-world-cup-040023486.html",
-      "retrieved_at": "2026-06-28",
-      "lang": "en"
+      "outlet": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/6/30/norway-edge-ivory-coast-2-1-to-enter-world-cup-round-of",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Independent confirmation of the 2-1 result and knockout-stage progression."
     },
     {
       "outlet": "VG",
-      "url": "https://www.vg.no/sport/i/8pR1lw/norge-og-staale-solbakken-med-straffegrep-foer-vm-alvoret-starter-mot-elfenbenskysten-vanskelig-aa-trene-paa",
-      "lang": "no",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Penalty-preparation storyline; Solbakken 'difficult to train on' quote; Geir Jordet psychology context; Strand Larsen missed-penalty subtext."
+      "url": "https://www.vg.no/sport/i/OkWOyk/haaland-sikret-historisk-seier-for-norge",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Haaland/Odegaard/Berg/Solbakken/Nusa reaction quotes; 1998 callback; national-mood detail."
+    },
+    {
+      "outlet": "VG",
+      "url": "https://www.vg.no/sport/i/OkWOlb/kommentar-enorm-norsk-triumf-det-er-dette-vm-handler-om",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Commentary piece (Trond Johannessen) framing the win as the most impressive by a Norwegian team; player-by-player praise; 'Miracle in Marseille' reference."
+    },
+    {
+      "outlet": "VG",
+      "url": "https://www.vg.no/sport/i/3pRAg0/brasil-fikk-staale-solbakkens-melding-carlo-ancelotti-vi-kommer-for-deg",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Verbatim 'Carlo Ancelotti, we are coming for you' quote and dressing-room context, published 2026-07-01."
     },
     {
       "outlet": "Nettavisen",
-      "url": "https://www.nettavisen.no/sport/advarer-norge-moter-et-monster/s/5-95-3117973",
-      "lang": "no",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Scout Stig Torbjornsen 'monster' warning storyline and quote; Ivory Coast rated above Senegal, Kessie flagged."
+      "url": "https://www.nettavisen.no/sport/nusa-ble-helt-da-norge-slo-ut-elfenbenskysten-dette-endrer-alt/s/5-95-3124059",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Nusa hero-of-the-match quotes; Haaland 'change Norway forever' quote corroboration."
+    },
+    {
+      "outlet": "Nettavisen",
+      "url": "https://www.nettavisen.no/sport/solbakken-med-ancelotti-melding-i-natt/s/5-95-3124664",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Corroboration of the Ancelotti dressing-room quote and context, published 2026-07-01."
     },
     {
       "outlet": "NRK",
-      "url": "https://www.nrk.no/fotballvm2026/stale-solbakken-med-brennende-forsvarstale_-_-jeg-er-skruppellos-1.17939076",
-      "lang": "no",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Solbakken's combative 'skruppelløs' defence-speech storyline and verbatim quote; no-regrets rotation rationale (fatigue, short turnaround)."
+      "url": "https://www.nrk.no/fotballvm2026/fotball-vm-2026_-stale-solbakken-preget-etter-historisk-bragd-1.17942473",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Solbakken's post-match emotional/credit-sharing quotes."
     },
     {
-      "outlet": "Nettavisen",
-      "url": "https://www.nettavisen.no/sport/norge-mot-frankrike-solbakken-er-fly-forbanna/s/5-95-3118121",
-      "lang": "no",
-      "retrieved_at": "2026-06-28",
-      "used_for": "'Fly forbanna' sideline-anger / iPad incident storyline during the France match (NRK broadcast detail)."
+      "outlet": "NRK",
+      "url": "https://www.nrk.no/fotballvm2026/slik-er-veien-videre-i-vm-for-norge-_-na-venter-brasil-1.17942528",
+      "retrieved_at": "2026-07-01",
+      "used_for": "'It doesn't get any bigger' expert framing (Lokberg, Hegerberg); sports editor 'summer for the history books' quote reported via search snippet; win-probability model figure excluded per no-numbers rule."
     },
     {
-      "outlet": "VG",
-      "url": "https://www.vg.no/sport/i/V6jey6/fotballekspert-fra-elfenbenskysten-oensker-seg-norge-i-16-delsfinalen",
-      "lang": "no",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Ivory Coast expert Ouattara Gahoussou 'not afraid of Haaland' / preferred-Norway cross-press storyline."
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49229201/erling-haaland-greatest-goalscorer-world-norway-coach-stale-solbakken",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Solbakken's extended verbatim praise of Haaland; confirms date 2026-06-30 and Brazil-focus deferral quote."
     },
     {
-      "outlet": "Nettavisen",
-      "url": "https://www.nettavisen.no/sport/gladmelding-til-norske-fans-ingen-flere-nattkamper/s/5-95-3117971",
-      "lang": "no",
-      "retrieved_at": "2026-06-26",
-      "used_for": "Fan-timing relief / no-more-night-matches mood storyline for the knockout schedule."
+      "outlet": "beIN Sports",
+      "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/norway-s-head-coach-sends-a-warning-to-carlo-ancelotti-and-brazil-ahead-of-their-2026-fifa-world-cup-clash-2026-07-01",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Solbakken's clarification that the Ancelotti message was respect/humour, not provocation; Norway's identity-preservation stance ahead of Brazil (paraphrased, no verbatim quotes retrieved)."
+    },
+    {
+      "outlet": "FOX Sports",
+      "url": "https://www.foxsports.com/articles/soccer/norway-isnt-looking-ahead-to-potential-world-cup-matchup-with-brazil-which-it-upset-in-1998",
+      "retrieved_at": "2026-07-01",
+      "used_for": "1998 Norway-Brazil upset historical detail; Vinicius Junior/Gabriel Magalhaes-Haaland tactical framing; published 2026-06-29."
+    },
+    {
+      "outlet": "World Soccer Talk",
+      "url": "https://worldsoccertalk.com/world-cup/erling-haaland-rewrites-72-year-world-cup-history-with-record-neither-lionel-messi-nor-cristiano-ronaldo-reached/",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Haaland's 72-year scoring-streak record and fastest-to-60-goals record, published 2026-07-01."
+    },
+    {
+      "outlet": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/soccer/breaking-news/article/world-cup-2026-erling-haalands-late-goal-lifts-norway-over-ivory-coast-and-into-the-round-of-16-190435588.html",
+      "retrieved_at": "2026-07-01",
+      "used_for": "Match-report cross-check: Nusa 39', Amad equaliser, Haaland 86' winner; Golden Boot context (one behind Messi at the time)."
     }
   ]
 }

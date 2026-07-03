@@ -1,88 +1,94 @@
 {
   "team_code": "ENG",
-  "round": "R32",
-  "next_opponent_code": "TBD",
+  "round": "R16",
+  "next_opponent_code": "MEX",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
-  "confidence": "high",
+  "last_updated": "2026-07-02",
+  "confidence": "medium",
   "national_expectations": {
-    "summary": "Expectations are characteristically heavy. England arrived as one of the favoured nations and topped Group L, and the quiet national expectation is a deep run, with the final spoken of only in hushed tones given the burden of past near-misses. Coverage frames anything short of the latter stages as regression, reflecting the lingering weight of decades of hurt, back-to-back European Championship final defeats and the 1990 and 2018 semi-final agonies. Topping the group is widely noted to have placed England on the perceived more favourable side of the bracket (the half that avoids France, Spain, Germany, the Netherlands and Portugal), sharpening expectation that they should reach at least the latter stages.",
+    "summary": "England scraped through the Round of 32 and now face what multiple outlets are already framing as their toughest examination of the tournament: co-hosts Mexico, away, at the Estadio Azteca. Expectation remains that a team of England's pedigree should win, but coverage has shifted from the usual 'destiny' framing to genuine uncertainty, with Sky Sports pundit Paul Merson calling it 'a heads-or-tails football match' and saying he 'wouldn't be shocked' if England lost. The altitude of Mexico City and Mexico's unbeaten home record are treated as legitimate reasons this could go either way, rather than the usual English tendency to talk up a knockout underdog cliche.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49191685/pressure-thomas-tuchel-england-panama-world-cup-knockouts-loom",
-        "date": "2026-06-27",
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/11095/13559758/mexico-vs-england-world-cup-last-16-tie-is-heads-or-tails-match-they-could-run-us-off-our-feet-says-paul-merson",
+        "date": "2026-07-02",
         "lang": "en"
       },
       {
-        "outlet": "TNT Sports",
-        "url": "https://www.tntsports.co.uk/football/world-cup/2026/england-qualify-knockout-round-last-32-group-stage-panama-upcoming-opponents_sto23313399/story.shtml",
-        "date": "2026-06-27",
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/48539270/england-route-2026-world-cup-final-road-knockouts-group-l-mexico-brazil-argentina-france-spain-portugal",
+        "date": "2026-07-01",
         "lang": "en"
       }
     ]
   },
   "national_mood": {
-    "summary": "The mood is optimism tempered by anxiety and a recognisable national neurosis about past disappointments. England fans travelled in numbers and good spirits, packing venues and singing familiar songs, but with what coverage called a touch of neurosis over painful past campaigns. The Croatia opener (a 4-2 win) generated excitement; the flat 0-0 draw with Ghana was widely described as a reality check that revived scars of previous major tournaments; the workmanlike 2-0 win over Panama secured top spot without quieting questions about identity. The dominant feeling entering the knockouts is unconvinced patience: pundits urge trust in Tuchel while acknowledging England are still searching for their best form.",
+    "summary": "Relief laced with fresh anxiety. England needed a stoppage-brace-style comeback from Harry Kane (75' and 86') to beat DR Congo 2-1 after conceding inside seven minutes, a result Sky Sports framed as England having to 'survive a scare' rather than cruise through. Manager Thomas Tuchel described the win as proof of 'genuine belief' rather than of the team's quality. That relief has quickly given way to concern about the next assignment: Mexico away at the Azteca, at altitude, in front of a co-host crowd Paul Merson said was 'rocking' louder than any he could recall watching Mexico's win over Ecuador. The altitude story has spread beyond football press into wider UK sport coverage, with even Formula 1 driver Sergio Perez publicly warning England 'not to underestimate' it, a sign of how large the topic now looms in the national conversation.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49191685/pressure-thomas-tuchel-england-panama-world-cup-knockouts-loom",
-        "date": "2026-06-27",
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/england-vs-dr-congo/report/549847",
+        "date": "2026-07-01",
+        "lang": "en"
+      },
+      {
+        "outlet": "The Football Association (englandfootball.com)",
+        "url": "https://www.englandfootball.com/articles/2026/Jul/01/thomas-tuchel-england-v-DR-congo-reaction-20260107",
+        "date": "2026-07-01",
         "lang": "en"
       },
       {
         "outlet": "Sky Sports",
-        "url": "https://www.skysports.com/football/news/15205/13557309/world-cup-2026-ghana-draw-a-reality-check-for-england-but-we-need-to-trust-thomas-tuchel-says-paul-merson",
-        "date": "2026-06-24",
+        "url": "https://www.skysports.com/football/news/11095/13559758/mexico-vs-england-world-cup-last-16-tie-is-heads-or-tails-match-they-could-run-us-off-our-feet-says-paul-merson",
+        "date": "2026-07-02",
         "lang": "en"
       },
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49208061/will-real-england-stand-world-cup-2026-thomas-tuchel-knockouts-identity",
-        "date": "2026-06-28",
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/f1/video/33727/13559778/british-grand-prix-sergio-perez-sends-warning-to-three-lions-ahead-of-mexico-clash",
+        "date": "2026-07-02",
         "lang": "en"
       }
     ]
   },
   "manager_situation": {
-    "summary": "Thomas Tuchel leads England into his first World Cup knockout stage with his side as group winners but still searching for a settled identity. He has publicly brushed off suggestions the team is struggling under expectation, insisting his side will step up and that the bigger the games get, the bigger England will get. His approach emphasises giving attackers freedom rather than micromanaging them, while he asked supporters not to lose belief after the frustrating Ghana draw. Familiar pressure is building around his new England, with pundits (notably Paul Merson) flagging midfield creativity concerns yet advocating patience and trust in the manager. Tuchel is managing notable injury and selection questions, particularly at right-back, where he described the sidelined Reece James as a key player.",
+    "summary": "Thomas Tuchel guided England through their first knockout tie despite going behind early, crediting the team's resilience rather than dominance: 'that's not how it is' when asked whether he expected an easy afternoon, adding the win over DR Congo gives England 'genuine belief' heading into the Mexico tie. He has been direct and unusually blunt about the scale of the next challenge, repeatedly telling reporters England 'cannot physically adapt' to Mexico City's altitude in the three or four days available, framing it as a straightforward disadvantage rather than something to be talked away. On selection, he credited assistant coach Anthony Barry with the idea to move Declan Rice to right-back during the DR Congo game after Djed Spence struggled, a change that steadied England's second half and left Tuchel with a fresh option at a position that has already been filled by five different, none-natural players (James, Quansah, Spence, Rice, Konsa) across the tournament. On Bukayo Saka's continued place among the substitutes, Tuchel downplayed any fresh fitness concern, telling the BBC before kickoff that it 'tells you that Bukayo will finish the match for us,' even as pundit Gary Neville said publicly he did not think the winger looked 'right.'",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Tribune India",
-        "url": "https://www.tribuneindia.com/news/sports/fifa-world-cup-2026-we-did-what-was-needed-says-tuchel-as-england-beat-panama-2-0/",
-        "date": "2026-06-28",
+        "outlet": "The Football Association (englandfootball.com)",
+        "url": "https://www.englandfootball.com/articles/2026/Jul/01/thomas-tuchel-england-v-DR-congo-reaction-20260107",
+        "date": "2026-07-01",
         "lang": "en"
       },
       {
         "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49191685/pressure-thomas-tuchel-england-panama-world-cup-knockouts-loom",
-        "date": "2026-06-27",
-        "lang": "en"
-      },
-      {
-        "outlet": "The National",
-        "url": "https://www.thenationalnews.com/sport/world-cup-2026/2026/06/24/world-cup-2026-england-boss-tuchel-tells-fans-dont-lose-belief-after-frustrating-draw-with-ghana/",
-        "date": "2026-06-24",
+        "url": "https://www.espn.com/soccer/story/_/id/49240312/thomas-tuchel-impossible-adapt-climate-england-mexico-azteca-altitude-world-cup",
+        "date": "2026-07-01",
         "lang": "en"
       },
       {
         "outlet": "Sky Sports",
-        "url": "https://www.skysports.com/football/news/11095/13556912/world-cup-2026-england-boss-thomas-tuchel-on-how-he-has-given-his-attackers-freedom-on-the-pitch",
-        "date": "2026-06-23",
+        "url": "https://www.skysports.com/football/news/11095/13559645/declan-rice-could-be-best-solution-to-thomas-tuchels-right-back-issue-after-cameo-in-england-win-over-dr-congo",
+        "date": "2026-07-02",
+        "lang": "en"
+      },
+      {
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/11095/13558788/england-vs-dr-congo-thomas-tuchel-battling-selection-dilemmas-fitness-issues-and-low-blocks-ahead-of-last-32-clash",
+        "date": "2026-07-01",
         "lang": "en"
       }
     ]
   },
   "historical_context": {
-    "summary": "England won the World Cup once, in 1966 on home soil, beating West Germany 4-2 after extra time at Wembley with a Geoff Hurst hat-trick. It remains their only World Cup title. Their best subsequent finishes are the semi-finals in 1990 and 2018. In recent international cycles England have reached, but lost, the last two European Championship finals, feeding a national narrative of repeated near-misses and years of hurt that frames every tournament. Entering 2026 they are one of the perennial favoured nations still seeking a second major trophy.",
+    "summary": "England won the World Cup once, in 1966 on home soil, beating West Germany 4-2 after extra time at Wembley with a Geoff Hurst hat-trick, and it remains their only title. Their best subsequent finishes are the semi-finals of 1990 and 2018, and they have lost the last two European Championship finals, feeding a long-running national narrative of near-misses. The Mexico tie adds a specific, resonant layer: reporting notes England's last competitive match played above roughly 7,000 feet was the 1986 World Cup quarter-final against Argentina, played at this same stadium, the Estadio Azteca, remembered above all for Diego Maradona's 'Hand of God' goal. Mexico's own record at the Azteca is described as a near-fortress: reporting puts them at roughly 89 competitive matches there with only two defeats and over a decade unbeaten at the venue, with no side having beaten them there across ten World Cup meetings at the ground.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
@@ -93,125 +99,106 @@
         "lang": "en"
       },
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49191685/pressure-thomas-tuchel-england-panama-world-cup-knockouts-loom",
-        "date": "2026-06-27",
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/11095/13559666/mexico-vs-england-thomas-tuchels-side-face-a-huge-altitude-problem-by-playing-world-cup-round-of-16-at-7-000-feet",
+        "date": "2026-07-02",
         "lang": "en"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "England's search for identity: they topped Group L but alternated between a thrilling 4-2 win over Croatia and less convincing displays (a 0-0 with Ghana, a workmanlike 2-0 over Panama), leaving pundits asking which is the real England as the knockouts begin.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49208061/will-real-england-stand-world-cup-2026-thomas-tuchel-knockouts-identity",
-          "date": "2026-06-28",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "Creativity and midfield concerns: analysts (Paul Merson) argue England lack guile in midfield and struggle to break down deep defensive blocks, with Jude Bellingham seen as under-used despite emerging as the side's key player after scoring and assisting against Panama.",
+      "storyline": "England survived a first-knockout scare rather than cruised through it: DR Congo led inside seven minutes through Brian Cipenga before Harry Kane's header and low finish (75', 86') completed the comeback, a result Sky Sports and Tuchel both characterised as hard-earned belief rather than a statement performance.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Sky Sports",
-          "url": "https://www.skysports.com/football/news/15205/13557309/world-cup-2026-ghana-draw-a-reality-check-for-england-but-we-need-to-trust-thomas-tuchel-says-paul-merson",
-          "date": "2026-06-24",
+          "url": "https://www.skysports.com/football/england-vs-dr-congo/report/549847",
+          "date": "2026-07-01",
           "lang": "en"
         },
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49208061/will-real-england-stand-world-cup-2026-thomas-tuchel-knockouts-identity",
-          "date": "2026-06-28",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "Familiar pressure on a new Tuchel England: travelling fans bring excitement laced with the neurosis of past near-misses, and the manager has had to publicly reassure supporters not to lose belief while insisting his team will rise as the games get bigger.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49191685/pressure-thomas-tuchel-england-panama-world-cup-knockouts-loom",
-          "date": "2026-06-27",
-          "lang": "en"
-        },
-        {
-          "outlet": "The National",
-          "url": "https://www.thenationalnews.com/sport/world-cup-2026/2026/06/24/world-cup-2026-england-boss-tuchel-tells-fans-dont-lose-belief-after-frustrating-draw-with-ghana/",
-          "date": "2026-06-24",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "Right-back and fitness questions: with Reece James sidelined by a hamstring problem and Jarell Quansah nursing an ankle twist, Tuchel faces depth tests at full-back heading into the knockouts, while Bukayo Saka is being managed through an Achilles issue.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49191685/pressure-thomas-tuchel-england-panama-world-cup-knockouts-loom",
-          "date": "2026-06-27",
-          "lang": "en"
-        },
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/football/story/_/id/48701061/england-world-cup-2026-schedule-fixtures-results-scores-group-l-how-watch-uk-news-analysis-injuries",
-          "date": "2026-06-28",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "Kane writes himself into the record books: in England's own press the dominant fresh angle is Harry Kane becoming the nation's all-time leading World Cup goalscorer, his header against Panama taking him past Gary Lineker's long-standing mark, a milestone framed as fitting reward for the captain even amid an otherwise unconvincing display.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
         {
           "outlet": "The Football Association (englandfootball.com)",
-          "url": "https://www.englandfootball.com/articles/2026/Jun/17/harry-kane-england-men-world-cup-goals-record-20261706",
-          "date": "2026-06-27",
+          "url": "https://www.englandfootball.com/articles/2026/Jul/01/thomas-tuchel-england-v-DR-congo-reaction-20260107",
+          "date": "2026-07-01",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "England's 'pound the rock' mentality, a patience mantra players say is borrowed from the San Antonio Spurs' NBA title run, is credited by Anthony Gordon and Tuchel for the DR Congo comeback, but ESPN frames it as a live tension against Mexico: the same slow-building approach that has repeatedly let England fall behind early in this tournament may not survive a hostile, high-altitude Azteca where a slow start could prove fatal.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49241217/england-world-cup-philosophy-made-famous-nba-faces-agonising-examination-mexico-altitude",
+          "date": "2026-07-02",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Altitude is being reported as England's single biggest, and most unarguable, disadvantage of the tournament: Tuchel himself has said repeatedly that his squad 'cannot physically adapt' to the Azteca's roughly 7,000-foot elevation in the three to four days available, a rare instance of a manager conceding a structural disadvantage rather than talking it down.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49240312/thomas-tuchel-impossible-adapt-climate-england-mexico-azteca-altitude-world-cup",
+          "date": "2026-07-01",
           "lang": "en"
         },
         {
           "outlet": "Sky Sports",
-          "url": "https://www.skysports.com/football/panama-vs-england/report/549837",
-          "date": "2026-06-28",
+          "url": "https://www.skysports.com/football/news/11095/13559666/mexico-vs-england-thomas-tuchels-side-face-a-huge-altitude-problem-by-playing-world-cup-round-of-16-at-7-000-feet",
+          "date": "2026-07-02",
           "lang": "en"
         }
       ]
     },
     {
-      "storyline": "Pundit split in the British press: Sky Sports' studio voices crystallised the knockout debate, with Gary Neville singling out Jude Bellingham as the one England player who looks fresh and in form, while Roy Keane was sharply critical, saying the win was far from pretty and that Tuchel still does not look settled on his best XI.",
+      "storyline": "A hostile, co-host atmosphere at a stadium Mexico have barely ever lost at is framed as the other half of the challenge: Paul Merson said he had rarely seen a stadium 'rocking' as much as the Azteca did for Mexico's win over Ecuador, and reporting stresses Mexico have won the vast majority of their competitive matches at the venue and remain unbeaten there for well over a decade.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Sky Sports",
-          "url": "https://www.skysports.com/football/news/12098/13556701/world-cup-2026-panama-0-2-england-jude-bellingham-stars-as-three-lions-secure-top-spot-in-group-l",
-          "date": "2026-06-28",
+          "url": "https://www.skysports.com/football/news/11095/13559758/mexico-vs-england-world-cup-last-16-tie-is-heads-or-tails-match-they-could-run-us-off-our-feet-says-paul-merson",
+          "date": "2026-07-02",
+          "lang": "en"
+        },
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13559666/mexico-vs-england-thomas-tuchels-side-face-a-huge-altitude-problem-by-playing-world-cup-round-of-16-at-7-000-feet",
+          "date": "2026-07-02",
           "lang": "en"
         }
       ]
     },
     {
-      "storyline": "Bellingham reliance flagged as a knockout risk: England's national coverage repeatedly returns to the team's dependence on the Real Madrid midfielder, with reporting that others must step up around him if England are to go deep, casting the lop-sided burden on Bellingham as a central tactical question entering the last 32.",
+      "storyline": "An accidental right-back fix emerged under pressure: with Reece James and Jarell Quansah both out, Djed Spence struggling (losing possession a team-high 17 times before being hooked), and no natural options left, assistant coach Anthony Barry's suggestion to push midfielder Declan Rice to right-back produced a more composed second half against DR Congo, including the driving run that led to England's equaliser, and is now reported as a live option for the Mexico tie.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Sky Sports",
-          "url": "https://www.skysports.com/football/panama-vs-england/report/549837",
-          "date": "2026-06-28",
+          "url": "https://www.skysports.com/football/news/11095/13559645/declan-rice-could-be-best-solution-to-thomas-tuchels-right-back-issue-after-cameo-in-england-win-over-dr-congo",
+          "date": "2026-07-02",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Bukayo Saka's continued rotation is reported as managed caution rather than a new setback: Tuchel used a start against Panama and substitute cameos elsewhere, telling the BBC his bench role vs DR Congo simply means he 'will finish the match' if needed, while pundit Gary Neville has continued to voice concern the winger does not yet look fully himself off the back of his Achilles issue.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558788/england-vs-dr-congo-thomas-tuchel-battling-selection-dilemmas-fitness-issues-and-low-blocks-ahead-of-last-32-clash",
+          "date": "2026-07-01",
           "lang": "en"
         }
       ]
@@ -219,243 +206,234 @@
   ],
   "attributed_quotes": [
     {
-      "quote": "The bigger the games get, the bigger we will get.",
-      "speaker_name": "Thomas Tuchel",
-      "speaker_role": "England head coach",
-      "outlet": "Tribune India",
-      "url": "https://www.tribuneindia.com/news/sports/fifa-world-cup-2026-we-did-what-was-needed-says-tuchel-as-england-beat-panama-2-0/",
-      "date": "2026-06-28",
-      "context": "After England's 2-0 win over Panama secured top spot in Group L, looking ahead to the knockout stage.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "lang": "en",
-      "quote_original": null
-    },
-    {
-      "quote": "I hope they don't lose belief. It is a long way to go.",
-      "speaker_name": "Thomas Tuchel",
-      "speaker_role": "England head coach",
-      "outlet": "The National",
-      "url": "https://www.thenationalnews.com/sport/world-cup-2026/2026/06/24/world-cup-2026-england-boss-tuchel-tells-fans-dont-lose-belief-after-frustrating-draw-with-ghana/",
-      "date": "2026-06-24",
-      "context": "Addressing frustrated England supporters after the 0-0 draw with Ghana.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "lang": "en",
-      "quote_original": null
-    },
-    {
-      "quote": "Bellingham is an absolute superstar and our best player in this game by a mile.",
+      "quote": "Difficult matches, close matches - Harry's here to decide them.",
       "quote_original": null,
       "lang": "en",
-      "speaker_name": "Gary Neville",
-      "speaker_role": "Sky Sports pundit / former England defender",
+      "speaker_name": "Thomas Tuchel",
+      "speaker_role": "England head coach",
       "source_tier": "discovery",
-      "verification": "attributed_context_only - re-fetched, exact wording and Gary Neville attribution confirmed by direct fetch of the Sky Sports article",
+      "verification": "attributed_context_only",
       "outlet": "Sky Sports",
-      "url": "https://www.skysports.com/football/news/12098/13556701/world-cup-2026-panama-0-2-england-jude-bellingham-stars-as-three-lions-secure-top-spot-in-group-l",
-      "date": "2026-06-28",
-      "context": "Analysing England's 2-0 win over Panama that secured top spot in Group L, before the Round of 32."
+      "url": "https://www.skysports.com/football/england-vs-dr-congo/report/549847",
+      "date": "2026-07-01",
+      "context": "Reacting to Harry Kane's 75th- and 86th-minute goals completing the comeback win over DR Congo."
     },
     {
-      "quote": "I still don't think Tuchel has a clue what his best XI is.",
+      "quote": "These are also the experiences that give you genuine belief.",
       "quote_original": null,
       "lang": "en",
-      "speaker_name": "Roy Keane",
-      "speaker_role": "Sky Sports pundit / former Republic of Ireland captain",
+      "speaker_name": "Thomas Tuchel",
+      "speaker_role": "England head coach",
       "source_tier": "discovery",
-      "verification": "attributed_context_only - re-fetched, exact wording and Roy Keane attribution confirmed by direct fetch of the Sky Sports article",
+      "verification": "attributed_context_only",
+      "outlet": "The Football Association (englandfootball.com)",
+      "url": "https://www.englandfootball.com/articles/2026/Jul/01/thomas-tuchel-england-v-DR-congo-reaction-20260107",
+      "date": "2026-07-01",
+      "context": "Post-match reaction after coming from behind to beat DR Congo 2-1 in the Round of 32."
+    },
+    {
+      "quote": "From an attacking point of view, it's the best performance so far. We have to grind wins out.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Harry Kane",
+      "speaker_role": "England captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
       "outlet": "Sky Sports",
-      "url": "https://www.skysports.com/football/news/12098/13556701/world-cup-2026-panama-0-2-england-jude-bellingham-stars-as-three-lions-secure-top-spot-in-group-l",
-      "date": "2026-06-28",
-      "context": "Critiquing England's performance against Panama and Tuchel's team selection as the knockouts begin. Full line: 'It wasn't pretty, far from it. I still don't think Tuchel has a clue what his best XI is.'"
+      "url": "https://www.skysports.com/football/england-vs-dr-congo/report/549847",
+      "date": "2026-07-01",
+      "context": "After scoring both goals in the comeback win over DR Congo."
+    },
+    {
+      "quote": "We cannot adapt to the altitude. It's a huge advantage Mexico will have.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Thomas Tuchel",
+      "speaker_role": "England head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/11095/13559666/mexico-vs-england-thomas-tuchels-side-face-a-huge-altitude-problem-by-playing-world-cup-round-of-16-at-7-000-feet",
+      "date": "2026-07-02",
+      "context": "Previewing the Round of 16 tie against Mexico at the high-altitude Estadio Azteca."
+    },
+    {
+      "quote": "The altitude will be, of course, a big disadvantage, because we cannot physically adapt to it in four days.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Thomas Tuchel",
+      "speaker_role": "England head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49240312/thomas-tuchel-impossible-adapt-climate-england-mexico-azteca-altitude-world-cup",
+      "date": "2026-07-01",
+      "context": "Explaining why England cannot properly acclimatise before facing Mexico at the Azteca."
+    },
+    {
+      "quote": "It's an altitude of 7,000 feet, that is mind blowing.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Paul Merson",
+      "speaker_role": "Sky Sports pundit / former England forward",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/11095/13559758/mexico-vs-england-world-cup-last-16-tie-is-heads-or-tails-match-they-could-run-us-off-our-feet-says-paul-merson",
+      "date": "2026-07-02",
+      "context": "Assessing why he thinks England vs Mexico at the Azteca is a genuine 'heads-or-tails' tie."
+    },
+    {
+      "quote": "We have a saying, it's pound the rock... keep cracking it until you start to see cracks appear.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Anthony Gordon",
+      "speaker_role": "England forward",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49241217/england-world-cup-philosophy-made-famous-nba-faces-agonising-examination-mexico-altitude",
+      "date": "2026-07-02",
+      "context": "Explaining England's team mantra, borrowed from the San Antonio Spurs, that underpinned the DR Congo comeback."
     }
   ],
   "local_availability_reporting": [
     {
       "player": "Reece James",
-      "status": "Reported sidelined with a hamstring problem; missed the Panama group game and described as doubtful for the Round of 32. Tuchel called him a key player and said England would find solutions. Knockout availability uncertain.",
+      "status": "Reported sidelined with a hamstring problem picked up after the Ghana group game; missed both the Panama and DR Congo matches. No return timeline given by any source; availability for the Mexico tie remains unreported/uncertain.",
       "confirmed": false,
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49191685/pressure-thomas-tuchel-england-panama-world-cup-knockouts-loom",
-          "date": "2026-06-27",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "player": "Bukayo Saka",
-      "status": "Reported to be managed carefully through an Achilles injury; Tuchel said England must take care of his fitness and noted he has not regained his explosive form. Not ruled out, status uncertain.",
-      "confirmed": false,
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/football/story/_/id/48701061/england-world-cup-2026-schedule-fixtures-results-scores-group-l-how-watch-uk-news-analysis-injuries",
-          "date": "2026-06-28",
-          "lang": "en"
-        },
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49208061/will-real-england-stand-world-cup-2026-thomas-tuchel-knockouts-identity",
-          "date": "2026-06-28",
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558788/england-vs-dr-congo-thomas-tuchel-battling-selection-dilemmas-fitness-issues-and-low-blocks-ahead-of-last-32-clash",
+          "date": "2026-07-01",
           "lang": "en"
         }
       ]
     },
     {
       "player": "Jarell Quansah",
-      "status": "Reported to have suffered an ankle injury, which Tuchel described as a classic ankle twist and a very tight race; availability uncertain.",
+      "status": "Reported to have badly twisted an ankle in the Panama game and missed the DR Congo match as a result. No return timeline given; availability for Mexico remains unreported/uncertain.",
       "confirmed": false,
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Tribune India",
-          "url": "https://www.tribuneindia.com/news/sports/fifa-world-cup-2026-we-did-what-was-needed-says-tuchel-as-england-beat-panama-2-0/",
-          "date": "2026-06-28",
-          "lang": "en"
-        },
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49208061/will-real-england-stand-world-cup-2026-thomas-tuchel-knockouts-identity",
-          "date": "2026-06-28",
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558788/england-vs-dr-congo-thomas-tuchel-battling-selection-dilemmas-fitness-issues-and-low-blocks-ahead-of-last-32-clash",
+          "date": "2026-07-01",
           "lang": "en"
         }
       ]
     },
     {
-      "player": "Declan Rice",
-      "status": "Reported substituted against Croatia and absent from the Panama game, though he completed 90 minutes against Ghana; reason/availability not fully clarified.",
+      "player": "Bukayo Saka",
+      "status": "Reported to remain carefully managed through a lingering Achilles issue (following a January hamstring operation); started and was substituted in the 62nd minute against Panama, then came off the bench against DR Congo. Tuchel says the rotation is not a fresh fitness problem, but pundit Gary Neville has publicly said he does not think Saka 'is right'. Status for the Mexico tie not confirmed by any source.",
       "confirmed": false,
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/football/story/_/id/48701061/england-world-cup-2026-schedule-fixtures-results-scores-group-l-how-watch-uk-news-analysis-injuries",
-          "date": "2026-06-28",
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558788/england-vs-dr-congo-thomas-tuchel-battling-selection-dilemmas-fitness-issues-and-low-blocks-ahead-of-last-32-clash",
+          "date": "2026-07-01",
           "lang": "en"
         }
       ]
     },
     {
-      "player": "Tino Livramento",
-      "status": "Reported withdrawn from the squad due to a calf injury, with Trevoh Chalobah called up as replacement.",
+      "player": "Elliot Anderson",
+      "status": "Reported to be carrying muscle tightness during the group stage but retained his starting role against Panama regardless; no update found on his status heading into the Mexico tie.",
       "confirmed": false,
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/football/story/_/id/48701061/england-world-cup-2026-schedule-fixtures-results-scores-group-l-how-watch-uk-news-analysis-injuries",
-          "date": "2026-06-28",
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558788/england-vs-dr-congo-thomas-tuchel-battling-selection-dilemmas-fitness-issues-and-low-blocks-ahead-of-last-32-clash",
+          "date": "2026-07-01",
           "lang": "en"
         }
       ]
     }
   ],
   "gaps": [
-    "DB FACTS list the R32 opponent as TBD, but multiple outlets (ESPN, TNT Sports, and ESPN's schedule page) report England will face DR Congo (Congo DR) on Wednesday, July 1 in Atlanta as group winners. Per the grounding contract the DB is authoritative, so next_opponent_code is kept as TBD; this discrepancy should be reconciled once the bracket is officially confirmed.",
-    "No official FIFA / FA (Football Association) statement was successfully retrieved for fact-grade historical context; the FIFA team-profile URL returned no usable content, so historical_context is sourced via Wikipedia and reputable media and tagged discovery rather than official.",
-    "No direct verbatim quotes from England players (e.g., Harry Kane, Jude Bellingham) were sourced for this window; only manager and pundit quotes were verifiable.",
-    "Precise knockout-game fitness/return timelines for Reece James, Bukayo Saka and Jarell Quansah were not confirmed by any source; all remain reported/uncertain.",
-    "No quantified or polling-based measure of national mood was used (excluded by design); mood is described qualitatively from press coverage only.",
-    "Betting/odds and prediction-site framing of England's chances was deliberately excluded per sourcing standard, so any market-implied expectation is not represented."
+    "This file was refreshed the day after (and the day of) the R32 win, so it draws on same-day/next-day broadcaster and wire-adjacent digital sport coverage (Sky Sports, ESPN, the FA's own site); slower-moving tabloid front-page/opinion-column reaction and radio phone-in mood coverage had not yet fully emerged at research time and is not represented here.",
+    "No official FIFA or FA statement was found confirming any player's injury status (Reece James, Jarell Quansah, Bukayo Saka); all availability reporting here is press-sourced and unconfirmed, consistent with the sourcing standard.",
+    "No return timelines for Reece James or Jarell Quansah were given by any source; both are simply reported as sidelined, with no indication of Mexico-tie availability either way.",
+    "No verbatim quotes from Jude Bellingham, Bukayo Saka, or Declan Rice were sourced for this window; only Tuchel, Kane, Anthony Gordon, and pundit (Merson) quotes were verifiable.",
+    "No quantified or polling-based measure of national mood was used (excluded by design); mood is described qualitatively from press and broadcaster coverage only.",
+    "Betting/odds and prediction-market framing of the Mexico tie (e.g. odds pieces flagging Mexico as underdogs) was deliberately excluded per sourcing standard, so any market-implied expectation is not represented.",
+    "Sergio Perez's altitude comment is sourced from a Sky Sports F1 video segment rather than a written quote transcript; the substance (a warning not to underestimate the altitude) is corroborated by the surrounding written coverage but the exact verbatim wording of his comment was not independently confirmed and is therefore not quoted directly in this file."
   ],
   "source_data_snapshot": [
     {
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49208061/will-real-england-stand-world-cup-2026-thomas-tuchel-knockouts-identity",
-      "retrieved_at": "2026-06-28",
-      "note": "Identity/storylines, Bellingham, injuries, DR Congo R32"
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/england-vs-dr-congo/report/549847",
+      "retrieved_at": "2026-07-02",
+      "note": "Match report: DR Congo 2-1 England, scorers/minutes, Tuchel + Kane post-match quotes, Mexico R16 confirmed"
+    },
+    {
+      "outlet": "The Football Association (englandfootball.com)",
+      "url": "https://www.englandfootball.com/articles/2026/Jul/01/thomas-tuchel-england-v-DR-congo-reaction-20260107",
+      "retrieved_at": "2026-07-02",
+      "note": "Official post-match Tuchel reaction quotes (belief, energy/team spirit, Kane)"
     },
     {
       "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49191685/pressure-thomas-tuchel-england-panama-world-cup-knockouts-loom",
-      "retrieved_at": "2026-06-28",
-      "note": "National mood, fan expectations, pressure, James 'key player'"
+      "url": "https://www.espn.com/soccer/story/_/id/48539270/england-route-2026-world-cup-final-road-knockouts-group-l-mexico-brazil-argentina-france-spain-portugal",
+      "retrieved_at": "2026-07-02",
+      "note": "England's bracket route framing Mexico-at-altitude as daunting"
     },
     {
       "outlet": "ESPN",
-      "url": "https://www.espn.com/football/story/_/id/48701061/england-world-cup-2026-schedule-fixtures-results-scores-group-l-how-watch-uk-news-analysis-injuries",
-      "retrieved_at": "2026-06-28",
-      "note": "Group L results cross-check (won, 7 pts) + squad availability + R32 July 1 Atlanta"
+      "url": "https://www.espn.com/soccer/story/_/id/49240312/thomas-tuchel-impossible-adapt-climate-england-mexico-azteca-altitude-world-cup",
+      "retrieved_at": "2026-07-02",
+      "note": "Tuchel verbatim quotes: 'impossible' to adapt to Azteca altitude in 3-4 days"
     },
     {
-      "outlet": "Tribune India",
-      "url": "https://www.tribuneindia.com/news/sports/fifa-world-cup-2026-we-did-what-was-needed-says-tuchel-as-england-beat-panama-2-0/",
-      "retrieved_at": "2026-06-28",
-      "note": "Tuchel verbatim quotes post-Panama + Quansah 'ankle twist'"
-    },
-    {
-      "outlet": "The National",
-      "url": "https://www.thenationalnews.com/sport/world-cup-2026/2026/06/24/world-cup-2026-england-boss-tuchel-tells-fans-dont-lose-belief-after-frustrating-draw-with-ghana/",
-      "retrieved_at": "2026-06-28",
-      "note": "Tuchel 'don't lose belief' quote post-Ghana (verbatim confirmed)"
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49241217/england-world-cup-philosophy-made-famous-nba-faces-agonising-examination-mexico-altitude",
+      "retrieved_at": "2026-07-02",
+      "note": "'Pound the rock' philosophy (Anthony Gordon, Tuchel quotes) vs. the need for a fast start at altitude"
     },
     {
       "outlet": "Sky Sports",
-      "url": "https://www.skysports.com/football/news/15205/13557309/world-cup-2026-ghana-draw-a-reality-check-for-england-but-we-need-to-trust-thomas-tuchel-says-paul-merson",
-      "retrieved_at": "2026-06-28",
-      "note": "Merson: reality check, creativity/guile concerns, trust Bellingham more"
+      "url": "https://www.skysports.com/football/news/11095/13559758/mexico-vs-england-world-cup-last-16-tie-is-heads-or-tails-match-they-could-run-us-off-our-feet-says-paul-merson",
+      "retrieved_at": "2026-07-02",
+      "note": "Merson: heads-or-tails framing, Azteca atmosphere ('rocking'), altitude concern"
     },
     {
       "outlet": "Sky Sports",
-      "url": "https://www.skysports.com/football/news/11095/13556912/world-cup-2026-england-boss-thomas-tuchel-on-how-he-has-given-his-attackers-freedom-on-the-pitch",
-      "retrieved_at": "2026-06-28",
-      "note": "Tuchel on attacking freedom / approach"
+      "url": "https://www.skysports.com/football/news/11095/13559666/mexico-vs-england-thomas-tuchels-side-face-a-huge-altitude-problem-by-playing-world-cup-round-of-16-at-7-000-feet",
+      "retrieved_at": "2026-07-02",
+      "note": "Altitude physiology detail + Mexico's Azteca home record + 1986 Maradona/Azteca historical link"
     },
     {
-      "outlet": "TNT Sports",
-      "url": "https://www.tntsports.co.uk/football/world-cup/2026/england-qualify-knockout-round-last-32-group-stage-panama-upcoming-opponents_sto23313399/story.shtml",
-      "retrieved_at": "2026-06-28",
-      "note": "Group L top + bracket side (avoid France/Spain/Germany/Netherlands/Portugal) + DR Congo R32"
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/11095/13559645/declan-rice-could-be-best-solution-to-thomas-tuchels-right-back-issue-after-cameo-in-england-win-over-dr-congo",
+      "retrieved_at": "2026-07-02",
+      "note": "Declan Rice right-back experiment, Anthony Barry credited, Spence's struggles, right-back depth chart"
+    },
+    {
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/11095/13558788/england-vs-dr-congo-thomas-tuchel-battling-selection-dilemmas-fitness-issues-and-low-blocks-ahead-of-last-32-clash",
+      "retrieved_at": "2026-07-02",
+      "note": "Pre-DR Congo injury/fitness rundown: James, Quansah, Livramento, Saka, Anderson; Tuchel + Neville quotes"
+    },
+    {
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/f1/video/33727/13559778/british-grand-prix-sergio-perez-sends-warning-to-three-lions-ahead-of-mexico-clash",
+      "retrieved_at": "2026-07-02",
+      "note": "Sergio Perez (F1) altitude warning - color on how widely the storyline is running in UK sport media"
     },
     {
       "outlet": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/1966_FIFA_World_Cup_final",
       "retrieved_at": "2026-06-28",
-      "note": "1966 final result corroboration"
-    },
-    {
-      "outlet": "FIFA",
-      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-team-profile-history",
-      "retrieved_at": "2026-06-28",
-      "note": "Historical context attempted (page returned no content on fetch; dropped from sources)"
-    },
-    {
-      "outlet": "Sky Sports",
-      "url": "https://www.skysports.com/football/news/12098/13556701/world-cup-2026-panama-0-2-england-jude-bellingham-stars-as-three-lions-secure-top-spot-in-group-l",
-      "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Verbatim Neville + Keane pundit quotes (knockout debate, Bellingham praise, Tuchel best-XI critique); Kane record context"
-    },
-    {
-      "outlet": "Sky Sports",
-      "url": "https://www.skysports.com/football/panama-vs-england/report/549837",
-      "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Panama match report: Kane passes Lineker as England's all-time WC scorer, Bellingham reliance storyline, DR Congo last-32 in Atlanta"
-    },
-    {
-      "outlet": "The Football Association (englandfootball.com)",
-      "url": "https://www.englandfootball.com/articles/2026/Jun/17/harry-kane-england-men-world-cup-goals-record-20261706",
-      "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Official federation confirmation Kane equalled then broke Lineker's England World Cup goals record (Croatia brace, Panama header)"
-    },
-    {
-      "outlet": "The Football Association (englandfootball.com)",
-      "url": "https://www.englandfootball.com/articles/2026/May/22/england-mens-world-cup-2026-squad-named-by-thomas-tuchel-20262205",
-      "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Squad context cross-check (Kane third WC captaincy, Henderson fourth finals); not used for net-new storyline"
+      "note": "1966 final result corroboration (carried over from prior review)"
     }
   ]
 }

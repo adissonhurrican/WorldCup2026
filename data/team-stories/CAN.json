@@ -1,216 +1,251 @@
 {
   "team_code": "CAN",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "round": "R32",
-  "next_opponent_code": "RSA",
-  "last_updated": "2026-06-28",
+  "round": "R16",
+  "next_opponent_code": "MAR",
+  "last_updated": "2026-07-01",
   "review_status": "reviewed",
   "confidence": "medium",
+
   "national_expectations": {
-    "summary": "As co-hosts reaching the knockout stage for the first time, Canada are favourites against South Africa and carry real belief; before the tournament Jesse Marsch had openly set winning the group as the target.",
+    "summary": "Having delivered a first-ever World Cup knockout win, expectations have shifted from 'reach the last 16' to 'how far can this run go' — tempered by wide recognition that Morocco, ranked among the world's top ten and 2022 semifinalists, are by far Canada's toughest test of the tournament and clear favourites.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Sports Illustrated",
-        "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26",
+        "outlet": "TSN",
+        "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/a-look-back-at-canadas-world-cup-history-with-morocco-ahead-of-saturdays-monumental-round-of-16-matchup/",
+        "date": "2026-06-30",
+        "lang": "en"
+      },
+      {
+        "outlet": "CBC Sports",
+        "url": "https://www.cbc.ca/sports/soccer/worldcup/fifa-world-cup-canada-morocco-chris-jones-june30-9.7254353",
+        "date": "2026-06-30",
+        "lang": "en"
+      }
+    ]
+  },
+
+  "national_mood": {
+    "summary": "Jubilant and historic: Canada's late 1-0 win over South Africa is being described in national coverage as a defining, emotional moment for the sport in the country, with widespread pride even though the co-hosts had to secure it away from home in the Los Angeles area rather than in Vancouver. The mood now carries a realistic undertone — commentators frame the Morocco tie as a huge step up in class, a 'giant' of the game, while still noting Canada has already outlasted bigger footballing nations this tournament.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      {
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49210369/marsch-canadian-heroes-defining-win-south-africa",
         "date": "2026-06-28",
         "lang": "en"
       },
       {
-        "outlet": "GiveMeSport",
-        "url": "https://www.givemesport.com/jesse-marsch-canada-world-cup-2026-interview/",
-        "date": "2026-06-11",
+        "outlet": "CBC Sports",
+        "url": "https://www.cbc.ca/sports/soccer/worldcup/fifa-world-cup-canada-morocco-chris-jones-june30-9.7254353",
+        "date": "2026-06-30",
         "lang": "en"
-      }
-    ]
-  },
-  "national_mood": {
-    "summary": "Optimism tinged with frustration: a final-day loss to Switzerland cost Canada top spot and home advantage, sending them to Los Angeles rather than Vancouver, but the mood has lifted with Alphonso Davies fit to return for the knockouts.",
-    "source_tier": "discovery",
-    "verification": "attributed_context_only",
-    "sources": [
+      },
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland",
-        "date": "2026-06-24",
-        "lang": "en"
-      }
-    ]
-  },
-  "manager_situation": {
-    "summary": "Jesse Marsch is backed and ambitious but publicly rued losing home advantage, even admitting a tactical regret from the Switzerland defeat; he confirmed Davies would be ready for the next match.",
-    "source_tier": "discovery",
-    "verification": "attributed_context_only",
-    "sources": [
-      {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland",
-        "date": "2026-06-24",
-        "lang": "en"
-      }
-    ]
-  },
-  "historical_context": {
-    "summary": "This is Canada's first-ever World Cup knockout match, and a first competitive meeting with South Africa — the only prior encounter was a friendly that South Africa won.",
-    "source_tier": "discovery",
-    "verification": "attributed_context_only",
-    "sources": [
-      {
-        "outlet": "Sports Illustrated",
-        "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26",
+        "outlet": "Fox Sports",
+        "url": "https://www.foxsports.com/stories/soccer/canadian-heroes-jesse-marsch-gives-impassioned-speech-after-canadas-historic-win",
         "date": "2026-06-28",
         "lang": "en"
       }
     ]
   },
+
+  "manager_situation": {
+    "summary": "Jesse Marsch remains firmly in command and is being widely praised after the South Africa win, delivering an emotional post-match locker-room speech that drew heavy national media coverage. He has framed the Netherlands/Morocco knockout tie as effectively 'a free hit' for a team already exceeding expectations, while continuing a cautious, managed reintroduction of Alphonso Davies (a late substitute appearance rather than a start) and remaining without injured midfielder Ismael Kone.",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      {
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49210369/marsch-canadian-heroes-defining-win-south-africa",
+        "date": "2026-06-28",
+        "lang": "en"
+      },
+      {
+        "outlet": "Fox Sports",
+        "url": "https://www.foxsports.com/stories/soccer/canadian-heroes-jesse-marsch-gives-impassioned-speech-after-canadas-historic-win",
+        "date": "2026-06-28",
+        "lang": "en"
+      }
+    ]
+  },
+
+  "historical_context": {
+    "summary": "Canada's 1-0 win over South Africa (Stephen Eustaquio, 92nd minute, Los Angeles Stadium) is the country's first-ever men's World Cup knockout-stage victory, across only their third appearance in the competition (1986, 2022, 2026), and follows two prior tournaments without a win of any kind until this campaign. Wire reporting notes it is the first time a men's co-host has won a knockout match in regulation since Brazil in 2014, and the first CONCACAF nation to win a knockout match as host since Mexico in 1986. Canada and Morocco have met four times before, most recently at the 2022 World Cup in Qatar (Morocco won 2-1, with Hakim Ziyech and Youssef En-Nesyri scoring either side of a Nayef Aguerd own goal); three earlier friendlies were split, with Morocco winning twice (1984, 2016) and one draw (1994).",
+    "source_tier": "discovery",
+    "verification": "attributed_context_only",
+    "sources": [
+      {
+        "outlet": "FIFA",
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-review-highlights",
+        "date": "2026-06-28",
+        "lang": "en"
+      },
+      {
+        "outlet": "TSN",
+        "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/a-look-back-at-canadas-world-cup-history-with-morocco-ahead-of-saturdays-monumental-round-of-16-matchup/",
+        "date": "2026-06-30",
+        "lang": "en"
+      },
+      {
+        "outlet": "NBC News",
+        "url": "https://www.nbcnews.com/sports/soccer/sports-newsletter-canada-south-africa-brazil-japan-world-cup-2026-rcna352231",
+        "date": "2026-06-29",
+        "lang": "en"
+      }
+    ]
+  },
+
   "dominant_storylines": [
     {
-      "storyline": "Alphonso Davies returns from a hamstring injury for the Round of 32 — a major lift after he was held back through the group stage.",
+      "storyline": "A genuinely historic first: Stephen Eustaquio's 92nd-minute strike gave Canada their first-ever World Cup knockout win, sending the co-hosts through to a first-ever Round of 16 and prompting scenes of celebration from a squad that had never previously won a men's World Cup match until this tournament.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
+        {
+          "outlet": "FIFA",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-review-highlights",
+          "date": "2026-06-28",
+          "lang": "en"
+        },
+        {
+          "outlet": "NBC News",
+          "url": "https://www.nbcnews.com/sports/soccer/live-blog/canada-south-africa-world-cup-2026-live-updates-rcna352096",
+          "date": "2026-06-28",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Marsch's viral 'Canadian heroes' huddle: immediately after the final whistle, the head coach gathered his players and delivered an emotional address about what the win means for soccer's future in the country — widely replayed in Canadian and US coverage.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Fox Sports",
+          "url": "https://www.foxsports.com/stories/soccer/canadian-heroes-jesse-marsch-gives-impassioned-speech-after-canadas-historic-win",
+          "date": "2026-06-28",
+          "lang": "en"
+        },
         {
           "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland",
-          "date": "2026-06-24",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "Canada's attacking threat — led by Jonathan David and Cyle Larin — against a disciplined South African defence is the tactical sub-plot.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Sports Illustrated",
-          "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26",
+          "url": "https://www.espn.com/soccer/story/_/id/49210369/marsch-canadian-heroes-defining-win-south-africa",
           "date": "2026-06-28",
           "lang": "en"
         }
       ]
     },
     {
-      "storyline": "Midfielder Ismael Kone is out for the rest of the tournament with a broken leg, a blow to Canada's transition play.",
+      "storyline": "Davies' managed return continues: the captain came on for the final stretch against South Africa (his first international minutes since March 2025) rather than starting, and Marsch has not committed to a starting role for the Morocco tie; Ismael Kone remains unavailable for the rest of the tournament with the broken leg suffered against Qatar.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Sports Illustrated",
-          "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26",
+          "outlet": "FIFA",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-review-highlights",
           "date": "2026-06-28",
           "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "The 'decoy' controversy: Canadian outlets report Marsch openly defended keeping Alphonso Davies off the field against Switzerland and using him as a 'leurre' (decoy) to make opponents believe he could come on, and he refused to apologize for chasing any competitive edge at a World Cup.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "RDS",
-          "url": "https://www.rds.ca/soccer/coupe-du-monde/article/le-canada-sattend-un-duel-ouvert-contre-lafrique-du-sud/",
-          "date": "2026-06-25",
-          "lang": "fr"
         },
         {
-          "outlet": "Radio-Canada",
-          "url": "https://ici.radio-canada.ca/sports/2265250/canada-alphonso-davies-afrique-du-sud-fifa",
-          "date": "2026-06-27",
-          "lang": "fr"
-        }
-      ]
-    },
-    {
-      "storyline": "A 'will-he-or-won't-he' fog around Davies: Marsch declared the captain 'available to play' but pointedly refused to confirm a start or minutes, which national columnists framed as a light cloud of anxiety over Canada's most important player on the eve of a first knockout match.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "The Globe and Mail",
-          "url": "https://www.theglobeandmail.com/sports/soccer/article-time-running-short-alphonso-davies-leave-his-mark-canadas-fifa-world/",
-          "date": "2026-06-27",
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49246432/fifa-world-cup-2026-canada-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
+          "date": "2026-07-01",
           "lang": "en"
         }
       ]
     },
     {
-      "storyline": "Davies' own account of being benched: in the national press the captain revealed he went to Marsch before the Switzerland match asking to play a few minutes and was sat down and reminded he still wasn't ready — a hard message he later accepted was correct.",
+      "storyline": "The step-up-in-class framing: Canadian coverage is explicit that Morocco, ranked among the world's top ten and one of only two nations besides Argentina to reach a World Cup semifinal in the last two cycles for their region, represent by far the toughest opponent Canada have faced — a 2022 World Cup rematch after Morocco beat Canada 2-1 in the group stage in Qatar.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Radio-Canada",
-          "url": "https://ici.radio-canada.ca/sports/2265250/canada-alphonso-davies-afrique-du-sud-fifa",
-          "date": "2026-06-27",
-          "lang": "fr"
-        }
-      ]
-    },
-    {
-      "storyline": "An aggressive-approach pledge from the dressing room: with the Canadian press expecting a fast, spirited South Africa side after its group-stage upset of South Korea, winger Tajon Buchanan said the priority in Los Angeles is to be aggressive and confident and to play Canada's own style.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "TSN",
-          "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-vies-to-make-more-history-in-fifa-world-cup-knockout-match-vs-south-africa/",
-          "date": "2026-06-27",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "'No underestimating' South Africa: Canadian players publicly warned against complacency, pointing to South Africa's surprise win over South Korea, while defender Alistair Johnston read it as an open, transition-heavy game between two sides that like to run.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "TSN",
-          "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-vies-to-make-more-history-in-fifa-world-cup-knockout-match-vs-south-africa/",
-          "date": "2026-06-27",
+          "outlet": "CBC Sports",
+          "url": "https://www.cbc.ca/sports/soccer/worldcup/fifa-world-cup-canada-morocco-chris-jones-june30-9.7254353",
+          "date": "2026-06-30",
           "lang": "en"
         },
         {
-          "outlet": "RDS",
-          "url": "https://www.rds.ca/soccer/coupe-du-monde/article/le-canada-sattend-un-duel-ouvert-contre-lafrique-du-sud/",
-          "date": "2026-06-25",
-          "lang": "fr"
-        }
-      ]
-    },
-    {
-      "storyline": "A 'last chance for Davies the icon' framing: a Globe and Mail columnist argued this knockout run may be a closing window for the 25-year-old to cement himself as a Canadian sporting icon, with his international opportunities growing more limited and four years until the next World Cup.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "The Globe and Mail",
-          "url": "https://www.theglobeandmail.com/sports/soccer/article-time-running-short-alphonso-davies-leave-his-mark-canadas-fifa-world/",
-          "date": "2026-06-27",
+          "outlet": "TSN",
+          "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/a-look-back-at-canadas-world-cup-history-with-morocco-ahead-of-saturdays-monumental-round-of-16-matchup/",
+          "date": "2026-06-30",
           "lang": "en"
         }
       ]
     },
     {
-      "storyline": "South African provocation noted in Canada: the Canadian press flagged that South Africa's sports minister Gayton McKenzie publicly predicted a 3-0 win for his side, adding needle to a first knockout meeting between the two nations.",
+      "storyline": "Hakimi and Brahim Diaz as the Morocco threat: national preview coverage flags Achraf Hakimi's attacking overlaps from right-back combining with Brahim Diaz as the axis Canada's defence must contain, with Morocco built on defensive discipline under new-ish head coach Mohamed Ouahbi.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "TSN",
-          "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-vies-to-make-more-history-in-fifa-world-cup-knockout-match-vs-south-africa/",
-          "date": "2026-06-27",
+          "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/a-look-back-at-canadas-world-cup-history-with-morocco-ahead-of-saturdays-monumental-round-of-16-matchup/",
+          "date": "2026-06-30",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Respect from the opposing camp: Morocco head coach Mohamed Ouahbi publicly warned his own squad not to underestimate Canada ahead of the Houston tie, calling them a team that will be 'difficult' and stressing 'nobody is unbeatable.'",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "TSN",
+          "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/a-look-back-at-canadas-world-cup-history-with-morocco-ahead-of-saturdays-monumental-round-of-16-matchup/",
+          "date": "2026-06-30",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Co-host energy shifting south to Houston: the squad marked Canada Day with its first training session since learning of the Morocco draw, national broadcasters framing the buildup around the scale of support the team has generated across the host cities so far this tournament.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "TSN",
+          "url": "https://www.tsn.ca/soccer/fifa-world-cup/video/2026/07/02/canada-at-the-world-cup-canada-day-in-houston/",
+          "date": "2026-07-02",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Rest-and-recovery angle: Canadian press has noted Morocco needed a full 120 minutes plus penalties to eliminate the Netherlands, leaving them with meaningfully less recovery time before Saturday than Canada, who won inside 90.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "CBC Sports",
+          "url": "https://www.cbc.ca/sports/soccer/worldcup/fifa-world-cup-canada-morocco-chris-jones-june30-9.7254353",
+          "date": "2026-06-30",
           "lang": "en"
         }
       ]
     }
   ],
+
   "attributed_quotes": [
     {
-      "quote": "I'm disappointed we weren't able to get a win or draw to keep us here.",
+      "quote": "You guys are Canadian heroes! Canadian heroes for the future children of this country who play this sport.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Jesse Marsch",
+      "speaker_role": "manager",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Fox Sports",
+      "url": "https://www.foxsports.com/stories/soccer/canadian-heroes-jesse-marsch-gives-impassioned-speech-after-canadas-historic-win",
+      "date": "2026-06-28",
+      "context": "reported; Marsch's post-match huddle speech to his players immediately after beating South Africa"
+    },
+    {
+      "quote": "We were disappointed not to play at home, but the guys quickly refocused.",
       "quote_original": null,
       "lang": "en",
       "speaker_name": "Jesse Marsch",
@@ -218,99 +253,148 @@
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland",
-      "date": "2026-06-24",
-      "context": "reported"
+      "url": "https://www.espn.com/soccer/story/_/id/49210369/marsch-canadian-heroes-defining-win-south-africa",
+      "date": "2026-06-28",
+      "context": "reported; Marsch on missing out on hosting the knockout tie in Vancouver"
     },
     {
-      "quote": "I'm not confirming any minutes, starts, subs. He's available to play tomorrow.",
+      "quote": "We have a special group. We feel like we are brothers.",
       "quote_original": null,
       "lang": "en",
-      "speaker_name": "Jesse Marsch",
-      "speaker_role": "manager",
+      "speaker_name": "Stephen Eustaquio",
+      "speaker_role": "midfielder",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
-      "outlet": "The Globe and Mail",
-      "url": "https://www.theglobeandmail.com/sports/soccer/article-time-running-short-alphonso-davies-leave-his-mark-canadas-fifa-world/",
-      "date": "2026-06-27",
-      "context": "reported; Marsch on Alphonso Davies' availability vs South Africa"
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49210369/marsch-canadian-heroes-defining-win-south-africa",
+      "date": "2026-06-28",
+      "context": "reported; Eustaquio after scoring the 92nd-minute winner against South Africa"
     },
     {
-      "quote": "He could have said yes, but he sat me down and reminded me I wasn't ready yet. I thought about it and it's true he was right.",
-      "quote_original": "Il aurait pu me dire oui, mais il m'a assis et m'a rappelé que je n'étais pas encore prêt. J'y ai pensé et c'est vrai qu'il avait raison.",
-      "lang": "fr",
-      "speaker_name": "Alphonso Davies",
-      "speaker_role": "captain",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "Radio-Canada",
-      "url": "https://ici.radio-canada.ca/sports/2265250/canada-alphonso-davies-afrique-du-sud-fifa",
-      "date": "2026-06-27",
-      "context": "reported; Davies on asking Marsch to play vs Switzerland and being told no"
-    },
-    {
-      "quote": "It's about being aggressive, playing our style of play. The most important thing is being aggressive.",
+      "quote": "Canada...is a team that's going to be difficult for us.",
       "quote_original": null,
       "lang": "en",
-      "speaker_name": "Tajon Buchanan",
-      "speaker_role": "winger",
+      "speaker_name": "Mohamed Ouahbi",
+      "speaker_role": "Morocco head coach",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "outlet": "TSN",
-      "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-vies-to-make-more-history-in-fifa-world-cup-knockout-match-vs-south-africa/",
-      "date": "2026-06-27",
-      "context": "reported; Buchanan on Canada's approach vs South Africa"
+      "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/a-look-back-at-canadas-world-cup-history-with-morocco-ahead-of-saturdays-monumental-round-of-16-matchup/",
+      "date": "2026-06-30",
+      "context": "reported; Ouahbi cautioning his own squad against complacency ahead of the Canada tie"
+    },
+    {
+      "quote": "If we get things wrong, we'll go home.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Mohamed Ouahbi",
+      "speaker_role": "Morocco head coach",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "TSN",
+      "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/a-look-back-at-canadas-world-cup-history-with-morocco-ahead-of-saturdays-monumental-round-of-16-matchup/",
+      "date": "2026-06-30",
+      "context": "reported; Ouahbi, same interview, on the stakes of a knockout tie"
     }
   ],
-  "local_availability_reporting": [],
-  "gaps": [
-    "No official Canada Soccer statement sourced; quotes are via media reporting (Marsch's remarks relayed by ESPN from TSN).",
-    "Opponent-specific (South Africa) preparation detail not researched here — see RSA.json.",
-    "Davies' starting role vs minutes off the bench not confirmed beyond 'fit to return'."
+
+  "local_availability_reporting": [
+    {
+      "player_name": "Alphonso Davies",
+      "reported_status": "Fitness continues to be managed; came on as a 75th-minute substitute vs South Africa (first international minutes since March 2025) and is not in ESPN's predicted starting XI for the Morocco match, with Richie Laryea projected at left-back instead. Marsch has not confirmed whether Davies starts or plays a reduced role again.",
+      "confirmed": false,
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49246432/fifa-world-cup-2026-canada-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
+      "date": "2026-07-01"
+    }
   ],
+
+  "gaps": [
+    "No official Canada Soccer federation statement sourced directly; all quotes and team-news detail come via media reporting (ESPN, TSN, Fox Sports, CBC).",
+    "Attendance for the South Africa match (reported as '69,000+') came from a secondary summary rather than a directly verified primary figure; treat as approximate.",
+    "Specific Morocco attacking metrics (e.g., Hakimi's shot/xG numbers, fouls-drawn counts) surfaced mainly on aggregator/odds-adjacent preview sites during research and were excluded here per the no-odds/betting-sourcing rule; only the general Hakimi-Brahim Diaz threat, sourced to TSN, is retained.",
+    "Exact appointment date and full tenure details for Morocco head coach Mohamed Ouahbi were not confirmed via an allowlisted outlet and are omitted.",
+    "CBC Sports and TIME Magazine pieces on the co-host mood were identified but could not be directly re-verified word-for-word (site access blocked the direct fetch); content used from these is limited to what was independently corroborated by ESPN/TSN/Fox Sports.",
+    "Whether Davies starts, plays a cameo, or is rested entirely against Morocco is unresolved as of last_updated; do not state a start/bench outcome as fact.",
+    "Opponent-specific (Morocco) preparation detail beyond what's needed for the Canada storyline was not researched exhaustively here — see MAR.json if present."
+  ],
+
   "source_data_snapshot": [
     {
-      "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland",
-      "retrieved_at": "2026-06-28T16:00:00Z",
-      "tier": "discovery"
+      "outlet": "FIFA",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-review-highlights",
+      "lang": "en",
+      "retrieved_at": "2026-07-01",
+      "tier": "official",
+      "used_for": "Match report facts: 1-0 final score, Eustaquio 92nd-minute winner, Los Angeles Stadium venue, Davies 75th-minute sub appearance, South Africa reaching a first-ever knockout phase"
     },
     {
-      "url": "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26",
-      "retrieved_at": "2026-06-28T16:00:00Z",
-      "tier": "discovery"
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49210369/marsch-canadian-heroes-defining-win-south-africa",
+      "lang": "en",
+      "retrieved_at": "2026-07-01",
+      "tier": "discovery",
+      "used_for": "Marsch and Eustaquio post-match quotes, co-host home-advantage context, 'giants'/'free hit' framing of the next opponent"
     },
     {
-      "url": "https://www.givemesport.com/jesse-marsch-canada-world-cup-2026-interview/",
-      "retrieved_at": "2026-06-28T16:00:00Z",
-      "tier": "discovery"
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49246432/fifa-world-cup-2026-canada-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
+      "lang": "en",
+      "retrieved_at": "2026-07-01",
+      "tier": "discovery",
+      "used_for": "July 4 kickoff details, Houston Stadium, predicted lineups for both sides (Laryea over Davies at left-back)"
+    },
+    {
+      "outlet": "Fox Sports",
+      "url": "https://www.foxsports.com/stories/soccer/canadian-heroes-jesse-marsch-gives-impassioned-speech-after-canadas-historic-win",
+      "lang": "en",
+      "retrieved_at": "2026-07-01",
+      "tier": "discovery",
+      "used_for": "Full verbatim Marsch huddle speech"
     },
     {
       "outlet": "TSN",
-      "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-vies-to-make-more-history-in-fifa-world-cup-knockout-match-vs-south-africa/",
+      "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/a-look-back-at-canadas-world-cup-history-with-morocco-ahead-of-saturdays-monumental-round-of-16-matchup/",
       "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Buchanan/Oluwaseyi player quotes, McKenzie 3-0 provocation, RSA 1-0 over South Korea, history framing"
+      "retrieved_at": "2026-07-01",
+      "tier": "discovery",
+      "used_for": "2022 World Cup meeting detail, prior friendly results, Ouahbi quotes, Hakimi/Brahim Diaz threat framing"
     },
     {
-      "outlet": "The Globe and Mail",
-      "url": "https://www.theglobeandmail.com/sports/soccer/article-time-running-short-alphonso-davies-leave-his-mark-canadas-fifa-world/",
+      "outlet": "TSN",
+      "url": "https://www.tsn.ca/soccer/fifa-world-cup/video/2026/07/02/canada-at-the-world-cup-canada-day-in-houston/",
       "lang": "en",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Will-he-won't-he Davies fog, Marsch 'available to play' quote, last-chance-icon columnist framing"
+      "retrieved_at": "2026-07-01",
+      "tier": "discovery",
+      "used_for": "Canada Day training / Houston buildup framing"
     },
     {
-      "outlet": "RDS",
-      "url": "https://www.rds.ca/soccer/coupe-du-monde/article/le-canada-sattend-un-duel-ouvert-contre-lafrique-du-sud/",
-      "lang": "fr",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Marsch leurre/decoy defence, Johnston open-match read, South Africa upset credentials"
+      "outlet": "CBC Sports",
+      "url": "https://www.cbc.ca/sports/soccer/worldcup/fifa-world-cup-canada-morocco-chris-jones-june30-9.7254353",
+      "lang": "en",
+      "retrieved_at": "2026-07-01",
+      "tier": "discovery",
+      "used_for": "'Slaying one of modern game's giants' underdog framing, Morocco's extra-time/penalties fatigue angle, squad-turnover-since-2022 note"
     },
     {
-      "outlet": "Radio-Canada",
-      "url": "https://ici.radio-canada.ca/sports/2265250/canada-alphonso-davies-afrique-du-sud-fifa",
-      "lang": "fr",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Davies' own account of asking to play and being benched, decoy context, Blankenburg recovery detail"
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/sports/soccer/sports-newsletter-canada-south-africa-brazil-japan-world-cup-2026-rcna352231",
+      "lang": "en",
+      "retrieved_at": "2026-07-01",
+      "tier": "discovery",
+      "used_for": "First-co-host-knockout-win-since-Brazil-2014 and first-CONCACAF-host-since-Mexico-1986 historical framing",
+      "reviewer_note": "NBC News is not on the outlet allowlist; included as a recognized major national broadcaster/wire-adjacent outlet per README guidance for corroborating historical stats, tagged 'other'."
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/sports/soccer/live-blog/canada-south-africa-world-cup-2026-live-updates-rcna352096",
+      "lang": "en",
+      "retrieved_at": "2026-07-01",
+      "tier": "discovery",
+      "used_for": "Confirmation of 'advances to Round of 16 for first time' framing",
+      "reviewer_note": "NBC News is not on the outlet allowlist; tagged 'other', used only for uncontested factual framing corroborated elsewhere."
     }
   ]
 }
