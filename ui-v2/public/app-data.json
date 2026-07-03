@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-03 01:00:39.788433+00",
+    "generated_at": "2026-07-03 01:15:31.656913+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7402,6 +7402,25 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Portugal Edge Croatia in Toronto Thriller to Reach Round of 16",
+      "body": "Portugal secured their place in the Round of 16 with a hard-fought 2-1 victory over Croatia in Toronto. After Ivan Perisic opened the scoring for Croatia in the 53rd minute, Portugal responded through Cristiano Ronaldo in the 68th minute before Gonçalo Ramos netted a dramatic 90th-minute winner. The final scoreline reflected the underlying performance, as Portugal's matured expected goals of 2.18 to Croatia's 1.34 confirmed their attacking edge. Ramos and Perisic shared the spotlight as the match's top performers, both earning 7.9 ratings for their decisive goals. With this result, Portugal advance to the Round of 16 to face the winner of the other tie, keeping their pursuit of a maiden World Cup title alive. For Portugal, the victory offers a vital boost in cohesion after a flat group stage, keeping Ronaldo's historic final campaign on track. For Croatia, this dignified exit marks the end of a transitional tournament, closing a legendary chapter for their veteran core.",
+      "fixture_label": "POR vs CRO"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Iberian Giants Collide in High-Stakes Knockout Clash",
+      "body": "A classic European rivalry takes center stage in Dallas as Portugal and Spain battle for a place in the quarter-finals. Our knockout model makes Spain the clear favorites with a 72% chance to win the tie, backed by their flawless defensive record of four consecutive clean sheets. Portugal, holding a 28% win chance, must find their rhythm after an uneven group stage that cooled their pre-tournament title-favorite billing. While Spain have been defensively perfect, their attack has looked laboured, and they must now cope without injured wingers Nico Williams and Yeremy Pino. Luis de la Fuente's side will look to Mikel Oyarzabal, who has already struck twice in the tournament, to unlock the Portuguese defense. Portugal's head coach Roberto Martinez has urged his squad to focus entirely on the pitch, stating that \"the focus is to try to win the game and not think about the next opponent.\" With no prior head-to-head meetings in the database to separate them, this tie will be decided by whether Spain's improvised flanks can break through Portugal's talented but yet-to-cohere lineup.",
+      "fixture_label": "POR vs ESP",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "2-0",
+        "pick": "ESP",
+        "reasoning": "While Spain are hampered by injuries to key wingers Nico Williams and Yeremy Pino, their defensive stability is unmatched in this tournament, having kept four consecutive clean sheets. Portugal possess immense individual talent but have struggled for cohesion, as seen in their flat group-stage performances. The prediction system heavily favors Spain, and their superior structural organization under Luis de la Fuente should allow them to control the tempo and limit Portugal's stagnant attack."
+      }
+    },
     {
       "content_type": "pre_match_storyline",
       "headline": "Seattle Rematch Carries Heavy History as Co-Hosts Meet Reborn Red Devils",
