@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-03 03:00:00+00",
+    "generated_at": "2026-07-03 06:35:14.46243+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7411,6 +7411,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Swiss Precision Shuts Down Algeria as Switzerland March into Round of 16",
+      "body": "Switzerland secured their place in the Round of 16 with a disciplined 2-0 victory over Algeria in Vancouver. The Swiss took control early when Breel Embolo found the net in the 10th minute, assisted by Johan Manzambi, before Dan Ndoye doubled the lead immediately after halftime in the 46th minute. While the scoreline was decisive, the matured expected goals (xG) data confirmed Switzerland's complete dominance on the pitch, with the Swiss creating 2.56 xG compared to Algeria's limited 0.73 xG. Ndoye was the standout performer of the match, earning a rating of 8.14 with his crucial goal and creative play. With this victory, Switzerland advance to the Round of 16, where they will face the winner of another knockout tie. The result brings immense satisfaction to a buoyant Swiss side that arrived as quiet dark horses, reinforcing the belief that their experienced core can push deep into the tournament. For Algeria, the defeat brings a dignified end to their campaign, concluding a highly emotional journey under Vladimir Petkovic that saw the nation reach the knockout rounds for the first time in twelve years.",
+      "fixture_label": "SUI vs ALG"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Portugal Edge Croatia in Toronto Thriller to Reach Round of 16",
