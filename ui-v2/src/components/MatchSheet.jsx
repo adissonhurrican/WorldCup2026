@@ -166,12 +166,52 @@ function MatchDetail({ data, fx, live, lineups, events }) {
 function KnockoutStory({ data, fx, finished }) {
   const story = knockoutNarrationFor(data, fx, finished);
   if (!story) return null;
+  // Co-predictor duel — pre-match only (a finished tie shows the result + post-match story instead), and only when
+  // the narration carries the AI's call (older rows have none -> the card renders exactly as before, graceful).
+  const showDuel = story.kind === "pre_match_storyline" && story.ai_prediction && !finished;
   return (
     <div className="card p-4">
       <Label>{story.kind === "post_result_change" ? "The story" : "Match preview"}</Label>
       {story.headline && <div className="mt-1 text-[15px] font-semibold leading-snug text-ink">{story.headline}</div>}
       <p className="mt-1.5 whitespace-pre-line text-[13px] leading-relaxed text-ink-2">{story.body}</p>
+      {showDuel && <PredictionDuel data={data} fx={fx} ap={story.ai_prediction} />}
       <p className="mt-2 text-[11px] text-ink-3">AI summary — grounded in our model, the match data, and sourced national context. Display only; never a prediction input.</p>
+    </div>
+  );
+}
+
+// Co-predictors, side by side, neither subordinate: the MODEL's number (the fixture's live K=60 win probability —
+// the same figure the prediction bar shows) and the AI's OWN call (pick + confidence in words + likely scoreline +
+// grounded reasoning, from the narration's ai_prediction). agrees_with_model surfaces as a chip — the divergence is
+// the point. Display only; never a prediction input.
+function PredictionDuel({ data, fx, ap }) {
+  const p = fx.probabilities || {};
+  const homeFav = (p.home_win ?? 0) >= (p.away_win ?? 0);
+  const modelPickCode = homeFav ? fx.home : fx.away;
+  const modelPickName = (teamByCode(data, modelPickCode) || {}).name || modelPickCode;
+  const modelPct = Math.max(p.home_win ?? 0, p.away_win ?? 0);
+  const aiPickName = (teamByCode(data, ap.pick) || {}).name || ap.pick;
+  const agrees = ap.agrees_with_model !== false;
+  return (
+    <div className="mt-3 border-t border-separator/50 pt-3">
+      <div className="grid grid-cols-2 gap-2">
+        <div className="rounded-[10px] bg-fill/[0.06] p-2.5">
+          <div className="text-[9px] font-bold uppercase tracking-wide text-ink-3">The model</div>
+          <div className="mt-1 text-[13px] font-semibold leading-snug">{modelPickName} {pct(modelPct)}</div>
+          <div className="mt-0.5 text-[11px] leading-snug text-ink-3">to win the tie, from the rating model</div>
+        </div>
+        <div className="rounded-[10px] bg-bubble/10 p-2.5">
+          <div className="text-[9px] font-bold uppercase tracking-wide text-bubble">✦ The AI's call</div>
+          <div className="mt-1 text-[13px] font-semibold leading-snug">{aiPickName}</div>
+          <div className="mt-0.5 text-[11px] leading-snug text-ink-2">{ap.confidence_words}{ap.likely_scoreline ? ` · likely ${ap.likely_scoreline}` : ""}</div>
+        </div>
+      </div>
+      <div className="mt-1.5">
+        <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${agrees ? "bg-qualified/10 text-qualified" : "bg-bubble/10 text-bubble"}`}>
+          {agrees ? "The AI backs the model" : "The AI diverges from the model"}
+        </span>
+      </div>
+      {ap.reasoning && <p className="mt-1.5 text-[12px] leading-relaxed text-ink-2">{ap.reasoning}</p>}
     </div>
   );
 }

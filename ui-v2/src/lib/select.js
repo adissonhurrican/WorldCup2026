@@ -228,7 +228,9 @@ export function knockoutNarrationFor(data, fx, finished) {
   const find = (ct) => list.find((n) => n && n.content_type === ct && labels.includes(n.fixture_label)) || null;
   const post = find("post_result_change"), pre = find("pre_match_storyline");
   const chosen = finished ? (post || pre) : (pre || post);
-  return chosen ? { kind: chosen.content_type, headline: chosen.headline, body: chosen.body } : null;
+  // ai_prediction (pre_match_storyline only): the AI's OWN call on the tie — {pick, reasoning, confidence_words,
+  // likely_scoreline, agrees_with_model}. Words-only (validator-enforced); null on older rows/post-match (graceful).
+  return chosen ? { kind: chosen.content_type, headline: chosen.headline, body: chosen.body, ai_prediction: chosen.ai_prediction ?? null } : null;
 }
 
 // ---- group narration (one comparative "story of the group" per group) ----
