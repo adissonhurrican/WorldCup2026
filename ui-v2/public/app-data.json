@@ -3318,7 +3318,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 2,
+        "b": 1,
+        "winner": "POR",
+        "pens_a": null,
+        "pens_b": null
+      },
       "kickoff": "2026-07-02",
       "kickoff_utc": "2026-07-02T23:00:00Z",
       "date_confirmed": true,
@@ -3781,7 +3787,10 @@
         "group": null,
         "pool": null,
         "source_match": 83,
-        "team": null
+        "team": {
+          "code": "POR",
+          "name": "Portugal"
+        }
       },
       "side_b": {
         "label": "Winner M84",
@@ -3794,7 +3803,15 @@
           "name": "Spain"
         }
       },
-      "prediction": null,
+      "prediction": {
+        "team_a_win_probability": 0.2789,
+        "team_b_win_probability": 0.7211,
+        "elo_a": 1986,
+        "elo_b": 2151,
+        "elo_source": "post_group_k60",
+        "basis": "real",
+        "method": "neutral_elo_single_match"
+      },
       "result": null,
       "kickoff": "2026-07-06",
       "kickoff_utc": "2026-07-06T19:00:00Z",
