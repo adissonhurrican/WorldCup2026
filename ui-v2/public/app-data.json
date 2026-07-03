@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-02 21:05:08.072258+00",
+    "generated_at": "2026-07-03 01:00:39.788433+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7386,6 +7386,71 @@
   ],
   "narration": [
     {
+      "content_type": "pre_match_storyline",
+      "headline": "Seattle Rematch Carries Heavy History as Co-Hosts Meet Reborn Red Devils",
+      "body": "This Round of 16 clash in Seattle is steeped in World Cup history, reviving memories of their famous 2014 knockout thriller. Our prediction model installs Belgium as the favorites with a 58% chance to advance, backed by their deep tournament experience and undefeated run through the group stage. The co-host United States hold a 42% chance, arriving with momentum after a gritty, ten-man defensive stand to beat Bosnia and Herzegovina. However, the Americans must solve a massive selection headache up front, as three-goal leading scorer Folarin Balogun is suspended following his red card. According to ESPN reports, USMNT captain Christian Pulisic admitted the squad \"had to dig deep\" to get here, and they now face a Belgian side fresh from a stunning 3-2 comeback victory over Senegal. Belgium's veteran core of Kevin De Bruyne and Romelu Lukaku—who both scored in that 2014 meeting—remain central to a team the international press now describes as reborn. While the Americans rely on a passionate home crowd and Mauricio Pochettino's aggressive pressing system, Belgium enjoy a settled base in Seattle with zero travel. Expect a tactical chess match where the USMNT's defensive resilience is tested by Belgium's late-game knockout nerve.",
+      "fixture_label": "USA vs BEL",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "narrowly",
+        "likely_scoreline": "2-1",
+        "pick": "BEL",
+        "reasoning": "While the co-hosts will carry incredible energy from the Seattle crowd, the loss of their primary goal threat, Folarin Balogun, severely limits their attacking options. Belgium showed immense psychological resilience in their dramatic comeback against Senegal, and their veteran core of De Bruyne and Lukaku has already proven they know how to navigate this exact knockout fixture. The model favors Belgium, and the qualitative tactical advantage of having zero travel and a settled base in Seattle further tips the scales in their favor."
+      }
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Azteca Altitude Meets England's Resolve in Historic Round of 16 Clash",
+      "body": "A historic reunion at the Estadio Azteca sets the stage for a high-stakes knockout tie as co-hosts Mexico look to build on their perfect tournament run against England. Our knockout model installs England as the favorites with a 67% chance to advance, backed by their deep squad rating, while Mexico hold a 33% chance. Yet, the on-pitch reality is highly competitive. Mexico arrive with a flawless record of four wins and four consecutive clean sheets, while England had to survive a scare against DR Congo, relying on a late Harry Kane brace to secure a 2-1 comeback. England's captain remains their primary threat with five goals in the tournament, while Mexico's attack is spearheaded by Julián Quiñones, who has three goals to his name. The physical demands of Mexico City's altitude loom large over this fixture. According to Sky Sports, England manager Thomas Tuchel admitted, \"We cannot adapt to the altitude. It's a huge advantage Mexico will have.\" Meanwhile, Mexican coverage highlights a jubilant home crowd and a decade-long unbeaten run at the Azteca. Watch for how England's patient, slow-building style copes with Mexico's intense pressing in the thin air of a hostile, rocking stadium.",
+      "fixture_label": "MEX vs ENG",
+      "ai_prediction": {
+        "agrees_with_model": false,
+        "confidence_words": "a narrow lean",
+        "likely_scoreline": "1-0",
+        "pick": "MEX",
+        "reasoning": "While the model favors England based on overall squad depth, the physical and environmental factors heavily tilt this single-elimination tie toward the co-hosts. England have struggled with slow starts and defensive adjustments, and Thomas Tuchel has openly conceded that his squad cannot physically adapt to the high altitude of the Estadio Azteca in time. Backed by a perfect defensive record of four clean sheets and a passionate home crowd, Mexico are primed to exploit England's fatigue in the second half."
+      }
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Norway's Golden Generation Revives Marseille Magic Against Brazil",
+      "body": "This Round of 16 clash carries a legendary weight as Norway's historic breakthrough meets Brazil's quest for a sixth star. Our knockout model makes Brazil the favourites with a 61% chance to advance, backed by their vertical, transition-heavy style under Carlo Ancelotti. Yet Norway hold a 39% chance and arrive with immense belief, having never lost to Brazil in their history. Brazil reached the knockouts after a tense comeback win over Japan, remaining unbeaten with three wins and a draw. Norway countered with three wins of their own, powered by Erling Haaland, who has scored five goals in his first three World Cup games. Brazil's Vinícius Júnior remains their chief threat with four goals, setting up a massive defensive battle against Norway's backline. Sourced reports indicate a cautious mood in Brazil after a sluggish first half against Japan, especially with Lucas Paquetá ruled out with a thigh strain. Meanwhile, Norwegian captain Martin Odegaard has embraced the stakes, stating, \"We have heard the story of the Brazil match, now we write our own history.\" Watch for the physical duel between Arsenal's Gabriel Magalhães and Haaland, which will likely decide who controls the box in this single-elimination tie.",
+      "fixture_label": "BRA vs NOR",
+      "ai_prediction": {
+        "agrees_with_model": false,
+        "confidence_words": "a narrow lean",
+        "likely_scoreline": "2-1",
+        "pick": "NOR",
+        "reasoning": "While the model makes Brazil strong favourites, Norway's historic 'tabu' over the Seleção and Erling Haaland's record-breaking scoring form provide a genuine edge. Brazil's aging midfield struggled with mobility against Japan, and the confirmed absence of Lucas Paquetá further weakens their central control. Norway's high-spirited squad is primed to exploit these defensive gaps on the counter-attack."
+      }
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Rematch in Houston: Canada's Historic Run Meets Morocco's Global Ambition",
+      "body": "This Round of 16 clash in Houston carries a fascinating personal edge: Morocco's star goalkeeper Yassine Bounou was born in Montreal and once turned down an approach to represent Canada, declaring that representing Morocco was \"something I had very deep inside.\" Our knockout model makes Morocco clear favourites with a 65% chance to win this single-elimination tie, backed by their unbeaten tournament run and elite global standing. Canada, holding a 35% win chance, enter as proud underdogs after securing their first-ever World Cup knockout victory with a dramatic 1-0 win over South Africa. While Canada's Jesse Marsch has managed captain Alphonso Davies' minutes carefully, Morocco's Mohamed Ouahbi has his side playing with immense tactical patience, having just navigated a grueling penalty shootout against the Netherlands. The match features a direct battle of clinical goalscorers, with Canada's J. David and Morocco's breakout star I. Saibari both sitting on three goals for the tournament. History also favors the Atlas Lions, who defeated Canada 2-1 during their historic 2022 semifinal run. Canada will look to harness their co-host energy to contain Morocco's dangerous right-sided overlaps, while Morocco must overcome the fatigue of their recent 120-minute battle to keep their dreams of surpassing their 2022 legacy alive.",
+      "fixture_label": "CAN vs MAR",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "2-0",
+        "pick": "MAR",
+        "reasoning": "While Canada carry immense emotional momentum from their historic first knockout win, Morocco possess superior tournament pedigree and tactical control. The model makes Morocco clear favourites, and their defensive resilience—having just eliminated the Netherlands—should allow them to dictate the tempo. Canada's threat remains dangerous through J. David, but Morocco's experience in high-stakes shootouts and tournament management will likely prove decisive."
+      }
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "A Historic Rematch in Philadelphia: Paraguay's Dream Meets France's Giants",
+      "body": "Paraguay enter this Round of 16 tie in buoyant spirits after a historic penalty-shootout victory over Germany, but they now face the ultimate test against a flawless French side. Our prediction system makes France heavy favorites with an 88% chance to advance, driven by their formidable rating gap and a perfect four-win run through the tournament. While Paraguay have shown incredible defensive resilience, keeping two clean sheets, France arrive with a devastating attack that has already produced 13 goals. The South American side will look to tournament standout goalkeeper Orlando Gill to replicate his heroics, but they must somehow contain Kylian Mbappé, who leads the French threat with six goals. History also favors Les Bleus, as Paraguay have never beaten France in their previous World Cup meetings, including a painful golden-goal defeat at this exact stage in 1998. Sourced coverage from El Colombiano indicates Paraguay view this match as \"pure bonus territory\" with the pressure entirely on France. Meanwhile, French coach Didier Deschamps has warned his team to remain cautious, noting of Paraguay: \"It's a team that must be taken seriously.\" Expect a fascinating battle between Paraguay's tenacious defensive block and France's relentless, multi-layered attacking riches.",
+      "fixture_label": "PAR vs FRA",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "3-1",
+        "pick": "FRA",
+        "reasoning": "While Paraguay's emotional momentum and defensive grit under Gustavo Alfaro are remarkable, France's attacking depth is simply too overwhelming. The model makes France strong favorites, and the data backs it up through their flawless four-game winning streak and 13 goals scored. Orlando Gill may frustrate the French attack early, but Kylian Mbappé and Ousmane Dembélé possess too much quality over 90 minutes for the underdogs to contain."
+      }
+    },
+    {
       "content_type": "post_result_change",
       "headline": "Spain Cruise Past Austria to Reach the Round of 16",
       "body": "Spain comfortably secured their place in the Round of 16 with a dominant 3-0 victory over Austria. Mikel Oyarzabal opened the scoring in the 36th minute, assisted by Marc Cucurella, before Pedro Porro doubled the lead in the 66th minute off an Alex Baena pass. Oyarzabal sealed his brace in the 89th minute, again set up by Cucurella, to put the result beyond doubt. The final scoreline was a fair reflection of the performance, as Spain's matured expected goals (xG) of 2.8 completely overshadowed Austria's limited 0.49 xG. Mikel Oyarzabal was the standout performer of the match, earning a 9.3 rating for his clinical two-goal display. With this victory, Spain advance to the Round of 16, where they will face the winner of the other tie. The result delivers on Spain's national expectations as tournament favourites, keeping their quest for a second World Cup title firmly on track. For Austria, the defeat brings a dignified end to a historic campaign. Having reached the knockout stage for the first time in decades, Ralf Rangnick's side exits the tournament with their heads held high after capturing the imagination of their fans back home.",
@@ -7396,12 +7461,6 @@
       "headline": "USA Secure Round of 16 Berth with Decisive Shutout",
       "body": "The United States men's national team has marched into the Round of 16 after a convincing 2-0 victory over Bosnia and Herzegovina in the Round of 32. Folarin Balogun opened the scoring in the 45th minute, and Malik Tillman sealed the win with an 82nd-minute strike. The final scoreline reflected a dominant performance on the pitch, which was fully backed up by the underlying numbers. The prediction system's matured expected goals (xG) confirmed the dominance, with the USA registering 0.92 xG to Bosnia and Herzegovina's limited 0.21 xG. Tillman was the standout performer of the match, earning a 7.9 rating after creating a key pass and scoring the decisive second goal. With this victory, the USA advances to the Round of 16, where they will face the winner of the other tie. For the co-hosts, the victory keeps their historic run alive, feeding into a national mood of cautious optimism after their best-ever group performance. For Bosnia and Herzegovina, the defeat marks the end of a historic journey. Reaching the knockout stage for the first time was already a massive milestone for the nation, and head coach Sergej Barbarez had previously noted that \"all of this is a bonus for us.\" They exit the tournament with dignity, having written a new chapter in their footballing history.",
       "fixture_label": "USA vs BIH"
-    },
-    {
-      "content_type": "pre_match_storyline",
-      "headline": "Co-Hosts Face Golden Generation Test in Seattle",
-      "body": "A historic group stage meets a veteran heavyweight as the United States and Belgium clash in a high-stakes single-elimination tie. Our knockout model positions Belgium as the favorite with a 58% chance to win, backed by their experienced core and a dominant group-stage finish. The USMNT holds a 42% chance to advance, carrying momentum from their best-ever group performance under Mauricio Pochettino. While the Americans won their first two matches before resting regulars in a final group defeat, Belgium arrived here unbeaten, overcoming two opening draws with an emphatic five-goal victory to seal their group. For the co-hosts, Sports Illustrated reports that cautious optimism is building, though outright optimists remain in the minority. Pochettino has embraced the pressure, stating, \"The objective was to finish first, and we are first. Now, it's the next stage.\" Meanwhile, Belgium's manager Rudi Garcia has fiercely defended his veteran leaders against age criticism, preferring the underdog label for the wider tournament. With no prior head-to-head meetings on record, this first-ever matchup will be decided by whether the energetic, high-pressing American side can disrupt Belgium's seasoned midfield control in a battle of contrasting tournament momentum.",
-      "fixture_label": "USA vs BEL"
     },
     {
       "content_type": "post_result_change",
@@ -7416,12 +7475,6 @@
       "fixture_label": "ENG vs COD"
     },
     {
-      "content_type": "pre_match_storyline",
-      "headline": "Co-Hosts Mexico Face Heavy England Test in Mexico City",
-      "body": "A perfect group stage has fueled belief that co-hosts Mexico can finally break their historic last-sixteen barrier on home soil. However, our knockout model positions England as the clear favorites with a 67% chance to win this single-elimination tie, leaving Mexico with a 33% chance. The prediction reflects England's rating advantage despite a mixed group stage where they won twice and drew once. Mexico arrive with flawless momentum, having won all four of their matches without conceding a single goal. England have been more workmanlike, keeping two clean sheets but still searching for a fluid attacking identity. This high-stakes clash features a direct battle of in-form goalscorers, as Mexico's Julian Quiñones and England's Harry Kane both enter the match with three goals to their name. For Mexico, the national press frames this as a generation's best shot at redemption, though manager Javier Aguirre has tempered expectations, stating that \"what counts is the final placing.\" Meanwhile, British coverage describes a familiar mix of heavy expectations and anxiety, with Thomas Tuchel insisting \"the bigger the games get, the bigger we will get.\" Watch for whether Mexico's stubborn, unbreached defense can withstand England's star-studded attack in the altitude of Mexico City.",
-      "fixture_label": "MEX vs ENG"
-    },
-    {
       "content_type": "post_result_change",
       "headline": "Mexico March Into the Round of 16 After Shutting Out Ecuador",
       "body": "Mexico secured their place in the Round of 16 with a clinical 2-0 victory over Ecuador in the Round of 32. The co-hosts took control in the 22nd minute when Julián Quiñones found the net from a Roberto Alvarado assist, before veteran forward Raúl Jiménez doubled the advantage in the 31st minute. While the scoreline suggests a comfortable night, the matured expected goals (xG) tell a tighter story: Mexico finished with 1.02 xG to Ecuador's 0.73, indicating that clinical finishing rather than absolute dominance made the difference. Quiñones was the standout performer, earning an 8.3 match rating after scoring the opener, assisting the second, and creating three key passes. This victory keeps Mexico's home-soil dream alive as they advance to the Round of 16 to face the winner of another tie. For Mexico, the win fuels a hopeful nation that has long been haunted by the round-of-sixteen barrier, keeping them on course for a historic quarter-final run. Ecuador's brave campaign comes to an end; despite their emotional group-stage comeback against Germany, La Tri could not repeat the magic in a hostile atmosphere, concluding their second-ever knockout appearance with dignity.",
@@ -7434,34 +7487,16 @@
       "fixture_label": "FRA vs SWE"
     },
     {
-      "content_type": "pre_match_storyline",
-      "headline": "France's Frightening Attack Meets Paraguay's Defensive Wall in Philadelphia",
-      "body": "This Round of 16 clash presents a classic tournament contrast: France's free-flowing, star-studded attack going head-to-head with a stubborn Paraguay side built to defend deep and frustrate. According to our knockout model, France are heavy favourites with an 88% chance to win the tie, backed by a flawless group stage where they scored ten goals. Paraguay hold a 12% chance to pull off an upset, having advanced as a best third-placed team by relying on defensive organization to secure two clean sheets. Les Bleus arrive with immense momentum after three straight wins, powered by the tournament's joint-top scorers Kylian Mbappé and Ousmane Dembélé, who have netted four goals each. Paraguay's return to the knockouts after a 16-year absence has ignited a passionate domestic debate over their ultra-defensive style, but captain Gustavo Gómez rallied the nation, writing, \"When a Paraguayan believes, nothing is impossible.\" Meanwhile, France are playing with the emotional weight of Didier Deschamps' final campaign, though midfielder Adrien Rabiot warned that their attack-heavy shape has left them \"somewhat exposed\" at times. The key to this single-elimination tie will be whether Paraguay's low block can withstand France's early pressure, or if Mbappé and Dembélé will quickly find a way through.",
-      "fixture_label": "PAR vs FRA"
-    },
-    {
       "content_type": "post_result_change",
       "headline": "Haaland Strikes Late as Norway Edge Ivory Coast in Knockout Thriller",
       "body": "Norway have advanced to the Round of 16 after a tense 2-1 victory over Ivory Coast in Dallas. Antonio Nusa opened the scoring in the 39th minute following a setup from Martin Odegaard, but the Ivorian side fought back, with Amad Diallo leveling the score in the 74th minute. The decisive blow came in the 86th minute when Erling Haaland found the net from a Patrick Berg assist. The final scoreline reflected the underlying performance, as Norway's matured expected goals of 2.02 to Ivory Coast's 1.11 confirmed their attacking edge. Diallo was the standout performer of the match, earning a 9.2 rating for his tireless work and crucial equalizer. For Norway, this victory represents a massive milestone for their golden generation, keeping their long-awaited tournament run alive. For Ivory Coast, the defeat brings a dignified end to a historic campaign that saw them reach the World Cup knockout rounds for the first time in their history, fulfilling the high expectations of a proud nation.",
       "fixture_label": "CIV vs NOR"
     },
     {
-      "content_type": "pre_match_storyline",
-      "headline": "Heavyweight Ambition Meets a Golden Generation in New York",
-      "body": "A fascinating clash of styles takes center stage in New York as five-time champions Brazil face a rising Norwegian side in a single-elimination battle. Our knockout model positions Brazil as the favorite with a 61% chance to advance, backed by their superior rating gap and an unbeaten group stage. Norway, holding a 39% win chance, arrive hungry after navigating their group with two victories, though they are still searching for their first clean sheet of the tournament. The match features a spectacular duel between the tournament's joint-top scorers: Brazil's Vinícius Júnior and Norway's Erling Haaland, who have both netted four goals. For Brazil, the stakes are immense; ESPN reports that the country views this campaign as a \"win-or-bust\" quest to end a 24-year title drought. Meanwhile, Norwegian captain Martin Odegaard told NRK that \"it is allowed to dream big, and we are going to go for it\" as his nation enjoys its first knockout appearance since 1998. Watch for how Norway's rested stars handle Brazil's fluid, transition-heavy attack in a match where one mistake ends the journey.",
-      "fixture_label": "BRA vs NOR"
-    },
-    {
       "content_type": "post_result_change",
       "headline": "Morocco Edge Netherlands on Penalties After Dramatic Monterrey Knockout",
       "body": "Morocco have advanced to the Round of 16 after a dramatic 1-1 draw with the Netherlands was decided on penalties, with the Atlas Lions winning the shootout 3-2. Cody Gakpo broke the deadlock for the Dutch in the 72nd minute, but Morocco's Issa Diop equalized in the 90th minute to force extra time. While the scoreline remained level, the matured expected goals (xG) tell a different story of dominance: Morocco accumulated 1.4 xG compared to a mere 0.23 xG for the Netherlands, confirming that the Atlas Lions created the far better opportunities. Dutch goalkeeper Bart Verbruggen was the standout performer of the match, earning an 8.3 rating for keeping his side in the game. Morocco now advance to the Round of 16 to face the winner of the other tie. For Morocco, the victory keeps their ambitious dream alive under new manager Mohamed Ouahbi, who has urged his players to believe they can win the tournament outright. For the Netherlands, the defeat brings a heartbreaking end to a campaign filled with high expectations. The loss is particularly poignant for Gakpo, who chose to remain with the squad following a personal tragedy, a decision that had deeply united the close-knit Dutch team.",
       "fixture_label": "NED vs MAR"
-    },
-    {
-      "content_type": "pre_match_storyline",
-      "headline": "A Historic First Knockout Meeting as Canada and Morocco Clash in Houston",
-      "body": "This single-elimination tie brings together two nations riding waves of historic momentum, with Canada entering their first-ever World Cup knockout match against a formidable Moroccan side. Our knockout model positions Morocco as the clear favourite with a 65% chance to win, backed by their unbeaten group-stage run and deep tournament pedigree. Canada hold a 35% chance to pull off the upset, arriving with two clean sheets from their group campaign. The match features a thrilling duel of in-form goalscorers: Canada's Jonathan David and Morocco's Ismael Saibari have each netted three goals so far. For Canada, the stakes are heightened by a mix of optimism and anxiety; per ESPN, manager Jesse Marsch confirmed captain Alphonso Davies is available, though he pointedly refused to guarantee a start. Meanwhile, Morocco carry immense national expectations under new manager Mohamed Ouahbi, who has guided them seamlessly after taking over just months before the tournament. According to beIN SPORTS, Ouahbi noted that \"the players now believe in their ability, and opponents respect Morocco.\" With no prior head-to-head meetings between these teams, this first encounter will be decided by who handles the intense pressure of the big stage. Watch for Canada's aggressive transition play to test Morocco's reshaped but highly disciplined defensive line.",
-      "fixture_label": "CAN vs MAR"
     },
     {
       "content_type": "post_result_change",
