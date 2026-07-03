@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-03 18:00:00+00",
+    "generated_at": "2026-07-03 21:05:32.07727+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7420,6 +7420,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Pharaohs Prevail on Penalties After Dallas Drama",
+      "body": "Egypt have advanced to the Round of 16 after a dramatic penalty shootout victory over Australia in Dallas. The match finished 1-1 in normal time, with Emam Ashour opening the scoring for Egypt in the 13th minute before Australia's M. Hany equalized with an own goal in the 55th minute. Egypt ultimately held their nerve to win the shootout 4-2. The final expected goals (xG) of 1.36 to 0.87 in favor of Egypt confirmed their slight dominance on the pitch, showing they created the higher-quality chances over the course of the tie. Midfielder Marwan Attia was a standout performer for the Pharaohs, controlling the tempo with a 7.9 match rating and delivering a key pass. With this historic victory, Egypt's incredible run continues as they reach the Round of 16 for the first time in their history, where they will face the winner of the other tie. For Egypt, the win brings a wave of national pride, validating coach Hossam Hassan's belief in his squad's depth. For Australia, the defeat brings a dignified end to a campaign where they chased history, falling just short of their first-ever World Cup knockout victory.",
+      "fixture_label": "AUS vs EGY"
+    },
     {
       "content_type": "pre_match_storyline",
       "headline": "Iberian Giants Collide in Dallas as Spain Face Portugal",
