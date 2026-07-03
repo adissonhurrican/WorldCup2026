@@ -1,403 +1,457 @@
 {
   "team_code": "SUI",
-  "round": "R32",
+  "round": "R16",
   "next_opponent_code": "TBD",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
+  "last_updated": "2026-07-03",
   "confidence": "medium",
   "national_expectations": {
-    "summary": "Switzerland arrived as quiet dark horses and topping Group B has reinforced a sense that this experienced, well-drilled side can spring a surprise. Coverage frames the realistic ceiling as the quarter-finals — a stage they reached at Euro 2024 — while noting they have not gone that far at a World Cup since 1954. Yakin's group blends a veteran spine (Xhaka, Akanji, Kobel, Embolo) with emerging youth (Manzambi, Jashari, Ndoye), and previews stress they will need their forwards sharp and veterans fit to push deeper into the knockouts.",
+    "summary": "Expectations have jumped a level after the 2-0 Round-of-32 win over Algeria. With the long knockout hoodoo broken — Swiss and British coverage frames it as a first World Cup knockout-stage victory in 88 years, since the 1938 round-of-16 replay win over Germany — the press now openly targets a first World Cup quarter-final since 1954. SRF lays out the path: a Round of 16 back at BC Place in Vancouver on 7 July against the winner of Colombia-Ghana, with a quarter-final in Kansas City on 12 July if they win again. Captain Granit Xhaka publicly sets the register at one game at a time while stating his ambition to make history with this team.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "UEFA.com",
-        "url": "https://www.uefa.com/european-qualifiers/news/02a6-20d1595c1b77-996be0df685e-1000--switzerland-at-the-world-cup-2026-squad-fixtures-group-a/",
-        "date": "2026-06"
+        "outlet": "SRF",
+        "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-achtelfinal-am-7-7-22-uhr-fuer-nati-geht-s-weiter-wieder-in-vancouver-vs-kolumbien-ghana",
+        "lang": "de",
+        "date": "2026-07-03"
       },
       {
-        "outlet": "FourFourTwo",
-        "url": "https://www.fourfourtwo.com/team/switzerland-world-cup-2026-squad",
-        "date": "2026-06"
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/12098/13558807/world-cup-2026-switzerland-2-0-algeria-goals-from-breel-embolo-and-dan-ndoye-secure-first-world-cup-knockout-win-in-88-years",
+        "lang": "en",
+        "date": "2026-07-02"
+      },
+      {
+        "outlet": "20 Minuten",
+        "url": "https://www.20min.ch/story/wm-fluch-nach-88-jaehriger-durststrecke-so-geht-es-fuer-die-nati-weiter-103595803",
+        "lang": "de",
+        "date": "2026-07-03"
       }
     ]
   },
   "national_mood": {
-    "summary": "The mood is buoyant and growing in confidence. Switzerland finished the group unbeaten — a draw with Qatar followed by emphatic wins over Bosnia and Herzegovina (4-1) and Canada (2-1) — and the late-blooming form of 20-year-old substitute Johan Manzambi, who scored in successive matches, has injected fresh optimism. Domestic interest is high: the Canada decider drew a large Canadian television audience and Switzerland remain in Vancouver for the Round of 32. Earlier tournament tension around captain Granit Xhaka's blunt internal criticism had briefly stirred debate, but topping the group has largely settled the narrative into one of a united, in-form side.",
+    "summary": "The mood is celebratory and historically charged. Swiss outlets greeted the 2-0 win over Algeria in front of 52,497 at BC Place as the night an 88-year curse ended: 20 Minuten and SRF stress that Switzerland had lost their opening knockout tie at successive modern World Cups (round-of-16 exits in 1994, 2006, 2014, 2018 and 2022) before Breel Embolo and Dan Ndoye finally carried them through one. Vancouver is being embraced as a home away from home — this was the second Swiss win there after the group-stage defeat of Canada, and the Round of 16 is at the same stadium. The night doubled as Granit Xhaka's 150th cap, widely marked in coverage, and the mood is tempered only by concern over Denis Zakaria, who limped off late after an outstanding display. Fabian Rieder's astonishing late open-goal miss is being ribbed good-naturedly rather than bitterly, since it cost nothing.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Sky Sports",
-        "url": "https://www.skysports.com/football/news/12098/13553619/world-cup-2026-switzerland-4-1-bosnia-herzegovina-johan-manzambi-scores-twice-as-swiss-take-giant-leap-towards-knockout-stages",
-        "date": "2026-06-18"
+        "outlet": "20 Minuten",
+        "url": "https://www.20min.ch/story/wm-fluch-nach-88-jaehriger-durststrecke-so-geht-es-fuer-die-nati-weiter-103595803",
+        "lang": "de",
+        "date": "2026-07-03"
       },
       {
-        "outlet": "Yahoo Sports",
-        "url": "https://sports.yahoo.com/soccer/article/world-cup-2026-switzerland-claims-group-b-over-canada-bosnia-and-herzegovina-moves-top-among-third-place-teams-205847839.html",
-        "date": "2026-06-24"
+        "outlet": "SRF",
+        "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-2026-1-16-final-sui-alg-wm-achtelfinal-kann-kommen-die-nati-schlaegt-auch-algerien",
+        "lang": "de",
+        "date": "2026-07-03"
       },
       {
-        "outlet": "TSN",
-        "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-vs-switzerland-match-reaches-101m-viewers-as-canada-advances-to-knockout-stage-at-fifa-world-cup-2026/",
-        "date": "2026-06-25"
+        "outlet": "Watson",
+        "url": "https://www.watson.ch/sport/fussball/235900358-wm-2026-nati-schlaegt-algerien-das-sagen-embolo-xhaka-yakin-und-co",
+        "lang": "de",
+        "date": "2026-07-03"
       }
     ]
   },
   "manager_situation": {
-    "summary": "Murat Yakin's position is secure and his standing strengthened by topping Group B unbeaten. After a flatter-than-hoped opening draw with Qatar he projected calm optimism, and his in-game substitutions — most notably introducing Manzambi against Bosnia — were credited as decisive. Yakin emphasises Switzerland's deep tournament experience and consistent qualification record, having steered the Nati to the Euro 2024 quarter-finals where they pushed England to penalties. The one wrinkle reported during the group stage was internal tension over Xhaka's candid criticism of performances, which Yakin and midfielder Remo Freuler publicly framed as a healthy demand for high standards rather than a rift.",
+    "summary": "Murat Yakin's standing, already strengthened by topping Group B unbeaten, is further enhanced by a first knockout win — one that also meant beating his predecessor Vladimir Petkovic, Algeria's coach, in their much-previewed reunion. Watson credits Yakin's tactical plan as decisive: deploying Denis Zakaria at right-back to neutralise Algeria's left flank worked completely, and Zakaria delivered what the outlet called possibly his best performance in the national shirt. Yakin himself was strikingly honest afterwards, saying Switzerland had to fight and had no grip on the game in the first half and that a frank half-time reckoning was needed — praising the team for how they fixed it. His half-time interventions have now been credited as decisive twice at this tournament, after the triple change against Bosnia and Herzegovina in the group stage.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Africa Top Sports",
-        "url": "https://en.africatopsports.com/2026-fifa-world-cup-yakin-backs-switzerland-amid-early-tension-as-xhaka-criticism-sparks-debate/",
-        "date": "2026-06-18"
+        "outlet": "Watson",
+        "url": "https://www.watson.ch/sport/fussball/219334856-wm-2026-denis-zakaria-erfuellt-yakins-plan-dann-muss-er-verletzt-raus",
+        "lang": "de",
+        "date": "2026-07-03"
       },
       {
-        "outlet": "Sky Sports",
-        "url": "https://www.skysports.com/football/news/12098/13553619/world-cup-2026-switzerland-4-1-bosnia-herzegovina-johan-manzambi-scores-twice-as-swiss-take-giant-leap-towards-knockout-stages",
-        "date": "2026-06-18"
+        "outlet": "Watson",
+        "url": "https://www.watson.ch/sport/fussball/235900358-wm-2026-nati-schlaegt-algerien-das-sagen-embolo-xhaka-yakin-und-co",
+        "lang": "de",
+        "date": "2026-07-03"
+      },
+      {
+        "outlet": "SRF",
+        "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-2026-1-16-final-sui-alg-wm-achtelfinal-kann-kommen-die-nati-schlaegt-auch-algerien",
+        "lang": "de",
+        "date": "2026-07-03"
       }
     ]
   },
   "historical_context": {
-    "summary": "Switzerland's best World Cup runs came long ago: quarter-finals in 1934, 1938 and 1954 — the last including the famous 7-5 loss to Austria after Switzerland had led 3-0 in the highest-scoring match in World Cup history. They have not reached a World Cup quarter-final since 1954. In the modern era they have been reliable group-stage qualifiers, reaching the Round of 16 in 2014 (a 0-1 extra-time loss to Argentina) and 2018, and 2026 marks another deep group campaign. Their most recent tournament high was Euro 2024, where they reached the quarter-finals before losing to England on penalties. Topping Group B in 2026 continues a strong run of advancing past the group stage at successive World Cups.",
+    "summary": "Switzerland's best World Cup runs are distant: quarter-finals in 1934, 1938 and 1954 — the 1954 quarter-final being the famous 7-5 loss to Austria after leading 3-0, the highest-scoring match in World Cup history. Before this tournament, their last World Cup knockout-stage victory was the 1938 round-of-16 replay, a 4-2 extra-time win over Germany in Paris; 20 Minuten notes the 88-year gap explicitly. In the modern era they repeatedly reached the first knockout round and fell there — round-of-16 exits in 1994, 2006, 2014 (a 0-1 extra-time loss to Argentina), 2018 and 2022 — a ceiling SRF lists in full. Their most recent tournament high was Euro 2024, where they reached the quarter-finals and lost to England on penalties. Beating Algeria in the 2026 Round of 32 thus ends the knockout drought, and the next target in the national conversation is a first World Cup quarter-final since 1954.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
+        "outlet": "20 Minuten",
+        "url": "https://www.20min.ch/story/wm-fluch-nach-88-jaehriger-durststrecke-so-geht-es-fuer-die-nati-weiter-103595803",
+        "lang": "de",
+        "date": "2026-07-03"
+      },
+      {
+        "outlet": "SRF",
+        "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-2026-1-16-final-sui-alg-wm-achtelfinal-kann-kommen-die-nati-schlaegt-auch-algerien",
+        "lang": "de",
+        "date": "2026-07-03"
+      },
+      {
         "outlet": "Wikipedia — Switzerland at the FIFA World Cup",
         "url": "https://en.wikipedia.org/wiki/Switzerland_at_the_FIFA_World_Cup",
+        "lang": "en",
         "date": "2026-06"
       },
       {
         "outlet": "FIFA.com — Austria 7-5 Switzerland 1954",
         "url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/austria-switzerland-highest-scoring-game-1954",
+        "lang": "en",
         "date": "2026-06"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "Topping Group B unbeaten: A 1-1 draw with Qatar was followed by a 4-1 win over Bosnia and Herzegovina and a 2-1 win over Canada, sealing first place on seven points ahead of co-hosts Canada and setting up a Round of 32 tie at BC Place in Vancouver on 2 July against a best-placed third team.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland",
-          "date": "2026-06-24"
-        },
-        {
-          "outlet": "Yahoo Sports",
-          "url": "https://sports.yahoo.com/soccer/article/world-cup-2026-switzerland-claims-group-b-over-canada-bosnia-and-herzegovina-moves-top-among-third-place-teams-205847839.html",
-          "date": "2026-06-24"
-        }
-      ]
-    },
-    {
-      "storyline": "The Manzambi breakout: 20-year-old Freiburg substitute Johan Manzambi has emerged as a tournament surprise, scoring twice off the bench against Bosnia (reported as the youngest Switzerland player to score a World Cup brace since 1950) and again against Canada, giving Yakin a dynamic young option for the knockouts.",
+      "storyline": "Round-of-32 win, 2-0 over Algeria at BC Place Vancouver (attendance 52,497): Breel Embolo tucked in Johan Manzambi's byline cut-back in the 10th minute and Dan Ndoye swept home within a minute of the restart. Switzerland weathered early Algerian pressure and shackled Riyad Mahrez; substitute Fabian Rieder missed a late open goal that coverage dubbed a candidate for miss of the tournament. The win also settled the previewed reunion in Yakin's favour against his predecessor Vladimir Petkovic, and Mahrez announced his international retirement after Algeria's elimination.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Sky Sports",
-          "url": "https://www.skysports.com/football/news/12098/13553619/world-cup-2026-switzerland-4-1-bosnia-herzegovina-johan-manzambi-scores-twice-as-swiss-take-giant-leap-towards-knockout-stages",
-          "date": "2026-06-18"
+          "url": "https://www.skysports.com/football/news/12098/13558807/world-cup-2026-switzerland-2-0-algeria-goals-from-breel-embolo-and-dan-ndoye-secure-first-world-cup-knockout-win-in-88-years",
+          "lang": "en",
+          "date": "2026-07-02"
         },
         {
-          "outlet": "Goal.com",
-          "url": "https://www.goal.com/en/lists/switzerland-bosnia-herzegovina-johan-manzambi-brace-world-cup/blt69729ff0faf44b09",
-          "date": "2026-06-18"
+          "outlet": "SRF",
+          "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-2026-1-16-final-sui-alg-wm-achtelfinal-kann-kommen-die-nati-schlaegt-auch-algerien",
+          "lang": "de",
+          "date": "2026-07-03"
+        },
+        {
+          "outlet": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-algeria-match-report-highlights",
+          "lang": "en",
+          "date": "2026-07-02"
         }
       ]
     },
     {
-      "storyline": "A united dressing room and a settled Xhaka leadership: Swiss coverage frames this generation as having moved past the regional and cultural divisions that once dogged the squad, with captain Granit Xhaka — who converted late penalties against both Bosnia and Canada — held up as the strong on- and off-field leader, even as his blunt internal criticism briefly sparked debate.",
+      "storyline": "The 88-year curse is broken: Sky Sports headlines the result as Switzerland's first World Cup knockout win in 88 years, and 20 Minuten details the last one — the 1938 round-of-16 replay, 4-2 after extra time against Germany in Paris. SRF frames the modern pattern it ends: Switzerland had gone out in their opening knockout tie (the round of 16) in 1994, 2006, 2014, 2018 and 2022.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/12098/13558807/world-cup-2026-switzerland-2-0-algeria-goals-from-breel-embolo-and-dan-ndoye-secure-first-world-cup-knockout-win-in-88-years",
+          "lang": "en",
+          "date": "2026-07-02"
+        },
+        {
+          "outlet": "20 Minuten",
+          "url": "https://www.20min.ch/story/wm-fluch-nach-88-jaehriger-durststrecke-so-geht-es-fuer-die-nati-weiter-103595803",
+          "lang": "de",
+          "date": "2026-07-03"
+        },
+        {
+          "outlet": "SRF",
+          "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-2026-1-16-final-sui-alg-wm-achtelfinal-kann-kommen-die-nati-schlaegt-auch-algerien",
+          "lang": "de",
+          "date": "2026-07-03"
+        }
+      ]
+    },
+    {
+      "storyline": "Round of 16 in Vancouver, opponent still unknown: SRF and 20 Minuten report Switzerland stay at BC Place for the Round of 16 on Tuesday 7 July (22:00 Swiss time) against the winner of Colombia versus Ghana, to be decided within about a day of the Algeria match. SRF sketches both possibilities — Colombia as group winners with Luis Diaz and a 2014 World Cup quarter-final pedigree, Ghana back at a World Cup for the first time since 2014 — and notes a win would send Switzerland to a quarter-final in Kansas City on 12 July. The opponent is NOT yet determined; treat any name as press speculation about the pairing, not a confirmed fixture.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "SRF",
+          "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-achtelfinal-am-7-7-22-uhr-fuer-nati-geht-s-weiter-wieder-in-vancouver-vs-kolumbien-ghana",
+          "lang": "de",
+          "date": "2026-07-03"
+        },
+        {
+          "outlet": "20 Minuten",
+          "url": "https://www.20min.ch/story/wm-fluch-nach-88-jaehriger-durststrecke-so-geht-es-fuer-die-nati-weiter-103595803",
+          "lang": "de",
+          "date": "2026-07-03"
+        }
+      ]
+    },
+    {
+      "storyline": "Chasing a first World Cup quarter-final since 1954: with the knockout drought over, the ceiling narrative shifts up a stage — Switzerland have not reached a World Cup quarter-final in over seventy years, and coverage of the run now frames the Vancouver Round of 16 as the door to that milestone, echoing the Euro 2024 quarter-final run under Yakin.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "SRF",
+          "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-achtelfinal-am-7-7-22-uhr-fuer-nati-geht-s-weiter-wieder-in-vancouver-vs-kolumbien-ghana",
+          "lang": "de",
+          "date": "2026-07-03"
+        },
+        {
+          "outlet": "Wikipedia — Switzerland at the FIFA World Cup",
+          "url": "https://en.wikipedia.org/wiki/Switzerland_at_the_FIFA_World_Cup",
+          "lang": "en",
+          "date": "2026-06"
+        }
+      ]
+    },
+    {
+      "storyline": "Zakaria's redefining night, then a limp: Watson reports Denis Zakaria, deployed at right-back to shut down Algeria's left, produced possibly his best performance in the national shirt — flawless defensively, including a block on a Mahrez shot — before limping off near the end with an injury of unclear severity. He told RTS afterwards only that the journey continues, and returned to the pitch to console Algerian players, but Watson flags his fitness for Tuesday as a genuine concern for Yakin.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Watson",
+          "url": "https://www.watson.ch/sport/fussball/219334856-wm-2026-denis-zakaria-erfuellt-yakins-plan-dann-muss-er-verletzt-raus",
+          "lang": "de",
+          "date": "2026-07-03"
+        }
+      ]
+    },
+    {
+      "storyline": "Xhaka's 150th cap and history-making ambition: the Algeria win was captain Granit Xhaka's 150th appearance for Switzerland, a milestone he called enormously meaningful while saying he is no fan of statistics — his stated goal is a good World Cup and writing history with this team, taking every opponent as it comes.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Watson",
+          "url": "https://www.watson.ch/sport/fussball/235900358-wm-2026-nati-schlaegt-algerien-das-sagen-embolo-xhaka-yakin-und-co",
+          "lang": "de",
+          "date": "2026-07-03"
+        },
+        {
+          "outlet": "20 Minuten",
+          "url": "https://www.20min.ch/story/wm-fluch-nach-88-jaehriger-durststrecke-so-geht-es-fuer-die-nati-weiter-103595803",
+          "lang": "de",
+          "date": "2026-07-03"
+        }
+      ]
+    },
+    {
+      "storyline": "The Manzambi arc continues: 20-year-old Freiburg talent Johan Manzambi, the group-stage breakout who scored twice against Bosnia and Herzegovina (reported as the youngest Switzerland player to score a World Cup brace since 1950) and again against Canada — both group-stage matches — created the opening goal against Algeria with a driving run and byline cut-back for Embolo, and credits an on- and off-pitch understanding with the striker.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/12098/13558807/world-cup-2026-switzerland-2-0-algeria-goals-from-breel-embolo-and-dan-ndoye-secure-first-world-cup-knockout-win-in-88-years",
+          "lang": "en",
+          "date": "2026-07-02"
+        },
+        {
+          "outlet": "Goal.com",
+          "url": "https://www.goal.com/en/lists/switzerland-bosnia-herzegovina-johan-manzambi-brace-world-cup/blt69729ff0faf44b09",
+          "lang": "en",
+          "date": "2026-06-18"
+        },
+        {
+          "outlet": "Watson",
+          "url": "https://www.watson.ch/sport/fussball/235900358-wm-2026-nati-schlaegt-algerien-das-sagen-embolo-xhaka-yakin-und-co",
+          "lang": "de",
+          "date": "2026-07-03"
+        }
+      ]
+    },
+    {
+      "storyline": "A united dressing room built on candour: Swiss coverage frames this generation as past the cultural divisions that once dogged the squad, with Xhaka's blunt internal criticism during the group stage now read as the standard-setting that fuelled the run — after Algeria both Xhaka and Yakin repeated that things that were not good had to be addressed openly, and the honest half-time conversation was credited with turning the performance.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Flashscore (Blick journalist Florian Raz)",
           "url": "https://www.flashscore.co.za/news/dark-horses-switzerland-no-longer-haunted-by-cultural-divisions-within-squad-says-expert/rmYPXLUH/",
+          "lang": "en",
           "date": "2026-06"
-        },
-        {
-          "outlet": "Africa Top Sports",
-          "url": "https://en.africatopsports.com/2026-fifa-world-cup-yakin-backs-switzerland-amid-early-tension-as-xhaka-criticism-sparks-debate/",
-          "date": "2026-06-18"
-        }
-      ]
-    },
-    {
-      "storyline": "Dark horses chasing a first World Cup quarter-final since 1954: With an experienced core (Akanji, Kobel, Embolo, Xhaka) and energetic youth, previews cast Switzerland as a side capable of springing a surprise, though they have not reached a World Cup quarter-final in over seventy years.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "UEFA.com",
-          "url": "https://www.uefa.com/european-qualifiers/news/02a6-20d1595c1b77-996be0df685e-1000--switzerland-at-the-world-cup-2026-squad-fixtures-group-a/",
-          "date": "2026-06"
-        },
-        {
-          "outlet": "Wikipedia — Switzerland at the FIFA World Cup",
-          "url": "https://en.wikipedia.org/wiki/Switzerland_at_the_FIFA_World_Cup",
-          "date": "2026-06"
-        }
-      ]
-    },
-    {
-      "storyline": "The Petkovic reunion: Swiss national press centres the Round of 32 on an emotional 'Wiedersehen' — Switzerland face Algeria, coached by Vladimir Petkovic, the Ticinese who led the Nati for seven years (Euro 2016, World Cup 2018, Euro 2020) before Murat Yakin succeeded him in 2021. SRF, Blick, Nau and Watson all frame it as Yakin meeting his predecessor; Algeria reached the knockout as a third-placed side after a 3:3 draw with Austria.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "SRF",
-          "url": "https://srf.ch/sport/fussball/fifa-wm-2026/wm-2026-sechzehntelfinals-yakin-trifft-auf-seinen-vorgaenger-petkovic",
-          "lang": "de",
-          "date": "2026-06-28"
-        },
-        {
-          "outlet": "Nau.ch",
-          "url": "https://www.nau.ch/sport/fussball/wm-2026-das-sagt-murat-yakin-uber-gegner-algerien-67143393",
-          "lang": "de",
-          "date": "2026-06-28"
-        },
-        {
-          "outlet": "20 Minuten",
-          "url": "https://www.20min.ch/story/sechzehntelfinal-es-wird-ein-wiedersehen-so-reagiert-die-nati-auf-wm-gegner-103591988",
-          "lang": "de",
-          "date": "2026-06-28"
-        }
-      ]
-    },
-    {
-      "storyline": "The unusually long wait as group winners: Swiss outlets report Yakin framing the gap before the knockout as something genuinely new for this team — the reward of topping Group B is extra rest and recovery time, but also a long stretch without a match while waiting to learn the opponent. Coverage notes Yakin planned to let players recuperate from travel and spend time with family during the break.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "20 Minuten",
-          "url": "https://www.20min.ch/story/warten-auf-natigegner-das-hatten-wir-in-der-form-noch-nie-gehabt-103590032",
-          "lang": "de",
-          "date": "2026-06-25"
         },
         {
           "outlet": "Watson",
-          "url": "https://www.watson.ch/sport/fussball/127360047-das-sind-die-wahrscheinlichsten-nati-gegner-im-wm-sechzehntelfinal",
+          "url": "https://www.watson.ch/sport/fussball/235900358-wm-2026-nati-schlaegt-algerien-das-sagen-embolo-xhaka-yakin-und-co",
           "lang": "de",
-          "date": "2026-06-26"
-        }
-      ]
-    },
-    {
-      "storyline": "SRF's 'Superjoker' verdict and Yakin's 'goldenes Haendchen': In its own match analysis, Swiss public broadcaster SRF credited Yakin's halftime triple change against Bosnia — Sow, Manzambi and Vargas on for Rieder, Aebischer and Ndoye — as the turning point, dubbing the bench the 'Superjoker' and Yakin's reading of the game a 'golden touch', explicitly contrasting it with his self-criticism over substitutions after the Qatar opener.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "SRF",
-          "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-spiel-gegen-bosnien-und-dann-erloesen-die-superjoker-die-nati",
-          "lang": "de",
-          "date": "2026-06-18"
-        }
-      ]
-    },
-    {
-      "storyline": "An Austria sub-plot loaded with 1954 history: previewing the possible third-place opponents before the draw, Watson flagged that a meeting with Austria would have revived the memory of the legendary 1954 World Cup quarter-final 'heat battle' in Lausanne — Switzerland's 5:7 loss after leading 3:0 — adding a historical edge to the knockout build-up.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Watson",
-          "url": "https://www.watson.ch/sport/fussball/127360047-das-sind-die-wahrscheinlichsten-nati-gegner-im-wm-sechzehntelfinal",
-          "lang": "de",
-          "date": "2026-06-26"
+          "date": "2026-07-03"
         }
       ]
     }
   ],
   "attributed_quotes": [
     {
-      "quote": "I am optimistic. I trust my players. We have a seasoned team, and they know how to handle stress very well.",
+      "quote": "We had to fight and had no grip on the game.",
+      "quote_original": "Wir hatten zu kämpfen und keinen Zugriff aufs Spiel.",
+      "lang": "de",
       "speaker_name": "Murat Yakin",
       "speaker_role": "Switzerland head coach",
-      "outlet": "Africa Top Sports",
-      "url": "https://en.africatopsports.com/2026-fifa-world-cup-yakin-backs-switzerland-amid-early-tension-as-xhaka-criticism-sparks-debate/",
-      "date": "2026-06-18",
-      "context": "Yakin backing his squad during the group stage after a flatter-than-expected opening, amid debate over Xhaka's internal criticism.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
-      "lang": "en",
-      "quote_original": null
+      "outlet": "Watson",
+      "url": "https://www.watson.ch/sport/fussball/235900358-wm-2026-nati-schlaegt-algerien-das-sagen-embolo-xhaka-yakin-und-co",
+      "date": "2026-07-03",
+      "context": "Yakin's honest assessment of the first half against Algeria, before an outspoken half-time talk he credited with fixing the performance; the same line headlines Blick's post-match reaction piece."
+    },
+    {
+      "quote": "Football is no wish concert. If we want to advance, we must beat every opponent.",
+      "quote_original": "Fussball ist kein Wunschkonzert. Wenn wir weiterkommen wollen, müssen wir jeden Gegner schlagen.",
+      "lang": "de",
+      "speaker_name": "Granit Xhaka",
+      "speaker_role": "Switzerland captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "20 Minuten",
+      "url": "https://www.20min.ch/story/wm-fluch-nach-88-jaehriger-durststrecke-so-geht-es-fuer-die-nati-weiter-103595803",
+      "date": "2026-07-03",
+      "context": "Xhaka after the Algeria win, asked about the Round of 16 in Vancouver with the opponent (Colombia or Ghana) still undecided."
+    },
+    {
+      "quote": "I want to play a good World Cup and write history with this team.",
+      "quote_original": "Ich will eine gute WM spielen und mit diesem Team Geschichte schreiben.",
+      "lang": "de",
+      "speaker_name": "Granit Xhaka",
+      "speaker_role": "Switzerland captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Watson",
+      "url": "https://www.watson.ch/sport/fussball/235900358-wm-2026-nati-schlaegt-algerien-das-sagen-embolo-xhaka-yakin-und-co",
+      "date": "2026-07-03",
+      "context": "Xhaka on the night of his 150th cap, after Switzerland's 2-0 Round-of-32 win over Algeria sent them into the last 16."
+    },
+    {
+      "quote": "We will keep stepping on the gas.",
+      "quote_original": "Wir werden weiter Gas geben.",
+      "lang": "de",
+      "speaker_name": "Breel Embolo",
+      "speaker_role": "Switzerland forward, opening goalscorer vs Algeria",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Watson",
+      "url": "https://www.watson.ch/sport/fussball/235900358-wm-2026-nati-schlaegt-algerien-das-sagen-embolo-xhaka-yakin-und-co",
+      "date": "2026-07-03",
+      "context": "Embolo after scoring the opener in the 2-0 win over Algeria, looking ahead to the knockout rounds."
     },
     {
       "quote": "Cultural squabbles are a thing of the past. This generation doesn't have those problems.",
+      "quote_original": null,
+      "lang": "en",
       "speaker_name": "Florian Raz",
       "speaker_role": "Journalist, Swiss publication Blick",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
       "outlet": "Flashscore",
       "url": "https://www.flashscore.co.za/news/dark-horses-switzerland-no-longer-haunted-by-cultural-divisions-within-squad-says-expert/rmYPXLUH/",
       "date": "2026-06",
-      "context": "Raz explaining why this Switzerland squad is more unified than past generations as they enter the 2026 World Cup as dark horses.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "lang": "en",
-      "quote_original": null
-    },
-    {
-      "quote": "It will be a reunion with Vlado, whom I know from our encounters in Switzerland.",
-      "quote_original": "Es ist ein Wiedersehen mit Vlado, den ich aus unseren Begegnungen in der Schweiz kenne.",
-      "lang": "de",
-      "speaker_name": "Murat Yakin",
-      "speaker_role": "Switzerland head coach",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "Nau.ch",
-      "url": "https://www.nau.ch/sport/fussball/wm-2026-das-sagt-murat-yakin-uber-gegner-algerien-67143393",
-      "date": "2026-06-28",
-      "context": "Yakin reacting to drawing Algeria, coached by his predecessor Vladimir Petkovic, in the Round of 32; quote also reported verbatim by 20 Minuten and confirmed at headline level by Blick."
-    },
-    {
-      "quote": "An interesting opponent with many individual qualities.",
-      "quote_original": "Es ist ein interessanter Gegner mit vielen individuellen Qualitäten.",
-      "lang": "de",
-      "speaker_name": "Murat Yakin",
-      "speaker_role": "Switzerland head coach",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "Nau.ch",
-      "url": "https://www.nau.ch/sport/fussball/wm-2026-das-sagt-murat-yakin-uber-gegner-algerien-67143393",
-      "date": "2026-06-28",
-      "context": "Yakin assessing Algeria after watching their 3:3 draw with Austria, as Switzerland began preparing for the knockout tie. (20min/SRF render the same line within a fuller quote as 'Algerien ist ein interessanter Gegner...'.)"
+      "context": "Raz explaining why this Switzerland squad is more unified than past generations as they entered the 2026 World Cup as dark horses."
     }
   ],
-  "local_availability_reporting": [],
+  "local_availability_reporting": [
+    {
+      "player_name": "Denis Zakaria",
+      "reported_status": "Limped off injured near the end of the Algeria match after an outstanding display at right-back; severity unclear at time of writing. Watson reports his fitness for the Round of 16 on Tuesday is a concern for Yakin; Zakaria himself did not mention the injury to RTS and returned to the pitch afterwards to console Algerian players.",
+      "confirmed": false,
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Watson",
+      "url": "https://www.watson.ch/sport/fussball/219334856-wm-2026-denis-zakaria-erfuellt-yakins-plan-dann-muss-er-verletzt-raus",
+      "date": "2026-07-03"
+    }
+  ],
   "gaps": [
-    "R32 opponent identity: My DB FACTS and the authoritative 24 June reporting (ESPN, Yahoo) list the opponent as TBD (a best-placed third team from Group E, F, G, I or J, to be played 2 July at BC Place, Vancouver). Later ESPN/Yahoo fixture pages name Algeria, but this is not confirmable against my supplied DB FACTS, so next_opponent_code is kept as TBD and the Algeria claim is flagged as unverified pending DB update.",
-    "The 'youngest to score multiple goals' phrasing in the original draft was not supported by the cited Sky Sports report; the storyline was reworded to the source-verified record (youngest Switzerland player to score a World Cup brace since 1950, per Goal.com) and the record is attributed to discovery-tier press, not official fact_grade.",
-    "No specific injury, suspension or fitness availability reporting for any Switzerland player ahead of the R32 was found in credible outlets, so local_availability_reporting is empty (no confirmed or even reported doubts surfaced).",
-    "FIFA.com official articles (Manzambi/Yakin interviews) could not be machine-read (pages returned empty content); their verbatim quotes could not be independently confirmed word-for-word, so the strongest quotes used come from named-speaker press/aggregator coverage tagged discovery rather than official fact_grade.",
+    "Recency: the Algeria match finished only hours before this refresh (2026-07-03 03:00Z). No post-match medical bulletin on Denis Zakaria's injury had been published yet; his status is same-night reporting only and should be re-checked before the Round of 16.",
+    "Round of 16 opponent: NOT determined. Swiss press (SRF, 20 Minuten, Blick) reports the opponent will be the winner of Colombia vs Ghana, decided roughly a day after the Algeria match; next_opponent_code is kept TBD per DB facts and no opponent may be asserted as confirmed.",
+    "Reviewer note on outlets: SRF (Swiss public broadcaster), Watson, 20 Minuten, Blick and Nau.ch are not on _outlet-allowlist.json and are used as 'other' — they are the recognized Swiss national broadcaster and major Swiss news portals, consistent with the allowlist guidance for nations without a dedicated entry.",
+    "Blick's post-match reaction piece (Yakin quotes) returned HTTP 403 and could not be machine-read; the Yakin half-time quote is sourced verbatim from Watson's quotes round-up, with Blick's headline-level agreement noted only via search results.",
+    "Match statistics (possession, expected-goals figures) reported by Sky Sports and FIFA.com were deliberately excluded from all summaries per the no-numbers rule.",
+    "No fact-grade quote source: FIFA.com and SFV/ASF official pages with verbatim post-match quotes were not machine-readable at refresh time, so all quotes are discovery-tier press.",
+    "Xhaka's fuller 150th-cap reflection exceeded the 20-word quote limit and is paraphrased in the storyline rather than quoted; only his shorter verbatim lines are carried as quotes.",
     "Exact publication date of the Flashscore/Blick 'dark horses' expert piece was not stated on the page (only month-level June 2026 confidence).",
-    "No detailed tactical/lineup preview from a recognized Swiss national outlet (e.g., Blick, SRF, Watson, swissinfo) was directly retrievable for the specific R32 match beyond general dark-horse framing.",
-    "No verbatim post-Canada (24 June) reaction quote from Yakin or Xhaka could be sourced word-for-word from a credible outlet; the ESPN and Yahoo match reports contained no Switzerland quotes."
+    "No availability reporting other than Zakaria surfaced: Silvan Widmer, a reported hip doubt in pre-match previews, in fact came on as a substitute against Algeria per live tickers, so that doubt is treated as resolved and omitted."
   ],
   "source_data_snapshot": [
     {
-      "url": "https://www.espn.com/soccer/story/_/id/49168179/canada-qualify-world-cup-knockouts-miss-chance-top-group-switzerland",
-      "outlet": "ESPN",
-      "retrieved_at": "2026-06-28",
-      "note": "Switzerland 2-1 Canada match report; re-verified 28 Jun: confirms top of Group B ahead of Canada, R32 vs a third-place team on 2 July in Vancouver; no Switzerland quotes present"
+      "url": "https://www.watson.ch/sport/fussball/235900358-wm-2026-nati-schlaegt-algerien-das-sagen-embolo-xhaka-yakin-und-co",
+      "outlet": "Watson",
+      "lang": "de",
+      "retrieved_at": "2026-07-03",
+      "note": "Post-match quotes round-up: verbatim German quotes from Yakin ('Wir hatten zu kämpfen...'), Xhaka (150th cap, 'Geschichte schreiben'), Embolo ('weiter Gas geben'), Manzambi on his understanding with Embolo; confirms R16 opponent not yet known (Tuesday 22:00 Swiss time)"
     },
     {
-      "url": "https://sports.yahoo.com/soccer/article/world-cup-2026-switzerland-claims-group-b-over-canada-bosnia-and-herzegovina-moves-top-among-third-place-teams-205847839.html",
-      "outlet": "Yahoo Sports",
-      "retrieved_at": "2026-06-28",
-      "note": "Re-verified 28 Jun: full group record (Qatar 1-1, Bosnia 4-1, Canada 2-1; 7 pts top) and R32 opponent still TBD (third-place from E/F/G/I/J), 2 July at BC Place Vancouver"
+      "url": "https://www.watson.ch/sport/fussball/219334856-wm-2026-denis-zakaria-erfuellt-yakins-plan-dann-muss-er-verletzt-raus",
+      "outlet": "Watson",
+      "lang": "de",
+      "retrieved_at": "2026-07-03",
+      "note": "Zakaria feature: right-back plan vs Chaïbi succeeded, possibly his best Nati performance, Mahrez shot blocked; limped off late, severity unclear, fitness for Tuesday flagged as a concern; told RTS 'the journey continues'"
     },
     {
-      "url": "https://www.skysports.com/football/news/12098/13553619/world-cup-2026-switzerland-4-1-bosnia-herzegovina-johan-manzambi-scores-twice-as-swiss-take-giant-leap-towards-knockout-stages",
+      "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-2026-1-16-final-sui-alg-wm-achtelfinal-kann-kommen-die-nati-schlaegt-auch-algerien",
+      "outlet": "SRF",
+      "lang": "de",
+      "retrieved_at": "2026-07-03",
+      "note": "SRF match report: Embolo 10', Ndoye 46', attendance 52,497; goal build-up Freuler-Xhaka-Vargas-Manzambi; first knockout win of the modern era after round-of-16 exits in 1994/2006/2014/2018/2022; Rieder's 81st-minute miss; Zakaria strong at right-back before going off injured; Mahrez announced international retirement"
+    },
+    {
+      "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-achtelfinal-am-7-7-22-uhr-fuer-nati-geht-s-weiter-wieder-in-vancouver-vs-kolumbien-ghana",
+      "outlet": "SRF",
+      "lang": "de",
+      "retrieved_at": "2026-07-03",
+      "note": "Forward look: R16 Tuesday 7 July 22:00 Swiss time at BC Place Vancouver vs winner of Colombia-Ghana (decided Saturday early Swiss time); third Swiss match in Vancouver; QF would be 12 July in Kansas City; profiles of both possible opponents. Opponent explicitly undecided at publication"
+    },
+    {
+      "url": "https://www.20min.ch/story/wm-fluch-nach-88-jaehriger-durststrecke-so-geht-es-fuer-die-nati-weiter-103595803",
+      "outlet": "20 Minuten",
+      "lang": "de",
+      "retrieved_at": "2026-07-03",
+      "note": "88-year drought piece: last knockout win the 1938 round-of-16 replay, 4-2 aet vs Germany in Paris; Xhaka verbatim quotes ('kein Fan von Statistiken', 'Fussball ist kein Wunschkonzert...'); R16 opponent Colombia or Ghana known within ~24h"
+    },
+    {
+      "url": "https://www.skysports.com/football/news/12098/13558807/world-cup-2026-switzerland-2-0-algeria-goals-from-breel-embolo-and-dan-ndoye-secure-first-world-cup-knockout-win-in-88-years",
       "outlet": "Sky Sports",
-      "retrieved_at": "2026-06-28",
-      "note": "Re-verified 28 Jun: Switzerland 4-1 Bosnia, Manzambi double off the bench, Xhaka penalty; does NOT state the youngest-brace record (record sourced separately to Goal.com)"
+      "lang": "en",
+      "retrieved_at": "2026-07-03",
+      "note": "English match report via search: headline 'first World Cup knockout win in 88 years'; Embolo 10' from Manzambi's cut-back, Ndoye 46'; Mahrez shackled; Rieder open-goal miss called a candidate for miss of the tournament; match stats excluded per no-numbers rule"
+    },
+    {
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-algeria-match-report-highlights",
+      "outlet": "FIFA.com",
+      "lang": "en",
+      "retrieved_at": "2026-07-03",
+      "note": "Official FIFA match report page for Switzerland 2-0 Algeria (surfaced via search, used for the basic result and scorers only; page body not machine-read)"
+    },
+    {
+      "url": "https://www.blick.ch/sport/fussball/nati/nati-coach-yakin-ueber-den-sieg-gegen-algerien-wir-hatten-zu-kaempfen-id22079522.html",
+      "outlet": "Blick",
+      "lang": "de",
+      "retrieved_at": "2026-07-03",
+      "note": "Blick post-match reaction (Yakin 'Wir hatten zu kämpfen...'): page returned HTTP 403; used only for headline-level corroboration of the Yakin quote carried from Watson"
     },
     {
       "url": "https://www.goal.com/en/lists/switzerland-bosnia-herzegovina-johan-manzambi-brace-world-cup/blt69729ff0faf44b09",
       "outlet": "Goal.com",
+      "lang": "en",
       "retrieved_at": "2026-06-28",
-      "note": "Source for the Manzambi record: youngest Swiss player to score a World Cup brace since 1950; dated 18 June 2026"
-    },
-    {
-      "url": "https://en.africatopsports.com/2026-fifa-world-cup-yakin-backs-switzerland-amid-early-tension-as-xhaka-criticism-sparks-debate/",
-      "outlet": "Africa Top Sports",
-      "retrieved_at": "2026-06-28",
-      "note": "Re-verified 28 Jun: Yakin quote ('I am optimistic...') confirmed verbatim; Freuler framing of Xhaka criticism present; dated 18 June 2026"
+      "note": "Source for the Manzambi record: youngest Swiss player to score a World Cup brace since 1950 (group-stage match vs Bosnia and Herzegovina); dated 18 June 2026"
     },
     {
       "url": "https://www.flashscore.co.za/news/dark-horses-switzerland-no-longer-haunted-by-cultural-divisions-within-squad-says-expert/rmYPXLUH/",
       "outlet": "Flashscore (Blick journalist Florian Raz)",
+      "lang": "en",
       "retrieved_at": "2026-06-28",
-      "note": "Re-verified 28 Jun: Raz quote confirmed verbatim; page carries no explicit publication date (month-level June 2026)"
+      "note": "Raz quote confirmed verbatim on 28 Jun; page carries no explicit publication date (month-level June 2026)"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Switzerland_at_the_FIFA_World_Cup",
       "outlet": "Wikipedia",
+      "lang": "en",
       "retrieved_at": "2026-06-28",
-      "note": "Historical context: QF in 1934/38/54, no WC QF since 1954, R16 in 2014 (0-1 Argentina aet) and 2018"
+      "note": "Historical context: QF in 1934/38/54, no WC QF since 1954, round-of-16 exits incl. 2014 (0-1 Argentina aet) and 2018"
     },
     {
       "url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/austria-switzerland-highest-scoring-game-1954",
       "outlet": "FIFA.com",
+      "lang": "en",
       "retrieved_at": "2026-06-28",
-      "note": "Confirms 1954 QF: Switzerland led Austria 3-0 before a 7-5 loss, the highest-scoring match in World Cup history"
-    },
-    {
-      "url": "https://www.uefa.com/european-qualifiers/news/02a6-20d1595c1b77-996be0df685e-1000--switzerland-at-the-world-cup-2026-squad-fixtures-group-a/",
-      "outlet": "UEFA.com",
-      "retrieved_at": "2026-06-28",
-      "note": "Squad/history overview; Yakin and Xhaka leadership; dark-horse framing"
-    },
-    {
-      "url": "https://www.tsn.ca/soccer/fifa-world-cup/article/canada-vs-switzerland-match-reaches-101m-viewers-as-canada-advances-to-knockout-stage-at-fifa-world-cup-2026/",
-      "outlet": "TSN",
-      "retrieved_at": "2026-06-28",
-      "note": "Re-verified 28 Jun: confirms a large Canadian TV audience for the Canada-Switzerland decider"
-    },
-    {
-      "url": "https://www.fourfourtwo.com/team/switzerland-world-cup-2026-squad",
-      "outlet": "FourFourTwo",
-      "retrieved_at": "2026-06-28",
-      "note": "Squad context: Yakin-led, Xhaka captain, Manzambi youth profile, Embolo as scorer"
-    },
-    {
-      "outlet": "SRF",
-      "url": "https://srf.ch/sport/fussball/fifa-wm-2026/wm-2026-sechzehntelfinals-yakin-trifft-auf-seinen-vorgaenger-petkovic",
-      "lang": "de",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Yakin vs Petkovic reunion storyline; Petkovic profile (62-yr-old Ticinese, Euro2016/WC2018/Euro2020 with the Nati, Algeria coach since Feb 2024); R32 vs Algeria framing (Algeria 3rd via 3:3 vs Austria)"
-    },
-    {
-      "outlet": "Nau.ch",
-      "url": "https://www.nau.ch/sport/fussball/wm-2026-das-sagt-murat-yakin-uber-gegner-algerien-67143393",
-      "lang": "de",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Verbatim Yakin quotes on Algeria and the Petkovic reunion (German originals confirmed on this page)"
-    },
-    {
-      "outlet": "20 Minuten",
-      "url": "https://www.20min.ch/story/sechzehntelfinal-es-wird-ein-wiedersehen-so-reagiert-die-nati-auf-wm-gegner-103591988",
-      "lang": "de",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Cross-confirmation of the full Yakin reunion quote and Nati reaction to drawing Algeria/Petkovic; match 2 July 21:00 Canadian time"
-    },
-    {
-      "outlet": "20 Minuten",
-      "url": "https://www.20min.ch/story/warten-auf-natigegner-das-hatten-wir-in-der-form-noch-nie-gehabt-103590032",
-      "lang": "de",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Long-break / recovery storyline (Yakin: 'Das hatten wir in der Form noch nie gehabt' / 'eine neue Erfahrung, so lange kein Spiel')"
-    },
-    {
-      "outlet": "Watson",
-      "url": "https://www.watson.ch/sport/fussball/127360047-das-sind-die-wahrscheinlichsten-nati-gegner-im-wm-sechzehntelfinal",
-      "lang": "de",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Pre-draw opponent preview; Petkovic reunion angle (Switzerland coach 2014-2021); 1954 Austria 'Hitzeschlacht von Lausanne' historical sub-plot. Probability percentages on the page were excluded from text per no-stat rule"
-    },
-    {
-      "outlet": "SRF",
-      "url": "https://www.srf.ch/sport/fussball/fifa-wm-2026/wm-spiel-gegen-bosnien-und-dann-erloesen-die-superjoker-die-nati",
-      "lang": "de",
-      "retrieved_at": "2026-06-28",
-      "used_for": "'Superjoker' and 'goldenes Haendchen' framing of Yakin's halftime triple change vs Bosnia; confirmed contrast with his self-criticism after the Qatar opener"
-    },
-    {
-      "outlet": "Blick",
-      "url": "https://www.blick.ch/sport/fussball/nati/yakin-ueber-duell-mit-algerien-freue-mich-auf-das-wiedersehen-mit-vlado-id22065702.html",
-      "lang": "de",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Headline-level confirmation of Yakin's 'Wiedersehen mit Vlado' framing (page body returned HTTP 403; used only via search snippet, not fetched)"
+      "note": "Confirms 1954 quarter-final: Switzerland led Austria 3-0 before a 7-5 loss, the highest-scoring match in World Cup history"
     }
   ]
 }

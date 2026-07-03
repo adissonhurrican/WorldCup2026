@@ -1,255 +1,290 @@
 {
   "team_code": "ESP",
-  "round": "R32",
-  "next_opponent_code": "AUT",
+  "round": "R16",
+  "next_opponent_code": "POR",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
+  "last_updated": "2026-07-03",
   "confidence": "high",
   "national_expectations": {
-    "summary": "Spain arrive at the knockouts as one of the tournament's outright title favourites, carrying the weight of being reigning European champions and chasing a second World Cup. National and major international previews cast them as clear favourites to beat Austria and frame the tie as a game they are expected to win comfortably on paper, while warning against complacency against Ralf Rangnick's intense pressing side. Power-ranking coverage places Spain among the top contenders but behind Argentina and France, reflecting an expectation of deep progress tempered by doubts over their attacking sharpness.",
+    "summary": "Spain carry the heaviest favourites tag in the tournament, and after the emphatic 3-0 dismissal of Austria in the round of 32 the expectation has hardened: nothing short of a deep run towards a second world title will satisfy. The favourites framing is external as well as internal - France coach Didier Deschamps publicly declared before the tournament that if there is a favourite it is Spain, without a single doubt. Coverage of the Austria win cast the reigning European champions as easing through in style and reaffirming their status as title candidates, with Lamine Yamal himself saying Spain are the only national team expected to play really well. The Portugal round-of-16 tie is framed as the first genuinely heavyweight obstacle on that expected path.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Al Jazeera",
-        "url": "https://www.aljazeera.com/sports/2026/6/27/spain-beat-uruguay-1-0-to-clinch-world-cup-group-h-top-spot",
-        "date": "2026-06-27",
+        "outlet": "Mediotiempo",
+        "url": "https://www.mediotiempo.com/futbol/copa-mundial/espana-es-favorita-no-francia-deschamps",
+        "date": "2026-06-15",
+        "lang": "es"
+      },
+      {
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/spain-vs-austria/report/549849",
+        "date": "2026-07-02",
         "lang": "en"
       },
       {
-        "outlet": "Goal.com",
-        "url": "https://www.goal.com/en/lists/2026-world-cup-power-rankings/blt047305a4117d1161",
-        "date": "2026-06-27",
-        "lang": "en"
-      },
-      {
-        "outlet": "Democrata",
-        "url": "https://www.democrata.es/en/sports/spain-austria-date-time-and-the-remaining-path-in-the-world-cup/",
-        "date": "2026-06-28",
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49249668/spain-world-cup-mojo-back-first-knockout-win-2010-final",
+        "date": "2026-07-02",
         "lang": "en"
       }
     ]
   },
   "national_mood": {
-    "summary": "The mood is one of cautious satisfaction rather than euphoria. Spain topped Group H without conceding a goal and remain unbeaten in a long competitive run, which sustains belief, but two laboured displays - a goalless opener against Cape Verde and an unconvincing win over Uruguay decided by a goalkeeping error - have left commentators questioning the team's attacking edge. International previews contrast Spain's grinding wins with the more scintillating attacking play of France and Argentina, noting La Roja are yet to fully convince in their quest for a second World Cup. That underlying optimism is now shadowed by injury worry on the wings heading into the Austria tie.",
+    "summary": "The mood has swung from cautious satisfaction to what La Nacion called euphoria, but contained: Spain turned it on at the hour of truth, thrashing Austria 3-0 in Los Angeles to win a World Cup knockout match for the first time since lifting the 2010 trophy - a sixteen-year drought spanning three failed tournaments that had quietly haunted the fanbase. The performance answered the group-stage grumbles about a laboured attack: Austria managed no shot on target while Spain created chances in waves, extending an unbeaten run in regulation to thirty-four competitive matches and keeping yet another tournament clean sheet. Relief and swagger now coexist with a sharpened sense of jeopardy, because the next opponent is Portugal in an Iberian derby the press frames as the first real test - and a chance to settle the score from the 2025 Nations League final shoot-out defeat.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Al Jazeera",
-        "url": "https://www.aljazeera.com/sports/2026/6/27/spain-beat-uruguay-1-0-to-clinch-world-cup-group-h-top-spot",
-        "date": "2026-06-27",
+        "outlet": "La Nacion",
+        "url": "https://www.lanacion.com.ar/estados-unidos/euforia-pero-contenida-espana-se-entona-a-la-hora-de-la-verdad-nid03072026/",
+        "date": "2026-07-03",
+        "lang": "es"
+      },
+      {
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49249668/spain-world-cup-mojo-back-first-knockout-win-2010-final",
+        "date": "2026-07-02",
         "lang": "en"
       },
       {
-        "outlet": "Goal.com",
-        "url": "https://www.goal.com/en/lists/2026-world-cup-power-rankings/blt047305a4117d1161",
-        "date": "2026-06-27",
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/spain-vs-austria/report/549849",
+        "date": "2026-07-02",
         "lang": "en"
+      },
+      {
+        "outlet": "El Desmarque",
+        "url": "https://www.eldesmarque.com/futbol/mundial/20260703/cuando-juega-portugal-espana-octavos-final-mundial-2026_18_019616353.html",
+        "date": "2026-07-03",
+        "lang": "es"
       }
     ]
   },
   "manager_situation": {
-    "summary": "Luis de la Fuente is secure and respected, the architect of Spain's Euro 2024 triumph who has rebuilt an attacking identity around a Barcelona-heavy young core. After the Uruguay win he stressed his team's resilience under pressure, saying the side had been tested again but always responds and had known how to play a different kind of match, expressing himself satisfied with the players after navigating a demanding group. He has also publicly invoked parallels with the 2010 World Cup-winning generation and believes this squad is ready to contend for the title. His immediate challenge is managing depleted wide options against Rangnick's high-pressing Austria.",
+    "summary": "Luis de la Fuente emerges from the Austria rout stronger than ever, the Euro 2024-winning coach now also the man who ended Spain's sixteen-year wait for a World Cup knockout victory. His post-match tone was deliberately double-edged: he spoke of having brushed perfection yet immediately pivoted to flaws, saying the high press can be adjusted and demanding a higher conversion rate from the chances created, explicitly with Portugal in mind - a side he described as one of Spain's best rivals. He navigated a genuine winger crisis for the Austria tie (Nico Williams, Yeremy Pino and Victor Munoz all sidelined, Lamine Yamal the only fit specialist) without visible cost, and says he is very optimistic Nico Williams will be available again for the round of 16. The 2025 Nations League final loss to Portugal on penalties remains one of the very few defeats on his record, giving the Dallas tie a personal revenge subplot.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Noticias de Navarra",
-        "url": "https://www.noticiasdenavarra.com/mundial/2026/06/27/luis-fuente-sido-partido-puesto-11257351.html",
-        "date": "2026-06-27",
+        "outlet": "La Nacion",
+        "url": "https://www.lanacion.com.ar/estados-unidos/euforia-pero-contenida-espana-se-entona-a-la-hora-de-la-verdad-nid03072026/",
+        "date": "2026-07-03",
         "lang": "es"
       },
       {
-        "outlet": "Record",
-        "url": "https://www.record.com.mx/historia/supimos-jugar-otro-tipo-de-partido-ante-uruguay-luis-de-la-fuente-dt-de-espana-2026062704085896192",
-        "date": "2026-06-27",
-        "lang": "es"
-      },
-      {
-        "outlet": "FotMob",
-        "url": "https://www.fotmob.com/news/sva4lsyraixw10dmlhdldnpxd-de-la-fuente-sees-similarities-between-current-spain-team-2010-world-cup-winners",
-        "date": "2026-06",
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/spain-vs-austria/report/549849",
+        "date": "2026-07-02",
         "lang": "en"
+      },
+      {
+        "outlet": "Mediotiempo",
+        "url": "https://www.mediotiempo.com/futbol/copa-mundial/dt-espana-fecha-regreso-nico-williams",
+        "date": "2026-07-01",
+        "lang": "es"
+      },
+      {
+        "outlet": "El Desmarque",
+        "url": "https://www.eldesmarque.com/futbol/mundial/20260703/cuando-juega-portugal-espana-octavos-final-mundial-2026_18_019616353.html",
+        "date": "2026-07-03",
+        "lang": "es"
       }
     ]
   },
   "historical_context": {
-    "summary": "Spain are the reigning UEFA European champions, having beaten England in the Euro 2024 final under De la Fuente. Their sole World Cup title came in 2010, when Andres Iniesta's extra-time goal beat the Netherlands in the final, capping the tiki-taka era under Vicente del Bosque. In 2026 Spain topped Group H with seven points from two wins and a draw, keeping a clean sheet across the group against Cape Verde, Saudi Arabia and Uruguay.",
+    "summary": "Spain are reigning European champions (Euro 2024, under De la Fuente) and 2010 world champions, when Andres Iniesta's extra-time goal beat the Netherlands. The 3-0 over Austria was their first World Cup knockout win since that 2010 final - a drought spanning group-stage exit in 2014, a last-16 shoot-out loss to Russia in 2018 and a last-16 shoot-out loss to Morocco in 2022. The Portugal tie revives a classic with precise World Cup history: the sides' only previous World Cup KNOCKOUT meeting was the 2010 ROUND OF 16 in Cape Town, which Spain won 1-0 through David Villa; their other World Cup meeting was the 2018 GROUP-STAGE 3-3 in Sochi, where Cristiano Ronaldo scored a hat-trick capped by a late free kick. Beyond World Cups, Spain beat Portugal on penalties in the Euro 2012 semi-final, while Portugal won the most recent marquee meeting - the June 2025 Nations League final, on penalties after a 2-2 draw.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "FIFA",
-        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-team-profile-history",
-        "date": "2026-06",
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/story/_/id/49249668/spain-world-cup-mojo-back-first-knockout-win-2010-final",
+        "date": "2026-07-02",
         "lang": "en"
       },
       {
-        "outlet": "UEFA.com",
-        "url": "https://www.uefa.com/european-qualifiers/news/02a6-20d159556fdf-60d8385f463f-1000--spain-at-the-world-cup-2026-squad-fixtures-group-and-history/",
-        "date": "2026-06",
-        "lang": "en"
+        "outlet": "Prensa Libre",
+        "url": "https://www.prensalibre.com/deportes/futbol-internacional/portugal-y-espana-reavivan-un-clasico-con-cuentas-pendientes-en-el-mundial-2026-breaking/",
+        "date": "2026-07-02",
+        "lang": "es"
       },
       {
-        "outlet": "Al Jazeera",
-        "url": "https://www.aljazeera.com/sports/2026/6/27/spain-beat-uruguay-1-0-to-clinch-world-cup-group-h-top-spot",
-        "date": "2026-06-27",
-        "lang": "en"
+        "outlet": "El Desmarque",
+        "url": "https://www.eldesmarque.com/futbol/mundial/20260703/cuando-juega-portugal-espana-octavos-final-mundial-2026_18_019616353.html",
+        "date": "2026-07-03",
+        "lang": "es"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "Injuries to Spain's wingers are the dominant pre-match worry: Nico Williams suffered a moderate-grade right adductor muscle injury after a heavy challenge against Uruguay and Yeremy Pino picked up a moderate acromioclavicular shoulder sprain, leaving both reported as unlikely for the knockout tie and squeezing De la Fuente's wide attacking options. (Reported/uncertain - neither officially ruled out.)",
+      "storyline": "The curse is lifted: Spain's 3-0 over Austria at SoFi Stadium (Oyarzabal 36' and 89', Pedro Porro 66' header from Alex Baena's pull-back) was their first World Cup knockout win since the 2010 final - sixteen years and three tournaments of knockout failure ended in front of 70,492, with Austria failing to put a single shot on target.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Sports Illustrated (es-us)",
-          "url": "https://www.si.com/es-us/futbol/espana-toma-una-decision-con-nico-williams-y-yeremy-pino-tras-sus-lesiones",
-          "date": "2026-06-28",
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49249668/spain-world-cup-mojo-back-first-knockout-win-2010-final",
+          "date": "2026-07-02",
+          "lang": "en"
+        },
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/spain-vs-austria/report/549849",
+          "date": "2026-07-02",
+          "lang": "en"
+        },
+        {
+          "outlet": "FIFA",
+          "url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021519",
+          "date": "2026-07-02",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Mikel Oyarzabal is the tournament talisman: the Euro 2024 final match-winner scored twice against Austria and has now been involved in five of Spain's eight goals at this World Cup, stepping up while the wide positions were stripped by injury - a redemption-of-the-quiet-man arc Spanish and international coverage leans into.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49249668/spain-world-cup-mojo-back-first-knockout-win-2010-final",
+          "date": "2026-07-02",
+          "lang": "en"
+        },
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/spain-vs-austria/report/549849",
+          "date": "2026-07-02",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "The machine rolls on: Spain reached the last 16 without conceding a goal in the tournament, stretched their unbeaten run in regulation to thirty-four competitive matches, and Mexican coverage reported Unai Simon has broken Walter Zenga's 1990 record for the longest World Cup shut-out streak - all feeding the favourites narrative Deschamps voiced before a ball was kicked.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Claro Sports",
+          "url": "https://www.clarosports.com/futbol/mundial-2026/espana-vs-austria-en-vivo-el-mundial-2026-16vos-de-final-hoy-resultado-y-goles-del-partido-minuto-a-minuto/",
+          "date": "2026-07-02",
+          "lang": "es"
+        },
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/spain-vs-austria/report/549849",
+          "date": "2026-07-02",
+          "lang": "en"
+        },
+        {
+          "outlet": "Mediotiempo",
+          "url": "https://www.mediotiempo.com/futbol/copa-mundial/espana-es-favorita-no-francia-deschamps",
+          "date": "2026-06-15",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "The Iberian derby is here: Portugal vs Spain in the round of 16 at Dallas Stadium on 6 July is billed as the tie of the round - the first World Cup meeting between the neighbours since the 2018 GROUP-STAGE 3-3, and their first World Cup KNOCKOUT meeting since Spain's 1-0 in the 2010 ROUND OF 16. Spanish-language coverage frames it as a classic with scores to settle and as the first great stone in Spain's path.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Prensa Libre",
+          "url": "https://www.prensalibre.com/deportes/futbol-internacional/portugal-y-espana-reavivan-un-clasico-con-cuentas-pendientes-en-el-mundial-2026-breaking/",
+          "date": "2026-07-02",
+          "lang": "es"
+        },
+        {
+          "outlet": "El Desmarque",
+          "url": "https://www.eldesmarque.com/futbol/mundial/20260703/cuando-juega-portugal-espana-octavos-final-mundial-2026_18_019616353.html",
+          "date": "2026-07-03",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "Revenge subplot: the last time these sides met was the June 2025 Nations League final in Munich, where Portugal beat Spain on penalties after a 2-2 draw - one of the very few defeats of the De la Fuente era. Spanish previews explicitly give the Dallas tie a flavour of revancha.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "El Desmarque",
+          "url": "https://www.eldesmarque.com/futbol/mundial/20260703/cuando-juega-portugal-espana-octavos-final-mundial-2026_18_019616353.html",
+          "date": "2026-07-03",
+          "lang": "es"
+        },
+        {
+          "outlet": "Prensa Libre",
+          "url": "https://www.prensalibre.com/deportes/futbol-internacional/portugal-y-espana-reavivan-un-clasico-con-cuentas-pendientes-en-el-mundial-2026-breaking/",
+          "date": "2026-07-02",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "storyline": "Ronaldo against Spain, one last time: the 41-year-old dragged Portugal past Croatia 2-1 with a 68th-minute penalty - reported as his first World Cup knockout-stage goal, in his sixth World Cup - before Goncalo Ramos won it in the 94th minute amid late VAR drama that disallowed a Croatia equaliser. Coverage frames the Spain tie as a generational duel: Ronaldo, who hat-tricked Spain in the 2018 GROUP-STAGE 3-3, chasing the one title he lacks, against 18-year-old Lamine Yamal's Spain.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558808/world-cup-2026-portugal-2-1-croatia-cristiano-ronaldos-dreams-survive-after-late-var-drama-forces-luka-modric-farewell",
+          "date": "2026-07-03",
+          "lang": "en"
+        },
+        {
+          "outlet": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49253213/portugal-ronaldo-survive-late-scare-croatia-world-cup",
+          "date": "2026-07-03",
+          "lang": "en"
+        },
+        {
+          "outlet": "NBC Sports",
+          "url": "https://www.nbcsports.com/soccer/live/portugal-vs-croatia-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup",
+          "date": "2026-07-03",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "Perfection with an asterisk: De la Fuente's own framing after Austria - close to perfect, but the high press can be tightened and too many chances went begging - doubles as the press's checklist for Portugal, a tie in which Spanish coverage agrees the level must rise against what the coach called one of Spain's best rivals.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "La Nacion",
+          "url": "https://www.lanacion.com.ar/estados-unidos/euforia-pero-contenida-espana-se-entona-a-la-hora-de-la-verdad-nid03072026/",
+          "date": "2026-07-03",
+          "lang": "es"
+        },
+        {
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/spain-vs-austria/report/549849",
+          "date": "2026-07-02",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "storyline": "The wingers are coming back at the right time: with Nico Williams, Yeremy Pino and Victor Munoz all recovering, Lamine Yamal was Spain's only fit specialist winger against Austria - yet De la Fuente has said he is very optimistic Nico Williams returns for the round of 16, potentially restoring Spain's full wide arsenal exactly for Portugal. (Reported/unconfirmed - no official availability ruling.)",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "La Nacion",
+          "url": "https://www.lanacion.com.ar/estados-unidos/euforia-pero-contenida-espana-se-entona-a-la-hora-de-la-verdad-nid03072026/",
+          "date": "2026-07-03",
           "lang": "es"
         },
         {
           "outlet": "Mediotiempo",
-          "url": "https://www.mediotiempo.com/futbol/copa-mundial/nico-williams-sufre-nueva-lesion-espana-podria-perderse-resto-mundial-2026",
-          "date": "2026-06-28",
-          "lang": "es"
-        }
-      ]
-    },
-    {
-      "storyline": "Favourites under scrutiny: despite topping Group H without conceding, Spain are framed as not yet convincing, with laboured wins and a thin attacking output (the Uruguay game decided by a Muslera error and few shots on target) drawing contrasts to the more fluent France and Argentina ahead of the knockouts.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "url": "https://www.aljazeera.com/sports/2026/6/27/spain-beat-uruguay-1-0-to-clinch-world-cup-group-h-top-spot",
-          "date": "2026-06-27",
-          "lang": "en"
-        },
-        {
-          "outlet": "Goal.com",
-          "url": "https://www.goal.com/en/lists/2026-world-cup-power-rankings/blt047305a4117d1161",
-          "date": "2026-06-27",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "A style clash awaits: Austria under Ralf Rangnick bring elite gegenpressing, rapid transitions and the most final-third pressing actions of any European side in qualifying, posing a threat to Spain's possession game and threatening to drag the match into a physical, second-ball contest - though previews note Austria can wear down physically and struggle against sides that cede them the ball.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "El Debate",
-          "url": "https://www.eldebate.com/deportes/mundial-futbol-2026/20260628/presion-intensa-transiciones-rapidas-gran-desgaste-fisico-asi-austria-rival-espana-dieciseisavos_433531_amp.html",
-          "date": "2026-06-28",
-          "lang": "es"
-        },
-        {
-          "outlet": "Democrata",
-          "url": "https://www.democrata.es/en/sports/spain-austria-date-time-and-the-remaining-path-in-the-world-cup/",
-          "date": "2026-06-28",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "By winning Group H, Spain avoided a first-knockout collision with Argentina; previews map a potentially demanding road ahead, with a possible Portugal-vs-Croatia winner waiting in the next round, framing Austria as a winnable but trap-laden first knockout test.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "url": "https://www.aljazeera.com/sports/2026/6/27/spain-beat-uruguay-1-0-to-clinch-world-cup-group-h-top-spot",
-          "date": "2026-06-27",
-          "lang": "en"
-        },
-        {
-          "outlet": "Democrata",
-          "url": "https://www.democrata.es/en/sports/spain-austria-date-time-and-the-remaining-path-in-the-world-cup/",
-          "date": "2026-06-28",
-          "lang": "en"
-        }
-      ]
-    },
-    {
-      "storyline": "Spanish previews firm up the fixture's logistics and history the file lacked: Spain face Austria on 2 July at SoFi Stadium in Los Angeles (21:00 CET / noon local, on La1 and DAZN), and outlets recall the only previous World Cup meeting was at Argentina 1978, when Austria beat Spain 2-1 (Schachner and Hans Krankl scoring, Dani replying) on 3 June 1978 - giving La Roja a small score to settle nearly half a century on.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "El Debate",
-          "url": "https://www.eldebate.com/deportes/mundial-futbol-2026/20260628/espana-vs-austria-horario-donde-ver-dieciseisavos-final-mundial-2026_433464.html",
-          "date": "2026-06-28",
-          "lang": "es"
-        },
-        {
-          "outlet": "Los Mundiales de Futbol",
-          "url": "https://www.losmundialesdefutbol.com/partidos/1978_austria_espana.php",
-          "date": "2026-06-28",
-          "lang": "es"
-        }
-      ]
-    },
-    {
-      "storyline": "Spanish reporting clarifies De la Fuente has no rescue route for his wing injuries: under FIFA's rules the squad-substitution window for injuries (up to 24 hours before a team's first match, goalkeepers excepted) has long closed, so Spain cannot call up replacements for Nico Williams or Yeremy Pino. With Lamine Yamal framed as effectively the only natural winger left, the press expects De la Fuente to improvise the flanks against Austria with non-wingers - Alex Baena, Dani Olmo, Ferran Torres and Gavi - while leaning on Pedri to unlock a packed Austrian block.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Sports Illustrated (es-us)",
-          "url": "https://www.si.com/es-us/futbol/espana-puede-convocar-reemplazos-por-las-posibles-bajas-de-nico-williams-y-yeremy-pino",
-          "date": "2026-06-28",
-          "lang": "es"
-        }
-      ]
-    },
-    {
-      "storyline": "The Spanish press sizes up Austria with a mix of respect and suspicion. El Espanol casts a sceptical eye on how Rangnick's side reached the knockouts, branding the agonising 3-3 with Algeria a 'pacto de no agresion' it nicknamed the 'pacto de Kansas City' (echoing the infamous 1982 Gijon pact), and flags that captain David Alaba, hampered by Real Madrid injuries, has not finished a single group game. The threat is framed as Rangnick's pressing plus veterans Arnautovic and Sabitzer, with Spain told they must own the ball and stay patient to break a deliberately defensive Austria.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "El Espanol",
-          "url": "https://www.elespanol.com/deportes/futbol/mundial/20260628/austria-rival-espana-dieciseisavos-final-experta-biscottos-capitania-david-alaba-declive/1003744302728_0.html",
-          "date": "2026-06-28",
-          "lang": "es"
-        }
-      ]
-    },
-    {
-      "storyline": "Beyond the immediate tie, Spanish previews already map a glamorous projected route: a possible first-ever World Cup 'duelo iberico' against Portugal as soon as the next round, then a potential semi-final rematch with France - the side Spain beat 2-1 (Dani Olmo, Lamine Yamal) at Euro 2024 - framing Austria as the gateway to a marquee run.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "El Gol Digital",
-          "url": "https://www.elgoldigital.com/futbol/seleccion-espana/espana-camino-final-mundial-2026-austria-portugal-eeuu-francia/",
-          "date": "2026-06-28",
-          "lang": "es"
-        }
-      ]
-    },
-    {
-      "storyline": "Local coverage celebrates Lamine Yamal's group-stage milestone as a confidence marker heading into the knockouts: his early finish against Saudi Arabia (set up by Mikel Oyarzabal) made him one of the youngest scorers in World Cup history, passing the age at which Lionel Messi netted his first World Cup goal and trailing only a short list headed by Pele - a personal narrative Spanish outlets lean on as a reason for optimism around their teenage talisman.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Sports Illustrated (es-us)",
-          "url": "https://www.si.com/es-us/futbol/lamine-yamal-hace-historia-en-el-mundial-2026-donde-queda-entre-los-goleadores-mas-jovenes-de-todos-los-tiempos",
-          "date": "2026-06-23",
-          "lang": "es"
-        },
-        {
-          "outlet": "Ultima Hora",
-          "url": "https://www.ultimahora.es/deportes/mundial-2026/2026/06/23/2656619/lamine-yamal-antes-messi.html",
-          "date": "2026-06-23",
+          "url": "https://www.mediotiempo.com/futbol/copa-mundial/dt-espana-fecha-regreso-nico-williams",
+          "date": "2026-07-01",
           "lang": "es"
         }
       ]
@@ -257,58 +292,106 @@
   ],
   "attributed_quotes": [
     {
-      "quote": "It has been a match that has tested us once again, and the team always responds.",
-      "quote_original": "Ha sido un partido que nos ha puesto a prueba otra vez mas... y el equipo siempre responde.",
-      "lang": "es",
+      "quote": "We were almost perfect in every aspect. But there are still a few little things to improve.",
+      "quote_original": null,
+      "lang": "en",
       "speaker_name": "Luis de la Fuente",
       "speaker_role": "Spain head coach",
-      "outlet": "Noticias de Navarra",
-      "url": "https://www.noticiasdenavarra.com/mundial/2026/06/27/luis-fuente-sido-partido-puesto-11257351.html",
-      "date": "2026-06-27",
-      "context": "Reacting after Spain's 1-0 win over Uruguay sealed top spot in Group H, praising his team's resilience. Cross-referenced in Record.",
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/spain-vs-austria/report/549849",
+      "date": "2026-07-02",
+      "context": "Post-match reaction to the 3-0 round-of-32 win over Austria in Los Angeles; English wording as carried by Sky Sports.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
     },
     {
-      "quote": "Today is one of the worst days of my life. I'm injured again after a very complicated year.",
-      "quote_original": "Hoy es uno de los peores dias de mi vida. Vuelvo a lesionarme despues de un ano muy complicado.",
+      "quote": "In attack we miss many chances, we need a higher efficiency percentage.",
+      "quote_original": "En ataque fallamos muchas ocasiones, hay que tener mas alto el porcentaje de eficiencia.",
       "lang": "es",
-      "speaker_name": "Nico Williams",
-      "speaker_role": "Spain winger",
+      "speaker_name": "Luis de la Fuente",
+      "speaker_role": "Spain head coach",
+      "outlet": "La Nacion",
+      "url": "https://www.lanacion.com.ar/estados-unidos/euforia-pero-contenida-espana-se-entona-a-la-hora-de-la-verdad-nid03072026/",
+      "date": "2026-07-03",
+      "context": "Detailing what Spain must improve for the round-of-16 Iberian derby against Portugal in Dallas, after the Austria win.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "The World Cup starts now. If you lose, you go home.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Lamine Yamal",
+      "speaker_role": "Spain forward",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49249668/spain-world-cup-mojo-back-first-knockout-win-2010-final",
+      "date": "2026-07-02",
+      "context": "Post-match after the 3-0 over Austria, framing the knockout phase; in the same piece he said Spain will be 'almost unstoppable' once they hit their level.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "I'm happy to help the team and get through to the next round.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Mikel Oyarzabal",
+      "speaker_role": "Spain forward",
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/spain-vs-austria/report/549849",
+      "date": "2026-07-02",
+      "context": "After scoring twice in the 3-0 round-of-32 win over Austria; he also called Austria 'a physical side and difficult to play against'.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only"
+    },
+    {
+      "quote": "The absolute favourite team is Spain, I do not have a single doubt.",
+      "quote_original": "El equipo favorito absoluto es Espana, no tengo ni una sola duda.",
+      "lang": "es",
+      "speaker_name": "Didier Deschamps",
+      "speaker_role": "France head coach",
       "outlet": "Mediotiempo",
-      "url": "https://www.mediotiempo.com/futbol/copa-mundial/nico-williams-sufre-nueva-lesion-espana-podria-perderse-resto-mundial-2026",
-      "date": "2026-06-28",
-      "context": "Instagram message after suffering a moderate-grade adductor injury against Uruguay, putting his knockout availability in doubt.",
+      "url": "https://www.mediotiempo.com/futbol/copa-mundial/espana-es-favorita-no-francia-deschamps",
+      "date": "2026-06-15",
+      "context": "Pre-tournament press conference before France's opener against Senegal; the external favourites tag Spain carry into the knockouts.",
       "source_tier": "discovery",
       "verification": "attributed_context_only"
-    },
-    {
-      "quote": "It could be a collarbone injury. He is suffering a lot. He'll have tests tomorrow.",
-      "quote_original": "Puede ser una lesion de clavicula. Esta sufriendo mucho. Manana pasara unas pruebas.",
-      "lang": "es",
-      "speaker_name": "Luis de la Fuente",
-      "speaker_role": "Spain head coach",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "OKDiario",
-      "url": "https://okdiario.com/mundial/fuente-yeremy-pino-seguramente-tenga-clavicula-rota-18870864",
-      "date": "2026-06-27",
-      "context": "Post-Uruguay press conference on Yeremy Pino's shoulder before medical tests; imaging later ruled out a fracture (see existing file). Re-verified verbatim at OKDiario; DAZN carries a near-identical variant ('puede ser una lesion de hombro, puede ser una lesion de clavicula... manana le hacen unas pruebas'), so wording is treated as source-specific to OKDiario."
     }
   ],
   "local_availability_reporting": [
     {
       "player": "Nico Williams",
-      "status": "reported doubtful / unlikely for R32",
+      "status": "reported recovering / expected available for R16",
       "confirmed": false,
-      "detail": "Moderate-grade right adductor muscle injury after a heavy challenge from Nicolas de la Cruz against Uruguay; the Spanish federation said its evolution will determine his availability. Reported as practically ruled out / unlikely for the round of 16 but kept in the squad to await recovery; not officially ruled out.",
+      "detail": "Missed the Austria tie with the moderate-grade right adductor problem picked up against Uruguay, but De la Fuente said the player had a tremendous scare over what he feared was a serious injury and it was not, and that he is very optimistic Williams will be available for the round of 16 against Portugal. No official RFEF fitness ruling yet.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Mediotiempo",
-          "url": "https://www.mediotiempo.com/futbol/copa-mundial/nico-williams-sufre-nueva-lesion-espana-podria-perderse-resto-mundial-2026",
-          "date": "2026-06-28",
+          "url": "https://www.mediotiempo.com/futbol/copa-mundial/dt-espana-fecha-regreso-nico-williams",
+          "date": "2026-07-01",
+          "lang": "es"
+        },
+        {
+          "outlet": "La Nacion",
+          "url": "https://www.lanacion.com.ar/estados-unidos/euforia-pero-contenida-espana-se-entona-a-la-hora-de-la-verdad-nid03072026/",
+          "date": "2026-07-03",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "player": "Yeremy Pino",
+      "status": "reported recovering, availability for R16 unclear",
+      "confirmed": false,
+      "detail": "Still working back from the moderate acromioclavicular sprain in his left shoulder suffered against Uruguay (a fracture was ruled out by imaging); La Nacion listed him among three wingers in recovery around the Austria tie. No updated official word on whether he can face Portugal.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "La Nacion",
+          "url": "https://www.lanacion.com.ar/estados-unidos/euforia-pero-contenida-espana-se-entona-a-la-hora-de-la-verdad-nid03072026/",
+          "date": "2026-07-03",
           "lang": "es"
         },
         {
@@ -320,164 +403,123 @@
       ]
     },
     {
-      "player": "Yeremy Pino",
-      "status": "reported doubtful / unlikely for R32",
+      "player": "Victor Munoz",
+      "status": "reported recovering",
       "confirmed": false,
-      "detail": "Moderate-grade acromioclavicular sprain in the left shoulder; initial fears of a collarbone fracture were ruled out by imaging. Reported as unlikely for the next round but retained in the squad; not officially ruled out.",
+      "detail": "Named by La Nacion alongside Nico Williams and Yeremy Pino as the third winger in recovery around the Austria match, leaving Lamine Yamal as the only fit specialist wide player for that tie. No detail on the nature of his issue or a timeline was given in the sourced reporting.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Sports Illustrated (es-us)",
-          "url": "https://www.si.com/es-us/futbol/espana-toma-una-decision-con-nico-williams-y-yeremy-pino-tras-sus-lesiones",
-          "date": "2026-06-28",
+          "outlet": "La Nacion",
+          "url": "https://www.lanacion.com.ar/estados-unidos/euforia-pero-contenida-espana-se-entona-a-la-hora-de-la-verdad-nid03072026/",
+          "date": "2026-07-03",
           "lang": "es"
         }
       ]
     }
   ],
   "gaps": [
-    "No official RFEF/FIFA confirmation of the starting XI or final fitness verdicts for Nico Williams or Yeremy Pino for the Austria match - availability is reported/uncertain only.",
-    "No pre-match (post-group) De la Fuente press conference specifically previewing Austria was sourced; the manager quotes used are from the post-Uruguay reaction, not an Austria-specific presser.",
-    "No sourced verbatim quotes from senior players (e.g. Lamine Yamal, Pedri, Oyarzabal) directly previewing the Austria tie.",
-    "Al Jazeera (2026-06-27) listed Spain's next opponent as 'Austria or Algeria' before the matchup was finalised; the Austria opponent is taken from authoritative DB facts, not yet from an official-tier confirmation in the cited press sources.",
-    "All-time Spain-Austria head-to-head detail was not independently confirmed against an official record and has been omitted rather than asserted.",
-    "No fact-grade official-tier source (FIFA/UEFA/RFEF) was obtained for national_expectations or national_mood - these rest on press/preview reporting only.",
-    "Confirmed Spain starting lineup, suspensions, and any further fitness updates after 2026-06-28 not captured."
+    "Marca, AS, El Pais, Mundo Deportivo and Sport block automated retrieval, so the flagship Spanish sports dailies' own derby framing could not be cited directly; Spanish-language framing here rests on La Nacion, El Desmarque, Prensa Libre and Claro Sports instead.",
+    "No official RFEF/FIFA availability ruling for Nico Williams, Yeremy Pino or Victor Munoz for the Portugal tie - all availability is reported/unconfirmed, largely via De la Fuente's optimism.",
+    "No dedicated pre-Portugal De la Fuente press conference sourced yet; his Portugal remarks come from the post-Austria media round.",
+    "Unai Simon's reported record for the longest World Cup shut-out streak (surpassing Walter Zenga's 1990 mark) rests on a single non-allowlisted outlet (Claro Sports) and was not confirmed by an official FIFA source.",
+    "Cristiano Ronaldo's penalty being his first World Cup knockout-stage goal is taken from US match coverage (NBC Sports/ESPN reporting), not an official FIFA statistical source.",
+    "The nature and timeline of Victor Munoz's fitness issue is unsourced beyond a passing mention.",
+    "No sourced verbatim quotes from Spain players specifically previewing Portugal (Yamal's and Oyarzabal's quotes are general knockout reactions).",
+    "Confirmed Spain starting lineup and any suspension status for the Portugal match not captured as of 2026-07-03."
   ],
   "source_data_snapshot": [
     {
-      "outlet": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/6/27/spain-beat-uruguay-1-0-to-clinch-world-cup-group-h-top-spot",
-      "retrieved_at": "2026-06-28",
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49249668/spain-world-cup-mojo-back-first-knockout-win-2010-final",
+      "retrieved_at": "2026-07-03",
       "lang": "en",
-      "used_for": "Group H win, clean-sheet/unbeaten run, laboured form narrative, Muslera error, knockout outlook"
+      "used_for": "First knockout win since 2010 framing (2014/2018/2022 failures), Yamal quotes, De la Fuente 'almost perfection', Oyarzabal involved in five of eight Spain goals, Rangnick reaction"
     },
     {
-      "outlet": "Noticias de Navarra",
-      "url": "https://www.noticiasdenavarra.com/mundial/2026/06/27/luis-fuente-sido-partido-puesto-11257351.html",
-      "retrieved_at": "2026-06-28",
-      "lang": "es",
-      "used_for": "De la Fuente verbatim post-Uruguay quote (re-verified)"
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/spain-vs-austria/report/549849",
+      "retrieved_at": "2026-07-03",
+      "lang": "en",
+      "used_for": "Scorers/minutes (Oyarzabal 36' 89', Porro 66'), SoFi Stadium attendance 70,492, 34-game unbeaten-in-regulation run, tournament clean sheet, De la Fuente and Oyarzabal verbatim quotes (re-verified)"
     },
     {
-      "outlet": "Record",
-      "url": "https://www.record.com.mx/historia/supimos-jugar-otro-tipo-de-partido-ante-uruguay-luis-de-la-fuente-dt-de-espana-2026062704085896192",
-      "retrieved_at": "2026-06-28",
+      "outlet": "La Nacion",
+      "url": "https://www.lanacion.com.ar/estados-unidos/euforia-pero-contenida-espana-se-entona-a-la-hora-de-la-verdad-nid03072026/",
+      "retrieved_at": "2026-07-03",
       "lang": "es",
-      "used_for": "De la Fuente quote cross-reference (re-verified)"
-    },
-    {
-      "outlet": "HolaNews",
-      "url": "https://holanews.com/de-la-fuente-el-equipo-siempre-responde-hemos-sabido-jugar-otro-tipo-de-partido/",
-      "retrieved_at": "2026-06-28",
-      "lang": "es",
-      "used_for": "De la Fuente quote cross-reference"
+      "used_for": "'Euforia pero contenida' mood framing, De la Fuente Spanish verbatim on efficiency and the high press, Portugal as 'uno de sus mejores enemigos', three wingers (Pino/Williams/Munoz) in recovery with Yamal only fit specialist (re-verified)"
     },
     {
       "outlet": "Mediotiempo",
-      "url": "https://www.mediotiempo.com/futbol/copa-mundial/nico-williams-sufre-nueva-lesion-espana-podria-perderse-resto-mundial-2026",
-      "retrieved_at": "2026-06-28",
+      "url": "https://www.mediotiempo.com/futbol/copa-mundial/espana-es-favorita-no-francia-deschamps",
+      "retrieved_at": "2026-07-03",
       "lang": "es",
-      "used_for": "Nico Williams injury detail, RFEF statement, Williams Instagram quote (re-verified)"
+      "used_for": "Deschamps verbatim favourite quote and press-conference context (re-verified)"
+    },
+    {
+      "outlet": "Mediotiempo",
+      "url": "https://www.mediotiempo.com/futbol/copa-mundial/dt-espana-fecha-regreso-nico-williams",
+      "retrieved_at": "2026-07-03",
+      "lang": "es",
+      "used_for": "De la Fuente on Nico Williams' scare and 'muy optimista' expected R16 return (re-verified)"
+    },
+    {
+      "outlet": "FIFA",
+      "url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021519",
+      "retrieved_at": "2026-07-03",
+      "lang": "en",
+      "used_for": "Official match centre confirmation of the Spain 3-0 Austria round-of-32 result"
+    },
+    {
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/11095/13558808/world-cup-2026-portugal-2-1-croatia-cristiano-ronaldos-dreams-survive-after-late-var-drama-forces-luka-modric-farewell",
+      "retrieved_at": "2026-07-03",
+      "lang": "en",
+      "used_for": "Portugal 2-1 Croatia, Ronaldo's-dreams-survive framing, late VAR drama, Modric farewell"
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/story/_/id/49253213/portugal-ronaldo-survive-late-scare-croatia-world-cup",
+      "retrieved_at": "2026-07-03",
+      "lang": "en",
+      "used_for": "Portugal survive late scare; Ronaldo penalty 68', Ramos 94th-minute winner, disallowed Croatia equaliser"
+    },
+    {
+      "outlet": "NBC Sports",
+      "url": "https://www.nbcsports.com/soccer/live/portugal-vs-croatia-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup",
+      "retrieved_at": "2026-07-03",
+      "lang": "en",
+      "used_for": "Ronaldo's penalty reported as his first World Cup knockout-stage goal (sixth World Cup); Perisic opener detail. NOT on outlet allowlist - reviewer note: major US national broadcaster's live match coverage, used only for this widely-reported stat, flagged in gaps[]"
+    },
+    {
+      "outlet": "Prensa Libre",
+      "url": "https://www.prensalibre.com/deportes/futbol-internacional/portugal-y-espana-reavivan-un-clasico-con-cuentas-pendientes-en-el-mundial-2026-breaking/",
+      "retrieved_at": "2026-07-03",
+      "lang": "es",
+      "used_for": "Stage-precise head-to-head: 2010 ROUND OF 16 Spain 1-0 (David Villa, Cape Town), 2018 GROUP-STAGE 3-3 in Sochi (Ronaldo hat-trick incl. late free kick), Euro 2012 semi-final pens, 'cuentas pendientes' framing, Dallas venue/date. NOT on outlet allowlist - reviewer note: Guatemala's newspaper of record, staff-bylined piece with EFE imagery"
+    },
+    {
+      "outlet": "El Desmarque",
+      "url": "https://www.eldesmarque.com/futbol/mundial/20260703/cuando-juega-portugal-espana-octavos-final-mundial-2026_18_019616353.html",
+      "retrieved_at": "2026-07-03",
+      "lang": "es",
+      "used_for": "'Sabor a revancha' derby framing, 8 June 2025 Nations League final lost on penalties as one of De la Fuente's few defeats, 6 July 21:00 (Spanish time) Dallas scheduling. NOT on outlet allowlist - reviewer note: established Spanish sports site (Vocento group)"
+    },
+    {
+      "outlet": "Claro Sports",
+      "url": "https://www.clarosports.com/futbol/mundial-2026/espana-vs-austria-en-vivo-el-mundial-2026-16vos-de-final-hoy-resultado-y-goles-del-partido-minuto-a-minuto/",
+      "retrieved_at": "2026-07-03",
+      "lang": "es",
+      "used_for": "34-match unbeaten-in-regulation streak (corroborates Sky), no goals conceded in tournament, Unai Simon breaking Walter Zenga's 1990 World Cup shut-out record. NOT on outlet allowlist - reviewer note: Claro/America Movil sports desk; the Simon record is single-sourced and flagged in gaps[]"
     },
     {
       "outlet": "Sports Illustrated (es-us)",
       "url": "https://www.si.com/es-us/futbol/espana-toma-una-decision-con-nico-williams-y-yeremy-pino-tras-sus-lesiones",
       "retrieved_at": "2026-06-28",
       "lang": "es",
-      "used_for": "Williams + Pino injuries, squad decision (re-verified)"
-    },
-    {
-      "outlet": "El Debate",
-      "url": "https://www.eldebate.com/deportes/mundial-futbol-2026/20260628/presion-intensa-transiciones-rapidas-gran-desgaste-fisico-asi-austria-rival-espana-dieciseisavos_433531_amp.html",
-      "retrieved_at": "2026-06-28",
-      "lang": "es",
-      "used_for": "Austria style/threat preview, Spain as favourites framing (re-verified)"
-    },
-    {
-      "outlet": "Democrata",
-      "url": "https://www.democrata.es/en/sports/spain-austria-date-time-and-the-remaining-path-in-the-world-cup/",
-      "retrieved_at": "2026-06-28",
-      "lang": "en",
-      "used_for": "Spain favourites, bracket path (Portugal-Croatia winner), avoided Argentina, physical-match warning (re-verified)"
-    },
-    {
-      "outlet": "Goal.com",
-      "url": "https://www.goal.com/en/lists/2026-world-cup-power-rankings/blt047305a4117d1161",
-      "retrieved_at": "2026-06-28",
-      "lang": "en",
-      "used_for": "Power ranking (Spain behind Argentina/France), attacking-form doubts (re-verified)"
-    },
-    {
-      "outlet": "FIFA",
-      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-team-profile-history",
-      "retrieved_at": "2026-06-28",
-      "lang": "en",
-      "used_for": "Spain World Cup history (2010 title)"
-    },
-    {
-      "outlet": "UEFA.com",
-      "url": "https://www.uefa.com/european-qualifiers/news/02a6-20d159556fdf-60d8385f463f-1000--spain-at-the-world-cup-2026-squad-fixtures-group-and-history/",
-      "retrieved_at": "2026-06-28",
-      "lang": "en",
-      "used_for": "Euro 2024 champions, favourites context, history"
-    },
-    {
-      "outlet": "FotMob",
-      "url": "https://www.fotmob.com/news/sva4lsyraixw10dmlhdldnpxd-de-la-fuente-sees-similarities-between-current-spain-team-2010-world-cup-winners",
-      "retrieved_at": "2026-06-28",
-      "lang": "en",
-      "used_for": "De la Fuente 2010 parallel framing (re-verified)"
-    },
-    {
-      "outlet": "El Espanol",
-      "url": "https://www.elespanol.com/deportes/futbol/mundial/20260628/austria-rival-espana-dieciseisavos-final-experta-biscottos-capitania-david-alaba-declive/1003744302728_0.html",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Austria opponent profile: alleged Algeria 'biscotto'/Kansas City pact, Alaba decline, Rangnick/Arnautovic/Sabitzer threat, Spain told to keep possession"
-    },
-    {
-      "outlet": "OKDiario",
-      "url": "https://okdiario.com/mundial/fuente-yeremy-pino-seguramente-tenga-clavicula-rota-18870864",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "De la Fuente verbatim quote on Pino (collarbone/tests). NOTE: the 'heroicidad' headline phrasing was NOT used as a quote - it is a headline, not a verbatim utterance."
-    },
-    {
-      "outlet": "Sports Illustrated (es-us)",
-      "url": "https://www.si.com/es-us/futbol/espana-puede-convocar-reemplazos-por-las-posibles-bajas-de-nico-williams-y-yeremy-pino",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "FIFA no-replacement rule (Art 24.2), wing-cover options (Yamal only natural winger; Baena/Olmo/Ferran/Gavi). De la Fuente 'sobrecarga' line is paraphrased here, not used as a verbatim quote."
-    },
-    {
-      "outlet": "Sports Illustrated (es-us)",
-      "url": "https://www.si.com/es-us/futbol/lamine-yamal-hace-historia-en-el-mundial-2026-donde-queda-entre-los-goleadores-mas-jovenes-de-todos-los-tiempos",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Lamine Yamal youngest-scorer record vs Saudi Arabia, Oyarzabal assist, surpassing Messi's first-WC-goal age"
-    },
-    {
-      "outlet": "El Gol Digital",
-      "url": "https://www.elgoldigital.com/futbol/seleccion-espana/espana-camino-final-mundial-2026-austria-portugal-eeuu-francia/",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Projected path (Austria, possible Portugal next-round 'duelo iberico', possible France SF), Euro 2024 France win reference"
-    },
-    {
-      "outlet": "El Debate",
-      "url": "https://www.eldebate.com/deportes/mundial-futbol-2026/20260628/espana-vs-austria-horario-donde-ver-dieciseisavos-final-mundial-2026_433464.html",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Fixture date/time (2 July, 21:00 CET / noon LA), SoFi Stadium, broadcast (La1/DAZN)"
-    },
-    {
-      "outlet": "Los Mundiales de Futbol",
-      "url": "https://www.losmundialesdefutbol.com/partidos/1978_austria_espana.php",
-      "lang": "es",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Spain-Austria 1978 head-to-head (Austria 2-1; Schachner 9', Krankl 76', Dani 21'; 3 Jun 1978) - fills file gap. Venue/city not on page, so not asserted."
+      "used_for": "Carried over from the R32 file: Pino acromioclavicular sprain detail, fracture ruled out by imaging. NOT on outlet allowlist - reviewer note retained from prior round"
     }
   ]
 }

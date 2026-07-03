@@ -1,69 +1,78 @@
 {
   "team_code": "POR",
-  "round": "R32",
-  "next_opponent_code": "CRO",
+  "round": "R16",
+  "next_opponent_code": "ESP",
   "review_status": "reviewed",
   "designed_for": "ai-copredictor-system-prompt-v0.8",
-  "last_updated": "2026-06-28",
+  "last_updated": "2026-07-03",
   "confidence": "high",
   "national_expectations": {
-    "summary": "Portugal entered the World Cup widely framed as one of the title favorites, but a flat group stage has lowered the temperature around that billing. Roberto Martinez's side advanced to the Round of 32 unbeaten yet finished only runners-up in Group K, having needed to win the finale against Colombia to top the group and failing to do so. Press coverage frames a deep, talented squad that has not yet blended into a coherent, championship-level team, with the second-place finish handing Portugal a tougher knockout path (Croatia, then a likely meeting with Spain). Expectations remain high in absolute terms given the squad's quality, but previews now openly question whether a side struggling to score against non-contenders can realistically go all the way.",
+    "summary": "Portugal arrived at the knockouts as a pre-tournament favourite whose flat group stage (runners-up in Group K after a goalless draw with Colombia) had cooled the billing, and the dramatic 2-1 Round-of-32 win over Croatia in Toronto has partly restored belief without settling the argument. The reward is the tournament's marquee Round-of-16 tie: an Iberian derby against Spain in Dallas on Monday, with syndicated previews casting Spain as the stronger side, unbeaten and yet to concede at this World Cup, and Portugal as the survivors of a far tighter bracket. Domestic and international framing agrees the route to a first Portuguese world title now runs directly through the neighbours, softened only by the reminder that Portugal beat this same Spain side on penalties in the 2025 Nations League final. Expectations are best described as revived but braced: pride in the character shown against Croatia, paired with open acknowledgement that Spain represent a clear step up in class.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Al Jazeera",
-        "url": "https://www.aljazeera.com/sports/2026/6/28/colombia-wins-world-cup-2026-group-after-breathless-0-0-draw-with-portugal",
-        "date": "2026-06-28"
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/11095/13558808/world-cup-2026-portugal-2-1-croatia-cristiano-ronaldos-dreams-survive-after-late-var-drama-forces-luka-modric-farewell",
+        "date": "2026-07-03"
       },
       {
-        "outlet": "Yahoo Sports",
-        "url": "https://sports.yahoo.com/soccer/article/world-cup-takeaways-for-round-of-32-portugals-draw-with-colombia-likely-denied-us-the-chance-to-see-messi-vs-ronaldo-040030299.html",
-        "date": "2026-06-28"
+        "outlet": "Yahoo Sports (Nexstar)",
+        "url": "https://sports.yahoo.com/articles/world-cup-2026-portugal-spain-130000157.html",
+        "date": "2026-07-03"
       },
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49188761/roberto-martinez-portugal-not-thinking-round-32-knockout-world-cup-colombia",
-        "date": "2026-06-26"
+        "outlet": "A Bola",
+        "url": "https://www.abola.pt/noticias/mundial-vem-ai-um-portugal-croacia-e-talvez-derbi-iberico-nos-oitavos-2026062800405819231",
+        "lang": "pt",
+        "date": "2026-06-28"
       }
     ]
   },
   "national_mood": {
-    "summary": "The mood around the team has cooled after an uneven group campaign that opened with a draw against DR Congo, surged with a five-goal rout of Uzbekistan, and then sputtered to a goalless draw with Colombia. The Colombia match crystallized the unease: previews described Portugal as looking slow and stagnant despite an abundance of midfield talent, and Cristiano Ronaldo was booed every time he touched the ball, starved of service and limited to a single tame shot on target. Coverage repeatedly returns to a sense of unfulfilled potential, casting the knockout opener against Croatia as a test of whether the team can finally cohere.",
+    "summary": "The mood has swung from the scepticism of the group stage to relief, pride and renewed emotion after the Croatia win, a match Portugal's own prime minister, quoted in Record's reaction roundup, called perhaps the best game of the World Cup. The night carried heavy feeling: Cristiano Ronaldo, at 41, scored a 68th-minute penalty that Sky Sports noted was his first World Cup knockout-stage goal, Goncalo Ramos headed the winner in the fourth minute of stoppage time, and Croatia had an equaliser ruled out for a marginal offside after a VAR review deep into more than ten minutes of added time. Players spoke of suffering and of losing emotional control in a chaotic finish, and the squad publicly dedicated the performance to the late Diogo Jota, with Ronaldo saying his former teammate was lighting the way from above and Roberto Martinez calling Jota the team's light at this World Cup. Underneath the euphoria sits a clear-eyed respect for Spain: Bernardo Silva immediately framed the derby as just as difficult as what the team had survived.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "Al Jazeera",
-        "url": "https://www.aljazeera.com/sports/2026/6/28/colombia-wins-world-cup-2026-group-after-breathless-0-0-draw-with-portugal",
-        "date": "2026-06-28"
+        "outlet": "Record",
+        "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
+        "lang": "pt",
+        "date": "2026-07-03"
       },
       {
-        "outlet": "Yahoo Sports",
-        "url": "https://sports.yahoo.com/soccer/article/world-cup-takeaways-for-round-of-32-portugals-draw-with-colombia-likely-denied-us-the-chance-to-see-messi-vs-ronaldo-040030299.html",
-        "date": "2026-06-28"
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/11095/13558808/world-cup-2026-portugal-2-1-croatia-cristiano-ronaldos-dreams-survive-after-late-var-drama-forces-luka-modric-farewell",
+        "date": "2026-07-03"
       },
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/espn/story/_/id/49160160/2026-fifa-world-cup-recap-portugal-uzbekistan-ghana-england-croatia-panama-colombia-congo-dr",
-        "date": "2026-06-25"
+        "outlet": "Olympics.com",
+        "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-portugal-vs-croatia-round-32-score-lineups-live-updates",
+        "date": "2026-07-02"
       }
     ]
   },
   "manager_situation": {
-    "summary": "Roberto Martinez remains in charge and publicly composed, declining before the Colombia match to look past the immediate opponent toward any knockout draw and insisting the team had found a good balance. He framed the group finale as a chance to evaluate Portugal's level and to build on the convincing Uzbekistan win. His messaging leans on tournament logic: that there is no single right path or position and that going far means being ready to beat anyone. No reporting reviewed indicates his job is under threat; the scrutiny is directed at the team's attacking output and cohesion rather than at his position.",
+    "summary": "Roberto Martinez emerged from the Croatia tie vindicated and emotional rather than under pressure. In his post-match press conference, carried live by Record, he said he was very satisfied because the team showed great heart in the second half, defended his substitutions as using the different player profiles available, called the disallowed Croatia goal a clear decision, and joked that losing all his hair had at least bought him rationality and calm. His gamble on a second striker was rewarded when substitute Goncalo Ramos scored the stoppage-time winner. Looking ahead, he framed the Spain tie as a fantastic occasion, a European game inside the World Cup, and per press-conference coverage acknowledged that Spain, as past world champions, carry a psychological edge while insisting Portugal have improved markedly. No reporting reviewed questions his position; the narrative around him has shifted from doubts about cohesion to credit for the team's character.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
       {
-        "outlet": "ESPN",
-        "url": "https://www.espn.com/soccer/story/_/id/49188761/roberto-martinez-portugal-not-thinking-round-32-knockout-world-cup-colombia",
-        "date": "2026-06-26"
+        "outlet": "Record",
+        "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260703-030149-siga-a-conferencia-de-roberto-martinez-em-direto",
+        "lang": "pt",
+        "date": "2026-07-03"
+      },
+      {
+        "outlet": "Record",
+        "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
+        "lang": "pt",
+        "date": "2026-07-03"
       }
     ]
   },
   "historical_context": {
-    "summary": "Portugal have never won the World Cup; their best finish remains third place at England 1966, with a fourth-place run in 2006 the only other semifinal appearance. The country's lone major-tournament breakthroughs came at Euro 2016 and in the UEFA Nations League, leaving the World Cup as the one prize that has eluded both the nation and Cristiano Ronaldo. That long-running pursuit frames the 2026 campaign as a likely final World Cup chapter for Ronaldo, who at this tournament became the first player to score at six different World Cups and surpassed Eusebio as Portugal's all-time World Cup top scorer.",
+    "summary": "Portugal have never won the World Cup; their best finish remains third place at England 1966, with the 2006 fourth-place run their only other semifinal. That pursuit frames what is very likely Cristiano Ronaldo's final World Cup: at this tournament he became the first player to score at six different World Cups, passed Eusebio as Portugal's all-time World Cup scorer, and against Croatia added, per Sky Sports, his first World Cup knockout-stage goal. The Spain tie sits on deep rivalry history. The two neighbours have met only twice before at a World Cup: in the 2018 GROUP STAGE they drew 3-3 in Sochi, a classic in which Ronaldo scored a hat-trick capped by a late free kick, and in the 2010 ROUND OF 16 Spain won 1-0 through David Villa on their way to the title. The most recent competitive meeting favours Portugal: in the 2025 UEFA Nations League final in Munich they beat Spain 5-3 on penalties after a 2-2 draw, with Ronaldo scoring the equaliser, a result press previews repeatedly invoke as Portugal's psychological counterweight to Spain's favourite status.",
     "source_tier": "discovery",
     "verification": "attributed_context_only",
     "sources": [
@@ -73,357 +82,369 @@
         "date": "2026-06-28"
       },
       {
-        "outlet": "World Soccer Talk",
-        "url": "https://worldsoccertalk.com/world-cup/cristiano-ronaldo-breaks-legendary-portugal-world-cup-record-held-by-eusebio-for-nearly-60-years/",
-        "date": "2026-06-25"
+        "outlet": "ESPN",
+        "url": "https://www.espn.com/soccer/match/_/gameId/498199/spain-portugal",
+        "date": "2018-06-15"
       },
       {
         "outlet": "ESPN",
-        "url": "https://www.espn.com/espn/story/_/id/49160160/2026-fifa-world-cup-recap-portugal-uzbekistan-ghana-england-croatia-panama-colombia-congo-dr",
+        "url": "https://www.espn.com/soccer/match/_/gameId/264114/portugal-spain",
+        "date": "2010-06-29"
+      },
+      {
+        "outlet": "UEFA",
+        "url": "https://www.uefa.com/uefanationsleague/news/029a-1df446a2d81d-0bc47d9324a5-1000--portugal-vs-spain-highlights-and-report-selecao-create-natio/",
+        "date": "2025-06-08"
+      },
+      {
+        "outlet": "Sky Sports",
+        "url": "https://www.skysports.com/football/news/11095/13558808/world-cup-2026-portugal-2-1-croatia-cristiano-ronaldos-dreams-survive-after-late-var-drama-forces-luka-modric-farewell",
+        "date": "2026-07-03"
+      },
+      {
+        "outlet": "World Soccer Talk",
+        "url": "https://worldsoccertalk.com/world-cup/cristiano-ronaldo-breaks-legendary-portugal-world-cup-record-held-by-eusebio-for-nearly-60-years/",
         "date": "2026-06-25"
       }
     ]
   },
   "dominant_storylines": [
     {
-      "storyline": "Ronaldo vs Modric, one last time: the Round of 32 in Toronto reunites former Real Madrid teammates Cristiano Ronaldo and Luka Modric, who won four Champions League titles together, in what previews repeatedly cast as probably the final World Cup appearance for one or both veterans.",
+      "storyline": "The last dance resolved in Portugal's favour: the Toronto reunion of former Real Madrid teammates ended with Ronaldo's World Cup alive and Luka Modric's over. Ivan Perisic put Croatia ahead in the 53rd minute, Ronaldo levelled from the penalty spot in the 68th, and Goncalo Ramos headed the winner four minutes into stoppage time; Modric, 40, left the pitch in what coverage across outlets treats as his final World Cup match. Ronaldo told Portuguese media afterwards that he had said his goodbye to a legend of football.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Yahoo Sports",
-          "url": "https://sports.yahoo.com/soccer/article/world-cup-takeaways-for-round-of-32-portugals-draw-with-colombia-likely-denied-us-the-chance-to-see-messi-vs-ronaldo-040030299.html",
-          "date": "2026-06-28"
+          "outlet": "NBC Sports",
+          "url": "https://www.nbcsports.com/soccer/live/portugal-vs-croatia-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup",
+          "date": "2026-07-02"
         },
         {
-          "outlet": "FOX Sports",
-          "url": "https://www.foxsports.com/stories/soccer/who-will-cristiano-ronaldo-portugal-play-world-cup-round-32",
-          "date": "2026-06-28"
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558808/world-cup-2026-portugal-2-1-croatia-cristiano-ronaldos-dreams-survive-after-late-var-drama-forces-luka-modric-farewell",
+          "date": "2026-07-03"
+        },
+        {
+          "outlet": "Record",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
+          "lang": "pt",
+          "date": "2026-07-03"
         }
       ]
     },
     {
-      "storyline": "Talent without cohesion: despite an elite squad, Portugal advanced as runners-up after failing to break down Colombia, with coverage stressing they have not yet blended their resources into an effective team and questioning their attacking edge ahead of the knockouts.",
+      "storyline": "A finish of extreme drama and controversy: Croatia thought they had equalised through Josko Gvardiol deep into more than ten minutes of added time, but the goal was ruled out after a VAR review for a marginal offside in the build-up. Croatia coach Zlatko Dalic raged that VAR kills emotions, Roberto Martinez called the decision clear, and Portugal's Ruben Neves publicly questioned the seventeen minutes of stoppage time, cementing the match's reputation as one of the games of the tournament.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "url": "https://www.aljazeera.com/sports/2026/6/28/colombia-wins-world-cup-2026-group-after-breathless-0-0-draw-with-portugal",
-          "date": "2026-06-28"
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558808/world-cup-2026-portugal-2-1-croatia-cristiano-ronaldos-dreams-survive-after-late-var-drama-forces-luka-modric-farewell",
+          "date": "2026-07-03"
         },
         {
-          "outlet": "Yahoo Sports",
-          "url": "https://sports.yahoo.com/soccer/article/world-cup-takeaways-for-round-of-32-portugals-draw-with-colombia-likely-denied-us-the-chance-to-see-messi-vs-ronaldo-040030299.html",
-          "date": "2026-06-28"
+          "outlet": "Olympics.com",
+          "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-portugal-vs-croatia-round-32-score-lineups-live-updates",
+          "date": "2026-07-02"
+        },
+        {
+          "outlet": "Record",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
+          "lang": "pt",
+          "date": "2026-07-03"
         }
       ]
     },
     {
-      "storyline": "A record-setting Ronaldo amid a chilly reception: the captain scored a brace against Uzbekistan to become the first man to net at six different World Cups and overtake Eusebio's Portugal record, but was booed and ineffective against Colombia, sharpening the debate over his form heading into the knockouts.",
+      "storyline": "The Iberian derby: Portugal against Spain in Dallas on Monday is being billed as the tie of the Round of 16. Syndicated previews cast Spain, 3-0 winners over Austria through a Mikel Oyarzabal double and Pedro Porro, as the stronger side, unbeaten and yet to concede at this World Cup, while Portuguese coverage had flagged the possible dérbi ibérico since the draw firmed up. The tie is also a rematch of the 2025 Nations League final, which Portugal won on penalties, and Martinez framed it as a European game inside the World Cup.",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "sources": [
+        {
+          "outlet": "Yahoo Sports (Nexstar)",
+          "url": "https://sports.yahoo.com/articles/world-cup-2026-portugal-spain-130000157.html",
+          "date": "2026-07-03"
+        },
+        {
+          "outlet": "A Bola",
+          "url": "https://www.abola.pt/noticias/mundial-vem-ai-um-portugal-croacia-e-talvez-derbi-iberico-nos-oitavos-2026062800405819231",
+          "lang": "pt",
+          "date": "2026-06-28"
+        },
+        {
+          "outlet": "Record",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260703-030149-siga-a-conferencia-de-roberto-martinez-em-direto",
+          "lang": "pt",
+          "date": "2026-07-03"
+        }
+      ]
+    },
+    {
+      "storyline": "Ronaldo against Spain, one more time: the derby revives his personal history with the neighbours, from the hat-trick, capped by a late free kick, in the 3-3 draw in the 2018 GROUP STAGE in Sochi, to his equaliser in the 2025 Nations League final Portugal went on to win on penalties. Against Croatia the 41-year-old scored what Sky Sports notes was his first World Cup knockout-stage goal, and coverage continues to frame this tournament as almost certainly his final World Cup.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "ESPN",
-          "url": "https://www.espn.com/espn/story/_/id/49160160/2026-fifa-world-cup-recap-portugal-uzbekistan-ghana-england-croatia-panama-colombia-congo-dr",
-          "date": "2026-06-25"
+          "url": "https://www.espn.com/soccer/match/_/gameId/498199/spain-portugal",
+          "date": "2018-06-15"
         },
         {
-          "outlet": "Al Jazeera",
-          "url": "https://www.aljazeera.com/sports/2026/6/28/colombia-wins-world-cup-2026-group-after-breathless-0-0-draw-with-portugal",
-          "date": "2026-06-28"
+          "outlet": "UEFA",
+          "url": "https://www.uefa.com/uefanationsleague/news/029a-1df446a2d81d-0bc47d9324a5-1000--portugal-vs-spain-highlights-and-report-selecao-create-natio/",
+          "date": "2025-06-08"
         },
         {
-          "outlet": "World Soccer Talk",
-          "url": "https://worldsoccertalk.com/world-cup/cristiano-ronaldo-breaks-legendary-portugal-world-cup-record-held-by-eusebio-for-nearly-60-years/",
-          "date": "2026-06-25"
+          "outlet": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13558808/world-cup-2026-portugal-2-1-croatia-cristiano-ronaldos-dreams-survive-after-late-var-drama-forces-luka-modric-farewell",
+          "date": "2026-07-03"
         }
       ]
     },
     {
-      "storyline": "A harder road from second place: by finishing runners-up rather than topping Group K, Portugal land a more demanding knockout path, drawing a wily, tournament-hardened Croatia first and a likely meeting with Spain beyond it.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "Yahoo Sports",
-          "url": "https://sports.yahoo.com/soccer/article/world-cup-takeaways-for-round-of-32-portugals-draw-with-colombia-likely-denied-us-the-chance-to-see-messi-vs-ronaldo-040030299.html",
-          "date": "2026-06-28"
-        },
-        {
-          "outlet": "FOX Sports",
-          "url": "https://www.foxsports.com/stories/soccer/who-will-cristiano-ronaldo-portugal-play-world-cup-round-32",
-          "date": "2026-06-28"
-        }
-      ]
-    },
-    {
-      "storyline": "The Portuguese sports press relayed a withering international-media verdict on the goalless Colombia draw, with Record leading its coverage on foreign headlines calling Portugal's display flat (L'Equipe's 'atuacao apagada') and Gazzetta dello Sport's 'too bad to be true,' while noting Ronaldo was easily neutralised and Diogo Costa was the standout. The domestic framing is less a defence than an amplification of the unease about the team's level entering the knockouts.",
+      "storyline": "Goncalo Ramos, the supersub answer to the cohesion debate: after a group stage spent questioning Portugal's blunt attack, the substitute's headed winner in the fourth minute of stoppage time flipped the narrative, and his own declaration that whenever a late goal is needed Portugal can call on him made him the face of the night in the domestic press. Martinez took credit for the gamble of adding a second striker to press Croatia's centre-backs.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Record",
-          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/detalhe/atuacao-apagada-e-mau-de-mais-para-ser-verdade-a-analise-da-imprensa-internacional-ao-empate-de-portugal",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
           "lang": "pt",
-          "date": "2026-06-28"
+          "date": "2026-07-03"
         },
         {
-          "outlet": "O Jogo",
-          "url": "https://www.ojogo.pt/internacional/artigo/portugal-foi-mau-demais-para-ser-verdade-le-se-na-imprensa-internacional/18100151",
-          "lang": "pt",
-          "date": "2026-06-28"
+          "outlet": "NBC Sports",
+          "url": "https://www.nbcsports.com/soccer/live/portugal-vs-croatia-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup",
+          "date": "2026-07-02"
         }
       ]
     },
     {
-      "storyline": "Portuguese press detailed the squad's knockout logistics: the team stays based and trains in Palm Beach, Florida, with recovery and training sessions across the days before flying to Toronto only on the eve of the Croatia tie, and Record framed a possible quarter-final return to Dallas if they advance. It is the first concrete preparation/travel reporting around the R32.",
+      "storyline": "The Diogo Jota thread: the squad wrapped the Croatia win in tribute to their late former teammate, with Ronaldo saying afterwards that our Jota is up there lighting our way and Martinez, in his post-match press conference, calling Diogo Jota our light at this World Cup. Portuguese coverage treats the remembrance as a unifying emotional current running through the campaign.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Record",
-          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/portugal-fica-a-treinar-em-palm-beach-e-viaja-para-toronto-na-vespera-do-jogo-com-a-croacia",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
           "lang": "pt",
-          "date": "2026-06-28"
+          "date": "2026-07-03"
+        },
+        {
+          "outlet": "Record",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260703-030149-siga-a-conferencia-de-roberto-martinez-em-direto",
+          "lang": "pt",
+          "date": "2026-07-03"
         }
       ]
     },
     {
-      "storyline": "A domestic tactical debate emerged in the Portuguese media over whether Roberto Martinez must reshape his attack for Croatia, with commentary voices arguing the players' collective level has dipped below expectations and openly predicting Rafael Leao should now start, turning the selection question into a national talking point ahead of the knockout opener.",
+      "storyline": "Respect edged with wariness toward the favourites: within minutes of the final whistle Bernardo Silva was framing Spain as just as difficult an opponent, he also admitted Portugal lost emotional control against Croatia when they should not have, and press-conference coverage relayed Martinez acknowledging that Spain, as past world champions, hold a psychological and emotional advantage even as he insisted Portugal have improved significantly.",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "sources": [
         {
           "outlet": "Record",
-          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/amp/manuel-queiroz-a-croacia-e-um-bom-adversario-para-portugal",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
           "lang": "pt",
-          "date": "2026-06-28"
-        }
-      ]
-    },
-    {
-      "storyline": "Through the Portuguese press, Croatia's camp set the tone for the tie: captain Luka Modric, surfaced by CNN Portugal and TVI, praised Portugal's players as phenomenal yet insisted his side has nothing to fear, framing the R32 as a fresh tournament restart. The domestic outlets carried the opponent's defiance as part of the pre-match build-up.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
-        {
-          "outlet": "CNN Portugal",
-          "url": "https://cnnportugal.iol.pt/mundial-2026/internacional/modric-portugal-nao-temos-de-ter-medo-de-nada",
-          "lang": "pt",
-          "date": "2026-06-28"
+          "date": "2026-07-03"
         },
-        {
-          "outlet": "TVI",
-          "url": "https://tvi.iol.pt/noticias/mundial-2026/internacional/modric-portugal-nao-temos-de-ter-medo-de-nada",
-          "lang": "pt",
-          "date": "2026-06-28"
-        }
-      ]
-    },
-    {
-      "storyline": "In his post-Colombia press conference, carried by Record and Maisfutebol, Martinez pushed back directly on speculation around Ronaldo's fitness and minutes, insisting there was no physical or mental issue in the captain playing the full 90 and casting him as a disciplined player in his position, an attempt to defuse the booing-and-form narrative before Croatia.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "sources": [
         {
           "outlet": "Record",
-          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260628-031000-conferencia-de-roberto-martinez-em-direto",
+          "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260703-030149-siga-a-conferencia-de-roberto-martinez-em-direto",
           "lang": "pt",
-          "date": "2026-06-28"
-        },
-        {
-          "outlet": "Maisfutebol",
-          "url": "https://maisfutebol.iol.pt/mundial2026/mundial-2026/martinez-muito-contente-com-a-exibicao-do-diogo-costa",
-          "lang": "pt",
-          "date": "2026-06-28"
+          "date": "2026-07-03"
         }
       ]
     }
   ],
   "attributed_quotes": [
     {
-      "quote": "The focus is to try to win the game and not think about the next opponent",
-      "speaker_name": "Roberto Martinez",
-      "speaker_role": "Portugal head coach",
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49188761/roberto-martinez-portugal-not-thinking-round-32-knockout-world-cup-colombia",
-      "date": "2026-06-26",
-      "context": "Speaking before the final group match against Colombia, declining to look ahead to a potential Round of 32 opponent.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "lang": "en",
-      "quote_original": null
-    },
-    {
-      "quote": "If you want to do well in the tournament, you have to beat anyone and everyone.",
-      "speaker_name": "Roberto Martinez",
-      "speaker_role": "Portugal head coach",
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49188761/roberto-martinez-portugal-not-thinking-round-32-knockout-world-cup-colombia",
-      "date": "2026-06-26",
-      "context": "Pre-match remarks framing Portugal's tournament mindset ahead of the knockout stage.",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "lang": "en",
-      "quote_original": null
-    },
-    {
-      "quote": "There was no physical or mental problem in playing the 90 minutes.",
-      "quote_original": "Nao existiu nenhum problema fisico e mental em jogar os 90 minutos.",
-      "lang": "pt",
-      "speaker_name": "Roberto Martinez",
-      "speaker_role": "Portugal head coach",
-      "source_tier": "discovery",
-      "verification": "attributed_context_only",
-      "outlet": "Maisfutebol",
-      "url": "https://maisfutebol.iol.pt/mundial2026/mundial-2026/martinez-muito-contente-com-a-exibicao-do-diogo-costa",
-      "date": "2026-06-28",
-      "context": "Post-Colombia press conference, responding to speculation about Cristiano Ronaldo's fitness after he played the full match. Re-fetched and confirmed verbatim at Maisfutebol."
-    },
-    {
-      "quote": "Cristiano is used to being in the right place at the right time and is very disciplined in his position.",
-      "quote_original": "O Cristiano esta habituado a estar no sitio certo a hora certa e e muito disciplinado na sua posicao.",
+      "quote": "It will be a fantastic game, a European game inside the World Cup.",
+      "quote_original": "Sera um jogo fantastico, um jogo europeu dentro do Mundial.",
       "lang": "pt",
       "speaker_name": "Roberto Martinez",
       "speaker_role": "Portugal head coach",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
       "outlet": "Record",
-      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260628-031000-conferencia-de-roberto-martinez-em-direto",
-      "date": "2026-06-28",
-      "context": "Post-Colombia press conference, defending Ronaldo's performance and role despite the captain being booed and starved of service in the 0-0 draw. Re-fetched and confirmed verbatim at Record's live conference coverage."
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260703-030149-siga-a-conferencia-de-roberto-martinez-em-direto",
+      "date": "2026-07-03",
+      "context": "Post-match press conference after the 2-1 win over Croatia, looking ahead to the Round-of-16 Iberian derby against Spain in Dallas."
     },
     {
-      "quote": "Portugal's players are phenomenal, they are a great team.",
-      "quote_original": "Os jogadores de Portugal sao fenomenais, sao uma grande equipa.",
+      "quote": "Diogo Jota is our light at this World Cup.",
+      "quote_original": "Diogo Jota e a nossa luz no Mundial.",
       "lang": "pt",
-      "speaker_name": "Luka Modric",
-      "speaker_role": "Croatia captain (Portugal's R32 opponent)",
+      "speaker_name": "Roberto Martinez",
+      "speaker_role": "Portugal head coach",
       "source_tier": "discovery",
       "verification": "attributed_context_only",
-      "outlet": "CNN Portugal",
-      "url": "https://cnnportugal.iol.pt/mundial-2026/internacional/modric-portugal-nao-temos-de-ter-medo-de-nada",
-      "date": "2026-06-28",
-      "context": "Pre-match remarks surfaced by Portuguese press; Modric praised Portugal yet said Croatia has nothing to fear ahead of the Toronto knockout tie. Verbatim cross-confirmed at both CNN Portugal and TVI."
+      "outlet": "Record",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260703-030149-siga-a-conferencia-de-roberto-martinez-em-direto",
+      "date": "2026-07-03",
+      "context": "Post-Croatia press conference, paying tribute to the late Diogo Jota after the squad dedicated the win to him."
+    },
+    {
+      "quote": "We have to know how to suffer.",
+      "quote_original": "Temos que saber sofrer.",
+      "lang": "pt",
+      "speaker_name": "Cristiano Ronaldo",
+      "speaker_role": "Portugal captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Record",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
+      "date": "2026-07-03",
+      "context": "Post-match reaction after the comeback 2-1 win over Croatia, in which he scored the equalising penalty."
+    },
+    {
+      "quote": "I said my goodbye. He is a legend of football.",
+      "quote_original": "Despedi-me. E uma lenda do futebol.",
+      "lang": "pt",
+      "speaker_name": "Cristiano Ronaldo",
+      "speaker_role": "Portugal captain",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Record",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
+      "date": "2026-07-03",
+      "context": "Speaking about Luka Modric after the Croatia tie, which coverage treats as the 40-year-old's final World Cup match."
+    },
+    {
+      "quote": "Whenever you need a goal in the last minutes, you can call Goncalo Ramos.",
+      "quote_original": "Sempre que precisarem de um golo nos ultimos minutos podem chamar o Goncalo Ramos.",
+      "lang": "pt",
+      "speaker_name": "Goncalo Ramos",
+      "speaker_role": "Portugal forward, scorer of the stoppage-time winner",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Record",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
+      "date": "2026-07-03",
+      "context": "Post-match reaction after his header in the fourth minute of stoppage time beat Croatia 2-1."
+    },
+    {
+      "quote": "Spain? It will be just as difficult.",
+      "quote_original": "Espanha? Vai ser igualmente dificil.",
+      "lang": "pt",
+      "speaker_name": "Bernardo Silva",
+      "speaker_role": "Portugal midfielder",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Record",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
+      "date": "2026-07-03",
+      "context": "Immediate post-Croatia reaction, turning to the Round-of-16 derby against Spain."
+    },
+    {
+      "quote": "VAR kills emotions, it kills everything within you.",
+      "quote_original": null,
+      "lang": "en",
+      "speaker_name": "Zlatko Dalic",
+      "speaker_role": "Croatia head coach (beaten R32 opponent)",
+      "source_tier": "discovery",
+      "verification": "attributed_context_only",
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/11095/13558808/world-cup-2026-portugal-2-1-croatia-cristiano-ronaldos-dreams-survive-after-late-var-drama-forces-luka-modric-farewell",
+      "date": "2026-07-03",
+      "context": "Post-match press conference after Croatia's stoppage-time equaliser was disallowed for a marginal offside on VAR review."
     }
   ],
   "local_availability_reporting": [],
   "gaps": [
-    "No Portuguese-language national outlet (e.g., A Bola, Record, O Jogo, RTP) was successfully fetched; mood and expectations are drawn from English-language international previews (Al Jazeera, ESPN, Yahoo, FOX), so the domestic Portuguese framing is inferred rather than directly sourced.",
-    "No verbatim quotes from Cristiano Ronaldo or other Portugal players were sourced.",
-    "No confirmed or reported injury, suspension, or availability news for any Portugal player was found in the reviewed sources; local_availability_reporting left empty rather than speculated.",
-    "The Ronaldo-Modric Real Madrid/Champions-League framing in storyline 1 is carried by Yahoo Sports; the co-cited FOX Sports piece spotlights both players but does not itself reference their shared Madrid history, so FOX supports only the Toronto/date/Croatia-pedigree facts.",
-    "ESPN's recap notes Portugal 'second with 4 points,' which is the pre-Colombia (post-Uzbekistan) standing; the DB-authoritative final total is 5 points (W1 D2) after the 0-0 with Colombia, and the text fields are framed to that final 2nd-place finish.",
-    "No post-Colombia (R32 build-up) press-conference quotes from Roberto Martinez were located; the manager quotes used are from the pre-Colombia presser dated 2026-06-26.",
-    "Official FIFA/FPF confirmation of the exact R32 kickoff date/venue was not fetched cleanly; previews cite Toronto on Thursday, July 2, 2026, but this is press-tier, not official-tier."
+    "No reported injury, suspension or availability doubts for any Portugal player ahead of the Spain tie were found as of 2026-07-03; syndicated previews say Portugal have no major injury worries, so local_availability_reporting is left empty rather than speculated.",
+    "Spain's status as pre-tournament favourites and as the stronger side is press framing (attributed), not an official designation; no official source asserts it.",
+    "Venue naming for the R16 differs by source: press previews cite AT&T Stadium in Arlington, Texas, while the tournament naming is Dallas Stadium, Dallas; the site's own database (kickoff 2026-07-06T19:00Z) is treated as authoritative and the press venue label is not asserted in the text fields.",
+    "The Portuguese player and manager reaction quotes were captured verbatim from Record's reaction roundup and live press-conference pages in single fetches; they were not cross-confirmed at a second Portuguese outlet.",
+    "Aggregate all-time Portugal-Spain head-to-head win/draw counts circulating in previews were not independently verified and are deliberately omitted; only the two prior World Cup meetings (2018 GROUP STAGE 3-3, 2010 ROUND OF 16 Spain 1-0) and the 2025 Nations League final are used.",
+    "The identity of the offside player in Croatia's disallowed late equaliser is reported inconsistently across sources, so the text says only that the goal was ruled out for a marginal offside in the build-up after a VAR review.",
+    "No post-match quotes from the Spain camp about facing Portugal were sourced.",
+    "Ronaldo's penalty being his first World Cup knockout-stage goal rests on Sky Sports' match report and is always attributed, not stated as an official statistic."
   ],
   "source_data_snapshot": [
     {
-      "outlet": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/6/28/colombia-wins-world-cup-2026-group-after-breathless-0-0-draw-with-portugal",
-      "retrieved_at": "2026-06-28",
-      "note": "0-0 vs Colombia, Portugal runners-up needing a win, Ronaldo booed and ineffective (one shot on target, a long-range free kick), Croatia R32 in Toronto, talent not yet blended into an effective team. Re-fetched and confirmed."
-    },
-    {
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/soccer/story/_/id/49188761/roberto-martinez-portugal-not-thinking-round-32-knockout-world-cup-colombia",
-      "retrieved_at": "2026-06-28",
-      "note": "Roberto Martinez pre-Colombia quotes (both used quotes confirmed verbatim); favorites tag, DR Congo 1-1 draw, Uzbekistan 5-0 rebound."
-    },
-    {
-      "outlet": "ESPN",
-      "url": "https://www.espn.com/espn/story/_/id/49160160/2026-fifa-world-cup-recap-portugal-uzbekistan-ghana-england-croatia-panama-colombia-congo-dr",
-      "retrieved_at": "2026-06-28",
-      "note": "Portugal 5-0 Uzbekistan recap; Ronaldo brace (6th, 39th); first to score at six different World Cups; Colombia lead Group K with Portugal second on 4 pts at that stage (pre-Colombia)."
-    },
-    {
-      "outlet": "FOX Sports",
-      "url": "https://www.foxsports.com/stories/soccer/who-will-cristiano-ronaldo-portugal-play-world-cup-round-32",
-      "retrieved_at": "2026-06-28",
-      "note": "R32 vs Croatia (Group L runner-up) in Toronto, Thursday July 2, 7:00 p.m. ET; Croatia pedigree (2nd 2018, 3rd 2022); Modric and Baturina spotlighted. Does NOT itself state the Ronaldo-Modric Real Madrid history."
-    },
-    {
-      "outlet": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/soccer/article/world-cup-takeaways-for-round-of-32-portugals-draw-with-colombia-likely-denied-us-the-chance-to-see-messi-vs-ronaldo-040030299.html",
-      "retrieved_at": "2026-06-28",
-      "note": "Slow/stagnant critique; Bernardo Silva benched (no start last two, no sub vs Colombia); Ronaldo-Modric six seasons at Real Madrid + four Champions League titles, likely final international game; harder path (Croatia then likely Spain in R16)."
-    },
-    {
-      "outlet": "World Soccer Talk",
-      "url": "https://worldsoccertalk.com/world-cup/cristiano-ronaldo-breaks-legendary-portugal-world-cup-record-held-by-eusebio-for-nearly-60-years/",
-      "retrieved_at": "2026-06-28",
-      "note": "Ronaldo surpasses Eusebio as Portugal's all-time World Cup top scorer; ten WC goals, past Eusebio's 1966 nine-goal mark."
-    },
-    {
-      "outlet": "Wikipedia (Portugal at the FIFA World Cup)",
-      "url": "https://en.wikipedia.org/wiki/Portugal_at_the_FIFA_World_Cup",
-      "retrieved_at": "2026-06-28",
-      "note": "Historical context confirmed: never won; best finish 3rd in 1966, 4th in 2006; those are their only two semifinal appearances."
+      "outlet": "FIFA",
+      "url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021526",
+      "retrieved_at": "2026-07-03",
+      "tier": "official",
+      "note": "FIFA match centre page confirming Portugal 2-1 Croatia, Round of 32; used to anchor the result itself."
     },
     {
       "outlet": "Record",
-      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260628-031000-conferencia-de-roberto-martinez-em-direto",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/todas-as-reacoes-a-vitoria-de-portugal-sobre-a-croacia",
       "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Martinez post-Colombia live press conference; verbatim quote on Ronaldo's positioning/discipline confirmed; also defends Ronaldo's full 90."
-    },
-    {
-      "outlet": "Maisfutebol",
-      "url": "https://maisfutebol.iol.pt/mundial2026/mundial-2026/martinez-muito-contente-com-a-exibicao-do-diogo-costa",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Cross-confirmation of Martinez post-Colombia quotes; verbatim source of the 'no physical or mental problem in playing the 90 minutes' line addressing Ronaldo's fitness; Diogo Costa praised."
+      "retrieved_at": "2026-07-03",
+      "note": "Reaction roundup after the Croatia win. Verbatim source of the Ronaldo ('Temos que saber sofrer', 'O nosso Jota que esta la em cima a iluminar-nos', 'Despedi-me. E uma lenda do futebol'), Goncalo Ramos, Bernardo Silva ('Espanha? Vai ser igualmente dificil', lost emotional control), Ruben Neves (stoppage time criticism) and PM Luis Montenegro (perhaps the best game of the World Cup) lines."
     },
     {
       "outlet": "Record",
-      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/detalhe/atuacao-apagada-e-mau-de-mais-para-ser-verdade-a-analise-da-imprensa-internacional-ao-empate-de-portugal",
+      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/20260703-030149-siga-a-conferencia-de-roberto-martinez-em-direto",
       "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Portuguese outlet's roundup of international-press criticism of the Colombia draw (L'Equipe 'atuacao apagada', Gazzetta 'mau demais para ser verdade', The Guardian on Ronaldo neutralised, Marca praising Diogo Costa). Re-fetched and confirmed."
+      "retrieved_at": "2026-07-03",
+      "note": "Martinez post-Croatia live press conference. Verbatim source of 'Diogo Jota e a nossa luz no Mundial', 'Fico muito satisfeito porque tivemos muito coracao na segunda parte', 'Sera um jogo fantastico, um jogo europeu dentro do Mundial', the clear disallowed-goal remark, the substitutions rationale and the lost-hair/calm line."
     },
     {
-      "outlet": "O Jogo",
-      "url": "https://www.ojogo.pt/internacional/artigo/portugal-foi-mau-demais-para-ser-verdade-le-se-na-imprensa-internacional/18100151",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Parallel O Jogo framing of the same international-press criticism; co-cited corroboration only. Article body 403'd on direct re-fetch; storyline rests on the verified Record parallel article, so O Jogo is not solo-sourced."
+      "outlet": "Sky Sports",
+      "url": "https://www.skysports.com/football/news/11095/13558808/world-cup-2026-portugal-2-1-croatia-cristiano-ronaldos-dreams-survive-after-late-var-drama-forces-luka-modric-farewell",
+      "retrieved_at": "2026-07-03",
+      "note": "Match report: Perisic 53', Ronaldo 68' pen (reported as his first World Cup knockout-stage goal), Ramos 90+4'; late Gvardiol equaliser disallowed on VAR review; Modric's likely final World Cup match; Dalic 'VAR kills emotions' quote; Spain next as a 2025 Nations League final rematch."
     },
     {
-      "outlet": "Record",
-      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal/detalhe/portugal-fica-a-treinar-em-palm-beach-e-viaja-para-toronto-na-vespera-do-jogo-com-a-croacia",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Preparation/travel logistics: squad trains in Palm Beach through Wednesday (recovery session plus two more), flies to Toronto on the eve of the Croatia tie; possible return to Dallas if they advance. Re-fetched and confirmed."
+      "outlet": "NBC Sports",
+      "url": "https://www.nbcsports.com/soccer/live/portugal-vs-croatia-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup",
+      "retrieved_at": "2026-07-03",
+      "note": "Live-blog framing: 'Goncalo Ramos prolongs Ronaldo's World Cup, ends Modric's tournament'; corroborates result and the last-dance resolution."
     },
     {
-      "outlet": "Record",
-      "url": "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/amp/manuel-queiroz-a-croacia-e-um-bom-adversario-para-portugal",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Domestic tactical debate: commentator Manuel Queiroz argues the average level of Portuguese players is below expectations, flags fatigue (Nuno Mendes, Ronaldo, Pedro Neto), predicts Rafael Leao starts, says Croatia is a favourable opponent. Re-fetched and confirmed."
+      "outlet": "Olympics.com",
+      "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-portugal-vs-croatia-round-32-score-lineups-live-updates",
+      "retrieved_at": "2026-07-03",
+      "note": "Corroborates goalscorer minutes (Perisic 53', Ronaldo 68' pen, Ramos 90+4') and that Croatia's last-gasp equaliser was ruled out after more than ten minutes of added time; Spain confirmed as R16 opponent. Off-allowlist outlet used for corroboration only (IOC-run editorial site)."
     },
     {
-      "outlet": "CNN Portugal",
-      "url": "https://cnnportugal.iol.pt/mundial-2026/internacional/modric-portugal-nao-temos-de-ter-medo-de-nada",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Modric pre-match quotes surfaced by Portuguese press: praises Portugal's players ('fenomenais'), says Croatia fears nothing, frames knockout as a new tournament. Re-fetched and confirmed verbatim."
-    },
-    {
-      "outlet": "TVI",
-      "url": "https://tvi.iol.pt/noticias/mundial-2026/internacional/modric-portugal-nao-temos-de-ter-medo-de-nada",
-      "lang": "pt",
-      "retrieved_at": "2026-06-28",
-      "used_for": "Mirror of the Modric interview; verified exact verbatim wording. Full line: 'Nao temos de ter medo de nada, so temos de dar o nosso melhor e ver o que acontece' (the bare 'Portugal? Nao temos de ter medo de nada' is a headline construction, so it was NOT used as a quote)."
+      "outlet": "Yahoo Sports (Nexstar)",
+      "url": "https://sports.yahoo.com/articles/world-cup-2026-portugal-spain-130000157.html",
+      "retrieved_at": "2026-07-03",
+      "note": "Syndicated Nexstar story (byline Orri Benatar) on the Iberian derby: Spain 3-0 Austria in Los Angeles (Oyarzabal double, Pedro Porro), Spain unbeaten and yet to concede in four games and framed as the stronger side; R16 on Monday in Dallas. Off-allowlist outlet, reviewer note: mainstream syndicated wire-style report used for the Spain-side facts."
     },
     {
       "outlet": "A Bola",
       "url": "https://www.abola.pt/noticias/mundial-vem-ai-um-portugal-croacia-e-talvez-derbi-iberico-nos-oitavos-2026062800405819231",
       "lang": "pt",
       "retrieved_at": "2026-06-28",
-      "used_for": "Domestic R32 preview framing (Portugal-Croatia, Euro 2016 echo of Quaresma's extra-time winner, possible Iberian derby vs Spain next round). Re-fetched and confirmed. No net-new quote extracted; supports path framing already in the file."
+      "note": "Domestic framing that flagged the possible 'derbi iberico' in the Round of 16 back at the R32 draw; retained from the previous refresh as the origin of the derby storyline in the Portuguese press."
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/match/_/gameId/498199/spain-portugal",
+      "retrieved_at": "2026-07-03",
+      "note": "Match page for Portugal 3-3 Spain, 2018 World Cup GROUP STAGE (15 June 2018): Ronaldo hat-trick including the late free kick."
+    },
+    {
+      "outlet": "ESPN",
+      "url": "https://www.espn.com/soccer/match/_/gameId/264114/portugal-spain",
+      "retrieved_at": "2026-07-03",
+      "note": "Match page for Spain 1-0 Portugal, 2010 World Cup ROUND OF 16 (29 June 2010): David Villa's 63rd-minute goal."
+    },
+    {
+      "outlet": "UEFA",
+      "url": "https://www.uefa.com/uefanationsleague/news/029a-1df446a2d81d-0bc47d9324a5-1000--portugal-vs-spain-highlights-and-report-selecao-create-natio/",
+      "retrieved_at": "2026-07-03",
+      "tier": "official",
+      "note": "UEFA official report on the 2025 Nations League final in Munich: Portugal beat Spain 5-3 on penalties after a 2-2 draw, Ronaldo scoring the second-half equaliser."
+    },
+    {
+      "outlet": "Wikipedia (Portugal at the FIFA World Cup)",
+      "url": "https://en.wikipedia.org/wiki/Portugal_at_the_FIFA_World_Cup",
+      "retrieved_at": "2026-06-28",
+      "note": "Historical baseline retained from the previous refresh: Portugal have never won the World Cup; best finish 3rd in 1966, 4th in 2006."
+    },
+    {
+      "outlet": "World Soccer Talk",
+      "url": "https://worldsoccertalk.com/world-cup/cristiano-ronaldo-breaks-legendary-portugal-world-cup-record-held-by-eusebio-for-nearly-60-years/",
+      "retrieved_at": "2026-06-28",
+      "note": "Retained from the previous refresh: Ronaldo surpassed Eusebio as Portugal's all-time World Cup top scorer during the group stage. Off-allowlist outlet, reviewer note carried over."
     }
   ]
 }
