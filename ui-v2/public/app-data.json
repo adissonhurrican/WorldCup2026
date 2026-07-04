@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-04 17:00:00+00",
+    "generated_at": "2026-07-04 19:16:59.532213+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7463,6 +7463,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Morocco Clinical in Houston as Canada's Historic Run Ends",
+      "body": "Morocco advanced to the quarter-finals with a clinical 3-0 victory over Canada in Houston. After a scoreless first half, Azzedine Ounahi broke the deadlock in the 50th minute off an assist from Achraf Hakimi. Ounahi struck again in the 82nd minute before Soufiane Rahimi sealed the win in the 90th minute. While the scoreline suggests a comfortable victory, the matured expected goals (xG) tell a much tighter story, finishing at 0.86 for Canada and 0.84 for Morocco. Morocco's efficiency made the difference, led by a standout performance from Ounahi, who earned a 9.0 match rating with his two decisive goals. With this victory, Morocco move on to the quarter-finals to face the winner of the other tie. For Morocco, the win keeps their dreams of surpassing their historic 2022 semi-final run alive, validating the ambition of manager Mohamed Ouahbi. For Canada, the defeat brings a dignified end to a historic campaign. Having secured their first-ever World Cup knockout win in the previous round, Jesse Marsch's squad exceeded national expectations, leaving the tournament with widespread pride and a foundation for the future of the sport in the country.",
+      "fixture_label": "CAN vs MAR"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Colombia Edge Ghana to Reach Round of 16 as Arias Strikes Early",
