@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-04 01:30:00+00",
+    "generated_at": "2026-07-04 03:46:49.231297+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7454,6 +7454,25 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Colombia Edge Ghana to Reach Round of 16 as Arias Strikes Early",
+      "body": "Colombia have advanced to the Round of 16 after a hard-fought 1-0 victory over Ghana in the Round of 32. The decisive moment arrived early in the 14th minute when Jhon Arias found the back of the net, assisted by Luis Suarez. While the scoreline remained tight, the matured expected goals (xG) data confirmed Colombia's dominance on the pitch, with our prediction system recording a final xG of 2.18 for Colombia compared to just 0.26 for Ghana. Despite the defeat, Ghana's goalkeeper Lawrence Ati Zigi was the standout performer of the match, earning an exceptional 9.2 rating for keeping his side within touching distance. With this result, Colombia's ambitious campaign under Néstor Lorenzo continues into the Round of 16, where they will face the winner of the other tie. The victory rewards a buoyant Colombian side that topped its group and is determined to reach the latter stages of the tournament. For Ghana, the defeat brings a dignified end to a proud run that saw the Black Stars reach the knockout rounds for the first time in sixteen years, overcoming a pre-tournament injury crisis to unite their nation in celebration.",
+      "fixture_label": "COL vs GHA"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Vancouver Showdown: Switzerland Chase History Against Buoyant Colombia",
+      "body": "Switzerland return to their Vancouver stronghold with an 88-year knockout hoodoo finally broken, but a formidable Colombia side stands between them and a historic quarter-final spot. Our prediction system makes Colombia the clear favourites with a 63% chance to advance, backed by their impressive unbeaten run to top Group K ahead of Portugal. Switzerland, holding a 37% chance, arrive with their own unbeaten momentum and a clinical attack led by young breakout Johan Manzambi, who has already racked up three goals and two assists. Colombia's Néstor Lorenzo has publicly raised expectations, stating his desire to take his team \"to the very highest level,\" while Swiss captain Granit Xhaka countered that he wants to \"write history with this team.\" The tactical battle will hinge on whether Switzerland's disciplined shape can withstand Colombia's front-foot, attacking style. Watch for how Switzerland handle the creative threat of James Rodríguez in midfield, especially with Swiss defensive anchor Denis Zakaria carrying a late fitness concern. If Switzerland can limit the space Colombia crave, they can turn this into a tight, tactical duel.",
+      "fixture_label": "SUI vs COL",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "2-0",
+        "pick": "COL",
+        "reasoning": "While Switzerland carry immense emotional momentum after breaking their long knockout drought, Colombia's superior group-stage performance against elite opposition gives them the edge. The model makes Colombia strong favourites, and their ability to dominate matches on the front foot should eventually break down a resilient Swiss defense, especially if Denis Zakaria is hampered by his late injury. Colombia's attacking depth will prove decisive in the second half."
+      }
+    },
     {
       "content_type": "post_result_change",
       "headline": "Argentina Edge Cape Verde in Five-Goal Thriller to Reach Round of 16",
