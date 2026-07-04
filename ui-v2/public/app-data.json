@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-03 22:00:00+00",
+    "generated_at": "2026-07-04 00:55:44.943288+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7437,6 +7437,25 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Argentina Edge Cape Verde in Five-Goal Thriller to Reach Round of 16",
+      "body": "Argentina survived a massive scare to defeat tournament debutants Cape Verde 3-2 in an extraordinary Round of 32 clash. Lionel Messi opened the scoring in the 29th minute, but Cape Verde hit back through Deroy Duarte in the 59th. Lautaro Martinez restored the holders' lead in the 92nd minute, only for Sibiry Lopes Cabral to equalise again in the 103rd. Finally, a 111th-minute strike from Dylan Borges sealed the dramatic victory for Argentina. While the scoreline was incredibly tight, the matured expected goals (xG) confirmed Argentina's overall dominance, with our prediction system recording a final xG of 2.15 to Cape Verde's 0.36. Lionel Messi was the standout performer, earning a 9.5 match rating with four key passes and the opening goal. With this victory, Argentina advance to the Round of 16 to face the winner of the other tie. For Argentina, the hard-fought win keeps their title defence alive as they chase a historic back-to-back World Cup. For Cape Verde, the smallest nation ever to reach the men's knockouts, this brings an end to a fairytale run that exceeded all expectations. Midfielder Deroy Duarte had previously noted that reaching this stage was their ultimate goal, and they leave the tournament with immense national pride after proving they know how to compete on the world stage.",
+      "fixture_label": "ARG vs CPV"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Holders Meet History Makers in Atlanta",
+      "body": "Reigning world champions Argentina face tournament debutants Egypt in a single-elimination clash where one match decides everything. Our knockout model makes Argentina overwhelming favourites with a 91% chance to win, backed by their perfect group-stage campaign where they conceded only once. Egypt, carrying a mere 9% chance, arrive as historic underdogs after reaching the knockout stage for the first time ever. The South Americans enter on a three-match winning streak, powered by Lionel Messi, who has already scored six goals this tournament. Egypt remain unbeaten themselves, but they must cope with defensive reshuffling and an anxious wait over Mohamed Salah's hamstring strain. While Argentina's camp remains highly focused, refusing to ride what local media calls a 'triumphalist wave,' Egypt's coach Hossam Hassan remains defiant about his squad's injuries, stating, 'I have lions with me, and I'm not afraid of anyone.' Watch for whether Egypt's makeshift spine can withstand Argentina's fluid, positionless attack in Atlanta.",
+      "fixture_label": "ARG vs EGY",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "3-0",
+        "pick": "ARG",
+        "reasoning": "The model makes Argentina strong favourites and the data backs it. Argentina's flawless group form, combined with Lionel Messi's tournament-leading six goals, presents an incredibly high barrier for the debutants. While Egypt have shown immense pride and resilience to remain unbeaten, their historic run is heavily compromised by key defensive injuries and the lingering fitness doubts surrounding Mohamed Salah."
+      }
+    },
     {
       "content_type": "post_result_change",
       "headline": "Pharaohs Prevail on Penalties After Dallas Drama",
