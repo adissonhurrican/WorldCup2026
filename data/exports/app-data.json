@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-04 21:00:00+00",
+    "generated_at": "2026-07-04 23:15:34.131334+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7480,6 +7480,25 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Mbappé Strikes as France Edge Paraguay to Reach Quarter-Finals",
+      "body": "France secured their place in the quarter-finals with a hard-fought 1-0 victory over Paraguay in the Round of 16. The decisive moment arrived in the 70th minute when Kylian Mbappé found the net to break the South American side's stubborn resistance. While the scoreline remained tight, the matured expected goals (xG) confirmed France's dominance, with Les Bleus registering 1.36 xG compared to Paraguay's limited 0.15 xG. On the pitch, French defender Dayot Upamecano anchored the backline to earn a match-high 7.5 rating, completing a key pass and keeping Paraguay's attack quiet. With this result, France advance to the quarter-finals to face the winner of the other tie, keeping Didier Deschamps' emotional final tournament run alive. For France, the victory brings a sense of relief and keeps them on course for their high title expectations. For Paraguay, the defeat brings a dignified end to a historic campaign. Having already exceeded all national expectations by eliminating Germany in the previous round, Paraguay leave the tournament with immense pride, having turned their World Cup run into a countrywide celebration.",
+      "fixture_label": "PAR vs FRA"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Heavyweight France Face Morocco's Resilient Spirit in Boston",
+      "body": "A place in the semi-finals is on the line as two-time world champions France meet Morocco in a high-stakes knockout clash. Our prediction system makes France strong favourites with an 82% chance to win the tie, backed by their flawless run of four straight victories and a massive rating gap. Yet Morocco, carrying an 18% chance, arrive unbeaten after a dramatic penalty shootout triumph over the Netherlands. France's frightening attack has already produced 13 goals, led by tournament top-scorer Kylian Mbappé with six goals and Ousmane Dembélé with four. Morocco counter with their own breakout star, Ismael Saibari, who has three goals to his name. While the teams have no prior head-to-head meetings in our data, the national stakes are immense. French supporters expect nothing less than a title charge, though manager Didier Deschamps warned against complacency. Meanwhile, Morocco's camp is fueled by belief, with coach Mohamed Ouahbi stating, \"If you offered me another semi-final like we managed in 2022, I'd tell you that I want to go further.\" Expect a classic battle of styles as France's relentless attacking depth tests Morocco's proven defensive resilience.",
+      "fixture_label": "FRA vs MAR",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "3-1",
+        "pick": "FRA",
+        "reasoning": "While Morocco's defensive resilience and shootout nerve are proven, France's attacking depth is simply too overwhelming. Kylian Mbappé is in historic goalscoring form, and Michael Olise's creative spark provides too many avenues of breakthrough. The prediction system makes France heavy favourites, and their flawless four-win momentum backs up that mathematical edge."
+      }
+    },
     {
       "content_type": "post_result_change",
       "headline": "Morocco Clinical in Houston as Canada's Historic Run Ends",
