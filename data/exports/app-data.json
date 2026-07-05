@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-05 20:00:00+00",
+    "generated_at": "2026-07-05 22:15:14.4772+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7489,6 +7489,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Haaland Double Sinks Brazil as Norway Seal Historic Quarter-Final Spot",
+      "body": "Norway have pulled off a stunning 2-1 victory over Brazil in the Round of 16, defying the run of play to secure their place in the quarter-finals. Erling Haaland opened the scoring in the 79th minute from an Andreas Schjelderup assist, and though Neymar equalised for Brazil in the 90th minute, Haaland struck again moments later to seal the win. The final scoreline stood in stark contrast to the performance metrics; Brazil dominated possession and created far better opportunities, finishing with a matured expected goals (xG) of 1.93 compared to Norway's clinical 0.73. Haaland was the undisputed standout performer, earning a match rating of 9 after converting both of his key chances to carry his team through. With this historic result, Norway advance to the quarter-finals where they will face the winner of the other tie. For Norway, this victory represents an extraordinary milestone for a generation that has transitioned from hoping to truly believing they can compete with the world's best. For Brazil, the defeat brings a sudden, painful end to their quest for a sixth world title under Carlo Ancelotti, leaving a proud footballing nation to process another deeply disappointing exit from the global stage.",
+      "fixture_label": "BRA vs NOR"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Mbappé Strikes as France Edge Paraguay to Reach Quarter-Finals",
