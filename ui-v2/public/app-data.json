@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-06 03:18:20.081108+00",
+    "generated_at": "2026-07-06 19:00:00+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -3860,7 +3860,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 0,
+        "b": 1,
+        "winner": "ESP",
+        "pens_a": null,
+        "pens_b": null
+      },
       "kickoff": "2026-07-06",
       "kickoff_utc": "2026-07-06T19:00:00Z",
       "date_confirmed": true,
@@ -4070,7 +4076,10 @@
         "group": null,
         "pool": null,
         "source_match": 93,
-        "team": null
+        "team": {
+          "code": "ESP",
+          "name": "Spain"
+        }
       },
       "side_b": {
         "label": "Winner M94",
