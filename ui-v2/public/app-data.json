@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-06 19:00:00+00",
+    "generated_at": "2026-07-06 22:15:44.132276+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7515,6 +7515,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Merino Strikes at the Death as Spain Edge Portugal in Iberian Derby",
+      "body": "Spain secured a dramatic 1-0 victory over Portugal in their Round of 16 clash, decided by a 90th-minute strike from Mikel Merino off a Gerard Deulofeu-style assist from Ferran Torres. The matured expected goals (xG) data confirms Spain's overall dominance on the pitch, with Spain registering 1.77 xG compared to Portugal's 0.58 xG. Merino was the standout performer of the night, earning an 8.2 match rating for his decisive contribution. With this victory, Spain advance to the quarter-finals, where they will face the winner of the other tie. The result brings immense joy to Spain, lifting a historic weight as they continue their pursuit of a second world title. For Portugal, the defeat marks a dignified but painful end to their campaign, concluding Cristiano Ronaldo's final World Cup journey despite the squad's immense character and emotional resolve.",
+      "fixture_label": "POR vs ESP"
+    },
     {
       "content_type": "post_result_change",
       "headline": "England Edge Five-Goal Azteca Thriller to Reach Quarter-Finals",
