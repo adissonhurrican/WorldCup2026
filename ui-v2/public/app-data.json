@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-06 01:00:00+00",
+    "generated_at": "2026-07-06 03:18:20.081108+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7506,6 +7506,25 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "England Edge Five-Goal Azteca Thriller to Reach Quarter-Finals",
+      "body": "England secured a dramatic 3-2 victory over Mexico at the Estadio Azteca to book their place in the quarter-finals. Jude Bellingham sparked the visitors with a quick-fire double, scoring in the 36th minute from a Bukayo Saka assist and again in the 38th minute via Harry Kane. Julián Quiñones pulled one back for Mexico in the 42nd minute, but Kane restored England's two-goal cushion in the 60th minute before Raúl Jiménez set up a tense finish with a 69th-minute strike. While England took the victory, the matured expected goals tell a different story: Mexico won the xG battle 1.87 to 1.55, indicating they created the higher-quality chances and were perhaps unfortunate not to force extra time. England's standout performer was Bellingham, whose exceptional 9.2 match rating was anchored by his clinical first-half brace. With this result, England advance to the quarter-finals to face the winner of the other tie. The defeat brings a dignified end to Mexico's emotional home campaign. According to ESPN, local expectations had soared after El Tri broke their forty-year wait for a knockout win, but their journey ends here on home soil. For England, the victory provides a massive psychological payoff, helping Thomas Tuchel's squad overcome the daunting altitude of Mexico City and keeping their tournament ambitions alive.",
+      "fixture_label": "MEX vs ENG"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Haaland and Kane Collide in High-Stakes Knockout Clash",
+      "body": "A fascinating clash of styles awaits as Norway's historic tournament run meets England's knockout pedigree in a single-elimination tie. Our prediction system makes England the favourites with a 66% chance to advance, backed by their defensive stability and unbeaten group-stage campaign. Norway, carrying a 34% win probability, arrive with immense momentum after securing their first-ever World Cup knockout victory. This match features a spectacular individual duel between the tournament's joint-top scorers, Erling Haaland and Harry Kane, who have each netted five goals. While there is no prior head-to-head history between these squads in the database, the national stakes could not be higher. For Norway, reaching this stage has sparked euphoric celebrations, with captain Martin Odegaard noting that while they have heard the stories of the past, they are ready to \"write our own history.\" England, meanwhile, are navigating a mix of relief and anxiety after surviving a scare in the previous round, where manager Thomas Tuchel credited their comeback to \"genuine belief.\" To win, Norway must unleash Haaland against England's backline, while England will look to control the tempo and feed Kane. Watch for whether Norway's fearless attacking identity can break down an England side that has already kept two clean sheets.",
+      "fixture_label": "NOR vs ENG",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "2-0",
+        "pick": "ENG",
+        "reasoning": "While Norway's historic momentum and Erling Haaland's record-breaking scoring run make them a dangerous opponent, England's tournament pedigree and defensive resilience should prove decisive. The model makes England clear favourites, and their ability to grind out results under pressure—demonstrated by Harry Kane's late brace in the previous round—gives them the edge. Norway's open, attacking style will afford England's forward line space to exploit, ultimately allowing the favourites to control the match."
+      }
+    },
     {
       "content_type": "post_result_change",
       "headline": "Haaland Double Sinks Brazil as Norway Seal Historic Quarter-Final Spot",
