@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-07 20:00:00+00",
+    "generated_at": "2026-07-07 22:58:58.483452+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7558,6 +7558,25 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Switzerland Edge Colombia on Penalties After Vancouver Stalemate",
+      "body": "Switzerland have advanced to the quarter-finals of the World Cup after defeating Colombia 4-3 on penalties following a tense 0-0 draw in Vancouver. The match was a story of defensive resilience over clinical finishing, which the final expected goals (xG) figures laid bare. Colombia held a slight edge with 0.25 xG compared to Switzerland's 0.06 xG, confirming that clear-cut opportunities were at an absolute premium for both sides. Swiss goalkeeper Gregor Kobel proved to be the standout performer, earning a 7.2 match rating for his commanding presence and crucial contributions in keeping the clean sheet through 120 minutes. With this victory, Switzerland reach the quarter-finals, where they will face the winner of the other tie. The triumph continues a historic, celebratory run for the Swiss, who recently broke an 88-year knockout hoodoo and are now openly targeting their first quarter-final appearance since 1954. For Colombia, the penalty shootout brings a dignified end to a campaign where they had previously exceeded expectations by topping their group unbeaten, leaving their fans with a sense of pride despite the heartbreak of the spot-kicks.",
+      "fixture_label": "SUI vs COL"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Holders Meet History-Makers in Kansas City",
+      "body": "Reigning world champions Argentina face a historic Switzerland side in a high-stakes knockout clash, with both nations carrying immense expectations. Our knockout model makes Argentina strong favourites with an 80% chance of winning the tie, backed by their perfect four-win run and a rating gap built on conceding just once in the group stage. Yet the Swiss arrive with formidable momentum of their own, remaining unbeaten through the tournament after breaking an 88-year knockout drought. Argentina's attack is spearheaded by the tournament's leading threat, Lionel Messi, who has already struck seven goals, while Switzerland counter with Johan Manzambi, who has three goals and two assists. According to ESPN, the Argentine camp is actively fighting a \"triumphalist wave,\" with defender Nicolas Otamendi warning that \"Cape Verde got the results it got for a reason.\" Meanwhile, Swiss coverage indicates a celebratory but focused mood as they chase their first quarter-final since 1954, though captain Granit Xhaka insists \"if we want to advance, we must beat every opponent.\" This tie will be decided by whether Switzerland's disciplined defensive block can shackle Messi's movement in the final third.",
+      "fixture_label": "ARG vs SUI",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "2-0",
+        "pick": "ARG",
+        "reasoning": "While Switzerland possess immense defensive resolve and emotional momentum after breaking their knockout hoodoo, Argentina's sheer attacking depth and tournament pedigree make them incredibly difficult to breach. The model heavily favours the holders, and the presence of an in-form Lionel Messi—who has already scored seven times—gives Argentina a decisive edge that should ultimately bypass the compact Swiss midfield."
+      }
+    },
     {
       "content_type": "post_result_change",
       "headline": "Argentina Edge Egypt in Five-Goal Thriller to Reach Quarter-Finals",
