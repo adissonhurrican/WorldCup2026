@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-07 16:00:00+00",
+    "generated_at": "2026-07-07 18:16:45.997992+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7541,6 +7541,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Argentina Edge Egypt in Five-Goal Thriller to Reach Quarter-Finals",
+      "body": "Argentina survived a massive scare to defeat Egypt 3-2 in a dramatic Round of 16 clash. Egypt took an early lead through Y. Ibrahim in the 15th minute and doubled their advantage when M. Ziko struck in the 67th minute. Facing elimination, the reigning world champions mounted a furious late comeback, starting with Cristian Romero's 79th-minute goal. Lionel Messi equalized in the 83rd minute, before Enzo Fernández sealed the victory with a dramatic 90th-minute winner. The final expected goals (xG) of 2.9 to 0.97 confirmed Argentina's overall dominance, showing that while Egypt were clinical, the South Americans created the far better chances. Lionel Messi was the standout performer, earning a 9.0 match rating with a goal, an assist, and six key passes. With this victory, Argentina advance to the quarter-finals, where they will face the winner of the other tie. The result keeps Argentina's dream of a historic back-to-back title defense alive, matching the buoyant mood of fans who see them as leading contenders. For Egypt, a historic debut knockout run ends in heartbreak, but they exit with immense dignity after proving they can push the world's best to the absolute limit.",
+      "fixture_label": "ARG vs EGY"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Belgian Brilliance Ends American Dream in Seattle",
