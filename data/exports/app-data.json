@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-07 00:00:00+00",
+    "generated_at": "2026-07-07 02:07:48.831166+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7532,6 +7532,25 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Belgian Brilliance Ends American Dream in Seattle",
+      "body": "Belgium booked their place in the quarter-finals with a commanding 4-1 victory over the United States in Seattle. The Red Devils took an early lead through Charles De Ketelaere in the 9th minute, but Malik Tillman equalized for the co-hosts in the 31st minute. The American joy was short-lived, as De Ketelaere struck again just two minutes later to restore Belgium's advantage. Second-half goals from Hans Vanaken in the 57th minute and Romelu Lukaku in the 90th minute sealed the emphatic win. The final scoreline reflected Belgium's absolute control, as confirmed by the matured expected goals (xG) data, which saw Belgium dominate with 2.1 xG compared to the USA's 0.64 xG. De Ketelaere was the standout performer of the match, earning a stellar 8.3 rating with two goals and an assist. With this victory, Belgium advances to the quarter-finals to face the winner of the other tie. For Belgium, this triumph continues a reborn campaign, rewriting what began as a golden generation's elegy into a story of resilience. For the United States, the defeat brings a dignified end to a historic run. Despite the disappointment, the co-hosts can look back with pride on a tournament where they secured their first knockout-stage win since 2002 and showed immense character under Mauricio Pochettino.",
+      "fixture_label": "USA vs BEL"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Spain's Defensive Perfection Meets Belgium's Great Escape Artists",
+      "body": "A place in the semi-finals is on the line as Spain's flawless defensive machine faces a resilient Belgium side that has just pulled off the tournament's most dramatic comeback. Our knockout model makes Spain heavy favourites with an 84% chance to win this quarter-final tie, backed by their incredible run of four consecutive clean sheets and an unbeaten streak in regulation that has now reached thirty-four competitive matches. Belgium, given a 16% chance by the model, arrive with immense belief after recovering from two goals down to defeat Senegal 3-2 in extra time. Spain's primary threat comes from tournament talisman Mikel Oyarzabal, who has scored four goals so far, while Belgium's veteran core has shown they still possess the character to survive under extreme pressure. Spanish coverage suggests a quiet euphoria has taken hold after Spain ended a sixteen-year drought without a World Cup knockout win by beating Austria 3-0, with forward Lamine Yamal noting, \"The World Cup starts now. If you lose, you go home.\" Meanwhile, Belgian reports describe a \"reborn\" squad playing with immense guts. This clash will ultimately be decided by whether Belgium's battle-tested attack can find a way to breach a Spanish defense that has yet to concede a single goal in this tournament.",
+      "fixture_label": "ESP vs BEL",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "2-0",
+        "pick": "ESP",
+        "reasoning": "While Belgium's emotional comeback against Senegal proved their veteran core still has tournament grit, Spain's tactical superiority and flawless defensive record are too formidable to ignore. The model makes Spain strong favourites, and the data heavily backs this up given Spain have yet to concede a single goal in the tournament while extending their unbeaten run in regulation to thirty-four matches. Spain's attacking efficiency, led by the in-form Mikel Oyarzabal, should comfortably exploit a Belgian defense that looked highly vulnerable when falling two goals behind in their previous match."
+      }
+    },
     {
       "content_type": "post_result_change",
       "headline": "Merino Strikes at the Death as Spain Edge Portugal in Iberian Derby",
