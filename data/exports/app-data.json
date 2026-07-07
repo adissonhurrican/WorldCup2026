@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-07 18:16:45.997992+00",
+    "generated_at": "2026-07-07 20:00:00+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -4019,7 +4019,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 0,
+        "b": 0,
+        "winner": "SUI",
+        "pens_a": 4,
+        "pens_b": 3
+      },
       "kickoff": "2026-07-07",
       "kickoff_utc": "2026-07-07T20:00:00Z",
       "date_confirmed": true,
@@ -4193,9 +4199,20 @@
         "group": null,
         "pool": null,
         "source_match": 96,
-        "team": null
+        "team": {
+          "code": "SUI",
+          "name": "Switzerland"
+        }
       },
-      "prediction": null,
+      "prediction": {
+        "team_a_win_probability": 0.7992,
+        "team_b_win_probability": 0.2008,
+        "elo_a": 2145,
+        "elo_b": 1905,
+        "elo_source": "post_group_k60",
+        "basis": "real",
+        "method": "neutral_elo_single_match"
+      },
       "result": null,
       "kickoff": "2026-07-11",
       "kickoff_utc": null,
