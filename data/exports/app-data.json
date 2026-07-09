@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-09 20:00:00+00",
+    "generated_at": "2026-07-09 22:15:32.976925+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7567,6 +7567,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "France Secure Semi-Final Spot with Clinical Win Over Morocco",
+      "body": "France are through to the semi-finals after a clinical 2-0 victory over Morocco in the quarter-finals. Following a tense first half, Kylian Mbappe broke the deadlock in the 60th minute, turning home an assist from Desire Doue. Just six minutes later, Ousmane Dembele doubled the advantage, converting a pass from Mbappe to seal the win. The final scoreline reflected France's absolute control on the pitch, as the matured expected goals (xG) confirmed their dominance, with France registering 3.1 xG to Morocco's 0.13. Ousmane Dembele was the standout performer of the match, earning a stellar 8.9 rating after creating four key passes and scoring the decisive second goal. With this victory, France advance to the semi-finals, where they will face the winner of the other quarter-final tie. For France, this victory keeps their title defense on track, matching the high expectations of supporters who anticipate Les Bleus will contend deep into July. For Morocco, the defeat brings a dignified end to another memorable knockout run, as they fall just short of repeating their historic 2022 semi-final appearance.",
+      "fixture_label": "FRA vs MAR"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Switzerland Edge Colombia on Penalties After Vancouver Stalemate",
