@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-10 19:00:00+00",
+    "generated_at": "2026-07-10 21:05:32.416848+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7584,6 +7584,25 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Spain Edge Belgium in Tight Quarter-Final to Reach Semi-Finals",
+      "body": "Spain secured their place in the semi-finals with a hard-fought 2-1 victory over Belgium. Spain opened the scoring in the 30th minute through F. Ruiz, but Belgium responded shortly before half-time when Charles De Ketelaere found the net in the 41st minute. The decisive blow came late in the match as Mikel Merino struck in the 88th minute to seal the win for Spain. While the scoreline remained close, the matured expected goals (xG) data confirmed Spain's dominance on the pitch, with Spain registering 2.04 xG compared to Belgium's 0.38 xG. Belgium's goalkeeper Thibaut Courtois was the standout performer of the match, earning a 7.9 rating for his efforts to keep his side in the contest. With this result, Spain advance to the semi-finals, where they will face the winner of the other quarter-final tie. The victory feeds the high expectations surrounding Spain, who entered the tournament carrying a heavy favourites tag and are chasing their second world title. For Belgium, the defeat marks a dignified end to their campaign, concluding a tournament where their veteran core showed immense resilience to rewrite the early obituaries of their golden generation.",
+      "fixture_label": "ESP vs BEL"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Iberian Giants Clash in Dallas as Spain and France Meet with Semi-Final Stakes",
+      "body": "A classic European rivalry takes center stage in Dallas as Spain and France battle for a place in the World Cup final. Our knockout model expects an incredibly tight affair, giving Spain a slight 52% chance of advancing, while France sit right behind at 48%. France enter this single-elimination tie with a flawless record of six wins from six matches, powered by the tournament's leading scorer Kylian Mbappé, who has already netted eight goals. Spain counter with an equally formidable run, remaining unbeaten through five matches without conceding a single goal, spearheaded by Mikel Oyarzabal and his four goals. There is no prior head-to-head history between these squads in the supplied data, making this a fresh slate. For France, supporters expect nothing short of a title run, though head coach Didier Deschamps has sought to deflect pressure. Meanwhile, Spain carry the heavy burden of external favorites, with forward Lamine Yamal noting that \"the World Cup starts now.\" This monumental clash will ultimately be decided by whether France's explosive attack can finally breach Spain's historically stubborn, perfect defense.",
+      "fixture_label": "FRA vs ESP",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "a narrow lean",
+        "likely_scoreline": "1-0",
+        "pick": "ESP",
+        "reasoning": "While the model sees this as nearly a coin-flip, Spain's defensive record of five consecutive clean sheets gives them the edge. France possess devastating attacking options in Mbappé and Dembélé, but Spain's defensive structure has yet to concede a single goal this tournament. Additionally, Spain's buoyant national mood and their dominant performance against Austria suggest they are peaking at the perfect moment to edge out their rivals."
+      }
+    },
     {
       "content_type": "post_result_change",
       "headline": "France Secure Semi-Final Spot with Clinical Win Over Morocco",
