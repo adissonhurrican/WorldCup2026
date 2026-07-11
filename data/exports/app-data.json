@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-10 21:05:32.416848+00",
+    "generated_at": "2026-07-11 21:00:00+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -4178,7 +4178,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 1,
+        "b": 2,
+        "winner": "ENG",
+        "pens_a": null,
+        "pens_b": null
+      },
       "kickoff": "2026-07-11",
       "kickoff_utc": null,
       "date_confirmed": true,
@@ -4294,7 +4300,10 @@
         "group": null,
         "pool": null,
         "source_match": 99,
-        "team": null
+        "team": {
+          "code": "ENG",
+          "name": "England"
+        }
       },
       "side_b": {
         "label": "Winner M100",
