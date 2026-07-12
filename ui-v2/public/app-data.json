@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-12 01:00:00+00",
+    "generated_at": "2026-07-12 03:56:37.051478+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7610,6 +7610,25 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Argentina Edge Switzerland in Extra-Time Thriller to Reach Semi-Finals",
+      "body": "Argentina secured their place in the semi-finals with a hard-fought 3-1 victory over Switzerland after extra time. Alexis Mac Allister opened the scoring in the 10th minute off an assist from Lionel Messi, but Switzerland fought back to equalize through Dan Ndoye in the 67th minute. The tie remained deadlocked until the 112th minute of extra time when Julián Alvarez found the net, before Lautaro Martínez sealed the win in the 120th minute. The final scoreline was somewhat harsh on the Swiss; our prediction system's matured expected goals (xG) showed a much closer battle, with Argentina registering 1.96 xG to Switzerland's 0.53 xG, confirming that while Argentina created the higher-quality chances, the Swiss pushed them all the way. Lionel Messi was the standout performer, earning a superb 8.9 match rating while pulling the strings with six key passes and an assist. With this victory, Argentina advance to the semi-finals, where they will face the winner of the other quarter-final tie. For the reigning world champions, the dream of defending their title remains alive, matching the buoyant national mood and expectations reported by ESPN. Meanwhile, Switzerland's historic run ends with immense dignity; despite the defeat, Murat Yakin's squad broke their long-standing knockout hoodoo this tournament, leaving Swiss fans proud of a generation that captain Granit Xhaka hoped would write new history.",
+      "fixture_label": "ARG vs SUI"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Heavyweights Collide in Atlanta as Argentina Face England Test",
+      "body": "A classic international rivalry takes center stage in Atlanta as reigning champions Argentina meet England in a high-stakes knockout clash. Our prediction system makes Argentina the clear favorites with a 65% chance to win the tie, backed by their flawless group-stage campaign where they won all five matches and scored 14 goals. England, given a 35% chance by the model, arrive after surviving a scare against DR Congo, though they remain unbeaten with four wins and a draw. The match features a spectacular duel of danger men: Argentina's Lionel Messi leads the tournament with eight goals, while England's Harry Kane has struck six times alongside Jude Bellingham's four. With no prior head-to-head meetings supplied in the data, this is a fresh slate. For England, Sky Sports reports a shift from 'destiny' to uncertainty, with Thomas Tuchel noting his squad has 'genuine belief' after their comeback. Meanwhile, Argentina's camp is refusing to ride a 'triumphalist wave,' with Nicolas Otamendi warning that their opponents are aggressive. Watch for whether England's patient build-up can withstand Argentina's fluid, high-scoring attack.",
+      "fixture_label": "ENG vs ARG",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "3-1",
+        "pick": "ARG",
+        "reasoning": "While England have shown immense resilience to remain unbeaten, Argentina's flawless five-win momentum and superior attacking output make them the superior side. Lionel Messi is in peak tournament form with eight goals, and the Argentine squad's defensive stability will likely stifle England's slow-building attack. The model makes Argentina strong favorites, and the qualitative data regarding their depth and focused, anti-triumphalist mindset strongly supports that stance."
+      }
+    },
     {
       "content_type": "post_result_change",
       "headline": "Bellingham Double Rescues England as Brave Norway Fall in Extra Time",
