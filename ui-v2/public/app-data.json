@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-11 23:56:25.965868+00",
+    "generated_at": "2026-07-12 01:00:00+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -4231,7 +4231,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 3,
+        "b": 1,
+        "winner": "ARG",
+        "pens_a": null,
+        "pens_b": null
+      },
       "kickoff": "2026-07-11",
       "kickoff_utc": null,
       "date_confirmed": true,
@@ -4311,9 +4317,20 @@
         "group": null,
         "pool": null,
         "source_match": 100,
-        "team": null
+        "team": {
+          "code": "ARG",
+          "name": "Argentina"
+        }
       },
-      "prediction": null,
+      "prediction": {
+        "team_a_win_probability": 0.3494,
+        "team_b_win_probability": 0.6506,
+        "elo_a": 2037,
+        "elo_b": 2145,
+        "elo_source": "post_group_k60",
+        "basis": "real",
+        "method": "neutral_elo_single_match"
+      },
       "result": null,
       "kickoff": "2026-07-15",
       "kickoff_utc": "2026-07-15T19:00:00Z",
