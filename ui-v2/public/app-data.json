@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-11 21:00:00+00",
+    "generated_at": "2026-07-11 23:56:25.965868+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7593,6 +7593,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Bellingham Double Rescues England as Brave Norway Fall in Extra Time",
+      "body": "England secured a dramatic 2-1 victory over Norway in the quarter-finals after a tense battle that stretched into extra time. Norway struck first in the 36th minute when Andreas Schjelderup found the net from a Martin Odegaard assist. England responded just before the break as Jude Bellingham equalized in the 45th minute, assisted by Anthony Gordon. With neither side able to break the deadlock in normal time, Bellingham turned hero once more, scoring the decisive winner in the 93rd minute. The final expected goals (xG) of 1.09 for England and 0.77 for Norway confirmed that while England held the slight edge, it was a fiercely contested match that closely mirrored the performance on the pitch. Bellingham was the standout performer, earning a match rating of 8.5 for his decisive two-goal display, while Schjelderup also shone for Norway with an 8.2 rating. With this victory, England advances to the semi-finals, where they will face the winner of the other tie. For England, the victory keeps their tournament hopes alive, building on the resilience manager Thomas Tuchel has praised. For Norway, the defeat brings a dignified end to a historic campaign. Reaching this stage had already been hailed as a monumental milestone back home, and captain Martin Odegaard's pre-match sentiment that this generation was ready to 'write our own history' was fully realized on the pitch, even if their remarkable run has now come to a close.",
+      "fixture_label": "NOR vs ENG"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Spain Edge Belgium in Tight Quarter-Final to Reach Semi-Finals",
