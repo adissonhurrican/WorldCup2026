@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-14 19:00:00+00",
+    "generated_at": "2026-07-14 22:06:23.264248+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7622,6 +7622,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Spain Sweep Past France to Reach the Final",
+      "body": "Spain are heading to the final after a commanding 2-0 victory over France in the semi-finals. The breakthrough came in the 22nd minute when Mikel Oyarzabal found the net, before Pedro Porro doubled the lead in the 58th minute, assisted by Dani Olmo. The final scoreline was a fair reflection of the play; Spain dominated the pitch, accumulating a matured expected goals (xG) total of 1.63 compared to a quiet 0.3 xG for France. Porro was the standout performer of the night, earning a match rating of 7.99 for his defensive solidity and his crucial second-half goal. With this victory, Spain officially advances to the final, where they will face the winner of the other semi-final tie. For Spain, this triumph satisfies immense national expectations, keeping them on track for a second world title. For France, the defeat brings a dignified end to Didier Deschamps' historic tenure. Despite arriving as genuine contenders with an embarrassment of attacking riches, Les Bleus fell short of another final, leaving supporters disappointed but proud of a generation that has consistently competed at the very peak of the game.",
+      "fixture_label": "FRA vs ESP"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Argentina Edge Switzerland in Extra-Time Thriller to Reach Semi-Finals",
