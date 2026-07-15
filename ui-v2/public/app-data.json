@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-15 19:00:00+00",
+    "generated_at": "2026-07-15 21:16:08.432868+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7650,6 +7650,38 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Argentina Edge England in Dramatic Semi-Final to Reach the Final",
+      "body": "Argentina are heading to the final after a dramatic 2-1 victory over England in the semi-finals. England took the lead in the 55th minute when Anthony Gordon found the net from a Marcus Rogers assist. Argentina staged a late comeback, equalizing in the 85th minute through Enzo Fernandez before Lautaro Martinez struck the winner in the 90th minute, with Lionel Messi assisting both goals. The final scoreline reflected the flow of play, as the matured expected goals (xG) confirmed Argentina's dominance with 1.84 xG compared to England's 0.53. Messi was the standout performer, earning an 8.0 match rating and pulling the strings with four key passes alongside his two decisive assists. With this victory, Argentina advance to the final, while England's tournament run comes to an end. For Argentina, the dream of defending their world title continues in the final. For England, the defeat brings a dignified end to a campaign that had been filled with growing belief, as they fall just short of a historic return to the ultimate stage.",
+      "fixture_label": "ENG vs ARG"
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Heavyweights Collide in New York as Spain and Argentina Duel for the Ultimate Prize",
+      "body": "The World Cup Final brings together two undefeated giants in a single-elimination clash where one match decides the world champion. Our knockout model projects an incredibly tight battle, giving Spain a 51% chance of lifting the trophy, while Argentina sit right behind with a 49% chance. Spain reach the final on the back of six wins and a draw, having conceded only once and kept six clean sheets. Argentina arrive with a perfect six-win record, powered by an attack that has racked up seventeen goals. The final showcases a spectacular duel of danger men: Argentina's Lionel Messi leads the tournament with eight goals, while Spain's Mikel Oyarzabal has struck five times. For Spain, the national expectation is immense; as forward Lamine Yamal noted, \"The World Cup starts now. If you lose, you go home.\" Meanwhile, Argentina's camp remains highly focused on avoiding complacency, with defender Nicolas Otamendi warning that their opponents \"competed; it's an aggressive team.\" With no prior head-to-head meetings in the database, this historic first encounter will be decided by whether Spain's historically stingy defense can contain Argentina's rampant, Messi-led attack.",
+      "fixture_label": "ESP vs ARG",
+      "ai_prediction": {
+        "agrees_with_model": false,
+        "confidence_words": "a coin-flip lean",
+        "likely_scoreline": "2-1",
+        "pick": "ARG",
+        "reasoning": "While the model makes Spain the narrowest of favourites, Argentina's flawless six-win run and devastating attack of seventeen goals give them the edge. Lionel Messi is in unstoppable tournament form with eight goals, and his ability to unlock Spain's defense will be the deciding factor. Spain's defensive record is outstanding, but Argentina's experience in high-stakes finals and their clinical efficiency in front of goal will carry them through."
+      }
+    },
+    {
+      "content_type": "pre_match_storyline",
+      "headline": "Heavyweight Rivals Clash in Miami with World Cup Bronze on the Line",
+      "body": "A classic European rivalry takes center stage in Miami as France and England meet to decide who claims the World Cup bronze medal. Our knockout model makes France the favorites with a 64% chance of victory, backed by their superior rating gap and a devastating attack that has produced 16 goals across the tournament. England, holding a 36% win chance, arrive after showing immense resilience to reach this podium match, though they have kept only two clean sheets compared to France's four. Didier Deschamps' side has been fueled by the historic form of Kylian Mbappé, who leads the tournament with eight goals, while Ousmane Dembélé has added five of his own. England counter with their own elite threats in Harry Kane and Jude Bellingham, who have struck six times each. With no prior head-to-head meetings in this tournament cycle, this single-elimination tie is a pure battle of styles. French supporters are buoyant, yet mindful of defensive transitions, while England fans are hoping their team's patient approach can finally break down Les Bleus. Expect a tactical chess match where France's clinical edge meets England's persistent spirit.",
+      "fixture_label": "FRA vs ENG",
+      "ai_prediction": {
+        "agrees_with_model": true,
+        "confidence_words": "comfortably",
+        "likely_scoreline": "3-1",
+        "pick": "FRA",
+        "reasoning": "While England have shown incredible character to grind out results, France possess too much firepower in Kylian Mbappé and Ousmane Dembélé. The model makes France strong favorites, and the data backs it up when comparing France's sixteen goals scored against England's more vulnerable defense. France's defensive stability, boasting four clean sheets, will likely prove the difference in a tight, high-stakes environment."
+      }
+    },
     {
       "content_type": "post_result_change",
       "headline": "Spain Sweep Past France to Reach the Final",
