@@ -1,31 +1,31 @@
 {
   "_note": "Per-fixture weather forecast overlay (display-only; never a model input). Keyed by HOME_AWAY for group fixtures and by M{match_number} for knockout fixtures (whose teams are unknown until the bracket resolves). Generated from the Open-Meteo cache by build-weather-overlay.mjs.",
   "M103": {
-    "temp_c": 33.7,
-    "feels_like_c": 34.9,
-    "condition": "clear sky",
-    "code": 0,
-    "precip_chance_pct": 16,
+    "temp_c": 31.3,
+    "feels_like_c": 33.6,
+    "condition": "overcast",
+    "code": 3,
+    "precip_chance_pct": 13,
     "precip_mm": 0,
-    "wind_kmh": 23.5,
-    "humidity_pct": 45,
+    "wind_kmh": 19.6,
+    "humidity_pct": 58,
     "forecast_for": "2026-07-18T21:00:00Z",
-    "retrieved_at": "2026-07-16T19:35:48.369Z",
-    "lead_hours": 49.4,
-    "confidence": "medium"
+    "retrieved_at": "2026-07-17T03:41:41.351Z",
+    "lead_hours": 41.3,
+    "confidence": "high"
   },
   "M104": {
-    "temp_c": 30.4,
-    "feels_like_c": 29.3,
+    "temp_c": 28.5,
+    "feels_like_c": 26.7,
     "condition": "clear sky",
     "code": 0,
-    "precip_chance_pct": 1,
+    "precip_chance_pct": 0,
     "precip_mm": 0,
-    "wind_kmh": 22.7,
-    "humidity_pct": 32,
+    "wind_kmh": 21.8,
+    "humidity_pct": 29,
     "forecast_for": "2026-07-19T19:00:00Z",
-    "retrieved_at": "2026-07-16T19:35:48.477Z",
-    "lead_hours": 71.4,
+    "retrieved_at": "2026-07-17T03:41:41.452Z",
+    "lead_hours": 63.3,
     "confidence": "medium"
   }
 }
