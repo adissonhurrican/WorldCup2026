@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-18 21:00:00+00",
+    "generated_at": "2026-07-18 23:17:53.785646+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7656,6 +7656,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "England Claim Bronze in Ten-Goal Thriller Against France",
+      "body": "England secured third place at the World Cup with a breathtaking 6-4 victory over France in a historic bronze medal match. England stormed ahead early through Declan Rice in the 3rd minute, Ezri Konsa in the 18th, and a Bukayo Saka brace before halftime. France mounted a furious second-half comeback as Kylian Mbappé struck twice in the 48th and 66th minutes, alongside a Bradley Barcola goal, but Saka's hat-trick clincher in the 87th minute and a late Jude Bellingham strike sealed the podium finish. While the ten-goal scoreline was wild, the matured expected goals (xG) data showed a much tighter, high-quality contest, with France edging the performance at 2.87 xG to England's 2.58. France's Kylian Mbappé was the game's standout performer with a near-perfect 9.9 rating, scoring twice and assisting another, while England's Bukayo Saka earned a 9.3 rating for his clinical hat-trick. With this result, England finish their campaign third in the world, securing a proud podium finish. For France, the defeat brings a dignified end to Didier Deschamps' record-breaking tenure as manager, concluding an emotional tournament where the squad rallied together through personal grief and high expectations.",
+      "fixture_label": "FRA vs ENG"
+    },
     {
       "content_type": "post_result_change",
       "headline": "Argentina Edge England in Dramatic Semi-Final to Reach the Final",
