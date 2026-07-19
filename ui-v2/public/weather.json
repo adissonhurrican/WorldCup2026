@@ -1,17 +1,17 @@
 {
   "_note": "Per-fixture weather forecast overlay (display-only; never a model input). Keyed by HOME_AWAY for group fixtures and by M{match_number} for knockout fixtures (whose teams are unknown until the bracket resolves). Generated from the Open-Meteo cache by build-weather-overlay.mjs.",
   "M104": {
-    "temp_c": 27.2,
-    "feels_like_c": 27.1,
+    "temp_c": 27.8,
+    "feels_like_c": 27.7,
     "condition": "clear sky",
     "code": 0,
     "precip_chance_pct": 0,
     "precip_mm": 0,
-    "wind_kmh": 18,
-    "humidity_pct": 39,
+    "wind_kmh": 17.3,
+    "humidity_pct": 37,
     "forecast_for": "2026-07-19T19:00:00Z",
-    "retrieved_at": "2026-07-19T03:59:01.154Z",
-    "lead_hours": 15,
+    "retrieved_at": "2026-07-19T08:36:13.010Z",
+    "lead_hours": 10.4,
     "confidence": "high"
   }
 }
