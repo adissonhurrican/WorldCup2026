@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-18 23:17:53.785646+00",
+    "generated_at": "2026-07-19 19:00:00+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -4443,7 +4443,13 @@
         "basis": "real",
         "method": "neutral_elo_single_match"
       },
-      "result": null,
+      "result": {
+        "a": 1,
+        "b": 0,
+        "winner": "ESP",
+        "pens_a": null,
+        "pens_b": null
+      },
       "kickoff": "2026-07-19",
       "kickoff_utc": "2026-07-19T19:00:00Z",
       "date_confirmed": true,
