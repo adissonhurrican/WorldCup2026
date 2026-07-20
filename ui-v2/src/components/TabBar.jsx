@@ -24,7 +24,19 @@ const bracketGlyph = (
   </>
 );
 
+// Trophy glyph — the post-tournament Results home (cup + stem + base, stroke style like the others).
+const trophyGlyph = (
+  <>
+    <path d="M8 4h8v4a4 4 0 0 1-8 0V4z" />
+    <path d="M8 5H5v1a3 3 0 0 0 3 3" />
+    <path d="M16 5h3v1a3 3 0 0 1-3 3" />
+    <path d="M12 12v4" />
+    <path d="M9 19h6" />
+  </>
+);
+
 const TABS = [
+  { id: "home", label: "Results", icon: trophyGlyph },
   { id: "team", label: "My Team", icon: "jersey" },
   { id: "matches", label: "Matches", icon: "calendar" },
   { id: "prediction", label: "Prediction", icon: predictionGlyph },

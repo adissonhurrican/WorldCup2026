@@ -29,7 +29,19 @@ const bracketGlyph = (
   </>
 );
 
+// Trophy glyph — the post-tournament Results home (cup + stem + base, stroke style like the others).
+const trophyGlyph = (
+  <>
+    <path d="M8 4h8v4a4 4 0 0 1-8 0V4z" />
+    <path d="M8 5H5v1a3 3 0 0 0 3 3" />
+    <path d="M16 5h3v1a3 3 0 0 1-3 3" />
+    <path d="M12 12v4" />
+    <path d="M9 19h6" />
+  </>
+);
+
 const PRIMARY = [
+  { id: "home", label: "Results", icon: trophyGlyph },
   { id: "team", label: "My Team", icon: "jersey" },
   { id: "matches", label: "Matches", icon: "calendar" },
   { id: "prediction", label: "Prediction", icon: predictionGlyph },
@@ -49,7 +61,7 @@ export default function SideNav({ view, onChange, secondary, onSecondary }) {
       <div className="px-2 pb-7">
         <span className="rainbow-line block h-1 w-11 rounded-full" />
         <h1 className="eleven-brandtitle mt-3 text-[20px] font-bold leading-tight tracking-tight">{SITE_NAME || COMPANY}</h1>
-        <p className="eleven-brandsub mt-0.5 text-[12px]">World Cup 2026 predictions, updated live</p>
+        <p className="eleven-brandsub mt-0.5 text-[12px]">World Cup 2026 — every match predicted, now scored</p>
       </div>
 
       <div className="flex flex-col gap-0.5">
@@ -68,6 +80,16 @@ export default function SideNav({ view, onChange, secondary, onSecondary }) {
             </button>
           );
         })}
+        {/* Model report — the post-tournament results deep-dive (same glass-icon treatment, secondary route) */}
+        <button
+          type="button"
+          onClick={() => onSecondary("report")}
+          aria-current={secondary === "report" ? "page" : undefined}
+          className={`eleven-nav-item${secondary === "report" ? " is-active" : ""}`}
+        >
+          <GlassNavIcon icon={predictionGlyph} state={secondary === "report" ? "gold" : "rest"} />
+          <span>Model report</span>
+        </button>
         {/* How it works — same glass-icon treatment, but routes to the info page */}
         <button
           type="button"

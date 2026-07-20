@@ -136,6 +136,13 @@ export function knockoutPhase(data) {
   const rs = data.real_standings || {};
   return rs.status === "complete" || (rs.results_counted || 0) >= 72;
 }
+// The whole tournament is over once the FINAL has a result. Gates the post-tournament Home (the results/report
+// landing): before that, the app keeps its in-tournament default view untouched.
+export function tournamentComplete(data) {
+  const f = (data?.knockout_fixtures || []).find((fx) => fx.round === "Final");
+  const r = f && f.result;
+  return !!(r && (r.a ?? r.home_score) != null && (r.b ?? r.away_score) != null);
+}
 // Finished-tie advancer verb, round-aware (ONE source for KnockoutCard + MatchCard + MatchSheet so the three
 // surfaces can never disagree): "advance" is only right when there IS a next round (R32..SF). The Final crowns the
 // champions and the third-place play-off awards third — mirrors the hero's medal framing (champion / third).

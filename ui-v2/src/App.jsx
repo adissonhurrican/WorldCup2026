@@ -12,9 +12,11 @@ import PredictionView from "./views/PredictionView";
 import GroupsView from "./views/GroupsView";
 import BracketView from "./views/BracketView";
 import ContentView from "./views/ContentView";
+import HomeView from "./views/HomeView";
+import ModelReportView from "./views/ModelReportView";
 import { IconMenu } from "./components/icons";
 import { loadAll, loadLiveScores, loadLineups, loadEvents, loadStats } from "./lib/appData";
-import { teamByCode } from "./lib/select";
+import { teamByCode, tournamentComplete } from "./lib/select";
 
 const LIVE_POLL_MS = 30000;
 
@@ -54,7 +56,9 @@ export default function App() {
   const [events, setEvents] = useState({}); // display-only goals/cards timeline, polled separately
   const [stats, setStats] = useState({}); // display-only live xG (descriptive match stat), polled separately
 
-  const [view, setView] = useState("team");
+  // Post-tournament the app opens on the results/report HOME; if the data says the Final hasn't been
+  // played (e.g. a rollback or a future cycle), the load effect drops back to the in-tournament default.
+  const [view, setView] = useState("home");
   const [secondary, setSecondary] = useState(null); // null = main app; else an info page key (about/how/privacy/terms)
   const [menuOpen, setMenuOpen] = useState(false); // mobile secondary-nav drawer
   const [teamCode, setTeamCode] = useState(() => readSavedTeam() || DEFAULT_TEAM_CODE);
@@ -76,6 +80,8 @@ export default function App() {
       .then((d) => {
         if (!alive) return;
         setData(d);
+        // The Home landing only exists once the tournament is OVER (the Final has a result).
+        if (!tournamentComplete(d)) setView((v) => (v === "home" ? "team" : v));
         // Make sure the SELECTED team (restored from localStorage, or the default) exists in the real
         // contract. A stale/invalid saved code (e.g. a team that no longer exists) is cleared and falls
         // back to the default — or the first team if the default itself is missing. Never blank/crash.
@@ -145,6 +151,9 @@ export default function App() {
           </button>
 
           <div className="relative z-10 min-h-0 flex-1 lg:min-w-0">
+            <div className={`h-full ${view === "home" && !secondary ? "" : "hidden"}`}>
+              <HomeView rightAction={headerActions} onOpenReport={() => setSecondary("report")} onGoTo={goMain} />
+            </div>
             <div className={`h-full ${view === "team" && !secondary ? "" : "hidden"}`}>
               <MyTeamView
                 data={data}
@@ -173,7 +182,11 @@ export default function App() {
               <BracketView data={data} rightAction={headerActions} />
             </div>
             <div className={`h-full ${secondary ? "" : "hidden"}`}>
-              {secondary && <ContentView key={secondary} pageKey={secondary} onBack={() => setSecondary(null)} rightAction={headerActions} />}
+              {secondary === "report" ? (
+                <ModelReportView onBack={() => setSecondary(null)} rightAction={headerActions} />
+              ) : (
+                secondary && <ContentView key={secondary} pageKey={secondary} onBack={() => setSecondary(null)} rightAction={headerActions} />
+              )}
             </div>
           </div>
 
