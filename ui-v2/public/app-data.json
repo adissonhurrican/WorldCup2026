@@ -1,7 +1,7 @@
 {
   "meta": {
     "tournament": "FIFA World Cup 2026",
-    "generated_at": "2026-07-19 19:00:00+00",
+    "generated_at": "2026-07-20 02:56:48.335468+00",
     "model_label": "our World Cup 2026 simulation model",
     "simulation_count": 20000,
     "disclaimer": "Model simulation outputs for information and entertainment only — not betting odds or guarantees.",
@@ -7662,6 +7662,12 @@
     }
   ],
   "narration": [
+    {
+      "content_type": "post_result_change",
+      "headline": "Spain Crowned World Champions After Extra-Time Drama Against Argentina",
+      "body": "Spain are the champions of the world after a dramatic 1-0 extra-time victory over Argentina in the World Cup final. The tense, historic decider was finally settled in the 106th minute when Ferrán Torres swept home a clinical finish from a Nico Williams assist. While the scoreline remained locked at 0-0 through ninety minutes, the matured expected goals (xG) data confirmed Spain's attacking dominance, with our prediction system recording a final xG of 1.94 for Spain compared to just 0.22 for Argentina. Spain's midfield engine Rodri was a standout performer, earning an 8.2 match rating while pulling the strings and creating two key chances. Despite the defeat, Argentina's goalkeeper E. Martínez kept his side in the contest with an extraordinary 9.8-rated performance. This triumph crowns Spain as world champions, securing their second world title and fulfilling the heavy expectations carried by the squad. For Argentina, a proud and dignified run ends with a runner-up finish on the podium, falling just short of defending their 2022 crown.",
+      "fixture_label": "ESP vs ARG"
+    },
     {
       "content_type": "post_result_change",
       "headline": "England Claim Bronze in Ten-Goal Thriller Against France",
